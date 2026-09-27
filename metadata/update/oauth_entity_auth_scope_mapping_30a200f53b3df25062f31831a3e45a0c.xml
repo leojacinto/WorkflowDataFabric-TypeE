@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="oauth_entity_auth_scope_mapping">
+    <oauth_entity_auth_scope_mapping action="INSERT_OR_UPDATE">
+        <auth_scope display_value="useraccount">d67787c4c321011089a7dd5c2840dd6e</auth_scope>
+        <oauth_entity display_value="Claude">a13b41693bb1fe1062f31831a3e45ae8</oauth_entity>
+        <sys_class_name>oauth_entity_auth_scope_mapping</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 03:31:54</sys_created_on>
+        <sys_id>30a200f53b3df25062f31831a3e45a0c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>oauth_entity_auth_scope_mapping_30a200f53b3df25062f31831a3e45a0c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 03:31:54</sys_updated_on>
+    </oauth_entity_auth_scope_mapping>
+</record_update>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_erp_integration_model_operation">
+    <sn_erp_integration_model_operation action="INSERT_OR_UPDATE">
+        <crud_type display_value="Update">298e92234c53211005e8897a19f8aeb6</crud_type>
+        <groups/>
+        <http_method/>
+        <model display_value="SAP Cost Center">ec6060933bdd7e900ad1a021a3e45aff</model>
+        <name>SAP Cost Center - Update</name>
+        <order/>
+        <pagination_type/>
+        <repeat>false</repeat>
+        <require_queryable>true</require_queryable>
+        <roles/>
+        <row_data_size>0</row_data_size>
+        <status/>
+        <sys_class_name>sn_erp_integration_model_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-24 01:01:22</sys_created_on>
+        <sys_id>e860a0933bdd7e900ad1a021a3e45a08</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>SAP Cost Center - Update</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sn_erp_integration_model_operation_e860a0933bdd7e900ad1a021a3e45a08</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-24 01:01:22</sys_updated_on>
+        <type>functioncall</type>
+    </sn_erp_integration_model_operation>
+</record_update>

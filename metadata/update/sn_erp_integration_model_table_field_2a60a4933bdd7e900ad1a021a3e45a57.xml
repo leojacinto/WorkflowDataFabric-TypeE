@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_erp_integration_model_table_field">
+    <sn_erp_integration_model_table_field action="INSERT_OR_UPDATE">
+        <additional_field_metadata/>
+        <child_table/>
+        <data_length>2</data_length>
+        <data_length_scale/>
+        <data_type>char</data_type>
+        <field_alias>2_character_sap_language_code_1</field_alias>
+        <field_element>LAISO</field_element>
+        <field_label>2-Character SAP Language Code</field_label>
+        <field_name>LANGU_ISO</field_name>
+        <field_name_display_value>LANGUAGE.LANGU_ISO - 2_character_sap_language_code_1</field_name_display_value>
+        <formatter>none</formatter>
+        <is_custom>false</is_custom>
+        <is_expandable>false</is_expandable>
+        <is_hidden>false</is_hidden>
+        <is_indexed>false</is_indexed>
+        <is_key>false</is_key>
+        <is_queryable>false</is_queryable>
+        <is_required>false</is_required>
+        <mapped_field/>
+        <model display_value="SAP Cost Center">ec6060933bdd7e900ad1a021a3e45aff</model>
+        <model_entity display_value="LANGUAGE">966064933bdd7e900ad1a021a3e45a65</model_entity>
+        <model_operation display_value="SAP Cost Center - Update">e860a0933bdd7e900ad1a021a3e45a08</model_operation>
+        <parameter_type/>
+        <root_entity display_value="BAPI_COSTCENTER_CHANGEMULTIPLE">0e6064933bdd7e900ad1a021a3e45a3e</root_entity>
+        <sys_class_name>sn_erp_integration_model_table_field</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-24 01:01:30</sys_created_on>
+        <sys_id>2a60a4933bdd7e900ad1a021a3e45a57</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>LANGUAGE.LANGU_ISO - 2_character_sap_language_code_1</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sn_erp_integration_model_table_field_2a60a4933bdd7e900ad1a021a3e45a57</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-24 01:01:30</sys_updated_on>
+    </sn_erp_integration_model_table_field>
+</record_update>

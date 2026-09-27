@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_search_profile_ais_search_source_m2m">
+    <ais_search_profile_ais_search_source_m2m action="INSERT_OR_UPDATE">
+        <exclude_attachments_in_now_assist_genius_results>false</exclude_attachments_in_now_assist_genius_results>
+        <exclude_in_now_assist_genius_results>false</exclude_in_now_assist_genius_results>
+        <exclude_in_regular_search>false</exclude_in_regular_search>
+        <include_in_now_assist_genius_results>false</include_in_now_assist_genius_results>
+        <profile display_value="Cost Center Budget History Search Profile">c36cc4bd3b8e7a100ad1a021a3e45adf</profile>
+        <search_source display_value="Cost Center Budget History Search Source">89485cfd3bc2ba100ad1a021a3e45a9e</search_source>
+        <search_source_group/>
+        <sys_class_name>ais_search_profile_ais_search_source_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-26 15:22:14</sys_created_on>
+        <sys_id>074810313b06ba100ad1a021a3e45ad5</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Cost Center Budget History Search Profile.</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>ais_search_profile_ais_search_source_m2m_074810313b06ba100ad1a021a3e45ad5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-26 15:22:14</sys_updated_on>
+    </ais_search_profile_ais_search_source_m2m>
+</record_update>

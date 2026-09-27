@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_di_key">
+    <sys_di_key action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <additional_details/>
+        <description>Owner</description>
+        <display_name>Owner</display_name>
+        <group_index>3</group_index>
+        <key_config/>
+        <key_group display_value="Expense Transaction Event">79a791e1399b32107f44f866ad47bf61</key_group>
+        <mandatory>true</mandatory>
+        <metadata>{"referenceColumn":"","referenceTable":"","referenceColumns":[{"id":"sys_class_name","label":"Class","sublabel":"sys_class_name","type":"sys_class_name"},{"id":"middle_name","label":"Middle name","sublabel":"middle_name","type":"string"},{"id":"user_password","label":"Password","sublabel":"user_password","type":"password"},{"id":"preferred_language","label":"Language","sublabel":"preferred_language","type":"string"},{"id":"introduction","label":"Prefix","sublabel":"introduction","type":"string"},{"id":"gender","label":"Gender","sublabel":"gender","type":"string"},{"id":"locked_out","label":"Locked out","sublabel":"locked_out","type":"boolean"},{"id":"state","label":"State / Province","sublabel":"state","type":"string"},{"id":"sys_created_by","label":"Created by","sublabel":"sys_created_by","type":"string"},{"id":"name","label":"Name","sublabel":"name","type":"string"},{"id":"accumulated_roles","label":"Accumulated roles","sublabel":"accumulated_roles","type":"string"},{"id":"last_login_device","label":"Last login device","sublabel":"last_login_device","type":"string"},{"id":"employee_number","label":"Employee number","sublabel":"employee_number","type":"string"},{"id":"sys_mod_count","label":"Updates","sublabel":"sys_mod_count","type":"integer"},{"id":"home_phone","label":"Home phone","sublabel":"home_phone","type":"ph_number"},{"id":"date_format","label":"Date format","sublabel":"date_format","type":"string"},{"id":"manager_hp1","label":"Manager HP1","sublabel":"manager_hp1","type":"record_hierarchy_path"},{"id":"email","label":"Email","sublabel":"email","type":"email"},{"id":"last_login","label":"Last login","sublabel":"last_login","type":"glide_date"},{"id":"calendar_integration","label":"Calendar integration","sublabel":"calendar_integration","type":"integer"},{"id":"street","label":"Street","sublabel":"street","type":"multi_two_lines"},{"id":"active","label":"Active","sublabel":"active","type":"boolean"},{"id":"sys_updated_by","label":"Updated by","sublabel":"sys_updated_by","type":"string"},{"id":"enable_multifactor_authn","label":"Enable Multifactor Authentication","sublabel":"enable_multifactor_authn","type":"boolean"},{"id":"hashed_user_id","label":"Hashed User ID","sublabel":"hashed_user_id","type":"string"},{"id":"country","label":"Country code","sublabel":"country","type":"string"},{"id":"first_name","label":"First name","sublabel":"first_name","type":"string"},{"id":"user_name","label":"User ID","sublabel":"user_name","type":"string"},{"id":"last_name","label":"Last name","sublabel":"last_name","type":"string"},{"id":"password_needs_reset","label":"Password needs reset","sublabel":"password_needs_reset","type":"boolean"},{"id":"mobile_phone","label":"Mobile phone","sublabel":"mobile_phone","type":"ph_number"},{"id":"time_format","label":"Time format","sublabel":"time_format","type":"string"},{"id":"notification","label":"Notification","sublabel":"notification","type":"integer"},{"id":"source","label":"Source","sublabel":"source","type":"string"},{"id":"failed_attempts","label":"Failed login attempts","sublabel":"failed_attempts","type":"integer"},{"id":"sys_id","label":"Sys ID","sublabel":"sys_id","type":"GUID"},{"id":"title","label":"Title","sublabel":"title","type":"string"},{"id":"last_login_time","label":"Last login time","sublabel":"last_login_time","type":"glide_date_time"},{"id":"photo","label":"Photo","sublabel":"photo","type":"user_image"},{"id":"city","label":"City","sublabel":"city","type":"string"},{"id":"sys_domain","label":"Domain","sublabel":"sys_domain","type":"domain_id"},{"id":"sys_updated_on","label":"Updated","sublabel":"sys_updated_on","type":"glide_date_time"},{"id":"roles","label":"Roles","sublabel":"roles","type":"user_roles"},{"id":"last_password","label":"Last password","sublabel":"last_password","type":"string"},{"id":"zip","label":"Zip / Postal code","sublabel":"zip","type":"string"},{"id":"avatar","label":"Avatar","sublabel":"avatar","type":"user_image"},{"id":"sys_created_on","label":"Created","sublabel":"sys_created_on","type":"glide_date_time"},{"id":"phone","label":"Business phone","sublabel":"phone","type":"ph_number"},{"id":"time_zone","label":"Time zone","sublabel":"time_zone","type":"string"},{"id":"edu_status","label":"EDU Status","sublabel":"edu_status","type":"string"},{"id":"vip","label":"VIP","sublabel":"vip","type":"boolean"},{"id":"fax","label":"Fax","sublabel":"fax","type":"phone_number_e164"},{"id":"identity_type","label":"Identity type","sublabel":"identity_type","type":"choice"},{"id":"sys_domain_path","label":"Domain Path","sublabel":"sys_domain_path","type":"domain_path"},{"id":"federated_id","label":"Federated ID","sublabel":"federated_id","type":"string"},{"id":"web_service_access_only","label":"Web service access only","sublabel":"web_service_access_only","type":"boolean"},{"id":"internal_integration_user","label":"Internal Integration User","sublabel":"internal_integration_user","type":"boolean"}]}</metadata>
+        <name>Owner</name>
+        <order>3</order>
+        <prediction_method/>
+        <stp_threshold/>
+        <synonym/>
+        <sys_class_name>sys_di_key</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-26 04:48:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>22e99529399b32107f44f866ad47bff3</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name>Owner</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_di_key_22e99529399b32107f44f866ad47bff3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 04:50:57</sys_updated_on>
+        <target_field>owner</target_field>
+        <target_table>x_snc_forecast_v_0_expense_transaction_event</target_table>
+        <task_definition display_value="Expense Transaction Event">ba671da1399b32107f44f866ad47bf5b</task_definition>
+        <total_used_positive_samples>0</total_used_positive_samples>
+        <type>Text</type>
+    </sys_di_key>
+</record_update>

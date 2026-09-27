@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080b0e">
+  <title>Virtuality — A Line Study — Wide</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="wide.css">
+  <script src="scene.js" defer></script>
+</head>
+<body>
+  <main id="app" data-theme="light">
+    <canvas id="scene" data-layout="square" aria-label="Animated line-art study of seven numbered Virtuaroids"></canvas>
+    <div class="vignette" aria-hidden="true"></div>
+    <button id="theme-toggle" aria-pressed="true">DARK</button>
+    <section class="intro">
+      <div class="eyebrow" id="scene-eyebrow">01 / SEQUENCE</div>
+      <h1 id="scene-heading">VIRTUALITY.<br>IN MOTION.</h1>
+      <p id="scene-caption">Every sequence begins with a signal.</p>
+      <div class="reference"> <span> </span></div>
+    </section>
+    <div id="runtime" hidden inert aria-hidden="true">
+      <span id="header-title"></span>
+      <span id="header-subtitle"></span>
+      <span id="unit-eyebrow"></span>
+      <span id="unit-name"></span>
+      <span id="unit-model"></span>
+      <span id="unit-profile"></span>
+      <span id="unit-assembly"></span>
+      <span id="unit-status"></span>
+      <span id="energy-label"></span>
+      <span id="energy-value"></span>
+      <i id="energy-bar"></i>
+      <span id="shot-label"></span>
+      <span id="time"></span>
+      <span id="duration"></span>
+      <div class="chapters"></div>
+      <div class="ticks"></div>
+      <button id="play" aria-label="Pause animation"><svg viewBox="0 0 20 20"><path id="play-icon" d="M6 4v12M14 4v12"/></svg></button>
+      <button id="restart" aria-label="Restart animation"></button>
+      <button id="speed" aria-label="Playback speed"></button>
+      <button id="loop" aria-label="Loop animation" aria-pressed="true"></button>
+      <button id="lines" aria-label="Monochrome" aria-pressed="false"></button>
+      <button id="fullscreen" aria-label="Enter fullscreen"></button>
+      <input id="seek" type="range" min="0" max="43" step="0.01" value="0" aria-label="Animation time">
+    </div>
+  </main>
+  <script>
+    document.getElementById('theme-toggle').addEventListener('click', event => {
+      const light = document.getElementById('app').dataset.theme !== 'light';
+      document.getElementById('app').dataset.theme = light ? 'light' : 'dark';
+      event.currentTarget.textContent = light ? 'DARK' : 'LIGHT';
+      event.currentTarget.setAttribute('aria-pressed', String(light));
+    });
+  </script>
+</body>
+</html>

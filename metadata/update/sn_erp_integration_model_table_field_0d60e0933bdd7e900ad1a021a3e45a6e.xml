@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_erp_integration_model_table_field">
+    <sn_erp_integration_model_table_field action="INSERT_OR_UPDATE">
+        <additional_field_metadata/>
+        <child_table/>
+        <data_length>35</data_length>
+        <data_length_scale/>
+        <data_type>char</data_type>
+        <field_alias>name_4</field_alias>
+        <field_element>NAME4_GP</field_element>
+        <field_label>Name 4</field_label>
+        <field_name>ADDR_NAME4</field_name>
+        <field_name_display_value>COSTCENTERDETAIL.ADDR_NAME4 - name_4</field_name_display_value>
+        <formatter>none</formatter>
+        <is_custom>false</is_custom>
+        <is_expandable>false</is_expandable>
+        <is_hidden>false</is_hidden>
+        <is_indexed>false</is_indexed>
+        <is_key>false</is_key>
+        <is_queryable>false</is_queryable>
+        <is_required>false</is_required>
+        <mapped_field/>
+        <model display_value="SAP Cost Center">ec6060933bdd7e900ad1a021a3e45aff</model>
+        <model_entity display_value="COSTCENTERDETAIL">fc60a0933bdd7e900ad1a021a3e45a32</model_entity>
+        <model_operation display_value="SAP Cost Center - Read">6860a0933bdd7e900ad1a021a3e45a05</model_operation>
+        <parameter_type/>
+        <root_entity display_value="BAPI_COSTCENTER_GETDETAIL1">fc60a0933bdd7e900ad1a021a3e45a0c</root_entity>
+        <sys_class_name>sn_erp_integration_model_table_field</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-24 01:01:24</sys_created_on>
+        <sys_id>0d60e0933bdd7e900ad1a021a3e45a6e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>COSTCENTERDETAIL.ADDR_NAME4 - name_4</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sn_erp_integration_model_table_field_0d60e0933bdd7e900ad1a021a3e45a6e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-24 01:01:24</sys_updated_on>
+    </sn_erp_integration_model_table_field>
+</record_update>

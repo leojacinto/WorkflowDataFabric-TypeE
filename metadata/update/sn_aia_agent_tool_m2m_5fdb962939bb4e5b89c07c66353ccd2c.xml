@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m">
+    <sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <agent display_value="">116a31874a154caaa19a6f5270288c60</agent>
+        <applicability_script/>
+        <description>Wraps the native Now Assist skill Build Agent.</description>
+        <display_mode>inline</display_mode>
+        <display_output>false</display_output>
+        <document_status/>
+        <entity/>
+        <entity_id/>
+        <execution_mode>autopilot</execution_mode>
+        <inputs>[]</inputs>
+        <max_auto_executions>10</max_auto_executions>
+        <name>Build Agent</name>
+        <output_transformation_strategy/>
+        <post_message/>
+        <post_processing_script/>
+        <pre_message/>
+        <pre_run>false</pre_run>
+        <requires_text_refined_message>false</requires_text_refined_message>
+        <requires_widget_transformation>true</requires_widget_transformation>
+        <should_display_refined_message>false</should_display_refined_message>
+        <sys_class_name>sn_aia_agent_tool_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-22 15:25:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>5fdb962939bb4e5b89c07c66353ccd2c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Build Agent</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sn_aia_agent_tool_m2m_5fdb962939bb4e5b89c07c66353ccd2c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-22 15:25:09</sys_updated_on>
+        <timeout/>
+        <tool display_value="Build Agent">cef68c77803a45ebb6d16a617e28015c</tool>
+        <tool_attributes>{}</tool_attributes>
+        <transformation_instructions/>
+        <wait_for_widget_interaction>false</wait_for_widget_interaction>
+        <widgets/>
+    </sn_aia_agent_tool_m2m>
+</record_update>

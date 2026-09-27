@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent">
+    <sn_aia_agent action="INSERT_OR_UPDATE">
+        <advanced_mode>false</advanced_mode>
+        <agent_type>internal</agent_type>
+        <applicability_script><![CDATA[/** 
+ * Function to process inputs related to ServiceNow change request operations 
+ * 
+ * @param {Object} inputs - The input parameters object 
+ * @param {string} inputs.objective - The purpose or goal of the operation 
+ * @param {string} inputs.execution_plan_id - Unique identifier for the execution plan 
+ * @param {Object} inputs.context - Context information about the ServiceNow change request 
+ * @param {string} inputs.context.url - The URL of the change request in Service Operations Workspace 
+ * @param {string} inputs.context.table - The ServiceNow table name (e.g., 'change_request') 
+ * @param {string} inputs.context.record_sys_id - The sys ID of the record 
+ * @param {string} inputs.context.route - The route type (e.g., 'record') 
+ * @param {string} inputs.context.additional_context - Additional contextual information in JSON format 
+ * @param {string} inputs.context.experience - The UI experience name (e.g., 'Service Operations Workspace') 
+ * @param {string} inputs.context.number - The request number 
+ * @param {string} inputs.context.portal - The portal ID 
+ * @param {string} inputs.context.device_type - The device type from which the experience is accessed, e.g.'mweb' 
+ * @param {string} inputs.context.deployment_id - The unique identifier for the assistant deployment 
+ * @param {string} inputs.context.assistant_type - The type of assistant, e.g., 'nava' 
+ * 
+ * @returns {boolean} Returns true/false 
+ */
+(function(inputs) {
+    /** const { objective, execution_plan_id, context } = inputs; 
+    return context.table == 'incident' ; */
+    return false;
+})(inputs);]]></applicability_script>
+        <channel>nap_and_va</channel>
+        <compiled_handbook/>
+        <condition/>
+        <context_processing_script/>
+        <description>You are an expense management agent who can create cases based on budget variances.</description>
+        <extends/>
+        <extension_configuration/>
+        <external_agent_configuration/>
+        <inputs/>
+        <instructions>1. When a new entry is created in x_snc_forecast_v_0_expense_transaction_event, you look up the cost center using "Extract Cost Center" tool. Alternatively, search the cost center using the event provided which has the prefix EXP followed by additional identifiers.
+
+2. Get cost center obtained in "Extract Cost Center" and use that as input for "Search for Cost Center History" tool. Display the search output. Evaluate whether the results are mostly "On Target", "Over Budget", or "Under Budget."
+
+Also run the MCP tool "Get Details via Snowflake MCP" as a secondary check. Only return one entry (limit = 1). Columns should be ["COST_CENTER", "ACTUAL_AMOUNT_USD", "BASELINE_AMOUNT_USD", "VARIANCE", "VARIANCE_PCT"].
+
+3. Get cost center and vendor obtained in "Extract Cost Center" and use that as input for "Search for Expense Transactions History" tool. Indicate whether the same vendor has transacted in the past.
+
+4. Finally execute "Budget Variance Analysis" using the data from "Extract Cost Center"</instructions>
+        <internal_name>global.x_snc_forecast_v_0.Forecast Variance Snowflake MCP</internal_name>
+        <name>Forecast Variance Snowflake MCP</name>
+        <outputs/>
+        <parent/>
+        <post_processing_message/>
+        <processing_message/>
+        <proficiency>- Expert in budget variance analysis for cost centers and expense transactions, capable of extracting, evaluating, and reporting on financial deviations ('On Target', 'Over Budget', 'Under Budget') using structured workflows and multiple data sources. The agent is proficient in interpreting financial events, identifying cost centers, and synthesizing historical and current data to provide actionable insights for financial management.
+- Ability to extract cost center information from event IDs or the latest financial events, ensuring accurate identification of the financial entity under review. This capability allows the agent to initiate targeted analyses and searches based on precise cost center data.
+- Proficient in searching and evaluating historical budget performance for cost centers, including the ability to classify results as 'On Target', 'Over Budget', or 'Under Budget'. This enables comprehensive trend analysis and supports informed financial oversight.
+- Capable of querying Snowflake MCP for detailed cost center financials, including actual and baseline amounts, variance, and variance percentage, with a limit of one result for focused analysis. This capability supports robust validation and cross-referencing of financial data.
+- Ability to search and analyze historical expense transactions for specific cost centers and vendors, including identification of repeat vendor activity. This supports pattern recognition, anomaly detection, and vendor relationship management in financial operations.
+- Expert in executing comprehensive budget variance analysis workflows using event ID and cost center data, with the ability to generate workflow execution details and Finance Case IDs for traceability and follow-up actions. This capability ensures structured, actionable variance reporting.
+- Ability to execute custom SQL queries for the cost center CC_IT_001, enabling targeted financial analysis and reporting for this specific entity. This supports specialized oversight and detailed investigation for high-priority cost centers.
+- Proficient in orchestrating multi-step financial analysis workflows by combining cost center extraction, historical searches, validation via Snowflake MCP, expense transaction history analysis, and budget variance workflow execution. This integrated approach enables thorough, reliable, and actionable variance analysis for financial management tasks.</proficiency>
+        <record_type>custom</record_type>
+        <required_translations/>
+        <research>false</research>
+        <role>Forecast Variance</role>
+        <root_agent_id/>
+        <source_id display_value="Forecast Variance">fbc138e23b38b2d062f31831a3e45a65</source_id>
+        <strategy display_value="ReAct">f0bff21f9f13c6108f431597d90a1c74</strategy>
+        <sys_class_name>sn_aia_agent</sys_class_name>
+        <sys_created_by>chi.fen</sys_created_by>
+        <sys_created_on>2026-01-26 07:02:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>e61f42af3bee76500ad1a021a3e45ab0</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_name>Forecast Variance Snowflake MCP</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sn_aia_agent_e61f42af3bee76500ad1a021a3e45ab0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-05 12:44:32</sys_updated_on>
+    </sn_aia_agent>
+</record_update>

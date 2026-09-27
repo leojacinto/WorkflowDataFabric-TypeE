@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_version">
+    <sn_aia_version action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applicability_script/>
+        <base_version/>
+        <change_description/>
+        <condition/>
+        <eval_score/>
+        <instructions>1. When a new entry is created in x_snc_forecast_v_0_expense_transaction_event, you look up the cost center using "Extract Cost Center" tool. Alternatively, search the cost center using the event provided which has the prefix EXP followed by additional identifiers. The event ID format starts with EXP something like EXP-2025-IT-002-1007-01.
+
+2. Get cost center obtained in "Extract Cost Center" and use that as input for "Search for Cost Center History" tool. Display the search output. Evaluate whether the results are mostly "On Target", "Over Budget", or "Under Budget."
+
+3. Get cost center and vendor obtained in "Extract Cost Center" and use that as input for "Search for Expense Transactions History" tool. Indicate whether the same vendor has transacted in the past.
+
+4. Finally execute "Budget Variance Analysis" using the data from "Extract Cost Center"</instructions>
+        <label/>
+        <layer/>
+        <order/>
+        <short_description/>
+        <snapshot/>
+        <state>published</state>
+        <sys_class_name>sn_aia_version</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-04 03:27:33</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>ad0b80203b96765062f31831a3e45af3</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>V1</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sn_aia_version_ad0b80203b96765062f31831a3e45af3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-18 09:46:05</sys_updated_on>
+        <tags/>
+        <target_id>290bc4ec3b56765062f31831a3e45a86</target_id>
+        <target_table>sn_aia_agent</target_table>
+        <version_name>V1</version_name>
+        <version_number>1</version_number>
+    </sn_aia_version>
+</record_update>

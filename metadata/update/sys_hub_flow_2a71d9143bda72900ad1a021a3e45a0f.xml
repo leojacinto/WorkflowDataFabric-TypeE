@@ -1,0 +1,1985 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=4650573000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>b36d314b3bd1fa900ad1a021a3e45a7a</copied_from>
+        <copied_from_name>Variance Analysis - Copy</copied_from_name>
+        <description/>
+        <display_name_after_preview/>
+        <flow_priority>MEDIUM</flow_priority>
+        <generation_source/>
+        <internal_name>budget_variance_analysis</internal_name>
+        <label_cache>[{"name":"ac6fe8e9-6f68-42d2-b197-d0e44e5fd3ed.record.short_description","label":"6 - Create Record➛Finance Case Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"sn_spend_sdc_service_request","column_name":"short_description","usedInstances":{"b28b18a2-2147-4fbb-b1b7-d9995366258e":["finance_case-0"]}},{"name":"ac6fe8e9-6f68-42d2-b197-d0e44e5fd3ed.record.number","label":"6 - Create Record➛Finance Case Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"sn_spend_sdc_service_request","column_name":"number","usedInstances":{"b28b18a2-2147-4fbb-b1b7-d9995366258e":["finance_case-0"]}},{"name":"95acc16f-a293-45be-9263-8f95ab78944a.Record.amount_usd","label":"2➛Expense Transaction Event Record➛Amount USD","reference":"","reference_display":"Amount USD","type":"decimal","base_type":"decimal","parent_table_name":"x_snc_forecast_v_0_expense_transaction_event","column_name":"amount_usd","usedInstances":{"b2bb5071-6e8c-49dd-926f-b9d09a0d055f":["valueb"]}},{"name":"95acc16f-a293-45be-9263-8f95ab78944a.Record.cost_center","label":"2➛Expense Transaction Event Record➛Cost Center","reference":"","reference_display":"Cost Center","type":"string","base_type":"string","parent_table_name":"x_snc_forecast_v_0_expense_transaction_event","column_name":"cost_center","usedInstances":{"ac6fe8e9-6f68-42d2-b197-d0e44e5fd3ed":["short_description"]}},{"name":"b2bb5071-6e8c-49dd-926f-b9d09a0d055f.sum","label":"3 - Variance Comparison➛sum","reference_display":"sum","type":"decimal","base_type":"decimal","usedInstances":{},"attributes":{"uiType":"decimal","uiTypeLabel":"Decimal","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"524d4014-28b1-4299-bc10-654e74f8d781"}},{"name":"subflow.event_id","label":"Input➛event_id","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"95acc16f-a293-45be-9263-8f95ab78944a":["conditions"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"ee094438-567a-4ff3-875f-6edf184b1b03","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"ac8524d6-a14b-472c-bed5-73155a315d04.Record.u_cost_center.u_owner","label":"1➛cc_summary Record➛COST_CENTER➛Owner","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sn_erp_integration_cost_center","column_name":"u_owner","usedInstances":{"ac6fe8e9-6f68-42d2-b197-d0e44e5fd3ed":["assigned_to"]}},{"name":"95acc16f-a293-45be-9263-8f95ab78944a.Record.sys_mod_count","label":"2➛Expense Transaction Event Record➛Updates","reference":"","reference_display":"Updates","type":"integer","base_type":"integer","parent_table_name":"x_snc_forecast_v_0_expense_transaction_event","column_name":"sys_mod_count","choices":[{"order":0.0}],"usedInstances":{}},{"name":"subflow.cost_center","label":"Input➛cost_center","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"ac6fe8e9-6f68-42d2-b197-d0e44e5fd3ed":["short_description"],"2ba1971b-54b4-4e7b-8e68-693ff502aa8d":["conditions"],"ac8524d6-a14b-472c-bed5-73155a315d04":["conditions"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"0de38c01-2481-4f99-ab97-4699a27b9a61","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"ac8524d6-a14b-472c-bed5-73155a315d04.Record.u_baseline_amount_usd","label":"1➛cc_summary Record➛BASELINE_AMOUNT_USD","reference":"","reference_display":"BASELINE_AMOUNT_USD","type":"string","base_type":"string","parent_table_name":"u_cc_summary","column_name":"u_baseline_amount_usd","usedInstances":{}},{"name":"ac6fe8e9-6f68-42d2-b197-d0e44e5fd3ed.record","label":"6 - Create Record➛Finance Case Record","reference":"sn_spend_sdc_service_request","reference_display":"Finance Case","type":"reference","base_type":"reference","usedInstances":{"b28b18a2-2147-4fbb-b1b7-d9995366258e":["finance_case-0"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ac8524d6-a14b-472c-bed5-73155a315d04.Record.u_actual_amount_usd","label":"1 - Look Up Record➛cc_summary Record➛ACTUAL_AMOUNT_USD","reference":"","reference_display":"ACTUAL_AMOUNT_USD","type":"string","base_type":"string","parent_table_name":"u_cc_summary","column_name":"u_actual_amount_usd","usedInstances":{"b2bb5071-6e8c-49dd-926f-b9d09a0d055f":["valuea"]}}]</label_cache>
+        <master_snapshot>e18111543bda72900ad1a021a3e45a73</master_snapshot>
+        <master_snapshot_digest/>
+        <name>Budget Variance Analysis </name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:53</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>2a71d9143bda72900ad1a021a3e45a0f</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Budget Variance Analysis </sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_hub_flow_2a71d9143bda72900ad1a021a3e45a0f</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-27 13:59:21</sys_updated_on>
+        <type>subflow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=2a71d9143bda72900ad1a021a3e45a0f"/>
+    <sys_variable_value action="delete_multiple" query="document_key=2a71d9143bda72900ad1a021a3e45a0f"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_2a71d9143bda72900ad1a021a3e45a0f^id=2a71d9143bda72900ad1a021a3e45a0f"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=2a71d9143bda72900ad1a021a3e45a0f"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=2a71d9143bda72900ad1a021a3e45a0f^sys_idNOT INe271d9143bda72900ad1a021a3e45a11"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>2a71d9143bda72900ad1a021a3e45a0f</id>
+        <name>Budget Variance Analysis </name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:53</sys_created_on>
+        <sys_id>e271d9143bda72900ad1a021a3e45a11</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:56:53</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=e271d9143bda72900ad1a021a3e45a11"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=2a71d9143bda72900ad1a021a3e45a0f^sys_idNOT IN7271d9143bda72900ad1a021a3e45a52,a671d9143bda72900ad1a021a3e45a29"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=ee094438-567a-4ff3-875f-6edf184b1b03</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>event_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>event_id</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Budget Variance Analysis ">2a71d9143bda72900ad1a021a3e45a0f</model>
+        <model_id>2a71d9143bda72900ad1a021a3e45a0f</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_2a71d9143bda72900ad1a021a3e45a0f</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:53</sys_created_on>
+        <sys_id>7271d9143bda72900ad1a021a3e45a52</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:56:53</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=7271d9143bda72900ad1a021a3e45a52"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=0de38c01-2481-4f99-ab97-4699a27b9a61</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>cost_center</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>cost_center</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Budget Variance Analysis ">2a71d9143bda72900ad1a021a3e45a0f</model>
+        <model_id>2a71d9143bda72900ad1a021a3e45a0f</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_2a71d9143bda72900ad1a021a3e45a0f</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:53</sys_created_on>
+        <sys_id>a671d9143bda72900ad1a021a3e45a29</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:56:53</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=a671d9143bda72900ad1a021a3e45a29"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=2a71d9143bda72900ad1a021a3e45a0f^sys_idNOT INb671d9143bda72900ad1a021a3e45a6c,bfbad15c3b9e72900ad1a021a3e45af9"/>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=decimal,uiTypeLabel=Decimal,uiUniqueId=58acada6-7d10-439f-83b1-459a842dcba9</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sum</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="Decimal">decimal</internal_type>
+        <label>sum</label>
+        <mandatory>false</mandatory>
+        <max_length>15</max_length>
+        <model display_value="Budget Variance Analysis ">2a71d9143bda72900ad1a021a3e45a0f</model>
+        <model_id>2a71d9143bda72900ad1a021a3e45a0f</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_2a71d9143bda72900ad1a021a3e45a0f</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:53</sys_created_on>
+        <sys_id>b671d9143bda72900ad1a021a3e45a6c</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 14:37:22</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b671d9143bda72900ad1a021a3e45a6c"/>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=d650672a-5b7a-43ec-bd08-c21122ff72c9</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>finance_case</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>finance_case</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Budget Variance Analysis ">2a71d9143bda72900ad1a021a3e45a0f</model>
+        <model_id>2a71d9143bda72900ad1a021a3e45a0f</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_output_2a71d9143bda72900ad1a021a3e45a0f</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 14:37:22</sys_created_on>
+        <sys_id>bfbad15c3b9e72900ad1a021a3e45af9</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 14:40:19</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=bfbad15c3b9e72900ad1a021a3e45af9"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=2a71d9143bda72900ad1a021a3e45a0f"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=2a71d9143bda72900ad1a021a3e45a0f"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=2a71d9143bda72900ad1a021a3e45a0f^sys_idNOT IN0771d9143bda72900ad1a021a3e45a99,4371d9143bda72900ad1a021a3e45ac3,4f71d9143bda72900ad1a021a3e45ac0,8f71d9143bda72900ad1a021a3e45a96"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Budget Variance Analysis ">2a71d9143bda72900ad1a021a3e45a0f</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:54</sys_created_on>
+        <sys_id>0771d9143bda72900ad1a021a3e45a99</sys_id>
+        <sys_mod_count>18</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:46:26</sys_updated_on>
+        <ui_id>95acc16f-a293-45be-9263-8f95ab78944a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1X247bOAz9FcPPmawdJ3Eyb4tOAxTY3QHa2XnpFoJsyRNhFcmV5cwlyL+XsnzJJJ7EuQzaBfYpMEWKh+QhqXxduYy41+6IeNNkOh1NQs8LAs8bj4MY+1EUjOPIiyLf7bkCLyhoZlJppJ9TCqIl5nktw1kMIsKylOPn+/IEO1o6LyCP54wTRYV7/fVbz02xgts0Ve71auvIXI04jigH8w9zyWLjqSvIyvALIHLuLMoW4MXPNXgur5eKGCxBz6VPmgpCwV2CeUZ77gILgrVUz7VEUUxuBW8EcyY03OYa5aeMvcDVwcDoJRTCiqk9qz9RmSMrthgyCH5Vo6+z1pLgEqq37jX6L0Yfb+sTumngryG5hCY45/rDaT79Y30OjE8b4G2qmYQSu4FJP454mZVY8nwh/rIlcmuE9y3Msic3bxAszyCxNDXFM9UoS5N8mcvHz1XmZ0wUuMpDLmPM6y+stWJRrk1eVm5CUMIoJ4gJzoTxpFVuqEI5XYAHtMBpysQDSpVcsuJWiGXRf+Dw0U+4fDS5YA+ij2MTeR9IhPszkN8U4nusmMnCn3ANGPeMwzmYlv5QFiuWavTIyAPVjfdKi0j9iPm/beclu+oeKsJz1wUB0ffcRGwTXeYKFWUxCtbn74B3Scu0mIoXvefv7T1MtvrMlnWDHbuj4eShMDN1cQrK9DqDq4xvDTOd6PktvOVksLUX1kfF5otNh4l33HSom+eo3tltCkOSM3riHanf1muHKGszcYi30707Y9rwgCVoAdljKadI0RiKniGsKEpkLgiyoWwQ2qQ2YSrTpfIuwT9TnSvhSCCDo+fUKbSdWvsSG7FDdJXhp8SpwisxZA6E5xThOXV4xyXjjT06vFinDI/slNc7bYYZL1KfaZpu1I4qJdUbu/RA1faUv+Oi7QjKvyio8zdxG99bN/IBrBfe0+8zk87dljHF0XCAx2Hg+57neyT0JmHoT8ZRMsbhMGkaDaFMxLDO4eYEiAHXo4oIVVW93dFid/qpM+QOputvs/KKrngr4xsp/sk9bxBqxwCGOjsV4MMhlfMikpJTLBp6jn7awLjUaj2Xxzm7286NFf3RVrT32sQ5+1uw7zn9ZEgxod5g4pP4ahL64dUwIeOrKcGjKzyNRmFAaDxMzn9XktHep9vGfo6lIMxEkW0OzaXxxIihZEBWqyyPTNj9Sr5e7zZPJ5sTt/Mmxq7xtRq3BV1t201ZtS0u2EDe/6/T7pug0yOU7H2m4WFTb3tdw++nYpYmEtYnhtW7RB6iTwAAMqcVFpmNARXU3WX6R6vq3DWqzsdS9cTVYfC9+u/VIbZXxruxlrQuPrf+cnn/+b9cv+b7BgAxDtVGNumZzFWRlSWKeZ4VBw1lTp7x334AGC0lHF4UAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=0771d9143bda72900ad1a021a3e45a99"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Budget Variance Analysis ">2a71d9143bda72900ad1a021a3e45a0f</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>ad829919-bdad-44e2-a917-eed5b737d68c</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:54</sys_created_on>
+        <sys_id>4371d9143bda72900ad1a021a3e45ac3</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:46:26</sys_updated_on>
+        <ui_id>ac6fe8e9-6f68-42d2-b197-d0e44e5fd3ed</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/91Uy27bMBD8FUNnS9A7tm9Fi9yaAGmRS5oSK3JlE6AohaScuIb/vUs98igSICgKFK0Ogna1nJ3ZHenmGEgRbIJSYLxeJyXPkixL4zhd5UlVZlWSigwwqYJloKFBqtyD6tFSPDxQAqyVW42CufZbH8eZOB6Br4o0F2UISV6F+VnKwwpFEZ5lSVEA3UScR1fIWyOinvHWOsZROzQUtfcazen03e5a45hAy43snGz1DL4ugPOkrENI11mYFxWG67TMwlVNb6qz1TrPYQZ/Bn06LaRd4ANHFFJvF1UvtuhIh5C2U3C4/k/k8J1UwqAONje3y6ADQ2uj+mBz/OWVO3TIFFSoSPVXbGgIDhfjGJbvdsUMcC5RCfuKTXwbit3UgO2nBqTHs0qWAT441AKpYQ3K4jJoQAtwrTkEG2d6ShgEcanV4bFiJ7Uj0MDXPlj5gzokZTxcvrpGUslxrHgM2bTpMc13reR4OexizDio1HSGt6pv9MUoxXsEa+iVmz1Cmd4SHnaeuKcy8qy/7Nr7q7nfudSDxImzajmoxwicM7LqHc2INoMKG8JhDXQdbZN1pt3L4TBRaaKtoiCqVXvvHUT2jIB73hGNCaJzyn8a0tdgpBfxmWDo8GkQz+5633eUMRFmg+ZBMBsWRqWjMz8Q8B4nmqfl/HtIMC7eNALmT3t/hvn0i7CaWd+ZWcGZRbOnyTODd+SQV75AmhvQ+BYfweLvG9rzWFyMPN6r4cXhNzTNfn6em7wc/ykvr/6SiydG/5iN3zLv7U87eHBr3QYAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4371d9143bda72900ad1a021a3e45ac3"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Variance Comparison">0861ca4b3b15fa900ad1a021a3e45afb</action_type>
+        <action_type_parent display_value="Variance Comparison">04c042c73b15fa900ad1a021a3e45ab7</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>0861ca4b3b15fa900ad1a021a3e45afb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Budget Variance Analysis ">2a71d9143bda72900ad1a021a3e45a0f</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:54</sys_created_on>
+        <sys_id>4f71d9143bda72900ad1a021a3e45ac0</sys_id>
+        <sys_mod_count>22</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:46:26</sys_updated_on>
+        <ui_id>b2bb5071-6e8c-49dd-926f-b9d09a0d055f</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1TTWvcMBD9Lz6vjGVLXju3QggU2gbSNpcQzFgabwSy7PgjyXbxf+9o7d0027SEHkoPvRjPkzTz3pPezS4wOjgLIh7FKo2qpOSygjyKQHOIYg4JCgl5HKwCBzXSzgewI5ZU738I2O1yCUrxtGIQ5wkTskSWx2nCsopWynWWCwHhFaqm0yHUzeiGYuz1NFETbfrWwvZ66UWIujNWd+iCs5vbVdBCR2MH7IKz3cnSsG2xsFCipYPnqEwNls6/Vc7h5FHPqT7fn2p97Ez0PY94FeDTgE4jTarA9rgKanAahqbbHpEOQV86+wzcGTfMCmt46s036s2l31chSVKL+mNZLM4cTGmMwst2MI2bkQFKe3CssWPtPs30vadYwWiHHzwde+qHrefsSSyMqs93zePVYeCFcXt5y6JtFIk+VDAMnSnHAXt/D6P5curNDH346TbQYk0zixra1rhN0XbNg9nPIdp1uLFUhJVtHolfbzYuBOU1huQmhBeEn+/ha+iMF/yR2tBhP++rM/cjvve3zdeYIM+RpSJFJiLNWZkKYAIznvOkimSKwbQ3t7gfvazZpsWQYvaUNvSqM+3wjig84FH7DHrdy9Ogv1c2TtO0WsIk8t+9viw6eWzwIkygMhkLnTLgomRiHStWopZsnXApgT46EocwjQXZRYKKv5OqN+h6kSp4ReivUsX/p+ofS1WphRIiz1iURpIJlZcsl3LNUMVcZGotKsn/NFXT7XfqrfA4eQYAAA==</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=4f71d9143bda72900ad1a021a3e45ac0"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Budget Variance Analysis ">2a71d9143bda72900ad1a021a3e45a0f</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:54</sys_created_on>
+        <sys_id>8f71d9143bda72900ad1a021a3e45a96</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:46:26</sys_updated_on>
+        <ui_id>ac8524d6-a14b-472c-bed5-73155a315d04</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/9VY227bOBD9FUHPjleybMvO26KBgQLdBmizfckGBEVSMVGaVCkqaWL433coir7fYrto+sjhXM7MnBlTvp+GnIbXIR1Gw3w47A3SKEqSKOr3E4LjLEv6JIsy3A1bocQTBpoGZ4LB8QmLyp4rRAgqq8kE6xcQU14WAr98a25X7siYC6qZDK/vH1phgTV4NEyH19O1K/NSMCRwxgS4uLMBg882eutosCvGm+BtAH9E0rlWmlosUStkPw2TlEGoHIuStcIJlhQbBUl4iWaY3kqxEIy5NOAxtMo/S/4K7geR1csZpEWYu5sfUVMnJyZjxQm7LQxX0kkcUHepRDWRn10CtsIsx5UwvsIgqUrwxwqL2YJoEOVfx+r5iw844rJOr7kUimAxP2FjNM8qw0rbCybYBByhCS4KLh9RodUTr40By6T9KODQzoV6hqAlf5RtTCzwNpQIt0cgv6nF37DmNot/wA0YAyAuoNvIFb1Ula6r8oSIqMr6QmNZOl/hrK4V+lFZlC7rJj/kSgQKJdG8MH+DwRNrUpm1PJ97eykyXFCCKEm5jVmuklqVBhGIx3R75fRfBR7pdFpWma1Be+lqNtscgDM8nTYuH5bzObYWW423FagZnBVZMzjxxQanG0W/aXSMrt7f5ByaBZfwgYGI6V4S0EW/S6WBhnXlliZik9knM3TEmaArC/0IcN741pItyF524W0ImtsYa5u988dv9ndJTwBEkas3l4LL+ocVgF6Gt7291MjiNR7U7V+wtpbhkmyyFwdGBa+nb9m6r56/R4D0hl8BUXDnUG4B7verd99QN7kYdZPO26gLxLmfztHPq7alwP79ZFvn9V+tPl7XB3YtGcSzhzn1P5wWM35rzI6NuTabyZuGc5lZ7uZmB8Eu/DrbMWytXzndYzBt4iE3rOiZ00dmFtG9FlXmGYvv2+4bds1nqE7v7JdevPdjIFt66fEcTaBPvIDnp2YEqFAirBnKVSUpah6eS29A6FvONbzJnPLmDvnCTKVloGDkAjNmQa0dzLUvsVmOyM4bfswDn16DoQwgvaBOL5in97Zi7NhH3Qu+9c7ZRyPMRV16+IAolnrHtFZ6x0460LU97T9yYR0JKr4oqPM32ja+b91sB7D+EV+j524dwnDW7eB+msRxFMURTaNBmsaDfpb3cdrNF4OGUCkJrEXwnAMxwD3yRPBdjTZXi9uNJ/9lAjv3r1Hj4li83vhGSftl2klNYAFDnwMP+HBKzb7IlBIMywU9e79tYbyXf1UqfrdeGyf6tK1pv+rHvOL/Sv6jYh8tKQYs6gxiSq4GaZxedXPavxpS3LvCw6yXJpSRbn767/PD/7W9TPlbFAAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=8f71d9143bda72900ad1a021a3e45a96"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=2a71d9143bda72900ad1a021a3e45a0f"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=2a71d9143bda72900ad1a021a3e45a0f^sys_idNOT IN5d4b59d43b9e72900ad1a021a3e45aa2,951b59dc3b9e72900ad1a021a3e45a0f,ac5b15503bde72900ad1a021a3e45a06,c771d9143bda72900ad1a021a3e45a93,cf71d9143bda72900ad1a021a3e45a91"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">7c484e15e1d772107f447756abe0cb52</block>
+        <comment/>
+        <connected_to>ad829919-bdad-44e2-a917-eed5b737d68c</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Budget Variance Analysis ">2a71d9143bda72900ad1a021a3e45a0f</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 14:39:39</sys_created_on>
+        <sys_id>5d4b59d43b9e72900ad1a021a3e45aa2</sys_id>
+        <sys_mod_count>15</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:46:26</sys_updated_on>
+        <ui_id>7660f9ff-3b0e-4fda-a794-4e2028d0e2db</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">fc484e15e1d772107f447756abe0cb50</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Budget Variance Analysis ">2a71d9143bda72900ad1a021a3e45a0f</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>7</order>
+        <outputs_assigned>finance_case</outputs_assigned>
+        <parent_ui_id>ad829919-bdad-44e2-a917-eed5b737d68c</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 14:38:50</sys_created_on>
+        <sys_id>951b59dc3b9e72900ad1a021a3e45a0f</sys_id>
+        <sys_mod_count>21</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:46:26</sys_updated_on>
+        <ui_id>b28b18a2-2147-4fbb-b1b7-d9995366258e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/81Uy27bMBD8lYBnS5Dlp3wLUAQI0DZA4+bSBMKKXNpEKVIhKTuuoX/v0pKdwOihvfW4w33Mzqx0ZLYNTRv82t56rzaGrX4cmRJsxSpZgRjP+KQqcJEXWUYRZPkYJjidgSzYiBmokTKlMmA4lhw8EroD3Ub4mR2PwOcSl1gkczlfJtNc5Ek1LhaJyHA6xZkUExSpQ26dSE1bV+i67ia5+bdCv7UulAI9d6oJypque2ZERCjfaDg8/S98+FZp4TBq/DJiDTiSL6Bjq+PVUzg0WGqoUBPtx+CU2VD537pyLryy5c9mxVGE+vMQ4h8ZjUcM3wIagTRUgvY4YjUYAcG6wwVxCOLB6Hdgq0ygbiwmv3n1i1ovsyyLmRJpPY796yUsB496mG+t4vhw0qxHAlR6qOFWt7X52m8R3UUJrQ5ndwlpPfXDJrKONAZO8nFr99/OA++UOS04PGrLQV8iCCRD1Qb00ZNWra/E6ZHP18agxpomljU0DSFl4+xOnaYQ6TrdaApSqe0+3gR9YynwuGFKakJ6R/inE/wETsV1v1AbKo7jvhv12uJ9NF7MZ9l8kUMyqxaQTCfIk0pky4Tn43GeS7nIecG6k7TlaxuX6kUa5Ch7RSmhv8pborDDYfOObk6Z+Bvo7283MBlCgVx5IryO2P2HPHGgo1L8I7S37mdc9R3rfgM6xMSmZAQAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">38484e15e1d772107f447756abe0cb54</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Budget Variance Analysis ">2a71d9143bda72900ad1a021a3e45a0f</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>9</order>
+        <outputs_assigned>finance_case</outputs_assigned>
+        <parent_ui_id>7660f9ff-3b0e-4fda-a794-4e2028d0e2db</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 14:39:53</sys_created_on>
+        <sys_id>ac5b15503bde72900ad1a021a3e45a06</sys_id>
+        <sys_mod_count>17</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:46:26</sys_updated_on>
+        <ui_id>81cff5b5-3e4b-4a36-8d44-ddddd0dce1ff</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/5VTTW8aMRD9K8hnWC1LCIFblChSpLaRGppLFa1m7VkY1Ws7thdCEf+9Y3YhEeqhPc7zfLz3ZrwXto2ujWFpb0OglRGLn3tBSixEVVegxlM5qeY4K+Z5zhHkxRgmeDWFei6GwkCDnFmTASOxlBCQ0Q3oNsF3NsSBRBPRDygMpG2cJjBxsKW4HlStWmHMOF9RcBp2L/9ZJteklcfE+HUoHHgmwzVisb94ijuHpYYKNXd/jp7Misv/VeOp8ELk36WnUYyG0xDrVWI0Hgp8j2gU8tAadMChaMAoiNbvzohHUE9GfwBrMpG7iZT8Hug3t77J8zxl1sjyJHav57DsrexgubYk8clFsqZDIlS6r5FWt4351qlIS8AaWh1PS2CkDdwPXWKdaPSc6ue13X4/DXwgcxTYP2orQZ8jiGxD1UYMaSctLS/M6ZAvl4tBjQ1PLBtwjpHSebuh4xQm3WQrzUFWa7tlduliM5BJYcZuQvbA+P0RfgFPSe5XbsPFadwPQ28tPqbFq+tpfj0rYDStZjC6mqAcVSq/GcliPC6Kup4Vci4OR2vLtzaJ6kzq7Sg7RzkhSE8u3jKFDfbKD3xzZNKn6u5v0zPpQ4WSAhNeJuzxU57a8VGR/Axtrf+VpH5ghz9Tt5WusgMAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f0484e15e1d772107f447756abe0cb4e</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Budget Variance Analysis ">2a71d9143bda72900ad1a021a3e45a0f</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:54</sys_created_on>
+        <sys_id>c771d9143bda72900ad1a021a3e45a93</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:46:26</sys_updated_on>
+        <ui_id>ad829919-bdad-44e2-a917-eed5b737d68c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1VTW/UMBD9K5HPm5WTbJbu3ipQJSSgEq24QBU59rhr4djBdtouUf4743y0FS3iQ4gTt/jZ8+bNzHPcE9uFtgv+0p56r64N2X+8WhFlIobfPTGsAbIn3BqhgrKGrMgN013E+r7O67qkL7J0Cyc83eyESHf5Vqb1TtAdo4KWpVz7rhmGTx2lBfS9FFVwzHhpXbPPeQl0m7G0russ3eSSpTvYQLrZyJyd4Oe2gGHAjEL5VrPjh3+emB+UFg7mtrTMYTcCOLLvv9sKxxYqzWrQqO8iOGWuMVwJXO1YKcuMlrzIt0VOaX6yyeptUWe5KBimwnNL4MtHXX6m8TEJQn6ht05ELTldEbgLYARgPsm0hxVpmBEsWHck++A6BBwwcW708f7EQZmAbCSevfPqK0QmSuNJCVgYh2n3flnNY5hgfrCKw3k7ahuRwGo9x3Cru8a8m0qIAwTJOh2WASLSeeSDNoqOMmZN8uJgb98vCc+UGQucN7XlTN+vWMA21F0AH6cBGhokqhrWtticqnX2Ro3BqKVZX2tcrKW2t5g0+nzNeBS+xh6x9Rnir0b4A3MqVvEWaTAYJ+grz51ql9rG5GQYu1J96aKeqb65kmpqBh6Ywk4xzQ3MoofV0/tUjcDDpcIAZE1weokDjowJ3CG3h0T5pLEOknBgJqmZB60MPL0cv0/wN0wuKZPZjmfPm5wVz5k8eTMiT62+9OQHfs9+4vcZ+SXDl+V/vz/2e5SJ1lC8Gt8ApIt/jz82/FU09pTCTx4SwJVHJZcRe728M3HjiFNX/DF0a93nWMMDNnwDYLjNy7EGAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f8484e15e1d772107f447756abe0cb4b</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Budget Variance Analysis ">2a71d9143bda72900ad1a021a3e45a0f</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned>sum</outputs_assigned>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:54</sys_created_on>
+        <sys_id>cf71d9143bda72900ad1a021a3e45a91</sys_id>
+        <sys_mod_count>24</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:46:26</sys_updated_on>
+        <ui_id>6e188ce2-3a17-4fcf-bc23-771a22d918fe</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/41Ty27bMBD8F54tQZIl28otQBAgQNsArZtLUQhLcmUTpUhFJO24hv+9S0t23PTS44z2MTNcHZkNvg/ere29c2pj2N2PI1OS3TG+WOayzss5l7As6iwDmUNW5DDHsoKFYDNmoEOqdKEjsAMdIjoeecF5lS3zZIErkZS1lEldLNqE1zKrIZNZVbUpNZ1O1CaV6zUcXqZuYsRWaTlglPJzxnoYaIvHgd0dP3zyhx4bDRw1NT6gUB1o6v9f9ZfOUf5fXuJkAvI60w4yKihmDN88Gom0owXtcMY6MBK8HQ5XZkCQz0a/E1tl/OitgzenftPsvIp1LZIZMfm+wmbK5BKHVQKfe6+sGRkPXF+ysjp05suoPaaJLQTtb9IMjuZhHzVHEZOi9tvW7r9eFj4qc7Y3fdRWkOkLAu8HxYNHF18gqPXHbEbq0z/vgBo72tl00PfKbJp+sDt13kOyu3SjCaSttnvSF08vBRE9ppQmpI/EP5zpFxhUNPyZxlBz3PfdqNeAT/GdqxUIkLBIljLPknJet8lqzvOkrGpYlYUUHGp2OofbvIZoa4xpCqQZM6UCJwbV+3uSsMPJ+4luTJn4d4z3tpuUTDAm4EjwOnJPN3XyQMekxC21t8OvaPWdO/0BvW6mj3sDAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=2a71d9143bda72900ad1a021a3e45a0f^sys_idNOT IN0371d9143bda72900ad1a021a3e45af2,0771d9143bda72900ad1a021a3e45af1,0f71d9143bda72900ad1a021a3e45af2,1bf5dd103b5e72900ad1a021a3e45a0d,4b71d9143bda72900ad1a021a3e45af2,4f71d9143bda72900ad1a021a3e45af1,8371d9143bda72900ad1a021a3e45acb,8371d9143bda72900ad1a021a3e45af3,8771d9143bda72900ad1a021a3e45af2,8b71d9143bda72900ad1a021a3e45af1,c371d9143bda72900ad1a021a3e45af2,c771d9143bda72900ad1a021a3e45af1,cf71d9143bda72900ad1a021a3e45af2,d7f5dd103b5e72900ad1a021a3e45a0c"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>2a71d9143bda72900ad1a021a3e45a0f</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>b82d654b-861c-4b5b-a4ae-716c2fa5a853</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:54</sys_created_on>
+        <sys_id>0371d9143bda72900ad1a021a3e45af2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:56:54</sys_updated_on>
+        <transform_compositions>[{"id":"9c4cf2c60f4130106d1a3a3485767ef7","transformType":null,"transformDefinition":null,"order":0,"parameters":[]}]</transform_compositions>
+        <transform_definition_id display_value="convert_string_to_number">bfac1e0e0f0130106d1a3a3485767e8a</transform_definition_id>
+        <ui_id>4508ea42-25a9-4c60-a13c-584bb9b3b346</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>2a71d9143bda72900ad1a021a3e45a0f</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>0cd2c711-c961-433d-9b85-f9cec8316f90</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:54</sys_created_on>
+        <sys_id>0771d9143bda72900ad1a021a3e45af1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:56:54</sys_updated_on>
+        <transform_compositions>[{"id":"9c4cf2c60f4130106d1a3a3485767ef7","transformType":null,"transformDefinition":null,"order":0,"parameters":[]}]</transform_compositions>
+        <transform_definition_id display_value="convert_string_to_number">bfac1e0e0f0130106d1a3a3485767e8a</transform_definition_id>
+        <ui_id>b6b1d663-de3c-407e-a619-726d5cb563ad</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>2a71d9143bda72900ad1a021a3e45a0f</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>06010596-8878-4c5b-84a8-2f98f2a0257e</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:54</sys_created_on>
+        <sys_id>0f71d9143bda72900ad1a021a3e45af2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:56:54</sys_updated_on>
+        <transform_compositions>[{"id":"9c4cf2c60f4130106d1a3a3485767ef7","transformType":null,"transformDefinition":null,"order":0,"parameters":[]}]</transform_compositions>
+        <transform_definition_id display_value="convert_string_to_number">bfac1e0e0f0130106d1a3a3485767e8a</transform_definition_id>
+        <ui_id>71b14e8d-7ae7-46ff-b82e-218610a9f246</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>2a71d9143bda72900ad1a021a3e45a0f</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>2c5e061a-bbb1-42fa-9e4e-44f2a89e463e</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 14:16:35</sys_created_on>
+        <sys_id>1bf5dd103b5e72900ad1a021a3e45a0d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 14:16:35</sys_updated_on>
+        <transform_compositions>[{"id":"9c4cf2c60f4130106d1a3a3485767ef7","transformType":null,"transformDefinition":null,"order":0,"parameters":[]}]</transform_compositions>
+        <transform_definition_id display_value="convert_string_to_number">bfac1e0e0f0130106d1a3a3485767e8a</transform_definition_id>
+        <ui_id>780cd2cf-f865-4162-ad53-75dab82d682f</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>2a71d9143bda72900ad1a021a3e45a0f</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>b9c00e48-e70b-4409-a5c2-d249d751e142</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:54</sys_created_on>
+        <sys_id>4b71d9143bda72900ad1a021a3e45af2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:56:54</sys_updated_on>
+        <transform_compositions>[{"id":"9c4cf2c60f4130106d1a3a3485767ef7","transformType":null,"transformDefinition":null,"order":0,"parameters":[]}]</transform_compositions>
+        <transform_definition_id display_value="convert_string_to_number">bfac1e0e0f0130106d1a3a3485767e8a</transform_definition_id>
+        <ui_id>8f2e535d-2fa6-425f-b4ae-c6af4819b685</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>2a71d9143bda72900ad1a021a3e45a0f</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>1b820862-4652-470d-a1a9-c2b0855c1e9a</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:54</sys_created_on>
+        <sys_id>4f71d9143bda72900ad1a021a3e45af1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:56:54</sys_updated_on>
+        <transform_compositions>[{"id":"9c4cf2c60f4130106d1a3a3485767ef7","transformType":null,"transformDefinition":null,"order":0,"parameters":[]}]</transform_compositions>
+        <transform_definition_id display_value="convert_string_to_number">bfac1e0e0f0130106d1a3a3485767e8a</transform_definition_id>
+        <ui_id>4f73fb5f-181e-417a-93ab-7400d3794ab0</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>2a71d9143bda72900ad1a021a3e45a0f</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{2ba1971b-54b4-4e7b-8e68-693ff502aa8d.Record.u_baseline_amount_usd}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:54</sys_created_on>
+        <sys_id>8371d9143bda72900ad1a021a3e45acb</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:56:54</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>b82d654b-861c-4b5b-a4ae-716c2fa5a853</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>2a71d9143bda72900ad1a021a3e45a0f</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{2ba1971b-54b4-4e7b-8e68-693ff502aa8d.Record.u_actual_amount_usd}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:54</sys_created_on>
+        <sys_id>8371d9143bda72900ad1a021a3e45af3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:56:54</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>06010596-8878-4c5b-84a8-2f98f2a0257e</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>2a71d9143bda72900ad1a021a3e45a0f</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{2ba1971b-54b4-4e7b-8e68-693ff502aa8d.Record.u_baseline_amount_usd}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:54</sys_created_on>
+        <sys_id>8771d9143bda72900ad1a021a3e45af2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:56:54</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>a47b59a4-f68f-437c-ada3-ba7fb88ddb60</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>2a71d9143bda72900ad1a021a3e45a0f</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{b2bb5071-6e8c-49dd-926f-b9d09a0d055f.sum}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:54</sys_created_on>
+        <sys_id>8b71d9143bda72900ad1a021a3e45af1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:56:54</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>b9c00e48-e70b-4409-a5c2-d249d751e142</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>2a71d9143bda72900ad1a021a3e45a0f</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{2ba1971b-54b4-4e7b-8e68-693ff502aa8d.Record.u_baseline_amount_usd}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:54</sys_created_on>
+        <sys_id>c371d9143bda72900ad1a021a3e45af2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:56:54</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>1b820862-4652-470d-a1a9-c2b0855c1e9a</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>2a71d9143bda72900ad1a021a3e45a0f</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{2ba1971b-54b4-4e7b-8e68-693ff502aa8d.Record.u_baseline_amount_usd}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:54</sys_created_on>
+        <sys_id>c771d9143bda72900ad1a021a3e45af1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:56:54</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>0cd2c711-c961-433d-9b85-f9cec8316f90</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>2a71d9143bda72900ad1a021a3e45a0f</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>a47b59a4-f68f-437c-ada3-ba7fb88ddb60</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:54</sys_created_on>
+        <sys_id>cf71d9143bda72900ad1a021a3e45af2</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:56:54</sys_updated_on>
+        <transform_compositions>[{"id":"9c4cf2c60f4130106d1a3a3485767ef7","transformType":null,"transformDefinition":null,"order":0,"parameters":[]}]</transform_compositions>
+        <transform_definition_id display_value="convert_string_to_number">bfac1e0e0f0130106d1a3a3485767e8a</transform_definition_id>
+        <ui_id>c4771750-6997-4eb1-9546-4421e7d48b3f</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>2a71d9143bda72900ad1a021a3e45a0f</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{ac8524d6-a14b-472c-bed5-73155a315d04.Record.u_baseline_amount_usd}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 14:16:35</sys_created_on>
+        <sys_id>d7f5dd103b5e72900ad1a021a3e45a0c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 14:16:35</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>2c5e061a-bbb1-42fa-9e4e-44f2a89e463e</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=2a71d9143bda72900ad1a021a3e45a0f"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_variable_2a71d9143bda72900ad1a021a3e45a0f"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>cost_center</element>
+        <help/>
+        <hint/>
+        <label>cost_center</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_2a71d9143bda72900ad1a021a3e45a0f</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:53</sys_created_on>
+        <sys_id>7271d9143bda72900ad1a021a3e45a50</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>cost_center</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_2a71d9143bda72900ad1a021a3e45a0f_cost_center_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:56:53</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>event_id</element>
+        <help/>
+        <hint/>
+        <label>event_id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_2a71d9143bda72900ad1a021a3e45a0f</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:53</sys_created_on>
+        <sys_id>be71d9143bda72900ad1a021a3e45a55</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>event_id</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_2a71d9143bda72900ad1a021a3e45a0f_event_id_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:56:53</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_2a71d9143bda72900ad1a021a3e45a0f"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>finance_case</element>
+        <help/>
+        <hint/>
+        <label>finance_case</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_2a71d9143bda72900ad1a021a3e45a0f</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 14:37:23</sys_created_on>
+        <sys_id>b3ba155c3b9e72900ad1a021a3e45a1e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>finance_case</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_2a71d9143bda72900ad1a021a3e45a0f_finance_case_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 14:37:23</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>sum</element>
+        <help/>
+        <hint/>
+        <label>sum</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_2a71d9143bda72900ad1a021a3e45a0f</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:56:54</sys_created_on>
+        <sys_id>ba71d9143bda72900ad1a021a3e45a72</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sum</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_2a71d9143bda72900ad1a021a3e45a0f_sum_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:56:54</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_2a71d9143bda72900ad1a021a3e45a0f"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=3545118000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>b36d314b3bd1fa900ad1a021a3e45a7a</copied_from>
+        <copied_from_name/>
+        <description/>
+        <flow_priority>MEDIUM</flow_priority>
+        <internal_name>budget_variance_analysis</internal_name>
+        <label_cache>[{"name":"ac6fe8e9-6f68-42d2-b197-d0e44e5fd3ed.record.short_description","label":"6 - Create Record➛Finance Case Record➛Short description","reference":"","reference_display":"Short description","type":"string","base_type":"string","parent_table_name":"sn_spend_sdc_service_request","column_name":"short_description","usedInstances":{"b28b18a2-2147-4fbb-b1b7-d9995366258e":["finance_case-0"]}},{"name":"ac6fe8e9-6f68-42d2-b197-d0e44e5fd3ed.record.number","label":"6 - Create Record➛Finance Case Record➛Number","reference":"","reference_display":"Number","type":"string","base_type":"string","parent_table_name":"sn_spend_sdc_service_request","column_name":"number","usedInstances":{"b28b18a2-2147-4fbb-b1b7-d9995366258e":["finance_case-0"]}},{"name":"95acc16f-a293-45be-9263-8f95ab78944a.Record.amount_usd","label":"2➛Expense Transaction Event Record➛Amount USD","reference":"","reference_display":"Amount USD","type":"decimal","base_type":"decimal","parent_table_name":"x_snc_forecast_v_0_expense_transaction_event","column_name":"amount_usd","usedInstances":{"b2bb5071-6e8c-49dd-926f-b9d09a0d055f":["valueb"]}},{"name":"95acc16f-a293-45be-9263-8f95ab78944a.Record.cost_center","label":"2➛Expense Transaction Event Record➛Cost Center","reference":"","reference_display":"Cost Center","type":"string","base_type":"string","parent_table_name":"x_snc_forecast_v_0_expense_transaction_event","column_name":"cost_center","usedInstances":{"ac6fe8e9-6f68-42d2-b197-d0e44e5fd3ed":["short_description"]}},{"name":"b2bb5071-6e8c-49dd-926f-b9d09a0d055f.sum","label":"3 - Variance Comparison➛sum","reference_display":"sum","type":"decimal","base_type":"decimal","usedInstances":{},"attributes":{"uiType":"decimal","uiTypeLabel":"Decimal","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"524d4014-28b1-4299-bc10-654e74f8d781"}},{"name":"subflow.event_id","label":"Input➛event_id","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"95acc16f-a293-45be-9263-8f95ab78944a":["conditions"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"ee094438-567a-4ff3-875f-6edf184b1b03","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"ac8524d6-a14b-472c-bed5-73155a315d04.Record.u_cost_center.u_owner","label":"1➛cc_summary Record➛COST_CENTER➛Owner","reference":"sys_user","reference_display":"User","type":"reference","base_type":"reference","parent_table_name":"sn_erp_integration_cost_center","column_name":"u_owner","usedInstances":{"ac6fe8e9-6f68-42d2-b197-d0e44e5fd3ed":["assigned_to"]}},{"name":"95acc16f-a293-45be-9263-8f95ab78944a.Record.sys_mod_count","label":"2➛Expense Transaction Event Record➛Updates","reference":"","reference_display":"Updates","type":"integer","base_type":"integer","parent_table_name":"x_snc_forecast_v_0_expense_transaction_event","column_name":"sys_mod_count","choices":[{"order":0.0}],"usedInstances":{}},{"name":"subflow.cost_center","label":"Input➛cost_center","reference":"","reference_display":"","type":"string","base_type":"string","column_name":"","usedInstances":{"ac6fe8e9-6f68-42d2-b197-d0e44e5fd3ed":["short_description"],"2ba1971b-54b4-4e7b-8e68-693ff502aa8d":["conditions"],"ac8524d6-a14b-472c-bed5-73155a315d04":["conditions"]},"attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","uiUniqueId":"0de38c01-2481-4f99-ab97-4699a27b9a61","sourceUiUniqueId":"","sourceType":"","sourceId":""}},{"name":"ac8524d6-a14b-472c-bed5-73155a315d04.Record.u_baseline_amount_usd","label":"1➛cc_summary Record➛BASELINE_AMOUNT_USD","reference":"","reference_display":"BASELINE_AMOUNT_USD","type":"string","base_type":"string","parent_table_name":"u_cc_summary","column_name":"u_baseline_amount_usd","usedInstances":{}},{"name":"ac6fe8e9-6f68-42d2-b197-d0e44e5fd3ed.record","label":"6 - Create Record➛Finance Case Record","reference":"sn_spend_sdc_service_request","reference_display":"Finance Case","type":"reference","base_type":"reference","usedInstances":{"b28b18a2-2147-4fbb-b1b7-d9995366258e":["finance_case-0"]},"attributes":{"element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper"}},{"name":"ac8524d6-a14b-472c-bed5-73155a315d04.Record.u_actual_amount_usd","label":"1 - Look Up Record➛cc_summary Record➛ACTUAL_AMOUNT_USD","reference":"","reference_display":"ACTUAL_AMOUNT_USD","type":"string","base_type":"string","parent_table_name":"u_cc_summary","column_name":"u_actual_amount_usd","usedInstances":{"b2bb5071-6e8c-49dd-926f-b9d09a0d055f":["valuea"]}}]</label_cache>
+        <master>true</master>
+        <name>Budget Variance Analysis </name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="Budget Variance Analysis ">2a71d9143bda72900ad1a021a3e45a0f</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:05</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e18111543bda72900ad1a021a3e45a73</sys_id>
+        <sys_mod_count>12</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:46:28</sys_updated_on>
+        <type>subflow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=e18111543bda72900ad1a021a3e45a73"/>
+    <sys_variable_value action="delete_multiple" query="document_key=e18111543bda72900ad1a021a3e45a73"/>
+    <sys_element_mapping action="delete_multiple" query="table=var__m_sys_hub_flow_output_e18111543bda72900ad1a021a3e45a73^id=e18111543bda72900ad1a021a3e45a73"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=e18111543bda72900ad1a021a3e45a73"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=e18111543bda72900ad1a021a3e45a73^sys_idNOT INa58111543bda72900ad1a021a3e45a74"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>e18111543bda72900ad1a021a3e45a73</id>
+        <name>Budget Variance Analysis </name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:05</sys_created_on>
+        <sys_id>a58111543bda72900ad1a021a3e45a74</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:57:05</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=a58111543bda72900ad1a021a3e45a74"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=e18111543bda72900ad1a021a3e45a73^sys_idNOT INb18111543bda72900ad1a021a3e45a8a,e18111543bda72900ad1a021a3e45a76"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=ee094438-567a-4ff3-875f-6edf184b1b03</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>event_id</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>event_id</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Budget Variance Analysis ">e18111543bda72900ad1a021a3e45a73</model>
+        <model_id>e18111543bda72900ad1a021a3e45a73</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_e18111543bda72900ad1a021a3e45a73</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:06</sys_created_on>
+        <sys_id>b18111543bda72900ad1a021a3e45a8a</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:57:06</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=b18111543bda72900ad1a021a3e45a8a"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=0de38c01-2481-4f99-ab97-4699a27b9a61</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>cost_center</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>cost_center</label>
+        <mandatory>false</mandatory>
+        <max_length>65000</max_length>
+        <model display_value="Budget Variance Analysis ">e18111543bda72900ad1a021a3e45a73</model>
+        <model_id>e18111543bda72900ad1a021a3e45a73</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_e18111543bda72900ad1a021a3e45a73</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:05</sys_created_on>
+        <sys_id>e18111543bda72900ad1a021a3e45a76</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:57:05</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=e18111543bda72900ad1a021a3e45a76"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=e18111543bda72900ad1a021a3e45a73^sys_idNOT IN828111543bda72900ad1a021a3e45a99,ff6b5d503bde72900ad1a021a3e45a4b"/>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=decimal,uiTypeLabel=Decimal,uiUniqueId=58acada6-7d10-439f-83b1-459a842dcba9</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>sum</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="Decimal">decimal</internal_type>
+        <label>sum</label>
+        <mandatory>false</mandatory>
+        <max_length>15</max_length>
+        <model display_value="Budget Variance Analysis ">e18111543bda72900ad1a021a3e45a73</model>
+        <model_id>e18111543bda72900ad1a021a3e45a73</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_output_e18111543bda72900ad1a021a3e45a73</name>
+        <next_element/>
+        <order>2</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:07</sys_created_on>
+        <sys_id>828111543bda72900ad1a021a3e45a99</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 14:40:24</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=828111543bda72900ad1a021a3e45a99"/>
+    <sys_hub_flow_output action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=string,uiTypeLabel=String,uiUniqueId=d650672a-5b7a-43ec-bd08-c21122ff72c9</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>finance_case</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_link/>
+        <internal_type display_value="String">string</internal_type>
+        <label>finance_case</label>
+        <mandatory>false</mandatory>
+        <max_length>8000</max_length>
+        <model display_value="Budget Variance Analysis ">e18111543bda72900ad1a021a3e45a73</model>
+        <model_id>e18111543bda72900ad1a021a3e45a73</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_output_e18111543bda72900ad1a021a3e45a73</name>
+        <next_element/>
+        <order>1</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_output</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 14:40:23</sys_created_on>
+        <sys_id>ff6b5d503bde72900ad1a021a3e45a4b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 14:40:23</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_output>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=ff6b5d503bde72900ad1a021a3e45a4b"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=e18111543bda72900ad1a021a3e45a73"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=e18111543bda72900ad1a021a3e45a73"/>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=e18111543bda72900ad1a021a3e45a73^sys_idNOT IN168151543bda72900ad1a021a3e45a5e,1a8151543bda72900ad1a021a3e45a60,1e8151543bda72900ad1a021a3e45a62,d28151543bda72900ad1a021a3e45a5d"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Budget Variance Analysis ">e18111543bda72900ad1a021a3e45a73</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:07</sys_created_on>
+        <sys_id>168151543bda72900ad1a021a3e45a5e</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:57:07</sys_updated_on>
+        <ui_id>95acc16f-a293-45be-9263-8f95ab78944a</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VX227jNhD9FUHPjitZvuatSNbAAtsNsHHzsl0QlEjFRGlSS1JOHCP/3qFEWa6t2FZjFyn6ZGg45NzOmRl/X/uM+Nf+gASTdDIZjEdBEEVBMBxGCQ7jOBomcRDHod/xBV5Q0NRSGWRWGQXREvN8I8M6ARFhOuN49eBOsGek9wLyZM44UVT4199/dPwMK3jNUOVfr3eOTnWH45hyUL0H296s9KfBxeLnGmxIllTfX9zVm0ooFbGuRB2fPhsqCAUfUsw17fgLLAg2Uq02EkUxuRO8FsyZMPCab5WfNXsBe1HP6qUUokpoebb5RC5FpTi9xQbfG5UnJldOtXRWQz7WmzA3iWzIuXM/eO3U+i9WH+/qE7p9IXyFfBOa4pybm39mM2xrs2dtlgHeZYZJqLof2brgmFfhS54vxNeylv7Gw4cGsJUnt29gLteQbJrZgtoKuXKl93P59K2qxpSJwi93yGWC+eYLG6NYnBubl7WfEpQyygligjNhLUHZLHwopwuwgBY4y5h4RJmSS1a8CrEsuo8cPropl082F+xRdHFiI+8CsHB3CvLbQvyAFbNZ+A2egcsda3AOV509pBPFMoOeGHmkprZeaRFpnjD/s+ncIQ5VhSrC8187vl7pG461rpMNMEU/c5uDMvUue6goVHGl8OJXiGBJXaIsBgrahgdpi8kORctCb+Flv3+07hwnuFBl4c4i0otXb3nlWkdZ80Lj7+1jag+8r+VBBe+ztZBxcJ4W0kTxfQq2YuA+tSzU3sGsCxKoibHtgV/m5hj6JweH1qTGGUvRAvLJMk6RoglgRyOsKEplLggqg9uihU12ypQ2TnmfJt8olF54EjDlmTn1Cm1vo92SQsfjqCj0OfWqQJw17UEgXhGItwmkXdhtRnb/bHzrn4lv9TicYsaLamhDs61yUqWkemNsHynkAUScONNPdCo8q1PvH/pNFGgc/kd8PfNKcJnGdf7BnFAc93t4OIrCMAjCgIyC8WgUjodxOsSjflpzFCEtEtgl4OUUoALPowoaVZ2D/f5TLhRtG80JXlUQvJXijzwIeiPjWbegvl7l1nHHXUOJpeQUi52OMoOJ8MvU+e/wOvhwXeVfmeLvZUPOZruZLkWNub7U0M/Z74L9zOlnC7ExDXrjkCRX41E4uuqnZHg1IXhwhSfxYBQRmvTTSyzCZHBwC91aBRIpCLNx6e1mvLSWGLGQj8h6rfPYJqJbyV9f9yl40p12/DwhioqfN9thNIVWDfVd2ZemB6ohdEYaBv8lIn7IdfpCWzM5uG3ifo2n8rmaJc9Fx08lDHcMi8ESBYg+gwOQS6Ow0GVUqCDAPl8+larerFb1PjnVljQ5HkFFk5kLYSciR47is+mfZnFt559m8P/8p/kxNzZwiHFACCpLqGWuilQuUcJzXRzUMDvjvPnxF9zEm7LAFQAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=168151543bda72900ad1a021a3e45a5e"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Variance Comparison">0861ca4b3b15fa900ad1a021a3e45afb</action_type>
+        <action_type_parent display_value="Variance Comparison">04c042c73b15fa900ad1a021a3e45ab7</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>0861ca4b3b15fa900ad1a021a3e45afb</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Budget Variance Analysis ">e18111543bda72900ad1a021a3e45a73</flow>
+        <generation_source/>
+        <order>3</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:07</sys_created_on>
+        <sys_id>1a8151543bda72900ad1a021a3e45a60</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:46:27</sys_updated_on>
+        <ui_id>b2bb5071-6e8c-49dd-926f-b9d09a0d055f</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1TXU/cMBD8L34+n+LEziW8VSCkSm2RoOUFoWhjb8CS80HiANdT/ns3l9xxXFFFJZ6qvkTZsdc7M/bcbJg17IQFIgh1HBRRLlQBaRCAERCEAiKUCtKQLVgFJdLOR3A95lRvfwjYbFIFWou44BCmEZcqR56GccSTglbyVZJKCctL1HVrllDWfeWzvjPDQIcY2zUO1tfzWYToe+tMixU7ubldsAZaGuuxZSebo6X38naQozskfizEr5uxNqhtCW4GvsxdZ3uU2I80wgXDZ4+VQZpfgOtwwUqoDPi6Xe+RFsFcVO4FuLeVnwSW8NzZnzRRqHFfgaRIz+L3ZTYbM8HFGXi48m2vfd/ufaqtxm7ywmABvfOnh9i04aLxtq6mFg+523XXri+rb5MTbH/AwT30HZHAZhQ6Mp9lFFf39dPljuW5rbaezIuu1uTUrgLvW5v3fuSzYb39fmzzBP1uNDosaWZWQtPY6i5r2vrRbucQ7XJ556hYFq5+In6dvauWoEeNS7oCWJ4TfraFr6G1o+CvdAw1j/N+VPahx8/jwxErjFCkyGMZI5eBETyPJXCJiUhFVAQqRjYsWLfuTh103YtVdEfZQz8KnYybLcoml8cW3drGfyJSj7h3YwJHJ+Z3R39vbByGYTFHUqZ/etpJcPSS4VUkQScqlCbmIGTO5SrUPEej+CoSSgF9TCB3kewzMpAEZR+czXcIeJVNeEPR32VT/M/mv5DN3EgtZZrwIA4UlzrNearUiqMOhUz0ShZKfFw2h9tfc+rjFQUHAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=1a8151543bda72900ad1a021a3e45a60"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Create Record">2de05916c31332002841b63b12d3aee1</action_type>
+        <action_type_parent display_value="Create Record">02f0b88cc3c632002841b63b12d3aeff</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>2de05916c31332002841b63b12d3aee1</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Budget Variance Analysis ">e18111543bda72900ad1a021a3e45a73</flow>
+        <generation_source/>
+        <order>6</order>
+        <parent_ui_id>ad829919-bdad-44e2-a917-eed5b737d68c</parent_ui_id>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:08</sys_created_on>
+        <sys_id>1e8151543bda72900ad1a021a3e45a62</sys_id>
+        <sys_mod_count>5</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-12 01:44:40</sys_updated_on>
+        <ui_id>ac6fe8e9-6f68-42d2-b197-d0e44e5fd3ed</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/91UyW7bMBD9FYNnS9Ae27ciQU5pAiRBLmlLjMiRTYBaQlJOXMP/3tHmGEGCtkAvqQ6CZuV7wzd63DMl2YplEoPlMsxEHMZxFATRIgnzLM7DSMaAYc7mrIISKXMLukVLdv9BDrBWrSuU3NXf2iCI5X4PYpFGicw8CJPcS84i4eUoU+8sDtMU6CWDxL9FURvpt1zU1nGBlUNDVv1coTkcfthNbRyXaIVRjVN1NTVfpiBEmBUeRMvYS9IcvWWUxd6ioEh+tlgmCUzNT1ofDjNlZ/giEKWq1rO8lWt0xEMq22jYPfwndMRGaWmwYqvH73PWgKFro3y22r8J/em9a8hRU+qlQi3tO0Jwu6azHZY0R4d8EMbgvxqL78fg7GEMEp0OVDhn+OKwkkhoCtAW56yESoKrzY6tnGnJYRDkTaV3x4yNqhw1ZV3ui1U/6fgwC/qnyy6QSAocMo4mHy96cBcX4OCO+gvXmjFVbGoliFI/HokFtNqdn/qGhJv+/oYSB7meqmvdltX1MBx2bDDpijytJRDYdGw7/AO54m5TP99OIC9V1c9lJKprAfpogXNG5a3r4OwZaiypDy+haUgBvDH1VvXFBKX015oMv9D1c6c6krQPosPt02zBvyT/Re9+AKM6El+pDRUf5szu7LmmNXilQjPkT22HZCA2UuD9FPoR8F4UXXGv7y901BZH4If59JMJMUg/FBsmr9o66fn6o7EVt93J3ErBLZot3QU3+EQqfGePaZJAA52dg8W/X4vfI53W4r5XwPvIp81467s6rZ1dD4FxI4J/tRGLz7QLI41PvwwfrcD3X4FoUQtpBwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=1e8151543bda72900ad1a021a3e45a62"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="Look Up Record">9d09f99587003300663ca1bb36cb0ba3</action_type>
+        <action_type_parent display_value="Look Up Record">b93f42810b30030085c083eb37673a63</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>9d09f99587003300663ca1bb36cb0ba3</compiled_snapshot>
+        <display_text/>
+        <flow display_value="Budget Variance Analysis ">e18111543bda72900ad1a021a3e45a73</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:07</sys_created_on>
+        <sys_id>d28151543bda72900ad1a021a3e45a5d</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-12 05:55:40</sys_updated_on>
+        <ui_id>ac8524d6-a14b-472c-bed5-73155a315d04</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+VYTW/bOBD9K4LOjlfyl+zcFgkMFOg2QJPtpVsQFEnFxNKkSlJJE8P/fYeiZCu2YluoAyTYI2eGwzfD90a0v69CTsPLkM6iWTabjadJFA2HUTSZDAmO03Q4IWmU4lHYCyVeMoi0OBUMlg9YFG5dIEKQKZZLrJ/ATLnJBX76Vnlf+MiCC6qZDC+//+iFOdaQ0TIdXq52XKdCEjhlAkLvKkw7EO1Tvlmi0udtn5vbgi/eoTR1UKJeyH5ZJikDDBkWhvXCJZYUWwU11BbNML2RYmtYcGkhY+iCfxn+DOdOIxeXMaiKMO/bLFHVJm/OrrHFt1YXxBa6CiULxQkzvh+UZbgQ9qpp8wE3ueVK+i2+bL9biWIpv/h2hJsE9a2ApTAAguWuUIe8KiO7XajHrzXKOZdlTyqnUASLzQpbq3laWIdnFTLBlpAILXGec3mPcq0eeLkZsCz79wIW/UyoRzjU8HvZx8QB70NfcX8O9uvS/A1r7qr4C9LAZgDEBTAE+Ss0qtBlKx8QEYUpHRpL43OF615onsyVwMZsK4eWo5+Fw+37UFWMfNPcFqJ5bv+EFA+sKm7dq1UxPkjB2ZZyREnKHQrzUhrKWETgPKb7L1b/FJCRrlamSF1X+g3Xer0vo9/I1FF0xyuuRXfVLLmtDZX89myf2xJU8ovPJr9RFH0kAcLh709/3RXlW3BEVjE9SDK65ZNRGshc9rKhq319dOb5CRBqnt84Zgbp02uoKppnnAna9pWZO8fOV2bw//zKvEuSAyCK/O1xKbgsnwwA9K3YPz5IvTTe4VlJry33Sxs2ZF8DOLAqeO6shBPg1Eq4hbODO4+nBWI970vK7M762lgJYHg2AQwH5xHAalPmppEtPa9fie426/hnF49344GCjQ3xuk1gnc6Mu545WO8LeNhJwU2yec/1K5w783PyFUX23nIELGBrdR7y+kWPnN4zuz29jqLKPmLxb5u/YhyqL6os7w2epvHBX0dp42nKM7SEm+M5vKA1I0AOg7BmKFOFpKh6OzcerXCTGdfwiPTB+4PmKwP9yECBMAO7YEEZHWyiO36Ij9dRt/JTFtSFVKeZAAoJykKCTSHdyu4ytEZnfJyee2jNMRflbcDPorxxnUxrpV8ZXEcu8gAjTpxqJ4KKzwrq98demwRax98RrB/iN/b5RxNhOB0N8CQZxnEUxRFNommSxNNJmk1wMsq2GkXISALTFDJnQBVIj2pq1Pcc7c8fP1K7DpoTUNUUvFbS/aoeJDZwsOB+gxrWceDVQEmVEgzLnYlyB9+JP+YV/oqv43c3VT7EP04Fv9vttDe19vqt3g0F/1vynwX75Cg2ZdFgGlNyMU3i5GKU0cnFjOLxBZ6l42RIGRll53wK/PgPlKMhd70VAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=d28151543bda72900ad1a021a3e45a5d"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=e18111543bda72900ad1a021a3e45a73"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=e18111543bda72900ad1a021a3e45a73^sys_idNOT IN168151543bda72900ad1a021a3e45a58,1e8151543bda72900ad1a021a3e45a59,547b5d503bde72900ad1a021a3e45aa5,587b5d503bde72900ad1a021a3e45abf,dc7b5d503bde72900ad1a021a3e45aa3"/>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f8484e15e1d772107f447756abe0cb4b</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Budget Variance Analysis ">e18111543bda72900ad1a021a3e45a73</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>4</order>
+        <outputs_assigned>sum</outputs_assigned>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:07</sys_created_on>
+        <sys_id>168151543bda72900ad1a021a3e45a58</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:46:27</sys_updated_on>
+        <ui_id>6e188ce2-3a17-4fcf-bc23-771a22d918fe</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/41TXW+bQBD8L/dsEGCwjd+iWJEipY3UuHmpKrTcHfYpxx25Dzuu5f/ePYOx0/ahb+yww87MLkeiveu8s2t9Z63YKLL8cSSCkSWpZ/OUlWk+rRnMszJJgKWQZClMeV7AjJIJUdBy7LS+xWIH0ofqeKyzui6SeRrN+IJGeclYVGazJqpLlpSQsKQomhhJpxPSmLCdhMPrwEaEboVkhgcpPyekA4NTHDdkicIUPiiQT0K9/av5f4VLqLkclX+y4Q5dKBinogU5AE9D/2pEtWFBUjYh/MNxxThObkBaPiEtKAZOm8OIGA7sWckrsEUjvf4WPqz4hRPTIvQ1HL3QIYixrIaQerhZgYMXZzx13oyZaUG57VNgvAEv3f0t1jc8d05o1VMc1PLC1tK36msfAxk/cLMTb1EE74LRoHyw0bxs9f7bReWDUOdMhpdSU0zqUoFzRtTeBT1H4sX6z5h76O+gueQtzqxa6DqhNlVn9E6c56DsNt5ILOJG6j3qCwccAw0eY1wBxA+Ir87wKxgRDH/BzyA5zPuuxLvnj+FkigVQYDCL5ixNonxaNtFiWqdRXpSwyDNGayjJaULswd5LsPYaFe6oevfBaB/cEFHVpxwo1IjO3aGoHR/SOIVLVeGv63ezG7SN66PCooV1wB5v+tgBL1XQW2ivzVswf8VOvwGcKnsL0wMAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">f0484e15e1d772107f447756abe0cb4e</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Budget Variance Analysis ">e18111543bda72900ad1a021a3e45a73</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="If">af4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>5</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:07</sys_created_on>
+        <sys_id>1e8151543bda72900ad1a021a3e45a59</sys_id>
+        <sys_mod_count>28</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:46:28</sys_updated_on>
+        <ui_id>ad829919-bdad-44e2-a917-eed5b737d68c</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1V0W7TMBT9lcjPTZWkTVn7Nm2ahARMYhMvMEU39vVq4djBdraVqP/OdZJ2E5sEE4gn3uLje4/PPfFJema70HbBX9tT79WtYZvPNzOmTMTouWcGGmQbxq0RKihr2Izdge4i1vd1Uddl9iZPV3jC0+VaiHRdrGRar0W2hkxkZSnnvmv2+y9dli2w76WoggPjpXXNpuAlZqsc0rqu83RZSEjXuMR0uZQFnNDjaoH7PZ0olG817D7984P5VmnhcLKlBUduBHRs0/+0pQTpWkMpyzwr+aJYLYosK06Web1a1HkhFkCkRKihRk2lZ0/8fMHisGsj5INT5nZav5tarw6gdSJKKbIZw4eARiCJkKA9zlgDRkCwbsc2wXUEOARxafTuWLFVJhAbi7UPXn3HyJRlsVIizcVx3D0uq+ktjLA8hwAkpeOhc1Mp31rF0Y+OCJTQ6XD2FBsLLtthyqElQK0P3VZ3jfkwmsGOBIeXTkjnSQS2cdKofRpEXm3t/ceDygtlBlemTW056OMKAnlXdyHq6RlqbIioaqBtydGqdfZODc2kpZnfalrMpbb3dGjMxhx4FD4nY2F+Qfj5AH8Cp+IU74mGmuku+Mpzp9rDbMPhbD9jfufPNHj/OCOZW33rosJx4mm2arQntgxEp3TwHU5j7GfPU1kNwGM0qYFYE7oEiUNOjAk+ELfHRPmksQ6TsAWT1OBRK4PPI/Z6gtdFRWYg8zXPX44KLF6KSjIm4HlgDtO/JjX5L1IzIb8Vm7L8n5o/Tk2USddJ8Wr4+xBd/HD9xdjcxHiMhx7N5sqTtuuIvT388+LGjm6U4k+he+u+xqkesf0P1TnXiz0HAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">7c484e15e1d772107f447756abe0cb52</block>
+        <comment/>
+        <connected_to>ad829919-bdad-44e2-a917-eed5b737d68c</connected_to>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Budget Variance Analysis ">e18111543bda72900ad1a021a3e45a73</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Else">1f781bf3c32232002841b63b12d3aee6</logic_definition>
+        <order>8</order>
+        <outputs_assigned/>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 14:40:24</sys_created_on>
+        <sys_id>547b5d503bde72900ad1a021a3e45aa5</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:46:28</sys_updated_on>
+        <ui_id>7660f9ff-3b0e-4fda-a794-4e2028d0e2db</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/6tWyi8tKSgtKQ7JdywuzkzPU7KKjtVRyswDiUHYZYlFmYlJOalQbkpqcmZxZn5eCEjME0ldSmVeYm5mMrJQeX5RdlpOfjlCrBYAD1ouqHEAAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">38484e15e1d772107f447756abe0cb54</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Budget Variance Analysis ">e18111543bda72900ad1a021a3e45a73</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>9</order>
+        <outputs_assigned>finance_case</outputs_assigned>
+        <parent_ui_id>7660f9ff-3b0e-4fda-a794-4e2028d0e2db</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 14:40:24</sys_created_on>
+        <sys_id>587b5d503bde72900ad1a021a3e45abf</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:46:28</sys_updated_on>
+        <ui_id>81cff5b5-3e4b-4a36-8d44-ddddd0dce1ff</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/5WTW28aMRCF/wryM6yWJYTAW0QUKVLaSA3NS1WtZu1ZsOK1N75AKOK/d4yXi0of2sf5dsY+54x3x0zwbfBuYe6dk0vNZj92TAo2Y1VdgRiO+aia4qSY5jlVkBdDGOHNGOop6zMNDVJnLTVojiUHh0TXoELEc+N8j6P2aHvS9bhpWiVB+95G+lWvCmKJPqN+IV2rYPv2n2N8JZWwGBX/7LMWLImhGTYj/XFYg3qW+p1OvGr+V38KKlTXBv9u22/bSJ23Ui+7+rk74PUIjRVR4rDP8NOjFkhKalAO+6wBLcAbuz0RiyBetDqDFRlLfhr4dPIX3XeX53nsrJHccUxfT2XZZZtw/QAeSErgPlg8BmMkR5dyEVhDUH5+yVLDS+ul0WnEQ6WO00aFRn9NebDTAcdVEgmORGAbrUbtnZH6dWU2344qH6U+pNJ9VIaDOlXgKbsq+Khnx4Jc/BFzIldBo8KGbiwbaFsiZWvNWh5uIdFNtlRUZLUyG1IX330GPDrMaAWQPRJ/OOA3sDLa/ULH0HC87ruWHwGf4hMSt+P8dlLAYFxNYHAzQj6oRH434MVwWBR1PSn4lO37zG3dXIFz56BoQ+VHiDZTbF1AZco4jnArW39PotbYZbGPL1fHnzVtZt1pOy2PS0cWFpE9XfSJLT1YyS/Rxtj3aP7M9r8BYdq0BwoEAAA=</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_flow_logic_instance_v2 action="INSERT_OR_UPDATE">
+        <attributes/>
+        <block display_value="">fc484e15e1d772107f447756abe0cb50</block>
+        <comment/>
+        <connected_to/>
+        <decision_table/>
+        <display_text/>
+        <flow display_value="Budget Variance Analysis ">e18111543bda72900ad1a021a3e45a73</flow>
+        <flow_variables_assigned/>
+        <generation_source/>
+        <logic_definition display_value="Assign Subflow Outputs">df4e1945c3e232002841b63b12d3ae3e</logic_definition>
+        <order>7</order>
+        <outputs_assigned>finance_case</outputs_assigned>
+        <parent_ui_id>ad829919-bdad-44e2-a917-eed5b737d68c</parent_ui_id>
+        <sys_class_name>sys_hub_flow_logic_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 14:40:24</sys_created_on>
+        <sys_id>dc7b5d503bde72900ad1a021a3e45aa3</sys_id>
+        <sys_mod_count>23</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:46:28</sys_updated_on>
+        <ui_id>b28b18a2-2147-4fbb-b1b7-d9995366258e</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/81US0/cMBD+K8jnTZTNvrkhEBISLVKhXAqKJvaYtXDs4MfCdpX/3vEmu6DSQ3vrLfNlxv4ek+yYjaGNwd/ZM+/Vk2GnP3ZMCXbKalmDGM/4pF7holwVBVVQlGOY4HQGcsVGzECD1CmVAcOx4uCR0A3omOAHttsBn0tc4iqby/kym5aizOrxapGJAqdTnEkxQZE75NaJ3MSmRtd1J9nJvw36tXWhEui5U21Q1nTdAyMiQvlWw/b+f+HD10oLh8njxxFrwZF9AR07JccNPRjQ18o8E9VPzX+biIYa9edI/hxU2LYJ9cEp8zTU18MBtweQBCWK4xHDt4BGIDGRoD2OWANGQLBue0Qcgrgx+h1Yk7BeTwNvXv2k+5ZFUaROiaSOY//2WFZDaD0sLyAAUYk8RIcHY6zi6HtfBEqIOpx/xPqGm73z/UiAWh+mrY6N+dr7wY4HHHaEkOiJBLZJauI+CJG3a/v67cDyUpm9K8NLbTnoYwWBvKtjSHx2LKq732zukU9Go8aGbqwaaFtCqtbZjdrfQqSb/ElTkUttX9Nm0ZeaA08Kc4oA8kvCL/bwPTiV5H6hY2g4XffdqJeIV2mFxHxWzBclZLN6Adl0gjyrRbHMeDkel6WUi5KvWDdifuvPNXj/bhQlVL3EJLO3bTCo6j1OI/ttPyNSGxy86NLmmvR76ZPZDNyO4XHlScJdwq4+9IktLaziH6FX656T+Hes+wXKtK2jvAQAAA==</values>
+        <workflow_reference/>
+    </sys_hub_flow_logic_instance_v2>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=e18111543bda72900ad1a021a3e45a73^sys_idNOT IN0c561d903b5e72900ad1a021a3e45ad0,168151543bda72900ad1a021a3e45a65,1a8151543bda72900ad1a021a3e45a64,1e8151543bda72900ad1a021a3e45a63,528151543bda72900ad1a021a3e45a65,568151543bda72900ad1a021a3e45a64,5a8151543bda72900ad1a021a3e45a63,928151543bda72900ad1a021a3e45a64,9a8151543bda72900ad1a021a3e45a65,9e8151543bda72900ad1a021a3e45a64,c8561d903b5e72900ad1a021a3e45acf,d68151543bda72900ad1a021a3e45a65,da8151543bda72900ad1a021a3e45a64,de8151543bda72900ad1a021a3e45a63"/>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>e18111543bda72900ad1a021a3e45a73</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>2c5e061a-bbb1-42fa-9e4e-44f2a89e463e</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 14:18:00</sys_created_on>
+        <sys_id>0c561d903b5e72900ad1a021a3e45ad0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 14:18:00</sys_updated_on>
+        <transform_compositions>[{"id":"9c4cf2c60f4130106d1a3a3485767ef7","transformType":null,"transformDefinition":null,"order":0,"parameters":[]}]</transform_compositions>
+        <transform_definition_id display_value="convert_string_to_number">bfac1e0e0f0130106d1a3a3485767e8a</transform_definition_id>
+        <ui_id>780cd2cf-f865-4162-ad53-75dab82d682f</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>e18111543bda72900ad1a021a3e45a73</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>06010596-8878-4c5b-84a8-2f98f2a0257e</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:08</sys_created_on>
+        <sys_id>168151543bda72900ad1a021a3e45a65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:57:08</sys_updated_on>
+        <transform_compositions>[{"id":"9c4cf2c60f4130106d1a3a3485767ef7","transformType":null,"transformDefinition":null,"order":0,"parameters":[]}]</transform_compositions>
+        <transform_definition_id display_value="convert_string_to_number">bfac1e0e0f0130106d1a3a3485767e8a</transform_definition_id>
+        <ui_id>71b14e8d-7ae7-46ff-b82e-218610a9f246</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>e18111543bda72900ad1a021a3e45a73</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>b82d654b-861c-4b5b-a4ae-716c2fa5a853</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:08</sys_created_on>
+        <sys_id>1a8151543bda72900ad1a021a3e45a64</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:57:08</sys_updated_on>
+        <transform_compositions>[{"id":"9c4cf2c60f4130106d1a3a3485767ef7","transformType":null,"transformDefinition":null,"order":0,"parameters":[]}]</transform_compositions>
+        <transform_definition_id display_value="convert_string_to_number">bfac1e0e0f0130106d1a3a3485767e8a</transform_definition_id>
+        <ui_id>4508ea42-25a9-4c60-a13c-584bb9b3b346</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>e18111543bda72900ad1a021a3e45a73</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>0cd2c711-c961-433d-9b85-f9cec8316f90</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:08</sys_created_on>
+        <sys_id>1e8151543bda72900ad1a021a3e45a63</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:57:08</sys_updated_on>
+        <transform_compositions>[{"id":"9c4cf2c60f4130106d1a3a3485767ef7","transformType":null,"transformDefinition":null,"order":0,"parameters":[]}]</transform_compositions>
+        <transform_definition_id display_value="convert_string_to_number">bfac1e0e0f0130106d1a3a3485767e8a</transform_definition_id>
+        <ui_id>b6b1d663-de3c-407e-a619-726d5cb563ad</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>e18111543bda72900ad1a021a3e45a73</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>b9c00e48-e70b-4409-a5c2-d249d751e142</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:08</sys_created_on>
+        <sys_id>528151543bda72900ad1a021a3e45a65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:57:08</sys_updated_on>
+        <transform_compositions>[{"id":"9c4cf2c60f4130106d1a3a3485767ef7","transformType":null,"transformDefinition":null,"order":0,"parameters":[]}]</transform_compositions>
+        <transform_definition_id display_value="convert_string_to_number">bfac1e0e0f0130106d1a3a3485767e8a</transform_definition_id>
+        <ui_id>8f2e535d-2fa6-425f-b4ae-c6af4819b685</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>e18111543bda72900ad1a021a3e45a73</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>1b820862-4652-470d-a1a9-c2b0855c1e9a</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:08</sys_created_on>
+        <sys_id>568151543bda72900ad1a021a3e45a64</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:57:08</sys_updated_on>
+        <transform_compositions>[{"id":"9c4cf2c60f4130106d1a3a3485767ef7","transformType":null,"transformDefinition":null,"order":0,"parameters":[]}]</transform_compositions>
+        <transform_definition_id display_value="convert_string_to_number">bfac1e0e0f0130106d1a3a3485767e8a</transform_definition_id>
+        <ui_id>4f73fb5f-181e-417a-93ab-7400d3794ab0</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>e18111543bda72900ad1a021a3e45a73</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{2ba1971b-54b4-4e7b-8e68-693ff502aa8d.Record.u_baseline_amount_usd}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:08</sys_created_on>
+        <sys_id>5a8151543bda72900ad1a021a3e45a63</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:57:08</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>b82d654b-861c-4b5b-a4ae-716c2fa5a853</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>e18111543bda72900ad1a021a3e45a73</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{b2bb5071-6e8c-49dd-926f-b9d09a0d055f.sum}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:08</sys_created_on>
+        <sys_id>928151543bda72900ad1a021a3e45a64</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:57:08</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>b9c00e48-e70b-4409-a5c2-d249d751e142</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>e18111543bda72900ad1a021a3e45a73</attached_to>
+        <extra_info/>
+        <order>1</order>
+        <prescription/>
+        <source_ui_id>a47b59a4-f68f-437c-ada3-ba7fb88ddb60</source_ui_id>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:08</sys_created_on>
+        <sys_id>9a8151543bda72900ad1a021a3e45a65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:57:08</sys_updated_on>
+        <transform_compositions>[{"id":"9c4cf2c60f4130106d1a3a3485767ef7","transformType":null,"transformDefinition":null,"order":0,"parameters":[]}]</transform_compositions>
+        <transform_definition_id display_value="convert_string_to_number">bfac1e0e0f0130106d1a3a3485767e8a</transform_definition_id>
+        <ui_id>c4771750-6997-4eb1-9546-4421e7d48b3f</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>e18111543bda72900ad1a021a3e45a73</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{2ba1971b-54b4-4e7b-8e68-693ff502aa8d.Record.u_baseline_amount_usd}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:08</sys_created_on>
+        <sys_id>9e8151543bda72900ad1a021a3e45a64</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:57:08</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>a47b59a4-f68f-437c-ada3-ba7fb88ddb60</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>e18111543bda72900ad1a021a3e45a73</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{ac8524d6-a14b-472c-bed5-73155a315d04.Record.u_baseline_amount_usd}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 14:18:00</sys_created_on>
+        <sys_id>c8561d903b5e72900ad1a021a3e45acf</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 14:18:00</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>2c5e061a-bbb1-42fa-9e4e-44f2a89e463e</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>e18111543bda72900ad1a021a3e45a73</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{2ba1971b-54b4-4e7b-8e68-693ff502aa8d.Record.u_actual_amount_usd}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:08</sys_created_on>
+        <sys_id>d68151543bda72900ad1a021a3e45a65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:57:08</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>06010596-8878-4c5b-84a8-2f98f2a0257e</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>e18111543bda72900ad1a021a3e45a73</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{2ba1971b-54b4-4e7b-8e68-693ff502aa8d.Record.u_baseline_amount_usd}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:08</sys_created_on>
+        <sys_id>da8151543bda72900ad1a021a3e45a64</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:57:08</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>1b820862-4652-470d-a1a9-c2b0855c1e9a</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_pill_compound action="INSERT_OR_UPDATE">
+        <attached_to>e18111543bda72900ad1a021a3e45a73</attached_to>
+        <extra_info/>
+        <order>0</order>
+        <prescription>{{2ba1971b-54b4-4e7b-8e68-693ff502aa8d.Record.u_baseline_amount_usd}}</prescription>
+        <source_ui_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:08</sys_created_on>
+        <sys_id>de8151543bda72900ad1a021a3e45a63</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:57:08</sys_updated_on>
+        <transform_compositions>[]</transform_compositions>
+        <transform_definition_id/>
+        <ui_id>0cd2c711-c961-433d-9b85-f9cec8316f90</ui_id>
+    </sys_hub_pill_compound>
+    <sys_hub_flow_variable action="delete_multiple" query="model=e18111543bda72900ad1a021a3e45a73"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_variable_e18111543bda72900ad1a021a3e45a73"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>cost_center</element>
+        <help/>
+        <hint/>
+        <label>cost_center</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_e18111543bda72900ad1a021a3e45a73</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:06</sys_created_on>
+        <sys_id>398111543bda72900ad1a021a3e45a86</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>cost_center</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_e18111543bda72900ad1a021a3e45a73_cost_center_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:57:06</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>event_id</element>
+        <help/>
+        <hint/>
+        <label>event_id</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_e18111543bda72900ad1a021a3e45a73</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:06</sys_created_on>
+        <sys_id>ce8111543bda72900ad1a021a3e45a91</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>event_id</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_e18111543bda72900ad1a021a3e45a73_event_id_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:57:06</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_e18111543bda72900ad1a021a3e45a73"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>finance_case</element>
+        <help/>
+        <hint/>
+        <label>finance_case</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_e18111543bda72900ad1a021a3e45a73</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 14:40:23</sys_created_on>
+        <sys_id>447b5d503bde72900ad1a021a3e45a55</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>finance_case</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_e18111543bda72900ad1a021a3e45a73_finance_case_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 14:40:23</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>sum</element>
+        <help/>
+        <hint/>
+        <label>sum</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_output_e18111543bda72900ad1a021a3e45a73</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:07</sys_created_on>
+        <sys_id>c68111543bda72900ad1a021a3e45af8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>sum</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_output_e18111543bda72900ad1a021a3e45a73_sum_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 13:57:07</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_e18111543bda72900ad1a021a3e45a73"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>2a71d9143bda72900ad1a021a3e45a0f</sys_id>
+        <latest_snapshot>e18111543bda72900ad1a021a3e45a73</latest_snapshot>
+        <compiler_build>glide-zurich-07-01-2025__patch4-hotfix1-12-19-2025_12-20-2025_0947.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=2a71d9143bda72900ad1a021a3e45a0f"/>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=2a71d9143bda72900ad1a021a3e45a0f^sys_idNOT IN628151543bda72900ad1a021a3e45ac3"/>
+    <sys_flow_subflow_plan action="INSERT_OR_UPDATE">
+        <plan>com.snc.process_flow.engine.ProcessPlan@1f59cc17</plan>
+        <plan_id display_value="Budget Variance Analysis ">2a71d9143bda72900ad1a021a3e45a0f</plan_id>
+        <snapshot>e18111543bda72900ad1a021a3e45a73</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-03 13:57:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>628151543bda72900ad1a021a3e45ac3</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:46:28</sys_updated_on>
+    </sys_flow_subflow_plan>
+</record_update>

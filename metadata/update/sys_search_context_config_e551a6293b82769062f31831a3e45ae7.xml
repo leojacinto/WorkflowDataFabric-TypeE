@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_search_context_config">
+    <sys_search_context_config action="INSERT_OR_UPDATE">
+        <attachment_limit>5</attachment_limit>
+        <collapse_attachment>true</collapse_attachment>
+        <document_match_count>3</document_match_count>
+        <document_match_threshold>0.65</document_match_threshold>
+        <enable_exact_match>true</enable_exact_match>
+        <enable_hybrid_search>false</enable_hybrid_search>
+        <enable_semantic_search>false</enable_semantic_search>
+        <evam_definition/>
+        <filter_genius_results_by_search_source>false</filter_genius_results_by_search_source>
+        <genius_results_limit>1</genius_results_limit>
+        <hit_highlighting>false</hit_highlighting>
+        <log_signals_server_side>false</log_signals_server_side>
+        <name>Expense Transactions Search Application</name>
+        <search_engine>ai_search</search_engine>
+        <search_profile display_value="Expense Transactions Search Profile">eb0a9ea53bce369062f31831a3e45a9d</search_profile>
+        <search_results_limit>10</search_results_limit>
+        <semantic_groupby>none</semantic_groupby>
+        <semantic_search_mode>keyword</semantic_search_mode>
+        <semantic_type>standard</semantic_type>
+        <show_disabled_facets>false</show_disabled_facets>
+        <show_tab_counts>true</show_tab_counts>
+        <spell_check>true</spell_check>
+        <suggestions_to_show_limit>10</suggestions_to_show_limit>
+        <sys_class_name>sys_search_context_config</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-26 06:43:57</sys_created_on>
+        <sys_id>e551a6293b82769062f31831a3e45ae7</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Expense Transactions Search Application</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_search_context_config_e551a6293b82769062f31831a3e45ae7</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-26 06:43:57</sys_updated_on>
+        <ts_index_group/>
+        <view/>
+    </sys_search_context_config>
+    <sys_translated_text action="delete_multiple" query="documentkey=e551a6293b82769062f31831a3e45ae7"/>
+</record_update>

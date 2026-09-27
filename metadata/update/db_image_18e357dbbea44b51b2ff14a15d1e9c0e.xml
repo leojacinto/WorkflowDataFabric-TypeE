@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category/>
+        <format/>
+        <height/>
+        <image>cb4ce5fd5d9472b7a1e42a4ccff5e76c</image>
+        <name>wdf-lab/public/wdf/kafka-stream-connect/sc_producer_password_acl.png</name>
+        <size_bytes>6074</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 10:32:31</sys_created_on>
+        <sys_id>18e357dbbea44b51b2ff14a15d1e9c0e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>wdf-lab/public/wdf/kafka-stream-connect/sc_producer_password_acl.png</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>db_image_18e357dbbea44b51b2ff14a15d1e9c0e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 10:32:31</sys_updated_on>
+        <thumbnail/>
+        <width/>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>933336</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/png</content_type>
+        <encryption_context/>
+        <file_name>wdf-lab/public/wdf/kafka-stream-connect/sc_producer_password_acl.png</file_name>
+        <hash>74f4dee931fc20bf0e33de0af4f0988e</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>6074</size_bytes>
+        <size_compressed>5974</size_compressed>
+        <state>available</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 10:32:31</sys_created_on>
+        <sys_id>cb4ce5fd5d9472b7a1e42a4ccff5e76c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 10:32:31</sys_updated_on>
+        <table_name>db_image</table_name>
+        <table_sys_id>18e357dbbea44b51b2ff14a15d1e9c0e</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>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</data>
+        <length>7968</length>
+        <position>0</position>
+        <sys_attachment display_value="wdf-lab/public/wdf/kafka-stream-connect/sc_producer_password_acl.png" sys_id="cb4ce5fd5d9472b7a1e42a4ccff5e76c">cb4ce5fd5d9472b7a1e42a4ccff5e76c</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 10:32:32</sys_created_on>
+        <sys_id>87e3d89023c32799cdcfef880bbdb9f6</sys_id>
+    </sys_attachment_doc>
+</record_update>

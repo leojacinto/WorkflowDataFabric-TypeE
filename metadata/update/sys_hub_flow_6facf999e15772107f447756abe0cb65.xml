@@ -1,0 +1,1008 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_hub_flow">
+    <sys_hub_flow action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=75445000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>e0b9ab9feb702110f2549bf12a5228e6</copied_from>
+        <copied_from_name>Task Processing Flow Template</copied_from_name>
+        <description>DocDataExtractor Flow Template for processing a task</description>
+        <display_name_after_preview/>
+        <flow_priority/>
+        <generation_source/>
+        <internal_name>docintel_task_processing_flow__expense_transaction_event__process</internal_name>
+        <label_cache>[{"name":"6e1fa36a-f09d-4993-afc2-b4d3ade21307.task_id","label":"1 - DocIntel - Create a Document Task➛Task ID","reference_display":"Task ID","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"a7335496-1038-4dd2-8efb-a38349d0513f"}},{"name":"Created_1.current.sys_id","label":"Trigger - Record Created➛Incident Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"incident","column_name":"sys_id"},{"name":"Created_1.table_name","label":"Trigger - Record Created➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"test_input_hidden":"true"}}]</label_cache>
+        <master_snapshot>d49d791de15772107f447756abe0cbd7</master_snapshot>
+        <master_snapshot_digest/>
+        <name>DocIntel Task Processing Flow - Expense Transaction Event - Process</name>
+        <natlang/>
+        <outputs/>
+        <pre_compiled>false</pre_compiled>
+        <remote_trigger_id>037c56e539d372107f44f866ad47bf41</remote_trigger_id>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <show_draft_actions>false</show_draft_actions>
+        <show_triggered_flows>false</show_triggered_flows>
+        <status>published</status>
+        <substatus/>
+        <sys_class_name>sys_hub_flow</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 12:42:20</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>6facf999e15772107f447756abe0cb65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>DocIntel Task Processing Flow - Expense Transaction Event - Process</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_hub_flow_6facf999e15772107f447756abe0cb65</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-27 13:59:23</sys_updated_on>
+        <type>flow</type>
+        <updation_source/>
+        <version>2</version>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_translated_text action="delete_multiple" query="documentkey=6facf999e15772107f447756abe0cb65"/>
+    <sys_variable_value action="delete_multiple" query="document_key=6facf999e15772107f447756abe0cb65"/>
+    <sys_flow_record_trigger action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <condition table="x_snc_forecast_v_0_variance_task">state=2<item display_value="Work in Progress" endquery="false" field="state" goto="false" newquery="false" operator="=" or="false" value="2"/>
+        </condition>
+        <name/>
+        <on_delete>false</on_delete>
+        <on_insert>true</on_insert>
+        <on_update>true</on_update>
+        <published_version/>
+        <run_flow_in>background</run_flow_in>
+        <run_on_extended>false</run_on_extended>
+        <run_when_setting>both</run_when_setting>
+        <run_when_user_list/>
+        <run_when_user_setting>any</run_when_user_setting>
+        <sys_class_name>sys_flow_record_trigger</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-26 09:39:47</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>037c56e539d372107f44f866ad47bf41</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:39:47</sys_updated_on>
+        <table>x_snc_forecast_v_0_variance_task</table>
+        <trigger_definition/>
+    </sys_flow_record_trigger>
+    <sys_trigger_runner_mapping action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <data>{"run_flow_in":"background","run_when_user_list":[],"run_when_setting":"both","run_when_user_setting":"any","run_on_extended":"false"}</data>
+        <identifier>6facf999e15772107f447756abe0cb65</identifier>
+        <identifier_type/>
+        <runner>FDTriggerRunner</runner>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-26 09:39:47</sys_created_on>
+        <sys_id>037c56e539d372107f44f866ad47bf42</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:39:47</sys_updated_on>
+        <trigger display_value="">037c56e539d372107f44f866ad47bf41</trigger>
+    </sys_trigger_runner_mapping>
+    <sys_trigger_runner_mapping action="delete_multiple" query="identifier=6facf999e15772107f447756abe0cb65^sys_idNOT IN037c56e539d372107f44f866ad47bf42"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=6facf999e15772107f447756abe0cb65"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=6facf999e15772107f447756abe0cb65^sys_idNOT IN6bacf999e15772107f447756abe0cb66"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>6facf999e15772107f447756abe0cb65</id>
+        <name>DocIntel Task Processing Flow - Expense Transaction Event - Process</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 12:42:20</sys_created_on>
+        <sys_id>6bacf999e15772107f447756abe0cb66</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-25 12:42:20</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=6bacf999e15772107f447756abe0cb66"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=6facf999e15772107f447756abe0cb65^sys_idNOT IN23acf999e15772107f447756abe0cb79,3f8d791de15772107f447756abe0cb61,63acf999e15772107f447756abe0cb6f"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name,uiTypeLabel=Table Name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="DocIntel Task Processing Flow - Expense Transaction Event - Process">6facf999e15772107f447756abe0cb65</model>
+        <model_id>6facf999e15772107f447756abe0cb65</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_6facf999e15772107f447756abe0cb65</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 12:42:21</sys_created_on>
+        <sys_id>23acf999e15772107f447756abe0cb79</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-25 12:46:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=23acf999e15772107f447756abe0cb79"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="DocIntel Task Processing Flow - Expense Transaction Event - Process">6facf999e15772107f447756abe0cb65</model>
+        <model_id>6facf999e15772107f447756abe0cb65</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_6facf999e15772107f447756abe0cb65</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 12:46:12</sys_created_on>
+        <sys_id>3f8d791de15772107f447756abe0cb61</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-25 12:46:12</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=3f8d791de15772107f447756abe0cb61"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id,uiTypeLabel=Document ID</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="DocIntel Task Processing Flow - Expense Transaction Event - Process">6facf999e15772107f447756abe0cb65</model>
+        <model_id>6facf999e15772107f447756abe0cb65</model_id>
+        <model_table>sys_hub_flow</model_table>
+        <name>var__m_sys_hub_flow_input_6facf999e15772107f447756abe0cb65</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 12:42:21</sys_created_on>
+        <sys_id>63acf999e15772107f447756abe0cb6f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-25 12:46:11</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=63acf999e15772107f447756abe0cb6f"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=6facf999e15772107f447756abe0cb65"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=6facf999e15772107f447756abe0cb65"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=6facf999e15772107f447756abe0cb65^sys_idNOT INe50d75d9e15772107f447756abe0cb91"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="DocIntel Task Processing Flow - Expense Transaction Event - Process">6facf999e15772107f447756abe0cb65</flow>
+        <generation_source/>
+        <name>Created or Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 12:43:51</sys_created_on>
+        <sys_id>e50d75d9e15772107f447756abe0cb91</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 04:43:46</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=6facf999e15772107f447756abe0cb65^sys_idNOT INb3acf999e15772107f447756abe0cbe8,b3acf999e15772107f447756abe0cbea"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="DocIntel - Create a Document Task">dc85af9beb702110f2549bf12a5228d6</action_type>
+        <action_type_parent display_value="DocIntel - Create a Document Task">bea253dbeb302110f2549bf12a522840</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>dc85af9beb702110f2549bf12a5228d6</compiled_snapshot>
+        <display_text/>
+        <flow display_value="DocIntel Task Processing Flow - Expense Transaction Event - Process">6facf999e15772107f447756abe0cb65</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 12:42:21</sys_created_on>
+        <sys_id>b3acf999e15772107f447756abe0cbe8</sys_id>
+        <sys_mod_count>10</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:39:45</sys_updated_on>
+        <ui_id>6e1fa36a-f09d-4993-afc2-b4d3ade21307</ui_id>
+        <updation_source/>
+        <values>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</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b3acf999e15772107f447756abe0cbe8"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="DocIntel - Process a Document Task">1ca82b5feb702110f2549bf12a522896</action_type>
+        <action_type_parent display_value="DocIntel - Process a Document Task">5fe85713eb702110f2549bf12a522824</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>1ca82b5feb702110f2549bf12a522896</compiled_snapshot>
+        <display_text/>
+        <flow display_value="DocIntel Task Processing Flow - Expense Transaction Event - Process">6facf999e15772107f447756abe0cb65</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 12:42:22</sys_created_on>
+        <sys_id>b3acf999e15772107f447756abe0cbea</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:39:45</sys_updated_on>
+        <ui_id>62bbfafa-512d-49be-b197-e341f1b0c8cb</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/5VTwW7bMAz9lULn2LBlJ01yGxAUCLCtwJr10hUGLVGJMFl2ZTmtF+TfR9leEKzdYUeTj4/vPcpPJwbC69pubevBCnzo261ka7aYo+B8kWCZpzxNE8Xn+apUKYc550s+ZzOmA04sUQDyf+BQEM5ChYT00P4saGbGjmC6UDmdFpgqyBYQqWQlo3y1yiJQgkdlLjOQyNMsuY2nwfOZRqVuGwP948RAFXHQRjq0bP30PGMNONrm0bH16a+W7xssDJRoaPAbKqSOwP/w8Wd2R3putpuPnIUdVHBX7LWTQU06Y/jm0UqkbQpMizNWgZXga9eztXcdFRyCvLemvyAO2vrRZgVvrf5F5BmfXfGvWdu3hdRF0MCuOsWUFCE2tegqtP5mN2LEodYC75tw9pHcQ2nec4nadJX9OnoM2aOCzvir7LuW9mATXAWdk2j1cKhfLwHfaTsEMDVNLcBcvsB7p8vOYxvu1end+/zG4ucP7oYGg62igqbRdl80rj7qYRdJr+K9oY9YmfqVNLZ6b+PxpceUOcR3VN8M5UdwOvj/QjQ0HDZ+t/qlw+E/mAuRL5eJipJbBVEuchUtcyEjlKCUyld5KSQ7D8EXL12wNj4HCktbPewT0ECpjfb9jy5JMilrUQQNBT0IR5pqN4Q7xViMRyHKVjjd+E8k+ohTYufn3+V4UqGxAwAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=b3acf999e15772107f447756abe0cbea"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=6facf999e15772107f447756abe0cb65"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=6facf999e15772107f447756abe0cb65"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=6facf999e15772107f447756abe0cb65"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=6facf999e15772107f447756abe0cb65"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_variable_6facf999e15772107f447756abe0cb65"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_6facf999e15772107f447756abe0cb65</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 12:42:21</sys_created_on>
+        <sys_id>2facf999e15772107f447756abe0cb77</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Record</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_6facf999e15772107f447756abe0cb65_current_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-25 12:42:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_6facf999e15772107f447756abe0cb65</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 12:46:12</sys_created_on>
+        <sys_id>cc9d791de15772107f447756abe0cb65</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Changed Fields</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_6facf999e15772107f447756abe0cb65_changed_fields_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-25 12:46:12</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_6facf999e15772107f447756abe0cb65</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 12:42:21</sys_created_on>
+        <sys_id>e7acf999e15772107f447756abe0cb7c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Table Name</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_6facf999e15772107f447756abe0cb65_table_name_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-25 12:42:21</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_6facf999e15772107f447756abe0cb65"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_6facf999e15772107f447756abe0cb65"/>
+    <sys_hub_flow_snapshot action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <acls/>
+        <active>true</active>
+        <allow_high_security_roles>false</allow_high_security_roles>
+        <annotation/>
+        <attributes>browserActivatedIn=chrome,integrationActivatedIn=standalone,labelCacheCleanUpExecuted=true,timeFromCreateToActivate=31170232000,viewActivatedIn=naturalLanguage</attributes>
+        <authored_on_release_version>28100</authored_on_release_version>
+        <callable_by_client_api>false</callable_by_client_api>
+        <category/>
+        <copied_from>e0b9ab9feb702110f2549bf12a5228e6</copied_from>
+        <copied_from_name/>
+        <description>DocDataExtractor Flow Template for processing a task</description>
+        <flow_priority/>
+        <internal_name>docintel_task_processing_flow__expense_transaction_event__process</internal_name>
+        <label_cache>[{"name":"6e1fa36a-f09d-4993-afc2-b4d3ade21307.task_id","label":"1 - DocIntel - Create a Document Task➛Task ID","reference_display":"Task ID","type":"string","base_type":"string","attributes":{"uiType":"string","uiTypeLabel":"String","element_mapping_provider":"com.glide.flow_design.action.data.FlowDesignVariableMapper","pwd2droppable":"true","uiUniqueId":"a7335496-1038-4dd2-8efb-a38349d0513f"}},{"name":"Created_1.current.sys_id","label":"Trigger - Record Created➛Incident Record➛Sys ID","reference":"","reference_display":"Sys ID","type":"GUID","base_type":"GUID","parent_table_name":"incident","column_name":"sys_id"},{"name":"Created_1.table_name","label":"Trigger - Record Created➛Incident Table","reference":"incident","reference_display":"Incident","type":"table_name","base_type":"table_name","attributes":{"test_input_hidden":"true"}}]</label_cache>
+        <master>true</master>
+        <name>DocIntel Task Processing Flow - Expense Transaction Event - Process</name>
+        <natlang/>
+        <outputs/>
+        <parent_flow display_value="DocIntel Task Processing Flow - Expense Transaction Event - Process">6facf999e15772107f447756abe0cb65</parent_flow>
+        <remote_trigger_id/>
+        <run_as>user</run_as>
+        <run_with_roles/>
+        <sc_callable>false</sc_callable>
+        <status>published</status>
+        <sys_class_name>sys_hub_flow_snapshot</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 12:46:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d49d791de15772107f447756abe0cbd7</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name/>
+        <sys_overrides/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:39:47</sys_updated_on>
+        <type>flow</type>
+        <version>2</version>
+    </sys_hub_flow_snapshot>
+    <sys_translated_text action="delete_multiple" query="documentkey=d49d791de15772107f447756abe0cbd7"/>
+    <sys_variable_value action="delete_multiple" query="document_key=d49d791de15772107f447756abe0cbd7"/>
+    <sys_hub_flow_stage action="delete_multiple" query="flow=d49d791de15772107f447756abe0cbd7"/>
+    <sys_flow_cat_variable_model action="delete_multiple" query="id=d49d791de15772107f447756abe0cbd7^sys_idNOT IN549d791de15772107f447756abe0cbd8"/>
+    <sys_flow_cat_variable_model action="INSERT_OR_UPDATE">
+        <id>d49d791de15772107f447756abe0cbd7</id>
+        <name>DocIntel Task Processing Flow - Expense Transaction Event - Process</name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 12:46:13</sys_created_on>
+        <sys_id>549d791de15772107f447756abe0cbd8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-25 12:46:13</sys_updated_on>
+    </sys_flow_cat_variable_model>
+    <sys_flow_cat_variable action="delete_multiple" query="flow_catalog_model=549d791de15772107f447756abe0cbd8"/>
+    <sys_hub_flow_input action="delete_multiple" query="model=d49d791de15772107f447756abe0cbd7^sys_idNOT IN109d791de15772107f447756abe0cbea,1c9d791de15772107f447756abe0cbd9,d49db91de15772107f447756abe0cb00"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>child_label=FDChangeDetails,child_name=FDChangeDetails,child_type=object,child_type_label=Object,co_type_name=FDCollection,element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,pwd2droppable=true,uiType=array.object,uiTypeLabel=Array.Object</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>changed_fields</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="String">string</internal_type>
+        <label>Changed Fields</label>
+        <mandatory>false</mandatory>
+        <max_length>4000</max_length>
+        <model display_value="DocIntel Task Processing Flow - Expense Transaction Event - Process">d49d791de15772107f447756abe0cbd7</model>
+        <model_id>d49d791de15772107f447756abe0cbd7</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_d49d791de15772107f447756abe0cbd7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 12:46:13</sys_created_on>
+        <sys_id>109d791de15772107f447756abe0cbea</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 04:43:48</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=109d791de15772107f447756abe0cbea"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,uiType=document_id</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent>table_name</dependent>
+        <dependent_on_field>table_name</dependent_on_field>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>current</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">document_id</internal_type>
+        <label>Record</label>
+        <mandatory>true</mandatory>
+        <max_length>200</max_length>
+        <model display_value="DocIntel Task Processing Flow - Expense Transaction Event - Process">d49d791de15772107f447756abe0cbd7</model>
+        <model_id>d49d791de15772107f447756abe0cbd7</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_d49d791de15772107f447756abe0cbd7</name>
+        <next_element/>
+        <order>100</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 12:46:13</sys_created_on>
+        <sys_id>1c9d791de15772107f447756abe0cbd9</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:39:47</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>true</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=1c9d791de15772107f447756abe0cbd9"/>
+    <sys_hub_flow_input action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <array>false</array>
+        <array_denormalized>false</array_denormalized>
+        <attributes>element_mapping_provider=com.glide.flow_design.action.data.FlowDesignVariableMapper,test_input_hidden=true,uiType=table_name</attributes>
+        <audit>false</audit>
+        <calculation><![CDATA[(function calculatedFieldValue(current) {
+
+	// Add your code here
+	return '';  // return the calculated value
+
+})(current);]]></calculation>
+        <choice/>
+        <choice_field/>
+        <choice_table/>
+        <column_label/>
+        <comments/>
+        <create_roles/>
+        <default_value/>
+        <defaultsort/>
+        <delete_roles/>
+        <dependent/>
+        <dependent_on_field/>
+        <display>false</display>
+        <dynamic_creation>false</dynamic_creation>
+        <dynamic_creation_script/>
+        <dynamic_default_value/>
+        <dynamic_ref_qual/>
+        <element>table_name</element>
+        <element_reference>false</element_reference>
+        <foreign_database/>
+        <formula/>
+        <function_definition/>
+        <function_field>false</function_field>
+        <help/>
+        <hint/>
+        <internal_type display_value="">table_name</internal_type>
+        <label>Table Name</label>
+        <mandatory>false</mandatory>
+        <max_length>200</max_length>
+        <model display_value="DocIntel Task Processing Flow - Expense Transaction Event - Process">d49d791de15772107f447756abe0cbd7</model>
+        <model_id>d49d791de15772107f447756abe0cbd7</model_id>
+        <model_table>sys_hub_flow_snapshot</model_table>
+        <name>var__m_sys_hub_flow_input_d49d791de15772107f447756abe0cbd7</name>
+        <next_element/>
+        <order>101</order>
+        <primary>false</primary>
+        <read_only>false</read_only>
+        <read_only_option/>
+        <read_roles/>
+        <reference/>
+        <reference_cascade_rule/>
+        <reference_floats>false</reference_floats>
+        <reference_key/>
+        <reference_qual/>
+        <reference_qual_condition/>
+        <reference_type/>
+        <sizeclass/>
+        <spell_check>false</spell_check>
+        <staged>false</staged>
+        <sys_class_name>sys_hub_flow_input</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 12:46:13</sys_created_on>
+        <sys_id>d49db91de15772107f447756abe0cb00</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name/>
+        <sys_package/>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:39:46</sys_updated_on>
+        <table_reference>false</table_reference>
+        <text_index>false</text_index>
+        <unique>false</unique>
+        <use_dependent_field>false</use_dependent_field>
+        <use_dynamic_default>false</use_dynamic_default>
+        <use_reference_qualifier>simple</use_reference_qualifier>
+        <virtual>false</virtual>
+        <virtual_type>script</virtual_type>
+        <widget/>
+        <write_roles/>
+        <xml_view>false</xml_view>
+    </sys_hub_flow_input>
+    <sys_hub_action_input_action_instance action="delete_multiple" query="action_input=d49db91de15772107f447756abe0cb00"/>
+    <sys_hub_flow_output action="delete_multiple" query="model=d49d791de15772107f447756abe0cbd7"/>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=d49d791de15772107f447756abe0cbd7"/>
+    <sys_hub_trigger_instance_v2 action="delete_multiple" query="flow=d49d791de15772107f447756abe0cbd7^sys_idNOT IN149db91de15772107f447756abe0cb1f"/>
+    <sys_hub_trigger_instance_v2 action="INSERT_OR_UPDATE">
+        <comment/>
+        <display_text/>
+        <flow display_value="DocIntel Task Processing Flow - Expense Transaction Event - Process">d49d791de15772107f447756abe0cbd7</flow>
+        <generation_source/>
+        <name>Created or Updated</name>
+        <published_version/>
+        <remote_sys_id/>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 12:46:13</sys_created_on>
+        <sys_id>149db91de15772107f447756abe0cb1f</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 04:43:48</sys_updated_on>
+        <trigger_definition display_value="Created or Updated">a45d9180c32222002841b63b12d3aea7</trigger_definition>
+        <trigger_inputs>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</trigger_inputs>
+        <trigger_outputs/>
+        <trigger_type>record_create_or_update</trigger_type>
+        <updation_source/>
+    </sys_hub_trigger_instance_v2>
+    <sys_hub_action_instance_v2 action="delete_multiple" query="flow=d49d791de15772107f447756abe0cbd7^sys_idNOT IN1c9db91de15772107f447756abe0cb1d,d49db91de15772107f447756abe0cb1c"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="DocIntel - Process a Document Task">1ca82b5feb702110f2549bf12a522896</action_type>
+        <action_type_parent display_value="DocIntel - Process a Document Task">5fe85713eb702110f2549bf12a522824</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>1ca82b5feb702110f2549bf12a522896</compiled_snapshot>
+        <display_text/>
+        <flow display_value="DocIntel Task Processing Flow - Expense Transaction Event - Process">d49d791de15772107f447756abe0cbd7</flow>
+        <generation_source/>
+        <order>2</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 12:46:13</sys_created_on>
+        <sys_id>1c9db91de15772107f447756abe0cb1d</sys_id>
+        <sys_mod_count>1</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-25 12:46:13</sys_updated_on>
+        <ui_id>62bbfafa-512d-49be-b197-e341f1b0c8cb</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/41TXW+bMBT9K5WfIQJC0iRvU6NIkbZVWrq+dBW62NeJNWOobdKyKP9914CyaO2kPXJ8ru/5ME8nBtyr2myN82A47jq3FWzF5jPkWTZPsMzTLE0Tmc3yZSnTDGZZtshmLGIq8PgCOWD2Dx5y4hmokJge3M+CZiJ2BN0G5HSaYyphOodYJksR58vlNAbJs7jMxRQEZuk0uZ2Mg+czjQrlGg3d43gDIfygtLBo2OrpOWINWNrm0bLV6a+j/5WroURN1Adae7Ndf2TAd00ALEqk6zmO0Odx8tsVXlsRxKQRwzePRiCpkKAdRqwCI8DXtmMrb1sCLIK4N7q7MA7K+MFlBW9O/aKl0yy62rtirnOFUEXQxq5OijEoYqxr3lZo/M3DwJFr8LCjjdy39hJirTi6ISiBElrt766xgXDfhKcyjHgo9XsBvNZtZb4OgbHLXVd9tY7EYROiCOZGp3J3qF8vuW2U6VMbD3XNQV9RESw/bBTq0OhotOhLihh4b1XZ+iD8xFr18L6qAfyoLNQYkioqaBpl9kVj66PqlZCxarLX9DGRun4lB07tzWT4dyZUI0w2hK97+BGsCul8oWtoOGz8btRLi/2fNeM8XywSGSe3EuKc5zJe5FzEKEBKmS/zkgt2jkKwdxqc+xMmmShe2hDF8BYpXGVUr4BDA6XSync/2iSZClHzIqgq6NVZUlnbvowx9mIoMSzhVjX+E9k44pjw+fk30s9jHBUEAAA=</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=1c9db91de15772107f447756abe0cb1d"/>
+    <sys_hub_action_instance_v2 action="INSERT_OR_UPDATE">
+        <action_type display_value="DocIntel - Create a Document Task">dc85af9beb702110f2549bf12a5228d6</action_type>
+        <action_type_parent display_value="DocIntel - Create a Document Task">bea253dbeb302110f2549bf12a522840</action_type_parent>
+        <attributes/>
+        <comment/>
+        <compiled_snapshot>dc85af9beb702110f2549bf12a5228d6</compiled_snapshot>
+        <display_text/>
+        <flow display_value="DocIntel Task Processing Flow - Expense Transaction Event - Process">d49d791de15772107f447756abe0cbd7</flow>
+        <generation_source/>
+        <order>1</order>
+        <parent_ui_id/>
+        <sys_class_name>sys_hub_action_instance_v2</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 12:46:13</sys_created_on>
+        <sys_id>d49db91de15772107f447756abe0cb1c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 04:43:48</sys_updated_on>
+        <ui_id>6e1fa36a-f09d-4993-afc2-b4d3ade21307</ui_id>
+        <updation_source/>
+        <values>H4sIAAAAAAAA/+1Z227bOBD9FUPIwy5gGbpakvepiBugi25TxGlf6qxAUWSsrSy5ouTGDfLvO6RkSrJsV03d7KUB2gQeDsnDmTmHHOfDvYJwHqXJq4TlKMFktmGvQmWiYNMJx9Q2SRBohq5r1LAtL6C6gWzDcC1PGSoR9wtd10bUC0jg7PELMfglaEm4Z8RWMdr44uNQWaO44Oa3WYoJY2CpHN53BvAiisOMJMrkw81QWaEMVshJpkzud4b6IopRQGJwnZY7Dt6UkPYDzTcrbmV5FiW31efX1QKzrTHNQg5IHyrkLidJSAAJRTEjQ2WJkhDlabZRJnlWgCEjKLxM4o30WERJDosp3PeORV9gO1fTNO5JCRwOk3JUfvQriKWZTlGOAEmB8yKrXPEijSB6ZVhCQlER5+dNW+lwueK5L6fkKIi3s9O4WCZvynAocoFtZsBSMABBVvykHHt1EDpbpJ+vtigvokQEpRqMU4xi+QnlELqgyDmee6WIrneiXFo6cSYxWcKO/hKtVmDxV1m6jsQuAHo5uo3hw4jG6WdAx6LbZFRW9wgygEYXYJ8K83uURfy4f8AyMJlv9y6JPhVE1D4lY9sNHKRC/QeqpWFH9QKsqwE2LMuzQzK2NOVhqLANO48RY3WgIEP+p4IfswxbFSC/jDGfgrNolb8AUGtSxeJh+L0c9LRjFU/0urRzxD5CZGiURCLxNQ0DNHb0EOmm5wWmoWsOtSzqjscotJyA2kGXny/v4HSMDK4zlLDyAIOXa14O38rYHvi3jL2GAwymzQMcPFnF25pDbepeNewVe41Tsdc02tyFQgHK+l2M+xj9DmJ6jhg5PbMPwngCvtMZQRleXEQkDrsae0ANmrlrC0Ize0+iCeMQ2a5tYNV2iKNapkbUQAuR6iKTYgqF67n2VzUBoxUKojjKN/NC08wwTLHPUfhQdhmgSrM/L6/2OX1KUG892Rp5JHdTDaZ9CvTwwzVoXDOVpUUGBS+Kcvcx0FWZU4vJuCEmM4FkcM2R7LwB9oGsBKVjey21qbFOJSnmcUmpLP1eBD/je6AV7LYEtML9JBoQaFgj2LZUXXeRaiHLUgPPoqrh2hQZXug5Gj7Ju6C8aWoad6uxQ+T2FNgQcp8MuIIYzp3PEuzTNCMYsdxf+5q/5gdNxJrsY+n1m3IKHdCPvr6J16EYgAKu+DD5pDLQA8eODFwJIINX06MQv6UbsE5I/ud24B9rB8aa7gUuCVWEqK1agW7BrW9AY+BhbGLNwLZLfyTt6/LryXoailfFCKJ0e0uyES4yyEA+4u+/KBzlaRm/X349DeU9fJRqja8AIMsIL0TGopA1CH8/V9YkYwBirkzmij7S5spwznO4isndZfAXwfkML8gSwTg416kj2eRiqld3vlMh0O2x5XgGMW3PtKCrKSednV+ep3FMxGHFQxTsH+ZVNc2Vm+E+n9EZ5b98ijDJWbnSLOK4oFouuFFAvp/P50qxUtkiormK5RpqTNYk5oMT/oMnjP9+gH8Pw28+yOiM600vLE1Gy+35/yH/UVHYFwnoDgtplOYXMm2gjkw6SSmTjoLMclyosriupEO7AHzhockJNevkBNPVKDIRUXUEL26LhER17cBV9QBTZxy6OgrMxnwpEjX2LEObUZViiSz1RRxb2HqUUftkx4K0e7Ryhti0PW0H2SFBk/6PlzW5B79wQILiQ3nj90+3JMrg1pkUcWU7cZWnlH47HuJmlIN2o5bu/Jgkt/lCDo5tuPR2lt5TIZ5nYOxChYwtT1ctikGdsWaqoRPAo8xxLUN3moxraUpJIV4GZ4I5faRkr0pwJbnhyzMCMY+jL0gMpdkSlZz8fXb5BhB0XzbP0vcsfc/S9yx9P4P09Wvh7hUhO4LUkL+6Idg+/5uFvV3V33Zze4tRetVl+BRtRLerqlE0u5taLjqP5PoArZ6kjzjIhVsz+xQNb02O9uLHv3aE2cAjkiUofh0lH/e170VU/e2tavSanKq6apmmnTHRczTa93bC62bj6wVdt/N7tj9QbFVrb5+stRdcP1lv/519fGWZdhJ+2gb/Mc3yTf9u82uV0WlD/29V8F/5hueQoDfeKH2J/O+9BOSXWTvl9R1XwWNl/TGXyOn+zn3zN6uc+qVtIgAA</values>
+    </sys_hub_action_instance_v2>
+    <sys_hub_alias_mapping action="delete_multiple" query="source_id=d49db91de15772107f447756abe0cb1c"/>
+    <sys_hub_sub_flow_instance_v2 action="delete_multiple" query="flow=d49d791de15772107f447756abe0cbd7"/>
+    <sys_hub_flow_logic_instance_v2 action="delete_multiple" query="flow=d49d791de15772107f447756abe0cbd7"/>
+    <sys_hub_pill_compound action="delete_multiple" query="attached_to=d49d791de15772107f447756abe0cbd7"/>
+    <sys_hub_flow_variable action="delete_multiple" query="model=d49d791de15772107f447756abe0cbd7"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_variable_d49d791de15772107f447756abe0cbd7"/>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>table_name</element>
+        <help/>
+        <hint/>
+        <label>Table Name</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d49d791de15772107f447756abe0cbd7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 12:46:13</sys_created_on>
+        <sys_id>109db91de15772107f447756abe0cb13</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Table Name</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_d49d791de15772107f447756abe0cbd7_table_name_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-25 12:46:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>changed_fields</element>
+        <help/>
+        <hint/>
+        <label>Changed Fields</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d49d791de15772107f447756abe0cbd7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 12:46:13</sys_created_on>
+        <sys_id>5c9d791de15772107f447756abe0cbfc</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Changed Fields</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_d49d791de15772107f447756abe0cbd7_changed_fields_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-25 12:46:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_documentation action="INSERT_OR_UPDATE">
+        <element>current</element>
+        <help/>
+        <hint/>
+        <label>Record</label>
+        <language>en</language>
+        <name>var__m_sys_hub_flow_input_d49d791de15772107f447756abe0cbd7</name>
+        <plural/>
+        <sys_class_name>sys_documentation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 12:46:13</sys_created_on>
+        <sys_id>949d791de15772107f447756abe0cbe6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Record</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_documentation_var__m_sys_hub_flow_input_d49d791de15772107f447756abe0cbd7_current_en</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-25 12:46:13</sys_updated_on>
+        <url/>
+        <url_target/>
+    </sys_documentation>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_input_d49d791de15772107f447756abe0cbd7"/>
+    <sys_choice action="delete_multiple" query="name=var__m_sys_hub_flow_output_d49d791de15772107f447756abe0cbd7"/>
+    <sys_hub_flow action="UPDATE">
+        <sys_id>6facf999e15772107f447756abe0cb65</sys_id>
+        <latest_snapshot>d49d791de15772107f447756abe0cbd7</latest_snapshot>
+        <compiler_build>glide-zurich-07-01-2025__patch4-hotfix1-12-19-2025_12-20-2025_0947.zip</compiler_build>
+        <version_record/>
+    </sys_hub_flow>
+    <sys_flow_trigger_plan action="delete_multiple" query="plan_id=6facf999e15772107f447756abe0cb65^sys_idNOT INe89db91de15772107f447756abe0cb30"/>
+    <sys_flow_trigger_plan action="INSERT_OR_UPDATE">
+        <binding_strategy>com.snc.process_flow.engine.binding.Every</binding_strategy>
+        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_flow_trigger_plan","id":"e89db91de15772107f447756abe0cb30","name":"plan","plan_signature":null}}</plan>
+        <plan_id>6facf999e15772107f447756abe0cb65</plan_id>
+        <snapshot>d49d791de15772107f447756abe0cbd7</snapshot>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-25 12:46:14</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>e89db91de15772107f447756abe0cb30</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_overrides/>
+        <sys_scope/>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 09:39:47</sys_updated_on>
+        <trigger display_value="">037c56e539d372107f44f866ad47bf41</trigger>
+    </sys_flow_trigger_plan>
+    <sys_flow_subflow_plan action="delete_multiple" query="plan_id=6facf999e15772107f447756abe0cb65"/>
+</record_update>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_risk_advanced_reporting_column_to_factor_map">
+    <sn_risk_advanced_reporting_column_to_factor_map action="INSERT_OR_UPDATE">
+        <attributes>{"assessment_type":"inherent","factor_id":"6d0ea3d4db37c010c794187d13961930"}</attributes>
+        <column display_value="String 7" element="string_7" name="sn_risk_advanced_consolidated_data_store">e8ba594dc3160b50b24896bc7a013199</column>
+        <configuration_identifier display_value="Service Risk Assessment">03df5cf0dbbfc010c794187d139619ed</configuration_identifier>
+        <display_order>9</display_order>
+        <label>Market and Media</label>
+        <sys_class_name>sn_risk_advanced_reporting_column_to_factor_map</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-04 21:52:13</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>3d213b663bb67e5062f31831a3e45aab</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name/>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sn_risk_advanced_reporting_column_to_factor_map_3d213b663bb67e5062f31831a3e45aab</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-04 21:52:13</sys_updated_on>
+    </sn_risk_advanced_reporting_column_to_factor_map>
+    <sys_translated_text action="delete_multiple" query="documentkey=3d213b663bb67e5062f31831a3e45aab"/>
+</record_update>

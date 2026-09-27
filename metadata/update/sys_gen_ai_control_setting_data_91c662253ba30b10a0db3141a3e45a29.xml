@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_gen_ai_control_setting_data">
+    <sys_gen_ai_control_setting_data action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <additional_settings/>
+        <control_data display_value="TB 58250e4f3bd187107cfc50ae53e45ad6">1dc662253ba30b10a0db3141a3e45a24</control_data>
+        <control_setting display_value="Prompt Injection (Now Assist Skill)">62e419177f3782105e0f2334dc86651e</control_setting>
+        <description/>
+        <sys_class_name>sys_gen_ai_control_setting_data</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-25 16:51:34</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>91c662253ba30b10a0db3141a3e45a29</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>BLOCK</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_gen_ai_control_setting_data_91c662253ba30b10a0db3141a3e45a29</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-25 16:51:34</sys_updated_on>
+        <value>BLOCK</value>
+    </sys_gen_ai_control_setting_data>
+</record_update>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="oauth_entity_profile_scope">
+    <oauth_entity_profile_scope action="INSERT_OR_UPDATE">
+        <oauth_entity_profile display_value="AutoGen-Snowflake MCP-1769435022028-OAuthProvider-authorization_code">f10b2f2b3b6ef21062f31831a3e45a1c</oauth_entity_profile>
+        <oauth_entity_scope display_value="session:role:MCP_SERVICE_ROLE">b90beb2b3b6ef21062f31831a3e45a96</oauth_entity_scope>
+        <sys_class_name>oauth_entity_profile_scope</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-26 13:43:42</sys_created_on>
+        <sys_id>3d0b2f2b3b6ef21062f31831a3e45a46</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>f10b2f2b3b6ef21062f31831a3e45a1c</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>oauth_entity_profile_scope_3d0b2f2b3b6ef21062f31831a3e45a46</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-26 13:43:42</sys_updated_on>
+    </oauth_entity_profile_scope>
+</record_update>

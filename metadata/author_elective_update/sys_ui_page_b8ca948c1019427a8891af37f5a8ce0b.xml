@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_ui_page">
+  <sys_ui_page action="DELETE" apply_defaults="true">
+    <sys_id>b8ca948c1019427a8891af37f5a8ce0b</sys_id>
+    <sys_scope display_value="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+    <sys_update_name>sys_ui_page_b8ca948c1019427a8891af37f5a8ce0b</sys_update_name>
+    <name>lab</name>
+    <endpoint>x_snc_forecast_v_0_lab.do</endpoint>
+    <direct>true</direct>
+    <html><![CDATA[
+<!-- @fluent-import-html WARNING: This file was imported from the output of a static build. Modifications of any kind are likely to result in unintended behavior. In most cases, you should edit the source file of the HTML imported below. If you are absolutely certain you want to take control of this HTML, you can remove this comment to prevent the SDK from regenerating it. However, you will then be responsible for the management of this HTML in your Fluent file. -->
+<html class="-polaris">
+  <head>
+    <title>WDF Lab - Fundamentals</title>
+    <!-- @sdk:now-ux-globals -->
+    <!-- Resolved from sdk:now-ux-globals tag at NowSDK build time to support earlier Glide releases -->
+    <script>window.NOW = {};
+window.NOW.user = {};
+window.NOW.batch_glide_ajax_requests = false;
+window.NOW.isUsingPolaris = true;
+window.NOW.exclude_dark_theme = "false";
+window.g_ck = "$[gs.getSession().getSessionToken() || gs.getSessionToken()]";</script>
+    <!-- Include ServiceNow's required scripts -->
+    <g:requires name="scripts/doctype/functions_bootstrap14.js"></g:requires>
+    <g:requires name="scripts/lib/prototype.js"></g:requires>
+    <g:requires name="scripts/classes/ajax/GlideURL.js"></g:requires>
+    <g:requires name="scripts/doctype/CustomEventManager.js"></g:requires>
+    <g:requires name="scripts/classes/ajax/GlideAjax.js"></g:requires>
+    <g:requires name="scripts/classes/GlideUser.js"></g:requires>
+    <g2:client_script type="user"></g2:client_script>
+    <link rel="preload" href="/uxasset/set-cache-buster/$[UxFrameworkScriptables.getFlushTimestamp()].js" as="script"></link>
+    <g:requires name="scripts/polaris_theme_refresh_observer.js"></g:requires>
+    <link data-source-id="glide-theme" id="polarisberg_theme_variables" rel="stylesheet" href="/$uxappimmutables.do?sysparm_request_type=ux_theme$[AMP]sysparm_app_sys_id=c86a62e2c7022010099a308dc7c26022$[AMP]uxpcb=$[sn_ui.PolarisUI.getThemeVariableCssCacheKey()]"></link>
+    <script type="module" src="/uxasset/externals/@devsnc/library-uxf/index.jsdbx"></script>
+    <!-- @sdk:now-ux-globals -->
+    <script src="/uxasset/externals/x_snc_forecast_v_0/main.jsdbx?uxpcb=$[UxFrameworkScriptables.getFlushTimestamp()]" type="module"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+  </body>
+</html>]]></html>
+  </sys_ui_page>
+  <sn_glider_source_artifact_m2m action="DELETE" apply_defaults="true">
+    <sys_id>c269697fbc53460598bdbbe21fac21a1</sys_id>
+    <application_file>b8ca948c1019427a8891af37f5a8ce0b</application_file>
+    <source_artifact>e1304e2a2bc748deabfb7ec9906ea22b</source_artifact>
+  </sn_glider_source_artifact_m2m>
+  <sn_glider_source_artifact action="DELETE" apply_defaults="true">
+    <sys_id>e1304e2a2bc748deabfb7ec9906ea22b</sys_id>
+    <name>x_snc_forecast_v_0_lab.do - BYOUI Files</name>
+  </sn_glider_source_artifact>
+  <sys_attachment action="DELETE" apply_defaults="true">
+    <sys_id>66223b6a422cf88073688035bd438b6d</sys_id>
+    <sys_scope display_value="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+    <table_sys_id>e1304e2a2bc748deabfb7ec9906ea22b</table_sys_id>
+    <table_name>sn_glider_source_artifact</table_name>
+    <file_name>x_snc_forecast_v_0_lab.do - BYOUI Files.zip</file_name>
+    <content_type>application/zip</content_type>
+    <size_bytes>2286</size_bytes>
+    <size_compressed>1573</size_compressed>
+    <compressed>true</compressed>
+    <chunk_size_bytes>933336</chunk_size_bytes>
+    <hash>4021d7235a33eaf92a6939f13370272aa22069ed9ed236bc3911137ded77f3cf</hash>
+    <average_image_color/>
+    <image_width/>
+    <image_height/>
+  </sys_attachment>
+  <sys_attachment_doc action="DELETE" apply_defaults="true">
+    <sys_id>9283ba6dbd7ded81ea882a863a810ebd</sys_id>
+    <sys_attachment>66223b6a422cf88073688035bd438b6d</sys_attachment>
+    <position>0</position>
+    <data>UEsDBBQAAAAIAAAAIQS2jIukEgEAAPoCAAASAAAAc3JjL2NsaWVudC9hcHAuY3NztZLLboMwEEX3fMUsE8mOMK8Q8jUmGBjJ2MiYkrTqv9dQl7BqUaUs/NC1Z+7RtU+Sl/ARAHT8TiesbFtAkhvRXRfNNKgKCIGPVs9Kz6sKVVMAO6X+UoVDL/mjgFqK+yzMK63QiJtF7apvWo6dmk8a3rtKX1drZWnNO5Su9o2bA6VKT3QjE0DVCoP2eA0+g2BGpRatFB7Yw63NBnwXM9n5B21RJ4FNawvIwuWmo9GmANOUh6fpIrqtGK3hkrKcQBS5cSYQs+PGvhOW/+oenvLVfpcVI3Bxg4Wxm1i0NRus6BezZ+r/zDz0r7XtvCtKFr0uywWi1NXjj0Av8ZqoRCVo6yHcF9wNkRJIEgJpRiBLviG+AFBLAwQUAAAACAAAACEEXWBxoekBAAANBAAAEgAAAHNyYy9jbGllbnQvYXBwLnRzeHVTXWvbMBR996+46GEk0CRL+pYPs660MBhlLGMvYw+KdDOLyZImyUlL8H/ftWynddo+BGSdc8+HpKjSWR/hO3IRYe9tCcw3a7bKOugEt9xLqDv0U0B/UAKNPc4ScyIsEQ2aGGYN83mSTWfcuakIgfYyYU2IsP1x920LG/iVAZzoB2CWML9Kq6iixiWwW9KNCLFAoHmtBI/KGgjCOmQtdWflEzG/GNi2cR7sEbaxkspegWjnORg8tlNyIGR4STv31qPgFOkn94obgVNG0nWjfw62eDdY5Dt9EaZDeYtBtFBYLWHf+xw6H6Bv62VokKSFj+iFCm8FuB4GuJGkp1DLMLRu9hulFiODf5Xy1JEyCO5i5QnqY3BDpyFixTUl0hWG1jb7TXeEj+niJO55pek9VEakE7txbjROqTySmoFRcl9LdQCheQgPdKQbpvmO5QkhrJhfQJPUguVf+Q7uuspLuK+MJIaJXIf1rJif593leImRs/wz/lHGoIcPpZLSxhVcf4RSmSoizbs86+ZP6aVNS+5GIaKDTd6FTuLpSf/Fp82pAaem7m3fqTVpaOdufcPFW6y+5oAL9DgpRO+27FaJWg9VZ8XiwufVSSSb5upZ3uo06zq1fylENZ431unP2X+Px63rmTReZXX2H1BLAwQUAAAACAAAACEEdtCPnMwAAAAwAQAAFQAAAHNyYy9jbGllbnQvaW5kZXguaHRtbG2Qu27DMAxF93yFIHRoB8d7IbtL4albW3QoMlCWEAuhLEGkEufvo1jOlu2SPHxcqok9ihGBqJNNDAjJkex3QqjJgrmLItkx2v7vcxBfoEUjhjwb8HZmQFJtrVaSzOl9DpcmL80Rgy71XrVPkhs9Jhd51UJQGjvpwc17puUjL3HU3cv/7zKksuoS0ul7pUGjpf3R8oCZph/nLTH4+Pp2kNsgvkZbJgWT0dbc/Ya1eTXWPpwpHcx1O8W4s3CmkykEloUvcYUrU5rKo/rdDVBLAwQUAAAACAAAACEEO9p8FIAAAAC3AAAAEwAAAHNyYy9jbGllbnQvbWFpbi50c3hNjUEKwjAQRfc5xZBVsjA5QEVQFBQsQvECIRml0HTCGBe9fRNoIbsP7z3+GBNxhgGdz/BhiiC5btmJFl1ffUsPgaL104hzI55T2hxjXUoFiL01vmQZB6KsAvl/LKH5Yr5NWOdleQQluVCpwf3g/u6fG9KGcQ7ISgAc64M9Cd2JFVBLAQIUABQAAAAIAAAAIQS2jIukEgEAAPoCAAASAAAAAAAAAAAAAAAAAAAAAABzcmMvY2xpZW50L2FwcC5jc3NQSwECFAAUAAAACAAAACEEXWBxoekBAAANBAAAEgAAAAAAAAAAAAAAAABCAQAAc3JjL2NsaWVudC9hcHAudHN4UEsBAhQAFAAAAAgAAAAhBHbQj5zMAAAAMAEAABUAAAAAAAAAAAAAAAAAWwMAAHNyYy9jbGllbnQvaW5kZXguaHRtbFBLAQIUABQAAAAIAAAAIQQ72nwUgAAAALcAAAATAAAAAAAAAAAAAAAAAFoEAABzcmMvY2xpZW50L21haW4udHN4UEsFBgAAAAAEAAQABAEAAAsFAAAAAA==</data>
+  </sys_attachment_doc>
+  <sys_attachment action="DELETE" query="table_sys_id=e1304e2a2bc748deabfb7ec9906ea22b^sys_idNOT IN66223b6a422cf88073688035bd438b6d"/>
+  <sys_attachment_doc action="DELETE" query="sys_attachment.table_sys_id=e1304e2a2bc748deabfb7ec9906ea22b^sys_idNOT IN9283ba6dbd7ded81ea882a863a810ebd"/>
+  <sn_glider_source_artifact_m2m action="DELETE" query="source_artifact=e1304e2a2bc748deabfb7ec9906ea22b^sys_idNOT INc269697fbc53460598bdbbe21fac21a1,3ad41a51353c46ceb23360e9a2e44f4b,cdf1d2dbf80c4a98830685c2f3f9376b"/>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</application>
+        <file_path/>
+        <instance_id>0f38ab583b960310a80ce0bf55e45ac2</instance_id>
+        <instance_name>demoalectriallwfaa158438</instance_name>
+        <merge_base/>
+        <name>sys_ui_page_b8ca948c1019427a8891af37f5a8ce0b</name>
+        <payload>&lt;?xml version="1.0" encoding="UTF-8"?&gt;&lt;record_update table="sys_ui_page"&gt;
+  &lt;sys_ui_page action="INSERT_OR_UPDATE" apply_defaults="true"&gt;
+    &lt;sys_id&gt;b8ca948c1019427a8891af37f5a8ce0b&lt;/sys_id&gt;
+    &lt;sys_scope display_value="x_snc_forecast_v_0"&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+    &lt;sys_update_name&gt;sys_ui_page_b8ca948c1019427a8891af37f5a8ce0b&lt;/sys_update_name&gt;
+    &lt;name&gt;lab&lt;/name&gt;
+    &lt;endpoint&gt;x_snc_forecast_v_0_lab.do&lt;/endpoint&gt;
+    &lt;direct&gt;true&lt;/direct&gt;
+    &lt;html&gt;&lt;![CDATA[
+&lt;!-- @fluent-import-html WARNING: This file was imported from the output of a static build. Modifications of any kind are likely to result in unintended behavior. In most cases, you should edit the source file of the HTML imported below. If you are absolutely certain you want to take control of this HTML, you can remove this comment to prevent the SDK from regenerating it. However, you will then be responsible for the management of this HTML in your Fluent file. --&gt;
+&lt;html class="-polaris"&gt;
+  &lt;head&gt;
+    &lt;title&gt;WDF Lab - Fundamentals&lt;/title&gt;
+    &lt;!-- @sdk:now-ux-globals --&gt;
+    &lt;!-- Resolved from sdk:now-ux-globals tag at NowSDK build time to support earlier Glide releases --&gt;
+    &lt;script&gt;window.NOW = {};
+window.NOW.user = {};
+window.NOW.batch_glide_ajax_requests = false;
+window.NOW.isUsingPolaris = true;
+window.NOW.exclude_dark_theme = "false";
+window.g_ck = "$[gs.getSession().getSessionToken() || gs.getSessionToken()]";&lt;/script&gt;
+    &lt;!-- Include ServiceNow's required scripts --&gt;
+    &lt;g:requires name="scripts/doctype/functions_bootstrap14.js"&gt;&lt;/g:requires&gt;
+    &lt;g:requires name="scripts/lib/prototype.js"&gt;&lt;/g:requires&gt;
+    &lt;g:requires name="scripts/classes/ajax/GlideURL.js"&gt;&lt;/g:requires&gt;
+    &lt;g:requires name="scripts/doctype/CustomEventManager.js"&gt;&lt;/g:requires&gt;
+    &lt;g:requires name="scripts/classes/ajax/GlideAjax.js"&gt;&lt;/g:requires&gt;
+    &lt;g:requires name="scripts/classes/GlideUser.js"&gt;&lt;/g:requires&gt;
+    &lt;g2:client_script type="user"&gt;&lt;/g2:client_script&gt;
+    &lt;link rel="preload" href="/uxasset/set-cache-buster/$[UxFrameworkScriptables.getFlushTimestamp()].js" as="script"&gt;&lt;/link&gt;
+    &lt;g:requires name="scripts/polaris_theme_refresh_observer.js"&gt;&lt;/g:requires&gt;
+    &lt;link data-source-id="glide-theme" id="polarisberg_theme_variables" rel="stylesheet" href="/$uxappimmutables.do?sysparm_request_type=ux_theme$[AMP]sysparm_app_sys_id=c86a62e2c7022010099a308dc7c26022$[AMP]uxpcb=$[sn_ui.PolarisUI.getThemeVariableCssCacheKey()]"&gt;&lt;/link&gt;
+    &lt;script type="module" src="/uxasset/externals/@devsnc/library-uxf/index.jsdbx"&gt;&lt;/script&gt;
+    &lt;!-- @sdk:now-ux-globals --&gt;
+    &lt;script src="/uxasset/externals/x_snc_forecast_v_0/main.jsdbx?uxpcb=$[UxFrameworkScriptables.getFlushTimestamp()]" type="module"&gt;&lt;/script&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div id="root"&gt;&lt;/div&gt;
+  &lt;/body&gt;
+&lt;/html&gt;]]&gt;&lt;/html&gt;
+  &lt;/sys_ui_page&gt;
+  &lt;sn_glider_source_artifact_m2m action="INSERT_OR_UPDATE" apply_defaults="true"&gt;
+    &lt;sys_id&gt;c269697fbc53460598bdbbe21fac21a1&lt;/sys_id&gt;
+    &lt;application_file&gt;b8ca948c1019427a8891af37f5a8ce0b&lt;/application_file&gt;
+    &lt;source_artifact&gt;e1304e2a2bc748deabfb7ec9906ea22b&lt;/source_artifact&gt;
+  &lt;/sn_glider_source_artifact_m2m&gt;
+  &lt;sn_glider_source_artifact action="INSERT_OR_UPDATE" apply_defaults="true"&gt;
+    &lt;sys_id&gt;e1304e2a2bc748deabfb7ec9906ea22b&lt;/sys_id&gt;
+    &lt;name&gt;x_snc_forecast_v_0_lab.do - BYOUI Files&lt;/name&gt;
+  &lt;/sn_glider_source_artifact&gt;
+  &lt;sys_attachment action="INSERT_OR_UPDATE" apply_defaults="true"&gt;
+    &lt;sys_id&gt;66223b6a422cf88073688035bd438b6d&lt;/sys_id&gt;
+    &lt;sys_scope display_value="x_snc_forecast_v_0"&gt;a4fd2da13bf8be5062f31831a3e45ac9&lt;/sys_scope&gt;
+    &lt;table_sys_id&gt;e1304e2a2bc748deabfb7ec9906ea22b&lt;/table_sys_id&gt;
+    &lt;table_name&gt;sn_glider_source_artifact&lt;/table_name&gt;
+    &lt;file_name&gt;x_snc_forecast_v_0_lab.do - BYOUI Files.zip&lt;/file_name&gt;
+    &lt;content_type&gt;application/zip&lt;/content_type&gt;
+    &lt;size_bytes&gt;2286&lt;/size_bytes&gt;
+    &lt;size_compressed&gt;1573&lt;/size_compressed&gt;
+    &lt;compressed&gt;true&lt;/compressed&gt;
+    &lt;chunk_size_bytes&gt;933336&lt;/chunk_size_bytes&gt;
+    &lt;hash&gt;4021d7235a33eaf92a6939f13370272aa22069ed9ed236bc3911137ded77f3cf&lt;/hash&gt;
+    &lt;average_image_color/&gt;
+    &lt;image_width/&gt;
+    &lt;image_height/&gt;
+  &lt;/sys_attachment&gt;
+  &lt;sys_attachment_doc action="INSERT_OR_UPDATE" apply_defaults="true"&gt;
+    &lt;sys_id&gt;9283ba6dbd7ded81ea882a863a810ebd&lt;/sys_id&gt;
+    &lt;sys_attachment&gt;66223b6a422cf88073688035bd438b6d&lt;/sys_attachment&gt;
+    &lt;position&gt;0&lt;/position&gt;
+    &lt;data&gt;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&lt;/data&gt;
+  &lt;/sys_attachment_doc&gt;
+  &lt;sys_attachment action="delete_multiple" query="table_sys_id=e1304e2a2bc748deabfb7ec9906ea22b^sys_idNOT IN66223b6a422cf88073688035bd438b6d"/&gt;
+  &lt;sys_attachment_doc action="delete_multiple" query="sys_attachment.table_sys_id=e1304e2a2bc748deabfb7ec9906ea22b^sys_idNOT IN9283ba6dbd7ded81ea882a863a810ebd"/&gt;
+  &lt;sn_glider_source_artifact_m2m action="delete_multiple" query="source_artifact=e1304e2a2bc748deabfb7ec9906ea22b^sys_idNOT INc269697fbc53460598bdbbe21fac21a1,3ad41a51353c46ceb23360e9a2e44f4b,cdf1d2dbf80c4a98830685c2f3f9376b"/&gt;
+&lt;/record_update&gt;</payload>
+        <payload_hash>0</payload_hash>
+        <record_name>lab</record_name>
+        <reverted_from/>
+        <source>d537e73d47270b50037d0fadf26d43ef</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-26 16:11:36</sys_created_on>
+        <sys_id>ed376ff93be3c350a0db3141a3e45a78</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0de7c7f290000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-26 16:11:36</sys_updated_on>
+        <type>UI Page</type>
+        <update_guid>2d376ff9d9e3c350dbe4e0e6eac35977</update_guid>
+        <update_guid_history>2d376ff9d9e3c350dbe4e0e6eac35977:212620242</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-26 16:32:02</sys_created_on>
+        <sys_db_object display_value="" name="sys_ui_page">sys_ui_page</sys_db_object>
+        <sys_id>17253864ea3f4d9a85b2f65212d0d784</sys_id>
+        <sys_metadata>b8ca948c1019427a8891af37f5a8ce0b</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>lab</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_scope_delete display_value="">0f819564639942b6bf7c1ce197c39f91</sys_scope_delete>
+        <sys_update_name>sys_ui_page_b8ca948c1019427a8891af37f5a8ce0b</sys_update_name>
+        <sys_update_version display_value="sys_ui_page_b8ca948c1019427a8891af37f5a8ce0b">ed376ff93be3c350a0db3141a3e45a78</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-26 16:32:02</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

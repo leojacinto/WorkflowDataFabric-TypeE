@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_aix_page">
+    <sys_aix_page action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <collection_name/>
+        <css/>
+        <hide_chat>false</hide_chat>
+        <layout/>
+        <order>100</order>
+        <page_widget display_value="">48c4c3437ec30f2b754abe70bedd31be</page_widget>
+        <path_pattern>/conclusion/final-activity</path_pattern>
+        <private_experience/>
+        <roles/>
+        <source_aix_project display_value="WDF Lab">45d838ba91a75970fcee4ab1e1cd7a84</source_aix_project>
+        <sys_class_name>sys_aix_page</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 10:32:51</sys_created_on>
+        <sys_id>dba06e1f3de04e23e68ffd94da9397e6</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x-snc-wdf-lab-final-activity-page</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_aix_page_dba06e1f3de04e23e68ffd94da9397e6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 10:32:51</sys_updated_on>
+        <title>x-snc-wdf-lab-final-activity-page</title>
+    </sys_aix_page>
+</record_update>

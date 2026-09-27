@@ -1,0 +1,15 @@
+{
+  "scope": "x_snc_forecast_v_0",
+  "scopeId": "a4fd2da13bf8be5062f31831a3e45ac9",
+  "name": "Forecast Variance",
+  "metadataDir": "src/plugin-xmls",
+  "appOutputDir": "dist-metadata/app",
+  "packageSourceCodeOnInstance": true,
+  "staticContent": {
+    "assets": {
+      "./public/**": {
+        "publicPath": "[$config.aiux.basename]/public"
+      }
+    }
+  }
+}

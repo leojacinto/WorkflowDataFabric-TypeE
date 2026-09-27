@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="gl_account" label="GL Account" language="en" table="x_snc_forecast_v_0_expense_transactions">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>gl_account</element>
+            <help/>
+            <hint/>
+            <label>GL Account</label>
+            <language>en</language>
+            <name>x_snc_forecast_v_0_expense_transactions</name>
+            <plural>GL Accounts</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>admin</sys_created_by>
+            <sys_created_on>2025-12-25 09:23:28</sys_created_on>
+            <sys_id>f19c39953bc2be5062f31831a3e45a5b</sys_id>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>GL Account</sys_name>
+            <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+            <sys_update_name>sys_documentation_x_snc_forecast_v_0_expense_transactions_gl_account_en</sys_update_name>
+            <sys_updated_by>admin</sys_updated_by>
+            <sys_updated_on>2025-12-25 09:23:28</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

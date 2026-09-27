@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="one_api_feature_provider">
+    <one_api_feature_provider action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <feature display_value="bfbdd881083f4ff8ab646983af1dc7d9">2bf5de253beb8710a0db3141a3e45a6e</feature>
+        <feature_service display_value="OneExtendGenericProvider">5233278353111110c271ddeeff7b129b</feature_service>
+        <feature_service_factory><![CDATA[(function() { return new global.OneExtendGenericProvider(); })()]]></feature_service_factory>
+        <name>Backend Score Reranker provider</name>
+        <short_description>Auto Generated </short_description>
+        <sys_class_name>one_api_feature_provider</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-25 15:38:16</sys_created_on>
+        <sys_id>a3f5de253beb8710a0db3141a3e45a70</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Backend Score Reranker provider</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>one_api_feature_provider_a3f5de253beb8710a0db3141a3e45a70</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-25 15:38:16</sys_updated_on>
+        <type>script</type>
+        <type_document display_value="BackendScoreReranker">e0efd0e21fc64f0bab374a3eddf2aa90</type_document>
+    </one_api_feature_provider>
+</record_update>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m">
+    <sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <agent display_value="Forecast Variance Snowflake MCP">e61f42af3bee76500ad1a021a3e45ab0</agent>
+        <applicability_script/>
+        <description>query: Get the details via Snowflake MCP using the cost center taken from "Extract Cost Center" step
+columns: ["COST_CENTER", "ACTUAL_AMOUNT_USD", "BASELINE_AMOUNT_USD", "VARIANCE", "VARIANCE_PCT"]
+limit: 1</description>
+        <display_mode/>
+        <display_output>true</display_output>
+        <document_status/>
+        <entity/>
+        <entity_id/>
+        <execution_mode>autopilot</execution_mode>
+        <inputs>[{"name":"query","label":"query","type":"string","originalType":"string","isAiaSupportedType":true,"mandatory":true,"description":"Unstructured text query.","defaultValue":null},{"name":"columns","label":"columns","type":"simple_array","originalType":"array","isAiaSupportedType":true,"mandatory":false,"description":"List of columns to return.","defaultValue":null,"items":{"type":"string"}},{"name":"filter","label":"filter","type":"json_object","originalType":"object","isAiaSupportedType":true,"mandatory":false,"description":"Filter query. Cortex Search supports filtering on the ATTRIBUTES columns specified in the CREATE CORTEX SEARCH SERVICE command.\nCortex Search supports four matching operators:\n1. TEXT or NUMERIC equality: @eq\n2. ARRAY contains: @contains\n3. NUMERIC or DATE/TIMESTAMP greater than or equal to: @gte\n4. NUMERIC or DATE/TIMESTAMP less than or equal to: @lte\nThese matching operators can be composed with various logical operators:\n- @and\n- @or\n- @not\nThe following usage notes apply:\n  Matching against NaN ('not a number') values in the source query are handled as\n  described in Special values. Fixed-point numeric values with more than 19 digits (not\n  including leading zeroes) do not work with @eq, @gte, or @lte and will not be returned\n  by these operators (although they could still be returned by the overall query with the\n  use of @not).\nTIMESTAMP and DATE filters accept values of the form: YYYY-MM-DD and, for timezone\naware dates: YYYY-MM-DD+HH:MM. If the timezone offset is not specified, the date is interpreted in UTC.\nThese operators can be combined into a single filter object.\nExample:\nFiltering on rows where NUMERIC column numeric_col is between 10.5 and 12.5 (inclusive):\n  { \"@and\": [\n    { \"@gte\": { \"numeric_col\": 10.5 } },\n    { \"@lte\": { \"numeric_col\": 12.5 } }\n  ]}\n","defaultValue":null,"properties":{}},{"name":"limit","label":"limit","type":"numeric","originalType":"integer","isAiaSupportedType":true,"mandatory":false,"description":"Max number of results to return.","defaultValue":10}]</inputs>
+        <max_auto_executions>10</max_auto_executions>
+        <name>Get Details in Snowflake MCP</name>
+        <output_transformation_strategy>none</output_transformation_strategy>
+        <post_message/>
+        <post_processing_script/>
+        <pre_message/>
+        <pre_run>false</pre_run>
+        <requires_text_refined_message>false</requires_text_refined_message>
+        <requires_widget_transformation>false</requires_widget_transformation>
+        <should_display_refined_message>false</should_display_refined_message>
+        <sys_class_name>sn_aia_agent_tool_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-26 13:45:19</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>616b2f2f3b6ef21062f31831a3e45a49</sys_id>
+        <sys_mod_count>8</sys_mod_count>
+        <sys_name>Get Details in Snowflake MCP</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sn_aia_agent_tool_m2m_616b2f2f3b6ef21062f31831a3e45a49</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-27 02:26:15</sys_updated_on>
+        <timeout/>
+        <tool display_value="Get Details in Snowflake MCP">e56b2f2f3b6ef21062f31831a3e45a42</tool>
+        <tool_attributes>{"tool":{"name":"variance-baseline-search","description":"Search variance baseline data for financial analysis"}}</tool_attributes>
+        <transformation_instructions/>
+        <wait_for_widget_interaction>false</wait_for_widget_interaction>
+        <widgets/>
+    </sn_aia_agent_tool_m2m>
+</record_update>

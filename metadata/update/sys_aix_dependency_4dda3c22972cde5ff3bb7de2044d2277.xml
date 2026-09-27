@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_aix_dependency">
+    <sys_aix_dependency action="INSERT_OR_UPDATE">
+        <client_script><![CDATA[import{isServer as t}from"lit";function e(e){t||(document.title=e?`${e} \xb7 WDF Lab`:"WDF Lab")}export{e as s};
+//# sourceMappingURL=document-title-BmOJ4tzL.js.map
+]]></client_script>
+        <client_script_compile_metadata>{"asset":"chunks/document-title-BmOJ4tzL.js","sourcemap":"{\"version\":3,\"file\":\"document-title-BmOJ4tzL.js\",\"sources\":[\"../../../utils/document-title.js\"],\"sourcesContent\":[\"import {isServer} from 'lit';\\n\\n/**\\n * Sets the browser tab title (WCAG 2.4.2 — pages must have a descriptive title).\\n * No-op during SSR; the client hydration pass applies it.\\n * @param {string} title\\n */\\nexport function setDocumentTitle(title) {\\n  if (isServer) return;\\n  document.title = title ? `${title} · WDF Lab` : 'WDF Lab';\\n}\\n\"],\"names\":[\"setDocumentTitle\",\"title\",\"isServer\",\"document\"],\"mappings\":\"+BAOO,SAASA,EAAiBC,CAAK,EAChCC,GACJC,CAAAA,SAASF,KAAK,CAAGA,EAAQ,GAAGA,EAAM,aAAU,CAAC,CAAG,SAAA,CAClD\"}"}</client_script_compile_metadata>
+        <name>document-title-BmOJ4tzL.js</name>
+        <required_translations>[]</required_translations>
+        <source_aix_project display_value="WDF Lab">45d838ba91a75970fcee4ab1e1cd7a84</source_aix_project>
+        <source_browser_code/>
+        <sourcemap>{"version":3,"file":"document-title-BmOJ4tzL.js","sources":["../../../utils/document-title.js"],"sourcesContent":["import {isServer} from 'lit';\n\n/**\n * Sets the browser tab title (WCAG 2.4.2 — pages must have a descriptive title).\n * No-op during SSR; the client hydration pass applies it.\n * @param {string} title\n */\nexport function setDocumentTitle(title) {\n  if (isServer) return;\n  document.title = title ? `${title} · WDF Lab` : 'WDF Lab';\n}\n"],"names":["setDocumentTitle","title","isServer","document"],"mappings":"+BAOO,SAASA,EAAiBC,CAAK,EAChCC,GACJC,CAAAA,SAASF,KAAK,CAAGA,EAAQ,GAAGA,EAAM,aAAU,CAAC,CAAG,SAAA,CAClD"}</sourcemap>
+        <sys_class_name>sys_aix_dependency</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 07:02:19</sys_created_on>
+        <sys_id>4dda3c22972cde5ff3bb7de2044d2277</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>document-title-BmOJ4tzL.js</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_ui_script/>
+        <sys_update_name>sys_aix_dependency_4dda3c22972cde5ff3bb7de2044d2277</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 07:02:19</sys_updated_on>
+        <type>module</type>
+        <url/>
+    </sys_aix_dependency>
+</record_update>

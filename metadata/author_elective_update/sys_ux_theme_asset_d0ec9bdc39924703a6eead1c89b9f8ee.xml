@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+  <sys_ux_theme_asset action="DELETE" apply_defaults="true">
+    <sys_id>d0ec9bdc39924703a6eead1c89b9f8ee</sys_id>
+    <sys_scope display_value="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+    <sys_update_name>sys_ux_theme_asset_d0ec9bdc39924703a6eead1c89b9f8ee</sys_update_name>
+    <category>font</category>
+    <name>virtual-on/square.css</name>
+  </sys_ux_theme_asset>
+  <sys_attachment action="DELETE" apply_defaults="true">
+    <sys_id>d5069681e2a840ef83eb5cb06ae05fc4</sys_id>
+    <sys_scope display_value="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+    <sys_update_name>sys_attachment_d5069681e2a840ef83eb5cb06ae05fc4</sys_update_name>
+    <chunk_size_bytes>933336</chunk_size_bytes>
+    <compressed>true</compressed>
+    <content_type>text/css</content_type>
+    <file_name>virtual-on/square.css</file_name>
+    <hash>c1f0856b343c678130ff782efa104a65</hash>
+    <size_bytes>3205</size_bytes>
+    <size_compressed>1244</size_compressed>
+    <state>available</state>
+    <table_name>sys_ux_theme_asset</table_name>
+    <table_sys_id>d0ec9bdc39924703a6eead1c89b9f8ee</table_sys_id>
+  </sys_attachment>
+  <sys_attachment_doc action="DELETE" apply_defaults="true">
+    <sys_id>062e10dbc57df0ca685dcb915d130ee3</sys_id>
+    <sys_scope display_value="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+    <sys_update_name>sys_attachment_doc_062e10dbc57df0ca685dcb915d130ee3</sys_update_name>
+    <data>H4sIAAAAAAAAA41WX2+rNhR/76fwVFVJJiCQAAGqSZsmTXvZHtbHqz4YY4hVgpnthOZe7bvv2AYKadL2XjXCx/Y5v9/5619L3ii3xISiH3cI9asDq88ZWjxRcWKE/s079IQbuXgcTnSUVXuVodD3R5lU55pmqOHigOtRWjDZ1hiUyQ63WioFydBR1MvFXqlWZut113WetJYa3nmEH9ZUEY/UjDaqZrlcF3I9WY2fLhbEheMH3si1oJIfBaFyre3K9Rt2Dd39h1bHGguv42W5WawAHMBUy0W/frz77+4uE5wr4wbCay5cSfb0AJQKLF40dNcFSxzQM/MhW/Cag57++AsWgwEH/Q5oeI2lg8ZD9rIEHFec6qDfBMO1g/6k9YkqRrCD9FEXfMJKA+wet+23AivsKo3ol4VGtHh2kN7IGq6Wk93nlaHgunmVoXs/8XO/B5BXrqjyDCUOCgL4C62YNS9wsCA0pqmVFOwAkmSTBmkvIWfcgCjNKab9NYJbxbiW4gCXeWSlgpZU0IaA2+4TnGK8vZD3yuNgF+56XIq+QvrsccG7EbE2fI15rRNv8TylSAv4j+cUN9udAz+x/pnR3Gw36YZMacZ4t90lM5pBmZS73SXNsIjiqLczpRmROIp7P13STLYJSU2NXNIszb8c3AM0f0Y/UM5fXcm+swY45VwUVLggekSwnfPibBgfsKgYYDEaD6xx930hBr4vT3stHQuuEqzQAlgBHKboAbIPSkxRocU5Ji+V4Mem0D6P/J1vKJjMz9AJi6VxGVTGRVewWzpDzZ4S8MWsi8xl5G0iiSiWEN0+ggZ7y4djgtZYsZOJfscKtc80lyVwOHWQloaK0X3Ar25/IIC0aF+1EMuWEuUKUAG1GGgRP1FR1tqte1YUtNEypovQ2rOfxhwBJpg14Ft1biF4rKlhpf1utqdOsTzz6h3Lt0OXVCW41/bRN7I4B+tHa501kkKwTPRGXv6DXk4CadaKH8nexcQqaXhj4R+F1OGpBM4nJjN97gSWZwdySCWTPt6JVQ1V6qvQWs50lrj0BNkCSTNYn3gHVghp12Hhgq1Cd+Rl6he0chAUIF4O3tPluHKQ76XhCvkPt3Z3mxXahDe3tysU3txdoTh+WDlXIQXJR5i2oPcmphXaxrf3kpt7XrhbmTB+PXE88LfgH0TnO5RiQV+hr9ncaDOUkn87vahpCXGL+1WfVeGwvhXKq2U+a1A+2rSvMCPgx56a7H5W+M5U1SVXeqa5APHw3ICc9/wQ8PZ29NQ0BmqdsjCFYYKapuh7m57VDL3u2XZ+74NZk9yY80Ak8MKov2lfKlDtGYq8aCYd3jSJfdOYvjBWJSC8Bsn1vcAGAszbNjdv0W8NbDuEZAIh8AYEF9ZiM03fO8APhgtzF9gZZb3gjTNogsc1ObP1ggkIrTAxjl+DyfRz9wfD7Znx0dw783C1MRjGmZTXnJin1HUNemhaLfdm3APqqqo/altjYZhnhiEZjk4V/SN1FLS4KHouO8078LaX/tBHv+CJq2EY6mg6Ra63iCiyB82Yh4BDkQEnVvSKrBuGfRh1BTtC8aZpakfg0OX76v60Gq81HpBa7VeH9tT92V7PVz1c3pfdTMnFFuj5ZucxPNfeckC3IPQTO7RcKNwofe5/7gLku4UMAAA=</data>
+    <length>1660</length>
+    <position>0</position>
+    <sys_attachment>d5069681e2a840ef83eb5cb06ae05fc4</sys_attachment>
+  </sys_attachment_doc>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</application>
+        <file_path/>
+        <instance_id>0f38ab583b960310a80ce0bf55e45ac2</instance_id>
+        <instance_name>demoalectriallwfaa158438</instance_name>
+        <merge_base/>
+        <name>sys_ux_theme_asset_d0ec9bdc39924703a6eead1c89b9f8ee</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update>
+  <sys_ux_theme_asset action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>d0ec9bdc39924703a6eead1c89b9f8ee</sys_id>
+    <sys_scope display_value="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+    <sys_update_name>sys_ux_theme_asset_d0ec9bdc39924703a6eead1c89b9f8ee</sys_update_name>
+    <category>font</category>
+    <name>virtual-on/square.css</name>
+  </sys_ux_theme_asset>
+  <sys_attachment action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>d5069681e2a840ef83eb5cb06ae05fc4</sys_id>
+    <sys_scope display_value="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+    <sys_update_name>sys_attachment_d5069681e2a840ef83eb5cb06ae05fc4</sys_update_name>
+    <chunk_size_bytes>933336</chunk_size_bytes>
+    <compressed>true</compressed>
+    <content_type>text/css</content_type>
+    <file_name>virtual-on/square.css</file_name>
+    <hash>c1f0856b343c678130ff782efa104a65</hash>
+    <size_bytes>3205</size_bytes>
+    <size_compressed>1244</size_compressed>
+    <state>available</state>
+    <table_name>sys_ux_theme_asset</table_name>
+    <table_sys_id>d0ec9bdc39924703a6eead1c89b9f8ee</table_sys_id>
+  </sys_attachment>
+  <sys_attachment_doc action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>062e10dbc57df0ca685dcb915d130ee3</sys_id>
+    <sys_scope display_value="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+    <sys_update_name>sys_attachment_doc_062e10dbc57df0ca685dcb915d130ee3</sys_update_name>
+    <data>H4sIAAAAAAAAA41WX2+rNhR/76fwVFVJJiCQAAGqSZsmTXvZHtbHqz4YY4hVgpnthOZe7bvv2AYKadL2XjXCx/Y5v9/5619L3ii3xISiH3cI9asDq88ZWjxRcWKE/s079IQbuXgcTnSUVXuVodD3R5lU55pmqOHigOtRWjDZ1hiUyQ63WioFydBR1MvFXqlWZut113WetJYa3nmEH9ZUEY/UjDaqZrlcF3I9WY2fLhbEheMH3si1oJIfBaFyre3K9Rt2Dd39h1bHGguv42W5WawAHMBUy0W/frz77+4uE5wr4wbCay5cSfb0AJQKLF40dNcFSxzQM/MhW/Cag57++AsWgwEH/Q5oeI2lg8ZD9rIEHFec6qDfBMO1g/6k9YkqRrCD9FEXfMJKA+wet+23AivsKo3ol4VGtHh2kN7IGq6Wk93nlaHgunmVoXs/8XO/B5BXrqjyDCUOCgL4C62YNS9wsCA0pqmVFOwAkmSTBmkvIWfcgCjNKab9NYJbxbiW4gCXeWSlgpZU0IaA2+4TnGK8vZD3yuNgF+56XIq+QvrsccG7EbE2fI15rRNv8TylSAv4j+cUN9udAz+x/pnR3Gw36YZMacZ4t90lM5pBmZS73SXNsIjiqLczpRmROIp7P13STLYJSU2NXNIszb8c3AM0f0Y/UM5fXcm+swY45VwUVLggekSwnfPibBgfsKgYYDEaD6xx930hBr4vT3stHQuuEqzQAlgBHKboAbIPSkxRocU5Ji+V4Mem0D6P/J1vKJjMz9AJi6VxGVTGRVewWzpDzZ4S8MWsi8xl5G0iiSiWEN0+ggZ7y4djgtZYsZOJfscKtc80lyVwOHWQloaK0X3Ar25/IIC0aF+1EMuWEuUKUAG1GGgRP1FR1tqte1YUtNEypovQ2rOfxhwBJpg14Ft1biF4rKlhpf1utqdOsTzz6h3Lt0OXVCW41/bRN7I4B+tHa501kkKwTPRGXv6DXk4CadaKH8nexcQqaXhj4R+F1OGpBM4nJjN97gSWZwdySCWTPt6JVQ1V6qvQWs50lrj0BNkCSTNYn3gHVghp12Hhgq1Cd+Rl6he0chAUIF4O3tPluHKQ76XhCvkPt3Z3mxXahDe3tysU3txdoTh+WDlXIQXJR5i2oPcmphXaxrf3kpt7XrhbmTB+PXE88LfgH0TnO5RiQV+hr9ncaDOUkn87vahpCXGL+1WfVeGwvhXKq2U+a1A+2rSvMCPgx56a7H5W+M5U1SVXeqa5APHw3ICc9/wQ8PZ29NQ0BmqdsjCFYYKapuh7m57VDL3u2XZ+74NZk9yY80Ak8MKov2lfKlDtGYq8aCYd3jSJfdOYvjBWJSC8Bsn1vcAGAszbNjdv0W8NbDuEZAIh8AYEF9ZiM03fO8APhgtzF9gZZb3gjTNogsc1ObP1ggkIrTAxjl+DyfRz9wfD7Znx0dw783C1MRjGmZTXnJin1HUNemhaLfdm3APqqqo/altjYZhnhiEZjk4V/SN1FLS4KHouO8078LaX/tBHv+CJq2EY6mg6Ra63iCiyB82Yh4BDkQEnVvSKrBuGfRh1BTtC8aZpakfg0OX76v60Gq81HpBa7VeH9tT92V7PVz1c3pfdTMnFFuj5ZucxPNfeckC3IPQTO7RcKNwofe5/7gLku4UMAAA=</data>
+    <length>1660</length>
+    <position>0</position>
+    <sys_attachment>d5069681e2a840ef83eb5cb06ae05fc4</sys_attachment>
+  </sys_attachment_doc>
+</record_update>]]></payload>
+        <payload_hash>0</payload_hash>
+        <record_name>virtual-on/square.css</record_name>
+        <reverted_from/>
+        <source>8a3ebefb3b5fcb94a0db3141a3e45a89</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 08:05:07</sys_created_on>
+        <sys_id>3c5e727f3b5fcb94a0db3141a3e45a4c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0bdd8f3dd0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 08:05:07</sys_updated_on>
+        <type>UX Theme Asset</type>
+        <update_guid>745e727fa65fcb94eabc55692c02194c</update_guid>
+        <update_guid_history>745e727fa65fcb94eabc55692c02194c:0,ef8c7e3bf01fcb94105ab5948c9ba077:0</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 08:32:37</sys_created_on>
+        <sys_db_object display_value="" name="sys_ux_theme_asset">sys_ux_theme_asset</sys_db_object>
+        <sys_id>243798edaf3a48a796b95cd80cf815a1</sys_id>
+        <sys_metadata>d0ec9bdc39924703a6eead1c89b9f8ee</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>virtual-on/square.css</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_scope_delete display_value="">0f819564639942b6bf7c1ce197c39f91</sys_scope_delete>
+        <sys_update_name>sys_ux_theme_asset_d0ec9bdc39924703a6eead1c89b9f8ee</sys_update_name>
+        <sys_update_version display_value="sys_ux_theme_asset_d0ec9bdc39924703a6eead1c89b9f8ee">3c5e727f3b5fcb94a0db3141a3e45a4c</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 08:32:37</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

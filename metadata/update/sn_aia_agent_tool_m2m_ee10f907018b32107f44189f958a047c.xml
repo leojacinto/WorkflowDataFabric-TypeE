@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent_tool_m2m">
+    <sn_aia_agent_tool_m2m action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <agent display_value="Forecast Variance Integration Hub Trigger">290bc4ec3b56765062f31831a3e45a86</agent>
+        <applicability_script/>
+        <description>Get event ID from x_snc_forecast_v_0_expense_transaction_event.</description>
+        <display_mode/>
+        <display_output>true</display_output>
+        <document_status/>
+        <entity/>
+        <entity_id/>
+        <execution_mode>autopilot</execution_mode>
+        <inputs>[{"name":"crudInputs","value":{"operation":"lookup","table":{"value":"x_snc_forecast_v_0_expense_transaction_event","displayValue":"Expense Transaction Event"},"query":"vendorISNOTEMPTY","returnFields":[{"excludedOperators":[],"extendedOperators":null,"name":"event_id","label":"Event ID","type":"string","referenceTable":null,"referenceTableDefaultField":null,"referenceKey":null,"dictionaryAttributes":[{"name":"edge_encryption_enabled","value":"true"}],"id":"event_id","sublabel":"event_id"}],"limit":"1","orderBy":"sys_created_on","sortType":"z_to_a"},"description":"CRUD Input Variables. These are already pre-defined. Under no circumstances should you prompt the user for this information or attempt to change these values."}]</inputs>
+        <max_auto_executions>10</max_auto_executions>
+        <name>Extract Event ID</name>
+        <output_transformation_strategy>none</output_transformation_strategy>
+        <post_message/>
+        <post_processing_script/>
+        <pre_message/>
+        <pre_run>false</pre_run>
+        <requires_text_refined_message>false</requires_text_refined_message>
+        <requires_widget_transformation>false</requires_widget_transformation>
+        <should_display_refined_message>false</should_display_refined_message>
+        <sys_class_name>sn_aia_agent_tool_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-02-18 12:01:03</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>ee10f907018b32107f44189f958a047c</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Extract Event ID</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sn_aia_agent_tool_m2m_ee10f907018b32107f44189f958a047c</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-02-26 06:14:30</sys_updated_on>
+        <timeout/>
+        <tool display_value="Extract Event ID">e2107907018b32107f44189f958a04cf</tool>
+        <tool_attributes>{}</tool_attributes>
+        <transformation_instructions/>
+        <wait_for_widget_interaction>false</wait_for_widget_interaction>
+        <widgets/>
+    </sn_aia_agent_tool_m2m>
+</record_update>

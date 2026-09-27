@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category/>
+        <format/>
+        <height/>
+        <image>b64efaf74906dbb71eade1cb2e6f484c</image>
+        <name>wdf-lab/public/wdf/lens-and-document-intelligence/sc_ldi_lens_create_with_lens.png</name>
+        <size_bytes>2582</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 10:32:45</sys_created_on>
+        <sys_id>c2c8221a217a4c52af6cad9d49d01630</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>wdf-lab/public/wdf/lens-and-document-intelligence/sc_ldi_lens_create_with_lens.png</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>db_image_c2c8221a217a4c52af6cad9d49d01630</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 10:32:45</sys_updated_on>
+        <thumbnail/>
+        <width/>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>933336</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/png</content_type>
+        <encryption_context/>
+        <file_name>wdf-lab/public/wdf/lens-and-document-intelligence/sc_ldi_lens_create_with_lens.png</file_name>
+        <hash>3d21aef36bb582f1e982fa01a855fc90</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>2582</size_bytes>
+        <size_compressed>2605</size_compressed>
+        <state>available</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 10:32:45</sys_created_on>
+        <sys_id>b64efaf74906dbb71eade1cb2e6f484c</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 10:32:45</sys_updated_on>
+        <table_name>db_image</table_name>
+        <table_sys_id>c2c8221a217a4c52af6cad9d49d01630</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>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</data>
+        <length>3476</length>
+        <position>0</position>
+        <sys_attachment display_value="wdf-lab/public/wdf/lens-and-document-intelligence/sc_ldi_lens_create_with_lens.png" sys_id="b64efaf74906dbb71eade1cb2e6f484c">b64efaf74906dbb71eade1cb2e6f484c</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 10:32:45</sys_created_on>
+        <sys_id>92cb76228e17ca03d41c468115f765bb</sys_id>
+    </sys_attachment_doc>
+</record_update>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_datasource">
+    <ais_datasource action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <conflict>false</conflict>
+        <embedding_model>E5FT</embedding_model>
+        <filter/>
+        <force_late_binding>false</force_late_binding>
+        <name>Expense Transactions Indexed Source</name>
+        <retention_policy/>
+        <source>x_snc_forecast_v_0_expense_transactions</source>
+        <sys_class_name>ais_datasource</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-26 05:50:57</sys_created_on>
+        <sys_id>c6d4dea13b4e369062f31831a3e45ad0</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Expense Transactions Indexed Source</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>ais_datasource_c6d4dea13b4e369062f31831a3e45ad0</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-29 15:19:22</sys_updated_on>
+        <type>internal</type>
+    </ais_datasource>
+</record_update>

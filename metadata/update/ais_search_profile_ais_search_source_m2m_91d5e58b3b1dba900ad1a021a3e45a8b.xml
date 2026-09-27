@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_search_profile_ais_search_source_m2m">
+    <ais_search_profile_ais_search_source_m2m action="INSERT_OR_UPDATE">
+        <exclude_attachments_in_now_assist_genius_results>false</exclude_attachments_in_now_assist_genius_results>
+        <exclude_in_now_assist_genius_results>false</exclude_in_now_assist_genius_results>
+        <exclude_in_regular_search>false</exclude_in_regular_search>
+        <include_in_now_assist_genius_results>false</include_in_now_assist_genius_results>
+        <profile display_value="Forecast Variance">6a13a10f3bd9ba900ad1a021a3e45a74</profile>
+        <search_source display_value="">31c5e1cb3b1dba900ad1a021a3e45a9a</search_source>
+        <search_source_group/>
+        <sys_class_name>ais_search_profile_ais_search_source_m2m</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-23 11:26:19</sys_created_on>
+        <sys_id>91d5e58b3b1dba900ad1a021a3e45a8b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Forecast Variance.</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>ais_search_profile_ais_search_source_m2m_91d5e58b3b1dba900ad1a021a3e45a8b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-23 11:26:19</sys_updated_on>
+    </ais_search_profile_ais_search_source_m2m>
+</record_update>

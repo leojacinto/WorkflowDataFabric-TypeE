@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent">
+    <sn_aia_agent action="INSERT_OR_UPDATE">
+        <advanced_mode>false</advanced_mode>
+        <agent_type>internal</agent_type>
+        <applicability_script><![CDATA[(function(inputs){ return true; })(inputs);]]></applicability_script>
+        <channel>nap_and_va</channel>
+        <compiled_handbook/>
+        <condition/>
+        <context_processing_script><![CDATA[(function(task, user_utterance, agent_id, context) {
+    var pc = (context && context.pageContext) ? context.pageContext : {};
+    // Build Agent needs an explicit target application scope.
+    pc.scope = pc.scope || 'x_snc_forecast_v_0';
+    pc.scopeId = pc.scopeId || 'a4fd2da13bf8be5062f31831a3e45ac9';
+    pc.app_sys_id = pc.app_sys_id || 'a4fd2da13bf8be5062f31831a3e45ac9';
+    pc.table = pc.table || 'sys_app';
+    pc.record_sys_id = pc.record_sys_id || 'a4fd2da13bf8be5062f31831a3e45ac9';
+    pc.experience = pc.experience || 'WDF Lab';
+    return { pageContext: pc, triggerContext: (context ? context.triggerContext : null) };
+})(task, user_utterance, agent_id, context);]]></context_processing_script>
+        <description>Forecast Variance assistant that exposes the platform Build Agent skill family (Build Agent, Build Agent Preprocessor, BA Glide Tools Metadata Summarizer) for use in the WDF Lab.</description>
+        <extends/>
+        <extension_configuration/>
+        <external_agent_configuration/>
+        <inputs/>
+        <instructions>You have three tools, each wrapping a native platform skill from the Build Agent skill family: "Build Agent", "Build Agent Preprocessor", and "BA Glide Tools Metadata Summarizer". When the user asks for something those skills would normally do inside Studio, call the matching tool and return its result plainly.</instructions>
+        <internal_name>global.x_snc_forecast_v_0.Studio Skills Assistant</internal_name>
+        <name>Studio Skills Assistant</name>
+        <outputs/>
+        <parent/>
+        <post_processing_message/>
+        <processing_message/>
+        <proficiency>- Acts as a specialized Studio Skills Assistant that provides access to native platform skills from the Build Agent skill family within the Studio environment, enabling users to leverage Build Agent capabilities through a conversational interface for development and configuration tasks.
+- Generates comprehensive metadata summaries for Glide tools by processing user-provided prompts through the BA Glide Tools Metadata Summarizer skill, requiring a full prompt text input to produce detailed metadata analysis and documentation for platform tools and components.
+- Executes Build Agent operations with extensive contextual customization capabilities, accepting optional parameters such as fluent general references, directory context, available API types, custom system prompts, and task type specifications to tailor the build process according to specific development requirements and environmental constraints.
+- Preprocesses user messages and requests for Build Agent operations by analyzing task types and optionally routing to specific AI providers, transforming and preparing user input into structured formats suitable for downstream Build Agent processing and execution.
+- Intelligently interprets user requests within the Studio context to identify which native Build Agent family skill is appropriate, automatically routes the request to the matching tool (Build Agent, Build Agent Preprocessor, or BA Glide Tools Metadata Summarizer), and returns results in a clear, unmodified format directly to the user.
+- Orchestrates multi-stage Build Agent workflows by coordinating the Build Agent Preprocessor for initial task analysis and input preparation with the main Build Agent execution, enabling complex development tasks that require preprocessing, context enrichment, and customized build operations in sequence.
+- Provides transparent, direct access to native Now Assist Build Agent family skills without adding interpretation layers or modifications, ensuring that users receive authentic skill outputs exactly as the underlying platform skills generate them, maintaining fidelity to native Studio functionality.</proficiency>
+        <record_type>custom</record_type>
+        <required_translations/>
+        <research>false</research>
+        <role>Studio Skills Assistant</role>
+        <root_agent_id/>
+        <source_id/>
+        <strategy display_value="ReAct">f0bff21f9f13c6108f431597d90a1c74</strategy>
+        <sys_class_name>sn_aia_agent</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-22 13:03:58</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>8ee51e2047630bd4037d0fadf26d43f8</sys_id>
+        <sys_mod_count>9</sys_mod_count>
+        <sys_name>Studio Skills Assistant</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sn_aia_agent_8ee51e2047630bd4037d0fadf26d43f8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-26 15:39:59</sys_updated_on>
+    </sn_aia_agent>
+</record_update>

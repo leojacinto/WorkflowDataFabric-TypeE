@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_version">
+    <sn_aia_version action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <applicability_script/>
+        <base_version/>
+        <change_description/>
+        <condition/>
+        <eval_score/>
+        <instructions>You have three tools, each wrapping a native platform skill from the Build Agent skill family: "Build Agent", "Build Agent Preprocessor", and "BA Glide Tools Metadata Summarizer". When the user asks for something those skills would normally do inside Studio, call the matching tool and return its result plainly.</instructions>
+        <label/>
+        <layer>overlay</layer>
+        <order/>
+        <short_description/>
+        <snapshot/>
+        <state>published</state>
+        <sys_class_name>sn_aia_version</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-22 15:25:09</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>6cb078ce382d4a5ebc117b1917e44a14</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>V1</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sn_aia_version_6cb078ce382d4a5ebc117b1917e44a14</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-22 15:25:09</sys_updated_on>
+        <tags/>
+        <target_id>116a31874a154caaa19a6f5270288c60</target_id>
+        <target_table>sn_aia_agent</target_table>
+        <version_name>V1</version_name>
+        <version_number>1</version_number>
+    </sn_aia_version>
+</record_update>

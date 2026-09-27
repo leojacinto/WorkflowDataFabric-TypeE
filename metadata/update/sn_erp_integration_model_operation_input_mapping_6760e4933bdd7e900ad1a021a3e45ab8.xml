@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sn_erp_integration_model_operation_input_mapping">
+    <sn_erp_integration_model_operation_input_mapping action="INSERT_OR_UPDATE">
+        <constant_value/>
+        <field display_value="COSTCENTERLIST.CURRENCY - currency_key">2a60a4933bdd7e900ad1a021a3e45a47</field>
+        <join_field/>
+        <location/>
+        <model display_value="SAP Cost Center">ec6060933bdd7e900ad1a021a3e45aff</model>
+        <model_operation display_value="SAP Cost Center - Update">e860a0933bdd7e900ad1a021a3e45a08</model_operation>
+        <model_operation_input display_value="Currency Key">5b60e4933bdd7e900ad1a021a3e45a89</model_operation_input>
+        <operator>=</operator>
+        <pagination_operator/>
+        <parent display_value="BAPI_COSTCENTER_CHANGEMULTIPLE.COSTCENTERLIST - list_of_cost_centers_to_be_changed">2360e4933bdd7e900ad1a021a3e45ab4</parent>
+        <platform_column/>
+        <platform_column_name/>
+        <statement_operator>AND</statement_operator>
+        <sys_class_name>sn_erp_integration_model_operation_input_mapping</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-24 01:01:34</sys_created_on>
+        <sys_id>6760e4933bdd7e900ad1a021a3e45ab8</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>2a60a4933bdd7e900ad1a021a3e45a47</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sn_erp_integration_model_operation_input_mapping_6760e4933bdd7e900ad1a021a3e45ab8</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-24 01:01:34</sys_updated_on>
+        <type>input</type>
+    </sn_erp_integration_model_operation_input_mapping>
+</record_update>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category/>
+        <format/>
+        <height/>
+        <image>c828448b8fa9e742d6029d67324bbeb1</image>
+        <name>wdf-lab/public/wdf/mcp-server-client/sc_mcp_save_and_continue.png</name>
+        <size_bytes>909</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 10:32:36</sys_created_on>
+        <sys_id>4659734a65034bf797c8dc4ec40d722e</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>wdf-lab/public/wdf/mcp-server-client/sc_mcp_save_and_continue.png</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>db_image_4659734a65034bf797c8dc4ec40d722e</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 10:32:36</sys_updated_on>
+        <thumbnail/>
+        <width/>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>933336</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/png</content_type>
+        <encryption_context/>
+        <file_name>wdf-lab/public/wdf/mcp-server-client/sc_mcp_save_and_continue.png</file_name>
+        <hash>720f5845494bdbad6a150f7a7b2f3187</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>909</size_bytes>
+        <size_compressed>932</size_compressed>
+        <state>available</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 10:32:36</sys_created_on>
+        <sys_id>c828448b8fa9e742d6029d67324bbeb1</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 10:32:36</sys_updated_on>
+        <table_name>db_image</table_name>
+        <table_sys_id>4659734a65034bf797c8dc4ec40d722e</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>H4sIAAAAAAAAAwGNA3L8iVBORw0KGgoAAAANSUhEUgAAALYAAAAzCAMAAAANUwJdAAAAe1BMVEX///+KxdUxmbUBgKPc7vMKhacbja0RiKl3u85vt8sgkK9SqcFcrsTv9/nG4+o7nbio1OCbzdu93ufO5+1Kpb7n8/YqlbL1+vt+v9B4vM6z2eSj0d7W6/BPp8DQ6O4kkrBHo72AwNG+3+hiscZms8iTydgPh6iQyNfo9PcDgGOoAAACzUlEQVRo3u2YDZOiMAyGIwXBjwKKpSd6uurq3v//hfcmFMTbc3aH1RmZaWYUDG14SNIES+TFixcvXrx4+Y6MAvWiEozuQocvCy3g4R3sl6YG950MUS8uoyE6+5671cuLx35J7Gjc7wZxMvnWuOnsCdhzDXUa98CefR28OBOQ/OHYs1q/eA52SGMGWT4cuyAdq1UePQebGDtIoodjh2QchCEypbKU4IehX2ptyDo3RZUlu1EqoUVKVIAi2GJ0Y26cWtKYlqA1F+gMS8IZxv/GCGtheN2q1I4Dm1Oq1GpHtN33xN5AmU9hRC5beB+P8QYvJaLYuWdjOTQt7Kgi2zEXaTkvJ7VuCjSR5CSHk0VvblRwSM7PFbq+YuN+2GO5J0wdR0ybzTiubJaVUwkylm0aRCF0wH5XKR5uARr+EhNnxlklmBHuMb0Aow1ijZNS5tfYTtViI8yRRLVfJbmctXiS3UawYukDnwmccawqorbGnUE7wkfNYaWgP9fc3tV5BsYZE1kokAMVtF1sp2qx8ZBVZRC53u0GXg7V3NSJkJNhHhdxyXQVV1YySLCRTkpzcWiwNVV8mMjPNb6FcQPG/S32poN9cfbTH3TJlAzy0OSMDQ+lgIK3y/Y64pEWXeywix3W986QYrza7BfYVePtw08qiZ4xYrWjLS+0A1cRuT+x/eDk3soCQW6xl7yWcmduw3DTk6yGi4adLnb5D7YsedPkdrzuh106fYbCtrTigQORxhUsOC5x3ObGWGfFTZJw3bGNObaBWpNtat3qyqhYs7/BHtWDQulzsH/u5235G2QyFcCYWTJ25Hrmgs3XCz3nPtrFVh98rTH3pus/IDxDz1UHmyvm/AYbCYn6jZCoE8+q+r9KuZI//tTL4sv1dehz5bwpR678xtEd4/+deYn9+7bH9tiDxB7ohsNAt3cGupk21K3LgW4Ue/HixYsXL0+Sv7rKUwCq5cWFAAAAAElFTkSuQmCCIETCao0DAAA=</data>
+        <length>1244</length>
+        <position>0</position>
+        <sys_attachment display_value="wdf-lab/public/wdf/mcp-server-client/sc_mcp_save_and_continue.png" sys_id="c828448b8fa9e742d6029d67324bbeb1">c828448b8fa9e742d6029d67324bbeb1</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 10:32:36</sys_created_on>
+        <sys_id>c91a54e93791f569b792bdd49f42f674</sys_id>
+    </sys_attachment_doc>
+</record_update>

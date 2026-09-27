@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_usecase">
+    <sn_aia_usecase action="INSERT_OR_UPDATE">
+        <advanced_mode>false</advanced_mode>
+        <applicability_script><![CDATA[/** 
+ * Function to process inputs related to ServiceNow change request operations 
+ * 
+ * @param {Object} inputs - The input parameters object 
+ * @param {string} inputs.objective - The purpose or goal of the operation 
+ * @param {string} inputs.execution_plan_id - Unique identifier for the execution plan 
+ * @param {Object} inputs.context - Context information about the ServiceNow change request 
+ * @param {string} inputs.context.url - The URL of the change request in Service Operations Workspace 
+ * @param {string} inputs.context.table - The ServiceNow table name (e.g., 'change_request') 
+ * @param {string} inputs.context.record_sys_id - The sys ID of the record 
+ * @param {string} inputs.context.route - The route type (e.g., 'record') 
+ * @param {string} inputs.context.additional_context - Additional contextual information in JSON format 
+ * @param {string} inputs.context.experience - The UI experience name (e.g., 'Service Operations Workspace') 
+ * @param {string} inputs.context.number - The request number 
+ * @param {string} inputs.context.portal - The portal ID 
+ * @param {string} inputs.context.device_type - The device type from which the experience is accessed, e.g.'mweb' 
+ * @param {string} inputs.context.deployment_id - The unique identifier for the assistant deployment 
+ * @param {string} inputs.context.assistant_type - The type of assistant, e.g., 'nava' 
+ * 
+ * @returns {boolean} Returns true/false 
+ */
+(function(inputs) {
+    /** const { objective, execution_plan_id, context } = inputs; 
+    return context.table == 'incident' ; */
+    return false;
+})(inputs);]]></applicability_script>
+        <base_plan>1. Intake the user request verbatim.
+2. Pass it to the Studio Skills Assistant agent, which calls the Build Agent skill.</base_plan>
+        <condition/>
+        <context_processing_script><![CDATA[/*
+ * Available Variables:
+ *
+ * - user_utterance: The user input or message that initiated the use case.
+ *          This represents the user's natural language query or command
+ *          received during the conversation.
+ *
+ * - usecase_id: The unique identifier of the use case being executed.
+ *          Can be used to reference use case configurations, metadata,
+ *          or to apply specific context-handling logic.
+ *
+ * - context: An object containing contextual information for the use case.
+ *          It always includes a "pageContext" and may include a "triggerContext",
+ *          depending on how and from where the use case was invoked.
+ *
+ *          Behavior by invocation type:
+ *          ---------------------------------
+ *          - When invoked via the startAiAgentConversation API:
+ *                If a "contextMemory" parameter is passed in the API request,
+ *                it will be available as the "triggerContext".
+ *                The "pageContext" is always present in this call,
+ *                regardless of the invocation type (standalone or workflow-based).
+ *                Example:
+ *                    {
+ *                        pageContext: { ... },
+ *                        triggerContext: { ... } // Derived from contextMemory (if passed)
+ *                    }
+ *
+ *          - When invoked as part of a workflow or chained use case:
+ *                The "pageContext" and "triggerContext" available here may represent
+ *                the state carried forward from a previous execution step.
+ *                This script can modify, enrich, or restructure these contexts
+ *                before passing them to the downstream agent(s).
+ *
+ *          - When executed directly (standalone use case execution):
+ *                The "pageContext" will always be available (even if empty),
+ *                and "triggerContext" will only be populated if explicitly
+ *                provided through the API call.
+ *
+ * Return Format:
+ * ----------------
+ * This script must return an updated context object to be passed to
+ * the next stage (typically the agent or workflow step):
+ *    { pageContext: {}, triggerContext: {} }
+ *
+ * Example:
+ * ----------------
+ * return {
+ *     pageContext: {
+ *         ...context.pageContext,
+ *         usecaseProcessed: true
+ *     },
+ *     triggerContext: {
+ *         ...context.triggerContext,
+ *         lastModifiedBy: "usecase_context_script"
+ *     }
+ * };
+ */
+(function(user_utterance, usecase_id, context) {
+    return {
+        pageContext: context?.pageContext,
+        triggerContext: context?.triggerContext
+    };
+})(user_utterance, usecase_id, context);
+]]></context_processing_script>
+        <description>Use this when the user asks to build, create, or modify application metadata such as tables, fields, business rules, scripts, or flows. Calls the platform Build Agent skill family.</description>
+        <execution_mode>copilot</execution_mode>
+        <internal_name>global.x_snc_forecast_v_0.Build Agent Studio Skills</internal_name>
+        <name>Build Agent Studio Skills</name>
+        <parent/>
+        <record_type>custom</record_type>
+        <root_usecase_id/>
+        <source_id/>
+        <strategy display_value="Base Planner">a43ada98ff1422106c36ffffffffff46</strategy>
+        <sys_class_name>sn_aia_usecase</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-25 16:05:56</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>e85c5ee547e7cb10037d0fadf26d4306</sys_id>
+        <sys_mod_count>2</sys_mod_count>
+        <sys_name>Build Agent Studio Skills</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sn_aia_usecase_e85c5ee547e7cb10037d0fadf26d4306</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-25 16:30:18</sys_updated_on>
+        <team display_value="Build Agent Studio Skills">914c126d3b27c710a0db3141a3e45afe</team>
+    </sn_aia_usecase>
+</record_update>

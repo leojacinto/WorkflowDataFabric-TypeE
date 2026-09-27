@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_now_assist_deployment_config_attributes">
+    <sys_now_assist_deployment_config_attributes action="DELETE">
+        <deployment_config display_value="WDF Lab Otto Deployment">78fd5e6d476bcb10037d0fadf26d4331</deployment_config>
+        <name>knowledge_graph_tags</name>
+        <sys_class_name>sys_now_assist_deployment_config_attributes</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-26 07:04:54</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>dd1a6d3947abc350037d0fadf26d4379</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>knowledge_graph_tags</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_now_assist_deployment_config_attributes_dd1a6d3947abc350037d0fadf26d4379</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-26 07:04:54</sys_updated_on>
+        <value/>
+    </sys_now_assist_deployment_config_attributes>
+    <sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</application>
+        <file_path/>
+        <instance_id>0f38ab583b960310a80ce0bf55e45ac2</instance_id>
+        <instance_name>demoalectriallwfaa158438</instance_name>
+        <merge_base/>
+        <name>sys_now_assist_deployment_config_attributes_dd1a6d3947abc350037d0fadf26d4379</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_now_assist_deployment_config_attributes"><sys_now_assist_deployment_config_attributes action="INSERT_OR_UPDATE"><deployment_config display_value="WDF Lab Otto Deployment">78fd5e6d476bcb10037d0fadf26d4331</deployment_config><name>knowledge_graph_tags</name><sys_class_name>sys_now_assist_deployment_config_attributes</sys_class_name><sys_created_by>admin</sys_created_by><sys_created_on>2026-09-26 07:04:54</sys_created_on><sys_domain>global</sys_domain><sys_id>dd1a6d3947abc350037d0fadf26d4379</sys_id><sys_mod_count>0</sys_mod_count><sys_name>knowledge_graph_tags</sys_name><sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package><sys_policy/><sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope><sys_update_name>sys_now_assist_deployment_config_attributes_dd1a6d3947abc350037d0fadf26d4379</sys_update_name><sys_updated_by>admin</sys_updated_by><sys_updated_on>2026-09-26 07:04:54</sys_updated_on><value/></sys_now_assist_deployment_config_attributes></record_update>]]></payload>
+        <payload_hash>1397044014</payload_hash>
+        <record_name>knowledge_graph_tags</record_name>
+        <reverted_from/>
+        <source>2ee5aaf7471f8f54037d0fadf26d432a</source>
+        <source_table>sys_update_set</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-26 07:04:54</sys_created_on>
+        <sys_id>591a6d3947abc350037d0fadf26d437d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0dc87fc0c0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-26 07:04:54</sys_updated_on>
+        <type>Now Assist Deployment Config Attributes</type>
+        <update_guid>d51a6d391babc35070a9604a1b274b7c</update_guid>
+        <update_guid_history>d51a6d391babc35070a9604a1b274b7c:1397044014</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-26 15:19:12</sys_created_on>
+        <sys_db_object display_value="" name="sys_now_assist_deployment_config_attributes">sys_now_assist_deployment_config_attributes</sys_db_object>
+        <sys_id>1d257813e6dc475d84e4bda32fc79461</sys_id>
+        <sys_metadata>dd1a6d3947abc350037d0fadf26d4379</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>knowledge_graph_tags</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_parent/>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_scope_delete display_value="">0f819564639942b6bf7c1ce197c39f91</sys_scope_delete>
+        <sys_update_name>sys_now_assist_deployment_config_attributes_dd1a6d3947abc350037d0fadf26d4379</sys_update_name>
+        <sys_update_version display_value="sys_now_assist_deployment_config_attributes_dd1a6d3947abc350037d0fadf26d4379">591a6d3947abc350037d0fadf26d437d</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-26 15:19:12</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

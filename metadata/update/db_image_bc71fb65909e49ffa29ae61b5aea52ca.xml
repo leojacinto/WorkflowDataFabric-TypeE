@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category/>
+        <format/>
+        <height/>
+        <image>c2904dad79a03cfc215635a44bbbaa1d</image>
+        <name>wdf-lab/public/wdf/integration-hub/sc_ihub_test_flow.png</name>
+        <size_bytes>3434</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 10:32:45</sys_created_on>
+        <sys_id>bc71fb65909e49ffa29ae61b5aea52ca</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>wdf-lab/public/wdf/integration-hub/sc_ihub_test_flow.png</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>db_image_bc71fb65909e49ffa29ae61b5aea52ca</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 10:32:45</sys_updated_on>
+        <thumbnail/>
+        <width/>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>933336</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/png</content_type>
+        <encryption_context/>
+        <file_name>wdf-lab/public/wdf/integration-hub/sc_ihub_test_flow.png</file_name>
+        <hash>269546aa64ed53fb9c4b000454ce31b0</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>3434</size_bytes>
+        <size_compressed>3264</size_compressed>
+        <state>available</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 10:32:45</sys_created_on>
+        <sys_id>c2904dad79a03cfc215635a44bbbaa1d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 10:32:45</sys_updated_on>
+        <table_name>db_image</table_name>
+        <table_sys_id>bc71fb65909e49ffa29ae61b5aea52ca</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>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</data>
+        <length>4352</length>
+        <position>0</position>
+        <sys_attachment display_value="wdf-lab/public/wdf/integration-hub/sc_ihub_test_flow.png" sys_id="c2904dad79a03cfc215635a44bbbaa1d">c2904dad79a03cfc215635a44bbbaa1d</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 10:32:45</sys_created_on>
+        <sys_id>646a054547b7e71ee99f7ea7c2d0ec54</sys_id>
+    </sys_attachment_doc>
+</record_update>

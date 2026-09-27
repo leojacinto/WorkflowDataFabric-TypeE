@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_aia_agent">
+    <sn_aia_agent action="INSERT_OR_UPDATE">
+        <advanced_mode>false</advanced_mode>
+        <agent_type>internal</agent_type>
+        <applicability_script><![CDATA[/** 
+ * Function to process inputs related to ServiceNow change request operations 
+ * 
+ * @param {Object} inputs - The input parameters object 
+ * @param {string} inputs.objective - The purpose or goal of the operation 
+ * @param {string} inputs.execution_plan_id - Unique identifier for the execution plan 
+ * @param {Object} inputs.context - Context information about the ServiceNow change request 
+ * @param {string} inputs.context.url - The URL of the change request in Service Operations Workspace 
+ * @param {string} inputs.context.table - The ServiceNow table name (e.g., 'change_request') 
+ * @param {string} inputs.context.record_sys_id - The sys ID of the record 
+ * @param {string} inputs.context.route - The route type (e.g., 'record') 
+ * @param {string} inputs.context.additional_context - Additional contextual information in JSON format 
+ * @param {string} inputs.context.experience - The UI experience name (e.g., 'Service Operations Workspace') 
+ * @param {string} inputs.context.number - The request number 
+ * @param {string} inputs.context.portal - The portal ID 
+ * @param {string} inputs.context.device_type - The device type from which the experience is accessed, e.g.'mweb' 
+ * @param {string} inputs.context.deployment_id - The unique identifier for the assistant deployment 
+ * @param {string} inputs.context.assistant_type - The type of assistant, e.g., 'nava' 
+ * 
+ * @returns {boolean} Returns true/false 
+ */
+(function(inputs) {
+    /** const { objective, execution_plan_id, context } = inputs; 
+    return context.table == 'incident' ; */
+    return false;
+})(inputs);]]></applicability_script>
+        <channel/>
+        <compiled_handbook/>
+        <condition/>
+        <context_processing_script/>
+        <description>You are an expense management agent who can create cases based on budget variances.</description>
+        <extends/>
+        <extension_configuration/>
+        <external_agent_configuration/>
+        <inputs/>
+        <instructions>1. When a new entry is created in x_snc_forecast_v_0_expense_transaction_event, you look up the cost center using "Extract Cost Center" tool. Alternatively, search the cost center using the event provided which has the prefix EXP followed by additional identifiers.
+
+2. Get cost center obtained in "Extract Cost Center" and use that as input for "Search for Cost Center History" tool. Display the search output. Evaluate whether the results are mostly "On Target", "Over Budget", or "Under Budget."
+
+3. Get cost center and vendor obtained in "Extract Cost Center" and use that as input for "Search for Expense Transactions History" tool. Indicate whether the same vendor has transacted in the past.
+
+4. Finally execute "Budget Variance Analysis" using the data from "Extract Cost Center"</instructions>
+        <internal_name>global.x_snc_forecast_v_0.Forecast Variance</internal_name>
+        <name>Forecast Variance</name>
+        <outputs/>
+        <parent/>
+        <post_processing_message/>
+        <processing_message/>
+        <proficiency>- Expert in budget variance analysis for expense transactions, specializing in identifying and interpreting deviations from forecasted budgets at the cost center level. Capable of evaluating financial events to determine if they are on target, over budget, or under budget, and providing detailed variance insights to support financial decision-making and forecasting processes.
+- Proficient in extracting cost center information from new expense transaction events using event ID or by identifying the latest event based on date and time. This enables the agent to accurately pinpoint the financial entity associated with each transaction, forming the basis for all further analysis and historical searches.
+- Capable of searching and analyzing historical budget performance for specific cost centers, leveraging semantic search to retrieve relevant records and evaluate budget status trends. The agent can display detailed cost center history and assess whether historical results indicate consistent budget adherence or deviations, supporting informed variance analysis.
+- Skilled in searching historical expense transactions for specific cost centers and vendors, enabling the agent to identify whether the same vendor has transacted previously and to analyze expense categories and descriptions. This supports comprehensive variance analysis by uncovering transaction patterns and vendor relationships.
+- Expert in performing budget variance analysis using cost center and event ID data, capable of generating detailed reports on budget deviations for specific financial events. This enables the agent to deliver precise variance insights and recommendations for corrective actions or future forecasting.
+- Proficient in executing a multi-step variance analysis workflow by sequentially extracting cost center information, searching cost center and expense transaction histories, evaluating budget status, and performing final variance calculations. This integrated process ensures comprehensive and accurate financial analysis for new expense transaction events.</proficiency>
+        <record_type>custom</record_type>
+        <required_translations/>
+        <research>false</research>
+        <role>Forecast Variance</role>
+        <root_agent_id/>
+        <source_id/>
+        <strategy display_value="ReAct">f0bff21f9f13c6108f431597d90a1c74</strategy>
+        <sys_class_name>sn_aia_agent</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-10-27 21:51:25</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>fbc138e23b38b2d062f31831a3e45a65</sys_id>
+        <sys_mod_count>39</sys_mod_count>
+        <sys_name>Forecast Variance</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sn_aia_agent_fbc138e23b38b2d062f31831a3e45a65</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-03 14:19:49</sys_updated_on>
+    </sn_aia_agent>
+</record_update>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ais_semantic_snippetization_configuration">
+    <ais_semantic_snippetization_configuration action="INSERT_OR_UPDATE">
+        <enable_pre_processing>false</enable_pre_processing>
+        <limit>250</limit>
+        <limited_by>WORDS</limited_by>
+        <max_total_words>500</max_total_words>
+        <overlap_sentences>5</overlap_sentences>
+        <semantic_script><![CDATA[/** 
+ * 
+ * @param {Dictionary} semanticIndexPayload 
+ *   Dictionary of key-value pairs, with each pair representing a semantic index field. 
+ *     Key is the field's column name (element as per sys_dictionary). 
+ *     Value is the display value for the semantic index field. 
+ * 
+ * @return {string} 
+*   This string value is embedded exactly as it's specified here. 
+*/
+(function preProcessing(semanticIndexPayload) {
+	return '';
+})(semanticIndexPayload);]]></semantic_script>
+        <snippet_mode>PASSAGE</snippet_mode>
+        <sys_class_name>ais_semantic_snippetization_configuration</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-11-23 11:56:04</sys_created_on>
+        <sys_id>4daca90b3b9dba900ad1a021a3e45a0d</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>PASSAGE</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>ais_semantic_snippetization_configuration_4daca90b3b9dba900ad1a021a3e45a0d</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-11-23 11:56:04</sys_updated_on>
+        <validate_script_output/>
+        <validate_script_reference_record/>
+        <validate_script_table/>
+    </ais_semantic_snippetization_configuration>
+</record_update>

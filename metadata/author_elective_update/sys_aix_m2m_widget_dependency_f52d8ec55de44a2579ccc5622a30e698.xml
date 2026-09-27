@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_aix_m2m_widget_dependency">
+  <sys_aix_m2m_widget_dependency action="DELETE" apply_defaults="true">
+    <sys_id>f52d8ec55de44a2579ccc5622a30e698</sys_id>
+    <sys_scope display_value="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+    <sys_update_name>sys_aix_m2m_widget_dependency_f52d8ec55de44a2579ccc5622a30e698</sys_update_name>
+    <dependency>19952c035770a3696c8f1d85e4c007cc</dependency>
+    <order>1</order>
+    <source_aix_project>45d838ba91a75970fcee4ab1e1cd7a84</source_aix_project>
+    <sys_policy>read</sys_policy>
+    <widget>8093a0d3be97260ec56a392cdb7abcf6</widget>
+  </sys_aix_m2m_widget_dependency>
+<sys_update_version action="INSERT_OR_UPDATE">
+        <action>DELETE</action>
+        <application display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</application>
+        <file_path/>
+        <instance_id>0f38ab583b960310a80ce0bf55e45ac2</instance_id>
+        <instance_name>demoalectriallwfaa158438</instance_name>
+        <merge_base/>
+        <name>sys_aix_m2m_widget_dependency_f52d8ec55de44a2579ccc5622a30e698</name>
+        <payload><![CDATA[<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_aix_m2m_widget_dependency">
+  <sys_aix_m2m_widget_dependency action="INSERT_OR_UPDATE" apply_defaults="true">
+    <sys_id>f52d8ec55de44a2579ccc5622a30e698</sys_id>
+    <sys_scope display_value="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+    <sys_update_name>sys_aix_m2m_widget_dependency_f52d8ec55de44a2579ccc5622a30e698</sys_update_name>
+    <dependency>19952c035770a3696c8f1d85e4c007cc</dependency>
+    <order>1</order>
+    <source_aix_project>45d838ba91a75970fcee4ab1e1cd7a84</source_aix_project>
+    <sys_policy>read</sys_policy>
+    <widget>8093a0d3be97260ec56a392cdb7abcf6</widget>
+  </sys_aix_m2m_widget_dependency>
+</record_update>]]></payload>
+        <payload_hash>1084330343</payload_hash>
+        <record_name/>
+        <reverted_from/>
+        <source>6250aaa13bebc710a0db3141a3e45aec</source>
+        <source_table>sys_upgrade_history</source_table>
+        <state>previous</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-25 16:23:58</sys_created_on>
+        <sys_id>cd70ea653bebc710a0db3141a3e45ad0</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_recorded_at>1a0d96177ad0000001</sys_recorded_at>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-25 16:23:58</sys_updated_on>
+        <type>AIX Widget Dependency</type>
+        <update_guid>8d70ea6597ebc710643d2a32356396d0</update_guid>
+        <update_guid_history>8d70ea6597ebc710643d2a32356396d0:1084330343</update_guid_history>
+    </sys_update_version>
+    <sys_metadata_delete action="INSERT_OR_UPDATE">
+        <sys_audit_delete/>
+        <sys_class_name>sys_metadata_delete</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-26 15:57:44</sys_created_on>
+        <sys_db_object display_value="" name="sys_aix_m2m_widget_dependency">sys_aix_m2m_widget_dependency</sys_db_object>
+        <sys_id>8ed20fffa82c4d839e9d8f4fa318c061</sys_id>
+        <sys_metadata>f52d8ec55de44a2579ccc5622a30e698</sys_metadata>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>build-agent-chat-Czi7_ls4.js.x-snc-wdf-lab-integration-hub-page</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_parent/>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_scope_delete display_value="">0f819564639942b6bf7c1ce197c39f91</sys_scope_delete>
+        <sys_update_name>sys_aix_m2m_widget_dependency_f52d8ec55de44a2579ccc5622a30e698</sys_update_name>
+        <sys_update_version display_value="sys_aix_m2m_widget_dependency_f52d8ec55de44a2579ccc5622a30e698">cd70ea653bebc710a0db3141a3e45ad0</sys_update_version>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-26 15:57:44</sys_updated_on>
+    </sys_metadata_delete>
+</record_update>

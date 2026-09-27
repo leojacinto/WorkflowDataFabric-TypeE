@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_gen_ai_control_data">
+    <sys_gen_ai_control_data action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <control display_value="Trustbuilder (Now Assist Skill)">8d90dc857f0b8210ee61def20d8665a0</control>
+        <description/>
+        <name>TB cca4be3d33284310cfe79d273e5c7bcb</name>
+        <sys_class_name>sys_gen_ai_control_data</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-25 06:12:44</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_domain_path>/</sys_domain_path>
+        <sys_id>d3849ca547278310037d0fadf26d432b</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>TB cca4be3d33284310cfe79d273e5c7bcb</sys_name>
+        <sys_overrides/>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_gen_ai_control_data_d3849ca547278310037d0fadf26d432b</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-25 06:12:44</sys_updated_on>
+        <target>cca4be3d33284310cfe79d273e5c7bcb</target>
+        <target_type>sn_nowassist_skill_config</target_type>
+    </sys_gen_ai_control_data>
+</record_update>

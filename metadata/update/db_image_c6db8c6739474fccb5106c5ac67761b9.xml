@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="db_image">
+    <db_image action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <category/>
+        <format/>
+        <height/>
+        <image>778e9c71c356965a686641671a1c0a72</image>
+        <name>wdf-lab/public/wdf/kafka-stream-connect/sc_data_source_new.png</name>
+        <size_bytes>4006</size_bytes>
+        <sys_class_name>db_image</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 10:32:46</sys_created_on>
+        <sys_id>c6db8c6739474fccb5106c5ac67761b9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>wdf-lab/public/wdf/kafka-stream-connect/sc_data_source_new.png</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>db_image_c6db8c6739474fccb5106c5ac67761b9</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 10:32:46</sys_updated_on>
+        <thumbnail/>
+        <width/>
+    </db_image>
+    <sys_attachment action="INSERT_OR_UPDATE">
+        <average_image_color/>
+        <chunk_size_bytes>933336</chunk_size_bytes>
+        <compressed>true</compressed>
+        <content_type>image/png</content_type>
+        <encryption_context/>
+        <file_name>wdf-lab/public/wdf/kafka-stream-connect/sc_data_source_new.png</file_name>
+        <hash>e5c6395f3afbd2bce85aeae3f5d69bf2</hash>
+        <image_height/>
+        <image_width/>
+        <size_bytes>4006</size_bytes>
+        <size_compressed>4029</size_compressed>
+        <state>available</state>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 10:32:46</sys_created_on>
+        <sys_id>778e9c71c356965a686641671a1c0a72</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 10:32:46</sys_updated_on>
+        <table_name>db_image</table_name>
+        <table_sys_id>c6db8c6739474fccb5106c5ac67761b9</table_sys_id>
+    </sys_attachment>
+    <sys_attachment_doc action="INSERT_OR_UPDATE">
+        <data>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</data>
+        <length>5372</length>
+        <position>0</position>
+        <sys_attachment display_value="wdf-lab/public/wdf/kafka-stream-connect/sc_data_source_new.png" sys_id="778e9c71c356965a686641671a1c0a72">778e9c71c356965a686641671a1c0a72</sys_attachment>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 10:32:46</sys_created_on>
+        <sys_id>73c58298b6ab4086de4c779dba1d5887</sys_id>
+    </sys_attachment_doc>
+</record_update>

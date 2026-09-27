@@ -1,0 +1,12 @@
+{
+  "name": "WDF Lab",
+  "basename": "wdf-lab",
+  "landing": "/home",
+  "chatDeploymentChannelSysId": "cc8ad3fb475f0394037d0fadf26d43db",
+  "development": {
+    "token": ""
+  },
+  "build": {
+    "exclude": ["**/*.test.js", "**/test/**"]
+  }
+}

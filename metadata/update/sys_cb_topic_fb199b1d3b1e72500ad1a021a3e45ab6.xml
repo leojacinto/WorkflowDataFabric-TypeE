@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cb_topic">
+    <sys_cb_topic action="INSERT_OR_UPDATE">
+        <applicability/>
+        <applicability_mode>query</applicability_mode>
+        <autopilot_topic>false</autopilot_topic>
+        <category/>
+        <channels/>
+        <connect_queue/>
+        <context_profiles/>
+        <description>Review Over budget Cost Centers</description>
+        <dialog_acts_enabled>false</dialog_acts_enabled>
+        <expose_on_palette>false</expose_on_palette>
+        <flexible_conversation_switching>false</flexible_conversation_switching>
+        <foundational>false</foundational>
+        <graph>{
+  "graph_api_version": "1.0.82",
+  "goals": {
+    "primary": {
+      "id": "primary",
+      "trigger": {
+        "type": "primary"
+      },
+      "name": "primary",
+      "applicability": "",
+      "description": "",
+      "nodes": {
+        "989ecc8401f940bd878f9429bb5470fc": {
+          "id": "989ecc8401f940bd878f9429bb5470fc",
+          "stepType": "Start",
+          "name": "Start",
+          "greetingResponse": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "b23ea3d8d96d409eb93dd6039f1548c8": {
+          "id": "b23ea3d8d96d409eb93dd6039f1548c8",
+          "stepType": "TerminateGoal",
+          "name": "End",
+          "confirmationMessage": {
+            "mode": "simple",
+            "value": ""
+          }
+        },
+        "1cf6587a643245eb87afce802a4da274": {
+          "id": "1cf6587a643245eb87afce802a4da274",
+          "stepType": "TableOutput",
+          "name": "Cost centers over budget",
+          "header": {
+            "value": "",
+            "mode": "simple"
+          },
+          "displayColumnHeaders": true,
+          "dataSourceType": "table",
+          "script": "",
+          "tableName": "x_snc_forecast_v_0_cost_center_budget_history",
+          "sortByColumns": [
+            {
+              "column": "cost_center",
+              "sortDirection": "ASC"
+            }
+          ],
+          "tableCondition": {
+            "mode": "glide_query",
+            "value": "variance&lt;0"
+          },
+          "columns": [
+            {
+              "key": "cost_center",
+              "value": "Cost Center",
+              "label": "Cost Center"
+            }
+          ],
+          "noRecordsResponseMsg": {
+            "value": [
+              {
+                "type": "paragraph",
+                "children": [
+                  {
+                    "text": "No records found"
+                  }
+                ]
+              }
+            ],
+            "mode": "simple"
+          },
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "showLink": false
+        },
+        "896bd9b4e27749669664d3e3cc41507f": {
+          "id": "896bd9b4e27749669664d3e3cc41507f",
+          "name": "AI Search",
+          "invocationType": "action",
+          "stepType": "FlowAction",
+          "actionRunAs": "session_user",
+          "permissionsNote": "By default, the Action executes based on the permissions of the user who initiated the conversation. For elevated privileges, you can set to System User.",
+          "actionSecureField": false,
+          "actionSelectSecureField": "",
+          "actionPromptSecureField": {
+            "mode": "simple",
+            "value": ""
+          },
+          "actionConfirmPromptSecureField": {
+            "mode": "simple",
+            "value": ""
+          },
+          "actionNonSecureChannelMessage": {
+            "mode": "simple",
+            "value": "This action is not supported on this channel."
+          },
+          "subflowSecureField": false,
+          "subflowSelectSecureField": "",
+          "subflowPromptSecureField": {
+            "mode": "simple",
+            "value": ""
+          },
+          "subflowConfirmPromptSecureField": {
+            "mode": "simple",
+            "value": ""
+          },
+          "subflowNonSecureChannelMessage": {
+            "mode": "simple",
+            "value": ""
+          },
+          "variableIds": [],
+          "applicability": {
+            "value": "",
+            "mode": "query"
+          },
+          "actionSpoke": "81ec79886ebe4b50a77b978e206760ab",
+          "actionSpokeAction": "",
+          "actionWaitType": "sync",
+          "actionInputs": {},
+          "actionOutputs": {},
+          "actionDefinition": ""
+        }
+      },
+      "edges": [
+        {
+          "id": "c3f49452124347b29ff5b8a114c7c9ab",
+          "edgeType": "Edge",
+          "source": "989ecc8401f940bd878f9429bb5470fc",
+          "target": "1cf6587a643245eb87afce802a4da274",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "78ad9942285d469da0f7272f101104d5",
+          "edgeType": "Edge",
+          "source": "1cf6587a643245eb87afce802a4da274",
+          "target": "896bd9b4e27749669664d3e3cc41507f",
+          "sourcePort": "",
+          "targetPort": ""
+        },
+        {
+          "id": "72605e9527174271ba919b6127cba329",
+          "edgeType": "Edge",
+          "source": "896bd9b4e27749669664d3e3cc41507f",
+          "target": "b23ea3d8d96d409eb93dd6039f1548c8",
+          "sourcePort": "",
+          "targetPort": ""
+        }
+      ]
+    }
+  },
+  "variables": {
+    "current-user": {
+      "category": "vaInputs",
+      "id": "current-user",
+      "label": "User",
+      "name": "user",
+      "table": "sys_user",
+      "varType": "reference"
+    }
+  }
+}</graph>
+        <key_phrases/>
+        <library>false</library>
+        <live_agent>false</live_agent>
+        <model_type>llm</model_type>
+        <modify_confirmation_enabled>false</modify_confirmation_enabled>
+        <name>Review Over budget Cost Centers</name>
+        <nlu_intent/>
+        <nlu_intent_label/>
+        <nlu_model/>
+        <nlu_model_label/>
+        <nlu_provider/>
+        <palette_label/>
+        <roles/>
+        <root_topic_id/>
+        <secure_custom_input_control>false</secure_custom_input_control>
+        <source_topic_id/>
+        <sys_class_name>sys_cb_topic</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-07 02:23:27</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>fb199b1d3b1e72500ad1a021a3e45ab6</sys_id>
+        <sys_mod_count>11</sys_mod_count>
+        <sys_name>Review Over budget Cost Centers</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_cb_topic_fb199b1d3b1e72500ad1a021a3e45ab6</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-07 16:21:29</sys_updated_on>
+        <title>Review Over budget Cost Centers</title>
+        <triggerable_by_notification>false</triggerable_by_notification>
+        <type>STANDARD</type>
+    </sys_cb_topic>
+    <sys_translated_text action="delete_multiple" query="documentkey=fb199b1d3b1e72500ad1a021a3e45ab6"/>
+</record_update>

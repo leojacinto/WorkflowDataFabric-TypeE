@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_openapi_operation">
+    <sys_openapi_operation action="INSERT_OR_UPDATE">
+        <complex_object_ids>8dd0bb943b5a365062f31831a3e45a3d,49d0bb943b5a365062f31831a3e45a42</complex_object_ids>
+        <deprecated>false</deprecated>
+        <http_method>get</http_method>
+        <name>Get Expense Events</name>
+        <openapi display_value="Expense Events API - 1.0.0">74d033943b5a365062f31831a3e45a0a</openapi>
+        <path>/api/expense-events</path>
+        <serialized_operation>{"fName":"Get Expense Events","fOperationId":"getExpenseEvents","fDescription":"Retrieves a list of expense transaction events","fPath":"/api/expense-events","fHttpMethod":"GET","fDeprecated":false,"fResponses":[{"fStatusCode":"200","fDescription":"Successful response containing expense events","fContents":[{"fMediaType":"application/json","fSchema":{"fName":"output4699933875","fExclusiveMaximum":false,"fExclusiveMinimum":false,"fUniqueItems":false,"fRequired":[],"fEnum":[],"fType":"array","fProperties":[{"fName":"output4699933875","fReferencedName":"#/components/schemas/ExpenseEvent","fExclusiveMaximum":false,"fExclusiveMinimum":false,"fUniqueItems":false,"fRequired":[],"fEnum":[],"fProperties":[],"fOneOf":[],"fNullable":false,"fReadOnly":false,"fWriteOnly":false,"fDeprecated":false,"fGlideType":"object"}],"fOneOf":[],"fNullable":false,"fReadOnly":false,"fWriteOnly":false,"fDeprecated":false,"fGlideType":"object"}}],"fHeaders":[{"fName":"Content-Type","fRequired":false,"fDeprecated":false,"fAllowEmptyValue":false,"fAllowReserved":false,"fParameterType":"header","fExplode":false,"fStyle":"simple","fContents":[{"fSchema":{"fName":"Content-Type7846588426","fExclusiveMaximum":false,"fExclusiveMinimum":false,"fUniqueItems":false,"fRequired":[],"fEnum":[],"fType":"string","fProperties":[],"fOneOf":[],"fNullable":false,"fReadOnly":false,"fWriteOnly":false,"fDeprecated":false,"fGlideType":"string"}}]}]}],"fParameters":[],"fTags":[]}</serialized_operation>
+        <sys_class_name>sys_openapi_operation</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-01-04 01:33:06</sys_created_on>
+        <sys_id>09d0bb943b5a365062f31831a3e45a45</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Get Expense Events</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_openapi_operation_09d0bb943b5a365062f31831a3e45a45</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-01-04 01:33:06</sys_updated_on>
+    </sys_openapi_operation>
+</record_update>

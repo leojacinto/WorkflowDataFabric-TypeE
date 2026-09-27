@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sn_diagram_builder_instance">
+    <sn_diagram_builder_instance action="INSERT_OR_UPDATE">
+        <builder_configuration display_value="APM diagram configuration">4b149a80530631100fa8ddeeff7b12b3</builder_configuration>
+        <diagram_json>{"nodes":[{"key":"9799e1df-09410610f87-7fe141d26d6f6","node_id":"9799e1df09410610f877fe141d26d6f6","name":"","templateId":"d37961df09410610f877fe141d26d66c","nodeCategory":"Default","icon":"/action-node.svg","nodeSubCategory":"Default Sub Category","description":null,"nodeType":{"active":"1","icon":null,"description":null,"shapeTemplate":"0d19219f09410610f877fe141d26d65e","nodeType":"APM Dummy Node Type","sysId":"d37961df09410610f877fe141d26d66c","allowDelete":true,"nodeTypeHandlers":[],"menuOptions":[],"connectors":[],"attributes":[]},"connectors":[],"actionDependencies":[],"interactiveGraphObjects":[],"recenterHandler":null,"_isInvalid":false}],"edges":[{"key":"30bf49cc53bef9100fa8ddeeff7b125c","edge_id":"30bf49cc53bef9100fa8ddeeff7b125c","templateId":"b1cf81c053fef9100fa8ddeeff7b12f7","interactiveGraphObjects":[],"recenterHandler":null,"_isInvalid":false},{"key":"f9b628619360921099136e1344891844","edge_id":"f9b628619360921099136e1344891844","templateId":"b77628619360921099136e13448918bb","interactiveGraphObjects":[],"recenterHandler":null,"_isInvalid":false},{"key":"74a124699320921099136e1344891890","edge_id":"74a124699320921099136e1344891890","templateId":"89126c699320921099136e134489180e","interactiveGraphObjects":[],"recenterHandler":null,"_isInvalid":false},{"key":"d99b18219320921099136e13448918bd","edge_id":"d99b18219320921099136e13448918bd","templateId":"57d89ce993ec521099136e13448918da","interactiveGraphObjects":[],"recenterHandler":null,"_isInvalid":false},{"key":"bcb6182993ec521099136e134489189d","edge_id":"bcb6182993ec521099136e134489189d","templateId":"d896902993ec521099136e13448918ea","interactiveGraphObjects":[],"recenterHandler":null,"_isInvalid":false},{"key":"88dfef51936c521099136e1344891899","edge_id":"88dfef51936c521099136e1344891899","templateId":"ae543b59936c521099136e1344891861","interactiveGraphObjects":[],"recenterHandler":null,"_isInvalid":false},{"key":"ab41f2dda9a01210f87784b26ddfcf13","edge_id":"ab41f2dda9a01210f87784b26ddfcf13","templateId":"23027adda9a01210f87784b26ddfcfd0","interactiveGraphObjects":[],"recenterHandler":null,"_isInvalid":false},{"key":"72672e51a9a01210f87784b26ddfcf7c","edge_id":"72672e51a9a01210f87784b26ddfcf7c","templateId":"85972e51a9a01210f87784b26ddfcfe9","interactiveGraphObjects":[],"recenterHandler":null,"_isInvalid":false},{"key":"c8d4ae9da9601210f87784b26ddfcfe7","edge_id":"c8d4ae9da9601210f87784b26ddfcfe7","templateId":"0d30ee59a9601210f87784b26ddfcff8","interactiveGraphObjects":[],"recenterHandler":null,"_isInvalid":false},{"key":"05161ed993e4521099136e134489182a","edge_id":"05161ed993e4521099136e134489182a","templateId":"cb365ed993e4521099136e134489183f","interactiveGraphObjects":[],"recenterHandler":null,"_isInvalid":false}]}</diagram_json>
+        <name>Data Architecture</name>
+        <read_only>false</read_only>
+        <sequence_id>0</sequence_id>
+        <state>draft</state>
+        <sys_class_name>sn_diagram_builder_instance</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2025-12-14 22:31:01</sys_created_on>
+        <sys_domain>global</sys_domain>
+        <sys_id>3257c4063bb1ba5062f31831a3e45ac5</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>Data Architecture</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sn_diagram_builder_instance_3257c4063bb1ba5062f31831a3e45ac5</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2025-12-14 22:36:34</sys_updated_on>
+    </sn_diagram_builder_instance>
+</record_update>
