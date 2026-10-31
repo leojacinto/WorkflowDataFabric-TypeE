@@ -200,10 +200,11 @@ Navigate to Connection & Credential Aliases. Open the pre-configured "Get Expens
 
 #### Hands-on (Build Agent option): Initial Checks and Connection Setup
 
-Use this instead of the manual Initial Checks and Connection Setup steps above.
+You can let Build Agent do the Initial Checks and Connection Setup steps for you.
 
-1.  In **ServiceNow Studio**, open the **Forecast Variance** app, then click **Build Agent (diamond icon)** > **New conversation**. The status bar should show **Scope: Forecast Variance**.
-2.  Paste this prompt and send it.
+> **Using Build Agent:** go to ServiceNow Studio, open the **Forecast Variance** app, click **Build Agent** (diamond icon) > **New conversation**, then paste the prompt. Build Agent shows each script before running it; click **Approve**. If it asks you a question, answer it in the chat. If you see a 401 error, reload the page and send the prompt again.
+
+1.  Paste this prompt and send it.
 
     ```
     Delete all records in x_snc_forecast_v_0_expense_transaction_event.
@@ -212,9 +213,9 @@ Use this instead of the manual Initial Checks and Connection Setup steps above.
     alias "Get Expense Event" (x_snc_forecast_v_0.Get_Expense_Event).
     Report with gs.info how many records were deleted and the new connection.
     ```
-3.  Read the script Build Agent proposes, then click **Approve**. It reports the records deleted and the new connection.
+2.  Click **Approve**. You should see how many records were deleted and the new connection.
 
-    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_ihub_ba_connection.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_ihub_ba_connection.png" alt="" width="420"><figcaption></figcaption></figure>
 
 ### AI Agent Configuration
 
@@ -303,9 +304,9 @@ Delete any existing trigger. Create new trigger: Table = Expense Transaction Eve
 
 #### Hands-on (Build Agent option): Configure AI Agent Trigger
 
-Use this instead of the manual trigger steps above. The channel settings in the last manual step are already in place for this agent.
+You can let Build Agent replace the trigger for you.
 
-1.  In the same Build Agent conversation, paste this prompt, replace **\<initials>** with your initials, and send it.
+1.  In the same chat, paste this prompt, put your initials in place of **\<initials>**, and send it.
 
     ```
     For the AI agent "Forecast Variance Integration Hub Trigger", delete its existing trigger and
@@ -315,9 +316,9 @@ Use this instead of the manual trigger steps above. The channel settings in the 
     objective "Help me resolve ${number}", trigger ON, channel Now Assist panel.
     Report the new trigger and its link to the agent with gs.info.
     ```
-2.  Read the script, then click **Approve**. Build Agent reports the old trigger deleted and the new one linked to the agent.
+2.  Click **Approve**. You should see the old trigger deleted and the new one linked to the agent.
 
-    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_ihub_ba_trigger.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_ihub_ba_trigger.png" alt="" width="420"><figcaption></figcaption></figure>
 
 ### Action and Subflow
 
@@ -379,18 +380,16 @@ In the same window of Flow Designer > Subflows > Get Expense Event. Click Test >
 
 #### Hands-on (Build Agent option): Flow Execution
 
-Use this instead of the manual Flow Execution steps above.
+You can let Build Agent run the subflow test for you.
 
-1.  In the same Build Agent conversation, paste this prompt and send it.
+1.  In the same chat, paste this prompt and send it.
 
     ```
     Run the Forecast Variance subflow "Get Expense Event" once, the same as clicking Test in
     Flow Designer, using sn_fd.FlowAPI in the foreground.
     Report with gs.info the execution context sys_id and its final state.
     ```
-2.  Read the script, then click **Approve**. The final state should be **COMPLETE**. The new expense event now fires the AI agent, so carry on with **Walkthrough: Agent Runtime** below.
-
-    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_ihub_ba_flow.png" alt=""><figcaption></figcaption></figure>
+2.  Click **Approve**. The state should be **COMPLETE**. The agent now picks up the new expense event, so carry on with **Walkthrough: Agent Runtime**.
 
 ### AI Agent and Finance Operations Workspace
 

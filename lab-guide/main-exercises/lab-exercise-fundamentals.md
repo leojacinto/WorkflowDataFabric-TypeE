@@ -127,12 +127,12 @@ Create a dummy scope. This activity is meant to make you familiar with scope cre
 
 ### Hands on (Build Agent option): Create a Scope and Table
 
-Use this instead of the manual steps above.
+You can let Build Agent do the steps above for you.
 
-1.  Navigate to All > type **ServiceNow Studio**, click <mark style="color:green;">**a.)**</mark> **Build Agent (diamond icon)** > <mark style="color:green;">**b.)**</mark> **New conversation** > <mark style="color:green;">**c.)**</mark> **Create an app**. Don't open the Forecast Variance app first: Build Agent can only create an app from a conversation that isn't tied to one.
+1.  In ServiceNow Studio, click **Build Agent** (diamond icon) > **New conversation** > **Create an app**. Don't open the Forecast Variance app first.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_fund_ba_create_app.png" alt=""><figcaption></figcaption></figure>
-2.  Build Agent asks for a name and description. Paste this reply, replace **\<initials>** with your initials (e.g. LFR) in both places, and send it.
+2.  When Build Agent asks for a name, paste this, put your initials in place of **\<initials>** (twice), and send it.
 
     ```
     Name: Lab <initials> Forecast Variance. Description: lab practice app for the expense event table.
@@ -143,11 +143,10 @@ Use this instead of the manual steps above.
     Event ID, Priority, Event Type.
     Then build and install the app.
     ```
-3.  Build Agent creates the app, builds the table with its 17 columns and installs it, with no approval needed. Your app's scope is generated for you (for example **x\_snc\_lab\_lfr\_fo\_0**).
+3.  Build Agent creates your app and the table with its 17 columns. No approval is needed.
 
-    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_fund_ba_result.png" alt=""><figcaption></figcaption></figure>
-
-This table lives in your own lab app, so the shared **Forecast Variance** app stays untouched. Before you continue with the next exercise, switch your scope back to **Forecast Variance** (globe icon), as in step 6 of the manual steps.
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_fund_ba_result.png" alt="" width="420"><figcaption></figcaption></figure>
+4.  Switch your scope back to **Forecast Variance** (globe icon) before the next exercise.
 
 ## Conclusion
 

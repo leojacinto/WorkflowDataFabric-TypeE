@@ -189,12 +189,12 @@ Clone the OOTB DP: Cost Center model. Label it SAP Cost Center. Assign ERP syste
 
 #### Hands-on (Build Agent option): Clone ERP Data Product for Cost Center
 
-Use this instead of the manual steps above.
+You can let Build Agent clone the model for you.
 
-1.  In **ServiceNow Studio**, open the **Forecast Variance** app, then click <mark style="color:green;">**a.)**</mark> **Build Agent (diamond icon)** > <mark style="color:green;">**b.)**</mark> **New conversation**. The status bar should show <mark style="color:green;">**c.)**</mark> **Scope: Forecast Variance**.
+> **Using Build Agent:** go to ServiceNow Studio, open the **Forecast Variance** app, click **Build Agent** (diamond icon) > **New conversation**, then paste the prompt. Build Agent shows each script before running it; click **Approve**. If it asks you a question, answer it in the chat. If you see a 401 error, reload the page and send the prompt again.
 
-    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_new_conversation.png" alt=""><figcaption></figcaption></figure>
-2.  Paste this prompt and send it.
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_new_conversation.png" alt="" width="420"><figcaption></figcaption></figure>
+1.  Paste this prompt and send it.
 
     ```
     Clone the ERP model "CP: Cost Center" (Function Call variant) as "SAP Cost Center Lab"
@@ -207,9 +207,9 @@ Use this instead of the manual steps above.
     Report with gs.info: the new model's scope, origin and system, and its counts of
     operations, entities, table fields, inputs, input mappings and outputs next to the source's.
     ```
-3.  Read the script Build Agent proposes, then click **Approve**. It reports the new model in **Forecast Variance** with system **S4D**, and counts that match the source: 3 operations, 29 entities, 327 table fields, 48 inputs, 48 input mappings and 29 outputs.
+2.  Click **Approve**. You should see the new model in **Forecast Variance** with system **S4D**, and counts that match the source (3, 29, 327, 48, 48, 29).
 
-    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_approve.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_approve.png" alt="" width="420"><figcaption></figcaption></figure>
 
 #### Walkthrough: Explore ZCC for ERP BAPI Entity
 
@@ -318,10 +318,9 @@ Create a data fabric table from the Snowflake data asset. Set Cost Center as a R
 
 #### Hands-on (Build Agent option): Configure Column Mappings
 
-Use this instead of the manual steps above.
+You can let Build Agent create the data fabric table for you.
 
-1.  Open a **New conversation** in Build Agent with **Scope: Forecast Variance**, as in the ERP Build Agent option.
-2.  Paste this prompt, replace **\<initials>** with your initials (e.g. lfr) in both places, and send it.
+1.  In a new chat, paste this prompt, put your initials in place of **\<initials>** (twice), and send it.
 
     ```
     Create a data fabric table from the Snowflake data asset u_lab_cc_summary, with label
@@ -337,7 +336,7 @@ Use this instead of the manual steps above.
     Report with gs.info: the operation's return value and my new row in
     x_snc_alectri_zc_0_data_fabric_tables.
     ```
-3.  Read the script Build Agent proposes, then click **Approve**. It reports **Dummy table** and your new row. This lab's Snowflake connection is simulated, so only the listing is saved, the same as in the UI. The Reference and primary key steps above aren't stored.
+2.  Click **Approve**. You should see **Dummy table** and your new row. This lab's Snowflake connection is simulated, so only the listing is saved, the same as in the UI.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_df_table_result.png" alt=""><figcaption></figcaption></figure>
 

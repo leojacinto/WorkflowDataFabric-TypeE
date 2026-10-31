@@ -192,10 +192,11 @@ Navigate to Now Assist Admin Skills. Activate the Extract information from docum
 
 #### Hands-on (Build Agent option): Document Intelligence Parameters
 
-Use this instead of the manual steps above. There's no scope switching: the script runs in global scope by itself.
+You can let Build Agent set the three properties for you, without switching scope.
 
-1.  In **ServiceNow Studio**, open the **Forecast Variance** app, then click **Build Agent (diamond icon)** > **New conversation**.
-2.  Paste this prompt and send it.
+> **Using Build Agent:** go to ServiceNow Studio, open the **Forecast Variance** app, click **Build Agent** (diamond icon) > **New conversation**, then paste the prompt. Build Agent shows each script before running it; click **Approve**. If it asks you a question, answer it in the chat. If you see a 401 error, reload the page and send the prompt again.
+
+1.  Paste this prompt and send it.
 
     ```
     In global scope, set these three system properties to 0.01 and report their old and new
@@ -204,9 +205,9 @@ Use this instead of the manual steps above. There's no scope switching: the scri
     glide.platform_ml_di.doc_data_extractor.autofill_threshold,
     glide.platform_ml_di.doc_data_extractor.straight_through_processing_threshold.
     ```
-3.  Read the script, then click **Approve**. Build Agent reports all three properties at **0.01**.
+2.  Click **Approve**. You should see all three properties at **0.01**.
 
-    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_ldi_ba_props.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_ldi_ba_props.png" alt="" width="420"><figcaption></figcaption></figure>
 
 #### Hands-on: Document Intelligence Runtime
 
@@ -239,9 +240,9 @@ Create a variance task record. Upload the Invoice\_IT\_Laptop\_CC\_IT\_002.pdf d
 
 #### Hands-on (Build Agent option): Document Intelligence Runtime
 
-Use this instead of the manual steps above. Build Agent downloads the invoice and attaches it for you.
+You can let Build Agent create the task and attach the invoice for you.
 
-1.  In the same Build Agent conversation, paste this prompt and send it.
+1.  In the same chat, paste this prompt and send it.
 
     ```
     In the Forecast Variance app, create a record in x_snc_forecast_v_0_variance_task with short
@@ -251,9 +252,9 @@ Use this instead of the manual steps above. Build Agent downloads the invoice an
     file name. Then set State to Work in Progress and save the record.
     Report with gs.info the task number, its state, and the attachment's file name and size.
     ```
-2.  Read the script, then click **Approve**. Build Agent reports the new task in **Work in Progress** with **Invoice\_IT\_Laptop\_CC\_IT\_002.pdf** attached (2194 bytes). Document Intelligence then reads the invoice and the AI agent takes over, as described below.
+2.  Click **Approve**. You should see the new task in **Work in Progress** with the invoice attached. Document Intelligence then reads it and the agent takes over.
 
-    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_ldi_ba_runtime.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_ldi_ba_runtime.png" alt="" width="420"><figcaption></figcaption></figure>
 
 #### Walkthrough: Custom Forecast Variance AI Agent
 
