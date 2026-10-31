@@ -40,9 +40,9 @@ This lab will walk you through integration of data coming from Cloud Data Wareho
 
 **AI Agent and Finance Operations Workspace**
 
-<table><thead><tr><th width="83">Step</th><th width="106">Who</th><th>Description</th></tr></thead><tbody><tr><td><a href="lab-exercise-zero-copy-connectors.md#walkthrough-custom-forecast-variance-ai-agent">11</a></td><td>Student</td><td><strong>AI Agent Walkthrough:</strong> Open AI Agent Studio. Review the Forecast Variance agent: specialty, tools, security controls, trigger (blank), and channel settings. Save and test.</td></tr><tr><td><a href="lab-exercise-zero-copy-connectors.md#hands-on-test-and-review-custom-ai-agent">12</a></td><td>Student</td><td><strong>Test AI Agent:</strong> Enter test prompt to process an expense event. Review planning steps, cost center and vendor extraction, RAG search results, and Finance Case creation.</td></tr><tr><td><a href="lab-exercise-zero-copy-connectors.md#completion-verify-finance-case">13</a></td><td>Student</td><td><strong>Verify the Finance Case:</strong> Navigate to Finance Operations Workspace. Find the case created by the agent.</td></tr></tbody></table>
+<table><thead><tr><th width="83">Step</th><th width="106">Who</th><th>Description</th></tr></thead><tbody><tr><td><a href="lab-exercise-zero-copy-connectors.md#hands-on-test-the-forecast-variance-ai-agent">11</a></td><td>Student</td><td><strong>Test AI Agent:</strong> Start the Forecast Variance agent you built in Integration Hub from AI Agent Studio. Follow its steps in the decision log, through to the Finance Case.</td></tr><tr><td><a href="lab-exercise-zero-copy-connectors.md#completion-verify-finance-case">12</a></td><td>Student</td><td><strong>Verify the Finance Case:</strong> Navigate to Finance Operations Workspace. Find the case created by the agent.</td></tr></tbody></table>
 
-<table><thead><tr><th width="83">Step</th><th width="106">Who</th><th>Description</th></tr></thead><tbody><tr><td><a href="lab-exercise-zero-copy-connectors.md#conclusion">14</a></td><td>Facilitator</td><td><strong>Conclusion:</strong> Walk through the complete data flow chain showing how Zero Copy Connectors bring external data into ServiceNow for AI Agent-driven case management.</td></tr></tbody></table>
+<table><thead><tr><th width="83">Step</th><th width="106">Who</th><th>Description</th></tr></thead><tbody><tr><td><a href="lab-exercise-zero-copy-connectors.md#conclusion">13</a></td><td>Facilitator</td><td><strong>Conclusion:</strong> Walk through the complete data flow chain showing how Zero Copy Connectors bring external data into ServiceNow for AI Agent-driven case management.</td></tr></tbody></table>
 
 ### Data flow
 
@@ -80,10 +80,10 @@ graph TB
         end
 
         subgraph "AI & Automation"
-            Agent1[Agent: Over-Budget<br/>Case Creator<br/>Zero Copy Source]
-            RAG[RAG - Retrieval<br/>Augmented Generation]
+            Agent1[Agent: Forecast<br/>Variance]
+            Lookups[Record Lookups]
 
-            FlowAction[Flow Action]
+            FlowAction[Subflows]
         end
     end
 
@@ -99,9 +99,9 @@ graph TB
     ZCCH -->|Historical Data| Agent1
     ZCExp -->|Expense Details| Agent1
     ExpenseTable -->|Search Similar Cases| Agent1
-    Agent1 -->|Create Case| FinCase
-    Agent1 <-->|Trend Analysis| RAG
-    Agent1 <-->|Flows/Subflows/Actions| FlowAction
+    FlowAction -->|Create Case| FinCase
+    Agent1 <-->|Cost Center and<br/>Vendor History| Lookups
+    Agent1 <-->|Extract Cost Center,<br/>Budget Variance Analysis| FlowAction
 
     %% User Interaction Connections
     Employee -->|Ask Questions<br/>View/Update Cases| EC
@@ -118,14 +118,16 @@ graph TB
     class ZeroCopySQL,ZeroCopyERP wdf
     class ZCCC,ZCCH,ZCExp wdf
     class ExpenseTable,FinCase platform
-    class Agent1,RAG nowassist
+    class Agent1,Lookups nowassist
     class FlowAction platform
     class Employee,EC user
 ```
 
 > **Color Legend:** 🟡 Now Assist | 🟢 Platform | 🟣 Workflow Data Fabric | 🔵 External Systems | ⚪ User Interaction
 >
-> [📊 View High-Resolution Diagram](https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeB/main/.gitbook/assets/dataflow_zero_copy_connectors.png)
+> [📊 View High-Resolution Diagram](https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/dataflow_zero_copy_connectors.png)
+
+In this version of the lab, the agent you built in [Lab Exercise: Integration Hub](lab-exercise-integration-hub.md) reads the cost center budget from the local Cost Center Budget History table. The zero copy tables you set up here show where that data lives in the source systems; pointing the agent at them is a planned extension.
 
 ### Preparation
 
@@ -356,76 +358,23 @@ View the data assets created and open the data fabric table contents.
 
 ### AI Agent and Finance Operations Workspace
 
-#### Walkthrough: Custom Forecast Variance AI Agent
+#### Hands-on: Test the Forecast Variance AI Agent
 
-This is a walk through of how an AI Agent equipped with both deterministic and probabilistic capabilities can automate research and validation of cost center history and expenses as well as creation of Finance Cases should cost centers be above their budget allocations. <mark style="color:red;">**Note:**</mark> this is a custom AI agent pre-configured in the lab instance provided in ServiceNow-led lab sessions; this is not a pre-built agent.
+The **Forecast Variance** agent you built in [Lab Exercise: Integration Hub](lab-exercise-integration-hub.md) checks each new expense event. Here you start it by hand from AI Agent Studio, so you can follow each step in the decision log.
 
-1. Go to All > type **x\_snc\_forecast\_v\_0\_expense\_transaction\_event.list** and hit **Return/Enter ↵**.
-
-<figure><img src="../.gitbook/assets/sc_common_expense_event_nav.png" alt=""><figcaption></figcaption></figure>
-
-2. This will lead to the screen below. Note that this is the table created in [Lab Exercise: Fundamentals](lab-exercise-fundamentals.md) and populated with the data from [Lab Exercise: Integration Hub](lab-exercise-integration-hub.md).
-
-<figure><img src="../.gitbook/assets/sc_zcc_expense_event_list.png" alt=""><figcaption></figcaption></figure>
-
-3.  After reviewing the table, navigate to All > <mark style="color:green;">**a.)**</mark> type **AI Agent Studio** > <mark style="color:green;">**b.)**</mark> click on **Create and Manage**.
+1.  Navigate to All > <mark style="color:green;">**a.)**</mark> type **AI Agent Studio** > <mark style="color:green;">**b.)**</mark> click on **Create and Manage**.
 
     <figure><img src="../.gitbook/assets/sc_zcc_agent_studio_nav.png" alt="" width="336"><figcaption></figcaption></figure>
-4.  Go to **AI agents** tab > <mark style="color:green;">**a.)**</mark> click **Conditions** > <mark style="color:green;">**b.)**</mark> select **Field** as **Name** <mark style="color:green;">**c.)**</mark> **Operator** as **is** and for <mark style="color:green;">**d.)**</mark> Value type **Forecast Variance** and hit **Return/Enter ↵**. Click on the <mark style="color:green;">**e.)**</mark> result.
+2.  Click the **Testing** tab, then **Start manual test**.
 
-    <figure><img src="../.gitbook/assets/sc_zcc_agent_studio_search.png" alt=""><figcaption></figcaption></figure>
-5.  Click on **Define the specialty**. This shows all the instructions for this AI Agent created in plain English. The **List of steps** describes the sequence, purpose, and nuances of the tools configured, which are shown in the next section. No further action is required in this section.
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_agent_testing.png" alt="" width="560"><figcaption></figcaption></figure>
+3.  Set **Choose a test type** to **AI agent or workflow**, **Name of the AI agent or agentic workflow** to **Forecast Variance** and **Version** to **1 - V1 (Active)**. In **Task**, type **Review expense event EXP-2025-IT-002-1007-01**, then click **Continue to test chat response**.
 
-    <figure><img src="../.gitbook/assets/sc_zcc_define_specialty.png" alt=""><figcaption></figcaption></figure>
-6. Next, click on **Add tools and information**. This is a collection of **Search retrievals** and **Subflows** that are used by the agent. The purpose and sequence of these tools are also described in the section **Define the specialty**. No further action is required in this section but feel free to explore the configurations of each of the tools. Similar to [Lab Exercise: Integration Hub](https://servicenow-lf.gitbook.io/apac-ai-end-to-end-lab-workflow-data-fabric/main-exercises/lab-exercise-integration-hub), below is a brief description of the tools configured for this agent:
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_agent_manual_test.png" alt=""><figcaption></figcaption></figure>
+4.  The map and the **AI agent decision logs** show each tool as it runs: **Extract Cost Center**, **Search for Cost Center History**, **Search for Expense Transactions History** and **Budget Variance Analysis**. Budget Variance Analysis can take a few minutes when the instance is busy.
 
-**a.) Extract Cost Center:** gets the cost center from the expense event that is written into the Expense Transaction Event table (x\_snc\_forecast\_v\_0\_expense\_transaction\_event).
-
-**b.) Search Cost Center History:** a RAG based tool which gets the history of a cost center; i.e., is the cost center frequently exceeding its budget? Output serves as reference for the Finance team without the need pull out data for themselves or opening requests to data teams.
-
-**c.) Search for Expense Transactions History:** a RAG based tools which gets the expenses/invoices from a cost center to provide even more granular detail. Output serves as reference for the Finance team without the need pull out data for themselves or opening requests to data teams.
-
-**d). Budget Variance Analysis:** a deterministic flow that assesses whether the latest expense event caused the relevant cost center to be over-budget; if over-budget, creates a Finance Case.
-
-<figure><img src="../.gitbook/assets/sc_zcc_add_tools_info.png" alt=""><figcaption></figcaption></figure>
-
-7. Under **Define security controls** > <mark style="color:green;">**a.)**</mark> click **Define data access** > <mark style="color:green;">**b.)**</mark> select **Dynamic user** from the drop down then > <mark style="color:green;">**c.)**</mark> add **admin** user as the approved role. For this exercise we are using permissive authorisations but this is where you can tighten authorisations for your agents allowing mechanisms such as inheriting the authorisations of logged in user (Dynamic identity type) or a predefined set of access (AI User identity type).
-
-<figure><img src="../.gitbook/assets/sc_zcc_define_security.png" alt=""><figcaption></figcaption></figure>
-
-8. Next, click on **Define trigger**, which is kept blank. You can add the triggers for the AI Agent here but for the exercise, the AI Agent will be triggered manually to be able to show the detail chat responses and debugging. No further action is required in this section.
-
-<figure><img src="../.gitbook/assets/sc_zcc_define_trigger_blank.png" alt=""><figcaption></figcaption></figure>
-
-9. Finally, click on <mark style="color:green;">**a.)**</mark> **Select channels and status**. This configures the availability of the AI Agent. In this case, it is enabled and can be accessed using <mark style="color:green;">**b.)**</mark>**&#x20;Now Assist panel** toggled on as well as via <mark style="color:green;">**c.)**</mark>**&#x20;Now Assist in Virtual Agent** added as chat assistant. Click <mark style="color:green;">**d.)**</mark>**&#x20;Save and test**. <mark style="color:$warning;">**Note:**</mark> if Chat Assistants (step <mark style="color:green;">**10.c.**</mark>) does not give you options, check and execute the steps in [Lab Exercise: Integration Hub > Platform Configuration](https://servicenow-lf.gitbook.io/the-workflow-data-fabric-loom/main-exercises/lab-exercise-integration-hub#preparation-platform-configuration) > Steps 9 to 18; esp. if you are doing this lab standalone or have skipped the [Lab Exercise: Integration Hub](https://servicenow-lf.gitbook.io/the-workflow-data-fabric-loom/main-exercises/lab-exercise-integration-hub) portion.
-
-<figure><img src="../.gitbook/assets/sc_zcc_select_channels_save.png" alt=""><figcaption></figcaption></figure>
-
-#### Hands-on: Test and review Custom AI Agent
-
-Enter test prompt to process an expense event. Review planning steps, cost center and vendor extraction, RAG search results, and Finance Case creation.
-
-1. You will be directed to the Test AI reasoning tab. To proceed with testing, <mark style="color:green;">**a.)**</mark> type **Help me process EXP-2025-IT-002-1007-01** and <mark style="color:green;">**b.)**</mark> click **Continue to Test Chat Response**.
-
-<figure><img src="../.gitbook/assets/sc_zcc_test_input.png" alt="" width="375"><figcaption></figcaption></figure>
-
-2. Wait for the test to complete which is indicated by an <mark style="color:green;">**End**</mark> with a check mark. Once that is completed, you can explore the following sections. These automations help assess and review cost centers which are exceeding budget proactively instead of waiting at the end of reporting cycles.
-
-<mark style="color:green;">**a.)**</mark> Expand **Planning the next steps** to see the tools used.
-
-<mark style="color:green;">**b.)**</mark> Note the **cost\_center** and **vendor** extracted from the expense event.
-
-<mark style="color:green;">**c.)**</mark> You can access the result of the **Retrieval-augmented Generation (RAG) search** and click on the links if you wish. This step helps you check relevant entries for the cost center associated with the expense event so you can do further investigation if needed.
-
-<mark style="color:green;">**d.)**</mark> You can also access the **RAG search** results for the vendors associated with the expense event.
-
-<mark style="color:green;">**e.)**</mark> Finally, if the expense event will lead to the associated cost center being over budget, the total cost center expense and the **Finance Case** created for exceeding the budget for further review and action is listed. In this case it is FINC0010003.
-
-<figure><img src="../.gitbook/assets/sc_zcc_test_results_overview.png" alt=""><figcaption></figcaption></figure>
-
-3. The right panel of the same screen shows the **AI agent decision logs** for debugging purposes.
-
-<figure><img src="../.gitbook/assets/sc_zcc_decision_logs.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_agent_test_run.png" alt=""><figcaption></figcaption></figure>
+5.  When the test ends, the chat shows the cost center and vendor, the cost center's monthly budget history, the vendor's earlier transactions, and the **Finance Case** that Budget Variance Analysis created because CC_IT_001 is over budget.
 
 #### Completion: Verify Finance Case
 
@@ -439,7 +388,7 @@ Navigate to Finance Operations Workspace. Find the case created by the agent.
 
 <figure><img src="../.gitbook/assets/sc_common_fow_system_user.png" alt=""><figcaption></figcaption></figure>
 
-3. Go to <mark style="color:green;">**a.)**</mark> **list (list icon)** > <mark style="color:green;">**b.)**</mark> **Lists** > <mark style="color:green;">**c.)**</mark> sort by **Number** descending/ascending > <mark style="color:green;">**d.)**</mark> or look for the Finance case created by the AI Agent, FINC0010003 in the example above.
+3. Go to <mark style="color:green;">**a.)**</mark> **list (list icon)** > <mark style="color:green;">**b.)**</mark> **Lists** > <mark style="color:green;">**c.)**</mark> sort by **Number** descending/ascending > <mark style="color:green;">**d.)**</mark> or look for the Finance case created by the AI Agent, with the short description **CC_IT_001 is exceeding budget**.
 
 <figure><img src="../.gitbook/assets/sc_zcc_finance_case_list.png" alt=""><figcaption></figcaption></figure>
 
