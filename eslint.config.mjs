@@ -36,7 +36,9 @@ export default [
       'coverage/**',
       'target/**',
       '.types/**',
-      '@types/**'
+      '@types/**',
+      // verbatim snapshot of a Build Agent build, kept as-is for reference
+      'reference-solution/**'
     ]
   },
   js.configs.recommended,
