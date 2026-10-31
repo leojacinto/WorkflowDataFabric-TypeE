@@ -919,8 +919,8 @@
     <sys_hub_action_plan action="delete_multiple" query="action_id=b05c63943bd6365062f31831a3e45aaa^sys_idNOT IN699577d43bda365062f31831a3e45a6d"/>
     <sys_hub_action_plan action="INSERT_OR_UPDATE">
         <action_id display_value="Get Expense Event">b05c63943bd6365062f31831a3e45aaa</action_id>
-        <plan>{"type":"PlanProxy","persistor":{"@class":".ChunkingPlanPersistor","table":"sys_hub_action_plan","id":"699577d43bda365062f31831a3e45a6d","name":"plan","plan_signature":null}}</plan>
-        <snapshot>ed4dbb5c3b9e365062f31831a3e45ad5</snapshot>
+        <plan>{"@class":"com.snc.process_flow.engine.serialization.plan_data.ChunkingPlanData","chunk_data":{"table":"sys_hub_action_plan","id":"699577d43bda365062f31831a3e45a6d","name":"plan","plan_signature":null},"plan_data":"CHUNKING_PLAN"}</plan>
+        <snapshot>e1907a2d3bb78fd4a0db3141a3e45a0b</snapshot>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-01-04 01:53:53</sys_created_on>
         <sys_domain>global</sys_domain>
@@ -1848,6 +1848,6 @@
     <sys_hub_action_type_definition action="UPDATE">
         <sys_id>b05c63943bd6365062f31831a3e45aaa</sys_id>
         <latest_snapshot>6095f3d43bda365062f31831a3e45a0e</latest_snapshot>
-        <compiler_build>glide-zurich-07-01-2025__patch4-hotfix1-12-19-2025_12-20-2025_0947.zip</compiler_build>
+        <compiler_build>glide-brazil-08-25-2026__patch0-08-26-2026_09-22-2026_1636.zip</compiler_build>
     </sys_hub_action_type_definition>
 </record_update>

@@ -8,10 +8,10 @@
         <derived>true</derived>
         <field/>
         <label>Forecast Variance Memos Default Spell Check Dictionary</label>
-        <last_derived>2026-09-27 14:36:43</last_derived>
+        <last_derived>2026-10-23 09:36:54</last_derived>
         <locale>en</locale>
         <name>x_snc_forecast_v_0_forecast_variance_memos_default_spell_check_dictionary</name>
-        <publish_id>1870bbf6-2f73-4f00-92e9-00b8f847e502</publish_id>
+        <publish_id>aa347325-9b6d-491c-8bce-efcf8e3a3ea1</publish_id>
         <punctuation_sensitive>false</punctuation_sensitive>
         <state>PUBLISHED</state>
         <sys_class_name>ais_dictionary</sys_class_name>

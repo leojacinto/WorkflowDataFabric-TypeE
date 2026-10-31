@@ -8,10 +8,10 @@
         <derived>true</derived>
         <field/>
         <label>Expense Transactions Search Profile Default Spell Check Dictionary</label>
-        <last_derived>2026-09-26 14:36:45</last_derived>
+        <last_derived>2026-10-23 12:36:49</last_derived>
         <locale>en</locale>
         <name>x_snc_forecast_v_0_expense_transactions_search_profile_default_spell_check_dictionary</name>
-        <publish_id>6840790c-30fa-4b96-84e1-6b6978c72587</publish_id>
+        <publish_id>17a2c3f1-b8ad-4737-9f7f-84036ea65002</publish_id>
         <punctuation_sensitive>false</punctuation_sensitive>
         <state>PUBLISHED</state>
         <sys_class_name>ais_dictionary</sys_class_name>

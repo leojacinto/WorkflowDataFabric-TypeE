@@ -3,6 +3,7 @@
         <active>true</active>
         <collection_name/>
         <css/>
+        <extendable>true</extendable>
         <hide_chat>false</hide_chat>
         <layout/>
         <order>100</order>

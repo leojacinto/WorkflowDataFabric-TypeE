@@ -81,15 +81,15 @@ window.g_ck = "$[gs.getSession().getSessionToken() || gs.getSessionToken()]";</s
         <hash>e946bd8e4e842b9bf263f178c66cd2ed9775702b513b7a99faf84b15a8617c99</hash>
         <image_height/>
         <image_width/>
-        <size_bytes>42944</size_bytes>
+        <size_bytes>15731</size_bytes>
         <size_compressed>15731</size_compressed>
-        <state/>
+        <state>pending</state>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-09-27 11:38:51</sys_created_on>
         <sys_id>b1333bf2120f214f8545b2e9f97a1e7a</sys_id>
-        <sys_mod_count>0</sys_mod_count>
+        <sys_mod_count>2</sys_mod_count>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2026-09-27 11:38:51</sys_updated_on>
+        <sys_updated_on>2026-10-24 09:21:24</sys_updated_on>
         <table_name>sn_glider_source_artifact</table_name>
         <table_sys_id>1f56e8592aed4f5db708e5e866f04b3a</table_sys_id>
     </sys_attachment>

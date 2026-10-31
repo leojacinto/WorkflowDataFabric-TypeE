@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update table="sys_aix_experience_page_rel">
     <sys_aix_experience_page_rel action="INSERT_OR_UPDATE">
         <experience display_value="WDF Lab">58121a22b9f8524797eec460af16cdee</experience>
+        <experience_extension/>
         <page display_value="x-snc-wdf-lab-home-page">04d66fe62374a3214f66d0bbf7210aa5</page>
         <source_aix_project display_value="WDF Lab">45d838ba91a75970fcee4ab1e1cd7a84</source_aix_project>
         <sys_class_name>sys_aix_experience_page_rel</sys_class_name>

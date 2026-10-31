@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="enforce_dot_walk_cross_scope_access=true" db_object_id="27a3252d3b1fcb10a0db3141a3e45ac8" label="Expense Transactions" max_length="40" name="x_snc_forecast_v_0_expense_transactions" type="collection">
+        <element label="Expense Date" max_length="40" name="expense_date" type="glide_date"/>
+        <element label="GL Account" max_length="40" name="gl_account" type="string"/>
+        <element label="Cost Center" max_length="40" name="cost_center" type="string"/>
+        <element label="Expense Category" max_length="40" name="expense_category" type="string"/>
+        <element label="Description" max_length="40" name="description" type="string"/>
+        <element attributes="edge_encryption_enabled=true,omit_sys_original=true" label="Amount" max_length="20" name="amount" type="currency"/>
+        <element label="Expense ID" max_length="40" name="expense_id" type="string"/>
+        <element label="Vendor" max_length="40" name="vendor" type="string"/>
+        <element attributes="edge_encryption_enabled=true,encode_utf8=false" label="Approved by" max_length="40" name="approved_by" reference="sys_user" type="reference"/>
+        <index name="index">
+            <element name="approved_by"/>
+        </index>
+    </element>
+</database>

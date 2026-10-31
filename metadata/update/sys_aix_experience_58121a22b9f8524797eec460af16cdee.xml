@@ -2,6 +2,7 @@
     <sys_aix_experience action="INSERT_OR_UPDATE">
         <app_shell/>
         <content_hash>161e15f0e84e1409</content_hash>
+        <extendable>true</extendable>
         <landing_path>/home</landing_path>
         <layout/>
         <lifecycle_module display_value="">97ff2e940d733d0131b24003ea9343a9</lifecycle_module>

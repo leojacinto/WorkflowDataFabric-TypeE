@@ -32,11 +32,12 @@ export default function Shell({ route, navigate, children }: Props) {
   return (
     <div className="lab-app">
       <header className="lab-header">
-        <img
-          className="lab-logo"
-          src="/images/servicenow-logo.svg"
-          alt="ServiceNow"
-        />
+        {/*
+         * Genuine ServiceNow logo: the wdf-lab experience theme's own asset,
+         * db_image "light_logo.svg" (sys_id 97ec325f3f523210860f2248001f8b20),
+         * served by the platform. Never substitute a redrawn wordmark.
+         */}
+        <img className="lab-logo" src="/light_logo.svg" alt="ServiceNow" />
         <h1 className="lab-app-title">WDF Lab</h1>
       </header>
 

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element attributes="no_system_fields=true" db_object_id="b6733b773bc2ba500ad1a021a3e45a75" label="Cost Center Budget Summary" max_length="40" name="x_snc_forecast_v_0_df_cc_summary" read_only="true" type="collection">
+        <element attributes="scale=2" label="Variance percent" max_length="38" name="u_variance_percent" type="decimal"/>
+        <element label="Fiscal year" max_length="38" name="u_fiscal_year" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" label="Period" max_length="16777216" name="u_period" type="string"/>
+        <element attributes="edge_encryption_enabled=true" label="Forecast source" max_length="16777216" name="u_forecast_source" type="string"/>
+        <element display="true" label="Gl account" max_length="38" name="u_gl_account" primary="true" type="decimal"/>
+        <element label="Baseline amount usd" max_length="38" name="u_baseline_amount_usd" type="decimal"/>
+        <element label="Variance" max_length="38" name="u_variance" type="decimal"/>
+        <element attributes="edge_encryption_enabled=true" label="Last updated" max_length="40" name="u_last_updated" type="glide_date"/>
+        <element label="Actual amount usd" max_length="38" name="u_actual_amount_usd" type="decimal"/>
+        <element attributes="encode_utf8=false" label="Cost center" max_length="40" name="u_cost_center" reference="sn_erp_integration_cost_center" reference_key="u_cost_center" type="reference"/>
+    </element>
+</database>

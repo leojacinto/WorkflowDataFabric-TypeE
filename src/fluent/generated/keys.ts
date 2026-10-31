@@ -1924,6 +1924,7 @@ declare global {
                     {
                         table: 'sys_ux_lib_asset'
                         id: '22802c7ddafd486dad0f0739b22f637c'
+                        deleted: true
                         key: {
                             name: 'x_snc_forecast_v_0/vendor-react-dom--53df40e5.js.map'
                         }
@@ -1940,6 +1941,7 @@ declare global {
                     {
                         table: 'sys_ux_lib_asset'
                         id: '29885ab397bd4cfbb07ff63fec4de1a5'
+                        deleted: true
                         key: {
                             name: 'x_snc_forecast_v_0/vendor-react-dom--53df40e5'
                         }
@@ -2094,6 +2096,13 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ux_lib_asset'
+                        id: '5256de3e955f4501b8293b92264a1e11'
+                        key: {
+                            name: 'x_snc_forecast_v_0/vendor-react-dom--ff7a06d7'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '539d0618fcfc4add9b5b109158103598'
                         key: {
@@ -2236,6 +2245,13 @@ declare global {
                         id: '6f2544a19f8f4c8caa732e334c8faef7'
                         key: {
                             name: 'x_snc_forecast_v_0_variance_task'
+                        }
+                    },
+                    {
+                        table: 'sys_ux_lib_asset'
+                        id: '6fc36fdb0cd84b34ab889529b862cdba'
+                        key: {
+                            name: 'x_snc_forecast_v_0/vendor-react-dom--ff7a06d7.js.map'
                         }
                     },
                     {

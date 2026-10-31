@@ -4,7 +4,7 @@
         <channels/>
         <discoverable>true</discoverable>
         <hint>Forecast Variance Snowflake MCP</hint>
-        <skill_id display_value="Forecast Variance Snowflake MCP">51dd47e73baaf6500ad1a021a3e45a33</skill_id>
+        <skill_id display_value="">51dd47e73baaf6500ad1a021a3e45a33</skill_id>
         <supervision/>
         <sys_class_name>sys_gen_ai_skill_config</sys_class_name>
         <sys_created_by>admin</sys_created_by>

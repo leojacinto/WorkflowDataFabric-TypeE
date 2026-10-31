@@ -24,10 +24,8 @@ export const VIRTUAL_ON_HTML = `<!doctype html>
     <div class="vignette" aria-hidden="true"></div>
     <button id="theme-toggle" aria-pressed="true">DARK</button>
     <section class="intro">
-      <div class="eyebrow" id="scene-eyebrow">01 / SEQUENCE</div>
-      <h1 id="scene-heading">VIRTUALITY.<br>IN MOTION.</h1>
-      <p id="scene-caption">Every sequence begins with a signal.</p>
-      <div class="reference"> <span> </span></div>
+      <h1 id="scene-heading"></h1>
+      <p id="scene-caption"></p>
     </section>
     <div id="runtime" hidden inert aria-hidden="true">
       <span id="header-title"></span>

@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_gen_ai_skill">
     <sys_gen_ai_skill action="INSERT_OR_UPDATE">
-        <skill_description>You are an expense management agent who can create cases based on budget variances.</skill_description>
+        <skill_description/>
         <skill_document>6ee01ce43b1a765062f31831a3e45a12</skill_document>
-        <skill_name>Forecast Variance Integration Hub Trigger</skill_name>
+        <skill_name/>
         <skill_table>sn_aia_skill_metadata</skill_table>
         <sys_class_name>sys_gen_ai_skill</sys_class_name>
         <sys_created_by>admin</sys_created_by>

@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="ml_training_request_schedule">
+    <ml_training_request_schedule action="INSERT_OR_UPDATE">
+        <active>true</active>
+        <advanced>false</advanced>
+        <business_calendar/>
+        <capability/>
+        <condition/>
+        <conditional>false</conditional>
+        <entered_run_end/>
+        <entered_run_start/>
+        <entered_time/>
+        <max_drift/>
+        <ml_capability_definition display_value="Demand Insights: HR Case Clusters Need Knowledge">b0d1d4d1d5ae0010f877d3f7a451e133</ml_capability_definition>
+        <ml_solution/>
+        <name>Demand Insights: HR Case Clusters Need Knowledge</name>
+        <offset/>
+        <offset_type>0</offset_type>
+        <repeat_every/>
+        <run_as display_value="System Administrator">6816f79cc0a8016401c5a33be04be441</run_as>
+        <run_as_tz/>
+        <run_dayofmonth>1</run_dayofmonth>
+        <run_dayofweek/>
+        <run_daysofweek/>
+        <run_end/>
+        <run_month/>
+        <run_period/>
+        <run_start>2026-10-04 06:00:16</run_start>
+        <run_time/>
+        <run_type>once</run_type>
+        <run_weekinmonth/>
+        <solution_definition/>
+        <sys_class_name>ml_training_request_schedule</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-10-04 06:00:16</sys_created_on>
+        <sys_id>a0086e9c47bf0350037d0fadf26d43a3</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>Demand Insights: HR Case Clusters Need Knowledge</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>ml_training_request_schedule_a0086e9c47bf0350037d0fadf26d43a3</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-10-04 06:00:16</sys_updated_on>
+        <time_zone/>
+        <upgrade_safe>false</upgrade_safe>
+    </ml_training_request_schedule>
+</record_update>

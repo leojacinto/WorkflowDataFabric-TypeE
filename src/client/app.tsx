@@ -1,8 +1,7 @@
 import React, { useCallback, useEffect, useState } from "react";
 import Shell from "./components/Shell";
 import Home from "./pages/Home";
-import Fundamentals from "./pages/Fundamentals";
-import Placeholder from "./pages/Placeholder";
+import LabPage from "./pages/LabPage";
 import { findItem } from "./toc";
 import "./app.css";
 
@@ -59,11 +58,9 @@ export default function App() {
   let body: React.ReactNode;
   if (route === "/home") {
     body = <Home navigate={navigate} />;
-  } else if (route === "/exercises/fundamentals") {
-    body = <Fundamentals navigate={navigate} />;
   } else {
     const item = findItem(route) || { path: route, title: "Not found" };
-    body = <Placeholder item={item} navigate={navigate} />;
+    body = <LabPage route={route} item={item} navigate={navigate} />;
   }
 
   return (

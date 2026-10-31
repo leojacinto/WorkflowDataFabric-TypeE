@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_module">
+    <sys_module action="INSERT_OR_UPDATE">
+        <content><![CDATA[{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "version": 1,
+  "serialNumber": "urn:uuid:5d4b35a5-48d1-4180-b9aa-fce9c58ccae2",
+  "metadata": {
+    "timestamp": "2026-09-26T15:56:36.292Z",
+    "tools": {
+      "components": [
+        {
+          "type": "library",
+          "name": "sdk-build-plugins",
+          "group": "@servicenow",
+          "version": "0.0.1",
+          "author": "ServiceNow"
+        }
+      ]
+    },
+    "component": {
+      "type": "application",
+      "name": "wdf-lab",
+      "version": "1.0.0",
+      "bom-ref": "pkg:servicenow/wdf-lab@1.0.0?sys_scope_id=a4fd2da13bf8be5062f31831a3e45ac9",
+      "description": "AIUX application: WDF Lab",
+      "purl": "pkg:servicenow/wdf-lab@1.0.0?sys_scope_id=a4fd2da13bf8be5062f31831a3e45ac9"
+    }
+  },
+  "components": [],
+  "dependencies": [
+    {
+      "ref": "pkg:servicenow/wdf-lab@1.0.0?sys_scope_id=a4fd2da13bf8be5062f31831a3e45ac9"
+    }
+  ]
+}]]></content>
+        <external_source>false</external_source>
+        <path>x_snc_forecast_v_0/wdf-lab/1.0.0/bom.json</path>
+        <sys_class_name>sys_module</sys_class_name>
+        <sys_created_by>admin</sys_created_by>
+        <sys_created_on>2026-09-20 07:02:30</sys_created_on>
+        <sys_id>e0a8ebc204ef4275a87622b958e5ae22</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_snc_forecast_v_0/wdf-lab/1.0.0/bom.json</sys_name>
+        <sys_package display_value="Forecast Variance" source="x_snc_forecast_v_0">a4fd2da13bf8be5062f31831a3e45ac9</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="Forecast Variance">a4fd2da13bf8be5062f31831a3e45ac9</sys_scope>
+        <sys_update_name>sys_module_e0a8ebc204ef4275a87622b958e5ae22</sys_update_name>
+        <sys_updated_by>admin</sys_updated_by>
+        <sys_updated_on>2026-09-20 07:02:30</sys_updated_on>
+    </sys_module>
+</record_update>

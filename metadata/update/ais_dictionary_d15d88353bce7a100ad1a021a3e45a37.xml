@@ -8,10 +8,10 @@
         <derived>true</derived>
         <field/>
         <label>Cost Center Budget History Search Profile Default Spell Check Dictionary</label>
-        <last_derived>2026-09-27 14:36:43</last_derived>
+        <last_derived>2026-10-23 09:36:54</last_derived>
         <locale>en</locale>
         <name>x_snc_forecast_v_0_cost_center_budget_history_search_profile_default_spell_check_dictionary</name>
-        <publish_id>93d0ed3c-082a-43e5-830d-8c743e012239</publish_id>
+        <publish_id>5b7d372f-0373-4636-b28f-3f5fa23ce7e2</publish_id>
         <punctuation_sensitive>false</punctuation_sensitive>
         <state>PUBLISHED</state>
         <sys_class_name>ais_dictionary</sys_class_name>

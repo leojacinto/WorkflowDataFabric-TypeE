@@ -4,7 +4,7 @@
         <channels/>
         <discoverable>true</discoverable>
         <hint>Forecast Variance</hint>
-        <skill_id display_value="Forecast Variance">6788a05b3b51be900ad1a021a3e45a82</skill_id>
+        <skill_id display_value="">6788a05b3b51be900ad1a021a3e45a82</skill_id>
         <supervision/>
         <sys_class_name>sys_gen_ai_skill_config</sys_class_name>
         <sys_created_by>admin</sys_created_by>

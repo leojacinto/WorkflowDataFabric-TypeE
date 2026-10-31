@@ -4,7 +4,7 @@
         <channels/>
         <discoverable>true</discoverable>
         <hint>Forecast Variance Integration Hub Trigger</hint>
-        <skill_id display_value="Forecast Variance Integration Hub Trigger">7ee05ce43b1a765062f31831a3e45af2</skill_id>
+        <skill_id display_value="">7ee05ce43b1a765062f31831a3e45af2</skill_id>
         <supervision/>
         <sys_class_name>sys_gen_ai_skill_config</sys_class_name>
         <sys_created_by>admin</sys_created_by>

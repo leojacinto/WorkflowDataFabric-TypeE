@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?><record_update sys_domain="global" table="sys_cs_context_profile_skill">
     <sys_cs_context_profile_skill action="INSERT_OR_UPDATE">
         <context_profile display_value="ServiceNow Otto panel - Platform (default)">e93cab98c7c03110b65579a988c260c4</context_profile>
-        <skill_id display_value="Forecast Variance Snowflake MCP">51dd47e73baaf6500ad1a021a3e45a33</skill_id>
+        <skill_id display_value="">51dd47e73baaf6500ad1a021a3e45a33</skill_id>
         <sys_class_name>sys_cs_context_profile_skill</sys_class_name>
         <sys_created_by>admin</sys_created_by>
         <sys_created_on>2026-01-26 11:36:22</sys_created_on>

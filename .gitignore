@@ -26,3 +26,8 @@ aiux_ba.md
 /real-tab-chat.png
 /referrer-test.png
 /studio-new-tab.png
+# Local-only: soundtrack (copyrighted), snapshots and backups, browser tool output
+*.mp3
+24-Oct-WDF-Type-E/
+backup/
+.playwright-mcp/
