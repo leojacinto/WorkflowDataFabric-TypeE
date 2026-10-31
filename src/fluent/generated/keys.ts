@@ -1836,15 +1836,6 @@ declare global {
                         }
                     },
                     {
-                        table: 'sys_documentation'
-                        id: '0df0e6df512044ff9c81a09bf5dcb67d'
-                        key: {
-                            name: 'x_snc_forecast_v_0_df_cc_summary'
-                            element: 'u_cost_center'
-                            language: 'en'
-                        }
-                    },
-                    {
                         table: 'sys_dictionary'
                         id: '0f778435664444fea4e5c64d38d9e38f'
                         key: {
@@ -1858,14 +1849,6 @@ declare global {
                         key: {
                             name: 'x_snc_forecast_v_0_variance_task'
                             element: 'status'
-                        }
-                    },
-                    {
-                        table: 'sys_dictionary'
-                        id: '15ecf883914643728bc8b042ce0a6312'
-                        key: {
-                            name: 'x_snc_forecast_v_0_df_cc_summary'
-                            element: 'u_cost_center'
                         }
                     },
                     {
@@ -1899,15 +1882,6 @@ declare global {
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transaction_event'
                             element: 'region'
-                        }
-                    },
-                    {
-                        table: 'sys_documentation'
-                        id: '1d53fb8f0c8b4d6c966dbab1e1e27743'
-                        key: {
-                            name: 'x_snc_forecast_v_0_df_cc_summary'
-                            element: 'u_forecast_source'
-                            language: 'en'
                         }
                     },
                     {
@@ -2042,13 +2016,6 @@ declare global {
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transactions'
                             element: 'approved_by'
-                        }
-                    },
-                    {
-                        table: 'ua_table_licensing_config'
-                        id: '4aa0245d0239450f9efb3c0c18a3b68f'
-                        key: {
-                            name: 'x_snc_forecast_v_0_df_cc_summary'
                         }
                     },
                     {
@@ -2299,35 +2266,11 @@ declare global {
                         }
                     },
                     {
-                        table: 'sys_dictionary'
-                        id: '765a8d0a17f7436fa5a119cb065e6ac9'
-                        key: {
-                            name: 'x_snc_forecast_v_0_df_cc_summary'
-                            element: 'u_variance'
-                        }
-                    },
-                    {
                         table: 'sys_documentation'
                         id: '7680a1262d774d00851c80e248ec4b66'
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transaction_event'
                             element: 'event_id'
-                            language: 'en'
-                        }
-                    },
-                    {
-                        table: 'sys_db_object'
-                        id: '76dff1e6bd5a4628b4868f856ce2fd7e'
-                        key: {
-                            name: 'x_snc_forecast_v_0_df_cc_summary'
-                        }
-                    },
-                    {
-                        table: 'sys_documentation'
-                        id: '770575d71f9d44ebb6479a7e71aea61c'
-                        key: {
-                            name: 'x_snc_forecast_v_0_df_cc_summary'
-                            element: 'u_gl_account'
                             language: 'en'
                         }
                     },
@@ -2349,28 +2292,11 @@ declare global {
                         }
                     },
                     {
-                        table: 'sys_dictionary'
-                        id: '7968836902ae4729bbe28d2c1fa1b2ce'
-                        key: {
-                            name: 'x_snc_forecast_v_0_df_cc_summary'
-                            element: 'u_baseline_amount_usd'
-                        }
-                    },
-                    {
                         table: 'sys_documentation'
                         id: '7a45c63ad8d444e2ab0808c7ce9b6211'
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transaction_event'
                             element: 'correlation_id'
-                            language: 'en'
-                        }
-                    },
-                    {
-                        table: 'sys_documentation'
-                        id: '7b708f67fa004cef8f19f8d78bcad37c'
-                        key: {
-                            name: 'x_snc_forecast_v_0_df_cc_summary'
-                            element: 'u_baseline_amount_usd'
                             language: 'en'
                         }
                     },
@@ -2401,26 +2327,10 @@ declare global {
                     },
                     {
                         table: 'sys_dictionary'
-                        id: '7f37349eb6c1419c8e1c15f0293ed9a1'
-                        key: {
-                            name: 'x_snc_forecast_v_0_df_cc_summary'
-                            element: 'u_actual_amount_usd'
-                        }
-                    },
-                    {
-                        table: 'sys_dictionary'
                         id: '843cf5c4f2924d3ba7a8480930555685'
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transactions'
                             element: 'expense_date'
-                        }
-                    },
-                    {
-                        table: 'sys_dictionary'
-                        id: '848e7c79857647bf8df2ad137f9c2059'
-                        key: {
-                            name: 'x_snc_forecast_v_0_df_cc_summary'
-                            element: 'u_last_updated'
                         }
                     },
                     {
@@ -2510,27 +2420,10 @@ declare global {
                     },
                     {
                         table: 'sys_dictionary'
-                        id: '9756ea7bbcbf4758b4e6a1b5e92073b1'
-                        key: {
-                            name: 'x_snc_forecast_v_0_df_cc_summary'
-                            element: 'u_gl_account'
-                        }
-                    },
-                    {
-                        table: 'sys_dictionary'
                         id: '9895d584ca66472c808419b5c9d73020'
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transactions'
                             element: 'vendor'
-                        }
-                    },
-                    {
-                        table: 'sys_documentation'
-                        id: '99b78b9554a54ca19f55d19d58cf938a'
-                        key: {
-                            name: 'x_snc_forecast_v_0_df_cc_summary'
-                            element: 'u_variance_percent'
-                            language: 'en'
                         }
                     },
                     {
@@ -2655,30 +2548,6 @@ declare global {
                         }
                     },
                     {
-                        table: 'sys_dictionary'
-                        id: 'b020bf6065bb4819bfd3c83ac13eb8b8'
-                        key: {
-                            name: 'x_snc_forecast_v_0_df_cc_summary'
-                            element: 'NULL'
-                        }
-                    },
-                    {
-                        table: 'sys_dictionary'
-                        id: 'b0e74b7fda584068b24889fc24cb11a0'
-                        key: {
-                            name: 'x_snc_forecast_v_0_df_cc_summary'
-                            element: 'u_period'
-                        }
-                    },
-                    {
-                        table: 'sys_dictionary'
-                        id: 'b3b51c5957be4560bcc3a83da934b9cf'
-                        key: {
-                            name: 'x_snc_forecast_v_0_df_cc_summary'
-                            element: 'u_fiscal_year'
-                        }
-                    },
-                    {
                         table: 'sys_db_object'
                         id: 'b497747df6aa41d2a7b6754ea471195d'
                         key: {
@@ -2728,15 +2597,6 @@ declare global {
                         }
                     },
                     {
-                        table: 'sys_documentation'
-                        id: 'b9301bf0bcab49f19797951142e77abe'
-                        key: {
-                            name: 'x_snc_forecast_v_0_df_cc_summary'
-                            element: 'u_actual_amount_usd'
-                            language: 'en'
-                        }
-                    },
-                    {
                         table: 'sys_choice'
                         id: 'bb9055b7bb784f2abecda456fcfb2183'
                         key: {
@@ -2775,24 +2635,6 @@ declare global {
                     },
                     {
                         table: 'sys_documentation'
-                        id: 'c1279aee182f43de992260e80ed54ded'
-                        key: {
-                            name: 'x_snc_forecast_v_0_df_cc_summary'
-                            element: 'NULL'
-                            language: 'en'
-                        }
-                    },
-                    {
-                        table: 'sys_documentation'
-                        id: 'c249b978d0ca4efcada84d9de58e9591'
-                        key: {
-                            name: 'x_snc_forecast_v_0_df_cc_summary'
-                            element: 'u_period'
-                            language: 'en'
-                        }
-                    },
-                    {
-                        table: 'sys_documentation'
                         id: 'c2d7792c7e474cda938be967ff1b17bb'
                         key: {
                             name: 'x_snc_forecast_v_0_cost_center_budget_history'
@@ -2823,15 +2665,6 @@ declare global {
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transaction_event'
                             element: 'schema_version'
-                        }
-                    },
-                    {
-                        table: 'sys_documentation'
-                        id: 'c87e0b1661764666bc47a473309db5ed'
-                        key: {
-                            name: 'x_snc_forecast_v_0_df_cc_summary'
-                            element: 'u_variance'
-                            language: 'en'
                         }
                     },
                     {
@@ -2896,14 +2729,6 @@ declare global {
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transaction_event'
                             element: 'event_id'
-                        }
-                    },
-                    {
-                        table: 'sys_dictionary'
-                        id: 'd53dd1f99b354e4f97bf55a8e2e603e6'
-                        key: {
-                            name: 'x_snc_forecast_v_0_df_cc_summary'
-                            element: 'u_variance_percent'
                         }
                     },
                     {
@@ -3012,37 +2837,11 @@ declare global {
                     },
                     {
                         table: 'sys_documentation'
-                        id: 'f8d72950aef54ae0a630e087d48f1268'
-                        key: {
-                            name: 'x_snc_forecast_v_0_df_cc_summary'
-                            element: 'u_last_updated'
-                            language: 'en'
-                        }
-                    },
-                    {
-                        table: 'sys_documentation'
-                        id: 'faca4f70695842c681cda18f4b1ee081'
-                        key: {
-                            name: 'x_snc_forecast_v_0_df_cc_summary'
-                            element: 'u_fiscal_year'
-                            language: 'en'
-                        }
-                    },
-                    {
-                        table: 'sys_documentation'
                         id: 'fad9c116515f40b6ae1e369e7f461d0c'
                         key: {
                             name: 'x_snc_forecast_v_0_cost_center_budget_history'
                             element: 'status'
                             language: 'en'
-                        }
-                    },
-                    {
-                        table: 'sys_dictionary'
-                        id: 'fb6e814d7ffd424ba3936e61c2d64b3d'
-                        key: {
-                            name: 'x_snc_forecast_v_0_df_cc_summary'
-                            element: 'u_forecast_source'
                         }
                     },
                     {
