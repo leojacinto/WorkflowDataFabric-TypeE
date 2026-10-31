@@ -15,7 +15,7 @@ export const TYPEE_RAW_BASE =
 export const PAGE_FILES: Record<string, string> = {
     '/home': 'README.md',
     '/diagrams': 'data-and-flow-diagrams.md',
-    '/exercises/fundamentals': 'main-exercises/lab-exercise-fundamentals.md',
+    '/exercises/fundamentals': `${TYPEE_RAW_BASE}/lab-guide/main-exercises/lab-exercise-fundamentals.md`,
     '/exercises/integration-hub': 'main-exercises/lab-exercise-integration-hub.md',
     '/exercises/zero-copy-connectors': `${TYPEE_RAW_BASE}/lab-guide/main-exercises/lab-exercise-zero-copy-connectors.md`,
     '/exercises/external-content-connector':
