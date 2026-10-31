@@ -125,28 +125,26 @@ Create a dummy scope. This activity is meant to make you familiar with scope cre
 
     <figure><img src="../.gitbook/assets/sc_fund_all_fields.png" alt=""><figcaption></figcaption></figure>
 
-### Hands on (Build Agent option): Create a Scope and Table
+### Hands on (Build Agent option): Create a Table
 
-You can let Build Agent do the steps above for you.
+You can let Build Agent create the table in steps 7 to 14 for you. It builds the table in the **Forecast Variance** app.
 
-1.  In ServiceNow Studio, click **Build Agent** (diamond icon) > **New conversation** > **Create an app**. Don't open the Forecast Variance app first.
+1.  In ServiceNow Studio, open the **Forecast Variance** app, then click **Build Agent** (diamond icon) > **New conversation**.
 
-    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_fund_ba_create_app.png" alt=""><figcaption></figcaption></figure>
-2.  When Build Agent asks for a name, paste this, put your initials in place of **\<initials>** (twice), and send it.
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_new_conversation.png" alt="" width="420"><figcaption></figcaption></figure>
+2.  Paste this prompt, put your initials in place of **\<initials>**, and send it.
 
     ```
-    Name: Lab <initials> Forecast Variance. Description: lab practice app for the expense event table.
-    In that app, create a table "Expense Transaction Event <initials>" (no module) with these
-    columns, all with Display false: Amount USD (decimal, length 15), Timestamp (date/time), and
-    these strings of max length 40: Cost Center, Source System, Billing Period, Vendor, Invoice ID,
-    GL Account, Business Unit, Sent From, Correlation ID, Service Category, Schema Version, Region,
-    Event ID, Priority, Event Type.
+    In the Forecast Variance app, create a table "Expense Transaction Event <initials>" (no
+    module) with these columns, all with Display false: Amount USD (decimal, length 15),
+    Timestamp (date/time), and these strings of max length 40: Cost Center, Source System,
+    Billing Period, Vendor, Invoice ID, GL Account, Business Unit, Sent From, Correlation ID,
+    Service Category, Schema Version, Region, Event ID, Priority, Event Type.
     Then build and install the app.
     ```
-3.  Build Agent creates your app and the table with its 17 columns. No approval is needed.
+3.  Build Agent creates the table with its 17 columns in Forecast Variance. No approval is needed.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_fund_ba_result.png" alt="" width="420"><figcaption></figcaption></figure>
-4.  Switch your scope back to **Forecast Variance** (globe icon) before the next exercise.
 
 ## Conclusion
 
