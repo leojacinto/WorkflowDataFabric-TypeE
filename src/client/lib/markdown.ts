@@ -460,8 +460,16 @@ function parseLines(lines: string[]): Block[] {
 
                 // continuation: indented lines, or the figure GitBook emits
                 // un-indented straight after a numbered step
+                let inFence = false
                 while (i < lines.length) {
                     const next = lines[i]
+                    // inside a fenced block every line belongs to the item, list markers included
+                    if (inFence) {
+                        chunk.push(next.replace(/^[ \t]{1,4}/, ''))
+                        if (FENCE.test(next)) inFence = false
+                        i++
+                        continue
+                    }
                     if (!next.trim()) {
                         const after = lines[i + 1]
                         if (after && /^[ \t]{2,}\S/.test(after)) {
@@ -473,6 +481,7 @@ function parseLines(lines: string[]): Block[] {
                     }
                     if (ordered ? ORDERED.test(next) : BULLET.test(next)) break
                     if (/^[ \t]{2,}\S/.test(next)) {
+                        if (FENCE.test(next)) inFence = true
                         chunk.push(next.replace(/^[ \t]{1,4}/, ''))
                         i++
                         continue

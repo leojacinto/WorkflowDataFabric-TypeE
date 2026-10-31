@@ -8,13 +8,16 @@ export const RAW_BASE =
 
 export const ASSET_BASE = `${RAW_BASE}/.gitbook/assets`
 
+/** Pages whose source has moved into this repo (TypeE) are mapped by full URL. */
+export const TYPEE_RAW_BASE =
+    'https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main'
+
 export const PAGE_FILES: Record<string, string> = {
     '/home': 'README.md',
     '/diagrams': 'data-and-flow-diagrams.md',
     '/exercises/fundamentals': 'main-exercises/lab-exercise-fundamentals.md',
     '/exercises/integration-hub': 'main-exercises/lab-exercise-integration-hub.md',
-    '/exercises/zero-copy-connectors':
-        'main-exercises/lab-exercise-zero-copy-connectors.md',
+    '/exercises/zero-copy-connectors': `${TYPEE_RAW_BASE}/lab-guide/main-exercises/lab-exercise-zero-copy-connectors.md`,
     '/exercises/external-content-connector':
         'extended-exercises/lab-exercise-external-content-connector.md',
     '/exercises/lens-and-document-intelligence':
@@ -32,7 +35,8 @@ export const PAGE_FILES: Record<string, string> = {
 
 export function fileUrl(route: string): string | null {
     const file = PAGE_FILES[route]
-    return file ? `${RAW_BASE}/${file}` : null
+    if (!file) return null
+    return /^https?:\/\//i.test(file) ? file : `${RAW_BASE}/${file}`
 }
 
 /** basename (no extension, lowercased) -> route. Basenames are unique. */
