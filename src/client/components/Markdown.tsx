@@ -182,7 +182,11 @@ function Blocks({ blocks, navigate }: Props) {
                                             <tr key={j}>
                                                 {row.map((cell, k) => (
                                                     <td key={k}>
-                                                        <Inlines nodes={cell} navigate={navigate} />
+                                                        {cell.length === 1 && cell[0].kind === 'para' ? (
+                                                            <Inlines nodes={cell[0].children} navigate={navigate} />
+                                                        ) : (
+                                                            <Blocks blocks={cell} navigate={navigate} />
+                                                        )}
                                                     </td>
                                                 ))}
                                             </tr>

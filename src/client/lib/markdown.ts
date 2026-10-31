@@ -30,7 +30,7 @@ export type Block =
     | { kind: 'code'; lang: string; text: string }
     | { kind: 'quote'; blocks: Block[] }
     | { kind: 'list'; ordered: boolean; items: Block[][] }
-    | { kind: 'table'; head: Inline[][]; rows: Inline[][][] }
+    | { kind: 'table'; head: Inline[][]; rows: Block[][][] }
     | { kind: 'rule' }
 
 /* 1. frontmatter ---------------------------------------------------------- */
@@ -42,12 +42,14 @@ export function stripFrontmatter(md: string): string {
 /* 2. assets --------------------------------------------------------------- */
 
 export function rewriteAssetPaths(md: string): string {
-    return md.replace(/(?:\.{1,2}\/)*\.gitbook\/assets\//g, `${ASSET_BASE}/`)
+    // relative paths only: an absolute URL that already points at the assets folder stays as it is
+    return md.replace(/(?<![\w/.-])(?:\.{1,2}\/)*\.gitbook\/assets\//g, `${ASSET_BASE}/`)
 }
 
 /* 3. mermaid -> author's PNG --------------------------------------------- */
 
-const MERMAID_FENCE = /^[ \t]*```mermaid[ \t]*\r?\n[\s\S]*?^[ \t]*```[ \t]*$/gm
+// GitBook may add attributes after the language, e.g. ```mermaid fullWidth="true"
+const MERMAID_FENCE = /^[ \t]*```mermaid\b[^\n]*\r?\n[\s\S]*?^[ \t]*```[ \t]*$/gm
 
 const HIRES_LINK =
     /^[ \t]*>?[ \t]*\[[^\]]*(?:Resolution|Diagram)[^\]]*\]\((https?:\/\/[^\s)]+?\.(?:png|jpe?g|gif|svg))\)[ \t]*$/gim
@@ -330,7 +332,7 @@ function imgAttrs(raw: string): { src: string; alt: string; width?: string } {
 const ORDERED = /^([ \t]*)(\d+)[.)][ \t]+(.*)$/
 const BULLET = /^([ \t]*)[*+-][ \t]+(.*)$/
 const HEADING = /^(#{1,6})[ \t]+(.*)$/
-const FENCE = /^[ \t]*```[ \t]*([\w-]*)[ \t]*$/
+const FENCE = /^[ \t]*```[ \t]*([\w-]*)[^`\n]*$/
 const RULE = /^[ \t]*(?:\*\s*\*\s*\*[\s*]*|-{3,}|_{3,})[ \t]*$/
 const QUOTE = /^[ \t]*>[ \t]?(.*)$/
 const TABLE_ROW = /^[ \t]*\|(.*)\|[ \t]*$/
@@ -429,8 +431,9 @@ function parseLines(lines: string[]): Block[] {
         if (TABLE_ROW.test(line) && i + 1 < lines.length && TABLE_SEP.test(lines[i + 1])) {
             const head = splitRow(line)
             i += 2
-            const rows: Inline[][][] = []
-            while (i < lines.length && TABLE_ROW.test(lines[i])) rows.push(splitRow(lines[i++]))
+            const rows: Block[][][] = []
+            while (i < lines.length && TABLE_ROW.test(lines[i]))
+                rows.push(splitRow(lines[i++]).map(cell => [{ kind: 'para', children: cell }]))
             blocks.push({ kind: 'table', head, rows })
             continue
         }
@@ -550,19 +553,19 @@ function takeFigure(lines: string[], start: number): { block: Block; next: numbe
 }
 
 function parseHtmlTable(html: string): Block | null {
-    const rows: { header: boolean; cells: Inline[][] }[] = []
+    const rows: { header: boolean; cells: string[] }[] = []
 
     const rowRe = /<tr[^>]*>([\s\S]*?)<\/tr>/gi
     let rm: RegExpExecArray | null
     while ((rm = rowRe.exec(html))) {
-        const cells: Inline[][] = []
+        const cells: string[] = []
         let header = false
 
         const cellRe = /<(th|td)[^>]*>([\s\S]*?)<\/\1>/gi
         let cm: RegExpExecArray | null
         while ((cm = cellRe.exec(rm[1]))) {
             if (cm[1].toLowerCase() === 'th') header = true
-            cells.push(parseInline(cm[2].trim()))
+            cells.push(stripCellChrome(cm[2]).trim())
         }
 
         if (cells.length) rows.push({ header, cells })
@@ -570,9 +573,62 @@ function parseHtmlTable(html: string): Block | null {
 
     if (!rows.length) return null
 
-    const head = rows[0].header ? rows[0].cells : []
-    const body = rows.slice(rows[0].header ? 1 : 0).map(r => r.cells)
+    const head = rows[0].header ? rows[0].cells.map(c => parseInline(c)) : []
+    const body = rows.slice(rows[0].header ? 1 : 0).map(r => r.cells.map(cellBlocks))
     return { kind: 'table', head, rows: body }
+}
+
+/** GitBook's "Applies to" <select> and its wrapper <span>/<div> tags carry no content of their own. */
+function stripCellChrome(html: string): string {
+    return html.replace(/<select[\s\S]*?<\/select>/gi, '').replace(/<\/?(?:span|div)\b[^>]*>/gi, '')
+}
+
+/**
+ * GitBook table cells hold block HTML (paragraphs, lists, figures). Rewrite it
+ * as the markdown lines parseLines already understands: list items as "- "
+ * indented by depth, paragraphs separated by blank lines, figures on their own line.
+ */
+function cellBlocks(html: string): Block[] {
+    const lines: string[] = []
+    let line = ''
+    let depth = 0
+    const pad = () => '  '.repeat(depth)
+    const flush = () => {
+        if (line.trim() && !/^\s*-\s*$/.test(line)) lines.push(line)
+        line = ''
+    }
+    const tags = /<figure\b[\s\S]*?<\/figure>|<\/?(?:p|ul|ol|li|br)\b[^>]*>/gi
+    let last = 0
+    let m: RegExpExecArray | null
+    while ((m = tags.exec(html))) {
+        line += html.slice(last, m.index)
+        last = tags.lastIndex
+        const tag = m[0].toLowerCase()
+        if (tag.startsWith('<figure')) {
+            flush()
+            lines.push(pad() + m[0])
+        } else if (/^<(ul|ol)\b/.test(tag)) {
+            flush()
+            depth++
+        } else if (/^<\/(ul|ol)>/.test(tag)) {
+            flush()
+            depth = Math.max(depth - 1, 0)
+        } else if (tag.startsWith('<li')) {
+            flush()
+            line = '  '.repeat(Math.max(depth - 1, 0)) + '- '
+        } else if (tag === '</li>') {
+            flush()
+        } else if (tag.startsWith('<p') && /^\s*-\s$/.test(line)) {
+            // paragraph opening a list item: its text belongs on the "- " line
+        } else {
+            flush()
+            if (tag !== '<p>' && !tag.startsWith('<p ')) lines.push('')
+            line = pad()
+        }
+    }
+    line += html.slice(last)
+    flush()
+    return parseLines(lines)
 }
 
 function splitRow(line: string): Inline[][] {
