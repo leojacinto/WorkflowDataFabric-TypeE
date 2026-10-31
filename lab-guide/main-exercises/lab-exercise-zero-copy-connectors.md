@@ -189,59 +189,27 @@ Clone the OOTB DP: Cost Center model. Label it SAP Cost Center. Assign ERP syste
 
 #### Hands-on (Build Agent option): Clone ERP Data Product for Cost Center
 
-Do this instead of the manual steps above, not in addition to them. Build Agent runs the same vendor clone that the **Clone** button runs.
+Use this instead of the manual steps above.
 
-1.  Navigate to All > type **ServiceNow Studio** > open the **Forecast Variance** app. Click <mark style="color:green;">**a.)**</mark> **Build Agent (diamond icon)** > <mark style="color:green;">**b.)**</mark> **New conversation**. Check that the chat shows the <mark style="color:green;">**c.)**</mark> **Forecast Variance** chip and the status bar shows <mark style="color:green;">**d.)**</mark> **Scope: Forecast Variance**.
+1.  In **ServiceNow Studio**, open the **Forecast Variance** app, then click <mark style="color:green;">**a.)**</mark> **Build Agent (diamond icon)** > <mark style="color:green;">**b.)**</mark> **New conversation**. The status bar should show <mark style="color:green;">**c.)**</mark> **Scope: Forecast Variance**.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_new_conversation.png" alt=""><figcaption></figcaption></figure>
-2.  Copy the prompt below, paste it into the chat and send it.
+2.  Paste this prompt and send it.
 
     ```
-    Clone a Zero Copy Connector for ERP model and assign its ERP system, using the
-    vendor's own clone logic via a server-side script.
-    INPUTS:
-    - Source model short description: "Content Pack: Cost Center ( Function Call )"
-      (the OOTB Cost Center "Data Product - Function Call" model; name is "CP: Cost Center")
-    - New model name: "SAP Cost Center Lab"
-    - Target application: "Forecast Variance" (scope x_snc_forecast_v_0)
-    - ERP System name: "S4D"
-    WHY A SPECIAL APPROACH IS NEEDED (do not fight this):
-    - The ERP model tables (sn_erp_integration_model and children) extend sys_metadata
-      and are protected. ERPModelCloner is package-private to sn_erp_integration,
-      cross-scope GlideRecord writes to these tables are refused, and background scripts
-      cannot run directly in the sn_erp_integration scope. Raw record copying and direct
-      calls to ERPModelCloner will NOT work.
-    REQUIRED METHOD:
-    1. Confirm the system property "sn_erp_integration.enableModelModification" is "true".
-    2. Resolve sys_ids on THIS instance (do not hardcode):
-       - Source model: sn_erp_integration_model where short_description =
-         "Content Pack: Cost Center ( Function Call )"
-       - Target app scope: sys_scope where name = "Forecast Variance"
-       - ERP system: sn_erp_integration_system where name = "S4D"
-       - The vendor clone operation: sys_ws_operation named "CloneModel" (its
-         operation_script runs new ERPModelCloner(request.pathParams.sysId)
-         .clone(request.pathParams.name) in sn_erp_integration scope)
-    3. Run a server-side script in the TARGET APP scope (x_snc_forecast_v_0) that:
-       a. Aborts if a model with the new name already exists.
-       b. Loads the "CloneModel" sys_ws_operation and executes its operation_script via
-          GlideScopedEvaluator, injecting
-          request = { pathParams: { sysId: <source model sys_id>, name: "<new model name>" } }
-          and response = {}.
-       c. Looks up the new model by name and sets field "system" = <S4D sys_id>.
-       d. Returns the new model sys_id, sys_scope, system, origin and child-record counts.
-    VERIFY and report:
-    - New model is in scope "Forecast Variance", origin = clone.
-    - ERP System = S4D.
-    - Child counts match the source (3 operations, 29 entities, 327 table fields,
-      48 inputs, 48 mappings, 29 outputs).
-    If anything only partially inserts, roll back the run rather than leaving orphans.
+    Clone the ERP model "CP: Cost Center" (Function Call variant) as "SAP Cost Center Lab"
+    in the Forecast Variance app, and set its ERP system to S4D.
+    Method: from a script in the x_snc_forecast_v_0 scope, run the operation_script of the
+    sys_ws_operation "CloneModel" in scope sn_erp_integration through GlideScopedEvaluator,
+    with request = { pathParams: { sysId: <source sys_id>, name: <new name> } } and
+    response = {}. Then look up the new model by name and set system. Stop if the name
+    already exists.
+    Report with gs.info: the new model's scope, origin and system, and its counts of
+    operations, entities, table fields, inputs, input mappings and outputs next to the source's.
     ```
-3.  Build Agent shows each script it wants to run. Read it, then click **Approve**. Expect up to 3 approvals: the clone, then read-only checks.
+3.  Read the script Build Agent proposes, then click **Approve**. It reports the new model in **Forecast Variance** with system **S4D**, and counts that match the source: 3 operations, 29 entities, 327 table fields, 48 inputs, 48 input mappings and 29 outputs.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_approve.png" alt=""><figcaption></figcaption></figure>
-4.  Build Agent reports the result. Every check should pass, with the same counts as below. The model now has ERP system S4D, so the manual **Save** in step 5 above is already done.
-
-    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_clone_result.png" alt=""><figcaption></figcaption></figure>
 
 #### Walkthrough: Explore ZCC for ERP BAPI Entity
 
@@ -350,55 +318,26 @@ Create a data fabric table from the Snowflake data asset. Set Cost Center as a R
 
 #### Hands-on (Build Agent option): Configure Column Mappings
 
-Do this instead of the manual steps above, not in addition to them. In this lab the Snowflake connection is a simulated connector, so **Create data fabric table** records a listing and nothing else. The Reference and primary key steps above are illustrative and are not saved, which is the same for Build Agent and the UI.
+Use this instead of the manual steps above.
 
-1.  Open a **New conversation** in Build Agent with the **Forecast Variance** scope, as in the ERP Build Agent option above.
-2.  Copy the prompt below, replace **\<initials>** with your initials (e.g. lfr) in both places, then send it.
+1.  Open a **New conversation** in Build Agent with **Scope: Forecast Variance**, as in the ERP Build Agent option.
+2.  Paste this prompt, replace **\<initials>** with your initials (e.g. lfr) in both places, and send it.
 
     ```
-    Create a data fabric table from a Snowflake (Zero Copy Connector) data asset in the
-    Workflow Data Fabric Hub, using the vendor's own operation via a server-side script.
-    INPUTS:
-    - Data asset / remote table id: "u_lab_cc_summary"
-    - Data fabric table label: "cc_summ_<initials>"
-    - Data fabric table name: "x_snc_forecast_v_0_df_cc_summ_<initials>" (keep it <= 35 chars)
-    - Target application: "Forecast Variance" (scope x_snc_forecast_v_0)
-    - Snowflake connection: "Snowflake Connection (S)"
-    ENVIRONMENT FACT (do not fight this):
-    The Snowflake connection is an ALECTRI simulated connector (x_snc_alectri_zc_0). The
-    Hub "Create data fabric table" operation short-circuits simulated connections: it
-    records a listing row via x_snc_alectri_zc_0.ZCCSimulatorUtil.createDataFabricTable
-    (remoteTable, label) and returns 'Dummy table'. It does NOT build a real table, map
-    columns, set the Reference or set the primary key. Do NOT hand-build a real table.
-    REQUIRED METHOD (mirror the UI; no credentials, no privilege grants):
-    - Resolve ids on THIS instance (do not hardcode):
-      - Remote source table: x_snc_alectri_zc_0_source_tables where table_id = "u_lab_cc_summary"
-      - Its database + connector: follow source_database -> alectri_simulated_connector;
-        read the connector's connection_id.
-      - The vendor operation: sys_ws_operation named "Create data fabric table" in scope
-        sn_data_fabric.
-    - Idempotency: if a row already exists in x_snc_alectri_zc_0_data_fabric_tables with
-      table_id = "u_lab_cc_summary" AND table_label = "cc_summ_<initials>", stop and report
-      it. Rows with other labels belong to other participants: leave them alone and do not
-      treat them as duplicates.
-    - Run a server-side script (global scope is fine) that executes the vendor operation's
-      operation_script via GlideScopedEvaluator, injecting
-      request = { pathParams:{}, queryParams:{ mode:"create" }, body:{ data:{
-        connectionId:<connection_id>, remoteSchema:"Snowflake Database",
-        remoteTable:"u_lab_cc_summary",
-        glideTableName:"x_snc_forecast_v_0_df_cc_summ_<initials>",
-        glideTableLabel:"cc_summ_<initials>", columnMapping:[], deleteColumns:[] } } }
-      and response = {}.
-    VERIFY and report:
-    - Operation returned 'Dummy table'.
-    - A listing row exists in x_snc_alectri_zc_0_data_fabric_tables with
-      table_id = "u_lab_cc_summary" and table_label = "cc_summ_<initials>".
-    - Because the connection is simulated, the Reference (Cost center ->
-      sn_erp_integration_cost_center) and primary key (GL account) are not persisted.
-    If anything looks wrong, roll back rather than leaving stray rows.
+    Create a data fabric table from the Snowflake data asset u_lab_cc_summary, with label
+    "cc_summ_<initials>" and name "x_snc_forecast_v_0_df_cc_summ_<initials>".
+    Method: do what the Workflow Data Fabric Hub UI does. Run the operation_script of the
+    sys_ws_operation "Create data fabric table" in scope sn_data_fabric through
+    GlideScopedEvaluator, passing request and response with putVariable: request =
+    { pathParams: {}, queryParams: { mode: "create" }, body: { data: { connectionId:
+    <connection_id of the asset's simulated connector>, remoteSchema: "Snowflake Database",
+    remoteTable: "u_lab_cc_summary", glideTableName, glideTableLabel, columnMapping: [],
+    deleteColumns: [] } } } and response = {}. Stop if a row with my label already exists,
+    and leave other participants' rows alone.
+    Report with gs.info: the operation's return value and my new row in
+    x_snc_alectri_zc_0_data_fabric_tables.
     ```
-3.  Read the script Build Agent shows, then click **Approve**.
-4.  Build Agent reports the listing created for **u\_lab\_cc\_summary** with your label, and the operation returned **Dummy table**.
+3.  Read the script Build Agent proposes, then click **Approve**. It reports **Dummy table** and your new row. This lab's Snowflake connection is simulated, so only the listing is saved, the same as in the UI. The Reference and primary key steps above aren't stored.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_df_table_result.png" alt=""><figcaption></figcaption></figure>
 

@@ -11,6 +11,27 @@ interface Props {
     navigate: (path: string) => void
 }
 
+/*
+ * Screenshots are 2x captures, so a small crop (an All menu, one button) blows
+ * up when stretched to the column. Size each image from its pixel width:
+ * S under 500px, M under 1100px, L otherwise. Short strips (toolbars, button
+ * rows) drop one size. The author's own width from GitBook still caps it.
+ */
+const SIZE_CLASSES = ['lab-img--s', 'lab-img--m', 'lab-img--l']
+
+function sizeImage(e: React.SyntheticEvent<HTMLImageElement>) {
+    const img = e.currentTarget
+    const w = img.naturalWidth
+    const h = img.naturalHeight
+    if (!w) return
+    let tier = w < 500 ? 0 : w < 1100 ? 1 : 2
+    if (h < 130 && tier > 0) tier--
+    img.classList.remove(...SIZE_CLASSES)
+    img.classList.add(SIZE_CLASSES[tier])
+    // tiny crops (a single button) never grow past their own pixel width
+    if (tier === 0 && w < 320 && !img.style.maxWidth) img.style.maxWidth = `${w}px`
+}
+
 /** GitBook colour names used in <mark> tags, mapped to the lab palette. */
 const MARK_CLASS: Record<string, string> = {
     red: 'lab-mark--critical',
@@ -127,6 +148,7 @@ function Blocks({ blocks, navigate }: Props) {
                                     src={b.src}
                                     alt={b.alt}
                                     loading="lazy"
+                                    onLoad={sizeImage}
                                     style={
                                         b.width
                                             ? { maxWidth: `${b.width}px`, width: '100%' }

@@ -575,6 +575,19 @@ body {
   max-width: 32rem;
 }
 
+/* load-time size tiers (components/Markdown.tsx sizeImage); these win over the list cap */
+.lab-img.lab-img--s {
+  max-width: 20rem;
+}
+
+.lab-img.lab-img--m {
+  max-width: 34rem;
+}
+
+.lab-img.lab-img--l {
+  max-width: 100%;
+}
+
 .lab-mark {
   background: transparent;
   color: inherit;
