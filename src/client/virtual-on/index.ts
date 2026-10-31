@@ -12,13 +12,22 @@ import { loadSceneScript } from './loader'
  *    on inline scripts, and the script needs the canvas and control elements
  *    already parsed before it runs.
  *  - the closing tag is split so it cannot terminate the surrounding block.
+ *  - FRAME_FIT makes the stage fill the frame. The 16:9 box can round 1px
+ *    taller than the frame, which shows a scrollbar band on the right and
+ *    letterbox bands top and bottom.
  */
 export const VIRTUAL_ON_ASSET_BASE = '/wdf-lab/public/virtual-on/'
+
+const FRAME_FIT = `
+html, body { height: 100%; overflow: hidden; }
+body { min-height: 0; }
+#app { height: 100%; aspect-ratio: auto; }
+`
 
 export async function buildVirtualOnDoc(assetBase: string = VIRTUAL_ON_ASSET_BASE): Promise<string> {
     const scene = await loadSceneScript()
 
-    let doc = VIRTUAL_ON_HTML.replace('<head>', `<head><base href="${assetBase}"><style>${VIRTUAL_ON_CSS}</style>`)
+    let doc = VIRTUAL_ON_HTML.replace('<head>', `<head><base href="${assetBase}"><style>${VIRTUAL_ON_CSS}${FRAME_FIT}</style>`)
         .replace('<link rel="stylesheet" href="wide.css">', '')
         .replace('<script src="scene.js" defer></script>', '')
 
