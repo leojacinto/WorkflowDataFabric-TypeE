@@ -129,7 +129,7 @@ Create a dummy scope. This activity is meant to make you familiar with scope cre
 
 You can let Build Agent create the table in steps 7 to 14 for you. It builds the table in the **Forecast Variance** app.
 
-1.  In ServiceNow Studio, open the **Forecast Variance** app, then click **Build Agent** (diamond icon) > **New conversation**.
+1.  In ServiceNow Studio, open the **Forecast Variance** app, then click <mark style="color:green;">**a.)**</mark> **Build Agent** (diamond icon) > <mark style="color:green;">**b.)**</mark> **New conversation**.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_new_conversation.png" alt="" width="420"><figcaption></figcaption></figure>
 2.  Paste this prompt, put your initials in place of **\<initials>**, and send it.

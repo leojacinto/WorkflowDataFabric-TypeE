@@ -278,7 +278,7 @@ Look for the Now Assist badge. Open Now Assist chat. Expand to Modal view. Revie
 2.  This will open the **Now Assist** chat. Click on the two-headed diagonal arrow to Enter **Modal**.
 
     <figure><img src="../.gitbook/assets/sc_ihub_now_assist_chat_expand.png" alt=""><figcaption></figcaption></figure>
-3. Here is an overview of the steps the agent ran for the invoice's event **EXP-2025-IT-002-1010-01**.
+3. Here is an overview of the steps the agent ran for the invoice's event **EXP-2025-IT-002-1010-01**: the <mark style="color:green;">**a.)**</mark> map shows the agent and its tools, and the <mark style="color:green;">**b.)**</mark> decision logs list each step.
 
 <mark style="color:green;">**a.)**</mark> **Extract Cost Center** looks up the expense event by its **Event ID** and returns the **cost center** (**CC_IT_002**) and **vendor** (**TechSource Solutions Inc.**) that Document Intelligence read from the invoice. We use **Event ID** so the agent built in [Lab Exercise: Integration Hub](https://servicenow-lf.gitbook.io/the-workflow-data-fabric-loom/lab-exercise-integration-hub) works unchanged. In a real business scenario, the relevant field would be the invoice ID or something similar for this document type.
 

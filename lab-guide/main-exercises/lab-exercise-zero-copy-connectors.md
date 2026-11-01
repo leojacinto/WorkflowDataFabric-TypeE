@@ -212,7 +212,7 @@ You can let Build Agent clone the model for you.
     source's. If anything only partially inserts, roll back the run instead of leaving
     orphans.
     ```
-2.  Click **Approve**. You should see the new model in **Forecast Variance** with system **S4D**, and counts that match the source (3, 29, 327, 48, 48, 29).
+2.  Click <mark style="color:green;">**a.)**</mark> **Approve**. You should see the new model in **Forecast Variance** with system **S4D**, and counts that match the source (3, 29, 327, 48, 48, 29).
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_approve.png" alt="" width="420"><figcaption></figcaption></figure>
 
@@ -266,13 +266,13 @@ In this lab the cloud data warehouse is a **PostgreSQL** database hosted on Neon
 
 Navigate to Zero Copy Connectors. Review the established PostgreSQL connection.
 
-1.  Navigate to **All** > type **Zero Copy Connectors** > click **Zero Copy Connectors (Workflow Data Fabric)**. This opens the **Zero Copy Connector Hub**.
+1.  Navigate to **All** > <mark style="color:green;">**a.)**</mark> type **Zero Copy Connectors** > <mark style="color:green;">**b.)**</mark> click **Zero Copy Connectors (Workflow Data Fabric)**. This opens the **Zero Copy Connector Hub**.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_nav.png" alt="" width="320"><figcaption></figcaption></figure>
-2.  Go to **Established connections** > **Forecast Variance Postgres**. <mark style="color:red;">**Note:**</mark> this connection is configured specifically for instances used in ServiceNow-led labs.
+2.  Go to **Established connections** > <mark style="color:green;">**a.)**</mark> **Forecast Variance Postgres**. <mark style="color:red;">**Note:**</mark> this connection is configured specifically for instances used in ServiceNow-led labs.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_established.png" alt="" width="560"><figcaption></figcaption></figure>
-3.  The **Connection details** tab shows how the connection is configured: a JDBC URL to the Neon database and the read-only user **wdf\_lab\_reader**. No action needs to be done for this step.
+3.  The **Connection details** tab shows how the connection is configured: <mark style="color:green;">**a.)**</mark> a JDBC URL to the Neon database and <mark style="color:green;">**b.)**</mark> the read-only user **wdf\_lab\_reader**. No action needs to be done for this step.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_connection_details.png" alt="" width="560"><figcaption></figcaption></figure>
 
@@ -280,25 +280,25 @@ Navigate to Zero Copy Connectors. Review the established PostgreSQL connection.
 
 Create a data fabric table from lab\_cc\_summary. Set Cost Center as a Reference field to the ERP extraction table. Set GL Account as primary key.
 
-1.  Go to **Data assets** > **public**, and beside **lab\_cc\_summary** click **Create data fabric table**. This screen lists the tables in the database; this lab uses only **lab\_cc\_summary**.
+1.  Go to <mark style="color:green;">**a.)**</mark> **Data assets** > <mark style="color:green;">**b.)**</mark> **public**, and beside **lab\_cc\_summary** <mark style="color:green;">**c.)**</mark> click **Create data fabric table**. This screen lists the tables in the database; this lab uses only **lab\_cc\_summary**.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_data_assets.png" alt=""><figcaption></figcaption></figure>
-2.  Enter the **Label**, e.g. **cc\_summ\_\<your initials>**. The **Name** is filled in for you, e.g. **x\_snc\_forecast\_v\_0\_df\_cc\_summ\_lfr**, and must stay at 40 characters or fewer. Check that **Application scope** shows **Forecast Variance**, then click **Continue**.
+2.  Enter the <mark style="color:green;">**a.)**</mark> **Label**, e.g. **cc\_summ\_\<your initials>**. The <mark style="color:green;">**b.)**</mark> **Name** is filled in for you, e.g. **x\_snc\_forecast\_v\_0\_df\_cc\_summ\_lfr**, and must stay at 40 characters or fewer. Check that <mark style="color:green;">**c.)**</mark> **Application scope** shows **Forecast Variance**, then click **Continue**.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_df_label.png" alt="" width="560"><figcaption></figcaption></figure>
-3.  Tick the box beside **Name** to map all 10 columns to the data fabric table. You can also pick only the columns you need, which makes the table load faster.
+3.  Tick the <mark style="color:green;">**a.)**</mark> box beside **Name** to map all 10 columns to the data fabric table. You can also pick only the columns you need, which makes the table load faster.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_select_columns.png" alt=""><figcaption></figcaption></figure>
-4.  For **cost\_center**, change **Type** from **String** to **Reference** (at the end of the list), then click **Set Reference**. A **Reference** field points to a record in another table, so each cost center links to its master data from SAP.
+4.  For **cost\_center**, change <mark style="color:green;">**a.)**</mark> **Type** from **String** to **Reference** (at the end of the list), then click <mark style="color:green;">**b.)**</mark> **Set Reference**. A **Reference** field points to a record in another table, so each cost center links to its master data from SAP.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_cost_center_reference.png" alt=""><figcaption></figcaption></figure>
-5.  Set **Table** to **SAP Cost Center** (**sn\_erp\_integration\_cost\_center**, which you set up in the ZCC for ERP exercise) and **Reference key** to **Cost Center**, then click **Set Reference**.
+5.  Set <mark style="color:green;">**a.)**</mark> **Table** to **SAP Cost Center** (**sn\_erp\_integration\_cost\_center**, which you set up in the ZCC for ERP exercise) and <mark style="color:green;">**b.)**</mark> **Reference key** to **Cost Center**, then click <mark style="color:green;">**c.)**</mark> **Set Reference**.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_set_reference.png" alt="" width="444"><figcaption></figcaption></figure>
-6.  Turn on **Primary** for **gl\_account**, then click **Finish**.
+6.  Turn on <mark style="color:green;">**a.)**</mark> **Primary** for **gl\_account**, then click <mark style="color:green;">**b.)**</mark> **Finish**.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_primary_key.png" alt=""><figcaption></figcaption></figure>
-7.  In the **Primary key defined** dialog, click **Confirm**. A primary key lets ServiceNow tell the source rows apart, and it can't be removed later.
+7.  In the **Primary key defined** dialog, click <mark style="color:green;">**a.)**</mark> **Confirm**. A primary key lets ServiceNow tell the source rows apart, and it can't be removed later.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_confirm_pk.png" alt="" width="420"><figcaption></figcaption></figure>
 
@@ -306,7 +306,7 @@ Create a data fabric table from lab\_cc\_summary. Set Cost Center as a Reference
 
 View the data fabric table you created and open its contents.
 
-1.  Your table now shows under **lab\_cc\_summary**. Click the three vertical dots > **Open list**.
+1.  Your table now shows under **lab\_cc\_summary**. Click <mark style="color:green;">**a.)**</mark> the three vertical dots > <mark style="color:green;">**b.)**</mark> **Open list**.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_open_list.png" alt=""><figcaption></figcaption></figure>
 2.  The list shows all 24 rows, read from PostgreSQL when you open it. The data stays in the source database; nothing is copied into ServiceNow.
@@ -342,13 +342,13 @@ The **Forecast Variance** agent you built in [Lab Exercise: Integration Hub](lab
 1.  Navigate to All > <mark style="color:green;">**a.)**</mark> type **AI Agent Studio** > <mark style="color:green;">**b.)**</mark> click on **Create and Manage**.
 
     <figure><img src="../.gitbook/assets/sc_zcc_agent_studio_nav.png" alt="" width="336"><figcaption></figcaption></figure>
-2.  Click the **Testing** tab, then **Start manual test**.
+2.  Click the <mark style="color:green;">**a.)**</mark> **Testing** tab, then <mark style="color:green;">**b.)**</mark> **Start manual test**.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_agent_testing.png" alt="" width="560"><figcaption></figcaption></figure>
-3.  Set **Choose a test type** to **AI agent or workflow**, **Name of the AI agent or agentic workflow** to **Forecast Variance** and **Version** to **1 - V1 (Active)**. In **Task**, type **Review expense event EXP-2025-IT-002-1007-01**, then click **Continue to test chat response**.
+3.  Set <mark style="color:green;">**a.)**</mark> **Choose a test type** to **AI agent or workflow**, <mark style="color:green;">**b.)**</mark> **Name of the AI agent or agentic workflow** to **Forecast Variance** and <mark style="color:green;">**c.)**</mark> **Version** to **1 - V1 (Active)**. In <mark style="color:green;">**d.)**</mark> **Task**, type **Review expense event EXP-2025-IT-002-1007-01**, then click <mark style="color:green;">**e.)**</mark> **Continue to test chat response**.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_agent_manual_test.png" alt=""><figcaption></figcaption></figure>
-4.  The map and the **AI agent decision logs** show each tool as it runs: **Extract Cost Center**, **Search for Cost Center History**, **Search for Expense Transactions History**, **Search for Cost Center Summary** (if you added it) and **Budget Variance Analysis**. Budget Variance Analysis can take a few minutes when the instance is busy.
+4.  The <mark style="color:green;">**a.)**</mark> map and the <mark style="color:green;">**b.)**</mark> **AI agent decision logs** show each tool as it runs: **Extract Cost Center**, **Search for Cost Center History**, **Search for Expense Transactions History**, **Search for Cost Center Summary** (if you added it) and **Budget Variance Analysis**. Budget Variance Analysis can take a few minutes when the instance is busy.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_agent_test_run.png" alt=""><figcaption></figcaption></figure>
 5.  When the test ends, the chat shows the cost center and vendor, the cost center's monthly budget history, the vendor's earlier transactions, and the **Finance Case** that Budget Variance Analysis created because CC_IT_001 is over budget.
