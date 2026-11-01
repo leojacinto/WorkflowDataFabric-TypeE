@@ -314,6 +314,25 @@ View the data fabric table you created and open its contents.
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_df_list.png" alt=""><figcaption></figcaption></figure>
 3.  Congratulations! You have set up the integration to a Cloud Data Warehouse using Zero Copy Connector for SQL.
 
+#### Hands-on (Build Agent option): Give the Agent the PostgreSQL Data
+
+Build Agent adds a tool to the **Forecast Variance** agent that reads your data fabric table, so the agent can compare the cost center's PostgreSQL summary with its budget history.
+
+1.  In a new conversation, paste this prompt, replace **\<your table name>** with the name of your table from the previous exercise (for example **x\_snc\_forecast\_v\_0\_df\_cc\_summ\_lfr**) and send it.
+
+    ```
+    In the Forecast Variance app, add a tool to the existing AI agent "Forecast Variance",
+    named "Search for Cost Center Summary", that runs without asking. It looks up up to 12
+    records in the table <your table name> by cost center, ordered by period, and returns
+    period, fiscal year, actual amount, baseline amount, variance and variance percent. In
+    the agent instructions, add this step after Step 3 and renumber the later steps: "Step
+    4: Review PostgreSQL Cost Center Summary. Use the Search for Cost Center Summary tool
+    with the cost center from Step 1 and say whether the variance is mostly positive or
+    negative." Keep the agent's other tools, instructions and trigger as they are, and keep
+    the trigger on. Build and install the app without creating test records.
+    ```
+2.  Click **Approve** each time Build Agent asks. You should see the new **Search for Cost Center Summary** tool and a **Step 4: Review PostgreSQL Cost Center Summary** in the agent's instructions, with the earlier tools and the trigger still in place.
+
 ### AI Agent and Finance Operations Workspace
 
 #### Hands-on: Test the Forecast Variance AI Agent
@@ -329,7 +348,7 @@ The **Forecast Variance** agent you built in [Lab Exercise: Integration Hub](lab
 3.  Set **Choose a test type** to **AI agent or workflow**, **Name of the AI agent or agentic workflow** to **Forecast Variance** and **Version** to **1 - V1 (Active)**. In **Task**, type **Review expense event EXP-2025-IT-002-1007-01**, then click **Continue to test chat response**.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_agent_manual_test.png" alt=""><figcaption></figcaption></figure>
-4.  The map and the **AI agent decision logs** show each tool as it runs: **Extract Cost Center**, **Search for Cost Center History**, **Search for Expense Transactions History** and **Budget Variance Analysis**. Budget Variance Analysis can take a few minutes when the instance is busy.
+4.  The map and the **AI agent decision logs** show each tool as it runs: **Extract Cost Center**, **Search for Cost Center History**, **Search for Expense Transactions History**, **Search for Cost Center Summary** (if you added it) and **Budget Variance Analysis**. Budget Variance Analysis can take a few minutes when the instance is busy.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_agent_test_run.png" alt=""><figcaption></figcaption></figure>
 5.  When the test ends, the chat shows the cost center and vendor, the cost center's monthly budget history, the vendor's earlier transactions, and the **Finance Case** that Budget Variance Analysis created because CC_IT_001 is over budget.

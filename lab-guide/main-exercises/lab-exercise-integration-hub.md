@@ -191,6 +191,8 @@ Build Agent creates the connection to the expense API, the **Action** that reads
     ```
 2.  Click **Approve** each time Build Agent asks. When it finishes, you should see the **Get Expense Event** alias, action and subflow installed, and the test adding the event **EXP-2025-IT-002-1007-01** to the Expense Transaction Event table.
 
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_ihub_ba_result_1.png" alt="" width="420"><figcaption></figcaption></figure>
+
 #### Hands-on: Budget Check Subflows
 
 Build Agent creates the two subflows the agent uses as tools, plus the **Compute Budget Totals** action that does the budget math. **Budget Variance Analysis** is the deterministic part: it adds the new expense to the cost center's 2025 actual spend and creates a Finance Case when the total is over budget.
@@ -219,6 +221,8 @@ Build Agent creates the two subflows the agent uses as tools, plus the **Compute
     created.
     ```
 2.  Click **Approve** each time Build Agent asks. You should see **Extract Cost Center** return **CC_IT_001** and **Amazon Web Services**, and **Budget Variance Analysis** return **Cost center is compliant with budget.** with a Sum of **109200.75** for PROD-DE-2.
+
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_ihub_ba_result_2.png" alt="" width="420"><figcaption></figcaption></figure>
 
 #### Hands-on: Forecast Variance AI Agent
 
