@@ -193,7 +193,7 @@ Build Agent creates the connection to the expense API, the **Action** that reads
 
 #### Hands-on: Budget Check Subflows
 
-Build Agent creates the two subflows the agent uses as tools. **Budget Variance Analysis** is the deterministic part: it adds the new expense to the cost center's 2025 actual spend and creates a Finance Case when the total is over budget.
+Build Agent creates the two subflows the agent uses as tools, plus the **Compute Budget Totals** action that does the budget math. **Budget Variance Analysis** is the deterministic part: it adds the new expense to the cost center's 2025 actual spend and creates a Finance Case when the total is over budget.
 
 1.  In a new conversation, paste this prompt and send it.
 
@@ -202,15 +202,19 @@ Build Agent creates the two subflows the agent uses as tools. **Budget Variance 
     1. Create a subflow named "Extract Cost Center" with input Event ID (string). It looks up
     the Expense Transaction Event record with that Event ID and outputs its Cost Center and
     Vendor.
-    2. Create a subflow named "Budget Variance Analysis" with inputs Cost Center and Event ID
-    (strings). It looks up the Expense Transaction Event with that Event ID, totals Monthly
-    Budget and Actual Spend for that cost center in Cost Center Budget History for fiscal year
-    2025 (add the records up one by one, because GlideAggregate SUM is wrong on these currency
-    fields), and adds the event's amount_usd to the actual. If the new actual is over the
-    budget, it creates a Finance Case (sn_spend_sdc_service_request) with short description
-    "<cost center> is exceeding budget", assigned to the cost center's Owner, and outputs
-    "<case number> - <short description>". Otherwise it outputs
-    "Cost center is compliant with budget." Also output the new actual as Sum.
+    2. Create a Flow Designer action named "Compute Budget Totals" with inputs Cost Center
+    and Event ID (strings). Its script step looks up the Expense Transaction Event with that
+    Event ID, totals Monthly Budget and Actual Spend for that cost center in Cost Center
+    Budget History for fiscal year 2025 (add the records up one by one, because
+    GlideAggregate SUM is wrong on these currency fields), and adds the event's amount_usd
+    to the actual. It outputs Over Budget, the new actual, the short description "<cost
+    center> is exceeding budget" and the cost center's Owner. Keep this code in the action,
+    because a subflow's own scripts can't read the subflow's inputs.
+    3. Create a subflow named "Budget Variance Analysis" with inputs Cost Center and Event ID
+    (strings). It runs Compute Budget Totals. If Over Budget is true, it creates a Finance
+    Case (sn_spend_sdc_service_request) with that short description, assigned to the Owner,
+    and outputs "<case number> - <short description>". Otherwise it outputs "Cost center is
+    compliant with budget." Also output the new actual as Sum.
     Then build and install the app. To test, use cost center PROD-DE-2 so no Finance Case is
     created.
     ```
