@@ -75,6 +75,8 @@ export function resolveHref(raw: string): ResolvedHref {
         return { href: target }
     }
 
+    if (/^\/(?!\/)/.test(target)) return { href: target }
+
     const stripped = target.replace(/[?#].*$/, '')
 
     // Bare "../" or "./" — GitBook's link to the space root, i.e. the README.

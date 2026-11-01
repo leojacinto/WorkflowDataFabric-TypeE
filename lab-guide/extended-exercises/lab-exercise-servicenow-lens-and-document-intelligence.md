@@ -265,7 +265,7 @@ The agent's trigger runs as the **Owner** of each new expense event, and events 
     Owner to the user who is creating the record. Keep the agent, its tools and its trigger as
     they are, and keep the trigger on. Build and install the app without creating test records.
     ```
-2.  Click **Approve** each time Build Agent asks. You should see the **Set Expense Event Owner** business rule installed, and the agent's trigger still on.
+2.  Click **Approve** each time Build Agent asks. You should see the **Set Expense Event Owner** business rule installed ([open the list](/sys_script_list.do?sysparm_query=name=Set%20Expense%20Event%20Owner)), and the agent's trigger still on.
 
 #### Walkthrough: Forecast Variance AI Agent
 

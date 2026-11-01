@@ -264,9 +264,9 @@ Build Agent creates the **AI agent**, its tools and the trigger that starts it w
 
 Optional. Open the records Build Agent created to see how they fit together.
 
-1. **AI Agent Studio** > **Create and manage** > **AI agents** > **Forecast Variance**. **Define the specialty** holds the four instructions, **Add tools and information** lists the two subflows and two record lookups, and **Define security controls** shows the admin role. **Define trigger** shows the trigger on the Expense Transaction Event table.
-2. **Flow Designer** > **Subflows** > **Budget Variance Analysis**. The subflow calls the **Compute Budget Totals** action, then creates the Finance Case only when the cost center is over budget.
-3. **Flow Designer** > **Actions** > **Get Expense Event**. The script step reads the connection from the **Get Expense Event** alias, calls the API and writes the records.
+1. **AI Agent Studio** > **Create and manage** > **AI agents** > **Forecast Variance** ([open the record](/sn_aia_agent_list.do?sysparm_query=name=Forecast%20Variance)). **Define the specialty** holds the four instructions, **Add tools and information** lists the two subflows and two record lookups, and **Define security controls** shows the admin role. **Define trigger** shows the trigger on the Expense Transaction Event table.
+2. **Flow Designer** > **Subflows** > **Budget Variance Analysis** ([open the list](/sys_hub_flow_list.do?sysparm_query=name=Budget%20Variance%20Analysis)). The subflow calls the **Compute Budget Totals** action, then creates the Finance Case only when the cost center is over budget.
+3. **Flow Designer** > **Actions** > **Get Expense Event** ([open the list](/sys_hub_action_type_definition_list.do?sysparm_query=name=Get%20Expense%20Event)). The script step reads the connection from the **Get Expense Event** alias, calls the API and writes the records.
 
 ### AI Agent and Finance Operations Workspace
 
