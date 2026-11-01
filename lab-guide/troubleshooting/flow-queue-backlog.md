@@ -16,9 +16,9 @@ The `flow_engine` queue holds a very large number of `flow.fire` events. On the 
 ## Fix
 
 1. Open the timer trigger record (`sys_flow_timer_trigger.do?sys_id=<sys_id>`), untick Active and save. Do this first, or the queue refills.
-2. Wait for the queue to drain. The handlers clear roughly 7,000 events an hour, so a 500,000 backlog takes about three days.
-3. Deleting by script is too slow to help at that size. Tested in Scripts - Background (global scope): deleting ready `flow.fire` events by context, in batches of 1,000, removed about 400 events a minute (the delete also removed the matching context rows). That is fine for a backlog of a few thousand, and about 11 hours for 280,000.
-4. For a lab run on a backlogged instance, use a fresh instance instead.
+2. Do not expect the queue to drain by itself. On the demo instance it held at about 515,000 ready events for 20 minutes, even after raising `com.glide.event_manager.flow_engine.hard_limit` and `claim_limit` from 50 to 500, which changed nothing.
+3. Deleting by script is too slow to help at that size. Tested in Scripts - Background (global scope): deleting ready `flow.fire` events by context, in batches of 1,000, removed about 400 events a minute (the delete also removed the matching context rows). That is fine for a backlog of a few thousand, and about 11 hours for 280,000. A bulk `updateMultiple` on `sysevent` changed nothing.
+4. Open a Now Support case to purge the `flow_engine` queue, or use a fresh instance for the lab run.
 
 ## Notes
 
