@@ -232,8 +232,8 @@ Build Agent creates the **AI agent**, its tools and the trigger that starts it w
 
     ```
     In the Forecast Variance app, create an AI agent named "Forecast Variance <your initials>"
-    that reviews new expense events and opens a Finance Case when a cost center goes over budget. Its tools
-    run without asking:
+    that reviews new expense events and opens a Finance Case when a cost center goes over
+    budget. Its tools run without asking:
     - the "Extract Cost Center" subflow
     - the "Budget Variance Analysis" subflow
     - "Search for Cost Center History": looks up up to 12 Cost Center Budget History
