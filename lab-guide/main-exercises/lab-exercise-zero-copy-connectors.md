@@ -40,7 +40,7 @@ This lab will walk you through integration of data coming from Cloud Data Wareho
 
 **AI Agent and Finance Operations Workspace**
 
-<table><thead><tr><th width="83">Step</th><th width="106">Who</th><th>Description</th></tr></thead><tbody><tr><td><a href="lab-exercise-zero-copy-connectors.md#hands-on-test-the-forecast-variance-ai-agent">11</a></td><td>Student</td><td><strong>Test AI Agent:</strong> Start the Forecast Variance agent you built in Integration Hub from AI Agent Studio. Follow its steps in the decision log, through to the Finance Case.</td></tr><tr><td><a href="lab-exercise-zero-copy-connectors.md#completion-verify-finance-case">12</a></td><td>Student</td><td><strong>Verify the Finance Case:</strong> Navigate to Finance Operations Workspace. Find the case created by the agent.</td></tr></tbody></table>
+<table><thead><tr><th width="83">Step</th><th width="106">Who</th><th>Description</th></tr></thead><tbody><tr><td><a href="lab-exercise-zero-copy-connectors.md#hands-on-test-the-forecast-variance-ai-agent">11</a></td><td>Student</td><td><strong>Test AI Agent:</strong> Start the Forecast Variance agent (with your initials) you built in Integration Hub from AI Agent Studio. Follow its steps in the decision log, through to the Finance Case.</td></tr><tr><td><a href="lab-exercise-zero-copy-connectors.md#completion-verify-finance-case">12</a></td><td>Student</td><td><strong>Verify the Finance Case:</strong> Navigate to Finance Operations Workspace. Find the case created by the agent.</td></tr></tbody></table>
 
 <table><thead><tr><th width="83">Step</th><th width="106">Who</th><th>Description</th></tr></thead><tbody><tr><td><a href="lab-exercise-zero-copy-connectors.md#conclusion">13</a></td><td>Facilitator</td><td><strong>Conclusion:</strong> Walk through the complete data flow chain showing how Zero Copy Connectors bring external data into ServiceNow for AI Agent-driven case management.</td></tr></tbody></table>
 
@@ -316,12 +316,13 @@ View the data fabric table you created and open its contents.
 
 #### Hands-on (Build Agent option): Give the Agent the PostgreSQL Data
 
-Build Agent adds a tool to the **Forecast Variance** agent that reads your data fabric table, so the agent can compare the cost center's PostgreSQL summary with its budget history.
+Build Agent adds a tool to the **Forecast Variance \<your initials>** agent that reads your data fabric table, so the agent can compare the cost center's PostgreSQL summary with its budget history.
 
-1.  In a new conversation, paste this prompt, replace **\<your table name>** with the name of your table from the previous exercise (for example **x\_snc\_forecast\_v\_0\_df\_cc\_summ\_lfr**) and send it.
+1.  In a new conversation, paste this prompt, replace **\<your table name>** with the name of your table from the previous exercise (for example **x\_snc\_forecast\_v\_0\_df\_cc\_summ\_lfr**), replace **\<your initials>** with your initials (for example **LF**) and send it.
 
     ```
-    In the Forecast Variance app, add a tool to the existing AI agent "Forecast Variance",
+    In the Forecast Variance app, add a tool to the existing AI agent
+    "Forecast Variance <your initials>",
     named "Search for Cost Center Summary", that runs without asking. It looks up up to 12
     records in the table <your table name> by cost center, ordered by period, and returns
     period, fiscal year, actual amount, baseline amount, variance and variance percent. In
@@ -337,7 +338,7 @@ Build Agent adds a tool to the **Forecast Variance** agent that reads your data 
 
 #### Hands-on: Test the Forecast Variance AI Agent
 
-The **Forecast Variance** agent you built in [Lab Exercise: Integration Hub](lab-exercise-integration-hub.md) checks each new expense event. Here you start it by hand from AI Agent Studio, so you can follow each step in the decision log.
+The **Forecast Variance \<your initials>** agent you built in [Lab Exercise: Integration Hub](lab-exercise-integration-hub.md) checks each new expense event. Here you start it by hand from AI Agent Studio, so you can follow each step in the decision log.
 
 1.  Navigate to All > <mark style="color:green;">**a.)**</mark> type **AI Agent Studio** > <mark style="color:green;">**b.)**</mark> click on **Create and Manage**.
 
@@ -345,7 +346,7 @@ The **Forecast Variance** agent you built in [Lab Exercise: Integration Hub](lab
 2.  Click the <mark style="color:green;">**a.)**</mark> **Testing** tab, then <mark style="color:green;">**b.)**</mark> **Start manual test**.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_agent_testing.png" alt="" width="560"><figcaption></figcaption></figure>
-3.  Set <mark style="color:green;">**a.)**</mark> **Choose a test type** to **AI agent or workflow**, <mark style="color:green;">**b.)**</mark> **Name of the AI agent or agentic workflow** to **Forecast Variance** and <mark style="color:green;">**c.)**</mark> **Version** to **1 - V1 (Active)**. In <mark style="color:green;">**d.)**</mark> **Task**, type **Review expense event EXP-2025-IT-002-1007-01**, then click <mark style="color:green;">**e.)**</mark> **Continue to test chat response**.
+3.  Set <mark style="color:green;">**a.)**</mark> **Choose a test type** to **AI agent or workflow**, <mark style="color:green;">**b.)**</mark> **Name of the AI agent or agentic workflow** to **Forecast Variance \<your initials>** and <mark style="color:green;">**c.)**</mark> **Version** to **1 - V1 (Active)**. In <mark style="color:green;">**d.)**</mark> **Task**, type **Review expense event EXP-2025-IT-002-1007-01**, then click <mark style="color:green;">**e.)**</mark> **Continue to test chat response**.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_agent_manual_test.png" alt=""><figcaption></figcaption></figure>
 4.  The <mark style="color:green;">**a.)**</mark> map and the <mark style="color:green;">**b.)**</mark> **AI agent decision logs** show each tool as it runs: **Extract Cost Center**, **Search for Cost Center History**, **Search for Expense Transactions History**, **Search for Cost Center Summary** (if you added it) and **Budget Variance Analysis**. Budget Variance Analysis can take a few minutes when the instance is busy.

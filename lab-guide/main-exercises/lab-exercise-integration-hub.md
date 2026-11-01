@@ -32,7 +32,7 @@ The tables and their data are already in the app. You build the logic on top of 
 
 **Build with Build Agent**
 
-<table><thead><tr><th width="83">Step</th><th width="106">Who</th><th>Description</th></tr></thead><tbody><tr><td><a href="lab-exercise-integration-hub.md#hands-on-expense-event-integration">4</a></td><td>Student</td><td><strong>Expense Event Integration:</strong> Build Agent creates the "Get Expense Event" alias, action and subflow, and tests them.</td></tr><tr><td><a href="lab-exercise-integration-hub.md#hands-on-budget-check-subflows">5</a></td><td>Student</td><td><strong>Budget Check Subflows:</strong> Build Agent creates the "Extract Cost Center" and "Budget Variance Analysis" subflows, and tests them.</td></tr><tr><td><a href="lab-exercise-integration-hub.md#hands-on-forecast-variance-ai-agent">6</a></td><td>Student</td><td><strong>AI Agent:</strong> Build Agent creates the "Forecast Variance" agent, its four tools and its trigger.</td></tr></tbody></table>
+<table><thead><tr><th width="83">Step</th><th width="106">Who</th><th>Description</th></tr></thead><tbody><tr><td><a href="lab-exercise-integration-hub.md#hands-on-expense-event-integration">4</a></td><td>Student</td><td><strong>Expense Event Integration:</strong> Build Agent creates the "Get Expense Event" alias, action and subflow, and tests them.</td></tr><tr><td><a href="lab-exercise-integration-hub.md#hands-on-budget-check-subflows">5</a></td><td>Student</td><td><strong>Budget Check Subflows:</strong> Build Agent creates the "Extract Cost Center" and "Budget Variance Analysis" subflows, and tests them.</td></tr><tr><td><a href="lab-exercise-integration-hub.md#hands-on-forecast-variance-ai-agent">6</a></td><td>Student</td><td><strong>AI Agent:</strong> Build Agent creates the "Forecast Variance" agent with your initials after the name, its four tools and its trigger.</td></tr></tbody></table>
 
 **AI Agent and Finance Operations Workspace**
 
@@ -228,11 +228,11 @@ Build Agent creates the two subflows the agent uses as tools, plus the **Compute
 
 Build Agent creates the **AI agent**, its tools and the trigger that starts it when a new expense event arrives.
 
-1.  In a new conversation, paste this prompt and send it.
+1.  In a new conversation, paste this prompt, replace **\<your initials>** with your initials (for example **LF**) and send it.
 
     ```
-    In the Forecast Variance app, create an AI agent named "Forecast Variance" that reviews
-    new expense events and opens a Finance Case when a cost center goes over budget. Its tools
+    In the Forecast Variance app, create an AI agent named "Forecast Variance <your initials>"
+    that reviews new expense events and opens a Finance Case when a cost center goes over budget. Its tools
     run without asking:
     - the "Extract Cost Center" subflow
     - the "Budget Variance Analysis" subflow
@@ -258,13 +258,13 @@ Build Agent creates the **AI agent**, its tools and the trigger that starts it w
     trigger's flow, so then re-save the trigger configuration with a GlideRecord update in
     global scope (setForceUpdate(true), no field changes) and show the trigger_flow it gets.
     ```
-2.  Click **Approve** each time Build Agent asks. You should see the agent with its four tools installed, and a **trigger_flow** named like **Expense Transaction Event - AI Agent: Forecast Variance**. Without that flow the trigger never fires.
+2.  Click **Approve** each time Build Agent asks. You should see the agent with its four tools installed, and a **trigger_flow** named like **Expense Transaction Event - AI Agent: Forecast Variance \<your initials>**. Without that flow the trigger never fires.
 
 #### Walkthrough: What Build Agent Built
 
 Optional. Open the records Build Agent created to see how they fit together.
 
-1. **AI Agent Studio** > **Create and manage** > **AI agents** > **Forecast Variance** ([open the record](/sn_aia_agent_list.do?sysparm_query=name=Forecast%20Variance)). **Define the specialty** holds the four instructions, **Add tools and information** lists the two subflows and two record lookups, and **Define security controls** shows the admin role. **Define trigger** shows the trigger on the Expense Transaction Event table.
+1. **AI Agent Studio** > **Create and manage** > **AI agents** > **Forecast Variance \<your initials>** ([open the list](/sn_aia_agent_list.do?sysparm_query=nameLIKEForecast%20Variance)). **Define the specialty** holds the four instructions, **Add tools and information** lists the two subflows and two record lookups, and **Define security controls** shows the admin role. **Define trigger** shows the trigger on the Expense Transaction Event table.
 2. **Flow Designer** > **Subflows** > **Budget Variance Analysis** ([open the list](/sys_hub_flow_list.do?sysparm_query=name=Budget%20Variance%20Analysis)). The subflow calls the **Compute Budget Totals** action, then creates the Finance Case only when the cost center is over budget.
 3. **Flow Designer** > **Actions** > **Get Expense Event** ([open the list](/sys_hub_action_type_definition_list.do?sysparm_query=name=Get%20Expense%20Event)). The script step reads the connection from the **Get Expense Event** alias, calls the API and writes the records.
 
@@ -295,7 +295,7 @@ The agent reacts to new expense events, so remove the test event first and let t
 
 Look for the Now Assist badge. Open Now Assist chat. Expand to Modal view. Explore: the steps the agent ran, the cost center and vendor history, the budget analysis and the Finance Case link.
 
-1. Look at the top right of any ServiceNow page. You will notice that there is a new **Now Assist badge**. This is the AI agent at work in the back end because the **Get Expense Event** subflow has created a record in the **Expense Transaction Event** table. Click on the **Now Assist icon** with the updated badge count. <mark style="color:$warning;">**Note:**</mark> if the **Now Assist badge** does not appear, simply reload your page. <mark style="color:$warning;">**In some cases the badge won't load at all**</mark> so simply open Now Assist and look for new chats/correspondences. The agent can take a few minutes to start when the instance is busy. If nothing arrives after 10 minutes, start the agent by hand: **AI Agent Studio** > **Testing** > **Start manual test**, agent **Forecast Variance**, task **Review expense event EXP-2025-IT-002-1007-01**.
+1. Look at the top right of any ServiceNow page. You will notice that there is a new **Now Assist badge**. This is the AI agent at work in the back end because the **Get Expense Event** subflow has created a record in the **Expense Transaction Event** table. Click on the **Now Assist icon** with the updated badge count. <mark style="color:$warning;">**Note:**</mark> if the **Now Assist badge** does not appear, simply reload your page. <mark style="color:$warning;">**In some cases the badge won't load at all**</mark> so simply open Now Assist and look for new chats/correspondences. The agent can take a few minutes to start when the instance is busy. If nothing arrives after 10 minutes, start the agent by hand: **AI Agent Studio** > **Testing** > **Start manual test**, agent **Forecast Variance \<your initials>**, task **Review expense event EXP-2025-IT-002-1007-01**.
 
 <figure><img src="../.gitbook/assets/sc_ihub_now_assist_badge_notification.png" alt=""><figcaption></figcaption></figure>
 
@@ -331,7 +331,7 @@ Navigate to Finance Operations Workspace. Find the case created by the agent. Co
 
 ### Conclusion
 
-Congratulations! With four prompts you have built the **Workflow Data Fabric** integration and the **Forecast Variance** agent that create cases proactively from multiple data sources, so budgets are managed with zero human intervention. The AI Agent is triggered as soon as a new expense event lands in the **Expense Transaction Event** table.
+Congratulations! With four prompts you have built the **Workflow Data Fabric** integration and the **Forecast Variance \<your initials>** agent that create cases proactively from multiple data sources, so budgets are managed with zero human intervention. The AI Agent is triggered as soon as a new expense event lands in the **Expense Transaction Event** table.
 
 ### Next step
 
