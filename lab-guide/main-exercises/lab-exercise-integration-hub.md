@@ -228,10 +228,12 @@ Build Agent creates the **AI agent**, its tools and the trigger that starts it w
     run without asking:
     - the "Extract Cost Center" subflow
     - the "Budget Variance Analysis" subflow
-    - "Search for Cost Center History": looks up Cost Center Budget History records by cost
-    center and returns fiscal month, monthly budget, actual spend and status
-    - "Search for Expense Transactions History": looks up Expense Transactions records by cost
-    center and vendor and returns expense date, amount and description
+    - "Search for Cost Center History": looks up up to 12 Cost Center Budget History
+    records by cost center, ordered by fiscal month, and returns fiscal month, monthly
+    budget, actual spend and status
+    - "Search for Expense Transactions History": looks up records in the global table
+    x_snc_forecast_v_0_expense_transactions by cost center and vendor and returns expense
+    date, amount and description
     Instructions:
     1. Run Extract Cost Center with the event ID.
     2. Run Search for Cost Center History with that cost center and say whether the months are

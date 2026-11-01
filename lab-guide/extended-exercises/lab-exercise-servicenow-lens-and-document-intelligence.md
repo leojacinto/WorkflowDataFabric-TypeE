@@ -32,7 +32,7 @@ A more detailed version of this exercise with significantly more configuration s
 
 **Document Intelligence**
 
-<table><thead><tr><th width="83">Step</th><th width="106">Who</th><th>Description</th></tr></thead><tbody><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#walkthrough-document-intelligence-setup">2</a></td><td>Student</td><td><strong>Document Intelligence Setup:</strong> Navigate to Now Assist Admin Skills. Activate the Extract information from documents skill. Review the Expense Transaction Event use case configuration and integrations.</td></tr><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#hands-on-document-intelligence-parameters">3</a></td><td>Student</td><td><strong>Document Intelligence Parameters:</strong> Set extraction thresholds to 0.01 in Global scope for lab purposes.</td></tr><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#hands-on-document-intelligence-runtime">4</a></td><td>Student</td><td><strong>Document Intelligence Runtime:</strong> Create a variance task record. Upload the Invoice_IT_Laptop_CC_IT_002.pdf document. Set state to Work in Progress and submit.</td></tr><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#walkthrough-custom-forecast-variance-ai-agent">5</a></td><td>Student</td><td><strong>Watch the AI Agent React:</strong> Look for the Now Assist badge. Open Now Assist chat. Expand to Modal view. Review planning steps, event ID extraction, RAG search results, and Finance Case link.</td></tr><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#completion-verify-finance-case">6</a></td><td>Student</td><td><strong>Verify the Finance Case:</strong> Navigate to Finance Operations Workspace. Find the case created by the agent.</td></tr><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#optional-completion-verify-document-output">7</a></td><td>Student</td><td><strong>[Optional] Verify Document Output:</strong> Navigate to Now Assist Admin Skills. Review the extracted document information in the Test Outputs tab.</td></tr></tbody></table>
+<table><thead><tr><th width="83">Step</th><th width="106">Who</th><th>Description</th></tr></thead><tbody><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#walkthrough-document-intelligence-setup">2</a></td><td>Student</td><td><strong>Document Intelligence Setup:</strong> Navigate to Now Assist Admin Skills. Activate the Extract information from documents skill. Review the Expense Transaction Event use case configuration and integrations.</td></tr><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#hands-on-document-intelligence-parameters">3</a></td><td>Student</td><td><strong>Document Intelligence Parameters:</strong> Set extraction thresholds to 0.01 in Global scope for lab purposes.</td></tr><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#hands-on-document-intelligence-runtime">4</a></td><td>Student</td><td><strong>Document Intelligence Runtime:</strong> Create a variance task record. Upload the Invoice_IT_Laptop_CC_IT_002.pdf document. Set state to Work in Progress and submit.</td></tr><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#walkthrough-forecast-variance-ai-agent">5</a></td><td>Student</td><td><strong>Watch the AI Agent React:</strong> Look for the Now Assist badge. Open Now Assist chat. Expand to Modal view. Review the cost center and vendor, the budget and vendor history, and the Finance Case link.</td></tr><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#completion-verify-finance-case">6</a></td><td>Student</td><td><strong>Verify the Finance Case:</strong> Navigate to Finance Operations Workspace. Find the case created by the agent.</td></tr><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#optional-completion-verify-document-output">7</a></td><td>Student</td><td><strong>[Optional] Verify Document Output:</strong> Navigate to Now Assist Admin Skills. Review the extracted document information in the Test Outputs tab.</td></tr></tbody></table>
 
 **AI Lens**
 
@@ -54,14 +54,14 @@ graph TB
     subgraph "ServiceNow AI Platform"
         subgraph "ServiceNow Native Tables"
             ExpenseTable[(Expense Event<br/>Line Items<br/>Scoped Table)]
+            BudgetTable[(Cost Center<br/>Budget History<br/>Scoped Table)]
             FinCase[(Finance Case<br/>Table)]
         end
 
         subgraph "AI & Automation"
-            Agent1[Agent: Over-Budget<br/>Case Creator<br/>Zero Copy Source]
-            Agent2[Agent: Proactive<br/>Budget Alert<br/>Integration Hub Source]
-            RAG[RAG - Retrieval<br/>Augmented Generation]
-            FlowAction[Flow Action]
+            Agent1[Agent: Forecast<br/>Variance]
+            Lookups[Record Lookups]
+            FlowAction[Subflows]
         end
         subgraph "AI Experiences"
             Lens["ServiceNow</br>Lens"]
@@ -74,15 +74,12 @@ graph TB
     EC -->|Individual UI-based| Lens -->|Write| ExpenseTable
     EC -->|Individual UI-based| DocIntel -->|Write| ExpenseTable
 
-    %% Agent 1 Workflow - Zero Copy Source
-    ExpenseTable -->|Search Similar Cases| Agent1
-    Agent1 -->|Create Case| FinCase
-    Agent1 <-->|Trend Analysis| RAG
-    Agent1 <-->|Flows/Subflows/Actions| FlowAction
-
-    %% Agent 2 Workflow - Integration Hub Source
-    ExpenseTable -->|Incoming Event| Agent2
-    Agent2 -->|Create Case| FinCase
+    %% Agent Workflow
+    ExpenseTable -->|Incoming Event| Agent1
+    BudgetTable -->|Current Budget| Agent1
+    Agent1 <-->|Cost Center and<br/>Vendor History| Lookups
+    Agent1 <-->|Extract Cost Center,<br/>Budget Variance Analysis| FlowAction
+    FlowAction -->|Create Case| FinCase
 
     %% User Interaction Connections
     Employee -->|Ask Questions<br/>View/Update Cases| EC
@@ -94,8 +91,8 @@ graph TB
     classDef nowassist fill:#FFB300,stroke:#F57F17,stroke-width:2px,color:#1a1a1a
     classDef platform fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
 
-    class ExpenseTable,FinCase platform
-    class Agent1,Agent2,RAG nowassist
+    class ExpenseTable,BudgetTable,FinCase platform
+    class Agent1,Lookups nowassist
     class FlowAction platform
     class Lens,DocIntel nowassist
     class Employee,EC user
@@ -103,7 +100,7 @@ graph TB
 
 > **Color Legend:** 🟡 Now Assist | 🟢 Platform | 🟣 Workflow Data Fabric | 🔵 External Systems | ⚪ User Interaction
 >
-> [📊 View High-Resolution Diagram](https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeB/main/.gitbook/assets/dataflow_lens_document_intelligence.png)
+> [📊 View High-Resolution Diagram](https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/dataflow_lens_document_intelligence.png)
 
 ### Document Intelligence
 
@@ -256,32 +253,30 @@ You can let Build Agent create the task and attach the invoice for you.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_ldi_ba_runtime.png" alt="" width="420"><figcaption></figcaption></figure>
 
-#### Walkthrough: Custom Forecast Variance AI Agent
+#### Walkthrough: Forecast Variance AI Agent
 
-Look for the Now Assist badge. Open Now Assist chat. Expand to Modal view. Review planning steps, event ID extraction, RAG search results, and Finance Case link.
+Look for the Now Assist badge. Open Now Assist chat. Expand to Modal view. Review the cost center and vendor, the budget and vendor history, and the Finance Case link.
 
-1. In the same browser window, you will notice that there is a new **Now Assist badge**. This is the AI Agent at work in the back end because the Document Intelligence integration flows have been triggered by changing the status of the task in which we have uploaded the Invoice to. This in turn triggered the same agent in [Lab Exercise: Integration Hub](https://servicenow-lf.gitbook.io/the-workflow-data-fabric-loom/lab-exercise-integration-hub). Click on the **Now Assist icon** with the updated badge count. <mark style="color:$warning;">**Note:**</mark> If the **Now Assist badge** does not appear, simply reload your page as it may run slow in demo or lab instances or click on the **Now Assist icon** anyway and wait for a new **Active** chat to appear, indicated by a red dot beside it.
+1. In the same browser window, you will notice that there is a new **Now Assist badge**. This is the AI agent at work in the back end. Changing the state of the task with the invoice started the Document Intelligence integration flows, which wrote the invoice to the **Expense Transaction Event** table, and the new record started the **Forecast Variance** agent you built in [Lab Exercise: Integration Hub](https://servicenow-lf.gitbook.io/the-workflow-data-fabric-loom/lab-exercise-integration-hub). Click on the **Now Assist icon** with the updated badge count. <mark style="color:$warning;">**Note:**</mark> If the **Now Assist badge** does not appear, simply reload your page as it may run slow in demo or lab instances or click on the **Now Assist icon** anyway and wait for a new **Active** chat to appear, indicated by a red dot beside it. Extraction and the agent can take a few minutes when the instance is busy. If nothing arrives after 10 minutes, start the agent by hand: **AI Agent Studio** > **Testing** > **Start manual test**, agent **Forecast Variance**, task **Review expense event EXP-2025-IT-002-1010-01**.
 
 <figure><img src="../.gitbook/assets/sc_ihub_now_assist_badge_notification.png" alt=""><figcaption></figcaption></figure>
 
 2.  This will open the **Now Assist** chat. Click on the two-headed diagonal arrow to Enter **Modal**.
 
     <figure><img src="../.gitbook/assets/sc_ihub_now_assist_chat_expand.png" alt=""><figcaption></figcaption></figure>
-3. This will expand the Now Assist window.
+3. Here is an overview of the steps the agent ran for the invoice's event **EXP-2025-IT-002-1010-01**.
 
-<mark style="color:green;">**a.)**</mark> Expand **Planning the next steps** show tools used.
+<mark style="color:green;">**a.)**</mark> **Extract Cost Center** looks up the expense event by its **Event ID** and returns the **cost center** (**CC_IT_002**) and **vendor** (**TechSource Solutions Inc.**) that Document Intelligence read from the invoice. We use **Event ID** so the agent built in [Lab Exercise: Integration Hub](https://servicenow-lf.gitbook.io/the-workflow-data-fabric-loom/lab-exercise-integration-hub) works unchanged. In a real business scenario, the relevant field would be the invoice ID or something similar for this document type.
 
-<mark style="color:green;">**b.)**</mark> Note the **Event ID** extracted from the invoice event. We are using **Event ID** to leverage the flow built in [Lab Exercise: Integration Hub](https://servicenow-lf.gitbook.io/the-workflow-data-fabric-loom/lab-exercise-integration-hub). Note that in a real business scenario, the relevant field would be invoice ID or something similar for such a document type used in this exercise.
+<mark style="color:green;">**b.)**</mark> **Search for Cost Center History** returns the cost center's monthly budget and actual spend.
 
-<mark style="color:green;">**c.)**</mark> Note the **cost\_center** and **vendor** extracted from the expense event.
+<mark style="color:green;">**c.)**</mark> **Search for Expense Transactions History** looks for earlier transactions with the same vendor. There are none for TechSource Solutions Inc.
 
-<mark style="color:green;">**d.)**</mark> There are no results from the **Retrieval-augmented Generation (RAG) search** for this vendor.
+<mark style="color:green;">**d.)**</mark> Finally, **Budget Variance Analysis** returns the cost center's new total spend and, because CC_IT_002 is now over budget, the **Finance Case** it created for further review and action.
 
-<mark style="color:green;">**e.)**</mark> You can also access the **RAG search** results for the vendors associated with the expense event.
+If you started the agent by hand, the map and the **AI agent decision logs** in **AI Agent Studio** show the same four tools as they run.
 
-<mark style="color:green;">**f.)**</mark> Finally, if the expense event will lead to the associated cost center being over budget, the total cost center expense and the **Finance Case** created for exceeding the budget for further review and action is listed. In this case it is FINC0010017.
-
-<figure><img src="../.gitbook/assets/sc_ldi_agent_results_overview.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_agent_test_run.png" alt=""><figcaption></figcaption></figure>
 
 #### Completion: Verify Finance Case
 
@@ -295,7 +290,7 @@ Navigate to Finance Operations Workspace. Find the case created by the agent.
 
 <figure><img src="../.gitbook/assets/sc_common_fow_system_user.png" alt=""><figcaption></figcaption></figure>
 
-3. Go to <mark style="color:green;">**a.)**</mark> **list (list icon)** > <mark style="color:green;">**b.)**</mark> **Lists** > <mark style="color:green;">**c.)**</mark> sort by **Number** descending/ascending > <mark style="color:green;">**d.)**</mark> or look for the Finance case created by the AI Agent, FINC0010017 in the example above.
+3. Go to <mark style="color:green;">**a.)**</mark> **list (list icon)** > <mark style="color:green;">**b.)**</mark> **Lists** > <mark style="color:green;">**c.)**</mark> sort by **Number** descending/ascending > <mark style="color:green;">**d.)**</mark> or look for the Finance case created by the AI agent, with the short description **CC_IT_002 is exceeding budget**.
 
 <figure><img src="../.gitbook/assets/sc_ldi_finance_case_list.png" alt=""><figcaption></figcaption></figure>
 

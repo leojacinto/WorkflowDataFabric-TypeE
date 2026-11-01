@@ -36,7 +36,7 @@ This lab will walk you through integration of data coming from Cloud Data Wareho
 
 **Zero Copy Connector for SQL**
 
-<table><thead><tr><th width="83">Step</th><th width="106">Who</th><th>Description</th></tr></thead><tbody><tr><td><a href="lab-exercise-zero-copy-connectors.md#reference-cloud-data-warehouse-source">7</a></td><td>Student</td><td><strong>Cloud Data Warehouse Source:</strong> Review screenshot of the Snowflake source table used for Zero Copy for SQL (no backend access provided).</td></tr><tr><td><a href="lab-exercise-zero-copy-connectors.md#walkthrough-navigation-and-review-of-zcc-connection">8</a></td><td>Student</td><td><strong>ZCC Connection Review:</strong> Navigate to Workflow Data Fabric Hub. Review the established Snowflake connection details.</td></tr><tr><td><a href="lab-exercise-zero-copy-connectors.md#hands-on-configure-column-mappings">9</a></td><td>Student</td><td><strong>Configure Column Mappings:</strong> Create a data fabric table from the Snowflake data asset. Set Cost Center as a Reference field to the ERP extraction table. Set GL Account as primary key.</td></tr><tr><td><a href="lab-exercise-zero-copy-connectors.md#walkthrough-open-data-fabric-table">10</a></td><td>Student</td><td><strong>Open Data Fabric Table:</strong> View the data assets created and open the data fabric table contents.</td></tr></tbody></table>
+<table><thead><tr><th width="83">Step</th><th width="106">Who</th><th>Description</th></tr></thead><tbody><tr><td><a href="lab-exercise-zero-copy-connectors.md#reference-cloud-data-warehouse-source">7</a></td><td>Student</td><td><strong>Cloud Data Warehouse Source:</strong> Review the PostgreSQL table used as the source for Zero Copy for SQL (the facilitator manages the database).</td></tr><tr><td><a href="lab-exercise-zero-copy-connectors.md#walkthrough-navigation-and-review-of-zcc-connection">8</a></td><td>Student</td><td><strong>ZCC Connection Review:</strong> Navigate to Zero Copy Connectors. Review the established PostgreSQL connection details.</td></tr><tr><td><a href="lab-exercise-zero-copy-connectors.md#hands-on-configure-column-mappings">9</a></td><td>Student</td><td><strong>Configure Column Mappings:</strong> Create a data fabric table from the PostgreSQL table lab_cc_summary. Set Cost Center as a Reference field to the ERP extraction table. Set GL Account as primary key.</td></tr><tr><td><a href="lab-exercise-zero-copy-connectors.md#walkthrough-open-data-fabric-table">10</a></td><td>Student</td><td><strong>Open Data Fabric Table:</strong> Open the data fabric table and see the rows read live from PostgreSQL.</td></tr></tbody></table>
 
 **AI Agent and Finance Operations Workspace**
 
@@ -201,13 +201,16 @@ You can let Build Agent clone the model for you.
     ```
     Clone the ERP model "CP: Cost Center" (Function Call variant) as "SAP Cost Center Lab"
     in the Forecast Variance app, and set its ERP system to S4D.
+    First confirm the system property sn_erp_integration.enableModelModification is true.
     Method: from a script in the x_snc_forecast_v_0 scope, run the operation_script of the
     sys_ws_operation "CloneModel" in scope sn_erp_integration through GlideScopedEvaluator,
     with request = { pathParams: { sysId: <source sys_id>, name: <new name> } } and
     response = {}. Then look up the new model by name and set system. Stop if the name
     already exists.
     Report with gs.info: the new model's scope, origin and system, and its counts of
-    operations, entities, table fields, inputs, input mappings and outputs next to the source's.
+    operations, entities, table fields, inputs, input mappings and outputs next to the
+    source's. If anything only partially inserts, roll back the run instead of leaving
+    orphans.
     ```
 2.  Click **Approve**. You should see the new model in **Forecast Variance** with system **S4D**, and counts that match the source (3, 29, 327, 48, 48, 29).
 
@@ -257,104 +260,59 @@ Filter and review SAP Cost Center extraction table. Navigate to the target table
 
 #### Reference: Cloud Data Warehouse Source
 
-This provides the steps needed to connect ServiceNow to the Cloud Data Warehouse and get summary data needed for workflow context and logic.
-
-1. For reference purposes only, the table which will be used as source for Zero Copy for SQL coming from Snowflake is shown below. No action needs to be done for this step.
-
-<figure><img src="../.gitbook/assets/sc_zcc_snowflake.png" alt=""><figcaption></figcaption></figure>
+In this lab the cloud data warehouse is a **PostgreSQL** database hosted on Neon. Its table **lab\_cc\_summary** holds the 2025 actual and baseline spend for 24 cost centers, one row per cost center and GL account: cost\_center, gl\_account, fiscal\_year, period, actual\_amount\_usd, baseline\_amount\_usd, variance, variance\_pct, forecast\_source and last\_updated. Your facilitator has connected it to the instance with a read-only login, so no action needs to be done for this step.
 
 #### Walkthrough: Navigation and Review of ZCC Connection
 
-Navigate to Workflow Data Fabric Hub. Review the established Snowflake connection details.
+Navigate to Zero Copy Connectors. Review the established PostgreSQL connection.
 
-1. <mark style="color:$warning;">**If you are on Zurich:**</mark> In the ServiceNow navigation, go to All > <mark style="color:green;">**a.)**</mark> type **Workflow Data Fabric Hub** > <mark style="color:green;">**b.)**</mark> go to **Workflow Data Fabric Hub**.
+1.  Navigate to **All** > type **Zero Copy Connectors** > click **Zero Copy Connectors (Workflow Data Fabric)**. This opens the **Zero Copy Connector Hub**.
 
-<figure><img src="../.gitbook/assets/sc_zcc_wdf_hub_nav_zu.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_nav.png" alt="" width="320"><figcaption></figcaption></figure>
+2.  Go to **Established connections** > **Forecast Variance Postgres**. <mark style="color:red;">**Note:**</mark> this connection is configured specifically for instances used in ServiceNow-led labs.
 
-2.  <mark style="color:$warning;">**If you are on Australia:**</mark> In the ServiceNow navigation, go to All > <mark style="color:green;">**a.)**</mark> type **Workflow Data Fabric Hub** > <mark style="color:green;">**b.)**</mark> go to **Workflow Data Fabric > Connect Hub**.
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_established.png" alt="" width="560"><figcaption></figcaption></figure>
+3.  The **Connection details** tab shows how the connection is configured: a JDBC URL to the Neon database and the read-only user **wdf\_lab\_reader**. No action needs to be done for this step.
 
-    <figure><img src="../.gitbook/assets/sc_zcc_wdf_hub_nav_au.png" alt=""><figcaption></figcaption></figure>
-3.  In the landing page, go to **Established connections** > **Snowflake Connection (S)**. <mark style="color:red;">**Note:**</mark> this established connection is configured specifically for instances used in ServiceNow-led labs.
-
-    <figure><img src="../.gitbook/assets/sc_zcc_snowflake_established.png" alt="" width="563"><figcaption></figcaption></figure>
-4.  In the **Connection details** tab of the screen that immediately follows, the established connection is configured as shown in the screenshot below. No action needs to be done for this step. You might also get a notification stating **This connection is read-only in the 'Forecast Variance' application scope...** which can be ignored.
-
-    <figure><img src="../.gitbook/assets/sc_zcc_connection_details.png" alt="" width="563"><figcaption></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_connection_details.png" alt="" width="560"><figcaption></figcaption></figure>
 
 #### Hands-on: Configure Column Mappings
 
-Create a data fabric table from the Snowflake data asset. Set Cost Center as a Reference field to the ERP extraction table. Set GL Account as primary key.
+Create a data fabric table from lab\_cc\_summary. Set Cost Center as a Reference field to the ERP extraction table. Set GL Account as primary key.
 
-1. Go to <mark style="color:green;">**a.)**</mark> Data assets > <mark style="color:green;">**b.)**</mark> beside **u\_lab\_cc\_summary** click **Create data fabric table**. This screen shows the data assets available for the **Database** and **Warehouse** you configured in the previous screen. In this example, only two tables exist in the database **WDF\_DEMOHUB**.
+1.  Go to **Data assets** > **public**, and beside **lab\_cc\_summary** click **Create data fabric table**. This screen lists the tables in the database; this lab uses only **lab\_cc\_summary**.
 
-<figure><img src="../.gitbook/assets/sc_zcc_data_assets_create.png" alt="" width="563"><figcaption></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_data_assets.png" alt=""><figcaption></figcaption></figure>
+2.  Enter the **Label**, e.g. **cc\_summ\_\<your initials>**. The **Name** is filled in for you, e.g. **x\_snc\_forecast\_v\_0\_df\_cc\_summ\_lfr**, and must stay at 40 characters or fewer. Check that **Application scope** shows **Forecast Variance**, then click **Continue**.
 
-2.  Provide the information needed for <mark style="color:green;">**a.)**</mark> the **Label** e.g. **cc\_summ\_\<your initials>** and the <mark style="color:green;">**b.)**</mark> **Name** which will automatically provided. <mark style="color:red;">**Note:**</mark> keep the name length not more than 35 characters such as what is listed below, e.g. **x\_snc\_forecast\_v\_0\_df\_cc\_summ\_lfr**. Click <mark style="color:green;">**c.)**</mark> **Continue** once done. This will create the data fabric table (hence the df prefix) which will contain only the field and mapping information to the Snowflake table, it will not store the data from Snowflake into ServiceNow. While the intent of setting this up is mainly to show Zero Copy capability, this has multiple advantages such as ensuring cost center summary data from source is up to date as well as avoiding offline copies of the same information (e.g. via managed file transfer) which can result into data breaches.
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_df_label.png" alt="" width="560"><figcaption></figcaption></figure>
+3.  Tick the box beside **Name** to map all 10 columns to the data fabric table. You can also pick only the columns you need, which makes the table load faster.
 
-    <figure><img src="../.gitbook/assets/sc_zcc_df_table_label.png" alt=""><figcaption></figcaption></figure>
-3.  In the screen that immediate follows, click on the tick box beside **Name** and this will include all the fields from the Snowflake data asset to the data fabric table being configured. Customers also have the option to select only the columns needed to speed up loading of data fabric tables.
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_select_columns.png" alt=""><figcaption></figcaption></figure>
+4.  For **cost\_center**, change **Type** from **String** to **Reference** (at the end of the list), then click **Set Reference**. A **Reference** field points to a record in another table, so each cost center links to its master data from SAP.
 
-    <figure><img src="../.gitbook/assets/sc_zcc_select_all_columns.png" alt=""><figcaption></figcaption></figure>
-4.  Look for **Cost center** column > change the data type from **String** to <mark style="color:green;">**a.)**</mark> **Reference** and click <mark style="color:green;">**b.)**</mark> **Reference** to set the table from which **Cost center** column will refer to. A **Reference** field points to a record in an existing table, so users select from a controlled set instead of typing freehand. This keeps your data consistent and traceable, which matters most when the field drives downstream process logic.
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_cost_center_reference.png" alt=""><figcaption></figcaption></figure>
+5.  Set **Table** to **SAP Cost Center** (**sn\_erp\_integration\_cost\_center**, which you set up in the ZCC for ERP exercise) and **Reference key** to **Cost Center**, then click **Set Reference**.
 
-    <figure><img src="../.gitbook/assets/sc_zcc_cost_center_reference.png" alt=""><figcaption></figcaption></figure>
-5. In the modal pop-up that appears, select the table **sn\_erp\_integration\_cost\_center** which you have set-up in the ZCC for ERP lab exercise.
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_set_reference.png" alt="" width="444"><figcaption></figcaption></figure>
+6.  Turn on **Primary** for **gl\_account**, then click **Finish**.
 
-<figure><img src="../.gitbook/assets/sc_zcc_reference_table.png" alt="" width="375"><figcaption></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_primary_key.png" alt=""><figcaption></figcaption></figure>
+7.  In the **Primary key defined** dialog, click **Confirm**. A primary key lets ServiceNow tell the source rows apart, and it can't be removed later.
 
-6. In the same modal pop-up, select **Cost Center**.
-
-<figure><img src="../.gitbook/assets/sc_zcc_reference_key.png" alt="" width="375"><figcaption></figcaption></figure>
-
-7. Once completed, click **Set Reference**. This will create the reference to the cost center details from SAP.
-
-<figure><img src="../.gitbook/assets/sc_zcc_reference_label.png" alt="" width="375"><figcaption></figcaption></figure>
-
-8. Finally, set GL account as the **Primary** key as shown in the <mark style="color:green;">**a.)**</mark> toggle below. Click <mark style="color:green;">**b.)**</mark> **Finish** once done.
-
-<figure><img src="../.gitbook/assets/sc_zcc_gl_primary_key_finish.png" alt=""><figcaption></figcaption></figure>
-
-9. A pop-up dialog indicating that a primary key has been defined. Click **Confirm**. A primary key lets you distinguish unique records from the source data warehouse, which becomes important in complex analysis.
-
-<figure><img src="../.gitbook/assets/sc_zcc_confirm_pk.png" alt="" width="375"><figcaption></figcaption></figure>
-
-#### Hands-on (Build Agent option): Configure Column Mappings
-
-You can let Build Agent create the data fabric table for you.
-
-1.  In a new chat, paste this prompt, put your initials in place of **\<initials>** (twice), and send it.
-
-    ```
-    Create a data fabric table from the Snowflake data asset u_lab_cc_summary, with label
-    "cc_summ_<initials>" and name "x_snc_forecast_v_0_df_cc_summ_<initials>".
-    Method: do what the Workflow Data Fabric Hub UI does. Run the operation_script of the
-    sys_ws_operation "Create data fabric table" in scope sn_data_fabric through
-    GlideScopedEvaluator, passing request and response with putVariable: request =
-    { pathParams: {}, queryParams: { mode: "create" }, body: { data: { connectionId:
-    <connection_id of the asset's simulated connector>, remoteSchema: "Snowflake Database",
-    remoteTable: "u_lab_cc_summary", glideTableName, glideTableLabel, columnMapping: [],
-    deleteColumns: [] } } } and response = {}. Stop if a row with my label already exists,
-    and leave other participants' rows alone.
-    Report with gs.info: the operation's return value and my new row in
-    x_snc_alectri_zc_0_data_fabric_tables.
-    ```
-2.  Click **Approve**. You should see **Dummy table** and your new row. This lab's Snowflake connection is simulated, so only the listing is saved, the same as in the UI.
-
-    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_df_table_result.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_confirm_pk.png" alt="" width="420"><figcaption></figcaption></figure>
 
 #### Walkthrough: Open Data Fabric Table
 
-View the data assets created and open the data fabric table contents.
+View the data fabric table you created and open its contents.
 
-1. This will lead you to a screen showing the data assets created. In the same screen, click on the <mark style="color:green;">**a.)**</mark> three vertical dots then <mark style="color:green;">**b.)**</mark> **Open list** to see the contents of the table.
+1.  Your table now shows under **lab\_cc\_summary**. Click the three vertical dots > **Open list**.
 
-<figure><img src="../.gitbook/assets/sc_zcc_data_assets_open_list.png" alt=""><figcaption></figcaption></figure>
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_open_list.png" alt=""><figcaption></figcaption></figure>
+2.  The list shows all 24 rows, read from PostgreSQL when you open it. The data stays in the source database; nothing is copied into ServiceNow.
 
-2. This will lead you to the data fabric table.
-
-<figure><img src="../.gitbook/assets/sc_zcc_df_table_result.png" alt=""><figcaption></figcaption></figure>
-
-3. Congratulations! You have set-up the integration to a Cloud Data Warehouse using Zero Copy Connector for SQL.
+    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_df_list.png" alt=""><figcaption></figcaption></figure>
+3.  Congratulations! You have set up the integration to a Cloud Data Warehouse using Zero Copy Connector for SQL.
 
 ### AI Agent and Finance Operations Workspace
 
