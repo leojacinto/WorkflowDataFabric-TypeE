@@ -217,8 +217,9 @@ Build Agent creates the two subflows the agent uses as tools, plus the **Compute
     Case (sn_spend_sdc_service_request) with that short description, assigned to the Owner,
     and outputs "<case number> - <short description>". Otherwise it outputs "Cost center is
     compliant with budget." Also output the new actual as Sum.
-    Then build and install the app. To test, run Budget Variance Analysis with cost center
-    PROD-DE-2 and event ID EXP-2025-IT-002-1007-01, so no Finance Case is created.
+    Then build and install the app. To test, run Extract Cost Center with event ID
+    EXP-2025-IT-002-1007-01, then run Budget Variance Analysis with cost center PROD-DE-2
+    and that event ID, so no Finance Case is created.
     ```
 2.  Click **Approve** each time Build Agent asks. You should see **Extract Cost Center** return **CC_IT_001** and **Amazon Web Services**, and **Budget Variance Analysis** return **Cost center is compliant with budget.** with a Sum of **109200.75** for PROD-DE-2.
 
