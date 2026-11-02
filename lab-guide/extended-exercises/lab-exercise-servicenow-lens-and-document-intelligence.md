@@ -246,7 +246,8 @@ You can let Build Agent create the task and attach the invoice for you.
     description "CC_IT_002". Attach the invoice from
     https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeA/refs/heads/main/.gitbook/assets/Invoice_IT_Laptop_CC_IT_002.pdf
     to that record with RESTMessageV2.saveResponseBodyAsAttachment before execute(), keeping the
-    file name. Then set State to Work in Progress and save the record.
+    file name. Set that attachment's content type to application/pdf (update its
+    sys_attachment record), then set State to Work in Progress and save the record.
     Report with gs.info the task number, its state, and the attachment's file name and size.
     ```
 2.  Click **Approve**. You should see the new task in **Work in Progress** with the invoice attached. Document Intelligence then reads it and the agent takes over.
