@@ -210,7 +210,8 @@ Build Agent creates the two subflows the agent uses as tools, plus the **Compute
     Budget History for fiscal year 2025 (add the records up one by one, because
     GlideAggregate SUM is wrong on these currency fields), and adds the event's amount_usd
     to the actual. It outputs Over Budget, the new actual, the short description "<cost
-    center> is exceeding budget" and the cost center's Owner. Keep this code in the action,
+    center> is exceeding budget" and the cost center's Owner, declared as a String output
+    that holds the owner's sys_id (not a reference field). Keep this code in the action,
     because a subflow's own scripts can't read the subflow's inputs.
     3. Create a subflow named "Budget Variance Analysis" with inputs Cost Center and Event ID
     (strings). It runs Compute Budget Totals. If Over Budget is true, it creates a Finance
