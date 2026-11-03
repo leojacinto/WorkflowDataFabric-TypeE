@@ -254,8 +254,8 @@ Build Agent creates the **AI agent**, its tools and the trigger that starts it w
     including the Finance Case number if one was created.
     Only users with the admin role can run it, and it uses the admin role for data access. Add
     a trigger: when an Expense Transaction Event is created and Vendor is not empty, run as
-    the record's Owner, objective "Review expense event ${event_id}", channel
-    "Now Assist Panel" (the sys_cs_channel record of that name), trigger on.
+    the user admin (System Administrator), objective "Review expense event ${event_id}",
+    channel "Now Assist Panel" (the sys_cs_channel record of that name), trigger on.
     Build and install the app without creating test records. An install doesn't build the
     trigger's flow, so then re-save the trigger configuration with a GlideRecord update in
     global scope (setForceUpdate(true), no field changes) and show the trigger_flow it gets.
