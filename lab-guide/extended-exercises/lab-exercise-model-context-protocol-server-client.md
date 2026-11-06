@@ -185,7 +185,7 @@ Add MCP instructions to the agent specialty. Add the variance-baseline-search MC
 
 <mark style="color:green;">**b.)**</mark> **Tool description**:
 
-* project\_id: shy-base-71725149 (snake\_case, not projectId)
+* project\_id: bitter-lab-28038915 (snake\_case, not projectId)
 * sql: SELECT cost\_center, actual\_amount\_usd, baseline\_amount\_usd, variance, variance\_pct FROM "VARIANCE\_BASELINE\_V" WHERE cost\_center = '\{{cost\_center\}}' LIMIT 1
 
 <mark style="color:green;">**c.)**</mark> **Execution mode**: **Autonomous**
