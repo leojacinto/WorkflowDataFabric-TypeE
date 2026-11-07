@@ -2,6 +2,7 @@ import {html, css} from 'lit';
 import {customElement} from 'lit/decorators.js';
 import {AIUXElement} from '@servicenow/aiux/aiux-components-core';
 import {i18n} from '@servicenow/aiux/aiux-services';
+import {labAsset} from '../../utils/lab-assets.js';
 import {setDocumentTitle} from '../../utils/document-title.js';
 import {TOC_SECTIONS} from '../../constants/toc.js';
 import {
@@ -115,8 +116,7 @@ export default class HomePage extends AIUXElement {
 
   render() {
     const {basePath} = this.loaderData || {};
-    const asset = path =>
-      `${basePath.replace(/^\/aiux/, '')}/public/wdf/home/${path}`;
+    const asset = name => labAsset(name);
 
     return html`
       <div class="mx-auto flex max-w-4xl flex-col gap-8 p-4 lg:p-8">
@@ -141,7 +141,7 @@ export default class HomePage extends AIUXElement {
           </h3>
           <figure>
             <img
-              src="${asset('sc_slide_building_for_whom.png')}"
+              src="${asset('sc_slide_building_for_whom.gif')}"
               alt="${i18n.getMessage(
                 'Illustration of the Finance Managers and Cost Center Owners this lab is built for'
               )}"
@@ -229,10 +229,6 @@ export default class HomePage extends AIUXElement {
           </h3>
           <figure>
             <picture>
-              <source
-                srcset="${asset('dataflow_outcome_agent_flow_dark.png')}"
-                media="(prefers-color-scheme: dark)"
-              />
               <img
                 src="${asset('dataflow_outcome_agent_flow.png')}"
                 alt="${i18n.getMessage(

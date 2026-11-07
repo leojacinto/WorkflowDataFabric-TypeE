@@ -2,6 +2,7 @@ import {html, css} from 'lit';
 import {customElement} from 'lit/decorators.js';
 import {AIUXElement} from '@servicenow/aiux/aiux-components-core';
 import {i18n} from '@servicenow/aiux/aiux-services';
+import {labAsset} from '../../utils/lab-assets.js';
 import {setDocumentTitle} from '../../utils/document-title.js';
 
 @customElement('x-snc-wdf-lab-troubleshooting-page')
@@ -26,151 +27,11 @@ export default class TroubleshootingPage extends AIUXElement {
   }
 
   render() {
-    const {basePath} = this.loaderData || {};
-    const asset = path => `${basePath.replace(/^\/aiux/, '')}/public/wdf/troubleshooting/${path}`;
 
     return html`
-      <div class="mx-auto flex max-w-4xl flex-col gap-8 p-4 lg:p-8">
-        <header class="flex flex-col gap-2">
-          <span class="aiux-badge aiux-badge-primary aiux-badge-outline w-fit">
-            ${i18n.getMessage('Reference')}
-          </span>
-          <h2 class="text-3xl font-bold text-text-primary">
-            ${i18n.getMessage('Troubleshooting')}
-          </h2>
-        </header>
-
-        <section class="flex flex-col gap-4">
-          <div class="flex flex-col gap-2">
-            <span class="aiux-badge aiux-badge-info aiux-badge-soft w-fit">
-              ${i18n.getMessage('Applies to: Integration Hub')}
-            </span>
-            <p class="text-base leading-relaxed text-text-secondary">
-              ${i18n.getMessage(
-                'If the URL in Action Configuration fails to fetch data due to rate limiting or another reason, you can upload an XML file to trigger a created/updated row in x_snc_forecast_v_0_expense_transaction_event.'
-              )}
-            </p>
-            <ul class="list-disc space-y-1 pl-6 text-base text-text-secondary">
-              <li>
-                ${i18n.getMessage(
-                  'If uploading the XML file instead of using the Action, change the trigger in Custom Forecast Variance AI Agent to Created or updated, instead of Created.'
-                )}
-              </li>
-              <li>
-                ${i18n.getMessage(
-                  'This approach is not representative of a real integration scenario, since it is only a file upload. A Created trigger will not fire from an upload.'
-                )}
-              </li>
-            </ul>
-            <figure>
-              <img
-                src="${asset('sc_ihub_alternate_trigger.png')}"
-                alt=""
-                class="max-w-lg rounded-xl border border-base-300"
-              />
-            </figure>
-          </div>
-
-          <div class="flex flex-col gap-2">
-            <span class="aiux-badge aiux-badge-info aiux-badge-soft w-fit">
-              ${i18n.getMessage('Applies to: Integration Hub')}
-            </span>
-            <p class="text-base leading-relaxed text-text-secondary">
-              ${i18n.getMessage(
-                'The agent might not trigger after creating a new expense event entry, or might throw an error such as "Sorry, there was a problem on my side trying to complete this request. Try asking again later." This can be fixed with a dummy change to the Custom Forecast Variance AI Agent trigger — e.g. recreating it.'
-              )}
-            </p>
-          </div>
-
-          <div class="flex flex-col gap-2">
-            <span class="aiux-badge aiux-badge-info aiux-badge-soft w-fit">
-              ${i18n.getMessage('Applies to: Integration Hub')}
-            </span>
-            <p class="text-base leading-relaxed text-text-secondary">
-              ${i18n.getMessage(
-                "If the Now Assist Agent is not showing the action being executed and the chat history, wait ~5 minutes and refresh — this is primarily due to the instance's freshly configured Now Assist settings."
-              )}
-            </p>
-            <figure>
-              <img
-                src="${asset('sc_common_troubleshoot_now_assist.png')}"
-                alt=""
-                class="max-w-lg rounded-xl border border-base-300"
-              />
-            </figure>
-          </div>
-
-          <div class="flex flex-col gap-2">
-            <span class="aiux-badge aiux-badge-info aiux-badge-soft w-fit">
-              ${i18n.getMessage('Applies to: DocIntel, Integration Hub, MCP, Zero Copy')}
-            </span>
-            <p class="text-base leading-relaxed text-text-secondary">
-              ${i18n.getMessage(
-                'If Now Assist reports messages like "There is no available information indicating similar transactions for this vendor" or "insufficient data to determine whether the results are On Target, Over Budget, or Under Budget", the tables the agent searches have not finished indexing yet. Wait 10 to 15 minutes — this does not affect the outcome of the lab, it is only related to lab instance server load.'
-              )}
-            </p>
-            <p class="text-base leading-relaxed text-text-secondary">
-              ${i18n.getMessage(
-                'If the errors persist after waiting, you can force an indexing job (not a guaranteed fix if lab ML services are under high load):'
-              )}
-            </p>
-            <ol class="list-decimal space-y-2 pl-6 text-base text-text-secondary">
-              <li>
-                ${i18n.getMessage(
-                  'Navigate to All, type Indexed Sources, then click AI Search > AI Search Index > Indexed Sources (open in a new window).'
-                )}
-                <figure class="mt-2">
-                  <img
-                    src="${asset('sc_common_indexed_sources_nav.png')}"
-                    alt=""
-                    class="max-w-lg rounded-xl border border-base-300"
-                  />
-                </figure>
-              </li>
-              <li>
-                ${i18n.getMessage(
-                  'Search Sources for "*x_snc_forecast", then open both Cost Center Budget History Indexed Source and Expense Transactions Indexed Source in new windows.'
-                )}
-                <figure class="mt-2">
-                  <img
-                    src="${asset('sc_common_search_indexed_sources.png')}"
-                    alt=""
-                    class="max-w-lg rounded-xl border border-base-300"
-                  />
-                </figure>
-              </li>
-              <li>
-                ${i18n.getMessage(
-                  'In the Cost Center Budget History Indexed Source window, click Index All Tables.'
-                )}
-                <figure class="mt-2">
-                  <img
-                    src="${asset('sc_common_index_budget_history.png')}"
-                    alt=""
-                    class="max-w-lg rounded-xl border border-base-300"
-                  />
-                </figure>
-              </li>
-              <li>
-                ${i18n.getMessage(
-                  'In the Expense Transactions Indexed Source window, click Index All Tables.'
-                )}
-                <figure class="mt-2">
-                  <img
-                    src="${asset('sc_common_index_expense_transactions.png')}"
-                    alt=""
-                    class="max-w-lg rounded-xl border border-base-300"
-                  />
-                </figure>
-              </li>
-              <li>${i18n.getMessage('Once done, re-execute your agent.')}</li>
-            </ol>
-          </div>
-        </section>
-
-        <a class="aiux-btn aiux-btn-outline w-fit" href="${basePath}/home">
-          ${i18n.getMessage('Take me back to main page')}
-        </a>
+      <div class="mx-auto flex max-w-4xl flex-col gap-4 p-4 lg:p-8">
+        <header class="flex flex-col gap-2"><span class="aiux-badge aiux-badge-primary aiux-badge-outline w-fit">${i18n.getMessage('Reference')}</span><h2 class="text-3xl font-bold text-text-primary">${i18n.getMessage('Troubleshooting')}</h2></header>
+        <div class="aiux-card aiux-card-border bg-base-100 overflow-x-auto"><table class="aiux-table aiux-table-zebra"><thead><tr><th scope="col">${i18n.getMessage('#')}</th><th scope="col">${i18n.getMessage('Step')}</th><th scope="col">${i18n.getMessage('Applies to')}</th></tr></thead><tbody><tr><td>${i18n.getMessage('1')}</td><td><p class="text-base leading-relaxed text-text-secondary">${i18n.getMessage('If the URL in')} <strong class="text-text-primary">${i18n.getMessage('Action Configuration')}</strong> ${i18n.getMessage('> step 4 is failed to fetch data due to rate limiting or any other reason, you can upload the file here to trigger a created/updated row in x_snc_forecast_v_0_expense_transaction_event.')} <a class="aiux-link aiux-link-primary" href="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeA/refs/heads/main/.gitbook/assets/x_snc_forecast_v_0_expense_transaction_event.xml" target="_blank" rel="noreferrer">${i18n.getMessage('Get the XML file here')}</a>${i18n.getMessage('. Additional notes:')}</p><ul class="list-disc space-y-1 pl-6 text-base text-text-secondary"><li class="space-y-2"><p>${i18n.getMessage('If you are not using the action to fetch data via API and are uploading the XML file, change the trigger in')} <strong class="text-text-primary">${i18n.getMessage('Custom Forecast Variance AI Agent')}</strong> ${i18n.getMessage('> step 11 to')} <strong class="text-text-primary">${i18n.getMessage('Created or updated')}</strong>${i18n.getMessage(', instead of')} <strong class="text-text-primary">${i18n.getMessage('Created')}</strong>${i18n.getMessage('.')}</p></li><li class="space-y-2"><p>${i18n.getMessage('This approach is not representative of real integration scenario as you are only doing a file upload. A')} <strong class="text-text-primary">${i18n.getMessage('Created')}</strong> ${i18n.getMessage('trigger will not initiate from an upload.')}</p><figure class="mt-2"><img src="${labAsset('sc_ihub_alternate_trigger.png')}" alt="" class="w-full rounded-xl border border-base-300" /></figure></li></ul></td><td>${i18n.getMessage('IHub')}</td></tr><tr><td>${i18n.getMessage('2')}</td><td>${i18n.getMessage('The agent might not trigger after creating a new expense event entry in')} <strong class="text-text-primary">${i18n.getMessage('x_snc_forecast_v_0_expense_transaction_event')}</strong> ${i18n.getMessage('or throw errors like')} <strong class="text-text-primary">${i18n.getMessage('Sorry, there was a problem on my side trying to complete this request. Try asking again later.')}</strong> ${i18n.getMessage('in Runtime of Flow, Actions, and AI agents > step 8. This can be fixed by doing a dummy change in Custom Forecast Variance AI Agent > Steps 10 to 13; e.g, recreating the trigger.')}</td><td>${i18n.getMessage('IHub')}</td></tr><tr><td>${i18n.getMessage('3')}</td><td><p class="text-base leading-relaxed text-text-secondary">${i18n.getMessage('If the Now Assist Agent is not showing the action being executed and the history of chats like below, wait for 5 minutes or so and refresh your browser. This is primarily due to the instance\'s fresh Now Assist settings which you have just configured earlier.')}</p><figure class=""><img src="${labAsset('sc_common_troubleshoot_now_assist.png')}" alt="" class="w-full rounded-xl border border-base-300 max-w-xs" /></figure></td><td>${i18n.getMessage('IHub')}</td></tr><tr><td>${i18n.getMessage('4')}</td><td><p class="text-base leading-relaxed text-text-secondary">${i18n.getMessage('If you get messages in Now Assist from the agent saying messages like below, this just means that indexing of the tables needed by the agent to search transactions is not yet completed. Wait for 10 to 15 minutes.')}</p><ul class="list-disc space-y-1 pl-6 text-base text-text-secondary"><li class="space-y-2"><p>${i18n.getMessage('Errors/messages in Now Assist below. These do not affect the outcome of your lab activity as the agents and the tools related to this are already configured and is only related to the lab instance server load.')}</p></li><li class="space-y-2"><p>${i18n.getMessage('There is no available information indicating similar transactions for this vendor in the past based on the cost center being processed.')}</p></li><li class="space-y-2"><p>${i18n.getMessage('Based on the available information, there is insufficient data to determine whether the results are mostly \'On Target\', \'Over Budget\', or \'Under Budget.\' Please provide additional details or context for a more accurate evaluation.')}</p></li><li class="space-y-2"><p><strong class="text-text-primary">${i18n.getMessage('If the errors persist after waiting 10 to 15 minutes, do the following steps to force an indexing job, but this is not a guaranteed fix if there is a high load in the shared lab ML services used in AI search')}</strong>${i18n.getMessage('.')}</p></li><li class="space-y-2"><p>${i18n.getMessage('Navigate to')} <strong class="text-text-primary">${i18n.getMessage('All')}</strong> ${i18n.getMessage('>')} <mark class="bg-transparent font-semibold text-success"><strong class="text-text-primary">${i18n.getMessage('a.)')}</strong></mark> ${i18n.getMessage('type')} <strong class="text-text-primary">${i18n.getMessage('Indexed Sources')}</strong> ${i18n.getMessage('>')} <mark class="bg-transparent font-semibold text-success"><strong class="text-text-primary">${i18n.getMessage('b.)')}</strong></mark> ${i18n.getMessage('click')} <strong class="text-text-primary">${i18n.getMessage('AI Search > AI Search Index >')}</strong> ${i18n.getMessage('and Ctrl / ⌘ + click')} <strong class="text-text-primary">${i18n.getMessage('Indexed Sources')}</strong> ${i18n.getMessage('to open a new window.')}</p><figure class="mt-2"><img src="${labAsset('sc_common_indexed_sources_nav.png')}" alt="" class="w-full rounded-xl border border-base-300 max-w-xs" /></figure></li><li class="space-y-2"><p>${i18n.getMessage('Search for')} <strong class="text-text-primary">${i18n.getMessage('Sources')}</strong> ${i18n.getMessage('with the string')} <mark class="bg-transparent font-semibold text-success"><strong class="text-text-primary">${i18n.getMessage('a.)')}</strong></mark> ${i18n.getMessage('*x_snc_forecast then Ctrl / ⌘ + click both')} <mark class="bg-transparent font-semibold text-success"><strong class="text-text-primary">${i18n.getMessage('b.)')}</strong></mark> <strong class="text-text-primary">${i18n.getMessage('Cost Center Budget History Indexed Source')}</strong> ${i18n.getMessage('and')} <mark class="bg-transparent font-semibold text-success"><strong class="text-text-primary">${i18n.getMessage('c.)')}</strong></mark><strong class="text-text-primary"> ${i18n.getMessage('Expense Transactions Indexed Source')}</strong> ${i18n.getMessage('so you have two new windows for these objects.')}</p><figure class="mt-2"><img src="${labAsset('sc_common_search_indexed_sources.png')}" alt="" class="w-full rounded-xl border border-base-300 max-w-[34rem]" /></figure></li><li class="space-y-2"><p>${i18n.getMessage('In the new window for')} <strong class="text-text-primary">${i18n.getMessage('Center Budget History Indexed Source')}</strong>${i18n.getMessage(', click')} <strong class="text-text-primary">${i18n.getMessage('Index All Tables')}</strong>${i18n.getMessage('.')}</p><figure class="mt-2"><img src="${labAsset('sc_common_index_budget_history.png')}" alt="" class="w-full rounded-xl border border-base-300 max-w-[34rem]" /></figure></li><li class="space-y-2"><p>${i18n.getMessage('In the new window for')} <strong class="text-text-primary">${i18n.getMessage('Expense Transactions Indexed Source')}</strong>${i18n.getMessage(', click')} <strong class="text-text-primary">${i18n.getMessage('Index All Tables')}</strong>${i18n.getMessage('.')}</p><figure class="mt-2"><img src="${labAsset('sc_common_index_expense_transactions.png')}" alt="" class="w-full rounded-xl border border-base-300 max-w-[34rem]" /></figure></li><li class="space-y-2"><p>${i18n.getMessage('Once done, you can re-execute your agent.')}</p></li></ul></td><td>${i18n.getMessage('DocIntel, IHub, MCP, ZCC')}</td></tr></tbody></table></div>
       </div>
     `;
   }

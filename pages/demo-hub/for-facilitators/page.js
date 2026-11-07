@@ -4,23 +4,6 @@ import {AIUXElement} from '@servicenow/aiux/aiux-components-core';
 import {i18n} from '@servicenow/aiux/aiux-services';
 import {setDocumentTitle} from '../../../utils/document-title.js';
 
-const NEON_ASSETS = [
-  {
-    file: () => i18n.getMessage('neon_setup.sql'),
-    purpose: () =>
-      i18n.getMessage(
-        'Complete SQL script — creates the table and inserts all 24 rows. Copy-paste into Neon SQL Editor.'
-      )
-  },
-  {
-    file: () => i18n.getMessage('VARIANCE_BASELINE_V.csv'),
-    purpose: () =>
-      i18n.getMessage(
-        'Raw seed data in CSV format for reference or manual inspection.'
-      )
-  }
-];
-
 @customElement('x-snc-wdf-lab-for-facilitators-page')
 export default class ForFacilitatorsPage extends AIUXElement {
   static styles = css`
@@ -28,6 +11,9 @@ export default class ForFacilitatorsPage extends AIUXElement {
       display: block;
       min-height: 100%;
       container-type: inline-size;
+    }
+    figure {
+      margin: 0;
     }
   `;
 
@@ -43,211 +29,9 @@ export default class ForFacilitatorsPage extends AIUXElement {
     const {basePath} = this.loaderData || {};
 
     return html`
-      <div class="mx-auto flex max-w-4xl flex-col gap-8 p-4 lg:p-8">
-        <header class="flex flex-col gap-2">
-          <span class="aiux-badge aiux-badge-primary aiux-badge-outline w-fit">
-            ${i18n.getMessage('Demo Hub for SCs')}
-          </span>
-          <h2 class="text-3xl font-bold text-text-primary">
-            ${i18n.getMessage('For Lab Facilitators')}
-          </h2>
-          <p class="text-base leading-relaxed text-text-secondary">
-            ${i18n.getMessage('This contains considerations for Lab Facilitators.')}
-          </p>
-        </header>
-
-        <section class="flex flex-col gap-4">
-          <h3 class="text-2xl font-semibold text-text-primary">
-            ${i18n.getMessage('Lab Presentation')}
-          </h3>
-          <ol class="list-decimal space-y-2 pl-6 text-base text-text-secondary">
-            <li>
-              ${i18n.getMessage(
-                'Download the Lab Presentation deck (accessible only through internal ServiceNow login credentials).'
-              )}
-            </li>
-            <li>
-              ${i18n.getMessage(
-                'Familiarize yourself with the presentation guide and modify it as needed.'
-              )}
-            </li>
-            <li>
-              ${i18n.getMessage(
-                'Update the Lab URL, QR Codes, and Reservation codes accordingly — using a URL shortener with QR codes keeps the experience seamless for participants.'
-              )}
-            </li>
-          </ol>
-        </section>
-
-        <section class="flex flex-col gap-4">
-          <h3 class="text-2xl font-semibold text-text-primary">
-            ${i18n.getMessage('Credentials')}
-          </h3>
-          <p class="text-base leading-relaxed text-text-secondary">
-            ${i18n.getMessage(
-              'Credentials for integrated systems are not shown in this lab guide — they are kept in a separate credential sheet requiring ServiceNow login.'
-            )}
-          </p>
-        </section>
-
-        <section class="flex flex-col gap-4">
-          <h3 class="text-2xl font-semibold text-text-primary">
-            ${i18n.getMessage('Integration Hub Action Endpoint')}
-          </h3>
-          <ol class="list-decimal space-y-2 pl-6 text-base text-text-secondary">
-            <li>
-              ${i18n.getMessage(
-                'In the Integration Hub exercise\'s Connection Setup step, feel free to use a service other than the free tier of beeceptor.com, especially with more than 10 attendees, as the free endpoint may hit access limits.'
-              )}
-            </li>
-            <li>
-              ${i18n.getMessage(
-                'Updates are ongoing to make the Integration Hub endpoint used for the Action more scalable for more attendees.'
-              )}
-            </li>
-          </ol>
-        </section>
-
-        <section class="flex flex-col gap-4">
-          <h3 class="text-2xl font-semibold text-text-primary">
-            ${i18n.getMessage('Neon Database Setup (for MCP Lab)')}
-          </h3>
-          <p class="text-base leading-relaxed text-text-secondary">
-            ${i18n.getMessage(
-              'The MCP Server/Client exercise requires an external cloud database hosted on Neon that ServiceNow connects to via MCP. This database contains a table called VARIANCE_BASELINE_V with 24 rows of cost center variance data used by the AI Agent during the lab.'
-            )}
-          </p>
-          <p class="text-base leading-relaxed text-text-secondary">
-            ${i18n.getMessage(
-              'If the existing Neon database becomes unavailable (API key expired, project deleted, free tier limits reached), follow the steps below to recreate it from scratch — no technical expertise beyond copy-pasting is required.'
-            )}
-          </p>
-
-          <h4 class="text-lg font-semibold text-text-primary">
-            ${i18n.getMessage('Step 1: Create a Neon Account and Project')}
-          </h4>
-          <ol class="list-decimal space-y-1 pl-6 text-base text-text-secondary">
-            <li>${i18n.getMessage('Go to neon.tech and sign up using GitHub or Google login.')}</li>
-            <li>${i18n.getMessage('Click New Project.')}</li>
-            <li>${i18n.getMessage('Enter a project name (e.g. wdf-loom).')}</li>
-            <li>
-              ${i18n.getMessage(
-                'Select a region close to your lab audience (e.g. East US 2 for Americas, Singapore for APAC).'
-              )}
-            </li>
-            <li>${i18n.getMessage('Click Create Project.')}</li>
-            <li>
-              ${i18n.getMessage(
-                'Once created, note your Project ID from the dashboard URL (e.g. shy-base-71725149) — you will need this later.'
-              )}
-            </li>
-          </ol>
-
-          <h4 class="text-lg font-semibold text-text-primary">
-            ${i18n.getMessage('Step 2: Create the Table and Seed Data')}
-          </h4>
-          <ol class="list-decimal space-y-1 pl-6 text-base text-text-secondary">
-            <li>${i18n.getMessage('In your Neon project, navigate to SQL Editor from the left sidebar.')}</li>
-            <li>${i18n.getMessage('Open neon_setup.sql from this repository and copy its entire contents.')}</li>
-            <li>${i18n.getMessage('Paste it into the Neon SQL Editor and click Run.')}</li>
-            <li>
-              ${i18n.getMessage(
-                'You should see output confirming 24 rows inserted, with a sample row for cost center CC_IT_001.'
-              )}
-            </li>
-          </ol>
-
-          <h4 class="text-lg font-semibold text-text-primary">
-            ${i18n.getMessage('Step 3: Create a Neon API Key')}
-          </h4>
-          <ol class="list-decimal space-y-1 pl-6 text-base text-text-secondary">
-            <li>
-              ${i18n.getMessage(
-                'In the Neon Console, click your profile icon (bottom-left), then Account Settings.'
-              )}
-            </li>
-            <li>${i18n.getMessage('Go to API Keys, then Generate new API key.')}</li>
-            <li>${i18n.getMessage('Give it a name (e.g. wdf-lab-mcp) and click Create.')}</li>
-            <li>
-              ${i18n.getMessage(
-                'Copy the generated key — it starts with napi_. Save it securely; you will not be able to see it again.'
-              )}
-            </li>
-          </ol>
-
-          <h4 class="text-lg font-semibold text-text-primary">
-            ${i18n.getMessage('Step 4: Verify the MCP Connection')}
-          </h4>
-          <p class="text-base leading-relaxed text-text-secondary">
-            ${i18n.getMessage(
-              'Run a curl POST to https://mcp.neon.tech/mcp with your API key as a Bearer token to confirm the Neon MCP server can reach your data. A successful response contains "serverInfo":{"name":"mcp-server-neon"}. A 401 error means the API key should be double-checked.'
-            )}
-          </p>
-
-          <h4 class="text-lg font-semibold text-text-primary">
-            ${i18n.getMessage('Step 5: Values to Share with Lab Participants')}
-          </h4>
-          <div class="aiux-card aiux-card-border bg-base-100 overflow-x-auto">
-            <table class="aiux-table">
-              <thead>
-                <tr>
-                  <th scope="col">${i18n.getMessage('Field')}</th>
-                  <th scope="col">${i18n.getMessage('Value')}</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <th scope="row">${i18n.getMessage('MCP Server URL')}</th>
-                  <td data-i18n-skip>https://mcp.neon.tech/mcp</td>
-                </tr>
-                <tr>
-                  <th scope="row">${i18n.getMessage('API Key')}</th>
-                  <td data-i18n-skip>Bearer &lt;YOUR_NEON_API_KEY&gt;</td>
-                </tr>
-              </tbody>
-            </table>
-          </div>
-          <div class="aiux-alert aiux-alert-warning aiux-alert-soft">
-            <span>
-              ${i18n.getMessage(
-                'Important: the API Key field in ServiceNow must include the word "Bearer" as a prefix (e.g. Bearer napi_abc123...). Without this prefix, the connection fails with a 401 error.'
-              )}
-            </span>
-          </div>
-          <p class="text-base leading-relaxed text-text-secondary">
-            ${i18n.getMessage(
-              'Also provide the following for the MCP Step and Tool configuration, entered in the Tool description field: a projectId (camelCase, not project_id) and a SQL statement selecting cost_center, actual_amount_usd, baseline_amount_usd, variance, and variance_pct from VARIANCE_BASELINE_V filtered by cost_center, limited to 1 row.'
-            )}
-          </p>
-
-          <h4 class="text-lg font-semibold text-text-primary">
-            ${i18n.getMessage('Summary of Assets')}
-          </h4>
-          <div class="aiux-card aiux-card-border bg-base-100 overflow-x-auto">
-            <table class="aiux-table">
-              <thead>
-                <tr>
-                  <th scope="col">${i18n.getMessage('File')}</th>
-                  <th scope="col">${i18n.getMessage('Purpose')}</th>
-                </tr>
-              </thead>
-              <tbody>
-                ${NEON_ASSETS.map(
-                  asset => html`
-                    <tr>
-                      <th scope="row">${asset.file()}</th>
-                      <td>${asset.purpose()}</td>
-                    </tr>
-                  `
-                )}
-              </tbody>
-            </table>
-          </div>
-        </section>
-
-        <a class="aiux-btn aiux-btn-outline w-fit" href="${basePath}/home">
-          ${i18n.getMessage('Take me back to main page')}
-        </a>
+      <div class="mx-auto flex max-w-4xl flex-col gap-4 p-4 lg:p-8">
+        <header class="flex flex-col gap-2"><span class="aiux-badge aiux-badge-primary aiux-badge-outline w-fit">${i18n.getMessage('Demo Hub for SCs')}</span><h2 class="text-3xl font-bold text-text-primary">${i18n.getMessage('For Lab Facilitators')}</h2></header>
+        <p class="text-base leading-relaxed text-text-secondary">${i18n.getMessage('This contains considerations for Lab Facilitators.')}</p><h3 class="mt-4 text-2xl font-semibold text-text-primary">${i18n.getMessage('Lab Presentation')}</h3><ol class="list-decimal space-y-4 pl-6 text-base text-text-secondary"><li class="space-y-2"><p>${i18n.getMessage('Download the Lab Presentation deck here:')} <a class="aiux-link aiux-link-primary" href="https://servicenow-my.sharepoint.com/:p:/r/personal/santosh_panda_servicenow_com/Documents/April%20Workshop/Workflow%20Data%20Fabric%20-%20April.pptx?d=wd8395941af2744fca97f643023af253b&csf=1&web=1&e=HSopWT" target="_blank" rel="noreferrer">${i18n.getMessage('WDF Lab Presentation Deck')}</a>${i18n.getMessage('. This is only accessible through internal ServiceNow login credentials.')}</p></li><li class="space-y-2"><p>${i18n.getMessage('Familiarize yourself with the presentation guide and modify it as you see fit.')}</p></li><li class="space-y-2"><p>${i18n.getMessage('Update the Lab URL, QR Codes, and Reservation codes accordingly; use services such as')} <a class="aiux-link aiux-link-primary" href="https://bitly.com" target="_blank" rel="noreferrer">${i18n.getMessage('bitly.com')}</a> ${i18n.getMessage('to do this. It is encouraged to shorten URLs and use QR codes to make the experience as seamless for participants as possible.')}</p></li></ol><h3 class="mt-4 text-2xl font-semibold text-text-primary">${i18n.getMessage('Credentials')}</h3><ol class="list-decimal space-y-4 pl-6 text-base text-text-secondary"><li class="space-y-2"><p>${i18n.getMessage('Credentials for integrated systems are not shown in this lab guide.')}</p></li><li class="space-y-2"><p>${i18n.getMessage('Access the credential sheet here, ServiceNow login required:')} <a class="aiux-link aiux-link-primary" href="https://servicenow.sharepoint.com/:x:/s/iaapj/IQA9-mRIzGQYSaI0ab6a--VYAQv5ZKgUGg0RVyiTdEDezq4?e=Og5Zy3" target="_blank" rel="noreferrer">${i18n.getMessage('Credentials for WDF Lab')}</a>${i18n.getMessage('.')}</p></li></ol><h3 class="mt-4 text-2xl font-semibold text-text-primary">${i18n.getMessage('Integration Hub Action Endpoint')}</h3><ol class="list-decimal space-y-4 pl-6 text-base text-text-secondary"><li class="space-y-2"><p>${i18n.getMessage('In')} <a class="aiux-link aiux-link-primary" href="${basePath}/exercises/integration-hub">${i18n.getMessage('Lab Exercise: Integration Hub > Hands-on: Connection Set-up > Step 4')}</a>${i18n.getMessage(', feel free to use other services aside from the current free tier of')} <a class="aiux-link aiux-link-primary" href="https://beeceptor.com" target="_blank" rel="noreferrer">${i18n.getMessage('beeceptor.com')}</a>${i18n.getMessage(', especially if you are managing a high number of attendees (e.g. more than 10) as the free endpoint may hit access limits during your lab.')}</p></li><li class="space-y-2"><p>${i18n.getMessage('Updates are ongoing to make the Integration Hub endpoint used for the Action more scalable for more attendees.')}</p></li></ol><h3 class="mt-4 text-2xl font-semibold text-text-primary">${i18n.getMessage('Neon Database Setup (for MCP Lab)')}</h3><p class="text-base leading-relaxed text-text-secondary">${i18n.getMessage('The')} <a class="aiux-link aiux-link-primary" href="${basePath}/exercises/mcp-server-client">${i18n.getMessage('Lab Exercise: Model Context Protocol Server/Client')}</a> ${i18n.getMessage('requires an external cloud database hosted on')} <a class="aiux-link aiux-link-primary" href="https://neon.tech" target="_blank" rel="noreferrer">${i18n.getMessage('Neon')}</a> ${i18n.getMessage('that ServiceNow connects to via MCP. This database contains a table called')} <code class="rounded bg-base-200 px-1 text-sm">${i18n.getMessage('VARIANCE_BASELINE_V')}</code> ${i18n.getMessage('with 24 rows of cost center variance data used by the AI Agent during the lab.')}</p><p class="text-base leading-relaxed text-text-secondary">${i18n.getMessage('If the existing Neon database becomes unavailable (e.g. API key expired, project deleted, free tier limits reached), follow the steps below to recreate it from scratch. No technical expertise beyond copy-pasting is required.')}</p><h4 class="mt-2 text-xl font-semibold text-text-primary">${i18n.getMessage('Step 1: Create a Neon Account and Project')}</h4><ol class="list-decimal space-y-4 pl-6 text-base text-text-secondary"><li class="space-y-2"><p>${i18n.getMessage('Go to')} <a class="aiux-link aiux-link-primary" href="https://neon.tech" target="_blank" rel="noreferrer">${i18n.getMessage('neon.tech')}</a> ${i18n.getMessage('and sign up using GitHub or Google login.')}</p></li><li class="space-y-2"><p>${i18n.getMessage('Click')} <strong class="text-text-primary">${i18n.getMessage('New Project')}</strong>${i18n.getMessage('.')}</p></li><li class="space-y-2"><p>${i18n.getMessage('Enter a project name (e.g.')} <code class="rounded bg-base-200 px-1 text-sm">${i18n.getMessage('wdf-loom')}</code>${i18n.getMessage(').')}</p></li><li class="space-y-2"><p>${i18n.getMessage('Select a region close to your lab audience (e.g.')} <strong class="text-text-primary">${i18n.getMessage('East US 2')}</strong> ${i18n.getMessage('for Americas,')} <strong class="text-text-primary">${i18n.getMessage('Singapore')}</strong> ${i18n.getMessage('for APAC).')}</p></li><li class="space-y-2"><p>${i18n.getMessage('Click')} <strong class="text-text-primary">${i18n.getMessage('Create Project')}</strong>${i18n.getMessage('.')}</p></li><li class="space-y-2"><p>${i18n.getMessage('Once created, note your')} <strong class="text-text-primary">${i18n.getMessage('Project ID')}</strong> ${i18n.getMessage('— it is shown in the project dashboard URL and looks like')} <code class="rounded bg-base-200 px-1 text-sm">${i18n.getMessage('shy-base-71725149')}</code>${i18n.getMessage('. You will need this later.')}</p></li></ol><h4 class="mt-2 text-xl font-semibold text-text-primary">${i18n.getMessage('Step 2: Create the Table and Seed Data')}</h4><ol class="list-decimal space-y-4 pl-6 text-base text-text-secondary"><li class="space-y-2"><p>${i18n.getMessage('In your Neon project, navigate to')} <strong class="text-text-primary">${i18n.getMessage('SQL Editor')}</strong> ${i18n.getMessage('from the left sidebar.')}</p></li><li class="space-y-2"><p>${i18n.getMessage('Open the file')} <a class="aiux-link aiux-link-primary" href="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeB/main/neon_setup.sql" target="_blank" rel="noreferrer">${i18n.getMessage('neon_setup.sql')}</a> ${i18n.getMessage('from this repository. Copy the')} <strong class="text-text-primary">${i18n.getMessage('entire')}</strong> ${i18n.getMessage('contents of the file.')}</p></li><li class="space-y-2"><p>${i18n.getMessage('Paste it into the Neon SQL Editor and click')} <strong class="text-text-primary">${i18n.getMessage('Run')}</strong>${i18n.getMessage('.')}</p></li><li class="space-y-2"><p>${i18n.getMessage('You should see output confirming')} <strong class="text-text-primary">${i18n.getMessage('24 rows')}</strong> ${i18n.getMessage('inserted and a sample row for cost center')} <code class="rounded bg-base-200 px-1 text-sm">${i18n.getMessage('CC_IT_001')}</code>${i18n.getMessage(':')}</p></li></ol><pre class="overflow-x-auto rounded-xl border border-base-300 bg-base-200 p-4 text-sm text-text-primary"><code>${" total_rows\n------------\n         24\n\n cost_center | actual_amount_usd | baseline_amount_usd | variance | variance_pct\n-------------+-------------------+---------------------+----------+--------------\n CC_IT_001   |            400001 |              400000 |       -1 |            0"}</code></pre><blockquote class="rounded-r-lg border-l-4 border-primary bg-base-200 px-4 py-3 text-sm leading-relaxed text-text-secondary"><p><strong class="text-text-primary">${i18n.getMessage('Tip:')}</strong> ${i18n.getMessage('The seed data is also available as a CSV file at')} <a class="aiux-link aiux-link-primary" href="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeB/main/VARIANCE_BASELINE_V.csv" target="_blank" rel="noreferrer">${i18n.getMessage('VARIANCE_BASELINE_V.csv')}</a> ${i18n.getMessage('if you need to inspect or modify the data before loading.')}</p></blockquote><h4 class="mt-2 text-xl font-semibold text-text-primary">${i18n.getMessage('Step 3: Create a Neon API Key')}</h4><ol class="list-decimal space-y-4 pl-6 text-base text-text-secondary"><li class="space-y-2"><p>${i18n.getMessage('In the Neon Console, click your')} <strong class="text-text-primary">${i18n.getMessage('profile icon')}</strong> ${i18n.getMessage('(bottom-left) >')} <strong class="text-text-primary">${i18n.getMessage('Account Settings')}</strong>${i18n.getMessage('.')}</p></li><li class="space-y-2"><p>${i18n.getMessage('Go to')} <strong class="text-text-primary">${i18n.getMessage('API Keys')}</strong> ${i18n.getMessage('>')} <strong class="text-text-primary">${i18n.getMessage('Generate new API key')}</strong>${i18n.getMessage('.')}</p></li><li class="space-y-2"><p>${i18n.getMessage('Give it a name (e.g.')} <code class="rounded bg-base-200 px-1 text-sm">${i18n.getMessage('wdf-lab-mcp')}</code>${i18n.getMessage(') and click')} <strong class="text-text-primary">${i18n.getMessage('Create')}</strong>${i18n.getMessage('.')}</p></li><li class="space-y-2"><p>${i18n.getMessage('Copy the generated key — it starts with')} <code class="rounded bg-base-200 px-1 text-sm">${i18n.getMessage('napi_')}</code>${i18n.getMessage('.')} <strong class="text-text-primary">${i18n.getMessage('Save it securely; you will not be able to see it again.')}</strong></p></li></ol><h4 class="mt-2 text-xl font-semibold text-text-primary">${i18n.getMessage('Step 4: Verify the MCP Connection')}</h4><p class="text-base leading-relaxed text-text-secondary">${i18n.getMessage('Run this command in a terminal to confirm the Neon MCP server can reach your data. Replace')} <code class="rounded bg-base-200 px-1 text-sm">${i18n.getMessage('<YOUR_NEON_API_KEY>')}</code> ${i18n.getMessage('and')} <code class="rounded bg-base-200 px-1 text-sm">${i18n.getMessage('<YOUR_PROJECT_ID>')}</code> ${i18n.getMessage('with your values.')}</p><pre class="overflow-x-auto rounded-xl border border-base-300 bg-base-200 p-4 text-sm text-text-primary"><code>${"curl -s -X POST https://mcp.neon.tech/mcp \\\n  -H \"Authorization: Bearer <YOUR_NEON_API_KEY>\" \\\n  -H \"Content-Type: application/json\" \\\n  -H \"Accept: application/json, text/event-stream\" \\\n  -d '{\"jsonrpc\":\"2.0\",\"id\":1,\"method\":\"initialize\",\"params\":{\"protocolVersion\":\"2024-11-05\",\"capabilities\":{},\"clientInfo\":{\"name\":\"test\",\"version\":\"1.0.0\"}}}'"}</code></pre><p class="text-base leading-relaxed text-text-secondary">${i18n.getMessage('A successful response will contain')} <code class="rounded bg-base-200 px-1 text-sm">${i18n.getMessage('"serverInfo":{"name":"mcp-server-neon"}')}</code>${i18n.getMessage('. If you get a 401 error, double-check your API key.')}</p><h4 class="mt-2 text-xl font-semibold text-text-primary">${i18n.getMessage('Step 5: Values to Share with Lab Participants')}</h4><p class="text-base leading-relaxed text-text-secondary">${i18n.getMessage('Provide the following to your lab participants. These are entered during')} <a class="aiux-link aiux-link-primary" href="${basePath}/exercises/mcp-server-client">${i18n.getMessage('Lab Exercise: Model Context Protocol > Configure MCP Client > Step 3')}</a>${i18n.getMessage(':')}</p><div class="aiux-card aiux-card-border bg-base-100 overflow-x-auto"><table class="aiux-table aiux-table-zebra"><thead><tr><th scope="col">${i18n.getMessage('Field')}</th><th scope="col">${i18n.getMessage('Value')}</th></tr></thead><tbody><tr><td><strong class="text-text-primary">${i18n.getMessage('MCP Server URL')}</strong></td><td><code class="rounded bg-base-200 px-1 text-sm">${i18n.getMessage('https://mcp.neon.tech/mcp')}</code></td></tr><tr><td><strong class="text-text-primary">${i18n.getMessage('API Key')}</strong></td><td><code class="rounded bg-base-200 px-1 text-sm">${i18n.getMessage('Bearer <YOUR_NEON_API_KEY>')}</code></td></tr></tbody></table></div><blockquote class="rounded-r-lg border-l-4 border-primary bg-base-200 px-4 py-3 text-sm leading-relaxed text-text-secondary"><p><strong class="text-text-primary">${i18n.getMessage('Important:')}</strong> ${i18n.getMessage('The API Key field in ServiceNow must include the word')} <strong class="text-text-primary">${i18n.getMessage('Bearer')}</strong> ${i18n.getMessage('as a prefix. For example:')} <code class="rounded bg-base-200 px-1 text-sm">${i18n.getMessage('Bearer napi_abc123...')}</code>${i18n.getMessage('. Without this prefix, the connection will fail with a 401 error.')}</p></blockquote><p class="text-base leading-relaxed text-text-secondary">${i18n.getMessage('Additionally, provide the following for')} <a class="aiux-link aiux-link-primary" href="${basePath}/exercises/mcp-server-client">${i18n.getMessage('Lab Exercise: Model Context Protocol > Configure MCP Step and Tool > Step 6')}</a>${i18n.getMessage(', to be entered in the')} <strong class="text-text-primary">${i18n.getMessage('Tool description')}</strong> ${i18n.getMessage('field:')}</p><pre class="overflow-x-auto rounded-xl border border-base-300 bg-base-200 p-4 text-sm text-text-primary"><code>${"projectId: <YOUR_PROJECT_ID>\nsql: SELECT cost_center, actual_amount_usd, baseline_amount_usd, variance, variance_pct FROM \"VARIANCE_BASELINE_V\" WHERE cost_center = '{{cost_center}}' LIMIT 1"}</code></pre><blockquote class="rounded-r-lg border-l-4 border-primary bg-base-200 px-4 py-3 text-sm leading-relaxed text-text-secondary"><p><strong class="text-text-primary">${i18n.getMessage('Note:')}</strong> ${i18n.getMessage('The parameter name is')} <code class="rounded bg-base-200 px-1 text-sm">${i18n.getMessage('projectId')}</code> ${i18n.getMessage('(camelCase). Using')} <code class="rounded bg-base-200 px-1 text-sm">${i18n.getMessage('project_id')}</code> ${i18n.getMessage('(snake_case) will result in an error.')}</p></blockquote><h4 class="mt-2 text-xl font-semibold text-text-primary">${i18n.getMessage('Summary of Assets')}</h4><div class="aiux-card aiux-card-border bg-base-100 overflow-x-auto"><table class="aiux-table aiux-table-zebra"><thead><tr><th scope="col">${i18n.getMessage('File')}</th><th scope="col">${i18n.getMessage('Purpose')}</th></tr></thead><tbody><tr><td><a class="aiux-link aiux-link-primary" href="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeB/main/neon_setup.sql" target="_blank" rel="noreferrer">${i18n.getMessage('neon_setup.sql')}</a></td><td>${i18n.getMessage('Complete SQL script — creates the table and inserts all 24 rows. Copy-paste into Neon SQL Editor.')}</td></tr><tr><td><a class="aiux-link aiux-link-primary" href="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeB/main/VARIANCE_BASELINE_V.csv" target="_blank" rel="noreferrer">${i18n.getMessage('VARIANCE_BASELINE_V.csv')}</a></td><td>${i18n.getMessage('Raw seed data in CSV format for reference or manual inspection.')}</td></tr></tbody></table></div>
       </div>
     `;
   }
