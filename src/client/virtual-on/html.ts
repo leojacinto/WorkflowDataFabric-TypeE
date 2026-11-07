@@ -19,10 +19,10 @@ export const VIRTUAL_ON_HTML = `<!doctype html>
   <script src="scene.js" defer></script>
 </head>
 <body>
-  <main id="app" data-theme="light">
+  <main id="app" data-theme="dark">
     <canvas id="scene" data-layout="square" aria-label="Animated line-art study of seven numbered Virtuaroids"></canvas>
     <div class="vignette" aria-hidden="true"></div>
-    <button id="theme-toggle" aria-pressed="true">DARK</button>
+    <button id="theme-toggle" aria-pressed="false">LIGHT</button>
     <section class="intro">
       <h1 id="scene-heading"></h1>
       <p id="scene-caption"></p>
