@@ -27,7 +27,7 @@ declare global {
                     'aiux-dependency|toc.js': {
                         table: 'sys_aix_dependency'
                         id: '64660b0cb996d59927d49f126aefd78e'
-                        deleted: false
+                        deleted: true
                     }
                     'aiux-experience-page-rel|x-snc-wdf-lab-coming-soon-page': {
                         table: 'sys_aix_experience_page_rel'
@@ -132,7 +132,7 @@ declare global {
                     'aiux-m2m-widget-dep|x-snc-wdf-lab-coming-soon-page|toc.js': {
                         table: 'sys_aix_m2m_widget_dependency'
                         id: '59a8a92d969ba07fbbddc119f77a7229'
-                        deleted: false
+                        deleted: true
                     }
                     'aiux-m2m-widget-dep|x-snc-wdf-lab-demo-hub-considerations-page|document-title.js': {
                         table: 'sys_aix_m2m_widget_dependency'
@@ -206,7 +206,7 @@ declare global {
                     'aiux-m2m-widget-dep|x-snc-wdf-lab-home-page|toc.js': {
                         table: 'sys_aix_m2m_widget_dependency'
                         id: 'd3d6485fc471ff14e8104481dfbf0226'
-                        deleted: false
+                        deleted: true
                     }
                     'aiux-m2m-widget-dep|x-snc-wdf-lab-integration-hub-page|build-agent-chat.js': {
                         table: 'sys_aix_m2m_widget_dependency'
