@@ -20,6 +20,10 @@ declare global {
                         id: '4dda3c22972cde5ff3bb7de2044d2277'
                         deleted: false
                     }
+                    'aiux-dependency|lab-assets.js': {
+                        table: 'sys_aix_dependency'
+                        id: 'c79cfc37a1383587ec6332cb6470c07b'
+                    }
                     'aiux-dependency|toc.js': {
                         table: 'sys_aix_dependency'
                         id: '64660b0cb996d59927d49f126aefd78e'
@@ -135,10 +139,18 @@ declare global {
                         id: '1285a7002ac73f18ae90ea3dbd4615fe'
                         deleted: false
                     }
+                    'aiux-m2m-widget-dep|x-snc-wdf-lab-demo-hub-considerations-page|lab-assets.js': {
+                        table: 'sys_aix_m2m_widget_dependency'
+                        id: '31abf9843e758eea047ff3fdf018a68f'
+                    }
                     'aiux-m2m-widget-dep|x-snc-wdf-lab-diagrams-page|document-title.js': {
                         table: 'sys_aix_m2m_widget_dependency'
                         id: '14033d724c04b60c8e4917a542f507e5'
                         deleted: false
+                    }
+                    'aiux-m2m-widget-dep|x-snc-wdf-lab-diagrams-page|lab-assets.js': {
+                        table: 'sys_aix_m2m_widget_dependency'
+                        id: '5f792dfe981985c34026e7b84455923d'
                     }
                     'aiux-m2m-widget-dep|x-snc-wdf-lab-external-content-connector-page|build-agent-chat.js': {
                         table: 'sys_aix_m2m_widget_dependency'
@@ -150,10 +162,18 @@ declare global {
                         id: 'c3a4b098c8a9dd1868ce65faf49a8e85'
                         deleted: false
                     }
+                    'aiux-m2m-widget-dep|x-snc-wdf-lab-external-content-connector-page|lab-assets.js': {
+                        table: 'sys_aix_m2m_widget_dependency'
+                        id: '8ec8b3f13f118f2c31ca508ffbffb5aa'
+                    }
                     'aiux-m2m-widget-dep|x-snc-wdf-lab-final-activity-page|document-title.js': {
                         table: 'sys_aix_m2m_widget_dependency'
                         id: '7dbb7848fc8f8bd61e1bc11972a0fe94'
                         deleted: false
+                    }
+                    'aiux-m2m-widget-dep|x-snc-wdf-lab-final-activity-page|lab-assets.js': {
+                        table: 'sys_aix_m2m_widget_dependency'
+                        id: '59b10316e82d2c5b5a483a5454753cb3'
                     }
                     'aiux-m2m-widget-dep|x-snc-wdf-lab-for-facilitators-page|document-title.js': {
                         table: 'sys_aix_m2m_widget_dependency'
@@ -170,10 +190,18 @@ declare global {
                         id: '41f0821b928c2abcb7b021bbc8ebce9b'
                         deleted: false
                     }
+                    'aiux-m2m-widget-dep|x-snc-wdf-lab-fundamentals-page|lab-assets.js': {
+                        table: 'sys_aix_m2m_widget_dependency'
+                        id: 'df46d7cd7dcef81ea46028aa6b3abe10'
+                    }
                     'aiux-m2m-widget-dep|x-snc-wdf-lab-home-page|document-title.js': {
                         table: 'sys_aix_m2m_widget_dependency'
                         id: '90e88ee310e99c3e3b83d705ed176cc4'
                         deleted: false
+                    }
+                    'aiux-m2m-widget-dep|x-snc-wdf-lab-home-page|lab-assets.js': {
+                        table: 'sys_aix_m2m_widget_dependency'
+                        id: '73bdfd6f5d765ddff663728a19505dcf'
                     }
                     'aiux-m2m-widget-dep|x-snc-wdf-lab-home-page|toc.js': {
                         table: 'sys_aix_m2m_widget_dependency'
@@ -190,6 +218,10 @@ declare global {
                         id: '7d35ce4c7921ae0aefc7408adca26c4e'
                         deleted: false
                     }
+                    'aiux-m2m-widget-dep|x-snc-wdf-lab-integration-hub-page|lab-assets.js': {
+                        table: 'sys_aix_m2m_widget_dependency'
+                        id: 'af98f5b79dc83f814f5c7ec5dab4a774'
+                    }
                     'aiux-m2m-widget-dep|x-snc-wdf-lab-kafka-stream-connect-page|build-agent-chat.js': {
                         table: 'sys_aix_m2m_widget_dependency'
                         id: 'd2d66d835f0a79998d426b4dd2eecb14'
@@ -200,10 +232,18 @@ declare global {
                         id: 'ecef4065dd7c90e24963c81ba1501e26'
                         deleted: false
                     }
+                    'aiux-m2m-widget-dep|x-snc-wdf-lab-kafka-stream-connect-page|lab-assets.js': {
+                        table: 'sys_aix_m2m_widget_dependency'
+                        id: 'eb8458e1432dc88758dfd1e8247a61ac'
+                    }
                     'aiux-m2m-widget-dep|x-snc-wdf-lab-key-takeaways-page|document-title.js': {
                         table: 'sys_aix_m2m_widget_dependency'
                         id: 'f228126f5d3c6d7a12c495821f9a09ac'
                         deleted: false
+                    }
+                    'aiux-m2m-widget-dep|x-snc-wdf-lab-key-takeaways-page|lab-assets.js': {
+                        table: 'sys_aix_m2m_widget_dependency'
+                        id: 'f2e131a159caa0e87ac041a1579b6514'
                     }
                     'aiux-m2m-widget-dep|x-snc-wdf-lab-lens-and-document-intelligence-page|build-agent-chat.js': {
                         table: 'sys_aix_m2m_widget_dependency'
@@ -215,6 +255,10 @@ declare global {
                         id: '19f88b562aab282397cc7f31faec1eed'
                         deleted: false
                     }
+                    'aiux-m2m-widget-dep|x-snc-wdf-lab-lens-and-document-intelligence-page|lab-assets.js': {
+                        table: 'sys_aix_m2m_widget_dependency'
+                        id: '00a6be443c504658616279d577ec99c3'
+                    }
                     'aiux-m2m-widget-dep|x-snc-wdf-lab-mcp-server-client-page|build-agent-chat.js': {
                         table: 'sys_aix_m2m_widget_dependency'
                         id: '5dba3211b57ffa793d3f905acc1ef0c9'
@@ -225,10 +269,18 @@ declare global {
                         id: '76f38162b57b4d8fbe2a3c57e96b8c12'
                         deleted: false
                     }
+                    'aiux-m2m-widget-dep|x-snc-wdf-lab-mcp-server-client-page|lab-assets.js': {
+                        table: 'sys_aix_m2m_widget_dependency'
+                        id: '3f637b9dba035da55525aa87e00402b6'
+                    }
                     'aiux-m2m-widget-dep|x-snc-wdf-lab-troubleshooting-page|document-title.js': {
                         table: 'sys_aix_m2m_widget_dependency'
                         id: 'e42ca7f7f661a12ec67c348c55832ca6'
                         deleted: false
+                    }
+                    'aiux-m2m-widget-dep|x-snc-wdf-lab-troubleshooting-page|lab-assets.js': {
+                        table: 'sys_aix_m2m_widget_dependency'
+                        id: 'c1771c834124cf18741a3eb73ae250ea'
                     }
                     'aiux-m2m-widget-dep|x-snc-wdf-lab-zero-copy-connectors-page|build-agent-chat.js': {
                         table: 'sys_aix_m2m_widget_dependency'
@@ -239,6 +291,10 @@ declare global {
                         table: 'sys_aix_m2m_widget_dependency'
                         id: 'd56dfe3712011889813bb7ef6240f9f9'
                         deleted: false
+                    }
+                    'aiux-m2m-widget-dep|x-snc-wdf-lab-zero-copy-connectors-page|lab-assets.js': {
+                        table: 'sys_aix_m2m_widget_dependency'
+                        id: '7b49f19a759aa2051a8712932cee3594'
                     }
                     'aiux-page-widget|x-snc-wdf-lab-coming-soon-page': {
                         table: 'sys_aix_widget'
@@ -2356,6 +2412,1062 @@ declare global {
                         table: 'x_snc_forecast_v_0_expense_transactions'
                         id: 'ec9aa3003bd6fe500ad1a021a3e45af5'
                     }
+                    'lab-asset-dataflow-backend-components-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '1049ecd99f4f40cb91e54cb72831931a'
+                    }
+                    'lab-asset-dataflow-complete-landscape-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'da91cbd8556d4908a0b72a15cab294c2'
+                    }
+                    'lab-asset-dataflow-external-content-connector-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '6d33b4b0d4a14365b20a988bc2f98d9b'
+                    }
+                    'lab-asset-dataflow-fundamentals-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'd501b53a400b4202966569a38107cf03'
+                    }
+                    'lab-asset-dataflow-integration-hub-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '0f4cbc892cb5456096595855feaef255'
+                    }
+                    'lab-asset-dataflow-lens-document-intelligence-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'c637554aaca740f0a6609d1fc8d3fe47'
+                    }
+                    'lab-asset-dataflow-mcp-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'fb3c26a8bf73432c946ed2d35283be7b'
+                    }
+                    'lab-asset-dataflow-outcome-agent-flow-doc-intelligence-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'b292fed21a8f40eba0e03cbe0033923c'
+                    }
+                    'lab-asset-dataflow-outcome-agent-flow-external-content-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'da97c8df68fa4dc89f81703f14eccae7'
+                    }
+                    'lab-asset-dataflow-outcome-agent-flow-integration-hub-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '39c5c6cb73434cc5b69232500dc63d64'
+                    }
+                    'lab-asset-dataflow-outcome-agent-flow-mcp-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '7a19987317034aeba32b3c35677c5fdd'
+                    }
+                    'lab-asset-dataflow-outcome-agent-flow-zero-copy-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '329f7c036c774ab8a3857ecd2d352eba'
+                    }
+                    'lab-asset-dataflow-prerequisites-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'd36ea47e96854c81bc8fa3531699edf2'
+                    }
+                    'lab-asset-dataflow-user-interaction-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '3c7ee976ed0046aea0907c694f82e1f8'
+                    }
+                    'lab-asset-dataflow-zero-copy-connectors-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '1a7134d3af0746bd8518743e69e7d26b'
+                    }
+                    'lab-asset-home-building-for-whom': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'ff687667cb644ba7aad1e593cb3d4ce6'
+                    }
+                    'lab-asset-home-how-workshop-works': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '485af675c8c747209eefc27183644ba6'
+                    }
+                    'lab-asset-home-outcome-agent-flow': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'b770cdf841ec454796224b32d41b1705'
+                    }
+                    'lab-asset-home-readme-hero': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '2b1bc1a478084cee8ffd20cdcb72e236'
+                    }
+                    'lab-asset-image-1-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '450b3ddf0cdf47fa8d6cd94e67927ffa'
+                    }
+                    'lab-asset-image-2-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '335318e48d934f56b17ebdd95d06dc76'
+                    }
+                    'lab-asset-image-3-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'c8482df6de334a04857ca6bb6be8edf4'
+                    }
+                    'lab-asset-image-4-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'd9bf35e90ff34c95a4d1384ac4c74007'
+                    }
+                    'lab-asset-image-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'ff16fe778ef145d091dcd1021ee721b6'
+                    }
+                    'lab-asset-kahoot-hype-screen-light-gif': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'ec06288f3c8a4b3da83780744894ebf1'
+                    }
+                    'lab-asset-sc-common-agent-studio-create-manage-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '5fcfc335492c435c90d627637fd03dc9'
+                    }
+                    'lab-asset-sc-common-agent-studio-users-nav-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '09758e5a1b574851a19458fd287a83fc'
+                    }
+                    'lab-asset-sc-common-expense-event-nav-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'f0142b8ec456492e891d710ed996585a'
+                    }
+                    'lab-asset-sc-common-fow-nav-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'cdcb6d9cbe9d4a07aed748682d4914a4'
+                    }
+                    'lab-asset-sc-common-fow-system-user-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'e570796726d741e68475c09c41d62e17'
+                    }
+                    'lab-asset-sc-common-index-budget-history-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '99e01f77871e439484b8cae6f32b0bca'
+                    }
+                    'lab-asset-sc-common-index-expense-transactions-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'cee64e31569b44d1b0ca18b6ab213123'
+                    }
+                    'lab-asset-sc-common-indexed-sources-nav-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '78b72d04495a49bb86580171063da681'
+                    }
+                    'lab-asset-sc-common-logout-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'f8f8a301dffc46bb8fa386073865de71'
+                    }
+                    'lab-asset-sc-common-roles-tab-edit-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'a014b5d0b8a44b89b7a45d62b6974b5c'
+                    }
+                    'lab-asset-sc-common-save-and-continue-1-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '82e5620fddd14e0294359cf1627d02a7'
+                    }
+                    'lab-asset-sc-common-search-admin-user-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '293be64191c8402d9996746b6b33cc9a'
+                    }
+                    'lab-asset-sc-common-search-indexed-sources-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'd2f708b2dfa1430fa875cb05ef4ad267'
+                    }
+                    'lab-asset-sc-common-troubleshoot-now-assist-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '45738a20efc24f57add9f7fa688b2159'
+                    }
+                    'lab-asset-sc-data-source-create-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '048a7182f5234093bdac6aa436e1b92e'
+                    }
+                    'lab-asset-sc-data-source-json-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'c359ee13e7884a5c87f2b13dbffc3b74'
+                    }
+                    'lab-asset-sc-data-source-new-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'afb09df51763413390d37e13733e9dfa'
+                    }
+                    'lab-asset-sc-data-source-save-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '612d16d3f5dc4fca9f9bf9459c99f94b'
+                    }
+                    'lab-asset-sc-data-source-start-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'e5022ca1917b4309b91f94fcd25cd288'
+                    }
+                    'lab-asset-sc-data-source-test-load-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '807961ac9f424244a8f1dadca3fe7af6'
+                    }
+                    'lab-asset-sc-demohub-instance-form-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'de9731715bc4411e9301a92451dd26b8'
+                    }
+                    'lab-asset-sc-demohub-instance-ready-email-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '13fe092b5a8147438e9d314f20c98b01'
+                    }
+                    'lab-asset-sc-demohub-instances-available-br-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '7d21cb7995e74ef38643f02123b66b78'
+                    }
+                    'lab-asset-sc-demohub-manage-instances-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'eb7cc9f9a5cb4fafb8d3896e390ce621'
+                    }
+                    'lab-asset-sc-demohub-no-instances-au-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '253d68c27388442084971d2243638a0d'
+                    }
+                    'lab-asset-sc-demohub-request-instance-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'e98980dc053e47479e8c0dab6026b1a2'
+                    }
+                    'lab-asset-sc-demohub-stats-build-tag-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '79d80c07d5e1409b9b3279862e2e7c5d'
+                    }
+                    'lab-asset-sc-demohub-submit-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'f95d6d3c003746e3bd6e25102675e33d'
+                    }
+                    'lab-asset-sc-docker-image-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '81d381a518434a3fb5a6bccde5ccf0a5'
+                    }
+                    'lab-asset-sc-docker-pull-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'f0c8a8d718294bf89e3061af29614ddc'
+                    }
+                    'lab-asset-sc-docker-run-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '676d7d74e3ff4ce5bf3944e683447721'
+                    }
+                    'lab-asset-sc-fund-all-fields-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '855650b53b6e4c5db26e78a8ab29aa55'
+                    }
+                    'lab-asset-sc-fund-ba-result-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '1833edbfa6184becb5798391dcf5bf30'
+                    }
+                    'lab-asset-sc-fund-cat-complete-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'baf5ca57ed4a4340a5948dbf5e7bd3e9'
+                    }
+                    'lab-asset-sc-fund-cat-item-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'cc972c991cc2498980a9532ba02f91b5'
+                    }
+                    'lab-asset-sc-fund-create-scope-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'ea37ed3c8c25439483530f056e31bcd4'
+                    }
+                    'lab-asset-sc-fund-dummy-scope-create-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '66a70a4f3dc8444caabad6293a564cf6'
+                    }
+                    'lab-asset-sc-fund-exercise-scope-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'e341f567ff1f409298b16f2eb372f83d'
+                    }
+                    'lab-asset-sc-fund-field-details-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '187b5fc04f9e4b4abc138a3c6ebc5c7f'
+                    }
+                    'lab-asset-sc-fund-forcast-variance-dummy-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '7f3855f71c4e47b194faccc6aebc664a'
+                    }
+                    'lab-asset-sc-fund-forcast-variance-scope-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '818504f1a7cb4691bf328b057d41e88c'
+                    }
+                    'lab-asset-sc-fund-new-field-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '978bb6922d9846b8b15656eadccb4139'
+                    }
+                    'lab-asset-sc-fund-new-scope-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '0f444016280f4c4283505ad3313bba34'
+                    }
+                    'lab-asset-sc-fund-new-table-details-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '54937907e5554f89bd65db16f69ec348'
+                    }
+                    'lab-asset-sc-fund-new-table-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'cb57edac707d4a388fd2b9d9d7c3adc4'
+                    }
+                    'lab-asset-sc-fund-save-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'c1447e0c11a2408dbe041628887f116e'
+                    }
+                    'lab-asset-sc-fund-scope-change-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '647d6ca626a74a838504a68f200e06d3'
+                    }
+                    'lab-asset-sc-fund-stats-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'bcbb1d439dd149168a04e1deb00d8dfa'
+                    }
+                    'lab-asset-sc-fund-sysdef-tables-nav-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'cb60a3639b444a6583fbdd0a54e74567'
+                    }
+                    'lab-asset-sc-ihub-add-class-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '4f569b81ca524189b59acb5a25b2cac5'
+                    }
+                    'lab-asset-sc-ihub-alternate-trigger-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '1cabc348e3ea4c9e9f42b23610658238'
+                    }
+                    'lab-asset-sc-ihub-ba-result-1-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '2ee3e6b2ca8146dea7084472444d0694'
+                    }
+                    'lab-asset-sc-ihub-ba-result-2-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '8465bd323ea14ffa8e7da153c8560c0b'
+                    }
+                    'lab-asset-sc-ihub-complete-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '0c587282913c408980f4845104877291'
+                    }
+                    'lab-asset-sc-ihub-create-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'f2eccc4052ab4aaf904778ad92f1d196'
+                    }
+                    'lab-asset-sc-ihub-expense-event-delete-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '21bc0ded03894a3e8d669c7e8799356a'
+                    }
+                    'lab-asset-sc-ihub-finance-case-list-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '494f44f54a7d429f8673b6f98df0e4dd'
+                    }
+                    'lab-asset-sc-ihub-integration-result-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '84275e9fc56f4a2a91901cea3f65894b'
+                    }
+                    'lab-asset-sc-ihub-linux-final-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '00b615749dc6475295c36ba2cf851cec'
+                    }
+                    'lab-asset-sc-ihub-linux-host-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'ada2884b145f46a79e3f6380f01f32c2'
+                    }
+                    'lab-asset-sc-ihub-linux-name-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'e053def915d24a5ea699406d1d089a40'
+                    }
+                    'lab-asset-sc-ihub-map-data-add-complete-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '3a4d0a6e926e4d25b91b1c53a14fccd8'
+                    }
+                    'lab-asset-sc-ihub-map-data-add-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '3c945fd56d844a7294dc6c996064a2e6'
+                    }
+                    'lab-asset-sc-ihub-map-data-complete-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '281e8508e2f04a65bad5cd2da53362c8'
+                    }
+                    'lab-asset-sc-ihub-map-data-select-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'b9d25a2a075e4efca95e4aacc1f0e478'
+                    }
+                    'lab-asset-sc-ihub-now-assist-badge-notification-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '6926fe2f294d4ba289517561c5e9bed9'
+                    }
+                    'lab-asset-sc-ihub-now-assist-chat-expand-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '0c59c4b57d9c4372a8c0f424af923525'
+                    }
+                    'lab-asset-sc-ihub-now-assist-panel-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '17bedf1a0646491ab46167e18b707aff'
+                    }
+                    'lab-asset-sc-ihub-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '81b3411404904007b299ca733f7796bd'
+                    }
+                    'lab-asset-sc-ihub-prepare-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '360c70ed6ef8467ba899c0bf2e84e523'
+                    }
+                    'lab-asset-sc-ihub-preview-data-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '01f60b6ff85849d5b382bb1840eb24f4'
+                    }
+                    'lab-asset-sc-ihub-preview-object-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'b57bab9f38a24998911af5c5135c69cc'
+                    }
+                    'lab-asset-sc-ihub-preview-sample-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '4618e2699a7f4710bfb0672b6f0d9007'
+                    }
+                    'lab-asset-sc-ihub-provide-basic-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'd83fe84db4384ccf93a118afe536e22b'
+                    }
+                    'lab-asset-sc-ihub-roles-sn-aia-save-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'ee5033e11ec74d58941f77cdcbf73bb3'
+                    }
+                    'lab-asset-sc-ihub-rollback-integration-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'bae295ecb43c475e8d8934a654df4ac1'
+                    }
+                    'lab-asset-sc-ihub-run-integration-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '4e1691213d28492bb28d8713b281c59d'
+                    }
+                    'lab-asset-sc-ihub-select-class-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '3b68a658db42431998622e9d1c6da7fa'
+                    }
+                    'lab-asset-sc-ihub-select-linux-mapping-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '8e4a7dab50a9404c81e4ec3ff14b4c12'
+                    }
+                    'lab-asset-sc-ihub-select-windows-mapping-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'bc484650d769448db96408c25dfae867'
+                    }
+                    'lab-asset-sc-ihub-specify-basic-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '9e4a6249a42746b3a9cc8d11c36f3226'
+                    }
+                    'lab-asset-sc-ihub-windows-final-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'dc166fdc196e4e828a50d9b985d248db'
+                    }
+                    'lab-asset-sc-ldi-activate-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '73062a3283aa43d4b6b03134ed98526d'
+                    }
+                    'lab-asset-sc-ldi-ba-props-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '90d0dcd4db824f36a8ddc89b339ef77a'
+                    }
+                    'lab-asset-sc-ldi-ba-runtime-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '192ea8a07cec44b39951ea27bde47eb5'
+                    }
+                    'lab-asset-sc-ldi-choose-file-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'a66eddac891d41f7bb6df4cf5dc3cfe4'
+                    }
+                    'lab-asset-sc-ldi-create-usecase-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'bedfb4e9378649a1872d7618569766a2'
+                    }
+                    'lab-asset-sc-ldi-doc-extraction-nav-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '5d25029485e9422c9014888043eac666'
+                    }
+                    'lab-asset-sc-ldi-edit-extract-skill-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '7f5b926080f34477908bdfcdfa56c536'
+                    }
+                    'lab-asset-sc-ldi-extracted-info-view-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '2dfe8c0ccd5b4847bc22f5a3dcd8b994'
+                    }
+                    'lab-asset-sc-ldi-finance-case-list-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'f2502b170f08480f94298a4877a876bd'
+                    }
+                    'lab-asset-sc-ldi-integrations-tab-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '02d63a9026024c088e1543e660b4e989'
+                    }
+                    'lab-asset-sc-ldi-lens-accept-defaults-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'f4e6c66dc6e44427a9af152eeef4faae'
+                    }
+                    'lab-asset-sc-ldi-lens-back-to-skills-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'b502ed3cb76d4ab9919a059f5eefe135'
+                    }
+                    'lab-asset-sc-ldi-lens-create-with-lens-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '30aaf8ffcd6f447aa169dc59e74e9be0'
+                    }
+                    'lab-asset-sc-ldi-lens-download-packages-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '45ec51c2b27947a794606c5128d93131'
+                    }
+                    'lab-asset-sc-ldi-lens-downloads-nav-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'cd9ba1b16cd741da870e9dd4c142b854'
+                    }
+                    'lab-asset-sc-ldi-lens-event-saved-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'd33a0b5cc7344362af897c4e70014d9a'
+                    }
+                    'lab-asset-sc-ldi-lens-frame-analyze-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'ce172ff5408647d2bff304410bf9475c'
+                    }
+                    'lab-asset-sc-ldi-lens-open-app-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '7f5d006ca9e14ea887255d646864b3d6'
+                    }
+                    'lab-asset-sc-ldi-lens-record-populated-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '8986e6eef3c54942b49088565b891fb2'
+                    }
+                    'lab-asset-sc-ldi-lens-turn-on-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '8f5f3709866c44ceb3d7ba6ec0c21539'
+                    }
+                    'lab-asset-sc-ldi-now-assist-skills-nav-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'ff343c48e24c4e84a2f2eefe178627ae'
+                    }
+                    'lab-asset-sc-ldi-return-to-platform-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '0f6d125f0d534a459fa8c8c6cf394040'
+                    }
+                    'lab-asset-sc-ldi-save-and-continue-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '9615ee05be34465baf6b89a4667b4af9'
+                    }
+                    'lab-asset-sc-ldi-save-or-submit-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '6d598c5e24634248951238b486ed8bb4'
+                    }
+                    'lab-asset-sc-ldi-scope-forecast-variance-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '30f3202500cd44faa948d08ebadc7508'
+                    }
+                    'lab-asset-sc-ldi-scope-global-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '1b86a6c5409c4a15821d424939a78099'
+                    }
+                    'lab-asset-sc-ldi-skills-screen-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '7a3c47fc50874a9692503d60adb2c9a8'
+                    }
+                    'lab-asset-sc-ldi-state-wip-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '6fcffd16e4d24935b995c70ec8424256'
+                    }
+                    'lab-asset-sc-ldi-test-outputs-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'e16a87ce3f334eaba81a2c0d384811f4'
+                    }
+                    'lab-asset-sc-ldi-threshold-search-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'f45eaa32c2794db48a795f5353503637'
+                    }
+                    'lab-asset-sc-ldi-upload-document-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '7655d1c5f5f64f228f26ee322f7ea334'
+                    }
+                    'lab-asset-sc-ldi-upload-file-exit-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '6d1e8d01bfa64e5380181d7eb8905f5e'
+                    }
+                    'lab-asset-sc-ldi-usecase-config-overview-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '7ca647afbe974514b7f5bac9009c9be7'
+                    }
+                    'lab-asset-sc-ldi-variance-task-nav-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'e13c14d9cd474b9e8c33087dc56c9a09'
+                    }
+                    'lab-asset-sc-mcp-add-neon-server-details-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '8d345145f80e417da08124dcfb34fc30'
+                    }
+                    'lab-asset-sc-mcp-add-tool-neon-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'e6ad7716d2cd4c8e850cb2a7f9a4e17d'
+                    }
+                    'lab-asset-sc-mcp-agent-studio-settings-nav-3-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'dd9ff7c4365b4b419f0d0f9ee079e305'
+                    }
+                    'lab-asset-sc-mcp-channels-status-neon-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '17d894e1fa724d79bfbd5f17d5a0e4be'
+                    }
+                    'lab-asset-sc-mcp-duplicate-agent-menu-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '511b951123cd448aa82c5486e31ae120'
+                    }
+                    'lab-asset-sc-mcp-duplicate-confirm-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'a161451d1e824ae096a86116f232bf6e'
+                    }
+                    'lab-asset-sc-mcp-duplicate-warning-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '4ab816a5da324301a46c9c07113d74b4'
+                    }
+                    'lab-asset-sc-mcp-manage-servers-new-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '7cd9aaba2f0443bd8cea6c6413452a97'
+                    }
+                    'lab-asset-sc-mcp-rename-agent-neon-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '152ab441d7454c84b1f4a5fed2108358'
+                    }
+                    'lab-asset-sc-mcp-save-and-continue-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '3152bfcafc61478c99f2babe8956a3b8'
+                    }
+                    'lab-asset-sc-mcp-security-defaults-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '6d1cebc4baca46bb882371e36639b8da'
+                    }
+                    'lab-asset-sc-mcp-select-neon-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '2aca13c17f29423aa9d20007a1eeca58'
+                    }
+                    'lab-asset-sc-mcp-test-input-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '9c81eec060314d30b2d1757a74a4ef9b'
+                    }
+                    'lab-asset-sc-mcp-test-results-neon-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '7de0c72a45354a9485ab0d907ded0822'
+                    }
+                    'lab-asset-sc-mcp-test-running-neon-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '61fb500f408b49beaa27bb22aa6ae416'
+                    }
+                    'lab-asset-sc-mcp-tool-settings-neon-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'ae683fca0d0142f68522e39846a45484'
+                    }
+                    'lab-asset-sc-mcp-tools-section-neon-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '32585b1f218946ac9c35afa37e170375'
+                    }
+                    'lab-asset-sc-mcp-variance-baseline-neon-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '9d5eadb4fa4d4fd1894be32b391f2ddb'
+                    }
+                    'lab-asset-sc-producer-cleanup-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '09fbf81287764210a2f89f51fe4f3fd8'
+                    }
+                    'lab-asset-sc-producer-connect-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'b6513221977d49af9be9231a69258b3f'
+                    }
+                    'lab-asset-sc-producer-download-certificate-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '45306aec686940ac96ec82edfad2af5c'
+                    }
+                    'lab-asset-sc-producer-exec-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'd3f4231c0db1470a984ac1e729fbae13'
+                    }
+                    'lab-asset-sc-producer-generate-certificate-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'b6ee1677ef214e40930b7404f2c18543'
+                    }
+                    'lab-asset-sc-producer-import-cert-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '1a6877e577db4191bbcfc70c15917917'
+                    }
+                    'lab-asset-sc-producer-import-cert-upload-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'ece433c0bff4408b9d051c4155c6f457'
+                    }
+                    'lab-asset-sc-producer-message-sent-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '043dd6b1488e40939322b03270a5d3b3'
+                    }
+                    'lab-asset-sc-producer-namespaces-selected-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'f28c91019694459b924b3856f6b5ce54'
+                    }
+                    'lab-asset-sc-producer-password-acl-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'b71543b00eda40388f526a7796d21235'
+                    }
+                    'lab-asset-sc-producer-pki-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'cc51a285f8954fdfbb6887ef390d851f'
+                    }
+                    'lab-asset-sc-producer-properties-content-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '44e2876485924d52a6b21d1767501a5c'
+                    }
+                    'lab-asset-sc-producer-properties-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '4f7ccdc921a0434a826ee4a656cc3463'
+                    }
+                    'lab-asset-sc-producer-select-namespace-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '7c19d19576e9416db5be7c7f8f63fa46'
+                    }
+                    'lab-asset-sc-producer-select-topic-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'ac15c17352484e44a5324c18077be083'
+                    }
+                    'lab-asset-sc-producer-servers-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '585426f93c1546a790d5b7643b688373'
+                    }
+                    'lab-asset-sc-producer-servers-validate-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'e8d544bd93504c0199b5880b4d23e5ad'
+                    }
+                    'lab-asset-sc-producer-start-container-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'eb560b67429746c7933c91ec46dd7ae4'
+                    }
+                    'lab-asset-sc-producer-topic-selected-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'b9b207d90c104d31b1a5d7630ee07a8f'
+                    }
+                    'lab-asset-sc-sc-active-consumer-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '44bda5fe76054ca2b55adbed05f618ea'
+                    }
+                    'lab-asset-sc-sc-active-consumer-stats-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'c3d515d1953f4461862cf654dac893d4'
+                    }
+                    'lab-asset-sc-sc-active-rte-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '2f5f740af95c415fbca58a3f0f8d4988'
+                    }
+                    'lab-asset-sc-sc-active-stream-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'c5c68987b65a43f99fe084e490378a59'
+                    }
+                    'lab-asset-sc-sc-create-consumer-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '82b16d2c7bca4e2593e0f65929efbe0c'
+                    }
+                    'lab-asset-sc-sc-etl-consumer-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '117266fff66344bb94ce1df5d7a485f7'
+                    }
+                    'lab-asset-sc-sc-home-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'acbb75d0a2c54047a5d8d5741108eb85'
+                    }
+                    'lab-asset-sc-sc-kafka-stream-back-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '5343604b28a0461785180ca5cc65b658'
+                    }
+                    'lab-asset-sc-sc-new-kafka-stream-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '74eb30d0ccb54018adfee4d8f1897b60'
+                    }
+                    'lab-asset-sc-sc-rte-consumer-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '90c2307830cd46adb9d73eccd365641b'
+                    }
+                    'lab-asset-sc-slide-docintel-demo-preview-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '2a253fcc474a4dc8aef420b53a18658a'
+                    }
+                    'lab-asset-sc-slide-e2e-architecture-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '326426082c254984838a56a000fbce5b'
+                    }
+                    'lab-asset-sc-slide-fundamentals-overview-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'dabe26c4d8754da2ab0b1a9493ef60c5'
+                    }
+                    'lab-asset-sc-slide-inthub-demo-preview-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '46e6def7b90e4dbc805f9fe6c44ece39'
+                    }
+                    'lab-asset-sc-slide-inthub-overview-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '92f97b0f002849eaa4d9032bd6c7d0b8'
+                    }
+                    'lab-asset-sc-slide-key-takeaways-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '4e2a9dc8b5e94e31ae5e179d9d8295a3'
+                    }
+                    'lab-asset-sc-slide-lab-dependencies-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'b0d916ba50a144f99b237b16a595c3f1'
+                    }
+                    'lab-asset-sc-slide-lens-docintel-overview-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '3f45ca52aa884d72a5c26db25e181535'
+                    }
+                    'lab-asset-sc-slide-mcp-demo-preview-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'f1801900d686477fafe4687b640f84d0'
+                    }
+                    'lab-asset-sc-slide-mcp-overview-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'a43d2783fed949438adcdeb31fe711d0'
+                    }
+                    'lab-asset-sc-slide-xcc-demo-preview-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'ba116d2a561d4333896c1df1346bc36e'
+                    }
+                    'lab-asset-sc-slide-xcc-overview-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'c239c8fa8fc146f3af13237d4b55d729'
+                    }
+                    'lab-asset-sc-slide-zerocopy-demo-preview-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'b559ebb26d4e4e0ab2880e04faa1ac33'
+                    }
+                    'lab-asset-sc-slide-zerocopy-how-it-works-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'eb233efbc3754991aebd1d89848961ca'
+                    }
+                    'lab-asset-sc-slide-zerocopy-overview-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'e3b48d00003446bd8d218f92e331a14f'
+                    }
+                    'lab-asset-sc-xcc-connection-config-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '08932e9e37d54d65834160bf27d132cc'
+                    }
+                    'lab-asset-sc-xcc-connection-success-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '004b1f18aeb44f42a0b50e3babb3d767'
+                    }
+                    'lab-asset-sc-xcc-crawl-proceed-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'a5220bf19e404301b36e481dad86bb69'
+                    }
+                    'lab-asset-sc-xcc-crawl-save-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '7f79834942394103841987749a974cab'
+                    }
+                    'lab-asset-sc-xcc-crawl-settings-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '1999a18e3c2d43b5af1cc1c7f60ed58f'
+                    }
+                    'lab-asset-sc-xcc-crawls-complete-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'c1ca18455d454abab6e07d5f67140632'
+                    }
+                    'lab-asset-sc-xcc-deselect-ais-role-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '573a6cc80d074f0c9d626b38975c34bb'
+                    }
+                    'lab-asset-sc-xcc-elevate-role-menu-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '79d7baf0ebf540249bd545830c5a809a'
+                    }
+                    'lab-asset-sc-xcc-elevate-select-ais-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '0d2ea1594a8f46cd81325220ba590493'
+                    }
+                    'lab-asset-sc-xcc-employee-center-home-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '4f039c9ef25941b6be2aac277c4f764a'
+                    }
+                    'lab-asset-sc-xcc-employee-center-nav-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'f90beaba0234428790ebb57a9804f8ee'
+                    }
+                    'lab-asset-sc-xcc-full-crawl-options-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '05b9cbf9d6fe41f1afc75731fb8b361f'
+                    }
+                    'lab-asset-sc-xcc-home-create-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '7673fc6fbd3f4a4f8e17d7f47b6ae69b'
+                    }
+                    'lab-asset-sc-xcc-mapping-test-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '9171d743b85d47718659a1d6b5f2d928'
+                    }
+                    'lab-asset-sc-xcc-now-assist-query-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'a604a014baf242609755aa63a6c6512a'
+                    }
+                    'lab-asset-sc-xcc-overbudget-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'e6d3a07bdec94b3cbbdc97a2787e8553'
+                    }
+                    'lab-asset-sc-xcc-prep-add-ais-role-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '3631d9b95a0548a9b49ac4e4bf2f1650'
+                    }
+                    'lab-asset-sc-xcc-prep-email-roles-edit-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '10ecab5e10484e98ad41481ce59e67d1'
+                    }
+                    'lab-asset-sc-xcc-prep-save-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '2fc03fa358e14ddd9f35ec4ebeda1cef'
+                    }
+                    'lab-asset-sc-xcc-response-detail-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '96f2ab014afb4cfdac75e591acef0a67'
+                    }
+                    'lab-asset-sc-xcc-select-source-sharepoint-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'ef300fe2c7984430a3a15b2a6397ddfc'
+                    }
+                    'lab-asset-sc-xcc-xcc-home-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'b82e94a4b25a4120b1c6d57015558593'
+                    }
+                    'lab-asset-sc-zcc-agent-studio-nav-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'a906d0f44621474fa61e19256a78b7a5'
+                    }
+                    'lab-asset-sc-zcc-agent-studio-search-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'bb171c1e28f5402fa3d36170050c2a36'
+                    }
+                    'lab-asset-sc-zcc-ba-agent-manual-test-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '0f5cec36ae6b4fa390eae4c66c5d4d8b'
+                    }
+                    'lab-asset-sc-zcc-ba-agent-test-run-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '75d465684630495aa8d0983d11bed50d'
+                    }
+                    'lab-asset-sc-zcc-ba-agent-testing-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'd792f0d301e441099370bdbb7a5839b9'
+                    }
+                    'lab-asset-sc-zcc-ba-approve-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'bda1f7bc8a4f4dd68cf7e3bdfe8b7a32'
+                    }
+                    'lab-asset-sc-zcc-ba-new-conversation-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '0ee096e8c08a411db4f536287dafae6f'
+                    }
+                    'lab-asset-sc-zcc-bapi-configured-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '798cf3e9f6474cf7ac9b03ed9fa17892'
+                    }
+                    'lab-asset-sc-zcc-cc-target-table-list-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '26183e2e2ad0452a8f661ab8c6d43ad3'
+                    }
+                    'lab-asset-sc-zcc-choose-outputs-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '2f3cf387139646b0b1efed1696bac837'
+                    }
+                    'lab-asset-sc-zcc-click-read-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '202fd4e72dbf49a19aef63e893849eec'
+                    }
+                    'lab-asset-sc-zcc-clone-model-details-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'b6891af1c4ca44ebb3ff30ad901fbba3'
+                    }
+                    'lab-asset-sc-zcc-clone-popup-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '4c7912a154ee4a04b2cd5f5a3890a263'
+                    }
+                    'lab-asset-sc-zcc-dp-cost-center-click-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'b5f7fbcb5dff46a48381e438889dc8c4'
+                    }
+                    'lab-asset-sc-zcc-erp-home-layout-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '794f39ec00c8485981c8aa1ea1bfe4eb'
+                    }
+                    'lab-asset-sc-zcc-erp-home-nav-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '8ba47c8cee1f4370b4f671719959089a'
+                    }
+                    'lab-asset-sc-zcc-extraction-tables-filter-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'edf052acbaf94928ab5b9eb874a2b05d'
+                    }
+                    'lab-asset-sc-zcc-finance-case-list-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '40dad48115854927a4c361c2de413b99'
+                    }
+                    'lab-asset-sc-zcc-forecast-variance-agent-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'd80fa3aa69b84dd291cbee76b8bd2faf'
+                    }
+                    'lab-asset-sc-zcc-model-config-save-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '96266a6763a34a9d970e502d6d0356a8'
+                    }
+                    'lab-asset-sc-zcc-models-filter-cost-center-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'f7f3d73343844497a6dd435286ccbac8'
+                    }
+                    'lab-asset-sc-zcc-pg-confirm-pk-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '6929a1ab64704ba29b89be2ad0415f5b'
+                    }
+                    'lab-asset-sc-zcc-pg-connection-details-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '6978d4ead8d64b1a8525b8f396f5890a'
+                    }
+                    'lab-asset-sc-zcc-pg-cost-center-reference-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '96c9197972ad46b699683c07db1986e2'
+                    }
+                    'lab-asset-sc-zcc-pg-data-assets-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'dfbc5caa12fb49ca8d5f3b3dff82406b'
+                    }
+                    'lab-asset-sc-zcc-pg-df-label-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'dd3d894cc7834049b7a8412c6c82f411'
+                    }
+                    'lab-asset-sc-zcc-pg-df-list-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '55a8ed42546e4e14b786ab4ab04d0089'
+                    }
+                    'lab-asset-sc-zcc-pg-established-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '2b6ae164e1f3400f98f4016cb0d55d3d'
+                    }
+                    'lab-asset-sc-zcc-pg-nav-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '7af38767897f42b49420407cdbecd88c'
+                    }
+                    'lab-asset-sc-zcc-pg-open-list-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'c340ec37848d4dbdaadf5e750d247978'
+                    }
+                    'lab-asset-sc-zcc-pg-primary-key-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'bc49c7c49499448fb6362220b8a08509'
+                    }
+                    'lab-asset-sc-zcc-pg-select-columns-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '4e7ed5cea21741bb892d84368fa5b058'
+                    }
+                    'lab-asset-sc-zcc-pg-set-reference-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'c28a939ff2294627b852b3c42d8e9a42'
+                    }
+                    'lab-asset-sc-zcc-role-messages-save-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '24243b5b1f5a4a2fa51497eacc1a516d'
+                    }
+                    'lab-asset-sc-zcc-roles-erp-admin-save-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '1de81e718e20432cac9502cd68efbcef'
+                    }
+                    'lab-asset-sc-zcc-sap-cost-center-click-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'ac21eb716a914cb6ab1c6687eb299713'
+                    }
+                    'lab-asset-sc-zcc-specify-inputs-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '6f44a121944340e1a3063aa087d22d45'
+                    }
+                    'lab-asset-sc-zcc-target-table-link-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'b9e2e7ef30bd421480e928099594cbb6'
+                    }
+                    'lab-asset-wdf-connectors-banner-gif': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '1a7a3b8eb8ae4eeaaca8fc5c4f486fcc'
+                    }
                     package_json: {
                         table: 'sys_module'
                         id: '3630114b7d714ec294565f9a7dc13f1b'
@@ -2384,6 +3496,11 @@ declare global {
                     'wdf-lab/public/wdf/conclusion/kahoot_hype_screen_dark.png': {
                         table: 'db_image'
                         id: 'cff789799de547e481e5fd1dbfcfb036'
+                    }
+                    'wdf-lab/public/wdf/conclusion/kahoot_hype_screen_light.gif': {
+                        table: 'db_image'
+                        id: 'b1501299e1a749049ab9594b686d5291'
+                        deleted: true
                     }
                     'wdf-lab/public/wdf/conclusion/kahoot_hype_screen_light.png': {
                         table: 'db_image'
@@ -2597,6 +3714,11 @@ declare global {
                         table: 'db_image'
                         id: 'cf0b319cf55e4ddd9b318af5c9e1bd0c'
                     }
+                    'wdf-lab/public/wdf/fundamentals/sc_fund_ba_result.png': {
+                        table: 'db_image'
+                        id: '495bb342ba7b41719162e15cd0dbc77f'
+                        deleted: true
+                    }
                     'wdf-lab/public/wdf/fundamentals/sc_fund_cat_complete.png': {
                         table: 'db_image'
                         id: 'ce6c04b4f8b04d1abf1f2cdbbaf864d2'
@@ -2664,6 +3786,11 @@ declare global {
                     'wdf-lab/public/wdf/fundamentals/sc_slide_fundamentals_overview.png': {
                         table: 'db_image'
                         id: 'bfeab22b650e489d838ce616ab189a22'
+                    }
+                    'wdf-lab/public/wdf/fundamentals/sc_zcc_ba_new_conversation.png': {
+                        table: 'db_image'
+                        id: 'cb280d2a982a41858edc3ba04a64e6f4'
+                        deleted: true
                     }
                     'wdf-lab/public/wdf/home/dataflow_outcome_agent_flow_dark.png': {
                         table: 'db_image'
@@ -2812,6 +3939,16 @@ declare global {
                         table: 'db_image'
                         id: 'ef133ac60ae3425e9fa4e4bff3412c7a'
                     }
+                    'wdf-lab/public/wdf/integration-hub/sc_ihub_ba_result_1.png': {
+                        table: 'db_image'
+                        id: 'c02b323f4cc049c390745dabf18ad8eb'
+                        deleted: true
+                    }
+                    'wdf-lab/public/wdf/integration-hub/sc_ihub_ba_result_2.png': {
+                        table: 'db_image'
+                        id: '8ec280a4610845f39ca2eeca7ee21466'
+                        deleted: true
+                    }
                     'wdf-lab/public/wdf/integration-hub/sc_ihub_connection_url_submit.png': {
                         table: 'db_image'
                         id: 'add915d3a6c94ffeb22cf5737bf95ecd'
@@ -2919,6 +4056,11 @@ declare global {
                     'wdf-lab/public/wdf/integration-hub/sc_xcc_prep_save.png': {
                         table: 'db_image'
                         id: '584129d8594a492dabe43224fab18dc6'
+                    }
+                    'wdf-lab/public/wdf/integration-hub/sc_zcc_ba_new_conversation.png': {
+                        table: 'db_image'
+                        id: '3b1c6df0a66c40fa8d96e3cbf28c95d8'
+                        deleted: true
                     }
                     'wdf-lab/public/wdf/kafka-stream-connect/sc_data_source_create.png': {
                         table: 'db_image'
@@ -3172,6 +4314,11 @@ declare global {
                         table: 'db_image'
                         id: '81199a4ba0804bceb25c031a1931cb6e'
                     }
+                    'wdf-lab/public/wdf/kafka-stream-connect/wdf_connectors_banner.gif': {
+                        table: 'db_image'
+                        id: '4c530c7e0b5a45eabaabea8c54ba30f2'
+                        deleted: true
+                    }
                     'wdf-lab/public/wdf/kafka-stream-connect/wdf_connectors_banner.png': {
                         table: 'db_image'
                         id: 'dafda1cad480444ba74000cd23c29cbd'
@@ -3215,6 +4362,16 @@ declare global {
                     'wdf-lab/public/wdf/lens-and-document-intelligence/sc_ldi_agent_results_overview.png': {
                         table: 'db_image'
                         id: '04698ec58dfd4ec2aacb38fd94dfe230'
+                    }
+                    'wdf-lab/public/wdf/lens-and-document-intelligence/sc_ldi_ba_props.png': {
+                        table: 'db_image'
+                        id: '42fdec50e5234411aa00feda9269fc10'
+                        deleted: true
+                    }
+                    'wdf-lab/public/wdf/lens-and-document-intelligence/sc_ldi_ba_runtime.png': {
+                        table: 'db_image'
+                        id: '289c90538dcb4afa8e8f770031f41193'
+                        deleted: true
                     }
                     'wdf-lab/public/wdf/lens-and-document-intelligence/sc_ldi_choose_file.png': {
                         table: 'db_image'
@@ -3347,6 +4504,11 @@ declare global {
                     'wdf-lab/public/wdf/lens-and-document-intelligence/sc_slide_lens_docintel_overview.png': {
                         table: 'db_image'
                         id: '4c241d67b2af434b9163ce909afb6103'
+                    }
+                    'wdf-lab/public/wdf/lens-and-document-intelligence/sc_zcc_ba_agent_test_run.png': {
+                        table: 'db_image'
+                        id: '04d702a0752a4b658ccb04aa44482bcf'
+                        deleted: true
                     }
                     'wdf-lab/public/wdf/mcp-server-client/dataflow_mcp.png': {
                         table: 'db_image'
@@ -3548,6 +4710,31 @@ declare global {
                         table: 'db_image'
                         id: '00434ed381574588a5459094c852941f'
                     }
+                    'wdf-lab/public/wdf/zero-copy-connectors/sc_zcc_ba_agent_manual_test.png': {
+                        table: 'db_image'
+                        id: 'a2fe908f515d48b3b51279ab363b8684'
+                        deleted: true
+                    }
+                    'wdf-lab/public/wdf/zero-copy-connectors/sc_zcc_ba_agent_test_run.png': {
+                        table: 'db_image'
+                        id: '44fba096da2846bc8bb5ef3c10e1a9fb'
+                        deleted: true
+                    }
+                    'wdf-lab/public/wdf/zero-copy-connectors/sc_zcc_ba_agent_testing.png': {
+                        table: 'db_image'
+                        id: 'cba3466ee2494259b5a651dbe64025d2'
+                        deleted: true
+                    }
+                    'wdf-lab/public/wdf/zero-copy-connectors/sc_zcc_ba_approve.png': {
+                        table: 'db_image'
+                        id: '8f552027482f485e81cdc2b15ee338d4'
+                        deleted: true
+                    }
+                    'wdf-lab/public/wdf/zero-copy-connectors/sc_zcc_ba_new_conversation.png': {
+                        table: 'db_image'
+                        id: '11d8c5569d5f42edabb0c25d37a91727'
+                        deleted: true
+                    }
                     'wdf-lab/public/wdf/zero-copy-connectors/sc_zcc_bapi_configured.png': {
                         table: 'db_image'
                         id: '230392a6383c48fa86e3f4a414414281'
@@ -3651,6 +4838,66 @@ declare global {
                     'wdf-lab/public/wdf/zero-copy-connectors/sc_zcc_models_filter_cost_center.png': {
                         table: 'db_image'
                         id: '8e451dde98194d8ea103b9c89938422d'
+                    }
+                    'wdf-lab/public/wdf/zero-copy-connectors/sc_zcc_pg_confirm_pk.png': {
+                        table: 'db_image'
+                        id: '227de65371af449a8034ca94d9d8e81e'
+                        deleted: true
+                    }
+                    'wdf-lab/public/wdf/zero-copy-connectors/sc_zcc_pg_connection_details.png': {
+                        table: 'db_image'
+                        id: 'e990757ddf54410387523e204aa3d1dc'
+                        deleted: true
+                    }
+                    'wdf-lab/public/wdf/zero-copy-connectors/sc_zcc_pg_cost_center_reference.png': {
+                        table: 'db_image'
+                        id: 'f4fb25c160b8437db6042c09c5f74deb'
+                        deleted: true
+                    }
+                    'wdf-lab/public/wdf/zero-copy-connectors/sc_zcc_pg_data_assets.png': {
+                        table: 'db_image'
+                        id: 'cdcedf993f8e42e583abe2933b82b0f9'
+                        deleted: true
+                    }
+                    'wdf-lab/public/wdf/zero-copy-connectors/sc_zcc_pg_df_label.png': {
+                        table: 'db_image'
+                        id: '27eb3288e6094af2afceaaae4a09cab1'
+                        deleted: true
+                    }
+                    'wdf-lab/public/wdf/zero-copy-connectors/sc_zcc_pg_df_list.png': {
+                        table: 'db_image'
+                        id: 'b7e9a03a5a05440f856cf0c0d10ce212'
+                        deleted: true
+                    }
+                    'wdf-lab/public/wdf/zero-copy-connectors/sc_zcc_pg_established.png': {
+                        table: 'db_image'
+                        id: 'd9057af9fb8e4cd4b7ab5e9f2541ef0f'
+                        deleted: true
+                    }
+                    'wdf-lab/public/wdf/zero-copy-connectors/sc_zcc_pg_nav.png': {
+                        table: 'db_image'
+                        id: '6510e1e1ac324637b8481f75d9a29237'
+                        deleted: true
+                    }
+                    'wdf-lab/public/wdf/zero-copy-connectors/sc_zcc_pg_open_list.png': {
+                        table: 'db_image'
+                        id: '1e61de9a147546bd82419bcbd87d60da'
+                        deleted: true
+                    }
+                    'wdf-lab/public/wdf/zero-copy-connectors/sc_zcc_pg_primary_key.png': {
+                        table: 'db_image'
+                        id: 'eabbe7321d1347498177da07768daa1b'
+                        deleted: true
+                    }
+                    'wdf-lab/public/wdf/zero-copy-connectors/sc_zcc_pg_select_columns.png': {
+                        table: 'db_image'
+                        id: 'a48b2070003844439c3bd0979d9e21fe'
+                        deleted: true
+                    }
+                    'wdf-lab/public/wdf/zero-copy-connectors/sc_zcc_pg_set_reference.png': {
+                        table: 'db_image'
+                        id: '99f35666c2df436896ad4fb275a20ab6'
+                        deleted: true
                     }
                     'wdf-lab/public/wdf/zero-copy-connectors/sc_zcc_reference_key.png': {
                         table: 'db_image'
@@ -3804,6 +5051,14 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_dictionary'
+                        id: '145a7f3fcb0f41a098fa40fd4660c7a2'
+                        key: {
+                            name: 'x_snc_forecast_v_0_lab_asset'
+                            element: 'image'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '1ba89f6b03e745d0bf243798c3c3bac1'
                         key: {
@@ -3921,6 +5176,13 @@ declare global {
                         }
                     },
                     {
+                        table: 'ua_table_licensing_config'
+                        id: '3d7395bc7ffb4a4b845dd61602cafddd'
+                        key: {
+                            name: 'x_snc_forecast_v_0_lab_asset'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '41d11cd77eb543eca357502ff98fe233'
                         key: {
@@ -3976,6 +5238,15 @@ declare global {
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transaction_event'
                             element: 'priority'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '4ae2d878d7614f609e6fbc11533bf163'
+                        key: {
+                            name: 'x_snc_forecast_v_0_lab_asset'
+                            element: 'NULL'
                             language: 'en'
                         }
                     },
@@ -4278,6 +5549,15 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_documentation'
+                        id: '80cdbaecfb7d4b13b85b935aed45fb3f'
+                        key: {
+                            name: 'x_snc_forecast_v_0_lab_asset'
+                            element: 'name'
+                            language: 'en'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '843cf5c4f2924d3ba7a8480930555685'
                         key: {
@@ -4450,6 +5730,15 @@ declare global {
                     },
                     {
                         table: 'sys_documentation'
+                        id: 'a5b13331105242279a2bfcc935179e46'
+                        key: {
+                            name: 'x_snc_forecast_v_0_lab_asset'
+                            element: 'image'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
                         id: 'a77adb50c2f443ec8d571353e6cd759e'
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transactions'
@@ -4575,6 +5864,14 @@ declare global {
                             name: 'x_snc_forecast_v_0_expense_transaction_event'
                             element: 'vendor'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'c0d2def4797543678b77e946caf10b71'
+                        key: {
+                            name: 'x_snc_forecast_v_0_lab_asset'
+                            element: 'NULL'
                         }
                     },
                     {
@@ -4728,6 +6025,21 @@ declare global {
                         key: {
                             name: 'x_snc_forecast_v_0_cost_center_budget_history'
                             element: 'variance_pct'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'e2f69e7cf64b48b496cc0cc6c949c7f0'
+                        key: {
+                            name: 'x_snc_forecast_v_0_lab_asset'
+                            element: 'name'
+                        }
+                    },
+                    {
+                        table: 'sys_db_object'
+                        id: 'e75deb0ee54143aeacc53202635e1f3b'
+                        key: {
+                            name: 'x_snc_forecast_v_0_lab_asset'
                         }
                     },
                     {

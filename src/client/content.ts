@@ -2,4 +2,6 @@
 export const REPO_ASSETS =
     'https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeB/main/.gitbook/assets'
 
-export const asset = (file: string) => `${REPO_ASSETS}/${file}`
+import { localAsset } from './content/asset-map'
+
+export const asset = (file: string) => localAsset(`${REPO_ASSETS}/${file}`)

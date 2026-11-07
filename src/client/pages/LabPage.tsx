@@ -1,12 +1,12 @@
 import React, { useEffect, useState } from 'react'
 import Markdown from '../components/Markdown'
-import { fileUrl } from '../content/pages'
+import { LAB_MARKDOWN } from '../content/lab-markdown'
 import { LabDoc, readMarkdown } from '../lib/markdown'
 import { TocItem } from '../toc'
 
 /*
- * Renders a lab page from its GitBook markdown, fetched at runtime from the
- * repo. Header/badges keep the same shape the built pages use.
+ * Renders a lab page from its GitBook markdown, bundled with the app.
+ * Header/badges keep the same shape the built pages use.
  */
 
 type State =
@@ -26,36 +26,14 @@ export default function LabPage({
     const [state, setState] = useState<State>({ phase: 'loading' })
 
     useEffect(() => {
-        let active = true
-        const url = fileUrl(route)
+        const text = LAB_MARKDOWN[route]
 
-        if (!url) {
-            setState({ phase: 'error', message: 'No source file mapped for this page.', url: '' })
+        if (text === undefined) {
+            setState({ phase: 'error', message: 'No source mapped for this page.', url: route })
             return
         }
 
-        setState({ phase: 'loading' })
-
-        fetch(url)
-            .then(res => {
-                if (!res.ok) throw new Error(`${res.status} ${res.statusText}`)
-                return res.text()
-            })
-            .then(text => {
-                if (active) setState({ phase: 'ready', doc: readMarkdown(text) })
-            })
-            .catch((err: unknown) => {
-                if (active)
-                    setState({
-                        phase: 'error',
-                        message: err instanceof Error ? err.message : String(err),
-                        url,
-                    })
-            })
-
-        return () => {
-            active = false
-        }
+        setState({ phase: 'ready', doc: readMarkdown(text) })
     }, [route])
 
     return (
