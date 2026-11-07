@@ -161,59 +161,56 @@ This exercise does not cover the creation of the MCP Service from Neon as that r
 
     <figure><img src="../.gitbook/assets/sc_mcp_rename_agent_neon.png" alt=""><figcaption></figcaption></figure>
 
+#### Walkthrough: Complete AI Agent configuration
+
+Accept default security controls. Configure channels and status. Save and test.
+
+1.  On the specialty page click **Save and Continue**, then on the tools page click **Save and Continue** again without changing anything (you add the MCP step and tool in the next section).
+
+2.  Since this is copied from an existing AI Agent configuration, simply accept the default values for **Define security controls** and its 2 sub-items. Also keep A**dd triggers value** blank.
+
+    <figure><img src="../.gitbook/assets/sc_mcp_security_defaults.png" alt=""><figcaption></figcaption></figure>
+3.  Finally, click on <mark style="color:green;">**a.)**</mark> **Select channels and status**. This configures the availability of the AI Agent. In this case, it is enabled and can be accessed using <mark style="color:green;">**b.)**</mark>**&#x20;Now Assist panel** toggled on as well as via <mark style="color:green;">**c.)**</mark>**&#x20;Now Assist in Virtual Agent** added as chat assistant. Click <mark style="color:green;">**d.)**</mark>**&#x20;Save and test**. <mark style="color:$warning;">**Note:**</mark> if Chat Assistants (step <mark style="color:green;">**2.c.**</mark>) does not give you options, check and execute the steps in [Lab Exercise: Integration Hub > Platform Configuration](https://servicenow-lf.gitbook.io/the-workflow-data-fabric-loom/main-exercises/lab-exercise-integration-hub#preparation-platform-configuration) > Steps 9 to 18; esp. if you are doing this lab standalone or have skipped the [Lab Exercise: Integration Hub](https://servicenow-lf.gitbook.io/the-workflow-data-fabric-loom/main-exercises/lab-exercise-integration-hub) portion.
+
+    <figure><img src="../.gitbook/assets/sc_mcp_channels_status_neon.png" alt=""><figcaption></figcaption></figure>
+4.  You **MIGHT** be alerted of potential duplicates but this is due to the multiple AI Agents created to test various integration scenarios. Click **Ignore and continue**.
+
+    <figure><img src="../.gitbook/assets/sc_mcp_duplicate_warning.png" alt=""><figcaption></figcaption></figure>
+
+5. Close the test tab. The copy is now saved and appears in the new AI Agent Studio.
+
 #### Hands-On: Configure MCP Step and Tool
 
-Add MCP instructions to the agent specialty. Add the variance-baseline-search MCP server tool from Neon. Configure tool name, description, and execution mode.
+Open the copy in the new AI Agent Studio. Add the MCP instructions to the agent. Add the Run SQL MCP server tool from Neon. Configure tool name, description, and execution mode.
 
-1. In the same **Define the Specialty > Define the role and Required steps > List of steps** sub-section, go to **Step 2: Review Cost Center Budget History** (the agent you built in Integration Hub) and add one more bullet under it: **Also run the MCP tool "Get Details via Neon MCP" as a secondary check. Only return one entry (limit = 1). Columns should be \["COST\_CENTER", "ACTUAL\_AMOUNT\_USD", "BASELINE\_AMOUNT\_USD", "VARIANCE", "VARIANCE\_PCT"]**.
+1. Navigate to All > <mark style="color:green;">**a.)**</mark> type **AI Agent Studio** > <mark style="color:green;">**b.)**</mark> click on **Agentic solutions**.
 
-2.  Click **Save and Continue**.
+2. In the list, <mark style="color:green;">**a.)**</mark> select the **AI agents** tab, <mark style="color:green;">**b.)**</mark> type **Forecast Variance Neon MCP Lab** in **Search** and <mark style="color:green;">**c.)**</mark> click the agent. The agent opens as a canvas.
 
-    <figure><img src="../.gitbook/assets/sc_mcp_save_and_continue.png" alt=""><figcaption></figcaption></figure>
-3.  Navigate to <mark style="color:green;">**a.)**</mark> **Add tools and information** > <mark style="color:green;">**b.)**</mark> **Add tool** > <mark style="color:green;">**c.)**</mark> > **MCP server tool**.
+3. Click the **Edit** pencil on the agent in the middle of the canvas. The editor opens with the sections **Definitions, Tools, Access rules, Test scenarios, Triggers, Channels** and **Memories**.
 
-    <figure><img src="../.gitbook/assets/sc_mcp_add_tool_neon.png" alt=""><figcaption></figcaption></figure>
-4.  In the pop-up that appears, <mark style="color:green;">**a.)**</mark> click on the **dropdown** > <mark style="color:green;">**b.)**</mark> select **Neon MCP**.
+4. In **Definitions > How-to instructions** go to **Step 2** (the agent you built in Integration Hub) and add one more bullet under it: **Also run the MCP tool "Get Details via Neon MCP" as a secondary check. Only return one entry (limit = 1). Columns should be \["COST\_CENTER", "ACTUAL\_AMOUNT\_USD", "BASELINE\_AMOUNT\_USD", "VARIANCE", "VARIANCE\_PCT"]**.
 
-    <figure><img src="../.gitbook/assets/sc_mcp_select_neon.png" alt=""><figcaption></figcaption></figure>
-5.  In the same pop-up screen, select the tool **run\_sql**.
+5. Go to the **Tools** section and click <mark style="color:green;">**a.)**</mark> **+ Add tool** > <mark style="color:green;">**b.)**</mark> **Create new tool** > <mark style="color:green;">**c.)**</mark> **MCP server tool**. A new tab **MCP server tool** opens next to the agent tab.
 
-    <figure><img src="../.gitbook/assets/sc_mcp_variance_baseline_neon.png" alt=""><figcaption></figcaption></figure>
-6. Still in the same pop-up screen provide the following details. Screenshot on how the settings should look like immediately follows. You only need to modify three settings and leave the rest as they are.
+6. In the new tab, <mark style="color:green;">**a.)**</mark> click **Select Model Context Protocol server** > <mark style="color:green;">**b.)**</mark> select **Neon MCP Lab**. A **Select tool** list appears and loads the tools of the Neon server (this can take a few seconds).
+
+7. Click **Select tool**, <mark style="color:green;">**a.)**</mark> type **Run SQL** in **Search** and <mark style="color:green;">**b.)**</mark> select **Run SQL** (not **Run SQL Transaction**). The **Inputs** list (sql, project\_id, branch\_id, database\_name, role\_name, compute\_id, max\_rows) appears. Leave the inputs empty.
+
+8. Scroll down and provide the following details. You only need to modify three settings and leave the rest as they are.
 
 <mark style="color:green;">**a.)**</mark> **Name**: **Get Details via Neon MCP**
 
-<mark style="color:green;">**b.)**</mark> **Tool description**:
+<mark style="color:green;">**b.)**</mark> **Description for this AI agent**:
 
 * project\_id: bitter-lab-28038915 (snake\_case, not projectId)
 * sql: SELECT cost\_center, actual\_amount\_usd, baseline\_amount\_usd, variance, variance\_pct FROM "VARIANCE\_BASELINE\_V" WHERE cost\_center = '\{{cost\_center\}}' LIMIT 1
 
 <mark style="color:green;">**c.)**</mark> **Execution mode**: **Autonomous**
 
-<mark style="color:green;">**d.)**</mark>**&#x20;Save**
+9. Click **Save** (top right of the tool tab).
 
-<figure><img src="../.gitbook/assets/sc_mcp_tool_settings_neon.png" alt="" width="563"><figcaption></figcaption></figure>
-
-7.  The pop-up will exit and you should get a section on **Model Context Protocol tools** which should look like below.
-
-    <figure><img src="../.gitbook/assets/sc_mcp_tools_section_neon.png" alt=""><figcaption></figcaption></figure>
-8.  Click **Save and Continue**.
-
-    <figure><img src="../.gitbook/assets/sc_common_save_and_continue (1).png" alt=""><figcaption></figcaption></figure>
-
-#### Walkthrough: Complete AI Agent configuration
-
-Accept default security controls. Configure channels and status. Save and test.
-
-1.  Since this is copied from an existing AI Agent configuration, simply accept the default values for **Define security controls** and its 2 sub-items. Also keep A**dd triggers value** blank.
-
-    <figure><img src="../.gitbook/assets/sc_mcp_security_defaults.png" alt=""><figcaption></figcaption></figure>
-2.  Finally, click on <mark style="color:green;">**a.)**</mark> **Select channels and status**. This configures the availability of the AI Agent. In this case, it is enabled and can be accessed using <mark style="color:green;">**b.)**</mark>**&#x20;Now Assist panel** toggled on as well as via <mark style="color:green;">**c.)**</mark>**&#x20;Now Assist in Virtual Agent** added as chat assistant. Click <mark style="color:green;">**d.)**</mark>**&#x20;Save and test**. <mark style="color:$warning;">**Note:**</mark> if Chat Assistants (step <mark style="color:green;">**2.c.**</mark>) does not give you options, check and execute the steps in [Lab Exercise: Integration Hub > Platform Configuration](https://servicenow-lf.gitbook.io/the-workflow-data-fabric-loom/main-exercises/lab-exercise-integration-hub#preparation-platform-configuration) > Steps 9 to 18; esp. if you are doing this lab standalone or have skipped the [Lab Exercise: Integration Hub](https://servicenow-lf.gitbook.io/the-workflow-data-fabric-loom/main-exercises/lab-exercise-integration-hub) portion.
-
-    <figure><img src="../.gitbook/assets/sc_mcp_channels_status_neon.png" alt=""><figcaption></figcaption></figure>
-3.  You **MIGHT** be alerted of potential duplicates but this is due to the multiple AI Agents created to test various integration scenarios. Click **Ignore and continue**.
-
-    <figure><img src="../.gitbook/assets/sc_mcp_duplicate_warning.png" alt=""><figcaption></figcaption></figure>
+10. Go back to the **agent tab** (first tab). The **Tools** section now lists **Get Details via Neon MCP**. Click **Save** (top right).
 
 ### AI Agent Testing
 
@@ -221,19 +218,15 @@ Accept default security controls. Configure channels and status. Save and test.
 
 Enter test prompt to process an expense event. Verify the MCP tool returns matching cost center data from Neon.
 
-1. You will be directed to the Test AI reasoning tab. To proceed with testing, <mark style="color:green;">**a.)**</mark> type **Help me process EXP-2025-IT-002-1007-01** and <mark style="color:green;">**b.)**</mark> click **Continue to Test Chat Response**.
+1. In the new AI Agent Studio, open the agent canvas (All > AI Agent Studio > **Agentic solutions** > **Forecast Variance Neon MCP Lab**). Click <mark style="color:green;">**a.)**</mark> **Run test** and keep <mark style="color:green;">**b.)**</mark> **Single test** selected.
 
-<figure><img src="../.gitbook/assets/sc_mcp_test_input.png" alt="" width="478"><figcaption></figcaption></figure>
+2. In **Test scenario** <mark style="color:green;">**a.)**</mark> type **Help me process EXP-2025-IT-002-1007-01** and <mark style="color:green;">**b.)**</mark> click **Run single test**.
 
-2. The test will run for a few seconds and will show you that it is running the tool **Get Details via Neon MCP**. This is the additional tool you created earlier.
+3. The **Trace log** opens on the right and runs the tools one after the other: **Extract Cost Center**, **Search for Cost Center History**, **Search for Expense Transactions History**, **Get Details via Neon MCP** and **Budget Variance Analysis**. Wait until the test shows **Completed**.
 
-<figure><img src="../.gitbook/assets/sc_mcp_test_running_neon.png" alt=""><figcaption></figcaption></figure>
+4. Open the step **Get Details via Neon MCP** in the trace. It obtained the closest match for the value of cost center CC\_IT\_001. For this exercise, we only returned the raw JSON value to demonstrate the MCP capability where we did not use any SQL or API to return the matching row; instead we just provided a high-level instruction in Step 2 of the agent. **Budget Variance Analysis** also opens a Finance Case when the cost center is over budget, and its number is part of the final answer.
 
-3. Finally, you will notice that the **Get Details via Neon MCP** has obtained the closest match for the value of cost center CC\_IT\_001. For this exercise, we only returned the raw JSON value to demonstrate the MCP capability where we did not use any SQL or API to return the matching row; instead we just provided a high-level instruction in Step 2 of the agent.
-
-<figure><img src="../.gitbook/assets/sc_mcp_test_results_neon.png" alt=""><figcaption></figcaption></figure>
-
-4. **Challenge:** once you are done with this lab, see if you can remove the tool **Extract Cost Center** and replace it completely with the data from **Get Details via Neon MCP** as added in Step 2 of the agent. No hints this time. 😉
+5. **Challenge:** once you are done with this lab, see if you can remove the tool **Extract Cost Center** and replace it completely with the data from **Get Details via Neon MCP** as added in Step 2 of the agent. No hints this time. 😉
 
 ### Conclusion
 
