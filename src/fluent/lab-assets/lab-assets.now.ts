@@ -2384,3 +2384,82 @@ Record({
         image: Now.attach('./files/wdf_connectors_banner.gif'),
     },
 })
+
+Record({
+    $id: Now.ID['lab-asset-sc-mcp-aia-agentic-solutions-nav-png'],
+    table: 'x_snc_forecast_v_0_lab_asset',
+    data: {
+        name: 'sc_mcp_aia_agentic_solutions_nav.png',
+        image: Now.attach('./files/sc_mcp_aia_agentic_solutions_nav.png'),
+    },
+})
+
+
+Record({
+    $id: Now.ID['lab-asset-sc-mcp-aia-agent-canvas-edit-png'],
+    table: 'x_snc_forecast_v_0_lab_asset',
+    data: {
+        name: 'sc_mcp_aia_agent_canvas_edit.png',
+        image: Now.attach('./files/sc_mcp_aia_agent_canvas_edit.png'),
+    },
+})
+
+
+Record({
+    $id: Now.ID['lab-asset-sc-mcp-aia-add-tool-menu-png'],
+    table: 'x_snc_forecast_v_0_lab_asset',
+    data: {
+        name: 'sc_mcp_aia_add_tool_menu.png',
+        image: Now.attach('./files/sc_mcp_aia_add_tool_menu.png'),
+    },
+})
+
+
+Record({
+    $id: Now.ID['lab-asset-sc-mcp-aia-tool-type-menu-png'],
+    table: 'x_snc_forecast_v_0_lab_asset',
+    data: {
+        name: 'sc_mcp_aia_tool_type_menu.png',
+        image: Now.attach('./files/sc_mcp_aia_tool_type_menu.png'),
+    },
+})
+
+
+Record({
+    $id: Now.ID['lab-asset-sc-mcp-aia-select-server-tool-png'],
+    table: 'x_snc_forecast_v_0_lab_asset',
+    data: {
+        name: 'sc_mcp_aia_select_server_tool.png',
+        image: Now.attach('./files/sc_mcp_aia_select_server_tool.png'),
+    },
+})
+
+
+Record({
+    $id: Now.ID['lab-asset-sc-mcp-aia-tool-settings-png'],
+    table: 'x_snc_forecast_v_0_lab_asset',
+    data: {
+        name: 'sc_mcp_aia_tool_settings.png',
+        image: Now.attach('./files/sc_mcp_aia_tool_settings.png'),
+    },
+})
+
+
+Record({
+    $id: Now.ID['lab-asset-sc-mcp-aia-agent-tools-saved-png'],
+    table: 'x_snc_forecast_v_0_lab_asset',
+    data: {
+        name: 'sc_mcp_aia_agent_tools_saved.png',
+        image: Now.attach('./files/sc_mcp_aia_agent_tools_saved.png'),
+    },
+})
+
+
+Record({
+    $id: Now.ID['lab-asset-sc-mcp-aia-run-test-dialog-png'],
+    table: 'x_snc_forecast_v_0_lab_asset',
+    data: {
+        name: 'sc_mcp_aia_run_test_dialog.png',
+        image: Now.attach('./files/sc_mcp_aia_run_test_dialog.png'),
+    },
+})

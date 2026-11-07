@@ -212,7 +212,7 @@ You can let Build Agent clone the model for you.
     source's. If anything only partially inserts, roll back the run instead of leaving
     orphans.
     ```
-2.  Click <mark style="color:green;">**a.)**</mark> **Approve**. You should see the new model in **Forecast Variance** with system **S4D**, and counts that match the source (3, 29, 327, 48, 48, 29).
+2.  Click **Approve**. You should see the new model in **Forecast Variance** with system **S4D**, and counts that match the source (3, 29, 327, 48, 48, 29).
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_approve.png" alt="" width="420"><figcaption></figcaption></figure>
 
@@ -269,7 +269,7 @@ Navigate to Zero Copy Connectors. Review the established PostgreSQL connection.
 1.  Navigate to **All** > <mark style="color:green;">**a.)**</mark> type **Zero Copy Connectors** > <mark style="color:green;">**b.)**</mark> click **Zero Copy Connectors (Workflow Data Fabric)**. This opens the **Zero Copy Connector Hub**.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_nav.png" alt="" width="320"><figcaption></figcaption></figure>
-2.  Go to **Established connections** > <mark style="color:green;">**a.)**</mark> **Forecast Variance Postgres**. <mark style="color:red;">**Note:**</mark> this connection is configured specifically for instances used in ServiceNow-led labs.
+2.  Go to **Established connections** > **Forecast Variance Postgres**. <mark style="color:red;">**Note:**</mark> this connection is configured specifically for instances used in ServiceNow-led labs.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_established.png" alt="" width="560"><figcaption></figcaption></figure>
 3.  The **Connection details** tab shows how the connection is configured: <mark style="color:green;">**a.)**</mark> a JDBC URL to the Neon database and <mark style="color:green;">**b.)**</mark> the read-only user **wdf\_lab\_reader**. No action needs to be done for this step.
@@ -286,7 +286,7 @@ Create a data fabric table from lab\_cc\_summary. Set Cost Center as a Reference
 2.  Enter the <mark style="color:green;">**a.)**</mark> **Label**, e.g. **cc\_summ\_\<your initials>**. The <mark style="color:green;">**b.)**</mark> **Name** is filled in for you, e.g. **x\_snc\_forecast\_v\_0\_df\_cc\_summ\_lfr**, and must stay at 40 characters or fewer. Check that <mark style="color:green;">**c.)**</mark> **Application scope** shows **Forecast Variance**, then click **Continue**.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_df_label.png" alt="" width="560"><figcaption></figcaption></figure>
-3.  Tick the <mark style="color:green;">**a.)**</mark> box beside **Name** to map all 10 columns to the data fabric table. You can also pick only the columns you need, which makes the table load faster.
+3.  Tick the box beside **Name** to map all 10 columns to the data fabric table. You can also pick only the columns you need, which makes the table load faster.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_select_columns.png" alt=""><figcaption></figcaption></figure>
 4.  For **cost\_center**, change <mark style="color:green;">**a.)**</mark> **Type** from **String** to **Reference** (at the end of the list), then click <mark style="color:green;">**b.)**</mark> **Set Reference**. A **Reference** field points to a record in another table, so each cost center links to its master data from SAP.
@@ -298,7 +298,7 @@ Create a data fabric table from lab\_cc\_summary. Set Cost Center as a Reference
 6.  Turn on <mark style="color:green;">**a.)**</mark> **Primary** for **gl\_account**, then click <mark style="color:green;">**b.)**</mark> **Finish**.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_primary_key.png" alt=""><figcaption></figcaption></figure>
-7.  In the **Primary key defined** dialog, click <mark style="color:green;">**a.)**</mark> **Confirm**. A primary key lets ServiceNow tell the source rows apart, and it can't be removed later.
+7.  In the **Primary key defined** dialog, click **Confirm**. A primary key lets ServiceNow tell the source rows apart, and it can't be removed later.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_pg_confirm_pk.png" alt="" width="420"><figcaption></figcaption></figure>
 

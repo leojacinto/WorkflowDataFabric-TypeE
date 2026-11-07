@@ -183,19 +183,29 @@ Accept default security controls. Configure channels and status. Save and test.
 
 Open the copy in the new AI Agent Studio. Add the MCP instructions to the agent. Add the Run SQL MCP server tool from Neon. Configure tool name, description, and execution mode.
 
-1. Navigate to All > <mark style="color:green;">**a.)**</mark> type **AI Agent Studio** > <mark style="color:green;">**b.)**</mark> click on **Agentic solutions**.
+1. Navigate to All > type **AI Agent Studio** > click on **Agentic Solutions**.
 
-2. In the list, <mark style="color:green;">**a.)**</mark> select the **AI agents** tab, <mark style="color:green;">**b.)**</mark> type **Forecast Variance Neon MCP Lab** in **Search** and <mark style="color:green;">**c.)**</mark> click the agent. The agent opens as a canvas.
+<figure><img src="../.gitbook/assets/sc_mcp_aia_agentic_solutions_nav.png" alt=""><figcaption></figcaption></figure>
+
+2. In the list, select the **AI agents** tab, type **Forecast Variance Neon MCP Lab** in **Search** and click the agent. The agent opens as a canvas.
 
 3. Click the **Edit** pencil on the agent in the middle of the canvas. The editor opens with the sections **Definitions, Tools, Access rules, Test scenarios, Triggers, Channels** and **Memories**.
 
+<figure><img src="../.gitbook/assets/sc_mcp_aia_agent_canvas_edit.png" alt=""><figcaption></figcaption></figure>
+
 4. In **Definitions > How-to instructions** go to **Step 2** (the agent you built in Integration Hub) and add one more bullet under it: **Also run the MCP tool "Get Details via Neon MCP" as a secondary check. Only return one entry (limit = 1). Columns should be \["COST\_CENTER", "ACTUAL\_AMOUNT\_USD", "BASELINE\_AMOUNT\_USD", "VARIANCE", "VARIANCE\_PCT"]**.
 
-5. Go to the **Tools** section and click <mark style="color:green;">**a.)**</mark> **+ Add tool** > <mark style="color:green;">**b.)**</mark> **Create new tool** > <mark style="color:green;">**c.)**</mark> **MCP server tool**. A new tab **MCP server tool** opens next to the agent tab.
+5. Go to the **Tools** section and click <mark style="color:green;">**a.)**</mark> **+ Add tool** > <mark style="color:green;">**b.)**</mark> **Create new tool**.
 
-6. In the new tab, <mark style="color:green;">**a.)**</mark> click **Select Model Context Protocol server** > <mark style="color:green;">**b.)**</mark> select **Neon MCP Lab**. A **Select tool** list appears and loads the tools of the Neon server (this can take a few seconds).
+<figure><img src="../.gitbook/assets/sc_mcp_aia_add_tool_menu.png" alt=""><figcaption></figcaption></figure>
 
-7. Click **Select tool**, <mark style="color:green;">**a.)**</mark> type **Run SQL** in **Search** and <mark style="color:green;">**b.)**</mark> select **Run SQL** (not **Run SQL Transaction**). The **Inputs** list (sql, project\_id, branch\_id, database\_name, role\_name, compute\_id, max\_rows) appears. Leave the inputs empty.
+6. In the list of tool types, click **MCP server tool**. A new tab **MCP server tool** opens next to the agent tab.
+
+<figure><img src="../.gitbook/assets/sc_mcp_aia_tool_type_menu.png" alt=""><figcaption></figcaption></figure>
+
+7. In the new tab, <mark style="color:green;">**a.)**</mark> select **Neon MCP Lab** in **Select Model Context Protocol server**. A **Select tool** list appears and loads the tools of the Neon server (this can take a few seconds). Then <mark style="color:green;">**b.)**</mark> click **Select tool**, type **Run SQL** in **Search** and select **Run SQL** (not **Run SQL Transaction**). The **Inputs** list (sql, project\_id, branch\_id, database\_name, role\_name, compute\_id, max\_rows) appears. Leave the inputs empty.
+
+<figure><img src="../.gitbook/assets/sc_mcp_aia_select_server_tool.png" alt=""><figcaption></figcaption></figure>
 
 8. Scroll down and provide the following details. You only need to modify three settings and leave the rest as they are.
 
@@ -208,9 +218,13 @@ Open the copy in the new AI Agent Studio. Add the MCP instructions to the agent.
 
 <mark style="color:green;">**c.)**</mark> **Execution mode**: **Autonomous**
 
-9. Click **Save** (top right of the tool tab).
+9. Click <mark style="color:green;">**d.)**</mark> **Save** (top right of the tool tab).
+
+<figure><img src="../.gitbook/assets/sc_mcp_aia_tool_settings.png" alt=""><figcaption></figcaption></figure>
 
 10. Go back to the **agent tab** (first tab). The **Tools** section now lists **Get Details via Neon MCP**. Click **Save** (top right).
+
+<figure><img src="../.gitbook/assets/sc_mcp_aia_agent_tools_saved.png" alt=""><figcaption></figcaption></figure>
 
 ### AI Agent Testing
 
@@ -218,9 +232,11 @@ Open the copy in the new AI Agent Studio. Add the MCP instructions to the agent.
 
 Enter test prompt to process an expense event. Verify the MCP tool returns matching cost center data from Neon.
 
-1. In the new AI Agent Studio, open the agent canvas (All > AI Agent Studio > **Agentic solutions** > **Forecast Variance Neon MCP Lab**). Click <mark style="color:green;">**a.)**</mark> **Run test** and keep <mark style="color:green;">**b.)**</mark> **Single test** selected.
+1. In the new AI Agent Studio, open the agent canvas (All > AI Agent Studio > **Agentic Solutions** > **Forecast Variance Neon MCP Lab**) and click **Run test**.
 
-2. In **Test scenario** <mark style="color:green;">**a.)**</mark> type **Help me process EXP-2025-IT-002-1007-01** and <mark style="color:green;">**b.)**</mark> click **Run single test**.
+2. In the **Run a test** dialog, <mark style="color:green;">**a.)**</mark> keep **Single test** selected, <mark style="color:green;">**b.)**</mark> check that **Test scenario** shows **Help me process EXP-2025-IT-002-1007-01** (type it if it is empty) and <mark style="color:green;">**c.)**</mark> click **Run single test**.
+
+<figure><img src="../.gitbook/assets/sc_mcp_aia_run_test_dialog.png" alt=""><figcaption></figcaption></figure>
 
 3. The **Trace log** opens on the right and runs the tools one after the other: **Extract Cost Center**, **Search for Cost Center History**, **Search for Expense Transactions History**, **Get Details via Neon MCP** and **Budget Variance Analysis**. Wait until the test shows **Completed**.
 
