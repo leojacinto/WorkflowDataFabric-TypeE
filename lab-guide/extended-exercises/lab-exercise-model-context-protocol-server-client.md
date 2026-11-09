@@ -107,6 +107,10 @@ graph LR
 
 Navigate to AI Agent Studio Settings. Add a new MCP Server entry for Neon with API Key authentication.
 
+**Check the scope first.** The application scope (globe icon) decides where the MCP server, its alias and the agent copy are created. Click the <mark style="color:green;">**a.)**</mark> **globe icon** and make sure <mark style="color:green;">**b.)**</mark> **Forecast Variance** is selected. If it shows another scope, switch it before you continue.
+
+<figure><img src="../.gitbook/assets/sc_fund_exercise_scope.png" alt=""><figcaption></figcaption></figure>
+
 1. Navigate to All > <mark style="color:green;">**a.)**</mark> type **AI Agent Studio** > <mark style="color:green;">**b.)**</mark> click on **Settings**.
 
 <figure><img src="../.gitbook/assets/sc_mcp_agent_studio_settings_nav (3).png" alt=""><figcaption></figcaption></figure>
@@ -231,6 +235,8 @@ Open the copy in the new AI Agent Studio. Add the MCP instructions to the agent.
 #### Hands-on: Test and review Custom AI Agent
 
 Enter test prompt to process an expense event. Verify the MCP tool returns matching cost center data from Neon.
+
+**Before you test:** the test processes the event **EXP-2025-IT-002-1007-01**, so that record has to exist. [Open the Expense Transaction Event list](/x_snc_forecast_v_0_expense_transaction_event_list.do) and look for it. If the list is empty, create it again with step 4 of **Hands-on: Flow Execution** in [Lab Exercise: Integration Hub](../main-exercises/lab-exercise-integration-hub.md); if the event is already there, skip that. Creating it fires the agent trigger, so a Finance Case can open from that run too. Each successful test run of the agent also opens one Finance Case through **Budget Variance Analysis**, so more than one case for CC\_IT\_001 is expected.
 
 1. In the new AI Agent Studio, open the agent canvas (All > AI Agent Studio > **Agentic Solutions** > **Forecast Variance Neon MCP Lab**) and click **Run test**.
 
