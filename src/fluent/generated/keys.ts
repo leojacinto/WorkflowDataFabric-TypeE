@@ -456,6 +456,10 @@ declare global {
                         id: '9d0327647744bf643fc6cfdb15e37933'
                         deleted: false
                     }
+                    'app.css': {
+                        table: 'sys_ux_theme_asset'
+                        id: 'eb721c3f0610419b9951e030574f8cdf'
+                    }
                     bom_json: {
                         table: 'sys_module'
                         id: 'e0a8ebc204ef4275a87622b958e5ae22'

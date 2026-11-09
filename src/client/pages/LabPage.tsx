@@ -1,7 +1,9 @@
-import React, { useEffect, useState } from 'react'
+import React, { useEffect, useMemo, useState } from 'react'
+import ApproachSwitch from '../components/ApproachSwitch'
 import Markdown from '../components/Markdown'
 import { LAB_MARKDOWN } from '../content/lab-markdown'
-import { LabDoc, readMarkdown } from '../lib/markdown'
+import { Approach, findApproachSections, readApproach, saveApproach } from '../lib/approach'
+import { Block, LabDoc, readMarkdown } from '../lib/markdown'
 import { TocItem } from '../toc'
 
 /*
@@ -24,6 +26,17 @@ export default function LabPage({
     navigate: (p: string) => void
 }) {
     const [state, setState] = useState<State>({ phase: 'loading' })
+    const [approach, setApproach] = useState<Approach>(readApproach)
+
+    const choose = (a: Approach) => {
+        setApproach(a)
+        saveApproach(a)
+    }
+
+    const parts = useMemo(
+        () => (state.phase === 'ready' ? splitByApproach(state.doc.blocks, approach) : []),
+        [state, approach]
+    )
 
     useEffect(() => {
         const text = LAB_MARKDOWN[route]
@@ -81,9 +94,68 @@ export default function LabPage({
                 </div>
             )}
 
-            {state.phase === 'ready' && (
-                <Markdown blocks={state.doc.blocks} navigate={navigate} />
-            )}
+            {state.phase === 'ready' &&
+                parts.map((p, i) => {
+                    if (p.kind === 'switch') {
+                        return <ApproachSwitch key={i} value={approach} onChange={choose} />
+                    }
+                    if (p.kind === 'hidden') {
+                        const other = p.role === 'ba' ? 'Build Agent' : 'Manual'
+                        const mine = p.role === 'ba' ? 'manual' : 'Build Agent'
+                        return (
+                            <p key={i} className="lab-approach-hidden">
+                                The {other} steps for &ldquo;{p.title}&rdquo; are hidden because you chose{' '}
+                                {mine}.{' '}
+                                <button
+                                    type="button"
+                                    className="lab-link lab-approach-switch-link"
+                                    onClick={() => choose(p.role)}
+                                >
+                                    Show the {other} steps
+                                </button>
+                            </p>
+                        )
+                    }
+                    return <Markdown key={i} blocks={p.blocks} navigate={navigate} />
+                })}
         </div>
     )
+}
+
+type Part =
+    | { kind: 'blocks'; blocks: Block[] }
+    | { kind: 'switch' }
+    | { kind: 'hidden'; role: Approach; title: string }
+
+/** Cuts the page into runs of blocks, the approach switch, and notes where a path is hidden. */
+function splitByApproach(blocks: Block[], approach: Approach): Part[] {
+    const sections = findApproachSections(blocks)
+    if (!sections.length) return [{ kind: 'blocks', blocks }]
+
+    const first = Math.min(...sections.map(s => s.start))
+    const parts: Part[] = []
+    let run: Block[] = []
+    const flush = () => {
+        if (run.length) parts.push({ kind: 'blocks', blocks: run })
+        run = []
+    }
+
+    let i = 0
+    while (i < blocks.length) {
+        if (i === first) {
+            flush()
+            parts.push({ kind: 'switch' })
+        }
+        const sec = sections.find(s => s.start === i)
+        if (sec && sec.role !== approach) {
+            flush()
+            parts.push({ kind: 'hidden', role: sec.role, title: sec.title })
+            i = sec.end
+            continue
+        }
+        run.push(blocks[i])
+        i++
+    }
+    flush()
+    return parts
 }

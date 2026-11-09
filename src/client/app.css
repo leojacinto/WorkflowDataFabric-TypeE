@@ -661,3 +661,93 @@ body {
   font-size: 1rem;
   line-height: 1.625;
 }
+
+/* Choose your approach (Build Agent / Manual) */
+.lab-approach {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border: var(--lab-border-width) solid var(--lab-border);
+  border-radius: 0.75rem;
+  background: var(--lab-surface);
+}
+
+.lab-approach-title {
+  margin: 0 0 0.75rem;
+  font-size: 1rem;
+  font-weight: 700;
+  color: var(--lab-text);
+}
+
+.lab-approach-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.75rem;
+}
+
+@media (max-width: 640px) {
+  .lab-approach-options {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
+
+.lab-approach-option {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font: inherit;
+  color: var(--lab-text);
+  background: var(--lab-surface);
+  border: var(--lab-border-width) solid var(--lab-border-strong);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}
+
+.lab-approach-option:hover {
+  background: var(--lab-surface-2);
+}
+
+.lab-approach-option:focus-visible {
+  outline: 2px solid var(--lab-primary);
+  outline-offset: 2px;
+}
+
+.lab-approach-option.is-selected {
+  border-color: var(--lab-primary);
+  background: var(--lab-primary-soft);
+  box-shadow: inset 0 0 0 1px var(--lab-primary);
+}
+
+.lab-approach-label {
+  font-weight: 700;
+}
+
+.lab-approach-blurb {
+  font-size: 0.875rem;
+  color: var(--lab-text-secondary);
+}
+
+.lab-approach-hint {
+  margin: 0.75rem 0 0;
+  font-size: 0.8125rem;
+  color: var(--lab-text-tertiary);
+}
+
+.lab-approach-hidden {
+  margin: 1rem 0;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  color: var(--lab-text-secondary);
+  background: var(--lab-surface-2);
+  border-radius: 0.5rem;
+}
+
+.lab-approach-switch-link {
+  padding: 0;
+  font: inherit;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
