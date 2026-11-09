@@ -260,6 +260,30 @@ Once the event exists, the list shows one row with Event ID **EXP-2025-IT-002-10
 
 4. Open the step **Get Details via Neon MCP** in the trace. It obtained the closest match for the value of cost center CC\_IT\_001. For this exercise, we only returned the raw JSON value to demonstrate the MCP capability where we did not use any SQL or API to return the matching row; instead we just provided a high-level instruction in Step 2 of the agent. **Budget Variance Analysis** also opens a Finance Case when the cost center is over budget, and its number is part of the final answer.
 
+#### If the test shows an error instead of results
+
+The test chat may answer with this text instead of the review:
+
+> Sorry, there was a problem on my side trying to complete this request. Try asking again later.
+>
+> There are no agents available at the moment. Please try again later.
+
+Saving the agent in the new AI Agent Studio can clear its **Strategy**, and an agent without a Strategy cannot run. The new studio has no field for it, so you set it in the **AI Agents** list. The screenshots show the test agent of this lab; yours is named **Forecast Variance Neon MCP Lab**.
+
+1. Navigate to All, type **sn\_aia\_agent.list** and press **Enter**. The **AI Agents** list opens.
+
+2. In the **Name** search box type **Forecast Variance Neon MCP Lab** and press **Enter**. Look at the **Strategy** column of your agent. If it shows <mark style="color:green;">**a.)**</mark> **(empty)**, continue. If it shows **ReAct**, the Strategy is not the cause of your error.
+
+<figure><img src="../.gitbook/assets/sc_mcp_fix_strategy_blank.png" alt=""><figcaption></figcaption></figure>
+
+3. Double-click the empty **Strategy** cell, type **ReAct**, select <mark style="color:green;">**a.)**</mark> **ReAct** from the list and click <mark style="color:green;">**b.)**</mark> the green check.
+
+<figure><img src="../.gitbook/assets/sc_mcp_fix_strategy_pick.png" alt=""><figcaption></figcaption></figure>
+
+4. The cell now shows <mark style="color:green;">**a.)**</mark> **ReAct**. Go back to the agent in the new AI Agent Studio and click **Re-run test**.
+
+<figure><img src="../.gitbook/assets/sc_mcp_fix_strategy_saved.png" alt=""><figcaption></figcaption></figure>
+
 5. **Challenge:** once you are done with this lab, see if you can remove the tool **Extract Cost Center** and replace it completely with the data from **Get Details via Neon MCP** as added in Step 2 of the agent. No hints this time. 😉
 
 ### Conclusion

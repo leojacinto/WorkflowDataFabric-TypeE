@@ -2532,3 +2532,30 @@ Record({
         image: Now.attach('./files/sc_mcp_aia_trace_log_result.png'),
     },
 })
+
+Record({
+    $id: Now.ID['lab-asset-sc-mcp-fix-strategy-blank-png'],
+    table: 'x_snc_forecast_v_0_lab_asset',
+    data: {
+        name: 'sc_mcp_fix_strategy_blank.png',
+        image: Now.attach('./files/sc_mcp_fix_strategy_blank.png'),
+    },
+})
+
+Record({
+    $id: Now.ID['lab-asset-sc-mcp-fix-strategy-pick-png'],
+    table: 'x_snc_forecast_v_0_lab_asset',
+    data: {
+        name: 'sc_mcp_fix_strategy_pick.png',
+        image: Now.attach('./files/sc_mcp_fix_strategy_pick.png'),
+    },
+})
+
+Record({
+    $id: Now.ID['lab-asset-sc-mcp-fix-strategy-saved-png'],
+    table: 'x_snc_forecast_v_0_lab_asset',
+    data: {
+        name: 'sc_mcp_fix_strategy_saved.png',
+        image: Now.attach('./files/sc_mcp_fix_strategy_saved.png'),
+    },
+})

@@ -3064,6 +3064,18 @@ declare global {
                         table: 'x_snc_forecast_v_0_lab_asset'
                         id: 'ad245d19af04481d8e00cd911fffabfc'
                     }
+                    'lab-asset-sc-mcp-fix-strategy-blank-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '179d42965e204ec8bd62a536a5b628ac'
+                    }
+                    'lab-asset-sc-mcp-fix-strategy-pick-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'e3926a0028b943a4927a90035f00df2f'
+                    }
+                    'lab-asset-sc-mcp-fix-strategy-saved-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '9390cabefc954b40ab98598b1d863a9c'
+                    }
                     'lab-asset-sc-mcp-manage-servers-new-png': {
                         table: 'x_snc_forecast_v_0_lab_asset'
                         id: '7cd9aaba2f0443bd8cea6c6413452a97'
