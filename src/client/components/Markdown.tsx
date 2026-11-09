@@ -177,6 +177,7 @@ function Blocks({ blocks, navigate }: Props) {
                         return (
                             <ListTag
                                 key={i}
+                                {...(b.ordered && b.start && b.start !== 1 ? { start: b.start } : {})}
                                 className={`lab-list${b.ordered ? ' lab-list--ordered' : ''}`}
                             >
                                 {b.items.map((item, j) => (

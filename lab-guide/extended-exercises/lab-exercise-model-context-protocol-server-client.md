@@ -111,7 +111,7 @@ Navigate to AI Agent Studio Settings. Add a new MCP Server entry for Neon with A
 
 <figure><img src="../.gitbook/assets/sc_mcp_agent_studio_settings_nav (3).png" alt=""><figcaption></figcaption></figure>
 
-2. In the **Settings** page > <mark style="color:green;">**a.)**</mark> go to **Manage MCP Servers** > <mark style="color:green;">**b.)**</mark> click on **New**.
+2. In the **Settings** page > <mark style="color:green;">**a.)**</mark> go to **Manage MCP servers** > <mark style="color:green;">**b.)**</mark> click on **New**.
 
 <figure><img src="../.gitbook/assets/sc_mcp_manage_servers_new.png" alt=""><figcaption></figcaption></figure>
 
@@ -165,12 +165,12 @@ This exercise does not cover the creation of the MCP Service from Neon as that r
 
 Accept default security controls. Configure channels and status. Save and test.
 
-1.  On the specialty page click **Save and Continue**, then on the tools page click **Save and Continue** again without changing anything (you add the MCP step and tool in the next section).
+1.  On the specialty page click **Save and Continue**, then on the tools page click **Save and Continue** again without changing anything (you add the MCP step and tool in the next section). If a **Save updates?** dialog appears, click **Save updates**.
 
-2.  Since this is copied from an existing AI Agent configuration, simply accept the default values for **Define security controls** and its 2 sub-items. Also keep A**dd triggers value** blank.
+2.  Since this is copied from an existing AI Agent configuration, simply accept the default values for **Define security controls** and its 2 sub-items. If **Define user access** shows **Users with specific roles** with an empty **Role(s)** field, type **admin** and pick it; **Save and continue** stays disabled until a role is set. Also keep A**dd triggers value** blank.
 
     <figure><img src="../.gitbook/assets/sc_mcp_security_defaults.png" alt=""><figcaption></figcaption></figure>
-3.  Finally, click on <mark style="color:green;">**a.)**</mark> **Select channels and status**. This configures the availability of the AI Agent. In this case, it is enabled and can be accessed using <mark style="color:green;">**b.)**</mark>**&#x20;Now Assist panel** toggled on as well as via <mark style="color:green;">**c.)**</mark>**&#x20;Now Assist in Virtual Agent** added as chat assistant. Click <mark style="color:green;">**d.)**</mark>**&#x20;Save and test**. <mark style="color:$warning;">**Note:**</mark> if Chat Assistants (step <mark style="color:green;">**2.c.**</mark>) does not give you options, check and execute the steps in [Lab Exercise: Integration Hub > Platform Configuration](https://servicenow-lf.gitbook.io/the-workflow-data-fabric-loom/main-exercises/lab-exercise-integration-hub#preparation-platform-configuration) > Steps 9 to 18; esp. if you are doing this lab standalone or have skipped the [Lab Exercise: Integration Hub](https://servicenow-lf.gitbook.io/the-workflow-data-fabric-loom/main-exercises/lab-exercise-integration-hub) portion.
+3.  Finally, click on <mark style="color:green;">**a.)**</mark> **Select channels and status**. This configures the availability of the AI Agent. In this case, it is enabled and can be accessed using <mark style="color:green;">**b.)**</mark>**&#x20;Now Assist panel** (named **Otto panel** on some instances) toggled on as well as via <mark style="color:green;">**c.)**</mark>**&#x20;Now Assist in Virtual Agent** (named **Otto chat assistants** on some instances) added as chat assistant. Click <mark style="color:green;">**d.)**</mark>**&#x20;Save and test**. <mark style="color:$warning;">**Note:**</mark> if Chat Assistants (step <mark style="color:green;">**2.c.**</mark>) does not give you options, check and execute the steps in [Lab Exercise: Integration Hub > Platform Configuration](https://servicenow-lf.gitbook.io/the-workflow-data-fabric-loom/main-exercises/lab-exercise-integration-hub#preparation-platform-configuration) > Steps 9 to 18; esp. if you are doing this lab standalone or have skipped the [Lab Exercise: Integration Hub](https://servicenow-lf.gitbook.io/the-workflow-data-fabric-loom/main-exercises/lab-exercise-integration-hub) portion.
 
     <figure><img src="../.gitbook/assets/sc_mcp_channels_status_neon.png" alt=""><figcaption></figcaption></figure>
 4.  You **MIGHT** be alerted of potential duplicates but this is due to the multiple AI Agents created to test various integration scenarios. Click **Ignore and continue**.

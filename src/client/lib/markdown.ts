@@ -29,7 +29,7 @@ export type Block =
     | { kind: 'figure'; src: string; alt: string; width?: string }
     | { kind: 'code'; lang: string; text: string }
     | { kind: 'quote'; blocks: Block[] }
-    | { kind: 'list'; ordered: boolean; items: Block[][] }
+    | { kind: 'list'; ordered: boolean; start?: number; items: Block[][] }
     | { kind: 'table'; head: Inline[][]; rows: Block[][][] }
     | { kind: 'rule' }
 
@@ -440,6 +440,7 @@ function parseLines(lines: string[]): Block[] {
 
         if (ORDERED.test(line) || BULLET.test(line)) {
             const ordered = ORDERED.test(line)
+            const start = ordered ? Number(ORDERED.exec(line)![2]) : undefined
             const items: Block[][] = []
 
             while (i < lines.length) {
@@ -500,7 +501,7 @@ function parseLines(lines: string[]): Block[] {
                 items.push(parseLines(chunk))
             }
 
-            blocks.push({ kind: 'list', ordered, items })
+            blocks.push({ kind: 'list', ordered, start, items })
             continue
         }
 

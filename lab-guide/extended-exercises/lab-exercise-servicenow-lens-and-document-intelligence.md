@@ -32,11 +32,11 @@ A more detailed version of this exercise with significantly more configuration s
 
 **Document Intelligence**
 
-<table><thead><tr><th width="83">Step</th><th width="106">Who</th><th>Description</th></tr></thead><tbody><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#walkthrough-document-intelligence-setup">2</a></td><td>Student</td><td><strong>Document Intelligence Setup:</strong> Navigate to Now Assist Admin Skills. Activate the Extract information from documents skill. Review the Expense Transaction Event use case configuration and integrations.</td></tr><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#hands-on-document-intelligence-parameters">3</a></td><td>Student</td><td><strong>Document Intelligence Parameters:</strong> Set extraction thresholds to 0.01 in Global scope for lab purposes.</td></tr><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#hands-on-document-intelligence-runtime">4</a></td><td>Student</td><td><strong>Document Intelligence Runtime:</strong> Create a variance task record. Upload the Invoice_IT_Laptop_CC_IT_002.pdf document. Set state to Work in Progress and submit.</td></tr><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#walkthrough-forecast-variance-ai-agent">5</a></td><td>Student</td><td><strong>Watch the AI Agent React:</strong> Look for the Now Assist badge. Open Now Assist chat. Expand to Modal view. Review the cost center and vendor, the budget and vendor history, and the Finance Case link.</td></tr><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#completion-verify-finance-case">6</a></td><td>Student</td><td><strong>Verify the Finance Case:</strong> Navigate to Finance Operations Workspace. Find the case created by the agent.</td></tr><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#optional-completion-verify-document-output">7</a></td><td>Student</td><td><strong>[Optional] Verify Document Output:</strong> Navigate to Now Assist Admin Skills. Review the extracted document information in the Test Outputs tab.</td></tr></tbody></table>
+<table><thead><tr><th width="83">Step</th><th width="106">Who</th><th>Description</th></tr></thead><tbody><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#walkthrough-document-intelligence-setup">2</a></td><td>Student</td><td><strong>Document Intelligence Setup:</strong> Navigate to AI Admin Hub > AI Skills. Activate the Extract information from documents skill. Review the Expense Transaction Event use case configuration and integrations.</td></tr><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#hands-on-document-intelligence-parameters">3</a></td><td>Student</td><td><strong>Document Intelligence Parameters:</strong> Set extraction thresholds to 0.01 in Global scope for lab purposes.</td></tr><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#hands-on-document-intelligence-runtime">4</a></td><td>Student</td><td><strong>Document Intelligence Runtime:</strong> Create a variance task record. Upload the Invoice_IT_Laptop_CC_IT_002.pdf document. Set state to Work in Progress and submit.</td></tr><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#walkthrough-forecast-variance-ai-agent">5</a></td><td>Student</td><td><strong>Watch the AI Agent React:</strong> Look for the Now Assist badge. Open Now Assist chat. Expand to Modal view. Review the cost center and vendor, the budget and vendor history, and the Finance Case link.</td></tr><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#completion-verify-finance-case">6</a></td><td>Student</td><td><strong>Verify the Finance Case:</strong> Navigate to Finance Operations Workspace. Find the case created by the agent.</td></tr><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#optional-completion-verify-document-output">7</a></td><td>Student</td><td><strong>[Optional] Verify Document Output:</strong> Navigate to AI Admin Hub > AI Skills. Review the extracted document information in the Test Outputs tab.</td></tr></tbody></table>
 
 **AI Lens**
 
-<table><thead><tr><th width="83">Step</th><th width="106">Who</th><th>Description</th></tr></thead><tbody><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#walkthrough-ai-lens-setup">8</a></td><td>Student</td><td><strong>AI Lens Setup:</strong> Navigate to Now Assist Admin Skills. Activate ServiceNow AI Lens.</td></tr><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#walkthrough-ai-lens-download">9</a></td><td>Student</td><td><strong>AI Lens Download:</strong> Download and install the Lens application for your device.</td></tr><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#hands-on-ai-lens-runtime">10</a></td><td>Student</td><td><strong>AI Lens Runtime:</strong> Open the Invoice_Injection_PROD_DE_2.pdf document. Navigate to the Expense Transaction Event table. Use Create with Lens to capture and submit expense data.</td></tr></tbody></table>
+<table><thead><tr><th width="83">Step</th><th width="106">Who</th><th>Description</th></tr></thead><tbody><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#walkthrough-ai-lens-setup">8</a></td><td>Student</td><td><strong>AI Lens Setup:</strong> Navigate to AI Admin Hub > AI Skills. Activate ServiceNow AI Lens.</td></tr><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#walkthrough-ai-lens-download">9</a></td><td>Student</td><td><strong>AI Lens Download:</strong> Download and install the Lens application for your device.</td></tr><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#hands-on-ai-lens-runtime">10</a></td><td>Student</td><td><strong>AI Lens Runtime:</strong> Open the Invoice_Injection_PROD_DE_2.pdf document. Navigate to the Expense Transaction Event table. Use Create with Lens to capture and submit expense data.</td></tr></tbody></table>
 
 <table><thead><tr><th width="83">Step</th><th width="106">Who</th><th>Description</th></tr></thead><tbody><tr><td><a href="lab-exercise-servicenow-lens-and-document-intelligence.md#conclusion">11</a></td><td>Facilitator</td><td><strong>Conclusion:</strong> Walk through the capabilities of both Document Intelligence and AI Lens for document-based data capture.</td></tr></tbody></table>
 
@@ -106,12 +106,12 @@ graph TB
 
 #### Walkthrough: Document Intelligence Setup
 
-Navigate to Now Assist Admin Skills. Activate the Extract information from documents skill. Review the Expense Transaction Event use case configuration and integrations.
+Navigate to AI Admin Hub > AI Skills. Activate the Extract information from documents skill. Review the Expense Transaction Event use case configuration and integrations.
 
-1.  Navigate to **All** > <mark style="color:green;">**a.)**</mark> type **Now Assist Admin** > <mark style="color:green;">**b.)**</mark> click on **Now Assist Admin > Skills**.
+1.  Navigate to **All** > <mark style="color:green;">**a.)**</mark> type **AI Admin Hub** > <mark style="color:green;">**b.)**</mark> click on **AI Admin Hub > AI Skills** (the page can take up to a minute to load).
 
     <figure><img src="../.gitbook/assets/sc_ldi_now_assist_skills_nav.png" alt=""><figcaption></figcaption></figure>
-2.  Go to <mark style="color:green;">**a.)**</mark> **Platform** > <mark style="color:green;">**b.)**</mark>**&#x20;Other** > <mark style="color:green;">**c.)**</mark> type **Extract information from documents** > go to **Extract information from documents** > **vertical three dot** > <mark style="color:green;">**d.)**</mark>**&#x20;Edit**.
+2.  Go to <mark style="color:green;">**a.)**</mark> **Platform** > <mark style="color:green;">**b.)**</mark>**&#x20;Other** > <mark style="color:green;">**c.)**</mark> type **Extract information from documents** > go to **Extract information from documents** > <mark style="color:green;">**d.)**</mark>**&#x20;Edit Configuration** (a button on the skill card).
 
     <figure><img src="../.gitbook/assets/sc_ldi_edit_extract_skill.png" alt=""><figcaption></figcaption></figure>
 3.  Go to <mark style="color:green;">**a.)**</mark> **Create Usecase** > <mark style="color:green;">**b.)**</mark> click on **Expense Transaction Event.**
@@ -172,7 +172,7 @@ Navigate to Now Assist Admin Skills. Activate the Extract information from docum
 #### Hands-on: Document Intelligence Parameters
 
 1. Steps 2 to 4 are applicable if you do **NOT** have [Document Intelligence Admin](https://store.servicenow.com/sn_appstore_store.do#!/store/application/8700f4efc3a411101d9a3cadb140ddad/1.1.0) plugin installed which is the case for this lab. Succeeding versions of this lab will have the said plugin installed which will result in a more streamlined experience.
-2.  For this step, change the scope to Global by navigating to the <mark style="color:green;">**a.)**</mark> **globe icon** and clicking <mark style="color:green;">**b.)**</mark> **Global** application scope.
+2.  For this step, change the scope to Global by navigating to the <mark style="color:green;">**a.)**</mark> **globe icon** and clicking <mark style="color:green;">**b.)**</mark> **Global** application scope. (On the property form you can also click the banner link **To edit this record click here**, which does the same.)
 
     <figure><img src="../.gitbook/assets/sc_ldi_scope_global.png" alt="" width="321"><figcaption></figcaption></figure>
 3. Navigate to All > <mark style="color:green;">**a.)**</mark> type **Document Data Extraction** > <mark style="color:green;">**b.)**</mark> click Document **Data Extraction > System Properties**.
@@ -313,13 +313,13 @@ Navigate to Finance Operations Workspace. Find the case created by the agent.
 
 #### \[Optional] Completion: Verify Document Output
 
-Navigate to Now Assist Admin Skills. Review the extracted document information in the Test Outputs tab.
+Navigate to AI Admin Hub > AI Skills. Review the extracted document information in the Test Outputs tab.
 
-1. Navigate to **All** > <mark style="color:green;">**a.)**</mark> type **Now Assist Admin** > <mark style="color:green;">**b.)**</mark> click on **Now Assist Admin > Skills**.
+1. Navigate to **All** > <mark style="color:green;">**a.)**</mark> type **AI Admin Hub** > <mark style="color:green;">**b.)**</mark> click on **AI Admin Hub > AI Skills** (the page can take up to a minute to load).
 
 <figure><img src="../.gitbook/assets/sc_ldi_now_assist_skills_nav.png" alt=""><figcaption></figcaption></figure>
 
-2. Go to <mark style="color:green;">**a.)**</mark> **Platform** > <mark style="color:green;">**b.)**</mark>**&#x20;Other** > <mark style="color:green;">**c.)**</mark> type **Extract information from documents** > go to **Extract information from documents** > **vertical three dot** > <mark style="color:green;">**d.)**</mark>**&#x20;Edit**.
+2. Go to <mark style="color:green;">**a.)**</mark> **Platform** > <mark style="color:green;">**b.)**</mark>**&#x20;Other** > <mark style="color:green;">**c.)**</mark> type **Extract information from documents** > go to **Extract information from documents** > <mark style="color:green;">**d.)**</mark>**&#x20;Edit Configuration** (a button on the skill card).
 
 <figure><img src="../.gitbook/assets/sc_ldi_edit_extract_skill.png" alt=""><figcaption></figcaption></figure>
 
@@ -341,9 +341,9 @@ Navigate to Now Assist Admin Skills. Review the extracted document information i
 
 #### Walkthrough: AI Lens Setup
 
-Navigate to Now Assist Admin Skills. Activate ServiceNow AI Lens.
+Navigate to AI Admin Hub > AI Skills. Activate ServiceNow AI Lens.
 
-1.  Navigate to **All** > <mark style="color:green;">**a.)**</mark> type **Now Assist Admin** > <mark style="color:green;">**b.)**</mark> click on **Now Assist Admin > Skills**.
+1.  Navigate to **All** > <mark style="color:green;">**a.)**</mark> type **AI Admin Hub** > <mark style="color:green;">**b.)**</mark> click on **AI Admin Hub > AI Skills** (the page can take up to a minute to load).
 
     <figure><img src="../.gitbook/assets/sc_ldi_now_assist_skills_nav.png" alt=""><figcaption></figcaption></figure>
 2.  Go to <mark style="color:green;">**a.)**</mark> **Platform** > <mark style="color:green;">**b.)**</mark>**&#x20;Other** > <mark style="color:green;">**c.)**</mark> type **ServiceNow AI Lens** > <mark style="color:green;">**d.)**</mark> click **Turn on**.
@@ -361,10 +361,10 @@ Navigate to Now Assist Admin Skills. Activate ServiceNow AI Lens.
 
 Download and install the Lens application for your device.
 
-1.  Navigate to **All** > <mark style="color:green;">**a.)**</mark> type **ServiceNow AI Lens** > <mark style="color:green;">**b.)**</mark> click on **ServiceNow AI Lens > Downloads**.
+1.  Navigate to **All** > <mark style="color:green;">**a.)**</mark> type **ServiceNow AI Lens** > <mark style="color:green;">**b.)**</mark> click on **ServiceNow AI Lens > Downloads and Preferences**.
 
     <figure><img src="../.gitbook/assets/sc_ldi_lens_downloads_nav.png" alt=""><figcaption></figcaption></figure>
-2.  Download and install the appropriate Lens installation package for your device. As there are three possible device types, installation steps are not shown in this guide. It is generally safe to follow the default prompts in the installation package.
+2.  Download and install the appropriate Lens installation package for your device. As there are three possible device types, installation steps are not shown in this guide. It is generally safe to follow the default prompts in the installation package. The page also offers a browser version of Lens that needs no installation; set **Default app on launch** to **Browser** if you prefer it.
 
     <figure><img src="../.gitbook/assets/sc_ldi_lens_download_packages.png" alt=""><figcaption></figcaption></figure>
 

@@ -32,7 +32,7 @@ This lab will walk you through integration of data coming from Cloud Data Wareho
 
 **Zero Copy Connector for ERP**
 
-<table><thead><tr><th width="83">Step</th><th width="106">Who</th><th>Description</th></tr></thead><tbody><tr><td><a href="lab-exercise-zero-copy-connectors.md#walkthrough-explore-zcc-for-erp-workspace">3</a></td><td>Student</td><td><strong>ZCC for ERP Workspace:</strong> Navigate to Zero Copy Connector for ERP Home. Explore the workspace layout.</td></tr><tr><td><a href="lab-exercise-zero-copy-connectors.md#hands-on-clone-erp-data-product-for-cost-center">4</a></td><td>Student</td><td><strong>Clone ERP Data Product:</strong> Clone the OOTB DP: Cost Center model. Label it SAP Cost Center. Assign ERP system S4D.</td></tr><tr><td><a href="lab-exercise-zero-copy-connectors.md#walkthrough-explore-zcc-for-erp-bapi-entity">5</a></td><td>Student</td><td><strong>ERP BAPI Entity:</strong> Review the BAPI_COSTCENTER_GETDETAIL1 entity. Explore Specify Inputs and Choose Outputs configurations.</td></tr><tr><td><a href="lab-exercise-zero-copy-connectors.md#walkthrough-explore-zcc-for-erp-extraction-tables">6</a></td><td>Student</td><td><strong>ERP Extraction Tables:</strong> Filter and review SAP Cost Center extraction table. Navigate to the target table containing Cost Center Master Data from SAP.</td></tr></tbody></table>
+<table><thead><tr><th width="83">Step</th><th width="106">Who</th><th>Description</th></tr></thead><tbody><tr><td><a href="lab-exercise-zero-copy-connectors.md#walkthrough-explore-zcc-for-erp-workspace">3</a></td><td>Student</td><td><strong>ZCC for ERP Workspace:</strong> Navigate to Zero Copy Connector for ERP Home. Explore the workspace layout.</td></tr><tr><td><a href="lab-exercise-zero-copy-connectors.md#hands-on-clone-erp-data-product-for-cost-center">4</a></td><td>Student</td><td><strong>Clone ERP Data Product:</strong> Clone the OOTB CP: Cost Center model. Label it SAP Cost Center. Assign ERP system S4D.</td></tr><tr><td><a href="lab-exercise-zero-copy-connectors.md#walkthrough-explore-zcc-for-erp-bapi-entity">5</a></td><td>Student</td><td><strong>ERP BAPI Entity:</strong> Review the BAPI_COSTCENTER_GETDETAIL1 entity. Explore Specify Inputs and Choose Outputs configurations.</td></tr><tr><td><a href="lab-exercise-zero-copy-connectors.md#walkthrough-explore-zcc-for-erp-extraction-tables">6</a></td><td>Student</td><td><strong>ERP Extraction Tables:</strong> Filter and review SAP Cost Center extraction table. Navigate to the target table containing Cost Center Master Data from SAP.</td></tr></tbody></table>
 
 **Zero Copy Connector for SQL**
 
@@ -171,15 +171,15 @@ This provides the steps needed to connect ServiceNow to the ERP system to obtain
 
 #### Hands-on: Clone ERP Data Product for Cost Center
 
-Clone the OOTB DP: Cost Center model. Label it SAP Cost Center. Assign ERP system S4D.
+Clone the OOTB CP: Cost Center model. Label it SAP Cost Center. Assign ERP system S4D.
 
-1.  Click on <mark style="color:green;">**a.)**</mark> **Models (database icon)** > <mark style="color:green;">**b.)**</mark> click **Model Name** > **more (vertical three dots)** > <mark style="color:green;">**c.)**</mark> type **DP: Cost Center** > <mark style="color:green;">**d.)**</mark> click **Apply**. We will replicate the structure of this OOTB data model.
+1.  Click on <mark style="color:green;">**a.)**</mark> **Models (database icon)** > <mark style="color:green;">**b.)**</mark> click **Model Name** > **more (vertical three dots)** > <mark style="color:green;">**c.)**</mark> type **CP: Cost Center** > <mark style="color:green;">**d.)**</mark> click **Apply**. We will replicate the structure of this OOTB data model.
 
     <figure><img src="../.gitbook/assets/sc_zcc_models_filter_cost_center.png" alt=""><figcaption></figcaption></figure>
-2.  Click on **DP: Cost Center** with Short Description **Data Product: Cost Center ( Function Call )**.
+2.  Click on **CP: Cost Center** with Short Description **Data Product: Cost Center ( Function Call )**.
 
     <figure><img src="../.gitbook/assets/sc_zcc_dp_cost_center_click.png" alt=""><figcaption></figcaption></figure>
-3.  Note the <mark style="color:green;">**a.)**</mark> popup that indicates that you are opening an **ERP Data Product** which is delivered as OOTB templates that customers can use to ramp-up creation of ERP models, which means it cannot be edited. Click <mark style="color:green;">**b.)**</mark> **Clone** to create a copy of this model.
+3.  Note the <mark style="color:green;">**a.)**</mark> popup that indicates that you are opening an **ERP Data Product** which is delivered as OOTB templates that customers can use to ramp-up creation of ERP models, which means it cannot be edited. Click <mark style="color:green;">**b.)**</mark> **Clone** to create a copy of this model. If one or two guided-tour dialogs open on the model page, close them and answer **No** to **Stop Guided Tour**.
 
     <figure><img src="../.gitbook/assets/sc_zcc_clone_popup.png" alt=""><figcaption></figcaption></figure>
 4.  Provide the label for the cloned model as <mark style="color:green;">**a.)**</mark> **SAP Cost Center Lab** and take note of the Target application which should be <mark style="color:green;">**b.)**</mark> **Forecast Variance**. Click <mark style="color:green;">**c.)**</mark> Clone this model once done.
@@ -223,7 +223,7 @@ Review the BAPI\_COSTCENTER\_GETDETAIL1 entity. Explore Specify Inputs and Choos
 1.  Click **Read** to use a read-only operation configured in the model. ZCC for ERP models can also perform **Update** and **Create** actions.
 
     <figure><img src="../.gitbook/assets/sc_zcc_click_read.png" alt=""><figcaption></figcaption></figure>
-2.  There is a BAPI already included in the **DP: Cost Center** model you have cloned earlier. The entity **BAPI\_COSTCENTER\_GETDETAIL1** is already configured here so you do not have to do anything. As mentioned earlier, there are other ways to obtain master data from SAP (whether it is Cost Center, Materials, etc.) such as RFC table reads or OData endpoints.
+2.  There is a BAPI already included in the **CP: Cost Center** model you have cloned earlier. The entity **BAPI\_COSTCENTER\_GETDETAIL1** is already configured here so you do not have to do anything. As mentioned earlier, there are other ways to obtain master data from SAP (whether it is Cost Center, Materials, etc.) such as RFC table reads or OData endpoints.
 
     <figure><img src="../.gitbook/assets/sc_zcc_bapi_configured.png" alt=""><figcaption></figcaption></figure>
 3.  Click on **Specify Inputs**. You do not need to do anything in this screen. The intent is to provide an overview of what can be configured as fields for selections when extracting or displaying information from the ERP system. If the table, BAPI, or OData endpoint supports it, this screen can also be left blank which is an equivalent of selecting all rows/records when executing the **Read** action.

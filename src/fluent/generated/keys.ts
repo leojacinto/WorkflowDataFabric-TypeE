@@ -2988,6 +2988,38 @@ declare global {
                         table: 'x_snc_forecast_v_0_lab_asset'
                         id: 'dd9ff7c4365b4b419f0d0f9ee079e305'
                     }
+                    'lab-asset-sc-mcp-aia-add-tool-menu-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '8035d80b713247cd9db0b8cf70ff642f'
+                    }
+                    'lab-asset-sc-mcp-aia-agent-canvas-edit-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '3c49f95c5ebc450cbf8e75a93b6c42b4'
+                    }
+                    'lab-asset-sc-mcp-aia-agent-tools-saved-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'de06351fc47c4c8386f065fc839b37d8'
+                    }
+                    'lab-asset-sc-mcp-aia-agentic-solutions-nav-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '104f0309f7dd474e954aa98fc0e46da9'
+                    }
+                    'lab-asset-sc-mcp-aia-run-test-dialog-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'cb293c4af2e34f2491d695715a38a6d6'
+                    }
+                    'lab-asset-sc-mcp-aia-select-server-tool-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'd1248f0a3add45169aad12b9d04e6959'
+                    }
+                    'lab-asset-sc-mcp-aia-tool-settings-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '3aa79d8cfce444069008f4262d1f2aba'
+                    }
+                    'lab-asset-sc-mcp-aia-tool-type-menu-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '2fb1abe52e0446d2b35becab2cdec294'
+                    }
                     'lab-asset-sc-mcp-channels-status-neon-png': {
                         table: 'x_snc_forecast_v_0_lab_asset'
                         id: '17d894e1fa724d79bfbd5f17d5a0e4be'
