@@ -160,7 +160,7 @@ These are required preparation steps in platform level. These are cross configur
 
 Verify the Now Assist panel is accessible.
 
-1.  If you have set up the Now Assist Panel correctly, you should see the Now Assist icon on the top right.
+1.  If you have set up the Now Assist Panel correctly, you should see the Otto/sparkle icon on the top right.
 
     <figure><img src="../.gitbook/assets/sc_ihub_now_assist_panel.png" alt=""><figcaption></figcaption></figure>
 
@@ -297,7 +297,7 @@ The agent reacts to new expense events, so remove the test event first and let t
 
 Look for the Now Assist badge. Open Now Assist chat. Expand to Modal view. Explore: the steps the agent ran, the cost center and vendor history, the budget analysis and the Finance Case link.
 
-1. Look at the top right of any ServiceNow page. You will notice that there is a new **Now Assist badge**. This is the AI agent at work in the back end because the **Get Expense Event** subflow has created a record in the **Expense Transaction Event** table. Click on the **Now Assist icon** with the updated badge count. <mark style="color:$warning;">**Note:**</mark> if the **Now Assist badge** does not appear, simply reload your page. <mark style="color:$warning;">**In some cases the badge won't load at all**</mark> so simply open Now Assist and look for new chats/correspondences. The agent can take a few minutes to start when the instance is busy. If nothing arrives after 10 minutes, start the agent by hand: **AI Agent Studio** > **Testing** > **Start manual test**, agent **Forecast Variance \<your initials>**, task **Review expense event EXP-2025-IT-002-1007-01**.
+1. Look at the top right of any ServiceNow page. You will notice that there is a new **Now Assist badge**. This is the AI agent at work in the back end because the **Get Expense Event** subflow has created a record in the **Expense Transaction Event** table. Click on the **Otto/sparkle icon** with the updated badge count. <mark style="color:$warning;">**Note:**</mark> if the **Now Assist badge** does not appear, simply reload your page. <mark style="color:$warning;">**In some cases the badge won't load at all**</mark> so simply open Now Assist and look for new chats/correspondences. The agent can take a few minutes to start when the instance is busy. If nothing arrives after 10 minutes, start the agent by hand: **AI Agent Studio** > **Agentic Solutions** > **AI agents** tab > agent **Forecast Variance \<your initials>** > **Run test**, test scenario **Review expense event EXP-2025-IT-002-1007-01** > **Run single test**.
 
 <figure><img src="../.gitbook/assets/sc_ihub_now_assist_badge_notification.png" alt=""><figcaption></figcaption></figure>
 
