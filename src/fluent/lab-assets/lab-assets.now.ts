@@ -2483,3 +2483,43 @@ Record({
         image: Now.attach('./files/sc_mcp_event_list_row.png'),
     },
 })
+
+
+Record({
+    $id: Now.ID['lab-asset-sc-mcp-aia-settings-mcp-png'],
+    table: 'x_snc_forecast_v_0_lab_asset',
+    data: {
+        name: 'sc_mcp_aia_settings_mcp.png',
+        image: Now.attach('./files/sc_mcp_aia_settings_mcp.png'),
+    },
+})
+
+
+Record({
+    $id: Now.ID['lab-asset-sc-mcp-aia-servers-list-png'],
+    table: 'x_snc_forecast_v_0_lab_asset',
+    data: {
+        name: 'sc_mcp_aia_servers_list.png',
+        image: Now.attach('./files/sc_mcp_aia_servers_list.png'),
+    },
+})
+
+
+Record({
+    $id: Now.ID['lab-asset-sc-mcp-aia-server-add-png'],
+    table: 'x_snc_forecast_v_0_lab_asset',
+    data: {
+        name: 'sc_mcp_aia_server_add.png',
+        image: Now.attach('./files/sc_mcp_aia_server_add.png'),
+    },
+})
+
+
+Record({
+    $id: Now.ID['lab-asset-sc-mcp-aia-server-created-png'],
+    table: 'x_snc_forecast_v_0_lab_asset',
+    data: {
+        name: 'sc_mcp_aia_server_created.png',
+        image: Now.attach('./files/sc_mcp_aia_server_created.png'),
+    },
+})

@@ -3012,6 +3012,22 @@ declare global {
                         table: 'x_snc_forecast_v_0_lab_asset'
                         id: 'd1248f0a3add45169aad12b9d04e6959'
                     }
+                    'lab-asset-sc-mcp-aia-server-add-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'ac24be94cda84c14ba74a56e242da25b'
+                    }
+                    'lab-asset-sc-mcp-aia-server-created-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'c85a3e0a686144da975645b7da569f1a'
+                    }
+                    'lab-asset-sc-mcp-aia-servers-list-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '24229882e02943efb772d183735aff87'
+                    }
+                    'lab-asset-sc-mcp-aia-settings-mcp-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: 'a3cb69978cfd4537996b0b7f74b7a5a3'
+                    }
                     'lab-asset-sc-mcp-aia-tool-settings-png': {
                         table: 'x_snc_forecast_v_0_lab_asset'
                         id: '3aa79d8cfce444069008f4262d1f2aba'

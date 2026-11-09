@@ -111,29 +111,31 @@ Navigate to AI Agent Studio Settings. Add a new MCP Server entry for Neon with A
 
 <figure><img src="../.gitbook/assets/sc_fund_exercise_scope.png" alt=""><figcaption></figcaption></figure>
 
-1. Navigate to All > <mark style="color:green;">**a.)**</mark> type **AI Agent Studio** > <mark style="color:green;">**b.)**</mark> click on **Settings**.
+1. Navigate to All > type **AI Agent Studio**. In the left bar click <mark style="color:green;">**a.)**</mark> **Settings** (gear icon). In the **Settings** page, expand <mark style="color:green;">**b.)**</mark> **Manage Model Contextual Protocol (MCP) Servers** and click <mark style="color:green;">**c.)**</mark> **View** next to **MCP servers**.
 
-<figure><img src="../.gitbook/assets/sc_mcp_agent_studio_settings_nav (3).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/sc_mcp_aia_settings_mcp.png" alt=""><figcaption></figcaption></figure>
 
-2. In the **Settings** page > <mark style="color:green;">**a.)**</mark> go to **Manage MCP servers** > <mark style="color:green;">**b.)**</mark> click on **New**.
+2. The **Model Context Protocol Server** list opens. Click <mark style="color:green;">**a.)**</mark> **New**.
 
-<figure><img src="../.gitbook/assets/sc_mcp_manage_servers_new.png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/sc_mcp_aia_servers_list.png" alt=""><figcaption></figcaption></figure>
 
-3. Enter the details below:
+3. In the **Add MCP Server** dialog enter the details below. The **API Key** field appears after you choose **API Key** as the authentication type.
 
 <mark style="color:green;">**a.)**</mark> **Name:** **Neon MCP Lab**
 
 <mark style="color:green;">**b.)**</mark>**&#x20;Authentication type:** **API Key**
 
-<mark style="color:green;">**c.)**</mark> **URL:** [**https://mcp.neon.tech/mcp**](https://mcp.neon.tech/mcp)
+<mark style="color:green;">**c.)**</mark> **MCP server URL:** [**https://mcp.neon.tech/mcp**](https://mcp.neon.tech/mcp)
 
 <mark style="color:green;">**d.)**</mark>**&#x20;API Key:** Bearer \<ask\_your\_lab\_guide\_for\_key>
 
 Note: there should be the word **Bearer** as a prefix so your value in the API Key will be something like **Bearer napi\_some\_secure\_key**
 
-<mark style="color:green;">**e.)**</mark> **Add**
+<figure><img src="../.gitbook/assets/sc_mcp_aia_server_add.png" alt=""><figcaption></figcaption></figure>
 
-<figure><img src="../.gitbook/assets/sc_mcp_add_neon_server_details.png" alt=""><figcaption></figcaption></figure>
+4. Click **Add**. The new server opens. Check that <mark style="color:green;">**a.)**</mark> **Application** reads **Forecast Variance** and that <mark style="color:green;">**b.)**</mark> **Tools** lists the Neon tools, such as **Add an OAuth provider** and **Compare database schema**.
+
+<figure><img src="../.gitbook/assets/sc_mcp_aia_server_created.png" alt=""><figcaption></figcaption></figure>
 
 ### AI Agent Configuration
 
