@@ -340,6 +340,8 @@ Build Agent adds a tool to the **Forecast Variance \<your initials>** agent that
 
 The **Forecast Variance \<your initials>** agent you built in [Lab Exercise: Integration Hub](lab-exercise-integration-hub.md) checks each new expense event. Here you start it by hand from AI Agent Studio, so you can follow each step in the trace log.
 
+**Before you test:** the test processes the event **EXP-2025-IT-002-1007-01**, so that record has to exist. [Open the Expense Transaction Event list](/x_snc_forecast_v_0_expense_transaction_event_list.do) and look for it. If the list shows **No records to display**, create the event again with step 4 of **Hands-on: Flow Execution** in [Lab Exercise: Integration Hub](lab-exercise-integration-hub.md), then continue with the steps below. Without the event the agent reports the review as complete but the **Cost center extracted** step fails.
+
 1.  Navigate to All > <mark style="color:green;">**a.)**</mark> type **AI Agent Studio** > <mark style="color:green;">**b.)**</mark> click on **Agentic Solutions**.
 
     <figure><img src="../.gitbook/assets/sc_mcp_aia_agentic_solutions_nav.png" alt=""><figcaption></figcaption></figure>
