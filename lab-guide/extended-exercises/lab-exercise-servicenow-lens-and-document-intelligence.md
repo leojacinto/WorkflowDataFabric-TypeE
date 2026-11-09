@@ -289,9 +289,7 @@ Look for the Now Assist badge. Open Now Assist chat. Expand to Modal view. Revie
 
 <mark style="color:green;">**d.)**</mark> Finally, **Budget Variance Analysis** returns the cost center's new total spend and, because CC_IT_002 is now over budget, the **Finance Case** it created for further review and action.
 
-If you started the agent by hand, the map and the **AI agent decision logs** in **AI Agent Studio** show the same four tools as they run.
-
-<figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_agent_test_run.png" alt=""><figcaption></figcaption></figure>
+If you started the agent by hand, the **Trace log** in **AI Agent Studio** shows the same four tools as they run.
 
 #### Completion: Verify Finance Case
 

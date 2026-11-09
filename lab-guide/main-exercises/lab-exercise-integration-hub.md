@@ -113,7 +113,7 @@ graph TB
 
 Ensure the **AI model provider** is **Azure OpenAI** to so you have an experience consistent to the environment in which the lab has been built on.&#x20;
 
-1.  Navigate to **All** > <mark style="color:green;">**a.)**</mark> type **Now Assist Admin** > <mark style="color:green;">**b.)**</mark> click on **Settings**.
+1.  Navigate to **All** > <mark style="color:green;">**a.)**</mark> type **AI Admin Hub** > <mark style="color:green;">**b.)**</mark> click on **Settings**.
 
     <figure><img src="../.gitbook/assets/image.png" alt="" width="337"><figcaption></figcaption></figure>
 2.  Go to <mark style="color:green;">**a.)**</mark> Manage AI models > Manage model Providers then <mark style="color:green;">**b.)**</mark> click **Model providers** (takes \~2 minutes to load) and <mark style="color:green;">**c.)**</mark> check whether the Current Model Provider is <mark style="color:red;">**NOT**</mark> **Azure OpenAI** (e.g. **Now LLM Service below**). If it NOT Azure OpenAI, click <mark style="color:green;">**d.)**</mark> click **Edit model provider**; else, skip to section **Preparation: Platform Configuration**. When you click **Edit model provider**, the screen will refresh and change its layout.
@@ -189,7 +189,7 @@ Build Agent creates the connection to the expense API, the **Action** that reads
     starts it.
     Then build and install the app, and test it by running the subflow once.
     ```
-2.  Click **Approve** each time Build Agent asks. When it finishes, you should see the **Get Expense Event** alias, action and subflow installed, and the test adding the event **EXP-2025-IT-002-1007-01** to the Expense Transaction Event table.
+2.  Click **Approve** each time Build Agent asks. When it finishes, you should see the **Get Expense Event** alias, action and subflow installed, and the test adding the event **EXP-2025-IT-002-1007-01** to the Expense Transaction Event table. The first run of the action grants itself about ten cross-scope privileges (for example for REST messages, connection aliases and Finance Case); this is expected for a scoped app and needs no action from you.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_ihub_ba_result_1.png" alt="" width="420"><figcaption></figcaption></figure>
 
@@ -266,7 +266,7 @@ Build Agent creates the **AI agent**, its tools and the trigger that starts it w
 
 Optional. Open the records Build Agent created to see how they fit together.
 
-1. **AI Agent Studio** > **Create and manage** > **AI agents** > **Forecast Variance \<your initials>** ([open the list](/sn_aia_agent_list.do?sysparm_query=nameLIKEForecast%20Variance)). **Define the specialty** holds the four instructions, **Add tools and information** lists the two subflows and two record lookups, and **Define security controls** shows the admin role. **Define trigger** shows the trigger on the Expense Transaction Event table.
+1. **AI Agent Studio** > **Agentic Solutions** > **AI agents** > **Forecast Variance \<your initials>** ([open the list](/sn_aia_agent_list.do?sysparm_query=nameLIKEForecast%20Variance)), then click the **Edit** pencil on the agent. **Definitions** holds the four instructions, **Tools** lists the two subflows and two record lookups, and **Access rules** shows the admin role. **Triggers** shows the trigger on the Expense Transaction Event table.
 2. **Flow Designer** > **Subflows** > **Budget Variance Analysis** ([open the list](/sys_hub_flow_list.do?sysparm_query=name=Budget%20Variance%20Analysis)). The subflow calls the **Compute Budget Totals** action, then creates the Finance Case only when the cost center is over budget.
 3. **Flow Designer** > **Actions** > **Get Expense Event** ([open the list](/sys_hub_action_type_definition_list.do?sysparm_query=name=Get%20Expense%20Event)). The script step reads the connection from the **Get Expense Event** alias, calls the API and writes the records.
 

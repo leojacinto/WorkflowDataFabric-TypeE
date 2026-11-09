@@ -40,7 +40,7 @@ This lab will walk you through integration of data coming from Cloud Data Wareho
 
 **AI Agent and Finance Operations Workspace**
 
-<table><thead><tr><th width="83">Step</th><th width="106">Who</th><th>Description</th></tr></thead><tbody><tr><td><a href="lab-exercise-zero-copy-connectors.md#hands-on-test-the-forecast-variance-ai-agent">11</a></td><td>Student</td><td><strong>Test AI Agent:</strong> Start the Forecast Variance agent (with your initials) you built in Integration Hub from AI Agent Studio. Follow its steps in the decision log, through to the Finance Case.</td></tr><tr><td><a href="lab-exercise-zero-copy-connectors.md#completion-verify-finance-case">12</a></td><td>Student</td><td><strong>Verify the Finance Case:</strong> Navigate to Finance Operations Workspace. Find the case created by the agent.</td></tr></tbody></table>
+<table><thead><tr><th width="83">Step</th><th width="106">Who</th><th>Description</th></tr></thead><tbody><tr><td><a href="lab-exercise-zero-copy-connectors.md#hands-on-test-the-forecast-variance-ai-agent">11</a></td><td>Student</td><td><strong>Test AI Agent:</strong> Start the Forecast Variance agent (with your initials) you built in Integration Hub from AI Agent Studio. Follow its steps in the trace log, through to the Finance Case.</td></tr><tr><td><a href="lab-exercise-zero-copy-connectors.md#completion-verify-finance-case">12</a></td><td>Student</td><td><strong>Verify the Finance Case:</strong> Navigate to Finance Operations Workspace. Find the case created by the agent.</td></tr></tbody></table>
 
 <table><thead><tr><th width="83">Step</th><th width="106">Who</th><th>Description</th></tr></thead><tbody><tr><td><a href="lab-exercise-zero-copy-connectors.md#conclusion">13</a></td><td>Facilitator</td><td><strong>Conclusion:</strong> Walk through the complete data flow chain showing how Zero Copy Connectors bring external data into ServiceNow for AI Agent-driven case management.</td></tr></tbody></table>
 
@@ -338,21 +338,17 @@ Build Agent adds a tool to the **Forecast Variance \<your initials>** agent that
 
 #### Hands-on: Test the Forecast Variance AI Agent
 
-The **Forecast Variance \<your initials>** agent you built in [Lab Exercise: Integration Hub](lab-exercise-integration-hub.md) checks each new expense event. Here you start it by hand from AI Agent Studio, so you can follow each step in the decision log.
+The **Forecast Variance \<your initials>** agent you built in [Lab Exercise: Integration Hub](lab-exercise-integration-hub.md) checks each new expense event. Here you start it by hand from AI Agent Studio, so you can follow each step in the trace log.
 
-1.  Navigate to All > <mark style="color:green;">**a.)**</mark> type **AI Agent Studio** > <mark style="color:green;">**b.)**</mark> click on **Create and Manage**.
+1.  Navigate to All > <mark style="color:green;">**a.)**</mark> type **AI Agent Studio** > <mark style="color:green;">**b.)**</mark> click on **Agentic Solutions**.
 
-    <figure><img src="../.gitbook/assets/sc_zcc_agent_studio_nav.png" alt="" width="336"><figcaption></figcaption></figure>
-2.  Click the <mark style="color:green;">**a.)**</mark> **Testing** tab, then <mark style="color:green;">**b.)**</mark> **Start manual test**.
+    <figure><img src="../.gitbook/assets/sc_mcp_aia_agentic_solutions_nav.png" alt=""><figcaption></figcaption></figure>
+2.  Select the **AI agents** tab, type **Forecast Variance** in **Search** and click your agent **Forecast Variance \<your initials>**. The agent opens as a canvas. Click **Run test**.
+3.  In the **Run a test** dialog, <mark style="color:green;">**a.)**</mark> keep **Single test** selected, set <mark style="color:green;">**b.)**</mark> **Test scenario** to **Review expense event EXP-2025-IT-002-1007-01** and <mark style="color:green;">**c.)**</mark> click **Run single test**. The event has to exist first; see **Hands-on: Flow Execution** in [Lab Exercise: Integration Hub](lab-exercise-integration-hub.md).
 
-    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_agent_testing.png" alt="" width="560"><figcaption></figcaption></figure>
-3.  Set <mark style="color:green;">**a.)**</mark> **Choose a test type** to **AI agent or workflow**, <mark style="color:green;">**b.)**</mark> **Name of the AI agent or agentic workflow** to **Forecast Variance \<your initials>** and <mark style="color:green;">**c.)**</mark> **Version** to **1 - V1 (Active)**. In <mark style="color:green;">**d.)**</mark> **Task**, type **Review expense event EXP-2025-IT-002-1007-01**, then click <mark style="color:green;">**e.)**</mark> **Continue to test chat response**.
-
-    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_agent_manual_test.png" alt=""><figcaption></figcaption></figure>
-4.  The <mark style="color:green;">**a.)**</mark> map and the <mark style="color:green;">**b.)**</mark> **AI agent decision logs** show each tool as it runs: **Extract Cost Center**, **Search for Cost Center History**, **Search for Expense Transactions History**, **Search for Cost Center Summary** (if you added it) and **Budget Variance Analysis**. Budget Variance Analysis can take a few minutes when the instance is busy.
-
-    <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_zcc_ba_agent_test_run.png" alt=""><figcaption></figcaption></figure>
-5.  When the test ends, the chat shows the cost center and vendor, the cost center's monthly budget history, the vendor's earlier transactions, and the **Finance Case** that Budget Variance Analysis created because CC_IT_001 is over budget.
+    <figure><img src="../.gitbook/assets/sc_mcp_aia_run_test_dialog.png" alt=""><figcaption></figcaption></figure>
+4.  The **Trace log** opens on the right and shows each tool as it runs: **Extract Cost Center**, **Search for Cost Center History**, **Search for Expense Transactions History**, **Search for Cost Center Summary** (if you added it) and **Budget Variance Analysis**. Budget Variance Analysis can take a few minutes when the instance is busy. Wait until the test shows **Completed**.
+5.  When the test ends, the answer shows the cost center and vendor, the cost center's monthly budget history, the vendor's earlier transactions, and the **Finance Case** that Budget Variance Analysis created because CC_IT_001 is over budget.
 
 #### Completion: Verify Finance Case
 

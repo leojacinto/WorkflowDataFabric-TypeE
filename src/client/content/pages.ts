@@ -18,8 +18,7 @@ export const PAGE_FILES: Record<string, string> = {
     '/exercises/fundamentals': `${TYPEE_RAW_BASE}/lab-guide/main-exercises/lab-exercise-fundamentals.md`,
     '/exercises/integration-hub': `${TYPEE_RAW_BASE}/lab-guide/main-exercises/lab-exercise-integration-hub.md`,
     '/exercises/zero-copy-connectors': `${TYPEE_RAW_BASE}/lab-guide/main-exercises/lab-exercise-zero-copy-connectors.md`,
-    '/exercises/external-content-connector':
-        'extended-exercises/lab-exercise-external-content-connector.md',
+    '/exercises/external-content-connector': `${TYPEE_RAW_BASE}/lab-guide/extended-exercises/lab-exercise-external-content-connector.md`,
     '/exercises/lens-and-document-intelligence': `${TYPEE_RAW_BASE}/lab-guide/extended-exercises/lab-exercise-servicenow-lens-and-document-intelligence.md`,
     '/exercises/mcp-server-client': `${TYPEE_RAW_BASE}/lab-guide/extended-exercises/lab-exercise-model-context-protocol-server-client.md`,
     '/conclusion/key-takeaways': 'conclusion/key-takeaways.md',

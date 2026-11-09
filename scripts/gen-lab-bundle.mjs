@@ -18,6 +18,7 @@ const LOCAL = {
     '/exercises/integration-hub': 'lab-guide/main-exercises/lab-exercise-integration-hub.md',
     '/exercises/zero-copy-connectors': 'lab-guide/main-exercises/lab-exercise-zero-copy-connectors.md',
     '/exercises/lens-and-document-intelligence': 'lab-guide/extended-exercises/lab-exercise-servicenow-lens-and-document-intelligence.md',
+    '/exercises/external-content-connector': 'lab-guide/extended-exercises/lab-exercise-external-content-connector.md',
     '/exercises/mcp-server-client': 'lab-guide/extended-exercises/lab-exercise-model-context-protocol-server-client.md',
 }
 
