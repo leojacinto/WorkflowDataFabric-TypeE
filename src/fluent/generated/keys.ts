@@ -3036,6 +3036,10 @@ declare global {
                         table: 'x_snc_forecast_v_0_lab_asset'
                         id: '2fb1abe52e0446d2b35becab2cdec294'
                     }
+                    'lab-asset-sc-mcp-aia-trace-log-result-png': {
+                        table: 'x_snc_forecast_v_0_lab_asset'
+                        id: '448e868a94824294abd10c250fca7aed'
+                    }
                     'lab-asset-sc-mcp-channels-status-neon-png': {
                         table: 'x_snc_forecast_v_0_lab_asset'
                         id: '17d894e1fa724d79bfbd5f17d5a0e4be'

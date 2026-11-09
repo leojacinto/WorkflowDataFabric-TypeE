@@ -153,6 +153,7 @@ export const LAB_ATTACHMENTS: Record<string, string> = {
     "sc_mcp_aia_settings_mcp.png": '233dd9e651ecbac4488ebe6abbbdefcd',
     "sc_mcp_aia_tool_settings.png": '1bcd79f4cbfd912defc0ddea6be87d49',
     "sc_mcp_aia_tool_type_menu.png": 'ba7a7360b6d6801355aa00202572cc92',
+    "sc_mcp_aia_trace_log_result.png": '1550a8efc3f43f30c6309faf716b9a48',
     "sc_mcp_channels_status_neon.png": 'a4d87a740392966d628da49f9e5d13bc',
     "sc_mcp_duplicate_agent_menu.png": '8905b25e95410b8ddd84763751d6f15a',
     "sc_mcp_duplicate_confirm.png": 'ca91f7b1398ff797a50198f7269098a7',

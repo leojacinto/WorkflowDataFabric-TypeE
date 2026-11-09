@@ -254,7 +254,9 @@ Once the event exists, the list shows one row with Event ID **EXP-2025-IT-002-10
 
 <figure><img src="../.gitbook/assets/sc_mcp_aia_run_test_dialog.png" alt=""><figcaption></figcaption></figure>
 
-3. The **Trace log** opens on the right and runs the tools one after the other: **Extract Cost Center**, **Search for Cost Center History**, **Search for Expense Transactions History**, **Get Details via Neon MCP** and **Budget Variance Analysis**. Wait until the test shows **Completed**.
+3. The **Trace log** opens on the right and runs the tools one after the other: **Extract Cost Center**, **Search for Cost Center History**, **Search for Expense Transactions History**, **Get Details via Neon MCP** and **Budget Variance Analysis**. Wait until the test shows <mark style="color:green;">**a.)**</mark> **Completed**, then find <mark style="color:green;">**b.)**</mark> **Get Details via Neon MCP** in the list.
+
+<figure><img src="../.gitbook/assets/sc_mcp_aia_trace_log_result.png" alt=""><figcaption></figcaption></figure>
 
 4. Open the step **Get Details via Neon MCP** in the trace. It obtained the closest match for the value of cost center CC\_IT\_001. For this exercise, we only returned the raw JSON value to demonstrate the MCP capability where we did not use any SQL or API to return the matching row; instead we just provided a high-level instruction in Step 2 of the agent. **Budget Variance Analysis** also opens a Finance Case when the cost center is over budget, and its number is part of the final answer.
 

@@ -2523,3 +2523,12 @@ Record({
         image: Now.attach('./files/sc_mcp_aia_server_created.png'),
     },
 })
+
+Record({
+    $id: Now.ID['lab-asset-sc-mcp-aia-trace-log-result-png'],
+    table: 'x_snc_forecast_v_0_lab_asset',
+    data: {
+        name: 'sc_mcp_aia_trace_log_result.png',
+        image: Now.attach('./files/sc_mcp_aia_trace_log_result.png'),
+    },
+})
