@@ -254,9 +254,9 @@ You can let Build Agent create the task and attach the invoice for you.
 
     <figure><img src="https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeE/main/lab-guide/assets/sc_ldi_ba_runtime.png" alt="" width="420"><figcaption></figcaption></figure>
 
-#### Hands-on (Build Agent option): Set the Owner on Expense Events
+#### Hands-on (Build Agent option, optional): Set the Owner on Expense Events
 
-The agent's trigger runs as the **Owner** of each new expense event, and events that Document Intelligence creates arrive without one. Build Agent adds a rule that fills it in.
+This step is optional. The agent's trigger runs as System Administrator, so a blank **Owner** does not stop it. Build Agent adds a rule that fills **Owner** with the user who creates the event, for tidy records.
 
 1.  In a new conversation, paste this prompt and send it.
 
