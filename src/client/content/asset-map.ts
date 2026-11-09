@@ -146,7 +146,7 @@ export const LAB_ATTACHMENTS: Record<string, string> = {
     "sc_mcp_aia_agent_tools_saved.png": '5d67378024e9b16a2f7daa91e7fdc3f2',
     "sc_mcp_aia_agentic_solutions_nav.png": 'b2025231d575f2341f30e5c5719f03c5',
     "sc_mcp_aia_run_test_dialog.png": '598ed0eac856e39a636c1ef5e8b0e045',
-    "sc_mcp_aia_select_server_tool.png": '5168b450d1fd62bbc0eba8fcebe52c5c',
+    "sc_mcp_aia_select_server_tool.png": '32199d6802b7425a7db06923e4534fb8',
     "sc_mcp_aia_tool_settings.png": '1bcd79f4cbfd912defc0ddea6be87d49',
     "sc_mcp_aia_tool_type_menu.png": 'ba7a7360b6d6801355aa00202572cc92',
     "sc_mcp_channels_status_neon.png": 'a4d87a740392966d628da49f9e5d13bc',
