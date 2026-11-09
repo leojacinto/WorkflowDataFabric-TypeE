@@ -37,3 +37,8 @@ OPEN_ITEMS.md
 IMPROVEMENTS.md
 DECISIONS.md
 STATUS.md
+
+# Instance export snapshot (1,928 XML records, 43 MB), not used by the build
+metadata/
+# Local-only annotation GIFs
+assets/
