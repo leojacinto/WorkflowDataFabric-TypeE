@@ -85,6 +85,7 @@ const DEPENDENCY_ROWS: [string, string][] = [
 ];
 
 const CREDITS: [string, string][] = [
+  ["Krithiga Velmurugan", "https://www.linkedin.com/in/krithiga-velmurugan-306757159/"],
   ["Kamal Shewakramani", "https://www.linkedin.com/in/kamal-shewakramani/"],
   ["Gurjot Joshi", "https://www.linkedin.com/in/gurjotjoshi/"],
   ["Santosh Panda", "https://www.linkedin.com/in/santosh-panda015/"],

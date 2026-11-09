@@ -153,6 +153,8 @@ export const LAB_ATTACHMENTS: Record<string, string> = {
     "sc_mcp_duplicate_agent_menu.png": '8905b25e95410b8ddd84763751d6f15a',
     "sc_mcp_duplicate_confirm.png": 'ca91f7b1398ff797a50198f7269098a7',
     "sc_mcp_duplicate_warning.png": '6d9f10495fb144bf949c4f61197283fc',
+    "sc_mcp_event_list_empty.png": 'fa0ff26ffe2042041222e9c3602e6fa7',
+    "sc_mcp_event_list_row.png": 'c2e887b69f2b3eb1158396e9ffe92721',
     "sc_mcp_manage_servers_new.png": 'fc55daa0b6113693e07298da9145e8b9',
     "sc_mcp_rename_agent_neon.png": '1c979cca0c969ae80716c708acd5722b',
     "sc_mcp_save_and_continue.png": '524e84b2f6c7cdca9aa3bf9d06007970',

@@ -238,6 +238,14 @@ Enter test prompt to process an expense event. Verify the MCP tool returns match
 
 **Before you test:** the test processes the event **EXP-2025-IT-002-1007-01**, so that record has to exist. [Open the Expense Transaction Event list](/x_snc_forecast_v_0_expense_transaction_event_list.do) and look for it. If the list is empty, create it again with step 4 of **Hands-on: Flow Execution** in [Lab Exercise: Integration Hub](../main-exercises/lab-exercise-integration-hub.md); if the event is already there, skip that. Creating it fires the agent trigger, so a Finance Case can open from that run too. Each successful test run of the agent also opens one Finance Case through **Budget Variance Analysis**, so more than one case for CC\_IT\_001 is expected.
 
+If the list shows **No records to display**, the event is missing.
+
+<figure><img src="../.gitbook/assets/sc_mcp_event_list_empty.png" alt=""><figcaption></figcaption></figure>
+
+Once the event exists, the list shows one row with Event ID **EXP-2025-IT-002-1007-01** and cost center **CC\_IT\_001**.
+
+<figure><img src="../.gitbook/assets/sc_mcp_event_list_row.png" alt=""><figcaption></figcaption></figure>
+
 1. In the new AI Agent Studio, open the agent canvas (All > AI Agent Studio > **Agentic Solutions** > **Forecast Variance Neon MCP Lab**) and click **Run test**.
 
 2. In the **Run a test** dialog, <mark style="color:green;">**a.)**</mark> keep **Single test** selected, <mark style="color:green;">**b.)**</mark> check that **Test scenario** shows **Help me process EXP-2025-IT-002-1007-01** (type it if it is empty) and <mark style="color:green;">**c.)**</mark> click **Run single test**.

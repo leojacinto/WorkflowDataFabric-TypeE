@@ -2463,3 +2463,23 @@ Record({
         image: Now.attach('./files/sc_mcp_aia_run_test_dialog.png'),
     },
 })
+
+
+Record({
+    $id: Now.ID['lab-asset-sc-mcp-event-list-empty-png'],
+    table: 'x_snc_forecast_v_0_lab_asset',
+    data: {
+        name: 'sc_mcp_event_list_empty.png',
+        image: Now.attach('./files/sc_mcp_event_list_empty.png'),
+    },
+})
+
+
+Record({
+    $id: Now.ID['lab-asset-sc-mcp-event-list-row-png'],
+    table: 'x_snc_forecast_v_0_lab_asset',
+    data: {
+        name: 'sc_mcp_event_list_row.png',
+        image: Now.attach('./files/sc_mcp_event_list_row.png'),
+    },
+})
