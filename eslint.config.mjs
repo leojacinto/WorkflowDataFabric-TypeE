@@ -38,7 +38,12 @@ export default [
       '.types/**',
       '@types/**',
       // verbatim snapshot of a Build Agent build, kept as-is for reference
-      'reference-solution/**'
+      'reference-solution/**',
+      // Devin's headless test scripts and the copied agent skills, not app code
+      'devin_walkthrough_wdf/**',
+      '.claude/**',
+      '.agents/**',
+      'backup/**'
     ]
   },
   js.configs.recommended,
