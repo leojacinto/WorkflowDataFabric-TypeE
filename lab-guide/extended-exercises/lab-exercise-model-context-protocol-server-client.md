@@ -284,8 +284,6 @@ Saving the agent in the new AI Agent Studio can clear its **Strategy**, and an a
 
 <figure><img src="../.gitbook/assets/sc_mcp_fix_strategy_saved.png" alt=""><figcaption></figcaption></figure>
 
-5. **Challenge:** once you are done with this lab, see if you can remove the tool **Extract Cost Center** and replace it completely with the data from **Get Details via Neon MCP** as added in Step 2 of the agent. No hints this time. 😉
-
 ### Conclusion
 
 Congratulations! You have created the **MCP Server** integrations that allows ServiceNow to make use of MCP capabilities from other systems outside ServiceNow, allowing LLM-powered integrations alternative to APIs that require less development.
