@@ -1593,7 +1593,7 @@
         if (!card) action = { kind: chapter.kind, t };
       }
     } else if (battle) {
-      alertEyes = u < finaleCuts.dash;
+      alertEyes = true;
       camera = null;
       const sensor = [2.25, 29.85, -19.9];
       if (u < finaleCuts.eye) {
@@ -1603,14 +1603,14 @@
       } else if (u < finaleCuts.eyes) camera = closeUp(sensor, [0.6, 0.2, 3.4]);
       else if (u < finaleCuts.approach) camera = view([0, 29.8, -8.5], [0, 29.6, -19.9]);
       else if (u < finaleCuts.silhouette) card = () => alertCard([['ENEMY', 1], ['IS', 1], ['APPROACHING', 1]], 0.1);
-      else if (u < finaleCuts.unknown) { camera = view([0, 4, 34], [0, 18, -24]);backlight = true; }
+      else if (u < finaleCuts.unknown) { camera = view([0, 4, 34], [0, 18, -24]); }
       else if (u < finaleCuts.closer) card = () => alertCard([['UNKNOWN', 1], ['SIGNATURE NOT RECOGNIZED', 0]], 0.12);
       // The readable card itself zooms in, growing from its own size with an
       // ease-in, so the giant crop reads as a push rather than a jump cut.
       else if (u < finaleCuts.zoom) {
         const push = clamp((u - finaleCuts.closer) / (finaleCuts.zoom - finaleCuts.closer));
         card = () => alertCard([['UNKNOWN', 1], ['SIGNATURE NOT RECOGNIZED', 0]], 0.12, 1, mix(1, 5, push * push * push));
-      } else if (u < finaleCuts.dash) { camera = view([0, 14, 16], [0, 24, -24]);backlight = true; }
+      } else if (u < finaleCuts.dash) { camera = view([0, 14, 16], [0, 24, -24]); }
       if (u >= finaleCuts.dash || !camera) {
         const fight = encounterState(t);
         camera = view(fight.eye, fight.shot.target);
