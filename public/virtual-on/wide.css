@@ -3,12 +3,19 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  src: url('https://www.servicenow.com/etc.clientlibs/ds/clientlibs/clientlib-arc-commons/resources/fonts/ServiceNowSans-Regular.woff2') format('woff2');
+  src: local('ServiceNow Sans Regular'), url('/aiux/assets/core/fonts/ServiceNowSans-Regular.woff2') format('woff2');
+}
+@font-face {
+  font-family: 'ServiceNow Sans';
+  font-weight: 600 800;
+  font-style: normal;
+  font-display: swap;
+  src: local('ServiceNow Sans Bold'), url('/aiux/assets/core/fonts/ServiceNowSans-Bold.woff2') format('woff2');
 }
 
 :root {
   color-scheme: dark;
-  --mono: ui-monospace, SFMono-Regular, Consolas, monospace;
+  --mono: 'ServiceNow Sans', Arial, Helvetica, sans-serif;
   --sans: 'ServiceNow Sans', Arial, Helvetica, sans-serif;
 }
 

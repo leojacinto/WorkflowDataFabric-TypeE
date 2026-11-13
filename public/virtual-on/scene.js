@@ -24,7 +24,7 @@
       { id: 4, name: 'Virtuaroid 4', kind: 'heavy', material: 'blue', accent: '#89b6ec', start: 17.45, heading: ['Zero Copy for ERP.', 'Legacy ERP.'], caption: 'Connect to legacy ERP without the complexity.', detail: 'DUAL ARRAY STUDY', action: 'DISCHARGING' },
       { id: 5, name: 'Virtuaroid 5', kind: 'siege', material: 'gold', accent: '#d2b879', start: 21.45, heading: ['External Content.', 'Unstructured documents.'], caption: 'Index and easily access unstructured documents.', detail: 'MASS STUDY', action: 'ACTUATING' },
       { id: 6, name: 'Virtuaroid 6', kind: 'close', material: 'mint', accent: brandGreen, start: 24.25, heading: ['Stream Connect.', 'Fast streaming data.'], caption: 'Produce and consume data at speed with Kafka.', detail: 'ARTICULATION STUDY', action: 'ENGAGING' },
-      { id: 7, name: 'Virtuaroid 7', kind: 'orbital', material: 'violet', accent: '#b3a9ed', start: 26.95, heading: ['Agent Fabric', 'MCP Client/Server.'], caption: 'Use the latest protocols to access skills and tools.', detail: 'ORBITAL STUDY', action: 'SYNCHRONIZING' }
+      { id: 7, name: 'Virtuaroid 7', kind: 'orbital', material: 'violet', accent: '#b3a9ed', start: 26.95, heading: ['Agent Fabric.', 'MCP Client/Server.'], caption: 'Use the latest protocols to access skills and tools.', detail: 'ORBITAL STUDY', action: 'SYNCHRONIZING' }
     ],
     finale: { start: 30.85, name: 'Unknown unit', heading: ['USE CASE:', 'Financial Intelligence.'], caption: 'Integrate multiple sources to manage cost centers.', detail: 'UNKNOWN CONTACT', accent: '#d4a083' },
     closing: { start: 37.85, name: 'Sequence end', heading: ['WORKFLOW', 'DATA FABRIC'], caption: 'End-to-End Lab.', detail: 'END FRAME', accent: brandGreen }
