@@ -1513,8 +1513,6 @@
       ctx.globalAlpha = smooth(10.6, 11.1, t) * (1 - smooth(11.6, 12, t));
       ctx.textAlign = 'center';ctx.fillStyle = '#a5d9d7';ctx.font = '10px ui-monospace, monospace';
       ctx.fillText('V I R T U A R O I D   D E P L O Y E D', x, y);
-      ctx.fillStyle = '#667f8b';ctx.font = '7px ui-monospace, monospace';
-      ctx.fillText('ALL SYSTEMS NOMINAL / ENTERING COMBAT SPACE', x, y + 24);
       ctx.globalAlpha = 1;
     }
   }
