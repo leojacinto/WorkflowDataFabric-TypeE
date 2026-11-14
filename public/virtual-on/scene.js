@@ -10,6 +10,39 @@
   const brandGreen = '#63DF4E';
   const chestLogo = new Image();
   const monoChestLogo = document.createElement('canvas');
+  // Pure-light only: the page inverts the canvas through a CSS filter, so colours are pre-compensated to land where they would on the normal render.
+  let PURE = false;
+  const preComp = (hex, k = 1) => {
+    const m = /^#([0-9a-f]{6})$/i.exec(hex);
+    if (!m) return hex;
+    const out = [0, 2, 4].map(i => parseInt(m[1].slice(i, i + 2), 16) / 255 * k);
+    const into = out.map(v => Math.min(1, Math.max(0, (v + 1.95) / 3)));
+    const M = [[-0.574, 1.43, 0.144], [0.426, 0.43, 0.144], [0.426, 1.43, -0.856]];
+    return `rgb(${M.map(r => Math.round(255 * Math.min(1, Math.max(0, 1 - (r[0] * into[0] + r[1] * into[1] + r[2] * into[2]))))).join(',')})`;
+  };
+  // A deeper, more saturated shade of an accent so titles hold up on the light ground.
+  const deepen = (hex, l = 0.4) => {
+    const m = /^#([0-9a-f]{6})$/i.exec(hex);
+    if (!m) return hex;
+    const [r, g, b] = [0, 2, 4].map(i => parseInt(m[1].slice(i, i + 2), 16) / 255);
+    const max = Math.max(r, g, b), min = Math.min(r, g, b), d = max - min;
+    let h = 0;
+    if (d) h = max === r ? ((g - b) / d + 6) % 6 : max === g ? (b - r) / d + 2 : (r - g) / d + 4;
+    const sat = Math.min(1, (d / (1 - Math.abs(max + min - 1) || 1)) * 1.3 + 0.2);
+    const c = (1 - Math.abs(2 * l - 1)) * sat, x = c * (1 - Math.abs(h % 2 - 1)), mm = l - c / 2;
+    const [R, G, B] = h < 1 ? [c, x, 0] : h < 2 ? [x, c, 0] : h < 3 ? [0, c, x] : h < 4 ? [0, x, c] : h < 5 ? [x, 0, c] : [c, 0, x];
+    return '#' + [R, G, B].map(v => Math.round((v + mm) * 255).toString(16).padStart(2, '0')).join('');
+  };
+  let whiteInk = '#f2f7f8';
+  let flashRgb = '242,247,248';
+  // Light theme on the page = pure-light: the scene is inverted by a CSS filter, so colours above are pre-compensated while it is on.
+  const syncPure = () => {
+    const app = document.getElementById('app');
+    PURE = !!window.PURE_LIGHT && !!app && app.dataset.theme === 'light';
+    whiteInk = PURE ? 'rgb(4,4,4)' : '#f2f7f8';
+    flashRgb = PURE ? '4,4,4' : '242,247,248';
+  };
+  const pureLineLogo = document.createElement('canvas');
   const content = {
     title: 'Virtuality — A Line Study',
     header: 'A STUDY IN MOTION',
@@ -197,7 +230,7 @@
       ctx.save();ctx.beginPath();ctx.moveTo(a.x, a.y);ctx.lineTo(b.x, b.y);ctx.lineTo(c.x, c.y);ctx.closePath();ctx.clip();
       ctx.globalAlpha = mark.opacity;
       ctx.transform(m11, m12, m21, m22, a.x - m11 * a.u - m21 * a.v, a.y - m12 * a.u - m22 * a.v);
-      ctx.drawImage(state.mono ? monoChestLogo : chestLogo, 32, 51, 495, 442, 0, 0, 1, 1);
+      ctx.drawImage(PURE && pureLineLogo.width ? pureLineLogo : state.mono ? monoChestLogo : chestLogo, 32, 51, 495, 442, 0, 0, 1, 1);
       ctx.restore();
     };
     for (let x = 0; x < 2; x++) for (let y = 0; y < 2; y++) {
@@ -1085,7 +1118,25 @@
     const projected = points.map(project);
     if (projected.some(point => point.z < 0.5)) return;
     ctx.beginPath();projected.forEach((point, i) => i ? ctx.lineTo(point.x, point.y) : ctx.moveTo(point.x, point.y));
-    ctx.strokeStyle = state.mono ? '#d5e2e4' : color;ctx.lineWidth = weight;ctx.globalAlpha = alpha;ctx.stroke();ctx.globalAlpha = 1;
+    if (PURE && weight < 3 && projected.length === 2) {
+      // Thin rays fade out along their length with a faint wide halo, so they read as light rather than hairlines.
+      const [a, b] = projected, tint = preComp(color).replace('rgb(', '').replace(')', '');
+      const fade = ctx.createLinearGradient(a.x, a.y, b.x, b.y);
+      fade.addColorStop(0, `rgba(${tint},1)`);fade.addColorStop(1, `rgba(${tint},0)`);
+      ctx.lineCap = 'round';
+      ctx.strokeStyle = fade;ctx.lineWidth = weight * 5;ctx.globalAlpha = alpha * 0.18;ctx.stroke();
+      ctx.lineWidth = weight * 1.4;ctx.globalAlpha = alpha;ctx.stroke();
+      ctx.lineCap = 'butt';ctx.globalAlpha = 1;
+      return;
+    }
+    if (PURE && weight >= 3) {
+      // Light rays: a wide, faint halo under the stroke so thick beams read as translucent light, not hard lines.
+      ctx.strokeStyle = preComp(color);ctx.lineCap = 'round';ctx.lineJoin = 'round';
+      ctx.lineWidth = weight * 2.8;ctx.globalAlpha = alpha * 0.12;ctx.stroke();
+      ctx.lineWidth = weight * 1.7;ctx.globalAlpha = alpha * 0.2;ctx.stroke();
+      ctx.lineCap = 'butt';
+    }
+    ctx.strokeStyle = state.mono ? '#d5e2e4' : PURE ? preComp(color) : color;ctx.lineWidth = weight;ctx.globalAlpha = alpha;ctx.stroke();ctx.globalAlpha = 1;
   }
 
   function energyRing(center, radius, color, alpha, ground = false) {
@@ -1158,7 +1209,7 @@
     ctx.fillStyle = '#080b0e';ctx.fillRect(0, 0, width, height);
     ctx.save();ctx.translate(x, y);ctx.scale(punch, punch);
     ctx.textAlign = 'center';ctx.textBaseline = 'middle';
-    ctx.shadowColor = state.mono ? '#bfcccf' : accent;ctx.shadowBlur = height * 0.03;ctx.fillStyle = '#f2f7f8';
+    ctx.shadowColor = PURE ? preComp(accent) : state.mono ? '#bfcccf' : accent;ctx.shadowBlur = height * 0.03;ctx.fillStyle = PURE ? preComp(deepen(accent)) : '#f2f7f8';
     ctx.font = `700 ${Math.round(height * 0.05)}px 'ServiceNow Sans', Arial, sans-serif`;
     ctx.fillText(code, 0, -height * 0.085);
     let size = height * 0.14;
@@ -1174,7 +1225,7 @@
     if (backdrop) { ctx.fillStyle = '#080b0e';ctx.fillRect(0, 0, width, height); }
     ctx.save();ctx.translate(x, y);ctx.scale(scale, scale);ctx.globalAlpha = alpha;
     ctx.textAlign = 'center';ctx.textBaseline = 'middle';
-    ctx.shadowColor = alertRed;ctx.shadowBlur = height * 0.025;
+    ctx.shadowColor = alertRed;ctx.shadowBlur = height * (PURE ? 0.004 : 0.025);
     // Shrink the whole block if its widest line would run past the frame.
     const fontFor = (weight, px) => `${weight ? 800 : 600} ${Math.round(px)}px 'ServiceNow Sans', Arial, sans-serif`;
     const widest = Math.max(...lines.map(([text, weight]) => { ctx.font = fontFor(weight, height * (weight ? size : 0.028));return ctx.measureText(text).width; }));
@@ -1207,6 +1258,13 @@
     const p = project(point);
     if (p.z < 1 || alpha <= 0) return;
     const glow = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, radius);
+    if (PURE) {
+      // Coloured, translucent glow instead of an opaque white blob, so lines underneath stay visible.
+      const [r, g, b] = rgb.split(',').map(Number);
+      const hex = r > 230 ? '#2f8bff' : '#' + [r, g, b].map(v => v.toString(16).padStart(2, '0')).join('');
+      rgb = preComp(deepen(hex, 0.55)).replace(/[^0-9,]/g, '');
+      alpha *= 0.4;
+    }
     glow.addColorStop(0, `rgba(${rgb},${alpha})`);glow.addColorStop(1, `rgba(${rgb},0)`);
     ctx.fillStyle = glow;ctx.fillRect(p.x - radius, p.y - radius, radius * 2, radius * 2);
   }
@@ -1215,8 +1273,8 @@
   // laser, twin lasers, launcher salvo, spinning slash and the long beam.
   function signature(unit, mech, t) {
     const pose = mech.rig;
-    const color = state.mono ? '#d5e2e4' : unit.accent;
-    const white = '#f2f7f8';
+    const color = state.mono ? '#d5e2e4' : PURE ? deepen(unit.accent, 0.5) : unit.accent;
+    const white = PURE ? deepen(unit.accent, 0.62) : whiteInk;
     const forward = mech.dir([0, 0, 1]);
     // Shots angle across the frame instead of straight down the lens.
     const across = norm(mech.dir([0.65, 0.08, 1]));
@@ -1368,10 +1426,11 @@
     if (!rifle) return;
     const lit = smooth(2.5, 2.65, t) * (1 - smooth(4.5, 4.8, t));
     if (lit <= 0) return;
-    const cyan = state.mono ? '#d5e2e4' : '#7fe7ff';
+    const cyan = state.mono ? '#d5e2e4' : PURE ? deepen('#2f8bff', 0.52) : '#7fe7ff';
+    const core = PURE ? deepen('#2f8bff', 0.64) : whiteInk;
     const tip = add(rifle.origin, mul(rifle.direction, 5.5 * lit));
     beam(rifle.origin, tip, cyan, 10, lit * 0.55);
-    beam(rifle.origin, tip, '#f2f7f8', 3, lit * 0.95);
+    beam(rifle.origin, tip, core, 3, lit * 0.95);
     glowAt(tip, height * 0.05 * lit, '127,231,255', 0.5 * lit);
     // The slash crescent is laid out in camera space: a wide, flat sweep
     // across the front of the body from screen-right to screen-left, bowed
@@ -1389,7 +1448,7 @@
     for (let i = 1; i < arc.length; i++) {
       const weight = 0.25 + 0.75 * i / 32;
       beam(arc[i - 1], arc[i], cyan, 30 * weight, fade * 0.4);
-      beam(arc[i - 1], arc[i], '#f2f7f8', 4 * weight, fade * 0.9);
+      beam(arc[i - 1], arc[i], core, 4 * weight, fade * 0.9);
     }
   }
 
@@ -1545,6 +1604,7 @@
   }
 
   function render() {
+    syncPure();
     ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     ctx.globalAlpha = 1;
     ctx.fillStyle = '#080b0e';ctx.fillRect(0, 0, width, height);
@@ -1639,7 +1699,7 @@
       if (p.z < 1) continue;
       const r = height * 0.5 / Math.max(p.z, 4);
       const glow = ctx.createRadialGradient(p.x, p.y, 0, p.x, p.y, r);
-      glow.addColorStop(0, 'rgba(255,74,61,0.55)');glow.addColorStop(1, 'rgba(255,74,61,0)');
+      glow.addColorStop(0, PURE ? 'rgba(255,74,61,0.14)' : 'rgba(255,74,61,0.55)');glow.addColorStop(1, 'rgba(255,74,61,0)');
       ctx.fillStyle = glow;ctx.fillRect(p.x - r, p.y - r, r * 2, r * 2);
     }
     if (mech) {
@@ -1659,17 +1719,17 @@
     ctx.restore();
     reticle();
     const flash = action ? impact(action.kind, action.t).flash : 0;
-    if (flash > 0) { ctx.fillStyle = `rgba(242,247,248,${0.55 * flash})`;ctx.fillRect(0, 0, width, height); }
+    if (flash > 0) { ctx.fillStyle = `rgba(${flashRgb},${0.55 * flash})`;ctx.fillRect(0, 0, width, height); }
     if (card) card();
     // The left-edge shading would dim half a centred card on a 1:1 frame.
     vignette.style.opacity = card && boxFrame() ? '0.25' : '';
     // A card turns the frame dark, so the copy switches to the dark-theme ink
     // for as long as the card is up; light mode would otherwise go unreadable.
     for (const [name, value] of [['--ink', '#dce6e9'], ['--caption', '#a1afb5'], ['--text-shadow', '#080b0e99']]) {
-      if (card && boxFrame()) intro.style.setProperty(name, value);
+      if (card && boxFrame() && !PURE) intro.style.setProperty(name, value);
       else intro.style.removeProperty(name);
     }
-    if (battle && u > finaleCuts.flash) { ctx.fillStyle = `rgba(242,247,248,${smooth(finaleCuts.flash, finaleCuts.flash + 0.2, u)})`;ctx.fillRect(0, 0, width, height); }
+    if (battle && u > finaleCuts.flash) { ctx.fillStyle = `rgba(${flashRgb},${smooth(finaleCuts.flash, finaleCuts.flash + 0.2, u)})`;ctx.fillRect(0, 0, width, height); }
     if (index === 8) {
       const x = width * (square ? 0.64 : width < 600 ? 0.5 : 0.51), y = height * (square ? 0.58 : width < 600 ? 0.535 : 0.49);
       ctx.fillStyle = '#080b0ee8';ctx.fillRect(x - 155, y - 32, 310, 63);
@@ -1677,7 +1737,7 @@
       ctx.fillText(content.completion[0], x, y - 5);
       ctx.fillStyle = '#6e8c94';ctx.font = '8px ui-monospace, monospace';ctx.fillText(content.completion[1], x, y + 15);
       const flash = 1 - smooth(0, 1.2, u);
-      if (flash > 0) { ctx.fillStyle = `rgba(242,247,248,${flash})`;ctx.fillRect(0, 0, width, height); }
+      if (flash > 0) { ctx.fillStyle = `rgba(${flashRgb},${flash})`;ctx.fillRect(0, 0, width, height); }
     }
     updateUI();
   }
@@ -1828,6 +1888,9 @@
     monoChestLogo.width = chestLogo.naturalWidth;monoChestLogo.height = chestLogo.naturalHeight;
     const ink = monoChestLogo.getContext('2d');
     ink.drawImage(chestLogo, 0, 0);ink.globalCompositeOperation = 'source-in';ink.fillStyle = '#bfcccf';ink.fillRect(0, 0, monoChestLogo.width, monoChestLogo.height);
+    pureLineLogo.width = chestLogo.naturalWidth;pureLineLogo.height = chestLogo.naturalHeight;
+    const lineInk = pureLineLogo.getContext('2d');
+    lineInk.drawImage(chestLogo, 0, 0);lineInk.globalCompositeOperation = 'source-in';lineInk.fillStyle = preComp(brandGreen);lineInk.fillRect(0, 0, pureLineLogo.width, pureLineLogo.height);
     render();
   }, { once: true });
   chestLogo.src = 'servicenow-mark-lineart.png';

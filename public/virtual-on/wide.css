@@ -87,6 +87,9 @@ body {
 
 #scene:active { cursor: grabbing; }
 
+/* Light theme is the pure-light look: the scene is inverted through this filter (scene.js pre-compensates its colours). */
+#app[data-theme='light'] #scene { filter: invert(1) hue-rotate(180deg) url(#lv); }
+
 .vignette {
   position: absolute;
   inset: 0;

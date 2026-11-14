@@ -7,10 +7,12 @@
   <title>Virtuality — A Line Study — Wide</title>
   <link rel="icon" href="data:,">
   <link rel="stylesheet" href="wide.css">
+  <script>window.PURE_LIGHT = true;</script>
   <script src="scene.js" defer></script>
 </head>
 <body>
   <main id="app" data-theme="dark">
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true"><filter id="lv" color-interpolation-filters="sRGB"><feComponentTransfer><feFuncR type="linear" slope="3" intercept="-1.95"/><feFuncG type="linear" slope="3" intercept="-1.95"/><feFuncB type="linear" slope="3" intercept="-1.95"/></feComponentTransfer></filter></svg>
     <canvas id="scene" data-layout="square" aria-label="Animated line-art study of seven numbered Virtuaroids"></canvas>
     <div class="vignette" aria-hidden="true"></div>
     <button id="theme-toggle" aria-pressed="false">LIGHT</button>
