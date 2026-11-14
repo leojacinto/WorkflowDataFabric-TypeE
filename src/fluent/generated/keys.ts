@@ -5,6 +5,22 @@ declare global {
         namespace Internal {
             interface Keys extends KeysRegistry {
                 explicit: {
+                    '07df77c747d8d790037d0fadf26d4340': {
+                        table: 'sys_security_acl'
+                        id: '07df77c747d8d790037d0fadf26d4340'
+                    }
+                    '1a53518047285310037d0fadf26d43bf': {
+                        table: 'sys_wdf_external_connection_mapping'
+                        id: '1a53518047285310037d0fadf26d43bf'
+                    }
+                    '9a535d4047285310037d0fadf26d43fd': {
+                        table: 'sys_alias'
+                        id: '9a535d4047285310037d0fadf26d43fd'
+                    }
+                    a6df73c747d8d790037d0fadf26d43ac: {
+                        table: 'sn_aia_agent'
+                        id: 'a6df73c747d8d790037d0fadf26d43ac'
+                    }
                     acl_invoke_from_ai_budget_variance_analysis: {
                         table: 'sys_security_acl'
                         id: '0bf3add9ea9745f58f73d4499fad8d0e'
@@ -1623,6 +1639,10 @@ declare global {
                     'ccbh-fc8f1eaa3b4632900ad1a021a3e45aab': {
                         table: 'x_snc_forecast_v_0_cost_center_budget_history'
                         id: 'fc8f1eaa3b4632900ad1a021a3e45aab'
+                    }
+                    da53518047285310037d0fadf26d43e0: {
+                        table: 'sn_mcp_server'
+                        id: 'da53518047285310037d0fadf26d43e0'
                     }
                     'extx-109a63003bd6fe500ad1a021a3e45ab9': {
                         table: 'x_snc_forecast_v_0_expense_transactions'
@@ -5054,6 +5074,13 @@ declare global {
                 }
                 composite: [
                     {
+                        table: 'sn_aia_tool'
+                        id: '01b7918447e85310037d0fadf26d4373'
+                        key: {
+                            name: 'Get Details via Neon MCP'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '02b5b5cdbf954237accd415234c370c5'
                         key: {
@@ -5087,6 +5114,22 @@ declare global {
                             name: 'x_snc_forecast_v_0_expense_transaction_event'
                             element: 'owner'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_tool'
+                        id: '07df37c747d8d790037d0fadf26d43a8'
+                        key: {
+                            name: 'Search for Expense Transactions History'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: '07df37c747d8d790037d0fadf26d43a9'
+                        key: {
+                            agent: 'a6df73c747d8d790037d0fadf26d43ac'
+                            tool: '07df37c747d8d790037d0fadf26d43a8'
+                            name: 'Search for Expense Transactions History'
                         }
                     },
                     {
@@ -5196,6 +5239,13 @@ declare global {
                         deleted: true
                         key: {
                             name: 'x_snc_forecast_v_0/vendor-react-dom--53df40e5.js.map'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_config'
+                        id: '26dff3c747d8d790037d0fadf26d436c'
+                        key: {
+                            agent: 'a6df73c747d8d790037d0fadf26d43ac'
                         }
                     },
                     {
@@ -5473,6 +5523,14 @@ declare global {
                         }
                     },
                     {
+                        table: 'sn_aia_version'
+                        id: '66df73c747d8d790037d0fadf26d43ae'
+                        key: {
+                            target_id: 'a6df73c747d8d790037d0fadf26d43ac'
+                            version_name: 'V1'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '66e5fa76e2cb444cbd2828510656390c'
                         key: {
@@ -5666,6 +5724,15 @@ declare global {
                         }
                     },
                     {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: '81b7918447e85310037d0fadf26d4399'
+                        key: {
+                            agent: 'a6df73c747d8d790037d0fadf26d43ac'
+                            tool: '01b7918447e85310037d0fadf26d4373'
+                            name: 'Get Details via Neon MCP'
+                        }
+                    },
+                    {
                         table: 'sys_security_acl_role'
                         id: '830d2f1052b14aaba8e725e2a218e814'
                         key: {
@@ -5722,6 +5789,22 @@ declare global {
                         }
                     },
                     {
+                        table: 'sn_aia_tool'
+                        id: '8bdf37c747d8d790037d0fadf26d43c4'
+                        key: {
+                            name: 'Search for Cost Center History'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: '8bdf37c747d8d790037d0fadf26d43c5'
+                        key: {
+                            agent: 'a6df73c747d8d790037d0fadf26d43ac'
+                            tool: '8bdf37c747d8d790037d0fadf26d43c4'
+                            name: 'Search for Cost Center History'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '8de225627ec542a3a901253b7bce6379'
                         key: {
@@ -5736,6 +5819,35 @@ declare global {
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transaction_event'
                             element: 'event_type'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_tool'
+                        id: '8fdf37c747d8d790037d0fadf26d438b'
+                        key: {
+                            name: 'Extract Cost Center'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: '8fdf37c747d8d790037d0fadf26d438c'
+                        key: {
+                            agent: 'a6df73c747d8d790037d0fadf26d43ac'
+                            tool: '8fdf37c747d8d790037d0fadf26d438b'
+                            name: 'Extract Cost Center'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '8fdf77c747d8d790037d0fadf26d4362'
+                        key: {
+                            sys_security_acl: '07df77c747d8d790037d0fadf26d4340'
+                            sys_user_role: {
+                                id: '4122478a31114a1182fbc9922df001a8'
+                                key: {
+                                    name: 'admin'
+                                }
+                            }
                         }
                     },
                     {
@@ -6217,6 +6329,22 @@ declare global {
                             name: 'x_snc_forecast_v_0_expense_transactions'
                             element: 'gl_account'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_tool'
+                        id: 'eadff3c747d8d790037d0fadf26d4371'
+                        key: {
+                            name: 'Budget Variance Analysis'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: 'eadff3c747d8d790037d0fadf26d4372'
+                        key: {
+                            agent: 'a6df73c747d8d790037d0fadf26d43ac'
+                            tool: 'eadff3c747d8d790037d0fadf26d4371'
+                            name: 'Budget Variance Analysis'
                         }
                     },
                     {

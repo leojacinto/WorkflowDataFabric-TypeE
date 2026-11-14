@@ -269,3 +269,11 @@ The Global agent "Forecast Variance Neon MCP Lab" and the 10 test SharePoint con
 - Not verified on 7021: the MCP wizard steps after the agent copy (the run stopped at Access denied before the ACLs), so the MCP clab text for the Neon tool step follows what was seen up to the tool dialog.
 - Build: `npx @servicenow/sdk build` succeeds and emits "x_snc_forecast_v_0_wdf_clab.do - BYOUI Files". Headless preview (`demo_run/headless-toolkit/preview_clab.cjs`) shows the new ACL section and finds no External Content text on clab, and finds it on the original.
 - Not deployed. The page does not exist on perelandra yet (checked: only `wdf_lab` in the UI Pages list). Deploying the repo also installs the two Fluent ACLs, so that needs a decision.
+
+### Perelandra MCP objects pulled into the source (2026-11-14)
+
+- Read from perelandra (`now-sdk download`, read only, nothing changed there) and converted with `now-sdk transform --from` into `src/fluent/generated/`: MCP server "Neon MCP Lab" (`other/sn-mcp-server`), its connection alias and external connection mapping, the agent "Forecast Variance Neon MCP Lab" with its Search, subflow and MCP tools and its Specific-role security (`ai-agent/agent`), and the MCP tool plus agent link as plain records (`ai-agent/mcp-tool/neon-mcp-tool.now.ts`, because the SDK's `mcp` tool type cannot name a server).
+- No credentials or API keys are in the converted files (scanned for password, api key, bearer, secret, token). The alias is created empty; the Neon API key is not part of the source and is entered per instance as the MCP page says.
+- Left out on purpose: the 139 `sn_mcp_server_tool` rows (tool catalog the server discovered from Neon), the "Forecast Variance MCP Proof" agent, the Snowflake MCP server and agent, the 11 older Neon server rows under author_elective_update, and the two older copies of the Neon tool.
+- The converted agent points at the Extract Cost Center and Budget Variance Analysis subflows and an admin role by sys_id; those records exist on perelandra but are not in this source yet, so the agent resolves them only on an instance that already has the Forecast Variance app.
+- `npx @servicenow/sdk build` passes. Not deployed.
