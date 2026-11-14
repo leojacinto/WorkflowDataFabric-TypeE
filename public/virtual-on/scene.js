@@ -3,6 +3,8 @@
 (() => {
   const canvas = document.getElementById('scene');
   const square = canvas.dataset.layout === 'square';
+  // Notice text (VIRTUAROID DEPLOYED, SIGNAL LOST) uses ServiceNow Sans.
+  const noticeFont = px => `600 ${px}px 'ServiceNow Sans', Arial, sans-serif`;
   const ctx = canvas.getContext('2d', { alpha: false });
   const $ = id => document.getElementById(id);
   const vignette = document.querySelector('.vignette');
@@ -1565,8 +1567,26 @@
       const x = square ? screenCenter().x : width * 0.51;
       const y = square ? screenCenter().y : height * 0.47;
       ctx.globalAlpha = smooth(10.6, 11.1, t) * (1 - smooth(11.6, 12, t));
-      ctx.textAlign = 'center';ctx.fillStyle = '#a5d9d7';ctx.font = '10px ui-monospace, monospace';
-      ctx.fillText('V I R T U A R O I D   D E P L O Y E D', x, y);
+      const side = Math.min(width, height);
+      // The notice is drawn 5x larger (relative to a 1080 frame, sized from the shorter side), shrunk only if it would not fit.
+      const deployK = square ? Math.min(5 * (side / 1080), (width * 0.92) / (37 * 0.62 * 10)) * 0.75 : 1;
+      // Light theme: bold deep-wasabi text with a keyline (colours pre-compensate the light filter).
+      const pureInk = PURE;
+      const deployText = pureInk ? 'VIRTUAROID DEPLOYED' : 'V I R T U A R O I D   D E P L O Y E D';
+      const deployPx = 10 * deployK * (pureInk ? 1.15 : 1);
+      ctx.font = pureInk ? `800 ${deployPx}px 'ServiceNow Sans', Arial, sans-serif` : noticeFont(deployPx);
+      if (pureInk) ctx.letterSpacing = `${deployPx * 0.14}px`;
+      const deployHalf = ctx.measureText(deployText).width / 2 + (pureInk ? deployPx * 1.1 : 0);
+      const deployX = square ? Math.min(Math.max(x, deployHalf + width * 0.03), width - deployHalf - width * 0.03) : x;
+      ctx.textAlign = 'center';
+      if (pureInk) {
+        // Clean cut-out: deep wasabi text with a thin white keyline so it holds over the hangar lines.
+        const tx = deployX + deployPx * 0.07;
+        ctx.save();ctx.lineJoin = 'round';ctx.lineWidth = deployPx * 0.2;ctx.strokeStyle = 'rgb(4,4,4)';ctx.strokeText(deployText, tx, y);ctx.restore();
+        ctx.fillStyle = preComp(deepen(brandGreen, 0.36));
+      } else ctx.fillStyle = '#a5d9d7';
+      ctx.fillText(deployText, deployX + (pureInk ? deployPx * 0.07 : 0), y);
+      if (pureInk) ctx.letterSpacing = '0px';
       ctx.globalAlpha = 1;
     }
   }
@@ -1727,10 +1747,16 @@
     if (battle && u > finaleCuts.flash) { ctx.fillStyle = `rgba(${flashRgb},${smooth(finaleCuts.flash, finaleCuts.flash + 0.2, u)})`;ctx.fillRect(0, 0, width, height); }
     if (index === 8) {
       const x = width * (square ? 0.64 : width < 600 ? 0.5 : 0.51), y = height * (square ? 0.58 : width < 600 ? 0.535 : 0.49);
-      ctx.fillStyle = '#080b0ee8';ctx.fillRect(x - 155, y - 32, 310, 63);
-      ctx.textAlign = 'center';ctx.fillStyle = '#c2e1df';ctx.font = '12px ui-monospace, monospace';
-      ctx.fillText(content.completion[0], x, y - 5);
-      ctx.fillStyle = '#6e8c94';ctx.font = '8px ui-monospace, monospace';ctx.fillText(content.completion[1], x, y + 15);
+      const side = Math.min(width, height);
+      // On the square the end notice is drawn 5x larger (relative to a 1080 frame) and kept inside the frame.
+      const endK = square ? 5 * (side / 1080) * 0.75 : 1;
+      ctx.font = noticeFont(8 * endK);
+      const endW = square ? Math.min(ctx.measureText(content.completion[1]).width + 60 * endK, width * 0.94) : 310;
+      const endX = square ? Math.min(Math.max(x, endW / 2 + width * 0.03), width - endW / 2 - width * 0.03) : x;
+      ctx.fillStyle = '#080b0ee8';ctx.fillRect(endX - endW / 2, y - 32 * endK, endW, 63 * endK);
+      ctx.textAlign = 'center';ctx.fillStyle = '#c2e1df';ctx.font = noticeFont(12 * endK);
+      ctx.fillText(content.completion[0], endX, y - 5 * endK);
+      ctx.fillStyle = '#6e8c94';ctx.font = noticeFont(8 * endK);ctx.fillText(content.completion[1], endX, y + 15 * endK);
       const flash = 1 - smooth(0, 1.2, u);
       if (flash > 0) { ctx.fillStyle = `rgba(${flashRgb},${flash})`;ctx.fillRect(0, 0, width, height); }
     }
