@@ -175,3 +175,17 @@ The subflow runs as "User who initiates session" on 7021 (it assigns a user on t
 ### Build Agent retry (2026-11-14)
 
 Followed the guide's route: ServiceNow Studio > Forecast Variance > Build Agent > New conversation > paste the "Budget Check Subflows" prompt. Build Agent shows "Build Agent is unable to connect to the server. This instance may not support the required infrastructure. Please contact your ServiceNow administrator." and accepts no prompt (lef-nov-7021/build_agent_unable_to_connect.png). The guide's Build Agent route cannot run on 7021, so the subflows are the ones that shipped with the app and the guide's manual route applies. Script: `clabs_run/ba4.cjs`.
+
+### Comparison results, part 3 (2026-11-14)
+
+| Check | Result |
+|---|---|
+| Error screen | Testing > Manual Test: "You don't have the required access to complete this request." Access verification: Budget Variance Analysis = Access denied (lef-nov-7021/access_denied_budget_variance.png) |
+| Known cause in a ServiceNow KB | Same message when a tool's Data Access role is "nobody". Fix: set the Data Access role to a role the user has. |
+| Subflow steps on 7021 vs demoalectriallwfzu144008 | Same steps (Look Up cc_summary, Look Up Expense Transaction Event, Variance Comparison, If over baseline then Create Finance Case). The guide's Compute Budget Totals action exists on neither side. |
+| Extract Cost Center on zu144008 | Two steps: Look Up Expense Transaction Event, Assign Outputs (vendor, cost_center). |
+| Build Agent route | Cannot connect on 7021 (lef-nov-7021/build_agent_unable_to_connect.png), so the shipped subflows are used, as the guide's manual route says. |
+| Tool Role Masking Configuration | Empty on 7021 and on demo. |
+| Execution Task output on demo (QB / MCP Proof) | Same shape, every tool allowed. On 7021 only Budget Variance Analysis is denied, failureReason acl. |
+| Agent tool dialog on 7021 | Edit subflow dialog has subflow, inputs, name and description only, no role setting (lef-nov-7021/agent_tool_dialog_budget_variance.png). |
+| Login note | After the .env reorder, 7021 credentials are lines 18 and 19 (0-based); helper defaults in `clabs_run/u7021.cjs` and `u7021h.cjs` updated. |

@@ -3,7 +3,7 @@ const fs=require('fs');
 const S='/private/tmp/claude-501/-Users-leo-francia-WorkflowDataFabric-TypeE/c4c6e574-4851-4c33-8937-cc762b757b3a/scratchpad/';
 const L=fs.readFileSync('/Users/leo.francia/WorkflowDataFabric-TypeE/.env','utf8').split('\n').map(s=>s.trim());
 const H=process.env.LAB_HOST||'https://lef-nov-7021-0001.lab.service-now.com';
-const UI=+(process.env.LAB_USER_IDX||14),PI=+(process.env.LAB_PASS_IDX||15); // 0-based .env line indexes
+const UI=+(process.env.LAB_USER_IDX||18),PI=+(process.env.LAB_PASS_IDX||19); // 0-based .env line indexes
 exports.open=async()=>{const b=await chromium.launch({headless:false,channel:'chrome'});const p=await b.newPage({viewport:{width:1600,height:900}});
 await p.goto(H+'/login.do',{timeout:90000});await p.fill('#user_name',L[UI]);await p.fill('#user_password',L[PI]);await p.click('#sysverb_login');await p.waitForTimeout(8000);p.on('framenavigated',()=>{});return {b,p};};
 exports.H=H;exports.S=S;
