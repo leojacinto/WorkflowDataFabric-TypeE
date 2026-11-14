@@ -1,0 +1,6 @@
+const u=require('./u7021.cjs');
+(async()=>{const {b,p}=await u.open();
+await p.goto(u.H+'/sn_aia_tools_execution_list.do?sysparm_query='+encodeURIComponent('execution_status=processing^ORDERBYDESCsys_created_on'),{timeout:90000}).catch(()=>{});await p.waitForTimeout(8000);
+await p.locator('a.linked').first().click();await p.waitForTimeout(9000);
+await p.screenshot({path:u.S+'mc26_a.png'});await p.mouse.wheel(0,700);await p.waitForTimeout(1500);await p.screenshot({path:u.S+'mc26_b.png'});
+await b.close();})();
