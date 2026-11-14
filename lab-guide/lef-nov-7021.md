@@ -143,3 +143,14 @@ No manual twin was written: 7021 has no PostgreSQL connection or connector tile 
 | Cleanup | Deleted the Global agent "Forecast Variance Neon MCP Lab" and the 10 test SharePoint connectors (a crawling connector must be **Deactivate**d before **Delete** enables; Delete also needs the **I understand** box). The pre-existing "Servicenow Product documentation" connector is untouched. The in-scope agent "Forecast Variance Neon MCP Lab FV" stays. |
 | Access denied lead | The tool record (Tool: Budget Variance Analysis, Subflow) has a **Tool ACL** related list and it is empty for the tool the IHub agent uses; the tool dialog in the new studio has no access setting, and the agent's **Define user access** shows Allow if true. An empty Tool ACL is the only access setting found that differs from a working lab. Not yet changed on 7021. |
 | Scope note | The application scope does not persist between browser sessions: a fresh login is back in Global, where Forecast Variance records are read-only. |
+
+## Access denied: comparison with demoalectriallwfaa158438 (2026-11-14)
+
+| Check | demoalectriallwfaa158438 (QB agent runs) | 7021 |
+|---|---|---|
+| Tool ACL on Budget Variance Analysis | Empty | Empty (so the lead is disproved, nothing was added) |
+| Agent form (type, channel, scope) | internal, nap_and_va, Forecast Variance | Same on Integration Hub Trigger |
+| AI Agent Config record | Fields: agent, domain, active, scope | Same fields plus **public = false** |
+| Tables with access/identity/role/acl in the name (sn_aia*) | None | None |
+
+Only difference found: the AI Agent Config record has a `public` field on 7021 (value false) that the demo instance does not have. Cause of the denial not proven. Scripts: `clabs_run/cmp1.cjs` to `cmp8.cjs`.

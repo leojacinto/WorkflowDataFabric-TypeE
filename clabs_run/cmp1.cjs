@@ -1,16 +1,9 @@
-const u=require('./u7021.cjs');
+// Compare tool record + Tool ACL on a host. LAB_HOST/LAB_USER_IDX/LAB_PASS_IDX env; TAG names the screenshots.
+const u=require('./u7021.cjs');const TAG=process.env.TAG||'cmp';
 (async()=>{const {b,p}=await u.open();
-// original agent via list
-await p.goto(u.H+'/now/agent-studio/create-manage',{timeout:90000}).catch(()=>{});await p.waitForTimeout(15000);await u.dismiss(p);
-await p.mouse.click(211,211);await p.waitForTimeout(8000);
-await p.mouse.click(105,289);await p.waitForTimeout(3000);
-await p.mouse.click(385,444);await p.waitForTimeout(1500);await p.keyboard.type('Name',{delay:60});await p.waitForTimeout(2000);
-await p.mouse.click(69,545);await p.waitForTimeout(2000);
-await p.mouse.click(738,444);await p.waitForTimeout(1500);await p.mouse.click(540,564);await p.waitForTimeout(1000);
-await p.waitForTimeout(1500);await p.locator('now-input[placeholder="Enter value"] input').first().fill('Forecast Variance');await p.waitForTimeout(800);
-await p.mouse.click(1551,483);await p.waitForTimeout(6000);
-await p.mouse.click(121,626);await p.waitForTimeout(15000);await u.dismiss(p);
-console.log(p.url());
-for(let i=1;i<=3;i++){await p.mouse.click(1486,866);await p.waitForTimeout(5000);const d=p.getByRole('button',{name:'Save updates'});if(await d.count()){await d.first().click();await p.waitForTimeout(8000);}
- await p.screenshot({path:u.S+'cmp_orig_'+i+'.png'});}
+await p.goto(u.H+'/sn_aia_tool_list.do?sysparm_query=nameSTARTSWITHBudget',{timeout:90000}).catch(()=>{});await p.waitForTimeout(8000);
+await p.screenshot({path:u.S+TAG+'_toollist.png'});
+const a=p.locator('a.linked.formlink').first();console.log('rows',await a.count());
+if(await a.count()){await a.click();await p.waitForTimeout(9000);await p.screenshot({path:u.S+TAG+'_toolrec.png',fullPage:true});
+for(const t of ['Tool ACL','Agent Tools','Tool Role Masking Configuration']){const l=p.getByText(t,{exact:false}).first();if(await l.count()){await l.click().catch(()=>{});await p.waitForTimeout(3000);await p.screenshot({path:u.S+TAG+'_'+t.replace(/ /g,'_')+'.png'});}}}
 await b.close();})();
