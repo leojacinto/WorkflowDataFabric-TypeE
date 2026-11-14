@@ -210,3 +210,7 @@ The KB (same "You don't have the required access to complete this request" messa
 - On 7021, ACLs of that kind exist for other apps (for example `sn_itsm_aia.action_engagement`, type flow, operation invoke_from_ai, Allow If). None exists for the Forecast Variance subflows. None exists on demoalectriallwfaa158438 either (searched `nameSTARTSWITHx_snc_forecast_v_0` and `operation=invoke_from_ai`), so the demo instance runs without it.
 - Creating it needs the security_admin elevated role. Elevation worked in the UI (user menu > Elevate role), but the ACL creation was not performed.
 - Scripts: `clabs_run/acl1.cjs` to `acl9.cjs`.
+
+### Workaround flag: the AI ACL on 7021 (2026-11-14)
+
+Leo's note: adding an `invoke_from_ai` ACL by hand is a workaround around a platform foundation. The Forecast Variance subflows ship with the app, the same app runs on demoalectriallwfaa158438 with no such ACL, and the lab guide never mentions one. Leo approved creating it on 7021 only to get the agent test running. Treat it as an instance-specific patch on this Brazil patch 2 build, not as a lab step.
