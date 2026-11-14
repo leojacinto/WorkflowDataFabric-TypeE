@@ -199,3 +199,7 @@ Followed the guide's route: ServiceNow Studio > Forecast Variance > Build Agent 
 | Otto panel turned on (AI Admin Hub) | Necessary | Testing > Manual Test needs it. |
 | Default Otto assistant activated (Assistant Designer) | Necessary | Testing > Manual Test needs it. |
 | Subflow Run As tested as System User, then set back to User who initiates session | Noise | Net zero, the Access denied stayed. |
+
+### KB check: Data Access role "nobody" (2026-11-14)
+
+The KB (same "You don't have the required access to complete this request" message) names a Data Access role set to "nobody" as the cause. On 7021 the Integration Hub Trigger agent's Define data access reads **Dynamic user, Approved role admin** (lef-nov-7021/define_data_access_ihub_agent.png). The working QB agent on demoalectriallwfaa158438 reads the same (Dynamic user, admin). The KB cause does not apply to this agent. Script: `clabs_run/da1.cjs`.
