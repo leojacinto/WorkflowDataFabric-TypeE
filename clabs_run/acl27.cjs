@@ -1,0 +1,12 @@
+const u=require('./u7021.cjs');
+(async()=>{const {b,p}=await u.open();
+await p.goto(u.H+'/sys_hub_flow.do?sys_id=65714b6e3b4272900ad1a021a3e45ac5',{timeout:90000}).catch(()=>{});await p.waitForTimeout(20000);
+await p.mouse.click(1559,84);await p.waitForTimeout(3000);
+await p.mouse.click(1420,183);await p.waitForTimeout(4000);
+await p.mouse.click(1163,118);await p.waitForTimeout(2000);
+await p.mouse.click(1461,84);await p.waitForTimeout(5000);
+await p.mouse.click(1559,84);await p.waitForTimeout(3000);
+await p.screenshot({path:u.S+'acl27_a.png'});
+await p.mouse.click(1420,183);await p.waitForTimeout(5000);
+await p.screenshot({path:u.S+'acl27_b.png'});
+await b.close();})();

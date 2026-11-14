@@ -204,7 +204,7 @@ Followed the guide's route: ServiceNow Studio > Forecast Variance > Build Agent 
 
 The KB (same "You don't have the required access to complete this request" message) names a Data Access role set to "nobody" as the cause. On 7021 the Integration Hub Trigger agent's Define data access reads **Dynamic user, Approved role admin** (lef-nov-7021/define_data_access_ihub_agent.png). The working QB agent on demoalectriallwfaa158438 reads the same (Dynamic user, admin). The KB cause does not apply to this agent. Script: `clabs_run/da1.cjs`.
 
-### Lead from ServiceNow docs: AI ACL on the subflow (2026-11-14), not applied
+### Lead from ServiceNow docs: AI ACL on the subflow (2026-11-14), applied below
 
 - Docs ("Create an AI ACL", "Deny-by-default ACL configuration"): a subflow or action used as an AI agent tool needs an ACL with **Operation = Invoked from AI** (`invoke_from_ai`), **Type** `flow` for subflows (`flow_action` for actions), **Name** = the component's scope-qualified internal name, and a Requires role. Newly activated instances deny AI agent access without it.
 - On 7021, ACLs of that kind exist for other apps (for example `sn_itsm_aia.action_engagement`, type flow, operation invoke_from_ai, Allow If). None exists for the Forecast Variance subflows. None exists on demoalectriallwfaa158438 either (searched `nameSTARTSWITHx_snc_forecast_v_0` and `operation=invoke_from_ai`), so the demo instance runs without it.
@@ -215,8 +215,29 @@ The KB (same "You don't have the required access to complete this request" messa
 
 Leo's note: adding an `invoke_from_ai` ACL by hand is a workaround around a platform foundation. The Forecast Variance subflows ship with the app, the same app runs on demoalectriallwfaa158438 with no such ACL, and the lab guide never mentions one. Leo approved creating it on 7021 only to get the agent test running. Treat it as an instance-specific patch on this Brazil patch 2 build, not as a lab step.
 
-### AI ACL created on 7021 (2026-11-14), agent still denied
+### AI ACLs on 7021 (2026-11-14): agent test passes
 
-- Created two ACLs through the UI after security_admin elevation: type flow, operation invoke_from_ai, Allow If, application Forecast Variance, names `x_snc_forecast_v_0.budget_variance_analysis` and `x_snc_forecast_v_0.extract_cost_center`. Neither has a Requires role yet (the role row cannot be added on a new record before saving).
-- Agent test rerun (`clabs_run/ih8.cjs`): decision log still shows Extract Cost Center, Access denied.
-- Open: the real internal name of the Extract Cost Center subflow is unconfirmed (the ACL form echoes any name typed), and the ACLs have no role. Scripts: `clabs_run/acl9.cjs` to `acl20.cjs`.
+Result: the Integration Hub Trigger agent test completes on 7021. Decision log shows Access verification Completed and every tool Completed: Extract Cost Center, Search for Cost Center History, Search for Expense Transactions History, Budget Variance Analysis (screenshot lef-nov-7021/agent_test_completed.png).
+
+What fixed it: two ACLs, both created in the UI after elevating to security_admin.
+
+| Field | ACL 1 | ACL 2 |
+|---|---|---|
+| Type | flow | flow |
+| Operation | invoke_from_ai | invoke_from_ai |
+| Decision Type | Allow If | Allow If |
+| Application | Forecast Variance | Forecast Variance |
+| Name | `x_snc_forecast_v_0.budget_variance_analysis` | `x_snc_forecast_v_0.cost_center_history` |
+| Requires role | admin | admin |
+| Subflow it covers | Budget Variance Analysis | Extract Cost Center |
+
+Evidence it was the ACLs: the Execution Task Output (`isAccessAllowed`) for Budget Variance Analysis went from false (failureReason acl) to true right after ACL 1, and Extract Cost Center went from false to Completed after ACL 2.
+
+Notes:
+- The Extract Cost Center subflow's internal name is `cost_center_history` (confirmed by filtering the Flows list with `internal_name=cost_center_history`). The ACL name cannot be guessed from the display name.
+- The ACL form's Name field accepts any text, so a wrong name saves without error.
+- Roles on a new ACL cannot be added on the new-record form. Save the ACL first, then add the role in the Requires role list and click Update on the ACL. Role rows added without the final Update were not saved (checked in Access Roles).
+- Not needed: the two Search tools (Search Retriever) and the agent itself passed without any ACL.
+- Wrong ACL left behind: `x_snc_forecast_v_0.extract_cost_center` (no role, matches no subflow). It does nothing and is waiting for Leo's OK to delete.
+- Platform note (Leo, 2026-11-14): needing a hand-made ACL per subflow tool is a packaging gap. The newer platform denies AI agent access to subflows without an `invoke_from_ai` ACL, and the Forecast Variance app does not ship them. Leo owns the app, so the two ACLs belong in the app's Fluent source.
+- Scripts: `clabs_run/acl9.cjs` to `acl31.cjs` (`acl18` create, `acl22` add role, `acl29/30` internal-name filter, `acl31` role rows).

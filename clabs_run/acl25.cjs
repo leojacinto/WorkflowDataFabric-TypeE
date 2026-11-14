@@ -1,0 +1,13 @@
+// Elevate, open new ACL form prefilled via sysparm_query, screenshot (no submit)
+const u=require('./u7021.cjs');
+const NAME=process.env.ACL_NAME||'x_snc_forecast_v_0.budget_variance_analysis';
+(async()=>{const {b,p}=await u.open();
+await p.goto(u.H+'/now/nav/ui/home',{timeout:90000}).catch(()=>{});await p.waitForTimeout(15000);await u.dismiss(p);
+await p.locator('.user-menu-label').first().click({force:true});await p.waitForTimeout(6000);
+await p.getByText('Elevate role',{exact:true}).first().dispatchEvent('click');await p.waitForTimeout(6000);
+await p.mouse.click(533,486);await p.waitForTimeout(1000);
+await p.mouse.click(1032,597);await p.waitForTimeout(8000);
+await p.goto(u.H+'/sys_security_acl.do?sys_id=-1&sysparm_query='+encodeURIComponent('type=flow^operation=invoke_from_ai^name='+NAME),{timeout:90000}).catch(()=>{});await p.waitForTimeout(10000);
+const t=await p.locator('select[id="ni_tn_sys_security_acl.name"]').locator('option').allTextContents();console.log(t.length,JSON.stringify(t.filter(x=>/forecast|global|extract/i.test(x))));
+for(const sc of ['global','x_snc_forecast_v_0']){await p.locator('select[id="ni_tn_sys_security_acl.name"]').selectOption({label:sc}).catch(e=>console.log('e',sc));await p.waitForTimeout(5000);const o=await p.locator('select[id="ni_fn_sys_security_acl.name"]').locator('option').allTextContents();console.log(sc,o.length,JSON.stringify(o.filter(x=>/extract|cost|expense|variance/i.test(x))));}
+await b.close();})();
