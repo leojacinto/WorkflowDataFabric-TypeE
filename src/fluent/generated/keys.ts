@@ -5,6 +5,14 @@ declare global {
         namespace Internal {
             interface Keys extends KeysRegistry {
                 explicit: {
+                    acl_invoke_from_ai_budget_variance_analysis: {
+                        table: 'sys_security_acl'
+                        id: '0bf3add9ea9745f58f73d4499fad8d0e'
+                    }
+                    acl_invoke_from_ai_extract_cost_center: {
+                        table: 'sys_security_acl'
+                        id: 'dff910d5177745fbb3006f0f1c8ee101'
+                    }
                     'aiux-color-swatch|wdf-lab': {
                         table: 'sys_aix_color_swatch'
                         id: '3eb64c1b9148bf302111fca9fd31e2bb'
@@ -3569,6 +3577,10 @@ declare global {
                         table: 'db_image'
                         id: '7759cf5d5862468986c60ec59ef80f2d'
                     }
+                    'wdf-lab/public/virtual-on/servicenow-mark-wasabi.png': {
+                        table: 'db_image'
+                        id: '75816f37f9164022ac27221327e7b62f'
+                    }
                     'wdf-lab/public/wdf/conclusion/kahoot_hype_screen_dark.png': {
                         table: 'db_image'
                         id: 'cff789799de547e481e5fd1dbfcfb036'
@@ -5417,6 +5429,19 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_security_acl_role'
+                        id: '61e8aed1b1434363bb5ffe499c483d6a'
+                        key: {
+                            sys_security_acl: '0bf3add9ea9745f58f73d4499fad8d0e'
+                            sys_user_role: {
+                                id: '4122478a31114a1182fbc9922df001a8'
+                                key: {
+                                    name: 'admin'
+                                }
+                            }
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '633ef75ca5534c4d9ee3531d48af84ff'
                         key: {
@@ -5631,6 +5656,19 @@ declare global {
                             name: 'x_snc_forecast_v_0_lab_asset'
                             element: 'name'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '830d2f1052b14aaba8e725e2a218e814'
+                        key: {
+                            sys_security_acl: 'dff910d5177745fbb3006f0f1c8ee101'
+                            sys_user_role: {
+                                id: '4122478a31114a1182fbc9922df001a8'
+                                key: {
+                                    name: 'admin'
+                                }
+                            }
                         }
                     },
                     {

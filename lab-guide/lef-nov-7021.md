@@ -241,3 +241,8 @@ Notes:
 - Wrong ACL `x_snc_forecast_v_0.extract_cost_center` (no role, matched no subflow) was deleted with Leo's OK. Only the two ACLs in the table remain.
 - Platform note (Leo, 2026-11-14): needing a hand-made ACL per subflow tool is a packaging gap. The newer platform denies AI agent access to subflows without an `invoke_from_ai` ACL, and the Forecast Variance app does not ship them. Leo owns the app, so the two ACLs belong in the app's Fluent source.
 - Scripts: `clabs_run/acl9.cjs` to `acl31.cjs` (`acl18` create, `acl22` add role, `acl29/30` internal-name filter, `acl31` role rows).
+
+### Fluent source and scope decisions (2026-11-14)
+
+- The two AI ACLs are now in the app source: `src/fluent/security/ai-agent-subflow-acls.now.ts` (type flow, operation invoke_from_ai, role admin, names `x_snc_forecast_v_0.budget_variance_analysis` and `x_snc_forecast_v_0.cost_center_history`). `npx @servicenow/sdk build` succeeds and emits both `sys_security_acl` records with their admin role rows. Not yet deployed to an instance. The `as any` casts are needed because the SDK's Acl type does not list `invoke_from_ai` in its operation union.
+- XCC crawl is out of scope for the lef lab (Leo's call): it will not be solved there and is removed from the open list.
