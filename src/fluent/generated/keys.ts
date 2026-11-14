@@ -49,6 +49,10 @@ declare global {
                         table: 'sys_hub_flow'
                         id: '5753789ddc1148218383f7928a2fd8ad'
                     }
+                    '5d8f05183b9a72900ad1a021a3e45a99': {
+                        table: 'sys_hub_flow_snapshot'
+                        id: '5d8f05183b9a72900ad1a021a3e45a99'
+                    }
                     '6a1f4bdf4da043b39900971b2129c34a': {
                         table: 'sn_aia_agent'
                         id: '6a1f4bdf4da043b39900971b2129c34a'
@@ -84,6 +88,10 @@ declare global {
                     a6df73c747d8d790037d0fadf26d43ac: {
                         table: 'sn_aia_agent'
                         id: 'a6df73c747d8d790037d0fadf26d43ac'
+                    }
+                    a94b28573b91be900ad1a021a3e45a76: {
+                        table: 'sys_hub_flow'
+                        id: 'a94b28573b91be900ad1a021a3e45a76'
                     }
                     acl_invoke_from_ai_budget_variance_analysis: {
                         table: 'sys_security_acl'
@@ -551,6 +559,10 @@ declare global {
                     b31d2a0194bb4b46922c8af7602e0b36: {
                         table: 'sys_hub_flow'
                         id: 'b31d2a0194bb4b46922c8af7602e0b36'
+                    }
+                    b3a191943bda72900ad1a021a3e45a77: {
+                        table: 'sys_hub_sub_flow_instance_v2'
+                        id: 'b3a191943bda72900ad1a021a3e45a77'
                     }
                     b5fbff25888441e7a2301c5e4729248e: {
                         table: 'sys_hub_action_type_definition'
@@ -1723,6 +1735,10 @@ declare global {
                     'ccbh-fc8f1eaa3b4632900ad1a021a3e45aab': {
                         table: 'x_snc_forecast_v_0_cost_center_budget_history'
                         id: 'fc8f1eaa3b4632900ad1a021a3e45aab'
+                    }
+                    d45be0973b91be900ad1a021a3e45a6c: {
+                        table: 'sys_hub_trigger_instance_v2'
+                        id: 'd45be0973b91be900ad1a021a3e45a6c'
                     }
                     da53518047285310037d0fadf26d43e0: {
                         table: 'sn_mcp_server'

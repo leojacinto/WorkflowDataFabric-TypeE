@@ -299,3 +299,11 @@ The Global agent "Forecast Variance Neon MCP Lab" and the 10 test SharePoint con
 
 - The trigger "Create New Expense Transaction Event" (record create on Expense Transaction Event, channel b023fcb3..., run as owner) is now in `triggerConfig` of the hand-written agent file. The record has no objective template and no condition, so both are empty strings.
 - Still not converted: the Snowflake MCP agent and the Trigger Variance Analysis flow. Build passes, nothing deployed.
+
+### Trigger Variance Analysis flow added (2026-11-14)
+
+- `src/fluent/generated/automation/flow/sys_hub_flow_a94b28573b91be900ad1a021a3e45a76.now.ts`: flow "Trigger Variance Analysis" (record created or updated on Expense Transaction Event, then calls a subflow with cost_center and event_id).
+- Two `@ts-ignore` comments sit above the two `dataPill` lines: the SDK types the trigger record without the table's columns (error TS4111), and `dataPill` does not accept bracket access.
+- The subflow it calls (`e18111543bda72900ad1a021a3e45a73`) is not in this source.
+- Snowflake MCP agent: left out on purpose (Leo: not important).
+- Build passes. Nothing deployed, nothing pushed.
