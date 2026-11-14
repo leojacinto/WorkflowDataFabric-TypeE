@@ -43,6 +43,7 @@
     flashRgb = PURE ? '4,4,4' : '242,247,248';
   };
   const pureLineLogo = document.createElement('canvas');
+  const pureSolidLogo = document.createElement('canvas');
   const content = {
     title: 'Virtuality — A Line Study',
     header: 'A STUDY IN MOTION',
@@ -230,7 +231,8 @@
       ctx.save();ctx.beginPath();ctx.moveTo(a.x, a.y);ctx.lineTo(b.x, b.y);ctx.lineTo(c.x, c.y);ctx.closePath();ctx.clip();
       ctx.globalAlpha = mark.opacity;
       ctx.transform(m11, m12, m21, m22, a.x - m11 * a.u - m21 * a.v, a.y - m12 * a.u - m22 * a.v);
-      ctx.drawImage(PURE && pureLineLogo.width ? pureLineLogo : state.mono ? monoChestLogo : chestLogo, 32, 51, 495, 442, 0, 0, 1, 1);
+      if (PURE && pureSolidLogo.width) ctx.drawImage(pureSolidLogo, 0, 0, pureSolidLogo.width, pureSolidLogo.height, 0.1, 0.1, 0.8, 0.8);
+      else ctx.drawImage(PURE && pureLineLogo.width ? pureLineLogo : state.mono ? monoChestLogo : chestLogo, 32, 51, 495, 442, 0, 0, 1, 1);
       ctx.restore();
     };
     for (let x = 0; x < 2; x++) for (let y = 0; y < 2; y++) {
@@ -1546,13 +1548,6 @@
         }
         ctx.globalAlpha = 1;
       }
-      const visor = project(mech.pose([0, 7.46, 0.72]));
-      if (visor.z > 1) {
-        const r = 36 * power;
-        const glow = ctx.createRadialGradient(visor.x, visor.y, 0, visor.x, visor.y, r);
-        glow.addColorStop(0, `${brandGreen}40`);glow.addColorStop(1, `${brandGreen}00`);
-        ctx.fillStyle = glow;ctx.fillRect(visor.x - r, visor.y - r, r * 2, r * 2);
-      }
     }
     if (t > 8.1 && t < 10.7) {
       ctx.strokeStyle = '#70969f';ctx.lineWidth = 0.7;
@@ -1893,6 +1888,15 @@
     lineInk.drawImage(chestLogo, 0, 0);lineInk.globalCompositeOperation = 'source-in';lineInk.fillStyle = preComp(brandGreen);lineInk.fillRect(0, 0, pureLineLogo.width, pureLineLogo.height);
     render();
   }, { once: true });
+  // Light theme draws the logo as a solid wasabi mark (dark theme keeps the line art).
+  const solidLogo = new Image();
+  solidLogo.addEventListener('load', () => {
+    pureSolidLogo.width = solidLogo.naturalWidth;pureSolidLogo.height = solidLogo.naturalHeight;
+    const solidInk = pureSolidLogo.getContext('2d');
+    solidInk.drawImage(solidLogo, 0, 0);solidInk.globalCompositeOperation = 'source-in';solidInk.fillStyle = preComp(brandGreen);solidInk.fillRect(0, 0, pureSolidLogo.width, pureSolidLogo.height);
+    render();
+  }, { once: true });
+  solidLogo.src = 'servicenow-mark-wasabi.png';
   chestLogo.src = 'servicenow-mark-lineart.png';
   resize();requestAnimationFrame(frame);
 })();
