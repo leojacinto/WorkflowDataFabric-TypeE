@@ -5240,6 +5240,13 @@ declare global {
                         }
                     },
                     {
+                        table: 'sn_glider_source_artifact'
+                        id: '2f94369ac338497bbfd65986d0655d20'
+                        key: {
+                            name: 'x_snc_forecast_v_0_wdf_clab.do - BYOUI Files'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '359630e4fe524643aed10efbffbdaeb5'
                         key: {
@@ -5765,6 +5772,14 @@ declare global {
                         }
                     },
                     {
+                        table: 'sn_glider_source_artifact_m2m'
+                        id: '95f5a821b6e140039cd6e62a11700f5b'
+                        key: {
+                            application_file: 'da27e6b324f4443087ff3f09ea95917c'
+                            source_artifact: '2f94369ac338497bbfd65986d0655d20'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '9895d584ca66472c808419b5c9d73020'
                         key: {
@@ -5903,6 +5918,14 @@ declare global {
                         }
                     },
                     {
+                        table: 'sn_glider_source_artifact_m2m'
+                        id: 'b0b84cb098da458bb7a8858baa88a557'
+                        key: {
+                            application_file: '5256de3e955f4501b8293b92264a1e11'
+                            source_artifact: '2f94369ac338497bbfd65986d0655d20'
+                        }
+                    },
+                    {
                         table: 'sys_db_object'
                         id: 'b497747df6aa41d2a7b6754ea471195d'
                         key: {
@@ -5981,6 +6004,14 @@ declare global {
                         }
                     },
                     {
+                        table: 'sn_glider_source_artifact_m2m'
+                        id: 'bf65c7076ae742d1924c97d2c229481a'
+                        key: {
+                            application_file: '6fc36fdb0cd84b34ab889529b862cdba'
+                            source_artifact: '2f94369ac338497bbfd65986d0655d20'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: 'c0d2def4797543678b77e946caf10b71'
                         key: {
@@ -6003,6 +6034,14 @@ declare global {
                             name: 'x_snc_forecast_v_0_cost_center_budget_history'
                             element: 'variance_pct'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sn_glider_source_artifact_m2m'
+                        id: 'c43ba6b4ddd14242a8e246bc4b424fa1'
+                        key: {
+                            application_file: 'e5e362ffd0fd4c489a8c85bc967da6f7'
+                            source_artifact: '2f94369ac338497bbfd65986d0655d20'
                         }
                     },
                     {
@@ -6112,6 +6151,14 @@ declare global {
                         }
                     },
                     {
+                        table: 'sn_glider_source_artifact_m2m'
+                        id: 'd75acd78cdf643aab320d89a040f3b6c'
+                        key: {
+                            application_file: '1c00daf32f1e4d3896b8cb3111b2e096'
+                            source_artifact: '2f94369ac338497bbfd65986d0655d20'
+                        }
+                    },
+                    {
                         table: 'sys_db_object'
                         id: 'd956dc264682454982996d33f6040bdd'
                         key: {
@@ -6147,6 +6194,13 @@ declare global {
                         key: {
                             name: 'x_snc_forecast_v_0_lab_asset'
                             element: 'name'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_page'
+                        id: 'e5e362ffd0fd4c489a8c85bc967da6f7'
+                        key: {
+                            endpoint: 'x_snc_forecast_v_0_wdf_clab.do'
                         }
                     },
                     {

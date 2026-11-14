@@ -2,6 +2,7 @@ import React from "react";
 import { asset } from "../content";
 import { MAIN_EXERCISES, EXTENDED_EXERCISES, HUNGRY_FOR_MORE } from "../toc";
 import VirtualOn from "../components/VirtualOn";
+import { IS_CLAB } from "../lib/variant";
 
 /* Content below is verbatim from the lab's GitBook README.md. */
 
@@ -20,7 +21,7 @@ const PROBLEMS = [
   "\u201cWe answer the same questions daily: can employees self-serve?\u201d"
 ];
 
-const OUTCOME_BULLETS: [string, string][] = [
+const ALL_OUTCOME_BULLETS: [string, string][] = [
   ["Integration Hub", " for real-time expense event processing"],
   [
     "Zero Copy integration",
@@ -45,7 +46,7 @@ const OUTCOME_BULLETS: [string, string][] = [
   ]
 ];
 
-const COURSES = [
+const ALL_COURSES = [
   {
     course: "What are the Components of Workflow Data Fabric",
     href:
@@ -72,7 +73,7 @@ const COURSES = [
   }
 ];
 
-const DEPENDENCY_ROWS: [string, string][] = [
+const ALL_DEPENDENCY_ROWS: [string, string][] = [
   ["Zero Copy Connector for SQL", "2.0.0"],
   ["Zero Copy Connector for ERP", "8.0.14"],
   ["External Content Connectors for SharePoint Online", "4.1.7"],
@@ -83,6 +84,11 @@ const DEPENDENCY_ROWS: [string, string][] = [
   ["Lens", "2.0.0"],
   ["Document Intelligence", "7.1.5"]
 ];
+
+// The clab variant has no External Content Connector exercise.
+const OUTCOME_BULLETS = IS_CLAB ? ALL_OUTCOME_BULLETS.filter(([t]) => t !== "External Content Connector") : ALL_OUTCOME_BULLETS;
+const COURSES = IS_CLAB ? ALL_COURSES.filter((c) => !/External Content Connectors/.test(c.course)) : ALL_COURSES;
+const DEPENDENCY_ROWS = IS_CLAB ? ALL_DEPENDENCY_ROWS.filter(([t]) => !/External Content Connectors/.test(t)) : ALL_DEPENDENCY_ROWS;
 
 const CREDITS: [string, string][] = [
   ["Krithiga Velmurugan", "https://www.linkedin.com/in/krithiga-velmurugan-306757159/"],
@@ -134,7 +140,7 @@ export default function Home({
             management into proactive intelligence
           </strong>
           . By unifying data across systems through Zero Copy for SQL and ERP,
-          Integration Hub, External Content Connectors, MCP, and AI agents,
+          Integration Hub, {IS_CLAB ? "" : "External Content Connectors, "}MCP, and AI agents,
           organizations can:
         </p>
 

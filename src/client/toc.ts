@@ -1,4 +1,5 @@
 import { IconName } from './icons'
+import { IS_CLAB } from './lib/variant'
 
 /*
  * Mirrors the AIUX app's constants/toc.js and application.js nav structure
@@ -47,7 +48,7 @@ export const MAIN_EXERCISES: TocItem[] = [
     },
 ]
 
-export const EXTENDED_EXERCISES: TocItem[] = [
+const ALL_EXTENDED_EXERCISES: TocItem[] = [
     {
         path: '/exercises/external-content-connector',
         title: 'Lab Exercise: External Content Connector',
@@ -70,6 +71,11 @@ export const EXTENDED_EXERCISES: TocItem[] = [
         duration: '1 hour',
     },
 ]
+
+/** The clab variant drops External Content Connector (it cannot run on the lef lab instances). */
+export const EXTENDED_EXERCISES: TocItem[] = IS_CLAB
+    ? ALL_EXTENDED_EXERCISES.filter((i) => i.path !== '/exercises/external-content-connector')
+    : ALL_EXTENDED_EXERCISES
 
 export const CONCLUSION: TocItem[] = [
     { path: '/conclusion/key-takeaways', title: 'Key Takeaways' },

@@ -2,6 +2,8 @@ import React, { useEffect, useMemo, useState } from 'react'
 import ApproachSwitch from '../components/ApproachSwitch'
 import Markdown from '../components/Markdown'
 import { LAB_MARKDOWN } from '../content/lab-markdown'
+import { LAB_MARKDOWN_CLAB } from '../content/lab-markdown-clab'
+import { IS_CLAB } from '../lib/variant'
 import { Approach, findApproachSections, readApproach, saveApproach } from '../lib/approach'
 import { Block, LabDoc, readMarkdown } from '../lib/markdown'
 import { TocItem } from '../toc'
@@ -39,7 +41,7 @@ export default function LabPage({
     )
 
     useEffect(() => {
-        const text = LAB_MARKDOWN[route]
+        const text = IS_CLAB ? (LAB_MARKDOWN_CLAB[route] ?? LAB_MARKDOWN[route]) : LAB_MARKDOWN[route]
 
         if (text === undefined) {
             setState({ phase: 'error', message: 'No source mapped for this page.', url: route })
