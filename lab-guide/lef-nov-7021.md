@@ -135,3 +135,11 @@ Hands-on: Set the Owner on Expense Events (optional)
 ## Not written: Zero Copy "Give the Agent the PostgreSQL Data" (no Build Agent)
 
 No manual twin was written: 7021 has no PostgreSQL connection or connector tile (see the Zero Copy section), so the manual UI steps cannot be verified here.
+
+## Cleanup and Access denied lead (2026-11-14)
+
+| Item | Result |
+|---|---|
+| Cleanup | Deleted the Global agent "Forecast Variance Neon MCP Lab" and the 10 test SharePoint connectors (a crawling connector must be **Deactivate**d before **Delete** enables; Delete also needs the **I understand** box). The pre-existing "Servicenow Product documentation" connector is untouched. The in-scope agent "Forecast Variance Neon MCP Lab FV" stays. |
+| Access denied lead | The tool record (Tool: Budget Variance Analysis, Subflow) has a **Tool ACL** related list and it is empty for the tool the IHub agent uses; the tool dialog in the new studio has no access setting, and the agent's **Define user access** shows Allow if true. An empty Tool ACL is the only access setting found that differs from a working lab. Not yet changed on 7021. |
+| Scope note | The application scope does not persist between browser sessions: a fresh login is back in Global, where Forecast Variance records are read-only. |
