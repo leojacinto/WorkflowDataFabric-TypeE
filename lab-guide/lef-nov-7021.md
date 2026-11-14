@@ -203,3 +203,10 @@ Followed the guide's route: ServiceNow Studio > Forecast Variance > Build Agent 
 ### KB check: Data Access role "nobody" (2026-11-14)
 
 The KB (same "You don't have the required access to complete this request" message) names a Data Access role set to "nobody" as the cause. On 7021 the Integration Hub Trigger agent's Define data access reads **Dynamic user, Approved role admin** (lef-nov-7021/define_data_access_ihub_agent.png). The working QB agent on demoalectriallwfaa158438 reads the same (Dynamic user, admin). The KB cause does not apply to this agent. Script: `clabs_run/da1.cjs`.
+
+### Lead from ServiceNow docs: AI ACL on the subflow (2026-11-14), not applied
+
+- Docs ("Create an AI ACL", "Deny-by-default ACL configuration"): a subflow or action used as an AI agent tool needs an ACL with **Operation = Invoked from AI** (`invoke_from_ai`), **Type** `flow` for subflows (`flow_action` for actions), **Name** = the component's scope-qualified internal name, and a Requires role. Newly activated instances deny AI agent access without it.
+- On 7021, ACLs of that kind exist for other apps (for example `sn_itsm_aia.action_engagement`, type flow, operation invoke_from_ai, Allow If). None exists for the Forecast Variance subflows. None exists on demoalectriallwfaa158438 either (searched `nameSTARTSWITHx_snc_forecast_v_0` and `operation=invoke_from_ai`), so the demo instance runs without it.
+- Creating it needs the security_admin elevated role. Elevation worked in the UI (user menu > Elevate role), but the ACL creation was not performed.
+- Scripts: `clabs_run/acl1.cjs` to `acl9.cjs`.
