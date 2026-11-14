@@ -1502,13 +1502,17 @@
   function drawPolygon(f) {
     if (f.logo) { drawChestMark(f);return; }
     const material = palette[f.material];
+    // Light theme: the enemy stays dark, drawn as slate with darker edges so it sits with the other line-art units.
+    const enemyInk = PURE && (f.material === 'enemy' || f.material === 'enemyDark');
+    // The enemy's translucent trim pieces would otherwise show the page colour through as white holes.
+    const enemyFill = enemyInk || (PURE && f.opacity < 1 && (f.material === 'brace' || f.material === 'warning' || f.material === 'dark'));
     ctx.beginPath();
     f.points.forEach((p, i) => i ? ctx.lineTo(p.x, p.y) : ctx.moveTo(p.x, p.y));
     ctx.closePath();
     ctx.globalAlpha = 1;
-    ctx.fillStyle = f.opacity < 1 ? '#080b0e' : state.mono ? (f.material === 'teal' ? '#253235' : '#0c1216') : material.fill;
+    ctx.fillStyle = enemyFill ? preComp(f.material === 'enemy' ? '#56626b' : '#46515a') : f.opacity < 1 ? '#080b0e' : state.mono ? (f.material === 'teal' ? '#253235' : '#0c1216') : material.fill;
     ctx.fill();
-    ctx.strokeStyle = state.mono ? (f.material === 'bay' ? '#364650' : '#a8b8c0') : material.edge;
+    ctx.strokeStyle = enemyInk ? preComp('#20282d') : state.mono ? (f.material === 'bay' ? '#364650' : '#a8b8c0') : material.edge;
     ctx.lineWidth = material.weight;
     ctx.globalAlpha = f.opacity;
     ctx.stroke();
