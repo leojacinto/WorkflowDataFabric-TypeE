@@ -78,7 +78,7 @@ Zero Copy SQL/PostgreSQL steps, Lens and Document Intelligence, MCP, External Co
 | Platform warnings on the connector home | "mTLS self validation failed. If crawls fail with 'timed out', please consult customer support", "2 app versions mismatch (SharePoint Online, SN Docs)" and "One or more plug-ins require repair (External Content Connectors)". These point to the instance, not to the guide text. |
 | Verdict | Fundamental connection issue on this instance, so the Search Preview rewrite is not worth doing here. Dropped as instructed. |
 
-Leftovers from the attempts on 7021 (11 connectors in the list: SharePoint Online, 2, 4, 5, 6, 7, 8, 9, 10 and LF, plus the Servicenow Product documentation one that was already there). They have not been deleted.
+Leftovers from the attempts on 7021 (11 connectors in the list: SharePoint Online, 2, 4, 5, 6, 7, 8, 9, 10 and LF, plus the Servicenow Product documentation one that was already there). They were deleted later (see Cleanup below); re-checked 2026-11-14: only the pre-existing Servicenow Product documentation connector remains.
 
 ## Visible-browser rerun of the headless blockers
 
@@ -244,5 +244,9 @@ Notes:
 
 ### Fluent source and scope decisions (2026-11-14)
 
-- The two AI ACLs are now in the app source: `src/fluent/security/ai-agent-subflow-acls.now.ts` (type flow, operation invoke_from_ai, role admin, names `x_snc_forecast_v_0.budget_variance_analysis` and `x_snc_forecast_v_0.cost_center_history`). `npx @servicenow/sdk build` succeeds and emits both `sys_security_acl` records with their admin role rows. Not yet deployed to an instance. The `as any` casts are needed because the SDK's Acl type does not list `invoke_from_ai` in its operation union.
+- The two AI ACLs are now in the app source: `src/fluent/security/ai-agent-subflow-acls.now.ts` (type flow, operation invoke_from_ai, role admin, names `x_snc_forecast_v_0.budget_variance_analysis` and `x_snc_forecast_v_0.cost_center_history`). `npx @servicenow/sdk build` succeeds and emits both `sys_security_acl` records with their admin role rows. Kept in source only, not deployed to any instance (Leo's call, 2026-11-14). The `as any` casts are needed because the SDK's Acl type does not list `invoke_from_ai` in its operation union.
 - XCC crawl is out of scope for the lef lab (Leo's call): it will not be solved there and is removed from the open list.
+
+### Cleanup re-check (2026-11-14)
+
+The Global agent "Forecast Variance Neon MCP Lab" and the 10 test SharePoint connectors were already deleted earlier today. Re-checked on 7021: the AI Agents list shows only "Forecast Variance Neon MCP Lab FV", and External Content Connectors lists only the pre-existing "Servicenow Product documentation" connector. Nothing left to delete. Scripts: `clabs_run/cu1.cjs`, `cu2.cjs`.
