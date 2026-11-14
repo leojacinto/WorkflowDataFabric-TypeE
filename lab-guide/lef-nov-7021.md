@@ -277,3 +277,11 @@ The Global agent "Forecast Variance Neon MCP Lab" and the 10 test SharePoint con
 - Left out on purpose: the 139 `sn_mcp_server_tool` rows (tool catalog the server discovered from Neon), the "Forecast Variance MCP Proof" agent, the Snowflake MCP server and agent, the 11 older Neon server rows under author_elective_update, and the two older copies of the Neon tool.
 - The converted agent points at the Extract Cost Center and Budget Variance Analysis subflows and an admin role by sys_id; those records exist on perelandra but are not in this source yet, so the agent resolves them only on an instance that already has the Forecast Variance app.
 - `npx @servicenow/sdk build` passes. Not deployed.
+
+### Perelandra Forecast Variance flows and agent pulled into the source (2026-11-14)
+
+- Converted with `now-sdk transform --from` from the read-only perelandra download into `src/fluent/generated/`: subflows Get Expense Event, Extract Cost Center and Budget Variance Analysis, the actions Get Expense Event and Compute Budget Totals, the Get Expense Event alias (`automation/`), and the agent "Forecast Variance" with its tools (`ai-agent/agent`). Its security ACL (`52d4aa91…`, Specific role admin) was added by hand because the transform did not emit it.
+- The Neon MCP agent now links to the same shared tool records through plain `sn_aia_agent_tool_m2m` records (`ai-agent/mcp-tool/neon-mcp-tool.now.ts`), so each tool is defined once. The build had flagged four duplicate tool records before this.
+- Not converted (the transform skipped them): the agents "Forecast Variance Integration Hub Trigger" and "Forecast Variance Snowflake MCP" (they sit under author_elective_update on perelandra), the flow "Trigger Variance Analysis", and the agent trigger configuration. The IHub Trigger agent is the one the 7021 test used, so it still needs another pass.
+- `npx @servicenow/sdk build` passes. Not deployed. Do not deploy before comparing with perelandra (see the deploy question above).
+- A stray metadata dump (199 MB, from `transform --table --id`) was moved out of the repo to the scratchpad; `src/plugin-xmls/` is now git-ignored.

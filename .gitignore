@@ -48,3 +48,4 @@ lab-guide/assets/sc_zcc_ba_df_table_result.png
 
 # SharePoint connector certificate (secret)
 ms-spo-connector-cert.jks
+src/plugin-xmls/

@@ -29,58 +29,6 @@ Step 5: Present all findings in plain English: the budget-history trend, whether
     ],
     runAsUser: '',
     tools: [
-        {
-            description:
-                'Looks up Expense Transactions records for a given cost center and vendor and returns the expense date, amount, and description for each.',
-            name: 'Search for Expense Transactions History',
-            recordType: 'custom',
-            script: Now.include('./sn_aia_tool_07df37c747d8d790037d0fadf26d43a8.js'),
-            type: 'script',
-            executionMode: 'autopilot',
-            maxAutoExecutions: 10,
-            outputTransformationStrategy: 'none',
-            postMessage: 'Expense transactions retrieved.',
-            preMessage: 'Looking up prior expense transactions for this vendor...',
-        },
-        {
-            description:
-                'Looks up up to 12 Cost Center Budget History records for a cost center, ordered by fiscal month, and returns the fiscal month, monthly budget, actual spend, and status for each.',
-            name: 'Search for Cost Center History',
-            recordType: 'custom',
-            script: Now.include('./sn_aia_tool_8bdf37c747d8d790037d0fadf26d43c4.js'),
-            type: 'script',
-            executionMode: 'autopilot',
-            maxAutoExecutions: 10,
-            outputTransformationStrategy: 'none',
-            postMessage: 'Budget history retrieved.',
-            preMessage: 'Looking up the cost center budget history...',
-        },
-        {
-            description:
-                'Runs the Extract Cost Center subflow with an expense event ID and returns the cost center and vendor for that event.',
-            name: 'Extract Cost Center',
-            recordType: 'custom',
-            subflowId: '5753789ddc1148218383f7928a2fd8ad',
-            type: 'subflow',
-            executionMode: 'autopilot',
-            maxAutoExecutions: 10,
-            outputTransformationStrategy: 'none',
-            postMessage: 'Cost center extracted.',
-            preMessage: 'Extracting the cost center for the event...',
-        },
-        {
-            description:
-                'Runs the Budget Variance Analysis subflow for a cost center and expense event ID. It evaluates whether the cost center is over budget, opens a Finance Case when it is, and returns the outcome including any case number.',
-            name: 'Budget Variance Analysis',
-            recordType: 'custom',
-            subflowId: 'b31d2a0194bb4b46922c8af7602e0b36',
-            type: 'subflow',
-            executionMode: 'autopilot',
-            maxAutoExecutions: 10,
-            outputTransformationStrategy: 'none',
-            postMessage: 'Budget variance analysis complete.',
-            preMessage: 'Running the budget variance analysis...',
-        },
     ],
     securityAcl: {
         $id: Now.ID['07df77c747d8d790037d0fadf26d4340'],

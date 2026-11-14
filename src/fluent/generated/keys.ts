@@ -5,17 +5,77 @@ declare global {
         namespace Internal {
             interface Keys extends KeysRegistry {
                 explicit: {
+                    '02ed6ae13045489f9575a52beb445773': {
+                        table: 'sys_hub_step_instance'
+                        id: '02ed6ae13045489f9575a52beb445773'
+                    }
                     '07df77c747d8d790037d0fadf26d4340': {
                         table: 'sys_security_acl'
                         id: '07df77c747d8d790037d0fadf26d4340'
+                    }
+                    '11cf944e33b14d5a89ebff3eb5c60387': {
+                        table: 'sys_hub_action_instance_v2'
+                        id: '11cf944e33b14d5a89ebff3eb5c60387'
                     }
                     '1a53518047285310037d0fadf26d43bf': {
                         table: 'sys_wdf_external_connection_mapping'
                         id: '1a53518047285310037d0fadf26d43bf'
                     }
+                    '255f44c7556740189bb2feea4ea5b39b': {
+                        table: 'sys_hub_action_type_definition'
+                        id: '255f44c7556740189bb2feea4ea5b39b'
+                    }
+                    '32f26b62a55648acb0ee75c637680279': {
+                        table: 'sys_hub_flow'
+                        id: '32f26b62a55648acb0ee75c637680279'
+                    }
+                    '35ebb88a3bd85710a0db3141a3e45ad3': {
+                        table: 'sys_hub_flow_snapshot'
+                        id: '35ebb88a3bd85710a0db3141a3e45ad3'
+                    }
+                    '44d0f65713b14f4294bdebd386cf0711': {
+                        table: 'sys_hub_flow_logic_instance_v2'
+                        id: '44d0f65713b14f4294bdebd386cf0711'
+                    }
+                    '52d4aa917b294fd89076e60107ce5048': {
+                        table: 'sys_security_acl'
+                        id: '52d4aa917b294fd89076e60107ce5048'
+                    }
+                    '5753789ddc1148218383f7928a2fd8ad': {
+                        table: 'sys_hub_flow'
+                        id: '5753789ddc1148218383f7928a2fd8ad'
+                    }
+                    '6a1f4bdf4da043b39900971b2129c34a': {
+                        table: 'sn_aia_agent'
+                        id: '6a1f4bdf4da043b39900971b2129c34a'
+                    }
+                    '6b9a0f05d51441f5bb4847b0c1544b2f': {
+                        table: 'sys_hub_action_instance_v2'
+                        id: '6b9a0f05d51441f5bb4847b0c1544b2f'
+                    }
+                    '7cebf48a3bd85710a0db3141a3e45ab9': {
+                        table: 'sys_hub_action_type_snapshot'
+                        id: '7cebf48a3bd85710a0db3141a3e45ab9'
+                    }
+                    '86d59a922b3a4c16b5852af04ee5812e': {
+                        table: 'sys_hub_action_instance_v2'
+                        id: '86d59a922b3a4c16b5852af04ee5812e'
+                    }
+                    '9565cd4a47585710037d0fadf26d439a': {
+                        table: 'sys_hub_flow_snapshot'
+                        id: '9565cd4a47585710037d0fadf26d439a'
+                    }
+                    '9755894a47585710037d0fadf26d4326': {
+                        table: 'sys_hub_action_type_snapshot'
+                        id: '9755894a47585710037d0fadf26d4326'
+                    }
                     '9a535d4047285310037d0fadf26d43fd': {
                         table: 'sys_alias'
                         id: '9a535d4047285310037d0fadf26d43fd'
+                    }
+                    '9aaef6ca540f4800883f265e197715eb': {
+                        table: 'sys_alias'
+                        id: '9aaef6ca540f4800883f265e197715eb'
                     }
                     a6df73c747d8d790037d0fadf26d43ac: {
                         table: 'sn_aia_agent'
@@ -484,9 +544,29 @@ declare global {
                         table: 'sys_ux_theme_asset'
                         id: 'eb721c3f0610419b9951e030574f8cdf'
                     }
+                    b31d2a0194bb4b46922c8af7602e0b36: {
+                        table: 'sys_hub_flow'
+                        id: 'b31d2a0194bb4b46922c8af7602e0b36'
+                    }
+                    b5fbff25888441e7a2301c5e4729248e: {
+                        table: 'sys_hub_action_type_definition'
+                        id: 'b5fbff25888441e7a2301c5e4729248e'
+                    }
+                    b62ab851410e4559b59ea574236150e1: {
+                        table: 'sys_hub_flow_logic_instance_v2'
+                        id: 'b62ab851410e4559b59ea574236150e1'
+                    }
                     bom_json: {
                         table: 'sys_module'
                         id: 'e0a8ebc204ef4275a87622b958e5ae22'
+                    }
+                    c0b54169c16749bda8a145f05ca58be0: {
+                        table: 'sys_hub_flow_logic_instance_v2'
+                        id: 'c0b54169c16749bda8a145f05ca58be0'
+                    }
+                    c1131b5d58114421a64ef708d56381f7: {
+                        table: 'sys_hub_flow_logic_instance_v2'
+                        id: 'c1131b5d58114421a64ef708d56381f7'
                     }
                     'ccbh-058f9eaa3b4632900ad1a021a3e45a47': {
                         table: 'x_snc_forecast_v_0_cost_center_budget_history'
@@ -1644,6 +1724,14 @@ declare global {
                         table: 'sn_mcp_server'
                         id: 'da53518047285310037d0fadf26d43e0'
                     }
+                    df035b9882804c92940663c9d7b79372: {
+                        table: 'sys_hub_flow_logic_instance_v2'
+                        id: 'df035b9882804c92940663c9d7b79372'
+                    }
+                    e0654d4a47585710037d0fadf26d43ce: {
+                        table: 'sys_hub_flow_snapshot'
+                        id: 'e0654d4a47585710037d0fadf26d43ce'
+                    }
                     'extx-109a63003bd6fe500ad1a021a3e45ab9': {
                         table: 'x_snc_forecast_v_0_expense_transactions'
                         id: '109a63003bd6fe500ad1a021a3e45ab9'
@@ -2443,6 +2531,14 @@ declare global {
                     'extx-ec9aa3003bd6fe500ad1a021a3e45af5': {
                         table: 'x_snc_forecast_v_0_expense_transactions'
                         id: 'ec9aa3003bd6fe500ad1a021a3e45af5'
+                    }
+                    f2c58b83948840af9d118c76709e36d6: {
+                        table: 'sys_hub_step_instance'
+                        id: 'f2c58b83948840af9d118c76709e36d6'
+                    }
+                    fb193a7b6c994e389c646e0cad64117d: {
+                        table: 'sys_hub_action_instance_v2'
+                        id: 'fb193a7b6c994e389c646e0cad64117d'
                     }
                     'lab-asset-dataflow-backend-components-png': {
                         table: 'x_snc_forecast_v_0_lab_asset'
@@ -5074,10 +5170,112 @@ declare global {
                 }
                 composite: [
                     {
+                        table: 'sn_glider_source_artifact'
+                        id: '00d345c40b8845c6a8c2d0519400c064'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_wdf_lab.do - BYOUI Files'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_input'
+                        id: '0102c60f3b15fa900ad1a021a3e45a92'
+                        deleted: true
+                        key: {
+                            model: '0861ca4b3b15fa900ad1a021a3e45afb'
+                            element: 'valueb'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '012e2c58f6ca4514b88504a827220e64'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_df_cc_summary'
+                            element: 'u_baseline_amount_usd'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '017377183b9a365062f31831a3e45a06'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_action_output_b05c63943bd6365062f31831a3e45aaa'
+                            element: '__action_status__'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '0183fff73bc2ba500ad1a021a3e45ac3'
+                        deleted: true
+                        key: {
+                            sys_security_acl: '7083fff73bc2ba500ad1a021a3e45a89'
+                            sys_user_role: {
+                                id: '20837ff73bc2ba500ad1a021a3e45a82'
+                                key: {
+                                    name: 'x_snc_forecast_v_0.cost_center_budget_summary_user'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '019537d43bda365062f31831a3e45a51'
+                        deleted: true
+                        key: {
+                            id: '6095f3d43bda365062f31831a3e45a0e'
+                            table: 'var__m_sys_hub_action_output_6095f3d43bda365062f31831a3e45a0e'
+                            field: '__action_status__'
+                        }
+                    },
+                    {
                         table: 'sn_aia_tool'
                         id: '01b7918447e85310037d0fadf26d4373'
                         key: {
                             name: 'Get Details via Neon MCP'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_trigger_configuration'
+                        id: '01be4c283bd6765062f31831a3e45aae'
+                        deleted: true
+                        key: {
+                            name: 'Create New Expense Transaction Event'
+                            usecase: 'undefined'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_form_section'
+                        id: '01f94a663bf036d062f31831a3e45a12'
+                        deleted: true
+                        key: {
+                            sys_ui_form: {
+                                id: 'f0f906663bf036d062f31831a3e45a4b'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            sys_ui_section: {
+                                id: '74f90a663bf036d062f31831a3e45af8'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '028d2b5c3bd6365062f31831a3e45a28'
+                        deleted: true
+                        key: {
+                            document_key: 'aa7c63d43bd6365062f31831a3e45af2'
+                            variable: '4a76c30643703110306861d048b8f280'
                         }
                     },
                     {
@@ -5086,6 +5284,63 @@ declare global {
                         key: {
                             name: 'x_snc_forecast_v_0_cost_center_budget_history'
                             element: 'monthly_budget'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '0351b36a3bb67e5062f31831a3e45ab1'
+                        deleted: true
+                        key: {
+                            name: 'regulatory_impact_assessment_view'
+                            element: 'cds_string_3'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_step_ext_input'
+                        id: '03c62589cee44c489f4d94d0a201be9b'
+                        key: {
+                            model: '02ed6ae13045489f9575a52beb445773'
+                            element: 'cost_center'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '03cea9405a314013ad83f2aa18c154e2'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_df_cc_summary'
+                            element: 'u_fiscal_year'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '0502c60f3b15fa900ad1a021a3e45a95'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_action_input_0861ca4b3b15fa900ad1a021a3e45afb'
+                            element: 'valueb'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_output'
+                        id: '059537d43bda365062f31831a3e45a33'
+                        deleted: true
+                        key: {
+                            model: '6095f3d43bda365062f31831a3e45a0e'
+                            element: '__dont_treat_as_error__'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '0595f3d43bda365062f31831a3e45af9'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_action_output_6095f3d43bda365062f31831a3e45a0e'
+                            element: 'output'
                             language: 'en'
                         }
                     },
@@ -5117,6 +5372,24 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_dictionary'
+                        id: '075bd7fc47e045b2850d977fa31eaddd'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_df_cc_summary'
+                            element: 'u_forecast_source'
+                        }
+                    },
+                    {
+                        table: 'fx_price'
+                        id: '07a07eb23bb6f61062f31831a3e45a71'
+                        deleted: true
+                        key: {
+                            id: '87a07eb23bb6f61062f31831a3e45a67'
+                            field: 'price_if_checked'
+                        }
+                    },
+                    {
                         table: 'sn_aia_tool'
                         id: '07df37c747d8d790037d0fadf26d43a8'
                         key: {
@@ -5133,12 +5406,82 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_element_mapping'
+                        id: '08d10acb3b15fa900ad1a021a3e45a77'
+                        deleted: true
+                        key: {
+                            id: 'a7218e0b3b15fa900ad1a021a3e45ad6'
+                            table: 'var__m_sys_hub_step_ext_input_a7218e0b3b15fa900ad1a021a3e45ad6'
+                            field: 'ValueB'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '099537d43bda365062f31831a3e45a51'
+                        deleted: true
+                        key: {
+                            document_key: '6095f3d43bda365062f31831a3e45a0e'
+                            variable: '859537d43bda365062f31831a3e45a2c'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_form_section'
+                        id: '09f94a663bf036d062f31831a3e45a62'
+                        deleted: true
+                        key: {
+                            sys_ui_form: {
+                                id: '81f94a663bf036d062f31831a3e45a52'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    view: '877ec2a5532313008cd9ddeeff7b1277'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            sys_ui_section: {
+                                id: '0df94a663bf036d062f31831a3e45a59'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    caption: 'NULL'
+                                    view: '877ec2a5532313008cd9ddeeff7b1277'
+                                    sys_domain: 'global'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '0a8d2b5c3bd6365062f31831a3e45a29'
+                        deleted: true
+                        key: {
+                            document_key: 'aa7c63d43bd6365062f31831a3e45af2'
+                            variable: '179fa374c3e02110e6a899ccc840dd66'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_status_condition'
+                        id: '0ae0f3d43b5a365062f31831a3e45a47'
+                        deleted: true
+                        key: {
+                            action_status_metadata_id: 'be7ca3d43bd6365062f31831a3e45a85'
+                            order: '1'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '0af64a97e76f4281b297b36db493c5c1'
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transactions'
                             element: 'approved_by'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'fx_price'
+                        id: '0ba07eb23bb6f61062f31831a3e45a70'
+                        deleted: true
+                        key: {
+                            id: '87a07eb23bb6f61062f31831a3e45a67'
+                            field: 'rec_price_if_checked'
                         }
                     },
                     {
@@ -5166,11 +5509,152 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_variable_value'
+                        id: '0da9c24f3b95fa900ad1a021a3e45a15'
+                        deleted: true
+                        key: {
+                            document_key: '0861ca4b3b15fa900ad1a021a3e45afb'
+                            variable: 'f4a9824f3b95fa900ad1a021a3e45ae1'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '0dad7d1de15772107f447756abe0cb41'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_c1ad7d1de15772107f447756abe0cb2e'
+                            element: 'changed_fields'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_form_section'
+                        id: '0df94a663bf036d062f31831a3e45a17'
+                        deleted: true
+                        key: {
+                            sys_ui_form: {
+                                id: 'f0f906663bf036d062f31831a3e45a4b'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            sys_ui_section: {
+                                id: '85f94a663bf036d062f31831a3e45a12'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    caption: 'Reference Specification'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_ui_form'
+                        id: '0df94a663bf036d062f31831a3e45a77'
+                        deleted: true
+                        key: {
+                            name: 'sys_df_data_dictionary'
+                            view: {
+                                id: '7966be310a0a0b8c00bd504090503227'
+                                key: {
+                                    name: 'advanced'
+                                }
+                            }
+                            sys_domain: 'global'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '0e45b5d1a8884ac4901043439a25e9fe'
+                        key: {
+                            name: 'var__m_sys_hub_action_output_b5fbff25888441e7a2301c5e4729248e'
+                            element: 'over_budget'
+                            language: 'en'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '0f778435664444fea4e5c64d38d9e38f'
                         key: {
                             name: 'x_snc_forecast_v_0_cost_center_budget_history'
                             element: 'status'
+                        }
+                    },
+                    {
+                        table: 'sn_glider_source_artifact_m2m'
+                        id: '0fa8bf85125d4ffbb76d9af0a52b3ec4'
+                        deleted: true
+                        key: {
+                            application_file: '50d0afe712994aeaadc3e99ad115eb45'
+                            source_artifact: '00d345c40b8845c6a8c2d0519400c064'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: '105dbef23bb2b2500ad1a021a3e45ab6'
+                        deleted: true
+                        key: {
+                            agent: 'e61f42af3bee76500ad1a021a3e45ab0'
+                            tool: '185dfaf23bb2b2500ad1a021a3e45a77'
+                            name: 'Use the cost center CC_IT_001'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: '109d791de15772107f447756abe0cbea'
+                        deleted: true
+                        key: {
+                            model: 'd49d791de15772107f447756abe0cbd7'
+                            element: 'changed_fields'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '109db91de15772107f447756abe0cb13'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_d49d791de15772107f447756abe0cbd7'
+                            element: 'table_name'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '10bad1a575ca4f53a673e55513efca67'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_df_cc_summary'
+                            element: 'u_period'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: '110653ee3b4a72900ad1a021a3e45a88'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f80613ee3b4a72900ad1a021a3e45abc'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_cost_center_budget_history'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'cost_center_description'
+                            position: '2'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '1171379822234d809ddd5d0c4fad02d9'
+                        key: {
+                            name: 'var__m_sys_hub_flow_output_b31d2a0194bb4b46922c8af7602e0b36'
+                            element: 'result'
+                            language: 'en'
                         }
                     },
                     {
@@ -5182,11 +5666,210 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_form_section'
+                        id: '11f98a663bf036d062f31831a3e45a0b'
+                        deleted: true
+                        key: {
+                            sys_ui_form: {
+                                id: '0df94a663bf036d062f31831a3e45a77'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    view: '7966be310a0a0b8c00bd504090503227'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            sys_ui_section: {
+                                id: '51f94a663bf036d062f31831a3e45af8'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    caption: 'Calculated Value'
+                                    view: '7966be310a0a0b8c00bd504090503227'
+                                    sys_domain: 'global'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '12005b114a3d404a8e634e92dc5fe5eb'
+                        key: {
+                            id: 'b5fbff25888441e7a2301c5e4729248e'
+                            table: 'var__m_sys_hub_action_output_b5fbff25888441e7a2301c5e4729248e'
+                            field: 'owner'
+                        }
+                    },
+                    {
+                        table: 'sys_user_role'
+                        id: '13458b393b3c769062f31831a3e45a71'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0.variance_baseline_v_user'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '13822d2358cb411fb7c73707e49ec8ff'
+                        key: {
+                            name: 'var__m_sys_hub_action_output_255f44c7556740189bb2feea4ea5b39b'
+                            element: '__dont_treat_as_error__'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '14028ecc73d04702b59f5c0e2c5d3426'
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_5753789ddc1148218383f7928a2fd8ad'
+                            element: 'event_id'
+                            language: 'en'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '145a7f3fcb0f41a098fa40fd4660c7a2'
                         key: {
                             name: 'x_snc_forecast_v_0_lab_asset'
                             element: 'image'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '1502c60f3b15fa900ad1a021a3e45af1'
+                        deleted: true
+                        key: {
+                            id: 'cc610e4b3b15fa900ad1a021a3e45a02'
+                            table: 'var__m_sys_hub_step_ext_input_cc610e4b3b15fa900ad1a021a3e45a02'
+                            field: 'ValueB'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '159108279ffc40559584cb6acd42056e'
+                        key: {
+                            id: '02ed6ae13045489f9575a52beb445773'
+                            table: 'var__m_sys_hub_step_ext_input_02ed6ae13045489f9575a52beb445773'
+                            field: 'event_id'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '16118163e811427295a808689cdb3b90'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_df_cc_summary'
+                            element: 'u_variance'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '16a0bab23bb6f61062f31831a3e45afe'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_1ea0bab23bb6f61062f31831a3e45a97'
+                            element: 'run_unload'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_user_role'
+                        id: '1721c6d13b46be5062f31831a3e45a29'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0.cost_center_budget_history_user'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_input'
+                        id: '1755894a47585710037d0fadf26d433a'
+                        key: {
+                            model: '9755894a47585710037d0fadf26d4326'
+                            element: 'cost_center'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_step_ext_input'
+                        id: '1755894a47585710037d0fadf26d43ae'
+                        deleted: true
+                        key: {
+                            model: '5755894a47585710037d0fadf26d439e'
+                            element: 'event_id'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_tool'
+                        id: '185dfaf23bb2b2500ad1a021a3e45a77'
+                        deleted: true
+                        key: {
+                            name: 'Use the cost center CC_IT_001'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '19020a0f3b15fa900ad1a021a3e45a13'
+                        deleted: true
+                        key: {
+                            id: '0861ca4b3b15fa900ad1a021a3e45afb'
+                            table: 'var__m_sys_hub_action_output_0861ca4b3b15fa900ad1a021a3e45afb'
+                            field: 'sum'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '1965cd4a47585710037d0fadf26d43c3'
+                        key: {
+                            name: 'var__m_sys_hub_flow_output_9565cd4a47585710037d0fadf26d439a'
+                            element: 'cost_center'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_version'
+                        id: '19e69fdd3bda72500ad1a021a3e45ab6'
+                        deleted: true
+                        key: {
+                            target_id: '3886df5d3bda72500ad1a021a3e45a20'
+                            version_name: 'V1'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '19eb388a3bd85710a0db3141a3e45a93'
+                        deleted: true
+                        key: {
+                            document_key: '7cebf48a3bd85710a0db3141a3e45ab9'
+                            variable: '4deb388a3bd85710a0db3141a3e45a04'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_form_section'
+                        id: '19f94a663bf036d062f31831a3e45a99'
+                        deleted: true
+                        key: {
+                            sys_ui_form: {
+                                id: '0df94a663bf036d062f31831a3e45a77'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    view: '7966be310a0a0b8c00bd504090503227'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            sys_ui_section: {
+                                id: '41f94a663bf036d062f31831a3e45a7e'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    caption: 'NULL'
+                                    view: '7966be310a0a0b8c00bd504090503227'
+                                    sys_domain: 'global'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_config'
+                        id: '1a6a4b1e3fc243628cde5c7e08f50d98'
+                        key: {
+                            agent: '6a1f4bdf4da043b39900971b2129c34a'
                         }
                     },
                     {
@@ -5201,8 +5884,18 @@ declare global {
                     {
                         table: 'sys_ux_lib_asset'
                         id: '1c00daf32f1e4d3896b8cb3111b2e096'
+                        deleted: false
                         key: {
                             name: 'x_snc_forecast_v_0/main.js.map'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: '1c9d791de15772107f447756abe0cbd9'
+                        deleted: true
+                        key: {
+                            model: 'd49d791de15772107f447756abe0cbd7'
+                            element: 'current'
                         }
                     },
                     {
@@ -5215,11 +5908,64 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_element'
+                        id: '1d0653ee3b4a72900ad1a021a3e45a85'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f80613ee3b4a72900ad1a021a3e45abc'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_cost_center_budget_history'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: '.begin_split'
+                            position: '0'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '1d0a3e39e3b443e8a14eb0893a346a01'
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transaction_event'
                             element: 'region'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: '1d8f05183b9a72900ad1a021a3e45aa9'
+                        deleted: true
+                        key: {
+                            model: '5d8f05183b9a72900ad1a021a3e45a99'
+                            element: 'current'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_output'
+                        id: '1ecb07a23b8672900ad1a021a3e45a28'
+                        deleted: true
+                        key: {
+                            model: '65714b6e3b4272900ad1a021a3e45ac5'
+                            element: 'cost_center'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: '1edcfb1b1040497fb38db2b5b919ba67'
+                        key: {
+                            agent: '6a1f4bdf4da043b39900971b2129c34a'
+                            tool: '8fdf37c747d8d790037d0fadf26d438b'
+                            name: 'Extract Cost Center'
+                        }
+                    },
+                    {
+                        table: 'sn_glider_source_artifact'
+                        id: '1f56e8592aed4f5db708e5e866f04b3a'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_fundamentals.do - BYOUI Files'
                         }
                     },
                     {
@@ -5234,11 +5980,133 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_user_role'
+                        id: '20837ff73bc2ba500ad1a021a3e45a82'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0.cost_center_budget_summary_user'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '21da6e2ec36240c094951c84ecb85e6a'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_df_cc_summary'
+                            element: 'u_actual_amount_usd'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '22217f663bb67e5062f31831a3e45a6f'
+                        deleted: true
+                        key: {
+                            name: 'service_risk_assessment_view'
+                            element: 'cds_string_1'
+                            language: 'en'
+                        }
+                    },
+                    {
                         table: 'sys_ux_lib_asset'
                         id: '22802c7ddafd486dad0f0739b22f637c'
                         deleted: true
                         key: {
                             name: 'x_snc_forecast_v_0/vendor-react-dom--53df40e5.js.map'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '2355c94a47585710037d0fadf26d4356'
+                        key: {
+                            name: 'var__m_sys_hub_action_output_9755894a47585710037d0fadf26d4326'
+                            element: 'new_actual'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: '23acf999e15772107f447756abe0cb79'
+                        deleted: true
+                        key: {
+                            model: '6facf999e15772107f447756abe0cb65'
+                            element: 'table_name'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '23b567fc8a3c4b59a676ee6521650d9b'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_df_cc_summary'
+                            element: 'u_forecast_source'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '240f0f7d3bfc769062f31831a3e45a20'
+                        deleted: true
+                        key: {
+                            sys_security_acl: '72fe0b7d3bfc769062f31831a3e45a1f'
+                            sys_user_role: {
+                                id: '4122478a31114a1182fbc9922df001a8'
+                                key: {
+                                    name: 'admin'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: '24654d4a47585710037d0fadf26d43d3'
+                        key: {
+                            model: 'e0654d4a47585710037d0fadf26d43ce'
+                            element: 'cost_center'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_output'
+                        id: '24658d4a47585710037d0fadf26d4301'
+                        key: {
+                            model: 'e0654d4a47585710037d0fadf26d43ce'
+                            element: 'result'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_config'
+                        id: '261f46af3bee76500ad1a021a3e45a10'
+                        deleted: true
+                        key: {
+                            agent: 'e61f42af3bee76500ad1a021a3e45ab0'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '26217f663bb67e5062f31831a3e45a97'
+                        deleted: true
+                        key: {
+                            name: 'service_risk_assessment_view'
+                            element: 'cds_string_4'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: '263e00a43bd6765062f31831a3e45a19'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f89831073b91fa900ad1a021a3e45a43'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_expense_transaction_event'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'owner'
+                            position: '20'
                         }
                     },
                     {
@@ -5258,11 +6126,106 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_documentation'
+                        id: '27a102cb3b15fa900ad1a021a3e45a8f'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_action_input_04c042c73b15fa900ad1a021a3e45ab7'
+                            element: 'valueb'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '27bd358b3bd1fa900ad1a021a3e45ab5'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_b36d314b3bd1fa900ad1a021a3e45a7a'
+                            element: 'cost_center'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_rest_message_fn'
+                        id: '27e6ae443b0f3e500ad1a021a3e45a08'
+                        deleted: true
+                        key: {
+                            rest_message: '5e46e6003b0f3e500ad1a021a3e45a2c'
+                            function_name: 'Default GET'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: '285be0973b91be900ad1a021a3e45a72'
+                        deleted: true
+                        key: {
+                            model: 'a94b28573b91be900ad1a021a3e45a76'
+                            element: 'table_name'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: '290653ee3b4a72900ad1a021a3e45ad9'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f80613ee3b4a72900ad1a021a3e45abc'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_cost_center_budget_history'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: '.end_split'
+                            position: '12'
+                        }
+                    },
+                    {
                         table: 'sys_ux_lib_asset'
                         id: '29885ab397bd4cfbb07ff63fec4de1a5'
                         deleted: true
                         key: {
                             name: 'x_snc_forecast_v_0/vendor-react-dom--53df40e5'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: '298f05183b9a72900ad1a021a3e45aec'
+                        deleted: true
+                        key: {
+                            model: '5d8f05183b9a72900ad1a021a3e45a99'
+                            element: 'changed_fields'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: '2a1f46af3bee76500ad1a021a3e45a16'
+                        deleted: true
+                        key: {
+                            agent: 'e61f42af3bee76500ad1a021a3e45ab0'
+                            tool: 'bb8695d03b5e72900ad1a021a3e45ad4'
+                            name: 'Budget Variance Analysis'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: '2a1f46af3bee76500ad1a021a3e45a42'
+                        deleted: true
+                        key: {
+                            agent: 'e61f42af3bee76500ad1a021a3e45ab0'
+                            tool: '8021ddea2b0d52101d72fb466e91bfd1'
+                            name: 'Search for Expense Transactions History'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '2a213f663bb67e5062f31831a3e45acf'
+                        deleted: true
+                        key: {
+                            name: 'service_risk_assessment_view'
+                            element: 'cds_risk_assessment'
+                            language: 'en'
                         }
                     },
                     {
@@ -5282,6 +6245,94 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_security_acl_role'
+                        id: '2b21c6d13b46be5062f31831a3e45ae8'
+                        deleted: true
+                        key: {
+                            sys_security_acl: 'a321c6d13b46be5062f31831a3e45a54'
+                            sys_user_role: {
+                                id: '1721c6d13b46be5062f31831a3e45a29'
+                                key: {
+                                    name: 'x_snc_forecast_v_0.cost_center_budget_history_user'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '2b55894a47585710037d0fadf26d43cf'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_step_ext_output_5755894a47585710037d0fadf26d439e'
+                            element: 'short_description'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: '2d0653ee3b4a72900ad1a021a3e45ad6'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f80613ee3b4a72900ad1a021a3e45abc'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_cost_center_budget_history'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'actual_spend'
+                            position: '8'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: '2d0bc0203b96765062f31831a3e45a0e'
+                        deleted: true
+                        key: {
+                            agent: '290bc4ec3b56765062f31831a3e45a86'
+                            tool: '8021ddea2b0d52101d72fb466e91bfd1'
+                            name: 'Search for Expense Transactions History'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_output'
+                        id: '2d26fe75b39e42c0a2d59451da257be0'
+                        key: {
+                            model: 'b31d2a0194bb4b46922c8af7602e0b36'
+                            element: 'result'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: '2d54f1ea3b7a3a5062f31831a3e45adb'
+                        deleted: true
+                        key: {
+                            model: '1154f1ea3b7a3a5062f31831a3e45ad8'
+                            element: 'current'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_version'
+                        id: '2e1f46af3bee76500ad1a021a3e45a04'
+                        deleted: true
+                        key: {
+                            target_id: 'e61f42af3bee76500ad1a021a3e45ab0'
+                            version_name: 'V1'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '2e217f663bb67e5062f31831a3e45ae7'
+                        deleted: true
+                        key: {
+                            name: 'service_risk_assessment_view'
+                            element: 'cds_risk_response_task'
+                            language: 'en'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '2e5c0dfbae9341ffa2dc59728aa27797'
                         key: {
@@ -5290,10 +6341,190 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_element_mapping'
+                        id: '2f55c94a47585710037d0fadf26d4334'
+                        deleted: true
+                        key: {
+                            id: '5755894a47585710037d0fadf26d439e'
+                            table: 'var__m_sys_flow_step_definition_input_106afb6647032200b4fad7527c9a71e7'
+                            field: 'script'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '2f55c94a47585710037d0fadf26d4345'
+                        key: {
+                            name: 'var__m_sys_hub_action_output_9755894a47585710037d0fadf26d4326'
+                            element: 'over_budget'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '2f5d4c58153e4274a9f6a9694e3a54fe'
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_b31d2a0194bb4b46922c8af7602e0b36'
+                            element: 'event_id'
+                            language: 'en'
+                        }
+                    },
+                    {
                         table: 'sn_glider_source_artifact'
                         id: '2f94369ac338497bbfd65986d0655d20'
                         key: {
                             name: 'x_snc_forecast_v_0_wdf_clab.do - BYOUI Files'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '2facf999e15772107f447756abe0cb77'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_6facf999e15772107f447756abe0cb65'
+                            element: 'current'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: '305471ea3b7a3a5062f31831a3e45acd'
+                        deleted: true
+                        key: {
+                            model: 'e45431ea3b7a3a5062f31831a3e45a74'
+                            element: 'table_name'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '3083bff73bc2ba500ad1a021a3e45a8c'
+                        deleted: true
+                        key: {
+                            sys_security_acl: 'a0837ff73bc2ba500ad1a021a3e45ae7'
+                            sys_user_role: {
+                                id: '20837ff73bc2ba500ad1a021a3e45a82'
+                                key: {
+                                    name: 'x_snc_forecast_v_0.cost_center_budget_summary_user'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '3095f3d43bda365062f31831a3e45a80'
+                        deleted: true
+                        key: {
+                            document_key: 'ac95f3d43bda365062f31831a3e45a27'
+                            variable: '5e433ff4c3e02110e6a899ccc840dd2b'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_form_section'
+                        id: '30f90a663bf036d062f31831a3e45ad9'
+                        deleted: true
+                        key: {
+                            sys_ui_form: {
+                                id: 'f0f906663bf036d062f31831a3e45a4b'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            sys_ui_section: {
+                                id: 'f0f90a663bf036d062f31831a3e45ad4'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    caption: 'Function Definition'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '3287bfa4f3b74819b5d2e19c57df168a'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_df_cc_summary'
+                            element: 'u_cost_center'
+                        }
+                    },
+                    {
+                        table: 'fx_price'
+                        id: '32a03eb23bb6f61062f31831a3e45acf'
+                        deleted: true
+                        key: {
+                            id: 'eea03eb23bb6f61062f31831a3e45a9c'
+                            field: 'price_if_checked'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '3355c94a47585710037d0fadf26d4384'
+                        key: {
+                            name: 'var__m_sys_hub_action_output_9755894a47585710037d0fadf26d4326'
+                            element: 'short_description'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '3355c94a47585710037d0fadf26d43c9'
+                        deleted: true
+                        key: {
+                            id: '9755894a47585710037d0fadf26d4326'
+                            table: 'var__m_sys_hub_action_output_9755894a47585710037d0fadf26d4326'
+                            field: 'new_actual'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '348369e2654c44efa25a3b096b5d154d'
+                        key: {
+                            id: '02ed6ae13045489f9575a52beb445773'
+                            table: 'var__m_sys_hub_step_ext_input_02ed6ae13045489f9575a52beb445773'
+                            field: 'cost_center'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '3483fff73bc2ba500ad1a021a3e45a54'
+                        deleted: true
+                        key: {
+                            sys_security_acl: '3083bff73bc2ba500ad1a021a3e45af5'
+                            sys_user_role: {
+                                id: '20837ff73bc2ba500ad1a021a3e45a82'
+                                key: {
+                                    name: 'x_snc_forecast_v_0.cost_center_budget_summary_user'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '3495f3d43bda365062f31831a3e45a81'
+                        deleted: true
+                        key: {
+                            document_key: 'ac95f3d43bda365062f31831a3e45a27'
+                            variable: 'd0d13362ff30211030686564593bf189'
+                        }
+                    },
+                    {
+                        table: 'sys_complex_object'
+                        id: '3495f3d43bda365062f31831a3e45af0'
+                        deleted: true
+                        key: {
+                            name: 'FD3095f3d4eeda365045c72b11ecc698f0'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_output'
+                        id: '3495f3d43bda365062f31831a3e45af1'
+                        deleted: true
+                        key: {
+                            model: '6095f3d43bda365062f31831a3e45a0e'
+                            element: 'output'
                         }
                     },
                     {
@@ -5305,10 +6536,127 @@ declare global {
                         }
                     },
                     {
+                        table: 'fx_price'
+                        id: '36a07eb23bb6f61062f31831a3e45a55'
+                        deleted: true
+                        key: {
+                            id: '76a07eb23bb6f61062f31831a3e45a4b'
+                            field: 'price_if_checked'
+                        }
+                    },
+                    {
+                        table: 'sys_gen_ai_skill_config'
+                        id: '36dd4fe73baaf6500ad1a021a3e45ab5'
+                        deleted: true
+                        key: {
+                            skill_id: '51dd47e73baaf6500ad1a021a3e45a33'
+                        }
+                    },
+                    {
                         table: 'sys_db_object'
                         id: '36f335c8b7884b22ab59a32eef883200'
                         key: {
                             name: 'x_snc_forecast_v_0_cost_center_budget_history'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '3721ce0b3b15fa900ad1a021a3e45a2a'
+                        deleted: true
+                        key: {
+                            id: '04c042c73b15fa900ad1a021a3e45ab7'
+                            table: 'var__m_sys_hub_action_output_04c042c73b15fa900ad1a021a3e45ab7'
+                            field: '__action_status__'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: '37869d143b5e72900ad1a021a3e45a92'
+                        deleted: true
+                        key: {
+                            agent: 'fbc138e23b38b2d062f31831a3e45a65'
+                            tool: 'bb8695d03b5e72900ad1a021a3e45ad4'
+                            name: 'Budget Variance Analysis'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: '385b64973b91be900ad1a021a3e45a50'
+                        deleted: true
+                        key: {
+                            model: 'a94b28573b91be900ad1a021a3e45a76'
+                            element: 'current'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_input'
+                        id: '3873383c342e4b69b11ea87fbe4a19a7'
+                        key: {
+                            model: 'b5fbff25888441e7a2301c5e4729248e'
+                            element: 'event_id'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '398111543bda72900ad1a021a3e45a86'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_e18111543bda72900ad1a021a3e45a73'
+                            element: 'cost_center'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: '398f45183b9a72900ad1a021a3e45a4f'
+                        deleted: true
+                        key: {
+                            model: '5d8f05183b9a72900ad1a021a3e45a99'
+                            element: 'table_name'
+                        }
+                    },
+                    {
+                        table: 'fx_price'
+                        id: '3aa07eb23bb6f61062f31831a3e45a54'
+                        deleted: true
+                        key: {
+                            id: '76a07eb23bb6f61062f31831a3e45a4b'
+                            field: 'rec_price_if_checked'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '3b55c94a47585710037d0fadf26d436f'
+                        key: {
+                            name: 'var__m_sys_hub_action_output_9755894a47585710037d0fadf26d4326'
+                            element: '__dont_treat_as_error__'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_output'
+                        id: '3c3bb97e041a47bca51802796edd3329'
+                        key: {
+                            model: 'b5fbff25888441e7a2301c5e4729248e'
+                            element: '__action_status__'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_step_ext_output'
+                        id: '3c95f3d43bda365062f31831a3e45a43'
+                        deleted: true
+                        key: {
+                            model: 'ac95f3d43bda365062f31831a3e45a27'
+                            element: 'output'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '3c95f3d43bda365062f31831a3e45a7e'
+                        deleted: true
+                        key: {
+                            document_key: 'ac95f3d43bda365062f31831a3e45a27'
+                            variable: 'd6ade3b0c3e02110e6a899ccc840dde6'
                         }
                     },
                     {
@@ -5328,6 +6676,116 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_documentation'
+                        id: '3d8f45183b9a72900ad1a021a3e45ad3'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_5d8f05183b9a72900ad1a021a3e45a99'
+                            element: 'table_name'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '3de0b3d43b5a365062f31831a3e45a3c'
+                        deleted: true
+                        key: {
+                            document_key: 'aa7c63d43bd6365062f31831a3e45af2'
+                            variable: 'd0d13362ff30211030686564593bf189'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '3de0b3d43b5a365062f31831a3e45a5b'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_action_output_b05c63943bd6365062f31831a3e45aaa'
+                            element: 'output'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '3de27abb3b05329862f31831a3e45ae4'
+                        deleted: true
+                        key: {
+                            sys_security_acl: '15c2b63f3b05329862f31831a3e45a3f'
+                            sys_user_role: {
+                                id: '4122478a31114a1182fbc9922df001a8'
+                                key: {
+                                    name: 'admin'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '3e890e0f3b95fa900ad1a021a3e45a28'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_action_output_04c042c73b15fa900ad1a021a3e45ab7'
+                            element: 'sum'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '3f218e0b3b15fa900ad1a021a3e45af8'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_action_output_04c042c73b15fa900ad1a021a3e45ab7'
+                            element: '__action_status__'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: '3f8d791de15772107f447756abe0cb61'
+                        deleted: true
+                        key: {
+                            model: '6facf999e15772107f447756abe0cb65'
+                            element: 'changed_fields'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '4102c60f3b15fa900ad1a021a3e45a91'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_action_input_0861ca4b3b15fa900ad1a021a3e45afb'
+                            element: 'valuea'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_output'
+                        id: '417337183b9a365062f31831a3e45aff'
+                        deleted: true
+                        key: {
+                            model: 'b05c63943bd6365062f31831a3e45aaa'
+                            element: '__action_status__'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: '41ad7d1de15772107f447756abe0cb3a'
+                        deleted: true
+                        key: {
+                            model: 'c1ad7d1de15772107f447756abe0cb2e'
+                            element: 'current'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '41ad7d1de15772107f447756abe0cb3d'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_c1ad7d1de15772107f447756abe0cb2e'
+                            element: 'current'
+                            language: 'en'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '41d11cd77eb543eca357502ff98fe233'
                         key: {
@@ -5344,11 +6802,105 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_security_acl_role'
+                        id: '428bb9dd3b82be5062f31831a3e45ae5'
+                        deleted: true
+                        key: {
+                            sys_security_acl: '028bb9dd3b82be5062f31831a3e45ac4'
+                            sys_user_role: {
+                                id: 'fd1871593b42be5062f31831a3e45a09'
+                                key: {
+                                    name: 'x_snc_forecast_v_0.expense_transactions_user'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '42e0f3d43b5a365062f31831a3e45a44'
+                        deleted: true
+                        key: {
+                            id: 'b05c63943bd6365062f31831a3e45aaa'
+                            table: 'var__m_sys_hub_action_output_b05c63943bd6365062f31831a3e45aaa'
+                            field: 'output'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '4419b777b3fa4228abbb6de2defdfd86'
+                        key: {
+                            document_key: '02ed6ae13045489f9575a52beb445773'
+                            variable: '74315b04b3201300176b051a16a8dc2b'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '447b5d503bde72900ad1a021a3e45a55'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_output_e18111543bda72900ad1a021a3e45a73'
+                            element: 'finance_case'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '447ef14f3bd1fa900ad1a021a3e45a65'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_b36d314b3bd1fa900ad1a021a3e45a7a'
+                            element: 'event_id'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '44d10acb3b15fa900ad1a021a3e45a77'
+                        deleted: true
+                        key: {
+                            id: 'a7218e0b3b15fa900ad1a021a3e45ad6'
+                            table: 'var__m_sys_hub_step_ext_input_a7218e0b3b15fa900ad1a021a3e45ad6'
+                            field: 'ValueA'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '4568e2a99e1d4b0a8c1f79d2d02fafc4'
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transactions'
                             element: 'description'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '4583333b3bc2ba500ad1a021a3e45a25'
+                        deleted: true
+                        key: {
+                            sys_security_acl: '8583fff73bc2ba500ad1a021a3e45aeb'
+                            sys_user_role: {
+                                id: '20837ff73bc2ba500ad1a021a3e45a82'
+                                key: {
+                                    name: 'x_snc_forecast_v_0.cost_center_budget_summary_user'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '459537d43bda365062f31831a3e45a48'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_action_output_6095f3d43bda365062f31831a3e45a0e'
+                            element: '__dont_treat_as_error__'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_status_metadata'
+                        id: '459537d43bda365062f31831a3e45a55'
+                        deleted: true
+                        key: {
+                            action_type_id: '6095f3d43bda365062f31831a3e45a0e'
                         }
                     },
                     {
@@ -5361,6 +6913,77 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_hub_flow_input'
+                        id: '45ad7d1de15772107f447756abe0cb3e'
+                        deleted: true
+                        key: {
+                            model: 'c1ad7d1de15772107f447756abe0cb2e'
+                            element: 'changed_fields'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary_override'
+                        id: '45b3292d3b1fcb10a0db3141a3e45a60'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_variance_task'
+                            element: 'assignment_group'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_trigger_agent_usecase_m2m'
+                        id: '45be44683bd6765062f31831a3e45a4b'
+                        deleted: true
+                        key: {
+                            trigger_configuration: '01be4c283bd6765062f31831a3e45aae'
+                            related_resource_record: '290bc4ec3b56765062f31831a3e45a86'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '462aefd4bc3345ddb9e3b9d2e37b2bb7'
+                        key: {
+                            name: 'var__m_sys_hub_action_input_b5fbff25888441e7a2301c5e4729248e'
+                            element: 'event_id'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sn_nowassist_skill_config_status'
+                        id: '462b1ea547a7cb10037d0fadf26d4327'
+                        deleted: true
+                        key: {
+                            skill_config: '4a2bdaa547a7cb10037d0fadf26d43fc'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '46cbf4b2bff04f1f95167a95040276ed'
+                        key: {
+                            name: 'var__m_sys_hub_flow_output_b31d2a0194bb4b46922c8af7602e0b36'
+                            element: 'sum'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '4701347ee8c94551b27857c8a1762027'
+                        key: {
+                            id: 'b5fbff25888441e7a2301c5e4729248e'
+                            table: 'var__m_sys_hub_action_output_b5fbff25888441e7a2301c5e4729248e'
+                            field: 'short_description'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '47e68aea43394f778a908797c0c88139'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_df_cc_summary'
+                            element: 'NULL'
+                        }
+                    },
+                    {
                         table: 'sn_aia_agent_tool_m2m'
                         id: '482e1e067de44e2cb04751e8a77ec90a'
                         key: {
@@ -5370,11 +6993,65 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_hub_action_input'
+                        id: '4902c60f3b15fa900ad1a021a3e45a80'
+                        deleted: true
+                        key: {
+                            model: '0861ca4b3b15fa900ad1a021a3e45afb'
+                            element: 'valuea'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '491bab41ba1d4e5e81a2b246260a1f87'
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transactions'
                             element: 'approved_by'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '4954b1ea3b7a3a5062f31831a3e45a15'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_e45431ea3b7a3a5062f31831a3e45a74'
+                            element: 'changed_fields'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '497377183b9a365062f31831a3e45a58'
+                        deleted: true
+                        key: {
+                            document_key: 'b05c63943bd6365062f31831a3e45aaa'
+                            variable: '417337183b9a365062f31831a3e45aff'
+                        }
+                    },
+                    {
+                        table: 'sys_gen_ai_skill_config'
+                        id: '4998245b3b51be900ad1a021a3e45aaf'
+                        deleted: true
+                        key: {
+                            skill_id: '6788a05b3b51be900ad1a021a3e45a82'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: '49eeddd4e7c6408493131e19d7a30c1f'
+                        deleted: true
+                        key: {
+                            agent: '6a1f4bdf4da043b39900971b2129c34a'
+                            tool: '3e3d57abf7884cc090ff0e8293d1f409'
+                            name: 'Budget Variance Analysis'
+                        }
+                    },
+                    {
+                        table: 'sn_nowassist_skill_config'
+                        id: '4a2bdaa547a7cb10037d0fadf26d43fc'
+                        deleted: true
+                        key: {
+                            skill_id: '8ee51e2047630bd4037d0fadf26d43f8'
                         }
                     },
                     {
@@ -5396,6 +7073,60 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_hub_flow_output'
+                        id: '4b1d908961714bb58f1bd4f9910aa611'
+                        key: {
+                            model: '5753789ddc1148218383f7928a2fd8ad'
+                            element: 'cost_center'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '4b51b36a3bb67e5062f31831a3e45a4a'
+                        deleted: true
+                        key: {
+                            name: 'regulatory_impact_assessment_view'
+                            element: 'cds_risk_assessment'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_config'
+                        id: '4bf138263b38b2d062f31831a3e45a0c'
+                        deleted: true
+                        key: {
+                            agent: 'fbc138e23b38b2d062f31831a3e45a65'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_output'
+                        id: '4c610e4b3b15fa900ad1a021a3e45a52'
+                        deleted: true
+                        key: {
+                            model: '0861ca4b3b15fa900ad1a021a3e45afb'
+                            element: '__dont_treat_as_error__'
+                        }
+                    },
+                    {
+                        table: 'sn_glider_source_artifact_m2m'
+                        id: '4da9440a336c49efbd00960f1d0e633b'
+                        deleted: true
+                        key: {
+                            application_file: 'f558b774c2a748f597f96276dcf0fd40'
+                            source_artifact: '1f56e8592aed4f5db708e5e866f04b3a'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '4dad7d1de15772107f447756abe0cb38'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_c1ad7d1de15772107f447756abe0cb2e'
+                            element: 'table_name'
+                            language: 'en'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '4db4402ce59c4dccad0117b9aaa677de'
                         key: {
@@ -5405,12 +7136,29 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_hub_action_output'
+                        id: '4deb388a3bd85710a0db3141a3e45a04'
+                        key: {
+                            model: '7cebf48a3bd85710a0db3141a3e45ab9'
+                            element: '__action_status__'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '4e51d7e9d1fc44b689904050a6ae1744'
                         key: {
                             name: 'x_snc_forecast_v_0_variance_task'
                             element: 'resolution_comments'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '4e8d2b5c3bd6365062f31831a3e45a29'
+                        deleted: true
+                        key: {
+                            document_key: 'aa7c63d43bd6365062f31831a3e45af2'
+                            variable: '156c7f30c3242110e6a899ccc840dd93'
                         }
                     },
                     {
@@ -5431,10 +7179,108 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_hub_action_output'
+                        id: '4fdda9d98c2a4b4da5197abdf9027a7c'
+                        key: {
+                            model: 'b5fbff25888441e7a2301c5e4729248e'
+                            element: 'new_actual'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '5102c60f3b15fa900ad1a021a3e45af1'
+                        deleted: true
+                        key: {
+                            id: 'cc610e4b3b15fa900ad1a021a3e45a02'
+                            table: 'var__m_sys_hub_step_ext_input_cc610e4b3b15fa900ad1a021a3e45a02'
+                            field: 'ValueA'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '51613f6a3bb67e5062f31831a3e45a03'
+                        deleted: true
+                        key: {
+                            name: 'risk_assessment_for_ai_asset_inventory_view'
+                            element: 'cds_string_3'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '5161fb6a3bb67e5062f31831a3e45ac7'
+                        deleted: true
+                        key: {
+                            name: 'risk_assessment_for_ai_asset_inventory_view'
+                            element: 'cds_string_1'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_output'
+                        id: '5165cd4a47585710037d0fadf26d43af'
+                        key: {
+                            model: '9565cd4a47585710037d0fadf26d439a'
+                            element: 'cost_center'
+                        }
+                    },
+                    {
+                        table: 'sys_agent_access_role_configuration'
+                        id: '516b223d8fa74272a94e9647e58b71fc'
+                        key: {
+                            agent: '6a1f4bdf4da043b39900971b2129c34a'
+                        }
+                    },
+                    {
+                        table: 'sys_gen_ai_skill'
+                        id: '51dd47e73baaf6500ad1a021a3e45a33'
+                        deleted: true
+                        key: {
+                            skill_document: 'dddd47e73baaf6500ad1a021a3e45a2c'
+                            skill_table: 'sn_aia_skill_metadata'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_status_metadata'
+                        id: '51eb388a3bd85710a0db3141a3e45a96'
+                        deleted: true
+                        key: {
+                            action_type_id: '7cebf48a3bd85710a0db3141a3e45ab9'
+                        }
+                    },
+                    {
                         table: 'sys_ux_lib_asset'
                         id: '5256de3e955f4501b8293b92264a1e11'
                         key: {
                             name: 'x_snc_forecast_v_0/vendor-react-dom--ff7a06d7'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '5355894a47585710037d0fadf26d4396'
+                        key: {
+                            name: 'var__m_sys_hub_action_input_9755894a47585710037d0fadf26d4326'
+                            element: 'event_id'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_step_ext_output'
+                        id: '5355894a47585710037d0fadf26d43b6'
+                        deleted: true
+                        key: {
+                            model: '5755894a47585710037d0fadf26d439e'
+                            element: 'owner'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '5361f3aa3bb67e5062f31831a3e45aa4'
+                        deleted: true
+                        key: {
+                            name: 'auditable_unit_risk_assessment_view'
+                            element: 'NULL'
+                            language: 'en'
                         }
                     },
                     {
@@ -5446,11 +7292,180 @@ declare global {
                         }
                     },
                     {
+                        table: 'catalog_ui_policy_action'
+                        id: '53a0beb23bb6f61062f31831a3e45a73'
+                        deleted: true
+                        key: {
+                            ui_policy: 'cba0beb23bb6f61062f31831a3e45a59'
+                            catalog_variable: 'load_experience_id'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '54610e4b3b15fa900ad1a021a3e45a58'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_action_output_0861ca4b3b15fa900ad1a021a3e45afb'
+                            element: '__dont_treat_as_error__'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '54610e4b3b15fa900ad1a021a3e45a5d'
+                        deleted: true
+                        key: {
+                            id: '0861ca4b3b15fa900ad1a021a3e45afb'
+                            table: 'var__m_sys_hub_action_output_0861ca4b3b15fa900ad1a021a3e45afb'
+                            field: '__action_status__'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '549652e21bd647218f3266d719ea778e'
                         key: {
                             name: 'x_snc_forecast_v_0_cost_center_budget_history'
                             element: 'fiscal_month'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: '550653ee3b4a72900ad1a021a3e45a87'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f80613ee3b4a72900ad1a021a3e45abc'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_cost_center_budget_history'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'cost_center'
+                            position: '1'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '5535bf26222f4b6cb118ec4230893aff'
+                        key: {
+                            sys_security_acl: '52d4aa917b294fd89076e60107ce5048'
+                            sys_user_role: {
+                                id: '4122478a31114a1182fbc9922df001a8'
+                                key: {
+                                    name: 'admin'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: '559ca4fa544b499d8a48f75c3dc63a7e'
+                        key: {
+                            model: 'b31d2a0194bb4b46922c8af7602e0b36'
+                            element: 'event_id'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary_override'
+                        id: '55b3292d3b1fcb10a0db3141a3e45a80'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_variance_task'
+                            element: 'assigned_to'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_output'
+                        id: '55b444f008804b3b863e68928c86b16e'
+                        key: {
+                            model: '255f44c7556740189bb2feea4ea5b39b'
+                            element: '__dont_treat_as_error__'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '55f1c20f3b15fa900ad1a021a3e45a2f'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_step_ext_output_a7218e0b3b15fa900ad1a021a3e45ad6'
+                            element: 'sum'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '5646b6e447a34bd4037d0fadf26d43b4'
+                        deleted: true
+                        key: {
+                            sys_security_acl: 'b119a3a707334b798092473bf93f298b'
+                            sys_user_role: {
+                                id: '7fcaa702933002009c8579b4f47ffbde'
+                                key: {
+                                    name: 'snc_internal'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '5906739f155642cb8864ef5a19863daf'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_df_cc_summary'
+                            element: 'u_last_updated'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '59249136da004469aa5d093798b8b428'
+                        key: {
+                            name: 'var__m_sys_hub_action_output_255f44c7556740189bb2feea4ea5b39b'
+                            element: '__action_status__'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_config'
+                        id: '59e6db113b1e72500ad1a021a3e45a31'
+                        deleted: true
+                        key: {
+                            agent: '3886df5d3bda72500ad1a021a3e45a20'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_form_section'
+                        id: '59f94a663bf036d062f31831a3e45abf'
+                        deleted: true
+                        key: {
+                            sys_ui_form: {
+                                id: '0df94a663bf036d062f31831a3e45a77'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    view: '7966be310a0a0b8c00bd504090503227'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            sys_ui_section: {
+                                id: '9df94a663bf036d062f31831a3e45a99'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    caption: 'Reference Specification'
+                                    view: '7966be310a0a0b8c00bd504090503227'
+                                    sys_domain: 'global'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: '5b41c89f3b957e900ad1a021a3e45a7c'
+                        deleted: true
+                        key: {
+                            model: 'b3a0c01f3b957e900ad1a021a3e45a07'
+                            element: 'cost_center'
                         }
                     },
                     {
@@ -5470,10 +7485,86 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_documentation'
+                        id: '5c9d791de15772107f447756abe0cbfc'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_d49d791de15772107f447756abe0cbd7'
+                            element: 'changed_fields'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '5d54436e3b8272900ad1a021a3e45a72'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_4d54436e3b8272900ad1a021a3e45a47'
+                            element: 'event_id'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '5d61fb6a3bb67e5062f31831a3e45a4c'
+                        deleted: true
+                        key: {
+                            name: 'risk_assessment_for_ai_asset_inventory_view'
+                            element: 'cds_control'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_user_role'
+                        id: '5dd41b933bbc361462f31831a3e45a26'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0.test_user'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_form_section'
+                        id: '5df94a663bf036d062f31831a3e45ac5'
+                        deleted: true
+                        key: {
+                            sys_ui_form: {
+                                id: '0df94a663bf036d062f31831a3e45a77'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    view: '7966be310a0a0b8c00bd504090503227'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            sys_ui_section: {
+                                id: 'ddf94a663bf036d062f31831a3e45abf'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    caption: 'Default Value'
+                                    view: '7966be310a0a0b8c00bd504090503227'
+                                    sys_domain: 'global'
+                                }
+                            }
+                        }
+                    },
+                    {
                         table: 'ua_table_licensing_config'
                         id: '5e31f507a66f4a07aaaeec5d9adf9a74'
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transaction_event'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '5e75e56d3b9fcb10a0db3141a3e45a73'
+                        deleted: true
+                        key: {
+                            sys_security_acl: 'a7f138263b38b2d062f31831a3e45af0'
+                            sys_user_role: {
+                                id: '7fcaa702933002009c8579b4f47ffbde'
+                                key: {
+                                    name: 'snc_internal'
+                                }
+                            }
                         }
                     },
                     {
@@ -5483,6 +7574,80 @@ declare global {
                             agent: '116a31874a154caaa19a6f5270288c60'
                             tool: 'cef68c77803a45ebb6d16a617e28015c'
                             name: 'Build Agent'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '60050603ebd24a2fb0909eb19fcf4eb6'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_df_cc_summary'
+                            element: 'u_variance_percent'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '6073f19e190344d1a2653439b2c46d48'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_df_cc_summary'
+                            element: 'NULL'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_step_ext_input'
+                        id: '60a6c6033b95fa900ad1a021a3e45a41'
+                        deleted: true
+                        key: {
+                            model: 'a7218e0b3b15fa900ad1a021a3e45ad6'
+                            element: 'valueb'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: '610653ee3b4a72900ad1a021a3e45ad6'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f80613ee3b4a72900ad1a021a3e45abc'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_cost_center_budget_history'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'monthly_budget'
+                            position: '7'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '615435ea3b7a3a5062f31831a3e45aba'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_1154f1ea3b7a3a5062f31831a3e45ad8'
+                            element: 'table_name'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_output'
+                        id: '6165cd4a47585710037d0fadf26d43c8'
+                        key: {
+                            model: '9565cd4a47585710037d0fadf26d439a'
+                            element: 'vendor'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: '616b2f2f3b6ef21062f31831a3e45a49'
+                        deleted: true
+                        key: {
+                            agent: 'e61f42af3bee76500ad1a021a3e45ab0'
+                            tool: 'e56b2f2f3b6ef21062f31831a3e45a42'
+                            name: 'Get Details in Snowflake MCP'
                         }
                     },
                     {
@@ -5499,11 +7664,59 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_documentation'
+                        id: '62217f663bb67e5062f31831a3e45ab3'
+                        deleted: true
+                        key: {
+                            name: 'service_risk_assessment_view'
+                            element: 'cds_string_7'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '62217f663bb67e5062f31831a3e45ad1'
+                        deleted: true
+                        key: {
+                            name: 'service_risk_assessment_view'
+                            element: 'cds_string_8'
+                            language: 'en'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '633ef75ca5534c4d9ee3531d48af84ff'
                         key: {
                             name: 'x_snc_forecast_v_0_variance_task'
                             element: 'expense_transaction_event'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_input'
+                        id: '63a102cb3b15fa900ad1a021a3e45a8c'
+                        deleted: true
+                        key: {
+                            model: '04c042c73b15fa900ad1a021a3e45ab7'
+                            element: 'valueb'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: '63acf999e15772107f447756abe0cb6f'
+                        deleted: true
+                        key: {
+                            model: '6facf999e15772107f447756abe0cb65'
+                            element: 'current'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '64613b6a3bb67e5062f31831a3e45a4e'
+                        deleted: true
+                        key: {
+                            name: 'risk_assessment_for_ai_asset_inventory_view'
+                            element: 'NULL'
+                            language: 'en'
                         }
                     },
                     {
@@ -5515,11 +7728,29 @@ declare global {
                         }
                     },
                     {
+                        table: 'fx_price'
+                        id: '64a0fa7a3b3a72500ad1a021a3e45a1a'
+                        deleted: true
+                        key: {
+                            id: '20a0fa7a3b3a72500ad1a021a3e45a15'
+                            field: 'price'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '6607dbadeba445a9a8fc005fa7c64937'
                         key: {
                             name: 'x_snc_forecast_v_0_cost_center_budget_history'
                             element: 'cost_center_description'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '66cab03efca7400aa69fe46be5692c6f'
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_b31d2a0194bb4b46922c8af7602e0b36'
+                            element: 'cost_center'
+                            language: 'en'
                         }
                     },
                     {
@@ -5540,6 +7771,69 @@ declare global {
                     },
                     {
                         table: 'sys_documentation'
+                        id: '6761f7aa3bb67e5062f31831a3e45a90'
+                        deleted: true
+                        key: {
+                            name: 'auditable_unit_risk_assessment_view'
+                            element: 'cds_string_1'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_output'
+                        id: '6776e287cd49436084c284ff5ed31c1d'
+                        key: {
+                            model: 'b5fbff25888441e7a2301c5e4729248e'
+                            element: 'short_description'
+                        }
+                    },
+                    {
+                        table: 'sys_gen_ai_skill'
+                        id: '6788a05b3b51be900ad1a021a3e45a82'
+                        deleted: true
+                        key: {
+                            skill_document: '6b88a05b3b51be900ad1a021a3e45a4c'
+                            skill_table: 'sn_aia_skill_metadata'
+                        }
+                    },
+                    {
+                        table: 'sn_glider_source_artifact_m2m'
+                        id: '67b0c5f5a6114325a9528205da21abbb'
+                        deleted: true
+                        key: {
+                            application_file: '0c918fd66ce84284b09ffccc28d00108'
+                            source_artifact: '00d345c40b8845c6a8c2d0519400c064'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: '67bd358b3bd1fa900ad1a021a3e45ab0'
+                        deleted: true
+                        key: {
+                            model: 'b36d314b3bd1fa900ad1a021a3e45a7a'
+                            element: 'cost_center'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_step_ext_input'
+                        id: '68a6c6033b95fa900ad1a021a3e45a35'
+                        deleted: true
+                        key: {
+                            model: 'a7218e0b3b15fa900ad1a021a3e45ad6'
+                            element: 'valuea'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: '695055fdf33b4b5f8f58cdae8cf6c3b2'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_df_cc_summary'
+                            element: 'u_fiscal_year'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
                         id: '699e84597f5c479cb1efe5e33149e8f8'
                         key: {
                             name: 'x_snc_forecast_v_0_cost_center_budget_history'
@@ -5548,11 +7842,76 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_documentation'
+                        id: '69bdaebac1544573af97d5d958f94268'
+                        key: {
+                            name: 'var__m_sys_hub_action_output_b5fbff25888441e7a2301c5e4729248e'
+                            element: 'short_description'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: '6a1f46af3bee76500ad1a021a3e45a3b'
+                        deleted: true
+                        key: {
+                            agent: 'e61f42af3bee76500ad1a021a3e45ab0'
+                            tool: '70854bae3b4272900ad1a021a3e45a34'
+                            name: 'Extract Cost Center'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '6aa1e2def7904ffe937ff7165370b31f'
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transaction_event'
                             element: 'service_category'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: '6aba9e98632b482091e5d09bf7ee0e5f'
+                        key: {
+                            model: '5753789ddc1148218383f7928a2fd8ad'
+                            element: 'event_id'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '6b218e0b3b15fa900ad1a021a3e45af0'
+                        deleted: true
+                        key: {
+                            document_key: 'a7218e0b3b15fa900ad1a021a3e45ad6'
+                            variable: 'f5e56d79b3101300176b051a16a8dce4'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '6b55c94a47585710037d0fadf26d4302'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_step_ext_output_5755894a47585710037d0fadf26d439e'
+                            element: 'over_budget'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '6b55c94a47585710037d0fadf26d4335'
+                        deleted: true
+                        key: {
+                            document_key: '5755894a47585710037d0fadf26d439e'
+                            variable: '71aa7f6647032200b4fad7527c9a719b'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '6b61f7aa3bb67e5062f31831a3e45a22'
+                        deleted: true
+                        key: {
+                            name: 'auditable_unit_risk_assessment_view'
+                            element: 'cds_risk_assessment'
+                            language: 'en'
                         }
                     },
                     {
@@ -5573,9 +7932,100 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_element'
+                        id: '6d0653ee3b4a72900ad1a021a3e45ad8'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f80613ee3b4a72900ad1a021a3e45abc'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_cost_center_budget_history'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'variance'
+                            position: '11'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_config'
+                        id: '6d0b80203b96765062f31831a3e45afb'
+                        deleted: true
+                        key: {
+                            agent: '290bc4ec3b56765062f31831a3e45a86'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '6d5435ea3b7a3a5062f31831a3e45a57'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_1154f1ea3b7a3a5062f31831a3e45ad8'
+                            element: 'changed_fields'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_output'
+                        id: '6dacc8c56e78400dbe8d3dc2d8f697e2'
+                        key: {
+                            model: '255f44c7556740189bb2feea4ea5b39b'
+                            element: '__action_status__'
+                        }
+                    },
+                    {
                         table: 'sn_aia_tool'
                         id: '6dc3a90d65e1468bb9fe7e6da868737c'
                         key: {
+                            name: 'BA Glide Tools Metadata Summarizer'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '6dcf24c4a99a4614b926f9fb74507b89'
+                        key: {
+                            document_key: '02ed6ae13045489f9575a52beb445773'
+                            variable: '71aa7f6647032200b4fad7527c9a719b'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_step_ext_output'
+                        id: '6de073d43b5a365062f31831a3e45ae6'
+                        deleted: true
+                        key: {
+                            model: 'aa7c63d43bd6365062f31831a3e45af2'
+                            element: 'output'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '6de0b3d43b5a365062f31831a3e45a13'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_step_ext_output_aa7c63d43bd6365062f31831a3e45af2'
+                            element: 'output'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '6e217f663bb67e5062f31831a3e45aa8'
+                        deleted: true
+                        key: {
+                            name: 'service_risk_assessment_view'
+                            element: 'cds_string_5'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: '6e379eac3b6bc718a0db3141a3e45a14'
+                        deleted: true
+                        key: {
+                            agent: '8ee51e2047630bd4037d0fadf26d43f8'
+                            tool: '6e37da203babc718a0db3141a3e45ad3'
                             name: 'BA Glide Tools Metadata Summarizer'
                         }
                     },
@@ -5604,10 +8054,28 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_hub_step_ext_output'
+                        id: '6f55894a47585710037d0fadf26d43ca'
+                        deleted: true
+                        key: {
+                            model: '5755894a47585710037d0fadf26d439e'
+                            element: 'short_description'
+                        }
+                    },
+                    {
                         table: 'sys_ux_lib_asset'
                         id: '6fc36fdb0cd84b34ab889529b862cdba'
                         key: {
                             name: 'x_snc_forecast_v_0/vendor-react-dom--ff7a06d7.js.map'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: '701e3d5de15772107f447756abe0cbe8'
+                        deleted: true
+                        key: {
+                            model: 'bc1e3d5de15772107f447756abe0cbcc'
+                            element: 'table_name'
                         }
                     },
                     {
@@ -5620,6 +8088,42 @@ declare global {
                     },
                     {
                         table: 'sys_documentation'
+                        id: '70610ef55efa492f8851fa2e3825fa3e'
+                        key: {
+                            name: 'var__m_sys_hub_action_output_b5fbff25888441e7a2301c5e4729248e'
+                            element: 'owner'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '7095f3d43bda365062f31831a3e45a7f'
+                        deleted: true
+                        key: {
+                            document_key: 'ac95f3d43bda365062f31831a3e45a27'
+                            variable: '4a76c30643703110306861d048b8f280'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: '713b0c1284554230a602a70327a57413'
+                        key: {
+                            agent: '6a1f4bdf4da043b39900971b2129c34a'
+                            tool: 'eadff3c747d8d790037d0fadf26d4371'
+                            name: 'Budget Variance Analysis'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '71e0b3d43b5a365062f31831a3e45a3d'
+                        deleted: true
+                        key: {
+                            document_key: 'aa7c63d43bd6365062f31831a3e45af2'
+                            variable: '3e4fbbb0c3242110e6a899ccc840dd0b'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
                         id: '71e7f4327af64c6f86bc80abe41ab4b5'
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transaction_event'
@@ -5628,11 +8132,105 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_hub_step_ext_output'
+                        id: '71ff77c4053644a485fd2fe9c39bac2b'
+                        key: {
+                            model: '02ed6ae13045489f9575a52beb445773'
+                            element: 'owner'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '7271d9143bda72900ad1a021a3e45a50'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_2a71d9143bda72900ad1a021a3e45a0f'
+                            element: 'cost_center'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: '7271d9143bda72900ad1a021a3e45a52'
+                        deleted: true
+                        key: {
+                            model: '2a71d9143bda72900ad1a021a3e45a0f'
+                            element: 'event_id'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '727ca3d43bd6365062f31831a3e45a82'
+                        deleted: true
+                        key: {
+                            id: 'b05c63943bd6365062f31831a3e45aaa'
+                            table: 'var__m_sys_hub_action_output_b05c63943bd6365062f31831a3e45aaa'
+                            field: '__action_status__'
+                        }
+                    },
+                    {
+                        table: 'fx_price'
+                        id: '72a07eb23bb6f61062f31831a3e45a1d'
+                        deleted: true
+                        key: {
+                            id: '7aa03eb23bb6f61062f31831a3e45ae1'
+                            field: 'price_if_checked'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_step_ext_input'
+                        id: '72b602433b95fa900ad1a021a3e45a4c'
+                        deleted: true
+                        key: {
+                            model: 'cc610e4b3b15fa900ad1a021a3e45a02'
+                            element: 'valuea'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '72c4b58a80d541c6adcf2e0b46427fb0'
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transactions'
                             element: 'description'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '7321ce0b3b15fa900ad1a021a3e45a2a'
+                        deleted: true
+                        key: {
+                            id: '04c042c73b15fa900ad1a021a3e45ab7'
+                            table: 'var__m_sys_hub_action_output_04c042c73b15fa900ad1a021a3e45ab7'
+                            field: '__dont_treat_as_error__'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '7328f4e877974f35a48bcc4e04a43eb7'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_df_cc_summary'
+                            element: 'u_period'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '7355c94a47585710037d0fadf26d438c'
+                        key: {
+                            name: 'var__m_sys_hub_action_output_9755894a47585710037d0fadf26d4326'
+                            element: 'owner'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '741e3d5de15772107f447756abe0cbed'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_bc1e3d5de15772107f447756abe0cbcc'
+                            element: 'table_name'
                             language: 'en'
                         }
                     },
@@ -5647,10 +8245,64 @@ declare global {
                     },
                     {
                         table: 'sys_documentation'
+                        id: '745b64973b91be900ad1a021a3e45a55'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_a94b28573b91be900ad1a021a3e45a76'
+                            element: 'current'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '7495f3d43bda365062f31831a3e45a80'
+                        deleted: true
+                        key: {
+                            document_key: 'ac95f3d43bda365062f31831a3e45a27'
+                            variable: '179fa374c3e02110e6a899ccc840dd66'
+                        }
+                    },
+                    {
+                        table: 'ua_table_licensing_config'
+                        id: '75007e3b3b17cb94a0db3141a3e45af4'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_df_cc_summary'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
                         id: '7514fa7db9cc4b6994ce04d2a6350a08'
                         key: {
                             name: 'x_snc_forecast_v_0_variance_task'
                             element: 'created_date'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_complex_object'
+                        id: '75e0b3d43b5a365062f31831a3e45a46'
+                        deleted: true
+                        key: {
+                            name: 'FD71e0b3d40a5a36501662b94d9132b246'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_output'
+                        id: '75e0b3d43b5a365062f31831a3e45a47'
+                        deleted: true
+                        key: {
+                            model: 'b05c63943bd6365062f31831a3e45aaa'
+                            element: 'output'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '7651ff2a3bb67e5062f31831a3e45afa'
+                        deleted: true
+                        key: {
+                            name: 'regulatory_impact_assessment_view'
+                            element: 'NULL'
                             language: 'en'
                         }
                     },
@@ -5664,12 +8316,48 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_hub_step_ext_output'
+                        id: '7685f58b590f42ee84531085792f26a5'
+                        key: {
+                            model: '02ed6ae13045489f9575a52beb445773'
+                            element: 'short_description'
+                        }
+                    },
+                    {
+                        table: 'fx_price'
+                        id: '76a07eb23bb6f61062f31831a3e45a1c'
+                        deleted: true
+                        key: {
+                            id: '7aa03eb23bb6f61062f31831a3e45ae1'
+                            field: 'rec_price_if_checked'
+                        }
+                    },
+                    {
+                        table: 'item_option_new'
+                        id: '76a07eb23bb6f61062f31831a3e45a4b'
+                        deleted: true
+                        key: {
+                            cat_item: '20a0fa7a3b3a72500ad1a021a3e45a15'
+                            variable_set: 'NULL'
+                            name: 'load_experience_id'
+                        }
+                    },
+                    {
                         table: 'sn_glider_source_artifact_m2m'
                         id: '775fd2258ecd483b8333ca9c4d1afb6b'
                         deleted: false
                         key: {
                             application_file: '45d838ba91a75970fcee4ab1e1cd7a84'
                             source_artifact: '85485b4b7943448e81ef47747dcaa9ee'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '77e479e4a31f4ce3b5f36a5bd5e2b1e9'
+                        key: {
+                            name: 'var__m_sys_hub_flow_output_5753789ddc1148218383f7928a2fd8ad'
+                            element: 'vendor'
+                            language: 'en'
                         }
                     },
                     {
@@ -5682,6 +8370,34 @@ declare global {
                     },
                     {
                         table: 'sys_documentation'
+                        id: '781e3d5de15772107f447756abe0cbdb'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_bc1e3d5de15772107f447756abe0cbcc'
+                            element: 'current'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '7895f3d43bda365062f31831a3e45a81'
+                        deleted: true
+                        key: {
+                            document_key: 'ac95f3d43bda365062f31831a3e45a27'
+                            variable: '3e4fbbb0c3242110e6a899ccc840dd0b'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: '79718b6e3b4272900ad1a021a3e45a25'
+                        deleted: true
+                        key: {
+                            model: '65714b6e3b4272900ad1a021a3e45ac5'
+                            element: 'event_id'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
                         id: '7a45c63ad8d444e2ab0808c7ce9b6211'
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transaction_event'
@@ -5690,11 +8406,121 @@ declare global {
                         }
                     },
                     {
+                        table: 'item_option_new'
+                        id: '7aa03eb23bb6f61062f31831a3e45ae1'
+                        deleted: true
+                        key: {
+                            cat_item: '20a0fa7a3b3a72500ad1a021a3e45a15'
+                            variable_set: 'NULL'
+                            name: 'a_46a03ab23bb6f61062f31831a3e45a79_run_load'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '7b214ad13b46be5062f31831a3e45a75'
+                        deleted: true
+                        key: {
+                            sys_security_acl: '33210ad13b46be5062f31831a3e45af1'
+                            sys_user_role: {
+                                id: '1721c6d13b46be5062f31831a3e45a29'
+                                key: {
+                                    name: 'x_snc_forecast_v_0.cost_center_budget_history_user'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '7b21ce0b3b15fa900ad1a021a3e45a2a'
+                        deleted: true
+                        key: {
+                            document_key: '04c042c73b15fa900ad1a021a3e45ab7'
+                            variable: 'bb218e0b3b15fa900ad1a021a3e45af3'
+                        }
+                    },
+                    {
+                        table: 'sys_gen_ai_skill_config'
+                        id: '7b543dea3b7a3a5062f31831a3e45add'
+                        deleted: true
+                        key: {
+                            skill_id: 'da54b5ea3b7a3a5062f31831a3e45aed'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '7b55c94a47585710037d0fadf26d43c8'
+                        deleted: true
+                        key: {
+                            id: '9755894a47585710037d0fadf26d4326'
+                            table: 'var__m_sys_hub_action_output_9755894a47585710037d0fadf26d4326'
+                            field: 'short_description'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '7b61f7aa3bb67e5062f31831a3e45ab8'
+                        deleted: true
+                        key: {
+                            name: 'auditable_unit_risk_assessment_view'
+                            element: 'cds_string_4'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '7bf1460f3b15fa900ad1a021a3e45ae1'
+                        deleted: true
+                        key: {
+                            id: '04c042c73b15fa900ad1a021a3e45ab7'
+                            table: 'var__m_sys_hub_action_output_04c042c73b15fa900ad1a021a3e45ab7'
+                            field: 'sum'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: '7c1e3d5de15772107f447756abe0cbce'
+                        deleted: true
+                        key: {
+                            model: 'bc1e3d5de15772107f447756abe0cbcc'
+                            element: 'current'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '7c5111281b294c99a96343be7ec73e27'
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transaction_event'
                             element: 'business_unit'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: '7c850be23bc272900ad1a021a3e45a76'
+                        deleted: true
+                        key: {
+                            agent: 'fbc138e23b38b2d062f31831a3e45a65'
+                            tool: '70854bae3b4272900ad1a021a3e45a34'
+                            name: 'Extract Cost Center'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '7c95f3d43bda365062f31831a3e45a4a'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_step_ext_output_ac95f3d43bda365062f31831a3e45a27'
+                            element: 'output'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '7deaf4ca3dde4f8fa44f97d96193e19c'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_df_cc_summary'
+                            element: 'u_gl_account'
+                            language: 'en'
                         }
                     },
                     {
@@ -5707,11 +8533,57 @@ declare global {
                         }
                     },
                     {
+                        table: 'sn_aia_team_member'
+                        id: '7e4c9ead3b27c710a0db3141a3e45a1b'
+                        deleted: true
+                        key: {
+                            agent: '8ee51e2047630bd4037d0fadf26d43f8'
+                            team: '914c126d3b27c710a0db3141a3e45afe'
+                        }
+                    },
+                    {
+                        table: 'sys_gen_ai_skill'
+                        id: '7ee05ce43b1a765062f31831a3e45af2'
+                        deleted: true
+                        key: {
+                            skill_document: '6ee01ce43b1a765062f31831a3e45a12'
+                            skill_table: 'sn_aia_skill_metadata'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '7f01dd75e541472dbaabc8d74b05e06a'
                         key: {
                             name: 'x_snc_forecast_v_0_variance_task'
                             element: 'assignee'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '7f218e0b3b15fa900ad1a021a3e45aff'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_action_output_04c042c73b15fa900ad1a021a3e45ab7'
+                            element: '__dont_treat_as_error__'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '7f55c94a47585710037d0fadf26d43ca'
+                        deleted: true
+                        key: {
+                            document_key: '9755894a47585710037d0fadf26d4326'
+                            variable: 'ef55c94a47585710037d0fadf26d4347'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: '808dafdbb17e4fb8adb5e023971a8f10'
+                        key: {
+                            agent: '6a1f4bdf4da043b39900971b2129c34a'
+                            tool: '8bdf37c747d8d790037d0fadf26d43c4'
+                            name: 'Search for Cost Center History'
                         }
                     },
                     {
@@ -5724,12 +8596,101 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_gen_ai_skill_config'
+                        id: '80f050283b1a765062f31831a3e45aff'
+                        deleted: true
+                        key: {
+                            skill_id: '7ee05ce43b1a765062f31831a3e45af2'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '815471ea3b7a3a5062f31831a3e45af7'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_e45431ea3b7a3a5062f31831a3e45a74'
+                            element: 'current'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '8154b1ea3b7a3a5062f31831a3e45a65'
+                        deleted: true
+                        key: {
+                            id: '0d54b1ea3b7a3a5062f31831a3e45a5f'
+                            table: 'var__m_sys_hub_action_input_0b63e51a53c7121059e0ddeeff7b12b5'
+                            field: 'trigger_configuration_id'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '8154b1ea3b7a3a5062f31831a3e45a66'
+                        deleted: true
+                        key: {
+                            document_key: '0d54b1ea3b7a3a5062f31831a3e45a5f'
+                            variable: '8f63e51a53c7121059e0ddeeff7b12b8'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: '81ad7d1de15772107f447756abe0cb35'
+                        deleted: true
+                        key: {
+                            model: 'c1ad7d1de15772107f447756abe0cb2e'
+                            element: 'table_name'
+                        }
+                    },
+                    {
                         table: 'sn_aia_agent_tool_m2m'
                         id: '81b7918447e85310037d0fadf26d4399'
                         key: {
                             agent: 'a6df73c747d8d790037d0fadf26d43ac'
                             tool: '01b7918447e85310037d0fadf26d4373'
                             name: 'Get Details via Neon MCP'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_form'
+                        id: '81f94a663bf036d062f31831a3e45a52'
+                        deleted: true
+                        key: {
+                            name: 'sys_df_data_dictionary'
+                            view: {
+                                id: '877ec2a5532313008cd9ddeeff7b1277'
+                                key: {
+                                    name: 'ATF_Shared_Parameter'
+                                }
+                            }
+                            sys_domain: 'global'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_output'
+                        id: '828111543bda72900ad1a021a3e45a99'
+                        deleted: true
+                        key: {
+                            model: 'e18111543bda72900ad1a021a3e45a73'
+                            element: 'sum'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_step_ext_output'
+                        id: '828de75c3bd6365062f31831a3e45acf'
+                        deleted: true
+                        key: {
+                            model: 'aa7c63d43bd6365062f31831a3e45af2'
+                            element: 'sn_auth_token'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '82a0bab23bb6f61062f31831a3e45a5a'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_46a03ab23bb6f61062f31831a3e45a79'
+                            element: 'run_load'
+                            language: 'en'
                         }
                     },
                     {
@@ -5743,6 +8704,15 @@ declare global {
                                     name: 'admin'
                                 }
                             }
+                        }
+                    },
+                    {
+                        table: 'fx_price'
+                        id: '83a07eb23bb6f61062f31831a3e45abe'
+                        deleted: true
+                        key: {
+                            id: 'cfa07eb23bb6f61062f31831a3e45a76'
+                            field: 'rec_price_if_checked'
                         }
                     },
                     {
@@ -5778,6 +8748,111 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_hub_action_output'
+                        id: '857377183b9a365062f31831a3e45a07'
+                        deleted: true
+                        key: {
+                            model: 'b05c63943bd6365062f31831a3e45aaa'
+                            element: '__dont_treat_as_error__'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_output'
+                        id: '859537d43bda365062f31831a3e45a2c'
+                        deleted: true
+                        key: {
+                            model: '6095f3d43bda365062f31831a3e45a0e'
+                            element: '__action_status__'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '859537d43bda365062f31831a3e45a50'
+                        deleted: true
+                        key: {
+                            id: '6095f3d43bda365062f31831a3e45a0e'
+                            table: 'var__m_sys_hub_action_output_6095f3d43bda365062f31831a3e45a0e'
+                            field: 'output'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary_override'
+                        id: '85b3292d3b1fcb10a0db3141a3e45a49'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_variance_task'
+                            element: 'number'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '85eb388a3bd85710a0db3141a3e45a7e'
+                        key: {
+                            name: 'var__m_sys_hub_action_output_7cebf48a3bd85710a0db3141a3e45ab9'
+                            element: '__dont_treat_as_error__'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_form_section'
+                        id: '85f94a663bf036d062f31831a3e45a59'
+                        deleted: true
+                        key: {
+                            sys_ui_form: {
+                                id: '81f94a663bf036d062f31831a3e45a52'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    view: '877ec2a5532313008cd9ddeeff7b1277'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            sys_ui_section: {
+                                id: '09f94a663bf036d062f31831a3e45a54'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    caption: 'Choice List Specification'
+                                    view: '877ec2a5532313008cd9ddeeff7b1277'
+                                    sys_domain: 'global'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sn_aia_team_member'
+                        id: '8698a45b3b51be900ad1a021a3e45a63'
+                        deleted: true
+                        key: {
+                            agent: 'fbc138e23b38b2d062f31831a3e45a65'
+                            team: '046db51eff942210d09effffffffffdb'
+                        }
+                    },
+                    {
+                        table: 'item_option_new'
+                        id: '87a07eb23bb6f61062f31831a3e45a67'
+                        deleted: true
+                        key: {
+                            cat_item: '20a0fa7a3b3a72500ad1a021a3e45a15'
+                            variable_set: 'NULL'
+                            name: 'unload_flow_name'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_tool'
+                        id: '87b05500976f43b48c98f72620bf6011'
+                        key: {
+                            name: 'Search for Cost Center Summary'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_version'
+                        id: '87f138263b38b2d062f31831a3e45a06'
+                        deleted: true
+                        key: {
+                            target_id: 'fbc138e23b38b2d062f31831a3e45a65'
+                            version_name: 'V1'
+                        }
+                    },
+                    {
                         table: 'sys_choice'
                         id: '89057f6e0e434431bb2a578359479fde'
                         key: {
@@ -5786,6 +8861,88 @@ declare global {
                             value: 'new'
                             language: 'en'
                             dependent_value: 'NULL'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_output'
+                        id: '896c5500a2a64c3f9c625db994bbe6c9'
+                        key: {
+                            model: 'b31d2a0194bb4b46922c8af7602e0b36'
+                            element: 'sum'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '897377183b9a365062f31831a3e45a42'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_action_output_b05c63943bd6365062f31831a3e45aaa'
+                            element: '__dont_treat_as_error__'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '897377183b9a365062f31831a3e45a57'
+                        deleted: true
+                        key: {
+                            document_key: 'b05c63943bd6365062f31831a3e45aaa'
+                            variable: '857377183b9a365062f31831a3e45a07'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_tool'
+                        id: '899364df3bdd7e900ad1a021a3e45ad1'
+                        deleted: true
+                        key: {
+                            name: 'Variance Analysis'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_form_section'
+                        id: '89f94a663bf036d062f31831a3e45a74'
+                        deleted: true
+                        key: {
+                            sys_ui_form: {
+                                id: '81f94a663bf036d062f31831a3e45a52'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    view: '877ec2a5532313008cd9ddeeff7b1277'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            sys_ui_section: {
+                                id: '8df94a663bf036d062f31831a3e45a62'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    caption: 'Reference Specification'
+                                    view: '877ec2a5532313008cd9ddeeff7b1277'
+                                    sys_domain: 'global'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '8a8bb9dd3b82be5062f31831a3e45a9b'
+                        deleted: true
+                        key: {
+                            sys_security_acl: '7d8bb9dd3b82be5062f31831a3e45a48'
+                            sys_user_role: {
+                                id: 'fd1871593b42be5062f31831a3e45a09'
+                                key: {
+                                    name: 'x_snc_forecast_v_0.expense_transactions_user'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '8b890e0f3b95fa900ad1a021a3e45a43'
+                        deleted: true
+                        key: {
+                            document_key: '04c042c73b15fa900ad1a021a3e45ab7'
+                            variable: 'f2890e0f3b95fa900ad1a021a3e45a18'
                         }
                     },
                     {
@@ -5805,11 +8962,72 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_security_acl_role'
+                        id: '8c314ad13b46be5062f31831a3e45ad7'
+                        deleted: true
+                        key: {
+                            sys_security_acl: '3b214ad13b46be5062f31831a3e45a91'
+                            sys_user_role: {
+                                id: '1721c6d13b46be5062f31831a3e45a29'
+                                key: {
+                                    name: 'x_snc_forecast_v_0.cost_center_budget_history_user'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '8c610e4b3b15fa900ad1a021a3e45a19'
+                        deleted: true
+                        key: {
+                            document_key: 'cc610e4b3b15fa900ad1a021a3e45a02'
+                            variable: '71aa7f6647032200b4fad7527c9a719b'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '8c610e4b3b15fa900ad1a021a3e45a51'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_action_output_0861ca4b3b15fa900ad1a021a3e45afb'
+                            element: '__action_status__'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_output'
+                        id: '8c6ba6a97c00496da4ece036888144a4'
+                        key: {
+                            model: '5753789ddc1148218383f7928a2fd8ad'
+                            element: 'vendor'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '8d9537d43bda365062f31831a3e45a31'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_action_output_6095f3d43bda365062f31831a3e45a0e'
+                            element: '__action_status__'
+                            language: 'en'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '8de225627ec542a3a901253b7bce6379'
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transactions'
                             element: 'expense_category'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '8e0c4fe23b8672900ad1a021a3e45a86'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_output_4d54436e3b8272900ad1a021a3e45a47'
+                            element: 'cost_center'
                             language: 'en'
                         }
                     },
@@ -5822,8 +9040,37 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_variable_value'
+                        id: '8e8d2b5c3bd6365062f31831a3e45a28'
+                        deleted: true
+                        key: {
+                            document_key: 'aa7c63d43bd6365062f31831a3e45af2'
+                            variable: '7a5277f4c3e02110e6a899ccc840dd95'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '8f51b36a3bb67e5062f31831a3e45aab'
+                        deleted: true
+                        key: {
+                            name: 'regulatory_impact_assessment_view'
+                            element: 'cds_string_2'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'fx_price'
+                        id: '8fa07eb23bb6f61062f31831a3e45abe'
+                        deleted: true
+                        key: {
+                            id: 'cfa07eb23bb6f61062f31831a3e45a76'
+                            field: 'price_if_checked'
+                        }
+                    },
+                    {
                         table: 'sn_aia_tool'
                         id: '8fdf37c747d8d790037d0fadf26d438b'
+                        deleted: false
                         key: {
                             name: 'Extract Cost Center'
                         }
@@ -5851,6 +9098,26 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_element_mapping'
+                        id: '90610e4b3b15fa900ad1a021a3e45a5d'
+                        deleted: true
+                        key: {
+                            id: '0861ca4b3b15fa900ad1a021a3e45afb'
+                            table: 'var__m_sys_hub_action_output_0861ca4b3b15fa900ad1a021a3e45afb'
+                            field: '__dont_treat_as_error__'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '90cba09f3ee14acfbca88c771d977003'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_df_cc_summary'
+                            element: 'u_variance_percent'
+                            language: 'en'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '90ed5eb46dec4c2e9e69bb064a10012e'
                         key: {
@@ -5860,10 +9127,38 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_documentation'
+                        id: '9102c60f3b15fa900ad1a021a3e45ae9'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_step_ext_output_cc610e4b3b15fa900ad1a021a3e45a02'
+                            element: 'sum'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_team'
+                        id: '914c126d3b27c710a0db3141a3e45afe'
+                        deleted: true
+                        key: {
+                            name: 'Build Agent Studio Skills'
+                        }
+                    },
+                    {
                         table: 'ua_table_licensing_config'
                         id: '93ab37e229334d44ab89ac883bcbc150'
                         key: {
                             name: 'x_snc_forecast_v_0_cost_center_budget_history'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '949d791de15772107f447756abe0cbe6'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_d49d791de15772107f447756abe0cbd7'
+                            element: 'current'
+                            language: 'en'
                         }
                     },
                     {
@@ -5892,6 +9187,59 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_form_section'
+                        id: '95f94a663bf036d062f31831a3e45af1'
+                        deleted: true
+                        key: {
+                            sys_ui_form: {
+                                id: '0df94a663bf036d062f31831a3e45a77'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    view: '7966be310a0a0b8c00bd504090503227'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            sys_ui_section: {
+                                id: 'd1f94a663bf036d062f31831a3e45ac6'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    caption: 'Choice List Specification'
+                                    view: '7966be310a0a0b8c00bd504090503227'
+                                    sys_domain: 'global'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: '96375ea847630bd4037d0fadf26d43c9'
+                        deleted: true
+                        key: {
+                            agent: '8ee51e2047630bd4037d0fadf26d43f8'
+                            tool: '86375a203babc718a0db3141a3e45a25'
+                            name: 'Build Agent'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '96cb07a23b8672900ad1a021a3e45a2f'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_output_65714b6e3b4272900ad1a021a3e45ac5'
+                            element: 'cost_center'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: '98610e4b3b15fa900ad1a021a3e45a5d'
+                        deleted: true
+                        key: {
+                            document_key: '0861ca4b3b15fa900ad1a021a3e45afb'
+                            variable: 'cc610e4b3b15fa900ad1a021a3e45a1b'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '9895d584ca66472c808419b5c9d73020'
                         key: {
@@ -5908,6 +9256,15 @@ declare global {
                             value: 'closed'
                             language: 'en'
                             dependent_value: 'NULL'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_team_member'
+                        id: '99f054283b1a765062f31831a3e45abb'
+                        deleted: true
+                        key: {
+                            agent: '290bc4ec3b56765062f31831a3e45a86'
+                            team: '046db51eff942210d09effffffffffdb'
                         }
                     },
                     {
@@ -5937,11 +9294,85 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_hub_step_ext_input'
+                        id: '9b55894a47585710037d0fadf26d43a5'
+                        deleted: true
+                        key: {
+                            model: '5755894a47585710037d0fadf26d439e'
+                            element: 'cost_center'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: '9bf5775a4a9b4dfca513af1c2c35de3a'
                         key: {
                             name: 'x_snc_forecast_v_0_cost_center_budget_history'
                             element: 'NULL'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_step_ext_output'
+                        id: '9d02c60f3b15fa900ad1a021a3e45acc'
+                        deleted: true
+                        key: {
+                            model: 'cc610e4b3b15fa900ad1a021a3e45a02'
+                            element: 'sum'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: '9d61fb6a3bb67e5062f31831a3e45ac1'
+                        deleted: true
+                        key: {
+                            name: 'risk_assessment_for_ai_asset_inventory_view'
+                            element: 'cds_number_1'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_status_condition'
+                        id: '9d784d8f010732107f44189f958a0447'
+                        deleted: true
+                        key: {
+                            action_status_metadata_id: '459537d43bda365062f31831a3e45a55'
+                            order: '1'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '9e75a56d3b9fcb10a0db3141a3e45ab1'
+                        deleted: true
+                        key: {
+                            sys_security_acl: '82e61f113b1e72500ad1a021a3e45a0e'
+                            sys_user_role: {
+                                id: '7fcaa702933002009c8579b4f47ffbde'
+                                key: {
+                                    name: 'snc_internal'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: '9e75a56d3b9fcb10a0db3141a3e45ae8'
+                        deleted: true
+                        key: {
+                            sys_security_acl: '8e0b04203b96765062f31831a3e45a38'
+                            sys_user_role: {
+                                id: '7fcaa702933002009c8579b4f47ffbde'
+                                key: {
+                                    name: 'snc_internal'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: '9eaa5124cf1c4ce1b4b10afec784a27a'
+                        key: {
+                            id: 'b5fbff25888441e7a2301c5e4729248e'
+                            table: 'var__m_sys_hub_action_output_b5fbff25888441e7a2301c5e4729248e'
+                            field: 'over_budget'
                         }
                     },
                     {
@@ -5954,11 +9385,57 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_hub_step_ext_output'
+                        id: 'a06cee0708e440c2ac75e24d102bfe15'
+                        key: {
+                            model: '02ed6ae13045489f9575a52beb445773'
+                            element: 'new_actual'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: 'a0d7c4c83ce8426885b43a04ec333b7b'
                         key: {
                             name: 'x_snc_forecast_v_0_variance_task'
                             element: 'status'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'a10653ee3b4a72900ad1a021a3e45ad8'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f80613ee3b4a72900ad1a021a3e45abc'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_cost_center_budget_history'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'status'
+                            position: '10'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'a2217f663bb67e5062f31831a3e45a74'
+                        deleted: true
+                        key: {
+                            name: 'service_risk_assessment_view'
+                            element: 'cds_string_2'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'a2217f663bb67e5062f31831a3e45a92'
+                        deleted: true
+                        key: {
+                            name: 'service_risk_assessment_view'
+                            element: 'cds_string_3'
                             language: 'en'
                         }
                     },
@@ -5971,11 +9448,139 @@ declare global {
                     },
                     {
                         table: 'sys_documentation'
+                        id: 'a341f9b9879a4b75b6f6738fdff0fb6b'
+                        key: {
+                            name: 'var__m_sys_hub_action_output_b5fbff25888441e7a2301c5e4729248e'
+                            element: '__dont_treat_as_error__'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_output'
+                        id: 'a355c94a47585710037d0fadf26d4350'
+                        key: {
+                            model: '9755894a47585710037d0fadf26d4326'
+                            element: 'new_actual'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'a3a102cb3b15fa900ad1a021a3e45a8b'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_action_input_04c042c73b15fa900ad1a021a3e45ab7'
+                            element: 'valuea'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'a50653ee3b4a72900ad1a021a3e45a89'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f80613ee3b4a72900ad1a021a3e45abc'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_cost_center_budget_history'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'fiscal_month'
+                            position: '4'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'a50653ee3b4a72900ad1a021a3e45ad5'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f80613ee3b4a72900ad1a021a3e45abc'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_cost_center_budget_history'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: '.split'
+                            position: '6'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'a51d65cfaeb242a889d224ade1ba2f96'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_df_cc_summary'
+                            element: 'u_gl_account'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
                         id: 'a5b13331105242279a2bfcc935179e46'
                         key: {
                             name: 'x_snc_forecast_v_0_lab_asset'
                             element: 'image'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: 'a63712e847630bd4037d0fadf26d4387'
+                        deleted: true
+                        key: {
+                            agent: '8ee51e2047630bd4037d0fadf26d43f8'
+                            tool: '1e379a203babc718a0db3141a3e45ac3'
+                            name: 'Build Agent Preprocessor'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: 'a671d9143bda72900ad1a021a3e45a29'
+                        deleted: true
+                        key: {
+                            model: '2a71d9143bda72900ad1a021a3e45a0f'
+                            element: 'cost_center'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'a734d0165bf54c83a7be3f7c3f43562c'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_df_cc_summary'
+                            element: 'u_variance'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'a741c89f3b957e900ad1a021a3e45a80'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_b3a0c01f3b957e900ad1a021a3e45a07'
+                            element: 'cost_center'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: 'a755c94a47585710037d0fadf26d4338'
+                        deleted: true
+                        key: {
+                            id: '5755894a47585710037d0fadf26d439e'
+                            table: 'var__m_sys_hub_step_ext_input_5755894a47585710037d0fadf26d439e'
+                            field: 'event_id'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_output'
+                        id: 'a755c94a47585710037d0fadf26d433e'
+                        key: {
+                            model: '9755894a47585710037d0fadf26d4326'
+                            element: 'over_budget'
                         }
                     },
                     {
@@ -5988,11 +9593,69 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_documentation'
+                        id: 'a7f6c2833b95fa900ad1a021a3e45aeb'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_e3f6c2833b95fa900ad1a021a3e45ad3'
+                            element: 'cost_center'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_output'
+                        id: 'a7ffe7ee3b82b2900ad1a021a3e45adc'
+                        deleted: true
+                        key: {
+                            model: '4d54436e3b8272900ad1a021a3e45a47'
+                            element: 'vendor'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'a8030a033b55fa900ad1a021a3e45aad'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_output_b36d314b3bd1fa900ad1a021a3e45a7a'
+                            element: 'sum'
+                            language: 'en'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: 'a8da78d203aa40e88e429ab9667e136e'
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transaction_event'
                             element: 'correlation_id'
+                        }
+                    },
+                    {
+                        table: 'sc_cat_item_user_criteria_no_mtom'
+                        id: 'a8e325ad3b1fcb10a0db3141a3e45a79'
+                        deleted: true
+                        key: {
+                            sc_cat_item: '20a0fa7a3b3a72500ad1a021a3e45a15'
+                            user_criteria: '66c1b50e730333009508738234f6a7c9'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: 'a90bc0203b96765062f31831a3e45a00'
+                        deleted: true
+                        key: {
+                            agent: '290bc4ec3b56765062f31831a3e45a86'
+                            tool: 'bb8695d03b5e72900ad1a021a3e45ad4'
+                            name: 'Budget Variance Analysis'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'a977ef610f0d48648eed747ba95d59c4'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_df_cc_summary'
+                            element: 'u_cost_center'
+                            language: 'en'
                         }
                     },
                     {
@@ -6006,10 +9669,77 @@ declare global {
                     },
                     {
                         table: 'sys_documentation'
+                        id: 'ab55894a47585710037d0fadf26d43c8'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_step_ext_output_5755894a47585710037d0fadf26d439e'
+                            element: 'owner'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sn_glider_source_artifact_m2m'
+                        id: 'abaf1d7edc5a445d8fd8e40260d92cd0'
+                        deleted: true
+                        key: {
+                            application_file: 'f172cab24f2a48bfac40103f9e43dfce'
+                            source_artifact: '00d345c40b8845c6a8c2d0519400c064'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'abffe7ee3b82b2900ad1a021a3e45ae4'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_output_4d54436e3b8272900ad1a021a3e45a47'
+                            element: 'vendor'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'ac61f76a3bb67e5062f31831a3e45ab8'
+                        deleted: true
+                        key: {
+                            name: 'esg_material_topic_assessment_view'
+                            element: 'cds_risk_assessment'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
                         id: 'acd2f4b576bb433cb568892b8a581d05'
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transaction_event'
                             element: 'gl_account'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_version'
+                        id: 'ad0b80203b96765062f31831a3e45af3'
+                        deleted: true
+                        key: {
+                            target_id: '290bc4ec3b56765062f31831a3e45a86'
+                            version_name: 'V1'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'ad65cd4a47585710037d0fadf26d43f4'
+                        key: {
+                            name: 'var__m_sys_hub_flow_output_9565cd4a47585710037d0fadf26d439a'
+                            element: 'vendor'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'ad8f05183b9a72900ad1a021a3e45ae8'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_5d8f05183b9a72900ad1a021a3e45a99'
+                            element: 'current'
                             language: 'en'
                         }
                     },
@@ -6022,11 +9752,200 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_documentation'
+                        id: 'ae217f663bb67e5062f31831a3e45a69'
+                        deleted: true
+                        key: {
+                            name: 'service_risk_assessment_view'
+                            element: 'cds_control'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_version'
+                        id: 'aea5cb2555ef49da80ab6d4f8a050edb'
+                        key: {
+                            target_id: '6a1f4bdf4da043b39900971b2129c34a'
+                            version_name: 'V1'
+                        }
+                    },
+                    {
                         table: 'sys_index'
                         id: 'aeef0d6e4aed4f4291d5f6b222910b6a'
                         key: {
                             logical_table_name: 'x_snc_forecast_v_0_cost_center_budget_history'
                             col_name_string: 'owner'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_step_ext_output'
+                        id: 'af55894a47585710037d0fadf26d43fd'
+                        deleted: true
+                        key: {
+                            model: '5755894a47585710037d0fadf26d439e'
+                            element: 'over_budget'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'afd7744f69f24c51a7e722b189631222'
+                        key: {
+                            document_key: 'f2c58b83948840af9d118c76709e36d6'
+                            variable: '74315b04b3201300176b051a16a8dc2b'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'aff6c2833b95fa900ad1a021a3e45af2'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_e3f6c2833b95fa900ad1a021a3e45ad3'
+                            element: 'event_id'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: 'b01e3d5de15772107f447756abe0cbdf'
+                        deleted: true
+                        key: {
+                            model: 'bc1e3d5de15772107f447756abe0cbcc'
+                            element: 'changed_fields'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'b0658d4a47585710037d0fadf26d4348'
+                        key: {
+                            name: 'var__m_sys_hub_flow_output_e0654d4a47585710037d0fadf26d43ce'
+                            element: 'result'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'b098b1073b91fa900ad1a021a3e45a57'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f89831073b91fa900ad1a021a3e45a43'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_expense_transaction_event'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'business_unit'
+                            position: '1'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'b098b1073b91fa900ad1a021a3e45a58'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f89831073b91fa900ad1a021a3e45a43'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_expense_transaction_event'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'sent_from'
+                            position: '3'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'b098b1073b91fa900ad1a021a3e45a59'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f89831073b91fa900ad1a021a3e45a43'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_expense_transaction_event'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'service_category'
+                            position: '5'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'b098b1073b91fa900ad1a021a3e45a5a'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f89831073b91fa900ad1a021a3e45a43'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_expense_transaction_event'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'region'
+                            position: '7'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'b098b1073b91fa900ad1a021a3e45a5b'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f89831073b91fa900ad1a021a3e45a43'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_expense_transaction_event'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'priority'
+                            position: '9'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'b098b1073b91fa900ad1a021a3e45a5c'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f89831073b91fa900ad1a021a3e45a43'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_expense_transaction_event'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'event_type'
+                            position: '11'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'b098b1073b91fa900ad1a021a3e45a5d'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f89831073b91fa900ad1a021a3e45a43'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_expense_transaction_event'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'source_system'
+                            position: '13'
                         }
                     },
                     {
@@ -6038,6 +9957,90 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_hub_flow_input'
+                        id: 'b18111543bda72900ad1a021a3e45a8a'
+                        deleted: true
+                        key: {
+                            model: 'e18111543bda72900ad1a021a3e45a73'
+                            element: 'event_id'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_output'
+                        id: 'b1fd2ae88d144d70ba3fc47265bc01f1'
+                        key: {
+                            model: 'b5fbff25888441e7a2301c5e4729248e'
+                            element: '__dont_treat_as_error__'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_output'
+                        id: 'b1ff27ee3b82b2900ad1a021a3e45a95'
+                        deleted: true
+                        key: {
+                            model: '65714b6e3b4272900ad1a021a3e45ac5'
+                            element: 'vendor'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'b2632fb7880c44e2abed0753952cff0a'
+                        key: {
+                            name: 'var__m_sys_hub_action_output_b5fbff25888441e7a2301c5e4729248e'
+                            element: 'new_actual'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: 'b27ca3d43bd6365062f31831a3e45a81'
+                        deleted: true
+                        key: {
+                            id: 'b05c63943bd6365062f31831a3e45aaa'
+                            table: 'var__m_sys_hub_action_output_b05c63943bd6365062f31831a3e45aaa'
+                            field: '__dont_treat_as_error__'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: 'b355c94a47585710037d0fadf26d43c8'
+                        deleted: true
+                        key: {
+                            id: '9755894a47585710037d0fadf26d4326'
+                            table: 'var__m_sys_hub_action_output_9755894a47585710037d0fadf26d4326'
+                            field: 'owner'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'b3ba155c3b9e72900ad1a021a3e45a1e'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_output_2a71d9143bda72900ad1a021a3e45a0f'
+                            element: 'finance_case'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: 'b3f173ea3bc2b2900ad1a021a3e45ab8'
+                        deleted: true
+                        key: {
+                            agent: 'fbc138e23b38b2d062f31831a3e45a65'
+                            tool: '8021ddea2b0d52101d72fb466e91bfd1'
+                            name: 'Search for Expense Transactions History'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'b495f3d43bda365062f31831a3e45a7f'
+                        deleted: true
+                        key: {
+                            document_key: 'ac95f3d43bda365062f31831a3e45a27'
+                            variable: '7a5277f4c3e02110e6a899ccc840dd95'
+                        }
+                    },
+                    {
                         table: 'sys_db_object'
                         id: 'b497747df6aa41d2a7b6754ea471195d'
                         key: {
@@ -6046,10 +10049,89 @@ declare global {
                     },
                     {
                         table: 'sys_dictionary'
+                        id: 'b4ba3f66599440039615e4c806486b77'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_df_cc_summary'
+                            element: 'u_last_updated'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: 'b58b79dd3b82be5062f31831a3e45a97'
+                        deleted: true
+                        key: {
+                            sys_security_acl: '258b79dd3b82be5062f31831a3e45a71'
+                            sys_user_role: {
+                                id: 'fd1871593b42be5062f31831a3e45a09'
+                                key: {
+                                    name: 'x_snc_forecast_v_0.expense_transactions_user'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_output'
+                        id: 'b5a919cbc393426eb6c46f436ea0bd67'
+                        key: {
+                            model: 'b5fbff25888441e7a2301c5e4729248e'
+                            element: 'owner'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_output'
+                        id: 'b671d9143bda72900ad1a021a3e45a6c'
+                        deleted: true
+                        key: {
+                            model: '2a71d9143bda72900ad1a021a3e45a0f'
+                            element: 'sum'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_output'
+                        id: 'b67d216c132e4d4d8719d8eda85288cf'
+                        key: {
+                            model: 'b5fbff25888441e7a2301c5e4729248e'
+                            element: 'over_budget'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'b721ce0b3b15fa900ad1a021a3e45a2a'
+                        deleted: true
+                        key: {
+                            document_key: '04c042c73b15fa900ad1a021a3e45ab7'
+                            variable: 'fb218e0b3b15fa900ad1a021a3e45af9'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
                         id: 'b73f4118376c49b3936ef97be4f4c522'
                         key: {
                             name: 'x_snc_forecast_v_0_variance_task'
                             element: 'created_date'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: 'b76ef14f3bd1fa900ad1a021a3e45a61'
+                        deleted: true
+                        key: {
+                            model: 'b36d314b3bd1fa900ad1a021a3e45a7a'
+                            element: 'event_id'
+                        }
+                    },
+                    {
+                        table: 'sys_agent_access_role_mapping'
+                        id: 'b777370633494a0a937fcdf954f9a6ea'
+                        key: {
+                            agent_access_config: '516b223d8fa74272a94e9647e58b71fc'
+                            role: {
+                                id: '4122478a31114a1182fbc9922df001a8'
+                                key: {
+                                    name: 'admin'
+                                }
+                            }
                         }
                     },
                     {
@@ -6071,6 +10153,34 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_documentation'
+                        id: 'b81e3d5de15772107f447756abe0cbe4'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_bc1e3d5de15772107f447756abe0cbcc'
+                            element: 'changed_fields'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'b85471ea3b7a3a5062f31831a3e45a85'
+                        deleted: true
+                        key: {
+                            document_key: 'f85471ea3b7a3a5062f31831a3e45a82'
+                            variable: '707dd180c32222002841b63b12d3aecb'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: 'b85471ea3b7a3a5062f31831a3e45af3'
+                        deleted: true
+                        key: {
+                            model: 'e45431ea3b7a3a5062f31831a3e45a74'
+                            element: 'current'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: 'b85e65a4bf86459c912b2058f4ce0ede'
                         key: {
@@ -6084,6 +10194,226 @@ declare global {
                         key: {
                             name: 'x_snc_forecast_v_0_cost_center_budget_history'
                             element: 'owner'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'b895f3d43bda365062f31831a3e45a50'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_step_ext_output_ac95f3d43bda365062f31831a3e45a27'
+                            element: 'sn_auth_token'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'b895f3d43bda365062f31831a3e45a80'
+                        deleted: true
+                        key: {
+                            document_key: 'ac95f3d43bda365062f31831a3e45a27'
+                            variable: 'ccfb3b30c3242110e6a899ccc840dde5'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'b898b1073b91fa900ad1a021a3e45a57'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f89831073b91fa900ad1a021a3e45a43'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_expense_transaction_event'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'amount_usd'
+                            position: '2'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'b898b1073b91fa900ad1a021a3e45a58'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f89831073b91fa900ad1a021a3e45a43'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_expense_transaction_event'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'correlation_id'
+                            position: '4'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'b898b1073b91fa900ad1a021a3e45a59'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f89831073b91fa900ad1a021a3e45a43'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_expense_transaction_event'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'schema_version'
+                            position: '6'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'b898b1073b91fa900ad1a021a3e45a5a'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f89831073b91fa900ad1a021a3e45a43'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_expense_transaction_event'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'event_id'
+                            position: '8'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'b898b1073b91fa900ad1a021a3e45a5b'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f89831073b91fa900ad1a021a3e45a43'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_expense_transaction_event'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: '.split'
+                            position: '10'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'b898b1073b91fa900ad1a021a3e45a5c'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f89831073b91fa900ad1a021a3e45a43'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_expense_transaction_event'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'cost_center'
+                            position: '12'
+                        }
+                    },
+                    {
+                        table: 'sys_user_role'
+                        id: 'b8fd6da13bf8be5062f31831a3e45af9'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0.user'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_config'
+                        id: 'b9751e6c47230bd4037d0fadf26d436f'
+                        deleted: true
+                        key: {
+                            agent: 'f575da6c47230bd4037d0fadf26d43fd'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_step_ext_input'
+                        id: 'b9bb3d6e4c8a4bd7b464e57ed5f35ab1'
+                        key: {
+                            model: '02ed6ae13045489f9575a52beb445773'
+                            element: 'event_id'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'b9e0b3d43b5a365062f31831a3e45a3a'
+                        deleted: true
+                        key: {
+                            document_key: 'aa7c63d43bd6365062f31831a3e45af2'
+                            variable: 'd6ade3b0c3e02110e6a899ccc840dde6'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'ba71d9143bda72900ad1a021a3e45a72'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_output_2a71d9143bda72900ad1a021a3e45a0f'
+                            element: 'sum'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'fx_price'
+                        id: 'baa03eb23bb6f61062f31831a3e45acd'
+                        deleted: true
+                        key: {
+                            id: 'eea03eb23bb6f61062f31831a3e45a9c'
+                            field: 'rec_price_if_checked'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: 'baca05c735a94c80bb7fdefe5074918b'
+                        deleted: true
+                        key: {
+                            agent: '6a1f4bdf4da043b39900971b2129c34a'
+                            tool: '52d3366f927a4edcbe99647d98cfba1b'
+                            name: 'Extract Cost Center'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: 'bb210ad13b46be5062f31831a3e45ac8'
+                        deleted: true
+                        key: {
+                            sys_security_acl: 'bb210ad13b46be5062f31831a3e45a37'
+                            sys_user_role: {
+                                id: '1721c6d13b46be5062f31831a3e45a29'
+                                key: {
+                                    name: 'x_snc_forecast_v_0.cost_center_budget_history_user'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_output'
+                        id: 'bb218e0b3b15fa900ad1a021a3e45af3'
+                        deleted: true
+                        key: {
+                            model: '04c042c73b15fa900ad1a021a3e45ab7'
+                            element: '__action_status__'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_status_metadata'
+                        id: 'bb55c94a47585710037d0fadf26d43ce'
+                        deleted: true
+                        key: {
+                            action_type_id: '9755894a47585710037d0fadf26d4326'
                         }
                     },
                     {
@@ -6107,6 +10437,24 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_hub_flow_input'
+                        id: 'bc5b64973b91be900ad1a021a3e45a57'
+                        deleted: true
+                        key: {
+                            model: 'a94b28573b91be900ad1a021a3e45a76'
+                            element: 'changed_fields'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'bc95f3d43bda365062f31831a3e45a7d'
+                        deleted: true
+                        key: {
+                            document_key: 'ac95f3d43bda365062f31831a3e45a27'
+                            variable: 'c1fee734c3e02110e6a899ccc840dde9'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: 'bc9880b69c574cd5a087a657cb83c8f1'
                         key: {
@@ -6116,11 +10464,96 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_documentation'
+                        id: 'bca9824f3b95fa900ad1a021a3e45ae4'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_action_output_0861ca4b3b15fa900ad1a021a3e45afb'
+                            element: 'sum'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_team_member'
+                        id: 'bced472b3baaf6500ad1a021a3e45a71'
+                        deleted: true
+                        key: {
+                            agent: 'e61f42af3bee76500ad1a021a3e45ab0'
+                            team: '046db51eff942210d09effffffffffdb'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'bd213b663bb67e5062f31831a3e45ac8'
+                        deleted: true
+                        key: {
+                            name: 'service_risk_assessment_view'
+                            element: 'NULL'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'bd8f45183b9a72900ad1a021a3e45a4b'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_5d8f05183b9a72900ad1a021a3e45a99'
+                            element: 'changed_fields'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'be71d9143bda72900ad1a021a3e45a55'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_2a71d9143bda72900ad1a021a3e45a0f'
+                            element: 'event_id'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_status_metadata'
+                        id: 'be7ca3d43bd6365062f31831a3e45a85'
+                        deleted: true
+                        key: {
+                            action_type_id: 'b05c63943bd6365062f31831a3e45aaa'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_step_ext_input'
+                        id: 'beb602433b95fa900ad1a021a3e45a8c'
+                        deleted: true
+                        key: {
+                            model: 'cc610e4b3b15fa900ad1a021a3e45a02'
+                            element: 'valueb'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: 'bf55c94a47585710037d0fadf26d43c9'
+                        deleted: true
+                        key: {
+                            id: '9755894a47585710037d0fadf26d4326'
+                            table: 'var__m_sys_hub_action_output_9755894a47585710037d0fadf26d4326'
+                            field: '__action_status__'
+                        }
+                    },
+                    {
                         table: 'sn_glider_source_artifact_m2m'
                         id: 'bf65c7076ae742d1924c97d2c229481a'
                         key: {
                             application_file: '6fc36fdb0cd84b34ab889529b862cdba'
                             source_artifact: '2f94369ac338497bbfd65986d0655d20'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_output'
+                        id: 'bfbad15c3b9e72900ad1a021a3e45af9'
+                        deleted: true
+                        key: {
+                            model: '2a71d9143bda72900ad1a021a3e45a0f'
+                            element: 'finance_case'
                         }
                     },
                     {
@@ -6140,11 +10573,109 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_hub_flow_input'
+                        id: 'c154436e3b8272900ad1a021a3e45a4c'
+                        deleted: true
+                        key: {
+                            model: '4d54436e3b8272900ad1a021a3e45a47'
+                            element: 'event_id'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: 'c154b1ea3b7a3a5062f31831a3e45a11'
+                        deleted: true
+                        key: {
+                            model: 'e45431ea3b7a3a5062f31831a3e45a74'
+                            element: 'changed_fields'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'c19537d43bda365062f31831a3e45a51'
+                        deleted: true
+                        key: {
+                            document_key: '6095f3d43bda365062f31831a3e45a0e'
+                            variable: '059537d43bda365062f31831a3e45a33'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'c1eb388a3bd85710a0db3141a3e45a00'
+                        deleted: true
+                        key: {
+                            document_key: '8debf48a3bd85710a0db3141a3e45ad3'
+                            variable: '71aa7f6647032200b4fad7527c9a719b'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'c1eb388a3bd85710a0db3141a3e45a4c'
+                        key: {
+                            name: 'var__m_sys_hub_action_output_7cebf48a3bd85710a0db3141a3e45ab9'
+                            element: '__action_status__'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_output'
+                        id: 'c1eb388a3bd85710a0db3141a3e45a4e'
+                        key: {
+                            model: '7cebf48a3bd85710a0db3141a3e45ab9'
+                            element: '__dont_treat_as_error__'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_step_ext_output'
+                        id: 'c1f1c20f3b15fa900ad1a021a3e45a2b'
+                        deleted: true
+                        key: {
+                            model: 'a7218e0b3b15fa900ad1a021a3e45ad6'
+                            element: 'sum'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'c28d2b5c3bd6365062f31831a3e45a29'
+                        deleted: true
+                        key: {
+                            document_key: 'aa7c63d43bd6365062f31831a3e45af2'
+                            variable: '5e433ff4c3e02110e6a899ccc840dd2b'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: 'c2d7792c7e474cda938be967ff1b17bb'
                         key: {
                             name: 'x_snc_forecast_v_0_cost_center_budget_history'
                             element: 'variance_pct'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_version'
+                        id: 'c2e51e2047630bd4037d0fadf26d43fc'
+                        deleted: true
+                        key: {
+                            target_id: '8ee51e2047630bd4037d0fadf26d43f8'
+                            version_name: 'Version 1'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_config'
+                        id: 'c2e55e2047630bd4037d0fadf26d43bb'
+                        deleted: true
+                        key: {
+                            agent: '8ee51e2047630bd4037d0fadf26d43f8'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'c351b36a3bb67e5062f31831a3e45ac3'
+                        deleted: true
+                        key: {
+                            name: 'regulatory_impact_assessment_view'
+                            element: 'cds_string_4'
                             language: 'en'
                         }
                     },
@@ -6166,11 +10697,95 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_element'
+                        id: 'c598b1073b91fa900ad1a021a3e45a83'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f89831073b91fa900ad1a021a3e45a43'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_expense_transaction_event'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'vendor'
+                            position: '15'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'c598b1073b91fa900ad1a021a3e45a84'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f89831073b91fa900ad1a021a3e45a43'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_expense_transaction_event'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'gl_account'
+                            position: '17'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'c598b1073b91fa900ad1a021a3e45a85'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f89831073b91fa900ad1a021a3e45a43'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_expense_transaction_event'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: '.end_split'
+                            position: '19'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: 'c62942b4a3f84bb78988d18bea9ca753'
                         key: {
                             name: 'x_snc_forecast_v_0_variance_task'
                             element: 'threshold_value'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'c68111543bda72900ad1a021a3e45af8'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_output_e18111543bda72900ad1a021a3e45a73'
+                            element: 'sum'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'c68de75c3bd6365062f31831a3e45ae3'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_step_ext_output_aa7c63d43bd6365062f31831a3e45af2'
+                            element: 'sn_auth_token'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: 'c71a3e223bce32900ad1a021a3e45a1f'
+                        deleted: true
+                        key: {
+                            agent: 'fbc138e23b38b2d062f31831a3e45a65'
+                            tool: '8021ddea2b0d52101d72fb466e91bfd1'
+                            name: 'Search for Cost Center History'
                         }
                     },
                     {
@@ -6182,12 +10797,87 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_variable_value'
+                        id: 'c8610e4b3b15fa900ad1a021a3e45a19'
+                        deleted: true
+                        key: {
+                            document_key: 'cc610e4b3b15fa900ad1a021a3e45a02'
+                            variable: 'f5e56d79b3101300176b051a16a8dce4'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: 'c9151ede894b44968585db41b6edd944'
                         key: {
                             name: 'x_snc_forecast_v_0_cost_center_budget_history'
                             element: 'cost_center'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: 'c99537d43bda365062f31831a3e45a50'
+                        deleted: true
+                        key: {
+                            id: '6095f3d43bda365062f31831a3e45a0e'
+                            table: 'var__m_sys_hub_action_output_6095f3d43bda365062f31831a3e45a0e'
+                            field: '__dont_treat_as_error__'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_step_ext_output'
+                        id: 'c9c814b014844915af8ace4b1fd219ff'
+                        key: {
+                            model: '02ed6ae13045489f9575a52beb445773'
+                            element: 'over_budget'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_form_section'
+                        id: 'c9f94a663bf036d062f31831a3e45a4e'
+                        deleted: true
+                        key: {
+                            sys_ui_form: {
+                                id: 'f0f906663bf036d062f31831a3e45a4b'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            sys_ui_section: {
+                                id: '81f94a663bf036d062f31831a3e45a18'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    caption: 'Choice List Specification'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_ui_form_section'
+                        id: 'c9f94a663bf036d062f31831a3e45a7d'
+                        deleted: true
+                        key: {
+                            sys_ui_form: {
+                                id: '0df94a663bf036d062f31831a3e45a77'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    view: '7966be310a0a0b8c00bd504090503227'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            sys_ui_section: {
+                                id: '81f94a663bf036d062f31831a3e45a7a'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    caption: 'Function Definition'
+                                    view: '7966be310a0a0b8c00bd504090503227'
+                                    sys_domain: 'global'
+                                }
+                            }
                         }
                     },
                     {
@@ -6209,6 +10899,26 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_documentation'
+                        id: 'ca718b6e3b4272900ad1a021a3e45a4e'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_65714b6e3b4272900ad1a021a3e45ac5'
+                            element: 'event_id'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'cb51b36a3bb67e5062f31831a3e45a4f'
+                        deleted: true
+                        key: {
+                            name: 'regulatory_impact_assessment_view'
+                            element: 'cds_string_1'
+                            language: 'en'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: 'cb8c2a645be746ab895525a9e70fa9d6'
                         key: {
@@ -6224,6 +10934,113 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_hub_action_output'
+                        id: 'cc610e4b3b15fa900ad1a021a3e45a1b'
+                        deleted: true
+                        key: {
+                            model: '0861ca4b3b15fa900ad1a021a3e45afb'
+                            element: '__action_status__'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'cc9d791de15772107f447756abe0cb65'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_6facf999e15772107f447756abe0cb65'
+                            element: 'changed_fields'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: 'cd54b1ea3b7a3a5062f31831a3e45a65'
+                        deleted: true
+                        key: {
+                            id: '0d54b1ea3b7a3a5062f31831a3e45a5f'
+                            table: 'var__m_sys_hub_action_input_0b63e51a53c7121059e0ddeeff7b12b5'
+                            field: 'target_record'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'cd98b1073b91fa900ad1a021a3e45a82'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f89831073b91fa900ad1a021a3e45a43'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_expense_transaction_event'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'billing_period'
+                            position: '14'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'cd98b1073b91fa900ad1a021a3e45a83'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f89831073b91fa900ad1a021a3e45a43'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_expense_transaction_event'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'invoice_id'
+                            position: '16'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'cd98b1073b91fa900ad1a021a3e45a84'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f89831073b91fa900ad1a021a3e45a43'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_expense_transaction_event'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'timestamp'
+                            position: '18'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: 'ce75656d3b9fcb10a0db3141a3e45ae3'
+                        deleted: true
+                        key: {
+                            sys_security_acl: '4b1f86af3bee76500ad1a021a3e45a48'
+                            sys_user_role: {
+                                id: '7fcaa702933002009c8579b4f47ffbde'
+                                key: {
+                                    name: 'snc_internal'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'ce8111543bda72900ad1a021a3e45a91'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_e18111543bda72900ad1a021a3e45a73'
+                            element: 'event_id'
+                            language: 'en'
+                        }
+                    },
+                    {
                         table: 'sn_aia_tool'
                         id: 'cef68c77803a45ebb6d16a617e28015c'
                         key: {
@@ -6231,10 +11048,67 @@ declare global {
                         }
                     },
                     {
+                        table: 'item_option_new'
+                        id: 'cfa07eb23bb6f61062f31831a3e45a76'
+                        deleted: true
+                        key: {
+                            cat_item: '20a0fa7a3b3a72500ad1a021a3e45a15'
+                            variable_set: 'NULL'
+                            name: 'a_1ea0bab23bb6f61062f31831a3e45a97_run_unload'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'd1613f6a3bb67e5062f31831a3e45a08'
+                        deleted: true
+                        key: {
+                            name: 'risk_assessment_for_ai_asset_inventory_view'
+                            element: 'cds_risk_response_task'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: 'd1fc47912cf94fd18fd55bc758b1939f'
+                        key: {
+                            agent: '6a1f4bdf4da043b39900971b2129c34a'
+                            tool: '07df37c747d8d790037d0fadf26d43a8'
+                            name: 'Search for Expense Transactions History'
+                        }
+                    },
+                    {
                         table: 'sn_aia_agent_config'
                         id: 'd2c747cff7744720b9a9273667c478b9'
                         key: {
                             agent: '116a31874a154caaa19a6f5270288c60'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: 'd45c02ad873e4deda1aaeaf5f27ea5ed'
+                        deleted: true
+                        key: {
+                            agent: '6a1f4bdf4da043b39900971b2129c34a'
+                            tool: '39fc103b234d4aa283308888259125a6'
+                            name: 'Search for Cost Center History'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'd4610e4b3b15fa900ad1a021a3e45a5d'
+                        deleted: true
+                        key: {
+                            document_key: '0861ca4b3b15fa900ad1a021a3e45afb'
+                            variable: '4c610e4b3b15fa900ad1a021a3e45a52'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: 'd49db91de15772107f447756abe0cb00'
+                        deleted: true
+                        key: {
+                            model: 'd49d791de15772107f447756abe0cbd7'
+                            element: 'table_name'
                         }
                     },
                     {
@@ -6263,11 +11137,63 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_documentation'
+                        id: 'd755894a47585710037d0fadf26d438e'
+                        key: {
+                            name: 'var__m_sys_hub_action_input_9755894a47585710037d0fadf26d4326'
+                            element: 'cost_center'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_input'
+                        id: 'd755894a47585710037d0fadf26d4390'
+                        key: {
+                            model: '9755894a47585710037d0fadf26d4326'
+                            element: 'event_id'
+                        }
+                    },
+                    {
                         table: 'sn_glider_source_artifact_m2m'
                         id: 'd75acd78cdf643aab320d89a040f3b6c'
                         key: {
                             application_file: '1c00daf32f1e4d3896b8cb3111b2e096'
                             source_artifact: '2f94369ac338497bbfd65986d0655d20'
+                        }
+                    },
+                    {
+                        table: 'sys_dictionary'
+                        id: 'd808e710c9fa46499fdc77cff5398ca5'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_df_cc_summary'
+                            element: 'u_actual_amount_usd'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_status_metadata'
+                        id: 'd8610e4b3b15fa900ad1a021a3e45a6b'
+                        deleted: true
+                        key: {
+                            action_type_id: '0861ca4b3b15fa900ad1a021a3e45afb'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'd90653ee3b4a72900ad1a021a3e45a88'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f80613ee3b4a72900ad1a021a3e45abc'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_cost_center_budget_history'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'fiscal_year'
+                            position: '3'
                         }
                     },
                     {
@@ -6278,10 +11204,100 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_documentation'
+                        id: 'd961fb6a3bb67e5062f31831a3e45a47'
+                        deleted: true
+                        key: {
+                            name: 'risk_assessment_for_ai_asset_inventory_view'
+                            element: 'cds_risk_assessment'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'd965cd4a47585710037d0fadf26d43a7'
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_9565cd4a47585710037d0fadf26d439a'
+                            element: 'event_id'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_form_section'
+                        id: 'd9f94a663bf036d062f31831a3e45af7'
+                        deleted: true
+                        key: {
+                            sys_ui_form: {
+                                id: '0df94a663bf036d062f31831a3e45a77'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    view: '7966be310a0a0b8c00bd504090503227'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            sys_ui_section: {
+                                id: '1df94a663bf036d062f31831a3e45af1'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    caption: 'Dependent Field'
+                                    view: '7966be310a0a0b8c00bd504090503227'
+                                    sys_domain: 'global'
+                                }
+                            }
+                        }
+                    },
+                    {
                         table: 'sys_ux_lib_asset'
                         id: 'da27e6b324f4443087ff3f09ea95917c'
+                        deleted: false
                         key: {
                             name: 'x_snc_forecast_v_0/main'
+                        }
+                    },
+                    {
+                        table: 'sys_gen_ai_skill'
+                        id: 'da54b5ea3b7a3a5062f31831a3e45aed'
+                        deleted: true
+                        key: {
+                            skill_document: 'd254b5ea3b7a3a5062f31831a3e45ab7'
+                            skill_table: 'sn_aia_skill_metadata'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'dc0d6b05746948b38b5dab033764833d'
+                        key: {
+                            name: 'var__m_sys_hub_action_output_b5fbff25888441e7a2301c5e4729248e'
+                            element: '__action_status__'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'dc61b76a3bb67e5062f31831a3e45a87'
+                        deleted: true
+                        key: {
+                            name: 'esg_material_topic_assessment_view'
+                            element: 'NULL'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'dd61fb6a3bb67e5062f31831a3e45afd'
+                        deleted: true
+                        key: {
+                            name: 'risk_assessment_for_ai_asset_inventory_view'
+                            element: 'cds_string_2'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: 'dd65cd4a47585710037d0fadf26d439c'
+                        key: {
+                            model: '9565cd4a47585710037d0fadf26d439a'
+                            element: 'event_id'
                         }
                     },
                     {
@@ -6301,11 +11317,132 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_documentation'
+                        id: 'e0654d4a47585710037d0fadf26d43e1'
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_e0654d4a47585710037d0fadf26d43ce'
+                            element: 'cost_center'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: 'e0654d4a47585710037d0fadf26d43f2'
+                        key: {
+                            model: 'e0654d4a47585710037d0fadf26d43ce'
+                            element: 'event_id'
+                        }
+                    },
+                    {
+                        table: 'sys_complex_object'
+                        id: 'e0780d8f010732107f44189f958a047f'
+                        deleted: true
+                        key: {
+                            name: 'FDec780d8fad073210898185d4052ebb7e'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: 'e18111543bda72900ad1a021a3e45a76'
+                        deleted: true
+                        key: {
+                            model: 'e18111543bda72900ad1a021a3e45a73'
+                            element: 'cost_center'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_tool'
+                        id: 'e2107907018b32107f44189f958a04cf'
+                        deleted: true
+                        key: {
+                            name: 'Extract Event ID'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'e2217f663bb67e5062f31831a3e45ad6'
+                        deleted: true
+                        key: {
+                            name: 'service_risk_assessment_view'
+                            element: 'cds_string_9'
+                            language: 'en'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: 'e2f69e7cf64b48b496cc0cc6c949c7f0'
                         key: {
                             name: 'x_snc_forecast_v_0_lab_asset'
                             element: 'name'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'e3218e0b3b15fa900ad1a021a3e45af1'
+                        deleted: true
+                        key: {
+                            document_key: 'a7218e0b3b15fa900ad1a021a3e45ad6'
+                            variable: '71aa7f6647032200b4fad7527c9a719b'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_output'
+                        id: 'e355c94a47585710037d0fadf26d4358'
+                        key: {
+                            model: '9755894a47585710037d0fadf26d4326'
+                            element: '__dont_treat_as_error__'
+                        }
+                    },
+                    {
+                        table: 'sys_agent_access_role_configuration'
+                        id: 'e3c25599444332107f4409fcffda3431'
+                        deleted: true
+                        key: {
+                            agent: 'fbc138e23b38b2d062f31831a3e45a65'
+                        }
+                    },
+                    {
+                        table: 'm2m_sp_portal_taxonomy'
+                        id: 'e3e8c7b23bbab2500ad1a021a3e45ace'
+                        deleted: true
+                        key: {
+                            sp_portal: 'ceecd1b147dcce509e0b656b416d43da'
+                            taxonomy: '1f5d5a40c3203010069aec4b7d40dd93'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'e50653ee3b4a72900ad1a021a3e45ad7'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f80613ee3b4a72900ad1a021a3e45abc'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_cost_center_budget_history'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'variance_pct'
+                            position: '9'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: 'e55435ea3b7a3a5062f31831a3e45ab2'
+                        deleted: true
+                        key: {
+                            model: '1154f1ea3b7a3a5062f31831a3e45ad8'
+                            element: 'table_name'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_tool'
+                        id: 'e56b2f2f3b6ef21062f31831a3e45a42'
+                        deleted: true
+                        key: {
+                            name: 'Get Details in Snowflake MCP'
                         }
                     },
                     {
@@ -6324,6 +11461,116 @@ declare global {
                     },
                     {
                         table: 'sys_documentation'
+                        id: 'e7acf999e15772107f447756abe0cb7c'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_6facf999e15772107f447756abe0cb65'
+                            element: 'table_name'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_output'
+                        id: 'e8030a033b55fa900ad1a021a3e45aa9'
+                        deleted: true
+                        key: {
+                            model: 'b36d314b3bd1fa900ad1a021a3e45a7a'
+                            element: 'sum'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'e8654d4a47585710037d0fadf26d43f9'
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_e0654d4a47585710037d0fadf26d43ce'
+                            element: 'event_id'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: 'e86dfd9090f74fcf89c68975a4c062b7'
+                        key: {
+                            id: 'b5fbff25888441e7a2301c5e4729248e'
+                            table: 'var__m_sys_hub_action_output_b5fbff25888441e7a2301c5e4729248e'
+                            field: 'new_actual'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'e90653ee3b4a72900ad1a021a3e45ad4'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f80613ee3b4a72900ad1a021a3e45abc'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_cost_center_budget_history'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: 'owner'
+                            position: '5'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: 'e90bc0203b96765062f31831a3e45a15'
+                        deleted: true
+                        key: {
+                            agent: '290bc4ec3b56765062f31831a3e45a86'
+                            tool: '8021ddea2b0d52101d72fb466e91bfd1'
+                            name: 'Search for Cost Center History'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: 'e95435ea3b7a3a5062f31831a3e45a4f'
+                        deleted: true
+                        key: {
+                            model: '1154f1ea3b7a3a5062f31831a3e45ad8'
+                            element: 'changed_fields'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: 'e99ac340985048a992fcc723e3a05b0e'
+                        key: {
+                            model: 'b31d2a0194bb4b46922c8af7602e0b36'
+                            element: 'cost_center'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_input'
+                        id: 'e9b3b24c86d646cc98f86afe1f05ce98'
+                        key: {
+                            model: 'b5fbff25888441e7a2301c5e4729248e'
+                            element: 'cost_center'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: 'ea1f46af3bee76500ad1a021a3e45a49'
+                        deleted: true
+                        key: {
+                            agent: 'e61f42af3bee76500ad1a021a3e45ab0'
+                            tool: '8021ddea2b0d52101d72fb466e91bfd1'
+                            name: 'Search for Cost Center History'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: 'ea8f4e83691f47b8b40b9b6eaf3ac419'
+                        deleted: true
+                        key: {
+                            agent: '6a1f4bdf4da043b39900971b2129c34a'
+                            tool: '9c0e55f111c4436085cf3b322e6f821c'
+                            name: 'Search for Expense Transactions History'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
                         id: 'eac69dc7e2d1414684f35c78ba9f907c'
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transactions'
@@ -6334,6 +11581,7 @@ declare global {
                     {
                         table: 'sn_aia_tool'
                         id: 'eadff3c747d8d790037d0fadf26d4371'
+                        deleted: false
                         key: {
                             name: 'Budget Variance Analysis'
                         }
@@ -6348,10 +11596,265 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_hub_step_ext_output'
+                        id: 'eb55894a47585710037d0fadf26d43d1'
+                        deleted: true
+                        key: {
+                            model: '5755894a47585710037d0fadf26d439e'
+                            element: 'new_actual'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'eb55894a47585710037d0fadf26d43fb'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_step_ext_output_5755894a47585710037d0fadf26d439e'
+                            element: 'new_actual'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'eb61f7aa3bb67e5062f31831a3e45a27'
+                        deleted: true
+                        key: {
+                            name: 'auditable_unit_risk_assessment_view'
+                            element: 'cds_control'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: 'ec276ee155804559b29a17fafd9cc3f3'
+                        key: {
+                            agent: '6a1f4bdf4da043b39900971b2129c34a'
+                            tool: '87b05500976f43b48c98f72620bf6011'
+                            name: 'Search for Cost Center Summary'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'ec5b64973b91be900ad1a021a3e45a4d'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_a94b28573b91be900ad1a021a3e45a76'
+                            element: 'table_name'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_user_role'
+                        id: 'ecfd6da13bf8be5062f31831a3e45aa7'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0.admin'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: 'ed0bc0203b96765062f31831a3e45a07'
+                        deleted: true
+                        key: {
+                            agent: '290bc4ec3b56765062f31831a3e45a86'
+                            tool: '70854bae3b4272900ad1a021a3e45a34'
+                            name: 'Extract Cost Center'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'ed5435ea3b7a3a5062f31831a3e45a0d'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_1154f1ea3b7a3a5062f31831a3e45ad8'
+                            element: 'current'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_agent_tool_m2m'
+                        id: 'ee10f907018b32107f44189f958a047c'
+                        deleted: true
+                        key: {
+                            agent: '290bc4ec3b56765062f31831a3e45a86'
+                            tool: 'e2107907018b32107f44189f958a04cf'
+                            name: 'Extract Event ID'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'ee217f663bb67e5062f31831a3e45aad'
+                        deleted: true
+                        key: {
+                            name: 'service_risk_assessment_view'
+                            element: 'cds_string_6'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'ee2a7fdb3e49476bb199621f07a93c07'
+                        key: {
+                            document_key: 'f2c58b83948840af9d118c76709e36d6'
+                            variable: '71aa7f6647032200b4fad7527c9a719b'
+                        }
+                    },
+                    {
+                        table: 'item_option_new'
+                        id: 'eea03eb23bb6f61062f31831a3e45a9c'
+                        deleted: true
+                        key: {
+                            cat_item: '20a0fa7a3b3a72500ad1a021a3e45a15'
+                            variable_set: 'NULL'
+                            name: 'load_flow_name'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: 'ef55c94a47585710037d0fadf26d4337'
+                        deleted: true
+                        key: {
+                            id: '5755894a47585710037d0fadf26d439e'
+                            table: 'var__m_sys_hub_step_ext_input_5755894a47585710037d0fadf26d439e'
+                            field: 'cost_center'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_output'
+                        id: 'ef55c94a47585710037d0fadf26d4347'
+                        key: {
+                            model: '9755894a47585710037d0fadf26d4326'
+                            element: '__action_status__'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'ef55c94a47585710037d0fadf26d434d'
+                        key: {
+                            name: 'var__m_sys_hub_action_output_9755894a47585710037d0fadf26d4326'
+                            element: '__action_status__'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_input'
+                        id: 'efa1c28b3b15fa900ad1a021a3e45a42'
+                        deleted: true
+                        key: {
+                            model: '04c042c73b15fa900ad1a021a3e45ab7'
+                            element: 'valuea'
+                        }
+                    },
+                    {
                         table: 'ua_table_licensing_config'
                         id: 'efa6d1b56ad9444d987336a33c248868'
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transactions'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: 'eff6c2833b95fa900ad1a021a3e45ad4'
+                        deleted: true
+                        key: {
+                            model: 'e3f6c2833b95fa900ad1a021a3e45ad3'
+                            element: 'cost_center'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_input'
+                        id: 'eff6c2833b95fa900ad1a021a3e45aed'
+                        deleted: true
+                        key: {
+                            model: 'e3f6c2833b95fa900ad1a021a3e45ad3'
+                            element: 'event_id'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'f0658d4a47585710037d0fadf26d4354'
+                        key: {
+                            name: 'var__m_sys_hub_flow_output_e0654d4a47585710037d0fadf26d43ce'
+                            element: 'sum'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_complex_object'
+                        id: 'f095f3d43bda365062f31831a3e45a42'
+                        deleted: true
+                        key: {
+                            name: 'FDfc95f3d497da365056391ff925d38641'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_step_ext_output'
+                        id: 'f095f3d43bda365062f31831a3e45a4c'
+                        deleted: true
+                        key: {
+                            model: 'ac95f3d43bda365062f31831a3e45a27'
+                            element: 'sn_auth_token'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_element'
+                        id: 'f098b1073b91fa900ad1a021a3e45a56'
+                        deleted: true
+                        key: {
+                            sys_ui_section: {
+                                id: 'f89831073b91fa900ad1a021a3e45a43'
+                                key: {
+                                    name: 'x_snc_forecast_v_0_expense_transaction_event'
+                                    caption: 'NULL'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            element: '.begin_split'
+                            position: '0'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'f0d3533405074684a67003e926855e14'
+                        key: {
+                            name: 'var__m_sys_hub_flow_output_5753789ddc1148218383f7928a2fd8ad'
+                            element: 'cost_center'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'f0e2c9ed90f644e6a29886c0fb21ef0f'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_df_cc_summary'
+                            element: 'u_baseline_amount_usd'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_form'
+                        id: 'f0f906663bf036d062f31831a3e45a4b'
+                        deleted: true
+                        key: {
+                            name: 'sys_df_data_dictionary'
+                            view: {
+                                id: 'Default view'
+                                key: {
+                                    name: 'NULL'
+                                }
+                            }
+                            sys_domain: 'global'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_output'
+                        id: 'f10c4fe23b8672900ad1a021a3e45a72'
+                        deleted: true
+                        key: {
+                            model: '4d54436e3b8272900ad1a021a3e45a47'
+                            element: 'cost_center'
                         }
                     },
                     {
@@ -6363,6 +11866,14 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_ui_page'
+                        id: 'f172cab24f2a48bfac40103f9e43dfce'
+                        deleted: true
+                        key: {
+                            endpoint: 'x_snc_forecast_v_0_wdf_lab.do'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: 'f1d4be0c78ba454395a1dce0c640c28f'
                         key: {
@@ -6371,11 +11882,64 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_documentation'
+                        id: 'f1ff27ee3b82b2900ad1a021a3e45ab9'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_output_65714b6e3b4272900ad1a021a3e45ac5'
+                            element: 'vendor'
+                            language: 'en'
+                        }
+                    },
+                    {
                         table: 'sys_dictionary'
                         id: 'f27738e66e4c4ff9b92ff03f784067ca'
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transaction_event'
                             element: 'sent_from'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_output'
+                        id: 'f2890e0f3b95fa900ad1a021a3e45a18'
+                        deleted: true
+                        key: {
+                            model: '04c042c73b15fa900ad1a021a3e45ab7'
+                            element: 'sum'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_status_metadata'
+                        id: 'f321ce0b3b15fa900ad1a021a3e45a2c'
+                        deleted: true
+                        key: {
+                            action_type_id: '04c042c73b15fa900ad1a021a3e45ab7'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_output'
+                        id: 'f355c94a47585710037d0fadf26d4386'
+                        key: {
+                            model: '9755894a47585710037d0fadf26d4326'
+                            element: 'owner'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'f355c94a47585710037d0fadf26d43ca'
+                        deleted: true
+                        key: {
+                            document_key: '9755894a47585710037d0fadf26d4326'
+                            variable: 'a755c94a47585710037d0fadf26d433e'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'f3a241e944c2497f8ec4c65c734602c5'
+                        key: {
+                            name: 'var__m_sys_hub_action_input_b5fbff25888441e7a2301c5e4729248e'
+                            element: 'cost_center'
+                            language: 'en'
                         }
                     },
                     {
@@ -6388,11 +11952,177 @@ declare global {
                     },
                     {
                         table: 'sys_documentation'
+                        id: 'f3f606833b95fa900ad1a021a3e45a22'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_output_e3f6c2833b95fa900ad1a021a3e45ad3'
+                            element: 'sum'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'f45471ea3b7a3a5062f31831a3e45af2'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_e45431ea3b7a3a5062f31831a3e45a74'
+                            element: 'table_name'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_version'
+                        id: 'f45c56ad47e7cb10037d0fadf26d43fc'
+                        deleted: true
+                        key: {
+                            target_id: 'e85c5ee547e7cb10037d0fadf26d4306'
+                            version_name: 'V1'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
                         id: 'f495de2e638c4fbea0b38a0f78a618ad'
                         key: {
                             name: 'x_snc_forecast_v_0_cost_center_budget_history'
                             element: 'variance'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_output'
+                        id: 'f4a9824f3b95fa900ad1a021a3e45ae1'
+                        deleted: true
+                        key: {
+                            model: '0861ca4b3b15fa900ad1a021a3e45afb'
+                            element: 'sum'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_page'
+                        id: 'f558b774c2a748f597f96276dcf0fd40'
+                        deleted: true
+                        key: {
+                            endpoint: 'x_snc_forecast_v_0_fundamentals.do'
+                        }
+                    },
+                    {
+                        table: 'sys_security_acl_role'
+                        id: 'f58bb9dd3b82be5062f31831a3e45a20'
+                        deleted: true
+                        key: {
+                            sys_security_acl: '3d8b79dd3b82be5062f31831a3e45ab4'
+                            sys_user_role: {
+                                id: 'fd1871593b42be5062f31831a3e45a09'
+                                key: {
+                                    name: 'x_snc_forecast_v_0.expense_transactions_user'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'f5e0b3d43b5a365062f31831a3e45a3c'
+                        deleted: true
+                        key: {
+                            document_key: 'aa7c63d43bd6365062f31831a3e45af2'
+                            variable: 'ccfb3b30c3242110e6a899ccc840dde5'
+                        }
+                    },
+                    {
+                        table: 'sys_element_mapping'
+                        id: 'f755c94a47585710037d0fadf26d43c9'
+                        deleted: true
+                        key: {
+                            id: '9755894a47585710037d0fadf26d4326'
+                            table: 'var__m_sys_hub_action_output_9755894a47585710037d0fadf26d4326'
+                            field: 'over_budget'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'f761f7aa3bb67e5062f31831a3e45a95'
+                        deleted: true
+                        key: {
+                            name: 'auditable_unit_risk_assessment_view'
+                            element: 'cds_string_2'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'f761f7aa3bb67e5062f31831a3e45ab3'
+                        deleted: true
+                        key: {
+                            name: 'auditable_unit_risk_assessment_view'
+                            element: 'cds_string_3'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_section'
+                        id: 'f80613ee3b4a72900ad1a021a3e45abc'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_cost_center_budget_history'
+                            caption: 'NULL'
+                            view: {
+                                id: 'Default view'
+                                key: {
+                                    name: 'NULL'
+                                }
+                            }
+                            sys_domain: 'global'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'f85471ea3b7a3a5062f31831a3e45a84'
+                        deleted: true
+                        key: {
+                            document_key: 'f85471ea3b7a3a5062f31831a3e45a82'
+                            variable: '2b9def50c31132002841b63b12d3ae5b'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_output'
+                        id: 'f8658d4a47585710037d0fadf26d434c'
+                        key: {
+                            model: 'e0654d4a47585710037d0fadf26d43ce'
+                            element: 'sum'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'f895f3d43bda365062f31831a3e45a7f'
+                        deleted: true
+                        key: {
+                            document_key: 'ac95f3d43bda365062f31831a3e45a27'
+                            variable: '2d5d7f70c3242110e6a899ccc840ddf0'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_section'
+                        id: 'f89831073b91fa900ad1a021a3e45a43'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_expense_transaction_event'
+                            caption: 'NULL'
+                            view: {
+                                id: 'Default view'
+                                key: {
+                                    name: 'NULL'
+                                }
+                            }
+                            sys_domain: 'global'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'f9e0b3d43b5a365062f31831a3e45a39'
+                        deleted: true
+                        key: {
+                            document_key: 'aa7c63d43bd6365062f31831a3e45af2'
+                            variable: 'c1fee734c3e02110e6a899ccc840dde9'
                         }
                     },
                     {
@@ -6405,12 +12135,133 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_hub_action_output'
+                        id: 'fb218e0b3b15fa900ad1a021a3e45af9'
+                        deleted: true
+                        key: {
+                            model: '04c042c73b15fa900ad1a021a3e45ab7'
+                            element: '__dont_treat_as_error__'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_action_output'
+                        id: 'fb55c94a47585710037d0fadf26d4371'
+                        key: {
+                            model: '9755894a47585710037d0fadf26d4326'
+                            element: 'short_description'
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: 'fb7757fb700a4dbe8df6109923b03911'
                         key: {
                             name: 'x_snc_forecast_v_0_expense_transaction_event'
                             element: 'sent_from'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'fc5471ea3b7a3a5062f31831a3e45a85'
+                        deleted: true
+                        key: {
+                            document_key: 'f85471ea3b7a3a5062f31831a3e45a82'
+                            variable: 'cf1e1980c32222002841b63b12d3aea0'
+                        }
+                    },
+                    {
+                        table: 'sys_documentation'
+                        id: 'fc5b64973b91be900ad1a021a3e45a8e'
+                        deleted: true
+                        key: {
+                            name: 'var__m_sys_hub_flow_input_a94b28573b91be900ad1a021a3e45a76'
+                            element: 'changed_fields'
+                            language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'fc95f3d43bda365062f31831a3e45a80'
+                        deleted: true
+                        key: {
+                            document_key: 'ac95f3d43bda365062f31831a3e45a27'
+                            variable: '156c7f30c3242110e6a899ccc840dd93'
+                        }
+                    },
+                    {
+                        table: 'sys_ui_form_section'
+                        id: 'fcf90a663bf036d062f31831a3e45af7'
+                        deleted: true
+                        key: {
+                            sys_ui_form: {
+                                id: 'f0f906663bf036d062f31831a3e45a4b'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                            sys_ui_section: {
+                                id: 'f8f90a663bf036d062f31831a3e45ad9'
+                                key: {
+                                    name: 'sys_df_data_dictionary'
+                                    caption: 'Default Value'
+                                    view: 'Default view'
+                                    sys_domain: 'global'
+                                }
+                            }
+                        }
+                    },
+                    {
+                        table: 'sys_user_role'
+                        id: 'fd1871593b42be5062f31831a3e45a09'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0.expense_transactions_user'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_version'
+                        id: 'fd751e6c47230bd4037d0fadf26d4302'
+                        deleted: true
+                        key: {
+                            target_id: 'f575da6c47230bd4037d0fadf26d43fd'
+                            version_name: 'Version 1'
+                        }
+                    },
+                    {
+                        table: 'sys_variable_value'
+                        id: 'fde0b3d43b5a365062f31831a3e45a3a'
+                        deleted: true
+                        key: {
+                            document_key: 'aa7c63d43bd6365062f31831a3e45af2'
+                            variable: '2d5d7f70c3242110e6a899ccc840ddf0'
+                        }
+                    },
+                    {
+                        table: 'sys_db_object'
+                        id: 'feda4f876d0c4e3e968bd99170cecae9'
+                        deleted: true
+                        key: {
+                            name: 'x_snc_forecast_v_0_df_cc_summary'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_output'
+                        id: 'ff6b5d503bde72900ad1a021a3e45a4b'
+                        deleted: true
+                        key: {
+                            model: 'e18111543bda72900ad1a021a3e45a73'
+                            element: 'finance_case'
+                        }
+                    },
+                    {
+                        table: 'sys_hub_flow_output'
+                        id: 'fff606833b95fa900ad1a021a3e45a1c'
+                        deleted: true
+                        key: {
+                            model: 'e3f6c2833b95fa900ad1a021a3e45ad3'
+                            element: 'sum'
                         }
                     },
                 ]
