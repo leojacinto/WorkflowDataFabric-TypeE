@@ -10848,6 +10848,14 @@ declare global {
                         }
                     },
                     {
+                        table: 'sn_aia_trigger_configuration'
+                        id: 'c9690393a9d44e959f58dfcd5e74eb96'
+                        key: {
+                            name: 'Create New Expense Transaction Event'
+                            usecase: 'NULL'
+                        }
+                    },
+                    {
                         table: 'sys_element_mapping'
                         id: 'c99537d43bda365062f31831a3e45a50'
                         deleted: true
@@ -11702,6 +11710,20 @@ declare global {
                             name: 'var__m_sys_hub_flow_input_1154f1ea3b7a3a5062f31831a3e45ad8'
                             element: 'current'
                             language: 'en'
+                        }
+                    },
+                    {
+                        table: 'sn_aia_trigger_agent_usecase_m2m'
+                        id: 'ee0bd9aa8dbf48ef97170eda50368916'
+                        key: {
+                            trigger_configuration: {
+                                id: 'c9690393a9d44e959f58dfcd5e74eb96'
+                                key: {
+                                    name: 'Create New Expense Transaction Event'
+                                    usecase: 'NULL'
+                                }
+                            }
+                            related_resource_record: '290bc4ec3b56765062f31831a3e45a86'
                         }
                     },
                     {

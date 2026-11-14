@@ -294,3 +294,8 @@ The Global agent "Forecast Variance Neon MCP Lab" and the 10 test SharePoint con
 - Not converted: the agent trigger (`sn_aia_trigger_configuration` 01be4c28...), the Snowflake MCP agent, the Trigger Variance Analysis flow.
 - The subflows the shipped tools call (65714b6e... Extract Cost Center, 2a71d914... Budget Variance Analysis) are not the same records as the ones converted from perelandra's current data (5753789d..., b31d2a01...). The ACL names `x_snc_forecast_v_0.cost_center_history` and `budget_variance_analysis` were confirmed against the 7021 flows.
 - `npx @servicenow/sdk build` passes. Not deployed.
+
+### IHub Trigger agent trigger added (2026-11-14)
+
+- The trigger "Create New Expense Transaction Event" (record create on Expense Transaction Event, channel b023fcb3..., run as owner) is now in `triggerConfig` of the hand-written agent file. The record has no objective template and no condition, so both are empty strings.
+- Still not converted: the Snowflake MCP agent and the Trigger Variance Analysis flow. Build passes, nothing deployed.

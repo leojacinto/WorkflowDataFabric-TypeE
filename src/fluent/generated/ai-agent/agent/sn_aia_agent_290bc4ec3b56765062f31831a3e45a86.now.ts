@@ -4,7 +4,7 @@ import { AiAgent } from '@servicenow/sdk/core'
 // "Forecast Variance Integration Hub Trigger": the agent the 7021 test used.
 // Converted by hand from the previous-version payload in the perelandra download (the SDK transform skips it because
 // that record is a deleted base version there). All five tools are linked in
-// ihub-agent-tool-links.now.ts (SDK tool ids come from the tool name, which collides with the Forecast Variance agent's tools). The long "proficiency" text is not carried over (the SDK's AiAgent type has no such field). The agent trigger (sn_aia_trigger_configuration 01be4c28...) is not converted.
+// ihub-agent-tool-links.now.ts (SDK tool ids come from the tool name, which collides with the Forecast Variance agent's tools). The long "proficiency" text is not carried over (the SDK's AiAgent type has no such field). The trigger "Create New Expense Transaction Event" (record create on Expense Transaction Event) is in triggerConfig.
 AiAgent({
     $id: Now.ID['290bc4ec3b56765062f31831a3e45a86'],
     name: "Forecast Variance Integration Hub Trigger",
@@ -33,5 +33,15 @@ AiAgent({
     dataAccess: {
         roleMap: ['admin'],
     },
-    triggerConfig: [],
+    triggerConfig: [
+        {
+            name: 'Create New Expense Transaction Event',
+            channel: 'b023fcb3537321106167ddeeff7b12a8',
+            targetTable: 'x_snc_forecast_v_0_expense_transaction_event',
+            triggerFlowDefinitionType: 'record_create',
+            runAs: 'owner',
+            objectiveTemplate: '',
+            triggerCondition: '',
+        },
+    ],
 })
