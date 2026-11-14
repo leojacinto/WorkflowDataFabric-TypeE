@@ -285,3 +285,12 @@ The Global agent "Forecast Variance Neon MCP Lab" and the 10 test SharePoint con
 - Not converted (the transform skipped them): the agents "Forecast Variance Integration Hub Trigger" and "Forecast Variance Snowflake MCP" (they sit under author_elective_update on perelandra), the flow "Trigger Variance Analysis", and the agent trigger configuration. The IHub Trigger agent is the one the 7021 test used, so it still needs another pass.
 - `npx @servicenow/sdk build` passes. Not deployed. Do not deploy before comparing with perelandra (see the deploy question above).
 - A stray metadata dump (199 MB, from `transform --table --id`) was moved out of the repo to the scratchpad; `src/plugin-xmls/` is now git-ignored.
+
+### IHub Trigger agent written by hand into the source (2026-11-14)
+
+- Why by hand: in the perelandra download the "Forecast Variance Integration Hub Trigger" agent only exists as a deleted previous version (state previous, action DELETE under author_elective_update), so the SDK converter skips it.
+- File: `src/fluent/generated/ai-agent/agent/sn_aia_agent_290bc4ec3b56765062f31831a3e45a86.now.ts` (name, description, role, instructions, admin data access, ACL type Any authenticated user). The long proficiency text is not carried over: the SDK agent type has no such field.
+- Tool links: `src/fluent/generated/ai-agent/mcp-tool/ihub-agent-tool-links.now.ts` links all five tools (Extract Cost Center, Search for Cost Center History, Search for Expense Transactions History, Budget Variance Analysis, Extract Event ID) by sys_id. The tool records themselves are not in the source: the SDK maps tool ids from the tool name, so defining them collides with the Forecast Variance agent's tools (the build reported duplicates).
+- Not converted: the agent trigger (`sn_aia_trigger_configuration` 01be4c28...), the Snowflake MCP agent, the Trigger Variance Analysis flow.
+- The subflows the shipped tools call (65714b6e... Extract Cost Center, 2a71d914... Budget Variance Analysis) are not the same records as the ones converted from perelandra's current data (5753789d..., b31d2a01...). The ACL names `x_snc_forecast_v_0.cost_center_history` and `budget_variance_analysis` were confirmed against the 7021 flows.
+- `npx @servicenow/sdk build` passes. Not deployed.

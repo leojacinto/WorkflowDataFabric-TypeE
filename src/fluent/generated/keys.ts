@@ -25,6 +25,10 @@ declare global {
                         table: 'sys_hub_action_type_definition'
                         id: '255f44c7556740189bb2feea4ea5b39b'
                     }
+                    '290bc4ec3b56765062f31831a3e45a86': {
+                        table: 'sn_aia_agent'
+                        id: '290bc4ec3b56765062f31831a3e45a86'
+                    }
                     '32f26b62a55648acb0ee75c637680279': {
                         table: 'sys_hub_flow'
                         id: '32f26b62a55648acb0ee75c637680279'
@@ -2539,6 +2543,10 @@ declare global {
                     fb193a7b6c994e389c646e0cad64117d: {
                         table: 'sys_hub_action_instance_v2'
                         id: 'fb193a7b6c994e389c646e0cad64117d'
+                    }
+                    'ihub-trigger-agent-acl': {
+                        table: 'sys_security_acl'
+                        id: '6f3d9c81f22b4726bebfe6f7bdffb6a7'
                     }
                     'lab-asset-dataflow-backend-components-png': {
                         table: 'x_snc_forecast_v_0_lab_asset'
@@ -5707,6 +5715,24 @@ declare global {
                         }
                     },
                     {
+                        table: 'sys_agent_access_role_mapping'
+                        id: '13814cec2f4f494c9ba5f0acec1b174b'
+                        key: {
+                            agent_access_config: {
+                                id: '3165cd4905fb422ea93accf24899a9e1'
+                                key: {
+                                    agent: '290bc4ec3b56765062f31831a3e45a86'
+                                }
+                            }
+                            role: {
+                                id: '4122478a31114a1182fbc9922df001a8'
+                                key: {
+                                    name: 'admin'
+                                }
+                            }
+                        }
+                    },
+                    {
                         table: 'sys_documentation'
                         id: '13822d2358cb411fb7c73707e49ec8ff'
                         key: {
@@ -6289,7 +6315,7 @@ declare global {
                     {
                         table: 'sn_aia_agent_tool_m2m'
                         id: '2d0bc0203b96765062f31831a3e45a0e'
-                        deleted: true
+                        deleted: false
                         key: {
                             agent: '290bc4ec3b56765062f31831a3e45a86'
                             tool: '8021ddea2b0d52101d72fb466e91bfd1'
@@ -6439,6 +6465,13 @@ declare global {
                                     sys_domain: 'global'
                                 }
                             }
+                        }
+                    },
+                    {
+                        table: 'sys_agent_access_role_configuration'
+                        id: '3165cd4905fb422ea93accf24899a9e1'
+                        key: {
+                            agent: '290bc4ec3b56765062f31831a3e45a86'
                         }
                     },
                     {
@@ -7952,7 +7985,7 @@ declare global {
                     {
                         table: 'sn_aia_agent_config'
                         id: '6d0b80203b96765062f31831a3e45afb'
-                        deleted: true
+                        deleted: false
                         key: {
                             agent: '290bc4ec3b56765062f31831a3e45a86'
                         }
@@ -9641,7 +9674,7 @@ declare global {
                     {
                         table: 'sn_aia_agent_tool_m2m'
                         id: 'a90bc0203b96765062f31831a3e45a00'
-                        deleted: true
+                        deleted: false
                         key: {
                             agent: '290bc4ec3b56765062f31831a3e45a86'
                             tool: 'bb8695d03b5e72900ad1a021a3e45ad4'
@@ -9718,7 +9751,7 @@ declare global {
                     {
                         table: 'sn_aia_version'
                         id: 'ad0b80203b96765062f31831a3e45af3'
-                        deleted: true
+                        deleted: false
                         key: {
                             target_id: '290bc4ec3b56765062f31831a3e45a86'
                             version_name: 'V1'
@@ -11517,7 +11550,7 @@ declare global {
                     {
                         table: 'sn_aia_agent_tool_m2m'
                         id: 'e90bc0203b96765062f31831a3e45a15'
-                        deleted: true
+                        deleted: false
                         key: {
                             agent: '290bc4ec3b56765062f31831a3e45a86'
                             tool: '8021ddea2b0d52101d72fb466e91bfd1'
@@ -11654,7 +11687,7 @@ declare global {
                     {
                         table: 'sn_aia_agent_tool_m2m'
                         id: 'ed0bc0203b96765062f31831a3e45a07'
-                        deleted: true
+                        deleted: false
                         key: {
                             agent: '290bc4ec3b56765062f31831a3e45a86'
                             tool: '70854bae3b4272900ad1a021a3e45a34'
@@ -11674,7 +11707,7 @@ declare global {
                     {
                         table: 'sn_aia_agent_tool_m2m'
                         id: 'ee10f907018b32107f44189f958a047c'
-                        deleted: true
+                        deleted: false
                         key: {
                             agent: '290bc4ec3b56765062f31831a3e45a86'
                             tool: 'e2107907018b32107f44189f958a04cf'
