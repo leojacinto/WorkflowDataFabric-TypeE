@@ -1,0 +1,123 @@
+{
+  "cookies": [
+    {
+      "name": "BIGipServerpool_demoalectriallwfaa158438",
+      "value": "db807819a928eb343309f4b9709e7525",
+      "domain": "demoalectriallwfaa158438.service-now.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "None"
+    },
+    {
+      "name": "glide_user_route",
+      "value": "glide.5f7dc23a5e824edb48b88f6cd1bc6ee7",
+      "domain": "demoalectriallwfaa158438.service-now.com",
+      "path": "/",
+      "expires": 1828085297.659227,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "glide_node_id_for_js",
+      "value": "3b68162039e1b706687290cc38ca42af0bf2d9fa7911c1c386fd456c41cf4129",
+      "domain": "demoalectriallwfaa158438.service-now.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": false,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "__CJ_g_startTime",
+      "value": "%221793525310626%22",
+      "domain": "demoalectriallwfaa158438.service-now.com",
+      "path": "/",
+      "expires": 1793528910,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Strict"
+    },
+    {
+      "name": "JSESSIONID",
+      "value": "F7B433DAF8AB427D1539E183AEC3A11E",
+      "domain": "demoalectriallwfaa158438.service-now.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "glide_language",
+      "value": "en",
+      "domain": "demoalectriallwfaa158438.service-now.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "glide_returning_auth_user",
+      "value": "GlideReturningUserAuth:YWRtaW58MTc5MzUyNTMxMDg3MXw0dVF0SW1FRkgyWm5oYmljem10QjFsMU11MUtKRkdTeUJwSWpxK0FaSEFVPQ==",
+      "domain": "demoalectriallwfaa158438.service-now.com",
+      "path": "/",
+      "expires": 1794130110.8396,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "glide_user_activity",
+      "value": "U0N2M18xOm5DYWl3NGZjMFRQcmsxdXE5R3kxRjFZZ3J4Ylp2WjhmTWFucVJGQjY2cW89OmFFdFNLMXpNK2svNHRianVOc1BvN09qTnppbU96MkFqNXZQd2ViaXVReWc9",
+      "domain": "demoalectriallwfaa158438.service-now.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "glide_session_store",
+      "value": "3B246FD54794DF54037D0FADF26D4360",
+      "domain": "demoalectriallwfaa158438.service-now.com",
+      "path": "/",
+      "expires": 1793611712.301437,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "snc_session_affinity_configuration",
+      "value": "PORTABLE",
+      "domain": "demoalectriallwfaa158438.service-now.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": true,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://demoalectriallwfaa158438.service-now.com",
+      "localStorage": [
+        {
+          "name": "simpleStorage",
+          "value": "{\"simpleStorageSynch\":\"ade1efd94714df54037d0fadf26d43c1\",\"MSG_en_undefined\":1793525299995,\"MSG_en_Delete\":\"Delete\",\"MSG_en_is (dynamic)\":\"is (dynamic)\",\"MSG_en_Order results by the following fields\":\"Order results by the following fields\",\"MSG_en_Lookup using list\":\"Lookup using list\",\"MSG_en_greater than field\":\"greater than field\",\"MSG_en_Hide column search row\":\"Hide column search row\",\"MSG_en_is changed to\":\"is changed to\",\"MSG_en_-- None --\":\"-- None --\",\"MSG_en_is changed from\":\"is changed from\",\"MSG_en_{0} suggestions. Please use the up and down arrow keys to select a value\":\"{0} suggestions. Please use the up and down arrow keys to select a value\",\"MSG_en_Show column search row\":\"Show column search row\",\"MSG_en_Message from child progress: {0}\":\"Message from child progress: {0}\",\"MSG_en_greater than or is field\":\"greater than or is field\",\"MSG_en_Remove Related Fields\":\"Remove Related Fields\",\"MSG_en_AI\":\"AI\",\"MSG_en_Pending {0}%\":\"Pending {0}%\",\"MSG_en_(inactive) {0}\":\"(inactive) {0}\",\"MSG_en_contains\":\"contains\",\"MSG_en_Operator For Condition\":\"Operator For Condition\",\"MSG_en_about an hour from now\":\"about an hour from now\",\"MSG_en_relative\":\"relative\",\"MSG_en_average\":\"Average\",\"MSG_en_Add OR Condition To Condition\":\"Add OR Condition To Condition\",\"MSG_en_is in hierarchy (dynamic)\":\"is in hierarchy (dynamic)\",\"MSG_en_{0} result(s) available, use up and down arrow keys to navigate and enter to select\":\"{0} result(s) available, use up and down arrow keys to navigate and enter to select\",\"MSG_en_not on\":\"not on\",\"MSG_en_is less than\":\"is less than\",\"MSG_en_is in session\":\"is in session\",\"MSG_en_about a month from now\":\"about a month from now\",\"MSG_en_about %d hours ago\":\"about %d hours ago\",\"MSG_en_To delete application and all of its files\":\"To delete application and all of its files\",\"MSG_en_are\":\"are\",\"MSG_en_Last 7 days\":\"Last 7 days\",\"MSG_en_after\":\"after\",\"MSG_en_Next quarter\":\"Next quarter\",\"MSG_en_This record was generated by AI. Check for accuracy.\":\"This record was generated by AI. Check for accuracy.\",\"MSG_en_Run\":\"Run\",\"MSG_en_Unfiltered {0} list showing {1} records\":\"Unfiltered {0} list showing {1} records\",\"MSG_en_{0}. {1}\":\"{0}. {1}\",\"MSG_en_since baseline\":\"since baseline\",\"MSG_en_is more than\":\"is more than\",\"MSG_en_maximum\":\"Maximum\",\"MSG_en_at or before\":\"at or before\",\"MSG_en_-- choose field --\":\"-- choose field --\",\"MSG_en_Separate individual references with a comma\":\"Separate individual references with a comma\",\"MSG_en_Add AND Condition\":\"Add AND condition\",\"MSG_en_Running child progress: {0} - {1}\":\"Running child progress: {0} - {1}\",\"MSG_en_Running {0}%\":\"Running {0}%\",\"MSG_en_You don't have permission to manage this model. Contact your administrator if you need access.\":\"You don't have permission to manage this model. Contact your administrator if you need access.\",\"MSG_en_Mark row for deletion\":\"Mark row for deletion\",\"MSG_en_Last year\":\"Last year\",\"MSG_en_Insert HTML color name or hex value\":\"Insert HTML color name or hex value\",\"MSG_en_greater than\":\"greater than\",\"MSG_en_Sorted in descending order\":\"Sorted in descending order\",\"MSG_en_is not one of\":\"is not one of\",\"MSG_en_less than field\":\"less than field\",\"MSG_en_Mark for deletion\":\"Mark for deletion\",\"MSG_en_is changed\":\"is changed\",\"MSG_en_a day from now\":\"a day from now\",\"MSG_en_-- value --\":\"-- value --\",\"MSG_en_Review output\":\"Review output\",\"MSG_en_AI secondary\":\"AI secondary\",\"MSG_en_Confirmation\":\"Confirmation\",\"MSG_en_AI tertiary\":\"AI tertiary\",\"MSG_en_Back to the parent progress\":\"Back to the parent progress\",\"MSG_en_Next 2 quarters\":\"Next 2 quarters\",\"MSG_en_Keywords\":\"Keywords\",\"MSG_en_Root progress bar has state {0} ({1}%)\":\"Root progress bar has state {0} ({1}%)\",\"MSG_en_This year\":\"This year\",\"MSG_en_Showing rows {0} to {1} of {2}\":\"Showing rows {0} to {1} of {2}\",\"MSG_en_is not empty\":\"is not empty\",\"MSG_en_Searching…\":\"Searching…\",\"MSG_en_com_glide_ui_progress_hide_details\":\"Hide details\",\"MSG_en_is a\":\"is a\",\"MSG_en_about a month ago\":\"about a month ago\",\"MSG_en_Choose option\":\"Choose option\",\"MSG_en_Currently selected: \":\"Currently selected: \",\"MSG_en_greater than or equal to\":\"greater than or equal to\",\"MSG_en_--None--\":\"--None--\",\"MSG_en_Last 30 minutes\":\"Last 30 minutes\",\"MSG_en_Loading...\":\"Loading...\",\"MSG_en_Primary selection\":\"Primary selection\",\"MSG_en_Last hour\":\"Last hour\",\"MSG_en_com_glide_ui_progress_cancelled\":\"Cancelled\",\"MSG_en_about a year from now\":\"about a year from now\",\"MSG_en_One year ago\":\"One year ago\",\"MSG_en_Last 90 days\":\"Last 90 days\",\"MSG_en_trend\":\"Trend\",\"MSG_en_ends with\":\"ends with\",\"MSG_en_com_glide_ui_progress_succeeded\":\"Succeeded\",\"MSG_en_Last 2 years\":\"Last 2 years\",\"MSG_en_a to z\":\"a to z\",\"MSG_en_Cancelled at {0}%\":\"Cancelled at {0}%\",\"MSG_en_in_progress\":\"in_progress\",\"MSG_en_Secondary positive\":\"Secondary positive\",\"MSG_en_about an hour ago\":\"about an hour ago\",\"MSG_en_between\":\"between\",\"MSG_en_is anything\":\"is anything\",\"MSG_en_about a year ago\":\"about a year ago\",\"MSG_en_is one of\":\"is one of\",\"MSG_en_Add OR Condition\":\"Add OR Condition\",\"MSG_en_Filtered {0} list showing {1} records\":\"Filtered {0} list showing {1} records\",\"MSG_en_Progress bar number {0}, on level {1}, has state {2} ({3}%)\":\"Progress bar number {0}, on level {1}, has state {2} ({3}%)\",\"MSG_en_com_glide_ui_progress_pending\":\"Pending\",\"MSG_en_is\":\"is\",\"MSG_en_Secondary negative\":\"Secondary negative\",\"MSG_en_CSP violation detected by ARP ({0}): {1}\":\"CSP violation detected by ARP ({0}): {1}\",\"MSG_en_Run Filter\":\"Run filter\",\"MSG_en_Some records in this group were generated or include fields predicted by AI. Check for accuracy.\":\"Some records in this group were generated or include fields predicted by AI. Check for accuracy.\",\"MSG_en_1 for Monday, 2 for Tuesday, etc. Multiple values can be entered, like '135' for Monday, Wednesday, and Friday\":\"1 for Monday, 2 for Tuesday, etc. Multiple values can be entered, like '135' for Monday, Wednesday, and Friday\",\"MSG_en_Server timing detail\":\"Server timing detail\",\"MSG_en_Last 45 minutes\":\"Last 45 minutes\",\"MSG_en_is same\":\"is same\",\"MSG_en_com_glide_ui_progress_show_details\":\"Show details\",\"MSG_en_{0} - Succeeded in {1}\":\"{0} - Succeeded in {1}\",\"MSG_en_Last 2 hours\":\"Last 2 hours\",\"MSG_en_about %d minutes ago\":\"about %d minutes ago\",\"MSG_en_about %d hours from now\":\"about %d hours from now\",\"MSG_en_Input value\":\"Input value\",\"MSG_en_about %d months ago\":\"about %d months ago\",\"MSG_en_Undo mark row for deletion\":\"Undo mark row for deletion\",\"MSG_en_File attachments not allowed\":\"File attachments not allowed\",\"MSG_en_about a minute from now\":\"about a minute from now\",\"MSG_en_about %d months from now\":\"about %d months from now\",\"MSG_en_is not\":\"is not\",\"MSG_en_Use the following format: TableName.FieldName\":\"Use the following format: TableName.FieldName\",\"MSG_en_about %d years ago\":\"about %d years ago\",\"MSG_en_com_glide_ui_progress_failed\":\"Failed\",\"MSG_en_#{HTML:name} is currently empty and hasn't been applied to the record yet.\":\"#{HTML:name} is currently empty and hasn't been applied to the record yet.\",\"MSG_en_is in hierarchy\":\"is in hierarchy\",\"MSG_en_matches regex\":\"matches regex\",\"MSG_en_Last 120 days\":\"Last 120 days\",\"MSG_en_about %d years from now\":\"about %d years from now\",\"MSG_en_Last 60 days\":\"Last 60 days\",\"MSG_en_Running child progress: {0}\":\"Running child progress: {0}\",\"MSG_en_at or after\":\"at or after\",\"MSG_en_{0} Section\":\"{0} Section\",\"MSG_en_Undo mark for deletion\":\"Undo mark for deletion\",\"MSG_en_Last 15 minutes\":\"Last 15 minutes\",\"MSG_en_minimum\":\"Minimum\",\"MSG_en_None\":\"None\",\"MSG_en_Primary positive\":\"Primary positive\",\"MSG_en_Failed at {0}%\":\"Failed at {0}%\",\"MSG_en_a day ago\":\"a day ago\",\"MSG_en_before\":\"before\",\"MSG_en_matches pattern\":\"matches pattern\",\"MSG_en_AI primary\":\"AI primary\",\"MSG_en_less than\":\"less than\",\"MSG_en_Remove Condition\":\"Remove condition\",\"MSG_en_Last 30 days\":\"Last 30 days\",\"MSG_en_distance within\":\"distance within\",\"MSG_en_Related List Tabs\":\"Related List Tabs\",\"MSG_en_Current hour\":\"Current hour\",\"MSG_en_Primary\":\"Primary\",\"MSG_en_Filtered {0} related list showing {1} records\":\"Filtered {0} related list showing {1} records\",\"MSG_en_One or more fields in this record were predicted by AI using data in other fields. Check for accuracy.\":\"One or more fields in this record were predicted by AI using data in other fields. Check for accuracy.\",\"MSG_en_about %d minutes from now\":\"about %d minutes from now\",\"MSG_en_Next year\":\"Next year\",\"MSG_en_less than or equal to\":\"less than or equal to\",\"MSG_en_Tertiary selection\":\"Tertiary selection\",\"MSG_en_Choose operator\":\"Choose operator\",\"MSG_en_Secondary selection\":\"Secondary selection\",\"MSG_en_Tertiary\":\"Tertiary\",\"MSG_en_is different\":\"is different\",\"MSG_en_Add AND Condition To Condition\":\"Add AND Condition To Condition\",\"MSG_en_about a minute ago\":\"about a minute ago\",\"MSG_en_Choose operator for field: {0}\":\"Choose operator for field: {0}\",\"MSG_en_NA\":\"NA\",\"MSG_en_Current minute\":\"Current minute\",\"MSG_en_%d days ago\":\"%d days ago\",\"MSG_en_Ignore cache in sys property\":\"Updating this record with Ignore cache unchecked can cause serious performance impact from a whole system cache flush.\\r\\n\\r\\n<a id=\\\"permalink\\\" class=\\\"linked\\\" href='/api/now/v1/context_doc_url/t_AddAPropertyUsingSysPropsList' target='_blank'>{0}</a> about the ignore cache setting.\",\"MSG_en_New sort order condition added, {0} of {0}\":\"New sort order condition added, {0} of {0}\",\"MSG_en_does not contain\":\"does not contain\",\"MSG_en_z to a\":\"z to a\",\"MSG_en_Choose option for field: {0}\":\"Choose option for field: {0}\",\"MSG_en_delete\":\"Delete\",\"MSG_en_Succeeded {0}%\":\"Succeeded {0}%\",\"MSG_en_Select a template for configuring connection and credential records.\":\"Select a template for configuring connection and credential records.\",\"MSG_en_and\":\"and\",\"MSG_en_%d days from now\":\"%d days from now\",\"MSG_en_Show Related Fields\":\"Show Related Fields\",\"MSG_en_less than or is field\":\"less than or is field\",\"MSG_en_Enter text in HTML format\":\"Enter text in HTML format\",\"MSG_en_com_glide_ui_progress_running\":\"Running\",\"MSG_en_is empty string\":\"is empty string\",\"MSG_en_on\":\"On\",\"MSG_en_Progress bar on level {0}, has state {1} ({2}%)\":\"Progress bar on level {0}, has state {1} ({2}%)\",\"MSG_en_Secondary\":\"Secondary\",\"MSG_en_Delete row\":\"Delete row\",\"MSG_en_or\":\"or\",\"MSG_en_All of these conditions must be met\":\"All of these conditions must be met\",\"MSG_en_Sorted in ascending order\":\"Sorted in ascending order\",\"MSG_en_lowercase_fields\":\"fields\",\"MSG_en_Requires input\":\"Requires input\",\"MSG_en_Primary negative\":\"Primary negative\",\"MSG_en_is empty\":\"is empty\",\"MSG_en_Total\":\"Total\",\"MSG_en_starts with\":\"starts with\",\"MSG_en_Last minute\":\"Last minute\",\"MSG_en_-- oper --\":\"-- oper --\"}"
+        },
+        {
+          "name": "now-icon-cache",
+          "value": "{}"
+        },
+        {
+          "name": "__nxui__unified_cache__version",
+          "value": "fac0c996-3e93-415e-a748-65f384c09c34_01950fac7d48"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+const u=require('./u7021.cjs');const O='/Users/leo.francia/WorkflowDataFabric-TypeE/lab-guide/lef-nov-7021/';
+const fs=require('fs');
+const line=fs.readFileSync('/Users/leo.francia/WorkflowDataFabric-TypeE/.env','utf8').split('\n').find(l=>/^API Key/i.test(l.trim()))||'';
+const KEY=line.replace(/^[^:=]*[:=]\s*/,'').trim();
+(async()=>{const {b,p}=await u.open();
+console.log('key length',KEY.length);
+await p.goto(u.H+'/now/agent-studio/manage-mcp-servers',{timeout:90000});await p.waitForTimeout(20000);
+await p.mouse.click(1527,260);await p.waitForTimeout(5000);
+await p.screenshot({path:u.S+'m4_dialog.png'});
+await b.close();})();

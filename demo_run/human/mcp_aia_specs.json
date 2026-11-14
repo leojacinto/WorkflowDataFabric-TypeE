@@ -1,0 +1,50 @@
+{
+ "sc_mcp_aia_agent_tools_saved.png": {
+  "tears": [
+   {
+    "label": "a",
+    "targets": [
+     [
+      304,
+      292
+     ]
+    ]
+   }
+  ]
+ },
+ "sc_mcp_aia_run_test_dialog.png": {
+  "tears": [
+   {
+    "label": "a",
+    "targets": [
+     [
+      394,
+      646
+     ]
+    ]
+   },
+   {
+    "label": "b",
+    "targets": [
+     [
+      970,
+      793
+     ]
+    ]
+   }
+  ]
+ },
+ "sc_mcp_aia_trace_log_result.png": {
+  "tears": [
+   {
+    "label": "a",
+    "targets": [
+     [
+      170,
+      413
+     ]
+    ]
+   }
+  ]
+ }
+}

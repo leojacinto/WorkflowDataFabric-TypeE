@@ -1,0 +1,5 @@
+In the Forecast Variance app, delete the trigger configuration "Forecast Variance QA -
+Expense Event Created" (sn_aia_trigger_configuration 60897a90) of the AI agent "Forecast
+Variance QA", together with its trigger-agent link rows. Delete only that one trigger
+configuration. Keep every agent, all tools and every other record as they are. Do not
+build or install anything.

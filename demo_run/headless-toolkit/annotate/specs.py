@@ -1,0 +1,17 @@
+S = {}
+S['sc_zcc_pg_nav.png'] = {"tears":[{"label":"a","targets":[[320,106],[400,72]]},{"label":"b","targets":[[622,454],[96,454],[340,424]]}]}
+S['sc_zcc_pg_data_assets.png'] = {"coord_scale":1.52,"tears":[{"label":"a","targets":[[288,184],[288,136]]},{"label":"b","targets":[[392,370],[392,392]]},{"label":"c","targets":[[1756,808]]}]}
+S['sc_zcc_pg_df_label.png'] = {"tears":[{"label":"a","targets":[[112,236],[1716,288]]},{"label":"b","targets":[[112,368],[1716,420]]},{"label":"c","targets":[[240,680]]}]}
+S['sc_zcc_pg_select_columns.png'] = {"coord_scale":1.204,"tears":[{"label":"a","targets":[[95,386],[118,404]]}]}
+S['sc_zcc_pg_cost_center_reference.png'] = {"coord_scale":1.152,"tears":[{"label":"a","targets":[[1308,249]],"dir":0},{"label":"b","targets":[[1640,222]]}]}
+S['sc_zcc_pg_set_reference.png'] = {"tears":[{"label":"a","targets":[[130,244],[836,296]]},{"label":"b","targets":[[222,376],[836,428]]},{"label":"c","targets":[[705,576],[574,605]]}]}
+S['sc_zcc_pg_primary_key.png'] = {"coord_scale":1.18,"tears":[{"label":"a","targets":[[1815,498],[1752,498]]},{"label":"b","targets":[[1930,1058],[1866,1085]]}]}
+S['sc_zcc_pg_confirm_pk.png'] = {"tears":[{"label":"a","targets":[[698,386],[608,416]]}]}
+S['sc_zcc_pg_open_list.png'] = {"coord_scale":1.22,"tears":[{"label":"a","targets":[[1818,196]]},{"label":"b","targets":[[1792,327]]}]}
+S['sc_zcc_pg_established.png'] = {"pad":{"left":170},"tears":[{"label":"a","targets":[[48,437]]}]}
+S['sc_zcc_pg_connection_details.png'] = {"coord_scale":1.12,"tears":[{"label":"a","targets":[[972,1166]]},{"label":"b","targets":[[1000,632]],"dir":0}]}
+S['sc_zcc_ba_agent_testing.png'] = {"tears":[{"label":"a","targets":[[690,196],[690,104],[774,150],[606,150]]},{"label":"b","targets":[[420,957],[267,925]]}]}
+S['sc_zcc_ba_agent_manual_test.png'] = {"coord_scale":1.17,"tears":[{"label":"a","targets":[[262,285]],"dir":180},{"label":"b","targets":[[455,426]],"dir":180},{"label":"c","targets":[[128,566]],"dir":180},{"label":"d","targets":[[158,680]],"dir":180},{"label":"e","targets":[[1762,1040]],"dir":90}]}
+S['sc_zcc_ba_approve.png'] = {"tears":[{"label":"a","targets":[[716,660],[648,689],[784,689]]}]}
+S['sc_zcc_ba_agent_test_run.png'] = {"tears":[{"label":"a","targets":[[700,375],[772,375]]},{"label":"b","targets":[[1068,270]],"dir":0}]}
+S['sc_zcc_ba_new_conversation.png'] = {"tears":[{"label":"a","targets":[[58,152]]},{"label":"b","targets":[[148,156]]}]}

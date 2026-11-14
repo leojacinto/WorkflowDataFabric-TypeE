@@ -1,0 +1,5 @@
+In global scope, set these three system properties to 0.01 and report their old and new
+values with gs.info:
+glide.platform_ml_di.doc_data_extractor.warning_score_threshold,
+glide.platform_ml_di.doc_data_extractor.autofill_threshold,
+glide.platform_ml_di.doc_data_extractor.straight_through_processing_threshold.

@@ -1,0 +1,9 @@
+02:03:20   logged in as admin
+02:03:36   screenshot sqlc_01_cards.png
+02:03:36   three-dots at {"x":1502,"y":674}
+02:03:38   screenshot sqlc_02_menu.png
+02:03:38   menu: ["Edit","Delete","Open list"]
+02:03:48   screenshot sqlc_03_confirm.png
+02:03:48   buttons: ["Overview","Available connectors","Established connections","Data fabric tables","Refresh assets","Connection details","Data assets","Access control","Create data fabric table","Columns","Sort Order: A-Z","Edit","1","Cancel","Delete"]
+02:04:13   screenshot sqlc_04_after.png
+02:04:13   test table gone: true | cc_summ_dvn kept: true

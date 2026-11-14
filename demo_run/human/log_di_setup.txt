@@ -1,0 +1,23 @@
+01:50:30   logged in as admin
+01:50:30 >>> 1-2. AI Admin Hub > AI Skills > Platform > Other > Extract information from documents
+01:51:02   screenshot na_02a_platform.png
+01:51:02   Platform > Other is pre-selected after expanding Platform
+01:52:01   screenshot na_02_search.png
+01:52:01   visible: ["Options","Edit Configuration for Extract information from documents","More menus"]
+01:52:01 <<< 1-2. AI Admin Hub > AI Skills > Platform > Other > Extract information from documents 91s
+01:52:01 >>> 2b. three dots on the skill card > Edit
+01:52:01   card three-dots: {"x":1440.0078125,"y":361}
+01:52:01   screenshot na_03_card.png
+01:52:01   menu: ["Overview","Grid View","List view","View details","Edit Configuration for Extract information from documents"]
+01:52:01 <<< 2b. three dots on the skill card > Edit 0s
+01:52:01 >>> 2c-3. Edit Configuration, Create Usecase, Expense Transaction Event
+01:52:26   screenshot na_04_config.png
+01:52:26   config page: ["Overview","AI Skills","AI Experiences","Performance","Settings","Exit","New use case","Select all rows","Fields","Created","Last modified","Press space to begin reordering row 1","Select row 1","Attachment Summarization - Agent","Cell actions","Press space to begin reordering row 2","Select row 2","Extract information from transcripts","Press space to begin reordering row 3","Select row 3","One-Time Document Extraction","Press space to begin reordering row 4","Select row 4","Expense Transaction Event","Press space to begin reordering row 5","Select row 5","Billing Data Extraction and Qna","Press space to begin reordering row 6","Select row 6","PO document summarization - HAM"]
+01:52:41   screenshot na_05_usecase.png
+01:52:41 <<< 2c-3. Edit Configuration, Create Usecase, Expense Transaction Event 40s
+01:52:41 >>> 4-5. use case tour, Integrations tab, the two flows
+01:52:41   use case page: ["Extract information from documents use cases","Exit","Edit","Copy","Settings","Options","New field","All groups toggle","Select all rows","Grouped row toggle Expense Transaction Event, contains 5 records","Press space to begin reordering row 1","Select row 1","Vendor","Cell actions","Press space to begin reordering row 2","Select row 2","Cost Center","Press space to begin reordering row 3","Select row 3","Amount USD","Press space to begin reordering row 4","Select row 4","Owner","Press space to begin reordering row 5","Select row 5","Event ID","First page","Previous page","Page 1","Next page","Last page","10","Fields","Test Outputs","Integrations","Skip to main content","Open accessibility preferences","Alectri Services","All","Favorites"]
+01:52:51   screenshot na_06_integrations.png
+01:52:51   Extract flow assigned: true | Process flow assigned: true
+01:52:51 <<< 4-5. use case tour, Integrations tab, the two flows 10s
+01:52:51 ######## DI SETUP WALKTHROUGH (stage 1) OK

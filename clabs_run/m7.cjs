@@ -1,0 +1,10 @@
+const u=require('./u7021.cjs');const O='/Users/leo.francia/WorkflowDataFabric-TypeE/lab-guide/lef-nov-7021/';
+const fs=require('fs');
+const line=fs.readFileSync('/Users/leo.francia/WorkflowDataFabric-TypeE/.env','utf8').split('\n').find(l=>/^API Key/i.test(l.trim()))||'';
+const KEY=line.replace(/^[^:=]*[:=]\s*/,'').trim();
+(async()=>{const {b,p}=await u.open();
+console.log('key length',KEY.length);
+await p.goto(u.H+'/now/agent-studio/manage-mcp-servers',{timeout:90000});await p.waitForTimeout(20000);
+await p.mouse.click(1527,260);await p.waitForTimeout(5000);
+await p.mouse.click(800,392);await p.keyboard.type('Neon MCP Lab');await p.mouse.click(800,524);await p.keyboard.type('https://mcp.neon.tech/mcp');await p.mouse.click(800,458);await p.waitForTimeout(1500);await p.mouse.click(572,523);await p.waitForTimeout(1500);await p.screenshot({path:u.S+'m6_a.png'});await p.mouse.click(1049,580);await p.waitForTimeout(5000);await p.mouse.click(790,557);await p.keyboard.type(/^Bearer /i.test(KEY)?KEY:'Bearer '+KEY);await p.waitForTimeout(1000);await p.screenshot({path:O+'mcp_aia_server_add.png'});await p.mouse.click(1052,613);await p.waitForTimeout(25000);await p.screenshot({path:O+'mcp_aia_server_created.png'});console.log(p.url());
+await b.close();})();

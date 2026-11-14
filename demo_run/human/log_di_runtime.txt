@@ -1,0 +1,50 @@
+01:54:48   logged in as admin
+01:54:48 >>> download the invoice from the guide link
+01:54:49   2194 bytes
+01:54:49 <<< download the invoice from the guide link 1s
+01:54:49 >>> 1. open the variance task form
+01:55:37   screenshot di_01_form.png
+01:55:37 <<< 1. open the variance task form 48s
+01:55:37 >>> 2a. short description CC_IT_002
+01:55:37 <<< 2a. short description CC_IT_002 0s
+01:55:37 >>> 2b. click the paper clip, choose file, upload, close
+01:55:41   screenshot di_02_uploaded.png
+01:55:56 <<< 2b. click the paper clip, choose file, upload, close 19s
+01:55:56 >>> 5. State to Work in Progress
+01:55:56   screenshot di_03_state.png
+01:55:56 <<< 5. State to Work in Progress 0s
+01:55:56 >>> 6. Submit
+01:55:58   screenshot di_04_submitted.png
+01:55:58 <<< 6. Submit 1s
+01:55:59   task TASK0020147 created by admin, state 2, attachment {"sys_id":"6b324f8647185b10037d0fadf26d436b","size_bytes":"2194","content_type":"application/pdf","file_name":"Invoice_IT_Laptop_CC_IT_002.pdf"}
+01:55:59 >>> Document Intelligence creates the expense event
+01:56:45   event created: {"owner":{"link":"https://demoalectriallwfaa158438.service-now.com/api/now/table/sys_user/f3024f8647185b10037d0fadf26d43e2","value":"f3024f8647185b10037d0fadf26d43e2"},"sys_id":"867243ce47185b10037d0fadf26d4324","vendor":"TechSource Solutions Inc.","amount_usd":"3080","sys_created_by":"system"}
+01:56:45 <<< Document Intelligence creates the expense event 46s
+01:56:45 >>> agent run starts for the event
+01:56:46   agent plan: {"sys_created_on":"2026-11-03 14:56:42","state":"in_progress","sys_updated_on":"2026-11-03 14:56:43"}
+01:57:06   agent plan: {"sys_created_on":"2026-11-03 14:56:42","state":"in_progress","sys_updated_on":"2026-11-03 14:56:43"}
+01:57:27   agent plan: {"sys_created_on":"2026-11-03 14:56:42","state":"in_progress","sys_updated_on":"2026-11-03 14:56:43"}
+01:57:47   agent plan: {"sys_created_on":"2026-11-03 14:56:42","state":"in_progress","sys_updated_on":"2026-11-03 14:56:43"}
+01:58:09   agent plan: {"sys_created_on":"2026-11-03 14:56:42","state":"in_progress","sys_updated_on":"2026-11-03 14:56:43"}
+01:58:30   agent plan: {"sys_created_on":"2026-11-03 14:56:42","state":"in_progress","sys_updated_on":"2026-11-03 14:56:43"}
+01:58:50   agent plan: {"sys_created_on":"2026-11-03 14:56:42","state":"in_progress","sys_updated_on":"2026-11-03 14:56:43"}
+01:59:11   agent plan: {"sys_created_on":"2026-11-03 14:56:42","state":"completed","sys_updated_on":"2026-11-03 14:59:01"}
+01:59:11 <<< agent run starts for the event 146s
+01:59:11   new Finance Cases: [{"number":"FINC0010019","short_description":"CC_IT_002 is exceeding budget","assigned_to":{"link":"https://demoalectriallwfaa158438.service-now.com/api/now/table/sys_user/63d5dfbbfbab4690ecb9f46b5eefdc98","value":"63d5dfbbfbab4690ecb9f46b5eefdc98"}}]
+01:59:11 >>> cleanup (test event, attachment, task)
+01:59:11   delete event http=204
+01:59:12   delete attachment http=204
+01:59:14   delete task http=204
+01:59:14 <<< cleanup (test event, attachment, task) 3s
+01:59:14 ---- TIMES
+01:59:14   download the invoice from the guide link             1s
+01:59:14   1. open the variance task form                       48s
+01:59:14   2a. short description CC_IT_002                      0s
+01:59:14   2b. click the paper clip, choose file, upload, close 19s
+01:59:14   5. State to Work in Progress                         0s
+01:59:14   6. Submit                                            1s
+01:59:14   Document Intelligence creates the expense event      46s
+01:59:14   agent run starts for the event                       146s
+01:59:14   cleanup (test event, attachment, task)               3s
+01:59:14 ######## DI MANUAL PATH DONE total 272s
+01:59:14 RESULT {"task":{"sys_id":"f3024f8647185b10037d0fadf26d43e2","number":"TASK0020147","state":"2","sys_created_by":"admin"},"attachment":{"sys_id":"6b324f8647185b10037d0fadf26d436b","size_bytes":"2194","content_type":"application/pdf","file_name":"Invoice_IT_Laptop_CC_IT_002.pdf"},"event":{"owner":{"link":"https://demoalectriallwfaa158438.service-now.com/api/now/table/sys_user/f3024f8647185b10037d0fadf26d43e2","value":"f3024f8647185b10037d0fadf26d43e2"},"sys_id":"867243ce47185b10037d0fadf26d4324","vendor":"TechSource Solutions Inc.","amount_usd":"3080","sys_created_by":"system"},"plan":{"sys_created_on":"2026-11-03 14:56:42","state":"completed","sys_updated_on":"2026-11-03 14:59:01"},"cases":[{"number":"FINC0010019","short_description":"CC_IT_002 is exceeding budget","assigned_to":{"link":"https://demoalectriallwfaa158438.service-now.com/api/now/table/sys_user/63d5dfbbfbab4690ecb9f46b5eefdc98","value":"63d5dfbbfbab4690ecb9f46b5eefdc98"}}]}

@@ -1,0 +1,4 @@
+In the Forecast Variance app, delete the trigger configuration of the AI agent named
+"Forecast Variance" (the agent without initials). Do it in the Fluent source so the
+deletion is installed. Keep the agent "Forecast Variance LF", its trigger and everything
+else as they are. Build and install the app without creating test records.

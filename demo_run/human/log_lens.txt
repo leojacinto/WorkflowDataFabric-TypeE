@@ -1,0 +1,19 @@
+02:05:56   logged in as admin
+02:05:56 >>> 1-2. AI Admin Hub > AI Skills > Platform > Other > search ServiceNow AI Lens
+02:07:20   screenshot lens_01_search.png
+02:07:20   card found: true | shows Active: true | shows Turn on: true
+02:07:20 <<< 1-2. AI Admin Hub > AI Skills > Platform > Other > search ServiceNow AI Lens 84s
+02:07:20 >>> Downloads page of ServiceNow AI Lens
+02:07:20   module "Downloads and Preferences" of ServiceNow AI Lens: /sn_app_lens_core_sn_lens_downloads.do
+02:07:36   screenshot lens_02_downloads.png
+02:07:36   page mentions download/installer: false
+02:07:36 <<< Downloads page of ServiceNow AI Lens 16s
+02:07:36 >>> Create with Lens button on the Expense Transaction Event list
+02:07:49   screenshot lens_03_event_list.png
+02:07:49   Create with Lens visible: false
+02:07:49 <<< Create with Lens button on the Expense Transaction Event list 13s
+02:07:49 ---- TIMES
+02:07:49   1-2. AI Admin Hub > AI Skills > Platform > Other > search ServiceNow AI Lens     84s
+02:07:49   Downloads page of ServiceNow AI Lens                                             16s
+02:07:49   Create with Lens button on the Expense Transaction Event list                    13s
+02:07:49 ######## AI LENS BY HAND DONE (desktop app steps cannot run headless) total 120s

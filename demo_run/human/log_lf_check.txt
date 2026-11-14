@@ -1,0 +1,42 @@
+00:22:58   logged in as admin
+00:22:58 >>> 1-3. AI Agent Studio > Create and manage > AI agents
+00:23:27   screenshot mcp3_01_agents.png
+00:23:27 <<< 1-3. AI Agent Studio > Create and manage > AI agents 30s
+00:23:28   existing duplicate: []
+00:23:28 >>> 3-4. open Forecast Variance QB
+00:23:28   opening Forecast Variance QB at {"x":64,"y":571}
+00:23:46   screenshot mcp3_02_agent_open.png
+00:23:46   agent page: ["Try it nowLink opens in new window or tab","Dismiss alert","Overview","Create and manage","Testing","Activity","Settings","Exit","Options","View writing guidelines","Generate details","Name","More information, AI agent description","View versions","More Actions","More information, view versions","More information, AI agent role","More information, List of steps","1.a Fetch the details of the given incident. ...","Identify Categories","View settings","More information, Categories","Select Categories","How does word choice matter?","What's an example of a clear name and description?","How do I define a role?","Product documentationLink opens in new window or tab","Community forumLink opens in new window or tab","Save and continue","Skip to main content","Open accessibility preferences","Alectri Services","All","Favorites","History","Workspaces","Admin","More menus","Search or ask AI","Choose search context","Provide feedback","Pin Help Center menu"]
+00:23:46 <<< 3-4. open Forecast Variance QB 18s
+00:23:46 >>> 4-6. more actions > Duplicate > confirm
+00:23:48   screenshot mcp3_03_menu.png
+00:23:48   menu: ["View versions","More information, view versions"]
+00:23:53   screenshot mcp3_04_confirm.png
+00:23:53   confirm: ["Close dialog","Cancel","Duplicate"]
+00:24:08   screenshot mcp3_05_new_agent.png
+00:24:08 <<< 4-6. more actions > Duplicate > confirm 22s
+00:24:38   agent already saved with the MCP bullet: false
+00:24:38 >>> 6. rename to Forecast Variance Neon MCP Lab
+00:24:39   screenshot mcp3_06_renamed.png
+00:24:39 <<< 6. rename to Forecast Variance Neon MCP Lab 2s
+00:24:39 >>> 7-8. add the MCP bullet under Step 2, Save and continue
+00:24:41   bullet added under Step 2 (typed like a person)
+00:24:42   screenshot mcp3_07_bullet.png
+00:24:48   extra dialog "Save updates?" confirmed
+00:25:03   screenshot mcp3_08_after_save.png
+00:25:03   page: ["Try it nowLink opens in new window or tab","Dismiss alert","Overview","Create and manage","Testing","Activity","Settings","Exit","Options","Add tool","Name","Date added","Search for Expense Transactions History","Remove","Search for Cost Center History","Extract Cost Center","Budget Variance Analysis","Recommend Tools","Add child AI agent","How do I pick a tool?","Why does an AI agent need tools?","Do AI agents come with their own built-in tools?","Product documentationLink opens in new window or tab","Community forumLink opens in new window or tab","Back","Save and continue","V1Link opens in new window or tab","Skip to main content","Open accessibility preferences","Alectri Services"]
+00:25:03 <<< 7-8. add the MCP bullet under Step 2, Save and continue 24s
+00:25:03 >>> 9. Add tools and information > Add tool > MCP server tool
+00:25:03   screenshot mcp3_09_tools.png
+00:25:03   tools page: ["Try it nowLink opens in new window or tab","Dismiss alert","Overview","Create and manage","Testing","Activity","Settings","Exit","Options","Add tool","Name","Date added","Search for Expense Transactions History","Remove","Search for Cost Center History","Extract Cost Center","Budget Variance Analysis","Recommend Tools","Add child AI agent","How do I pick a tool?","Why does an AI agent need tools?","Do AI agents come with their own built-in tools?","Product documentationLink opens in new window or tab","Community forumLink opens in new window or tab","Back","Save and continue","V1Link opens in new window or tab","Skip to main content","Open accessibility preferences","Alectri Services"]
+00:25:06   screenshot mcp3_10_add_tool_menu.png
+00:25:06   add tool menu: ["Add tool","Search for Expense Transactions History","Search for Cost Center History","Recommend Tools","How do I pick a tool?","Why does an AI agent need tools?","Do AI agents come with their own built-in tools?","Search or ask AI","Choose search context"]
+00:25:06 <<< 9. Add tools and information > Add tool > MCP server tool 3s
+00:25:06 >>> 9b. MCP server tool dialog: server, run_sql
+00:25:12   screenshot mcp3_11_mcp_dialog.png
+00:25:15   screenshot mcp3_12_server_list.png
+00:25:15   server options: []
+00:25:15 <<< 9b. MCP server tool dialog: server, run_sql 9s
+00:25:15 ERROR: page.evaluate: ReferenceError: process is not defined
+00:25:15   screenshot mcp3_error.png
+00:25:15 ######## MCP AGENT (stage 1) FAILED: page.evaluate: ReferenceError: process is not defined

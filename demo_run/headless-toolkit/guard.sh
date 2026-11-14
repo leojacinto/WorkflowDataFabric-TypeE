@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Snapshot of what a Build Agent build must not break: guide assets, UI page, and table row counts.
+T="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"; [ -f "$T/work/curlauth.cfg" ] || "$T/mkauth.sh"
+C=$T/work/curlauth.cfg; H=https://$(head -1 "$T/../../.env" | tr -d '\r ').service-now.com
+curl -s -K $C -G -H 'Accept: application/json' "$H/api/now/table/sys_ux_lib_asset" --data-urlencode "sysparm_query=nameSTARTSWITHx_snc_forecast_v_0/^ORnameSTARTSWITHwdf-lab" --data-urlencode "sysparm_fields=sys_id,name,checksum,sys_updated_on" | python3 -I -c "import json,sys;[print('asset',r['name'],r['checksum'][:8],r['sys_updated_on'],r['sys_id'][:8]) for r in sorted(json.load(sys.stdin)['result'],key=lambda r:r['name'])]"
+curl -s -K $C -G -H 'Accept: application/json' "$H/api/now/table/sys_ui_page" --data-urlencode "sysparm_query=nameINwdf_lab,fundamentals" --data-urlencode "sysparm_fields=name,sys_updated_on" | python3 -I -c "import json,sys;[print('uipage',r['name'],r['sys_updated_on']) for r in json.load(sys.stdin)['result']]"
+for t in x_snc_forecast_v_0_expense_transaction_event x_snc_forecast_v_0_cost_center_budget_history x_snc_forecast_v_0_expense_transactions x_snc_forecast_v_0_variance_task; do printf "rows %s " $t; curl -s -K $C -G -H 'Accept: application/json' "$H/api/now/stats/$t" --data-urlencode "sysparm_count=true" | grep -o '"count":"[0-9]*"\|Invalid table'; done

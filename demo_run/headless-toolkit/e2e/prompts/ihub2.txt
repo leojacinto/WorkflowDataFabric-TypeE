@@ -1,0 +1,21 @@
+In the Forecast Variance app:
+1. Create a subflow named "Extract Cost Center" with input Event ID (string). It looks up
+the Expense Transaction Event record with that Event ID and outputs its Cost Center and
+Vendor.
+2. Create a Flow Designer action named "Compute Budget Totals" with inputs Cost Center
+and Event ID (strings). Its script step looks up the Expense Transaction Event with that
+Event ID, totals Monthly Budget and Actual Spend for that cost center in Cost Center
+Budget History for fiscal year 2025 (add the records up one by one, because
+GlideAggregate SUM is wrong on these currency fields), and adds the event's amount_usd
+to the actual. It outputs Over Budget, the new actual, the short description "<cost
+center> is exceeding budget" and the cost center's Owner, declared as a String output
+that holds the owner's sys_id (not a reference field). Keep this code in the action,
+because a subflow's own scripts can't read the subflow's inputs.
+3. Create a subflow named "Budget Variance Analysis" with inputs Cost Center and Event ID
+(strings). It runs Compute Budget Totals. If Over Budget is true, it creates a Finance
+Case (sn_spend_sdc_service_request) with that short description, assigned to the Owner,
+and outputs "<case number> - <short description>". Otherwise it outputs "Cost center is
+compliant with budget." Also output the new actual as Sum.
+Then build and install the app. To test, run Extract Cost Center with event ID
+EXP-2025-IT-002-1007-01, then run Budget Variance Analysis with cost center PROD-DE-2
+and that event ID, so no Finance Case is created.

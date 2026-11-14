@@ -1,0 +1,2 @@
+// Scroll the Build Agent chat transcript to the bottom so the install card is in view.
+() => { let n = 0; const walk = root => { for (const el of root.querySelectorAll('*')) { if (el.scrollHeight > el.clientHeight + 50 && /auto|scroll/.test(getComputedStyle(el).overflowY)) { el.scrollTop = el.scrollHeight; n++; } if (el.shadowRoot) walk(el.shadowRoot); } }; walk(document); return n ? 'scrolled ' + n : null; }

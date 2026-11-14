@@ -1,0 +1,188 @@
+{
+ "1d1f98716fd24ab59cfc32f62d7780c2": {
+  "table": "sys_hub_flow",
+  "sys_id": "1d1f98716fd24ab59cfc32f62d7780c2",
+  "name": "Get Expense Event",
+  "auto": true
+ },
+ "1ea0bab23bb6f61062f31831a3e45a97": {
+  "table": "sys_hub_flow",
+  "sys_id": "1ea0bab23bb6f61062f31831a3e45a97",
+  "name": "_unload",
+  "auto": true
+ },
+ "29900b22455548a1980672ed7224fa40": {
+  "table": "sys_hub_flow",
+  "sys_id": "29900b22455548a1980672ed7224fa40",
+  "name": "Extract Cost Center",
+  "auto": true
+ },
+ "46a03ab23bb6f61062f31831a3e45a79": {
+  "table": "sys_hub_flow",
+  "sys_id": "46a03ab23bb6f61062f31831a3e45a79",
+  "name": "_load",
+  "auto": true
+ },
+ "6facf999e15772107f447756abe0cb65": {
+  "table": "sys_hub_flow",
+  "sys_id": "6facf999e15772107f447756abe0cb65",
+  "name": "DocIntel Task Processing Flow - Expense Transaction Event - Process",
+  "auto": true
+ },
+ "8b2cbfcd6d54404bbff8b9f20fc7e559": {
+  "table": "sys_hub_flow",
+  "sys_id": "8b2cbfcd6d54404bbff8b9f20fc7e559",
+  "name": "Extract Cost Center",
+  "auto": true
+ },
+ "9511cc806c2242a4b54071bc07870cd1": {
+  "table": "sys_hub_flow",
+  "sys_id": "9511cc806c2242a4b54071bc07870cd1",
+  "name": "Budget Variance Analysis",
+  "auto": true
+ },
+ "a637aa653b10db98a0db3141a3e45aff": {
+  "table": "sys_hub_flow",
+  "sys_id": "a637aa653b10db98a0db3141a3e45aff",
+  "name": "Expense Transaction Event - AI Agent: Forecast Variance LF - 6a37aa653b10db98a0db3141a3e45afd",
+  "auto": true
+ },
+ "a94b28573b91be900ad1a021a3e45a76": {
+  "table": "sys_hub_flow",
+  "sys_id": "a94b28573b91be900ad1a021a3e45a76",
+  "name": "Trigger Variance Analysis",
+  "auto": true
+ },
+ "b3a0c01f3b957e900ad1a021a3e45a07": {
+  "table": "sys_hub_flow",
+  "sys_id": "b3a0c01f3b957e900ad1a021a3e45a07",
+  "name": "Test Flow for Finance Case",
+  "auto": true
+ },
+ "bfaea0e23bf4b2d062f31831a3e45a3d": {
+  "table": "sys_hub_flow",
+  "sys_id": "bfaea0e23bf4b2d062f31831a3e45a3d",
+  "name": "Forecast Variance Test",
+  "auto": true
+ },
+ "c1ad7d1de15772107f447756abe0cb2e": {
+  "table": "sys_hub_flow",
+  "sys_id": "c1ad7d1de15772107f447756abe0cb2e",
+  "name": "DocIntel Extract Values Flow - Expense Transaction Event - Extract",
+  "auto": true
+ },
+ "c7eeba48eab340a4b6b5f5ea49ad3e8a": {
+  "table": "sys_hub_flow",
+  "sys_id": "c7eeba48eab340a4b6b5f5ea49ad3e8a",
+  "name": "Get Expense Event",
+  "auto": true
+ },
+ "dde9eeee51ee42a7972b1b6ebc333818": {
+  "table": "sys_hub_flow",
+  "sys_id": "dde9eeee51ee42a7972b1b6ebc333818",
+  "name": "Extract Cost Center",
+  "auto": true
+ },
+ "e45431ea3b7a3a5062f31831a3e45a74": {
+  "table": "sys_hub_flow",
+  "sys_id": "e45431ea3b7a3a5062f31831a3e45a74",
+  "name": "Invoice case - AI Agent: Invoice resolution provider - 285431ea3b7a3a5062f31831a3e45a72",
+  "auto": true
+ },
+ "1d412447ad00453994aa2152ce64db2b": {
+  "table": "sys_hub_action_type_definition",
+  "sys_id": "1d412447ad00453994aa2152ce64db2b",
+  "name": "Get Expense Event",
+  "auto": true
+ },
+ "47f5e9ade1604dc6abf7ac9725c32838": {
+  "table": "sys_hub_action_type_definition",
+  "sys_id": "47f5e9ade1604dc6abf7ac9725c32838",
+  "name": "Get Expense Event",
+  "auto": true
+ },
+ "7d4fbb9de67d467d9bab869275f778f8": {
+  "table": "sys_hub_action_type_definition",
+  "sys_id": "7d4fbb9de67d467d9bab869275f778f8",
+  "name": "Compute Budget Totals",
+  "auto": true
+ },
+ "9bb433e6500a4363b5e1b5dc4c948c9f": {
+  "table": "sys_hub_action_type_definition",
+  "sys_id": "9bb433e6500a4363b5e1b5dc4c948c9f",
+  "name": "Compute Budget Totals",
+  "auto": true
+ },
+ "d77634ab7c73451585a88ab66841848a": {
+  "table": "sys_hub_action_type_definition",
+  "sys_id": "d77634ab7c73451585a88ab66841848a",
+  "name": "Compute Budget Totals",
+  "auto": true
+ },
+ "18c5d6623bf436d062f31831a3e45a73": {
+  "table": "sys_alias",
+  "sys_id": "18c5d6623bf436d062f31831a3e45a73",
+  "name": "ljmf-now-assist-client_1761628039956",
+  "auto": true
+ },
+ "750b2f2b3b6ef21062f31831a3e45a50": {
+  "table": "sys_alias",
+  "sys_id": "750b2f2b3b6ef21062f31831a3e45a50",
+  "name": "AutoGen-Snowflake MCP-1769435022028-OAuthProviderAlias",
+  "auto": true
+ },
+ "9aaef6ca540f4800883f265e197715eb": {
+  "table": "sys_alias",
+  "sys_id": "9aaef6ca540f4800883f265e197715eb",
+  "name": "Get Expense Event",
+  "auto": true
+ },
+ "ac87a85dd5b941b3908d730dd2a93d80": {
+  "table": "sys_script",
+  "sys_id": "ac87a85dd5b941b3908d730dd2a93d80",
+  "name": "Set Expense Event Owner",
+  "auto": true
+ },
+ "2fbdbfdd47d41394037d0fadf26d4365": {
+  "table": "x_snc_forecast_v_0_expense_transaction_event",
+  "sys_id": "2fbdbfdd47d41394037d0fadf26d4365",
+  "name": "EXP-2025-IT-002-1007-01",
+  "auto": true
+ },
+ "08f7f661a4b84d58ad56309f5f391252": {
+  "table": "sn_aia_agent",
+  "sys_id": "08f7f661a4b84d58ad56309f5f391252",
+  "name": "Forecast Variance LF",
+  "auto": false
+ },
+ "3886df5d3bda72500ad1a021a3e45a20": {
+  "table": "sn_aia_agent",
+  "sys_id": "3886df5d3bda72500ad1a021a3e45a20",
+  "name": "Review Over budget Cost Centers",
+  "auto": false
+ },
+ "6a1f4bdf4da043b39900971b2129c34a": {
+  "table": "sn_aia_agent",
+  "sys_id": "6a1f4bdf4da043b39900971b2129c34a",
+  "name": "Forecast Variance",
+  "auto": false
+ },
+ "8ee51e2047630bd4037d0fadf26d43f8": {
+  "table": "sn_aia_agent",
+  "sys_id": "8ee51e2047630bd4037d0fadf26d43f8",
+  "name": "Studio Skills Assistant",
+  "auto": false
+ },
+ "f575da6c47230bd4037d0fadf26d43fd": {
+  "table": "sn_aia_agent",
+  "sys_id": "f575da6c47230bd4037d0fadf26d43fd",
+  "name": "Build Agent Skills Assistant",
+  "auto": false
+ },
+ "9dd54b85e9bf497887c104b4f4baf469": {
+  "table": "sn_aia_trigger_configuration",
+  "sys_id": "9dd54b85e9bf497887c104b4f4baf469",
+  "name": "Expense Event Created",
+  "auto": false
+ }
+}

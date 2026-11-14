@@ -1,0 +1,11 @@
+In the Forecast Variance app:
+1. Create a connection and credential alias named "Get Expense Event", with an HTTP
+connection to https://wdflab.servicenow.workers.dev.
+2. Create a Flow Designer action named "Get Expense Event" that sends GET
+/api/expense-events through that alias. For each returned event whose Event ID isn't
+already in the Expense Transaction Event table, the action itself creates an Expense
+Transaction Event record, copying each field with the same name and setting Owner to the
+user running it. amount_usd arrives as text with commas, so remove them.
+3. Create a subflow named "Get Expense Event" that only runs that action, as the user who
+starts it.
+Then build and install the app, and test it by running the subflow once.

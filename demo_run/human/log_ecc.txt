@@ -1,0 +1,19 @@
+02:09:58   logged in as admin
+02:09:58 >>> prep: admin email and ais_high_security_admin role
+02:09:58   admin email demouser@wdfdemo.onmicrosoft.com | role present true
+02:09:58 <<< prep: admin email and ais_high_security_admin role 0s
+02:09:58 >>> External Content Admin Home
+02:10:25   screenshot ecc_01_home.png
+02:10:25   page mentions SharePoint connector: true | Create button: true
+02:10:25 <<< External Content Admin Home 27s
+02:10:25 >>> Employee Center > Ask Now Assist query
+02:10:53   screenshot ecc_02_ec_home.png
+02:10:53   inputs: ["INPUT|Ask AI for help or search|Ask AI for help or search"]
+02:11:13   screenshot ecc_03_answer.png
+02:11:13   answer cites "Strategic Memo - European Product Launch.pdf": true
+02:11:13 <<< Employee Center > Ask Now Assist query 48s
+02:11:13 ---- TIMES
+02:11:13   prep: admin email and ais_high_security_admin role           0s
+02:11:13   External Content Admin Home                                  27s
+02:11:13   Employee Center > Ask Now Assist query                       48s
+02:11:13 ######## EXTERNAL CONTENT CONNECTOR BY HAND DONE total 82s

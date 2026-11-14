@@ -1,0 +1,146 @@
+{
+ "119f89353b1413d8a0db3141a3e45ae1": {
+  "table": "sys_hub_flow",
+  "sys_id": "119f89353b1413d8a0db3141a3e45ae1",
+  "name": "Expense Transaction Event - AI Agent: Forecast Variance QA - 9d9f89353b1413d8a0db3141a3e45ade",
+  "auto": true
+ },
+ "1ea0bab23bb6f61062f31831a3e45a97": {
+  "table": "sys_hub_flow",
+  "sys_id": "1ea0bab23bb6f61062f31831a3e45a97",
+  "name": "_unload",
+  "auto": true
+ },
+ "46a03ab23bb6f61062f31831a3e45a79": {
+  "table": "sys_hub_flow",
+  "sys_id": "46a03ab23bb6f61062f31831a3e45a79",
+  "name": "_load",
+  "auto": true
+ },
+ "6facf999e15772107f447756abe0cb65": {
+  "table": "sys_hub_flow",
+  "sys_id": "6facf999e15772107f447756abe0cb65",
+  "name": "DocIntel Task Processing Flow - Expense Transaction Event - Process",
+  "auto": true
+ },
+ "a94b28573b91be900ad1a021a3e45a76": {
+  "table": "sys_hub_flow",
+  "sys_id": "a94b28573b91be900ad1a021a3e45a76",
+  "name": "Trigger Variance Analysis",
+  "auto": true
+ },
+ "ae7a9ca80b81422fbdae8dc63d03da7f": {
+  "table": "sys_hub_flow",
+  "sys_id": "ae7a9ca80b81422fbdae8dc63d03da7f",
+  "name": "Get Expense Event",
+  "auto": true
+ },
+ "b3a0c01f3b957e900ad1a021a3e45a07": {
+  "table": "sys_hub_flow",
+  "sys_id": "b3a0c01f3b957e900ad1a021a3e45a07",
+  "name": "Test Flow for Finance Case",
+  "auto": true
+ },
+ "bfaea0e23bf4b2d062f31831a3e45a3d": {
+  "table": "sys_hub_flow",
+  "sys_id": "bfaea0e23bf4b2d062f31831a3e45a3d",
+  "name": "Forecast Variance Test",
+  "auto": true
+ },
+ "c1ad7d1de15772107f447756abe0cb2e": {
+  "table": "sys_hub_flow",
+  "sys_id": "c1ad7d1de15772107f447756abe0cb2e",
+  "name": "DocIntel Extract Values Flow - Expense Transaction Event - Extract",
+  "auto": true
+ },
+ "d17af29eab844df18f91073a667541e7": {
+  "table": "sys_hub_flow",
+  "sys_id": "d17af29eab844df18f91073a667541e7",
+  "name": "Budget Variance Analysis",
+  "auto": true
+ },
+ "e45431ea3b7a3a5062f31831a3e45a74": {
+  "table": "sys_hub_flow",
+  "sys_id": "e45431ea3b7a3a5062f31831a3e45a74",
+  "name": "Invoice case - AI Agent: Invoice resolution provider - 285431ea3b7a3a5062f31831a3e45a72",
+  "auto": true
+ },
+ "f0e1a881e75e4ea5aba807023a0ed4f1": {
+  "table": "sys_hub_flow",
+  "sys_id": "f0e1a881e75e4ea5aba807023a0ed4f1",
+  "name": "Extract Cost Center",
+  "auto": true
+ },
+ "550aae11ea9d48da9c39ef07e6805098": {
+  "table": "sys_hub_action_type_definition",
+  "sys_id": "550aae11ea9d48da9c39ef07e6805098",
+  "name": "Get Expense Event",
+  "auto": true
+ },
+ "c07879f09209463fb00586d4a325e960": {
+  "table": "sys_hub_action_type_definition",
+  "sys_id": "c07879f09209463fb00586d4a325e960",
+  "name": "Compute Budget Totals",
+  "auto": true
+ },
+ "18c5d6623bf436d062f31831a3e45a73": {
+  "table": "sys_alias",
+  "sys_id": "18c5d6623bf436d062f31831a3e45a73",
+  "name": "ljmf-now-assist-client_1761628039956",
+  "auto": true
+ },
+ "750b2f2b3b6ef21062f31831a3e45a50": {
+  "table": "sys_alias",
+  "sys_id": "750b2f2b3b6ef21062f31831a3e45a50",
+  "name": "AutoGen-Snowflake MCP-1769435022028-OAuthProviderAlias",
+  "auto": true
+ },
+ "9aaef6ca540f4800883f265e197715eb": {
+  "table": "sys_alias",
+  "sys_id": "9aaef6ca540f4800883f265e197715eb",
+  "name": "Get Expense Event",
+  "auto": true
+ },
+ "08f7f661a4b84d58ad56309f5f391252": {
+  "table": "sn_aia_agent",
+  "sys_id": "08f7f661a4b84d58ad56309f5f391252",
+  "name": "Forecast Variance LF",
+  "auto": false
+ },
+ "3886df5d3bda72500ad1a021a3e45a20": {
+  "table": "sn_aia_agent",
+  "sys_id": "3886df5d3bda72500ad1a021a3e45a20",
+  "name": "Review Over budget Cost Centers",
+  "auto": false
+ },
+ "6a1f4bdf4da043b39900971b2129c34a": {
+  "table": "sn_aia_agent",
+  "sys_id": "6a1f4bdf4da043b39900971b2129c34a",
+  "name": "Forecast Variance",
+  "auto": false
+ },
+ "8ee51e2047630bd4037d0fadf26d43f8": {
+  "table": "sn_aia_agent",
+  "sys_id": "8ee51e2047630bd4037d0fadf26d43f8",
+  "name": "Studio Skills Assistant",
+  "auto": false
+ },
+ "d03e99f45b1142fba4454cf32f5ec9ed": {
+  "table": "sn_aia_agent",
+  "sys_id": "d03e99f45b1142fba4454cf32f5ec9ed",
+  "name": "Forecast Variance QA",
+  "auto": false
+ },
+ "f575da6c47230bd4037d0fadf26d43fd": {
+  "table": "sn_aia_agent",
+  "sys_id": "f575da6c47230bd4037d0fadf26d43fd",
+  "name": "Build Agent Skills Assistant",
+  "auto": false
+ },
+ "60897a90e67946b08f214a15fdd73c76": {
+  "table": "sn_aia_trigger_configuration",
+  "sys_id": "60897a90e67946b08f214a15fdd73c76",
+  "name": "Forecast Variance QA - Expense Event Created",
+  "auto": false
+ }
+}

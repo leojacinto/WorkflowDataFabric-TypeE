@@ -1,0 +1,4 @@
+In the Forecast Variance app, add a business rule named "Set Expense Event Owner" on the
+Expense Transaction Event table. It runs before insert, and when Owner is empty it sets
+Owner to the user who is creating the record. Keep the agent, its tools and its trigger as
+they are, and keep the trigger on. Build and install the app without creating test records.

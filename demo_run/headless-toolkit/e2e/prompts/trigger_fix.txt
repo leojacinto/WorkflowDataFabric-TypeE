@@ -1,0 +1,1 @@
+Set the trigger active in the Fluent source and keep its trigger flow.

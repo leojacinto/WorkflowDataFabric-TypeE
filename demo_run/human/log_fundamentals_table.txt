@@ -1,0 +1,74 @@
+01:42:02   logged in as admin
+01:42:02 >>> 9-10. open a new table form, label, untick Create module, application Forecast Variance
+01:42:31   application shown: a4fd2da13bf8be5062f31831a3e45ac9
+01:42:31   screenshot fund_01_new_table.png
+01:42:31 <<< 9-10. open a new table form, label, untick Create module, application Forecast Variance 29s
+01:42:31 >>> 11. Save
+01:42:36   table x_snc_forecast_v_0_expense_transaction_event_qa scope {"link":"https://demoalectriallwfaa158438.service-now.com/api/now/table/sys_scope/a4fd2da13bf8be5062f31831a3e45ac9","value":"a4fd2da13bf8be5062f31831a3e45ac9"}
+01:42:36   screenshot fund_02_saved.png
+01:42:36 <<< 11. Save 5s
+01:42:36 >>> 13/14. column 1/17: Amount USD (decimal 15)
+01:42:39   screenshot fund_03_column_form.png
+01:42:41 <<< 13/14. column 1/17: Amount USD (decimal 15) 4s
+01:42:41 >>> 13/14. column 2/17: Timestamp (glide_date_time)
+01:42:45 <<< 13/14. column 2/17: Timestamp (glide_date_time) 4s
+01:42:45 >>> 13/14. column 3/17: Cost Center (string 40)
+01:42:49 <<< 13/14. column 3/17: Cost Center (string 40) 4s
+01:42:49 >>> 13/14. column 4/17: Source System (string 40)
+01:42:54 <<< 13/14. column 4/17: Source System (string 40) 4s
+01:42:54 >>> 13/14. column 5/17: Billing Period (string 40)
+01:42:58 <<< 13/14. column 5/17: Billing Period (string 40) 4s
+01:42:58 >>> 13/14. column 6/17: Vendor (string 40)
+01:43:02 <<< 13/14. column 6/17: Vendor (string 40) 4s
+01:43:02 >>> 13/14. column 7/17: Invoice ID (string 40)
+01:43:06 <<< 13/14. column 7/17: Invoice ID (string 40) 4s
+01:43:06 >>> 13/14. column 8/17: GL Account (string 40)
+01:43:10 <<< 13/14. column 8/17: GL Account (string 40) 4s
+01:43:10 >>> 13/14. column 9/17: Business Unit (string 40)
+01:43:13 <<< 13/14. column 9/17: Business Unit (string 40) 4s
+01:43:13 >>> 13/14. column 10/17: Sent From (string 40)
+01:43:17 <<< 13/14. column 10/17: Sent From (string 40) 4s
+01:43:17 >>> 13/14. column 11/17: Correlation ID (string 40)
+01:43:21 <<< 13/14. column 11/17: Correlation ID (string 40) 4s
+01:43:21 >>> 13/14. column 12/17: Service Category (string 40)
+01:43:25 <<< 13/14. column 12/17: Service Category (string 40) 4s
+01:43:25 >>> 13/14. column 13/17: Schema Version (string 40)
+01:43:28 <<< 13/14. column 13/17: Schema Version (string 40) 4s
+01:43:28 >>> 13/14. column 14/17: Region (string 40)
+01:43:32 <<< 13/14. column 14/17: Region (string 40) 4s
+01:43:32 >>> 13/14. column 15/17: Event ID (string 40)
+01:43:35 <<< 13/14. column 15/17: Event ID (string 40) 4s
+01:43:35 >>> 13/14. column 16/17: Priority (string 40)
+01:43:39 <<< 13/14. column 16/17: Priority (string 40) 4s
+01:43:39 >>> 13/14. column 17/17: Event Type (string 40)
+01:43:43 <<< 13/14. column 17/17: Event Type (string 40) 4s
+01:43:43 >>> verify the 17 columns exist
+01:43:43   23 dictionary entries; missing: []
+01:43:43 <<< verify the 17 columns exist 0s
+01:43:43 >>> cleanup (delete the test table)
+01:44:06   delete table http=204
+01:44:26   table gone: true
+01:44:26 <<< cleanup (delete the test table) 43s
+01:44:26 ---- TIMES
+01:44:26   9-10. open a new table form, label, untick Create module, application Forecast Variance 29s
+01:44:26   11. Save                                                                     5s
+01:44:26   13/14. column 1/17: Amount USD (decimal 15)                                  4s
+01:44:26   13/14. column 2/17: Timestamp (glide_date_time)                              4s
+01:44:26   13/14. column 3/17: Cost Center (string 40)                                  4s
+01:44:26   13/14. column 4/17: Source System (string 40)                                4s
+01:44:26   13/14. column 5/17: Billing Period (string 40)                               4s
+01:44:26   13/14. column 6/17: Vendor (string 40)                                       4s
+01:44:26   13/14. column 7/17: Invoice ID (string 40)                                   4s
+01:44:26   13/14. column 8/17: GL Account (string 40)                                   4s
+01:44:26   13/14. column 9/17: Business Unit (string 40)                                4s
+01:44:26   13/14. column 10/17: Sent From (string 40)                                   4s
+01:44:26   13/14. column 11/17: Correlation ID (string 40)                              4s
+01:44:26   13/14. column 12/17: Service Category (string 40)                            4s
+01:44:26   13/14. column 13/17: Schema Version (string 40)                              4s
+01:44:26   13/14. column 14/17: Region (string 40)                                      4s
+01:44:26   13/14. column 15/17: Event ID (string 40)                                    4s
+01:44:26   13/14. column 16/17: Priority (string 40)                                    4s
+01:44:26   13/14. column 17/17: Event Type (string 40)                                  4s
+01:44:26   verify the 17 columns exist                                                  0s
+01:44:26   cleanup (delete the test table)                                              43s
+01:44:26 ######## FUNDAMENTALS TABLE DONE total 151s

@@ -1,0 +1,10 @@
+In the Forecast Variance app, add a tool to the existing AI agent
+"Forecast Variance QA",
+named "Search for Cost Center Summary", that runs without asking. It looks up up to 12
+records in the table x_snc_forecast_v_0_df_cc_summ_dvn by cost center, ordered by period, and returns
+period, fiscal year, actual amount, baseline amount, variance and variance percent. In
+the agent instructions, add this step after Step 3 and renumber the later steps: "Step
+4: Review PostgreSQL Cost Center Summary. Use the Search for Cost Center Summary tool
+with the cost center from Step 1 and say whether the variance is mostly positive or
+negative." Keep the agent's other tools, instructions and trigger as they are, and keep
+the trigger on. Build and install the app without creating test records.

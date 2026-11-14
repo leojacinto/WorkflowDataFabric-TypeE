@@ -1,0 +1,17 @@
+{
+  "name": "wdf-headless-toolkit",
+  "version": "1.0.0",
+  "description": "Headless Build Agent driver, annotate and e2e checks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "dependencies": {
+    "playwright-core": "1.59.0-alpha-1771104257000"
+  },
+  "private": true
+}

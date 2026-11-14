@@ -1,0 +1,26 @@
+In the Forecast Variance app, create an AI agent named "Forecast Variance QA"
+that reviews new expense events and opens a Finance Case when a cost center goes over
+budget. Its tools run without asking:
+- the "Extract Cost Center" subflow
+- the "Budget Variance Analysis" subflow
+- "Search for Cost Center History": looks up up to 12 Cost Center Budget History
+records by cost center, ordered by fiscal month, and returns fiscal month, monthly
+budget, actual spend and status
+- "Search for Expense Transactions History": looks up records in the global table
+x_snc_forecast_v_0_expense_transactions by cost center and vendor and returns expense
+date, amount and description
+Instructions:
+1. Run Extract Cost Center with the event ID.
+2. Run Search for Cost Center History with that cost center and say whether the months are
+mostly On Target, Over Budget or Under Budget.
+3. Run Search for Expense Transactions History with the cost center and vendor and say
+whether this vendor has transacted before.
+4. Run Budget Variance Analysis with the cost center and event ID and report its result,
+including the Finance Case number if one was created.
+Only users with the admin role can run it, and it uses the admin role for data access. Add
+a trigger: when an Expense Transaction Event is created and Vendor is not empty, run as
+the record's Owner, objective "Review expense event ${event_id}", channel
+"Now Assist Panel" (the sys_cs_channel record of that name), trigger on.
+Build and install the app without creating test records. An install doesn't build the
+trigger's flow, so then re-save the trigger configuration with a GlideRecord update in
+global scope (setForceUpdate(true), no field changes) and show the trigger_flow it gets.

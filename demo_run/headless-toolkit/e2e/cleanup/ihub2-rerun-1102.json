@@ -1,0 +1,26 @@
+{
+ "run": "ihub2-rerun-1102",
+ "created": [
+  {
+   "table": "sys_hub_flow",
+   "sys_id": "39f44dbcc2da45598112b83f139e8dfc",
+   "name": "Budget Variance Analysis",
+   "auto": true,
+   "deleted": true
+  },
+  {
+   "table": "sys_hub_flow",
+   "sys_id": "50eb27bd2a474f659f514eb261242f2e",
+   "name": "Extract Cost Center",
+   "auto": true,
+   "deleted": true
+  },
+  {
+   "table": "sys_hub_action_type_definition",
+   "sys_id": "49d4279426bb4561aece65214b25f362",
+   "name": "Compute Budget Totals",
+   "auto": true,
+   "deleted": true
+  }
+ ]
+}

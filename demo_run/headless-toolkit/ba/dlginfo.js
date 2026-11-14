@@ -1,0 +1,1 @@
+() => { const b = [...document.querySelectorAll('button')].filter(x => x.offsetParent && x.textContent.trim() === 'Delete'); return b.map(x => ({ id: x.id, cls: x.className, onclick: (x.getAttribute('onclick') || '').slice(0, 120), parent: x.closest('[id]') && x.closest('[id]').id })); }

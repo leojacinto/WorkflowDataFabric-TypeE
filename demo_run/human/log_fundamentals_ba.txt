@@ -1,0 +1,8 @@
+01:44:33   logged in as admin
+01:44:34 >>> Build Agent creates the table (guide prompt, initials QA)
+01:45:51   screenshot ba_sent.png
+01:49:28   screenshot ba_done.png
+01:49:28 <<< built in 187s after 0 approval clicks; 17 columns present
+01:49:53   cleanup: delete table http=204
+01:50:18   table gone: true
+01:50:18 ######## FUNDAMENTALS BUILD AGENT OPTION DONE total 352s

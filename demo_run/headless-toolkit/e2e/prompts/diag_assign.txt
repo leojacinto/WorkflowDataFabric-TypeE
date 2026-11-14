@@ -1,0 +1,7 @@
+Do not change anything in the app. In the Forecast Variance app, run the subflow
+"Budget Variance Analysis" that the AI agent "Forecast Variance LF" uses, in the
+foreground, with cost center CC_IT_001 and event ID EXP-2025-IT-002-1007-01. Show:
+1. the Owner output of the Compute Budget Totals step,
+2. the field values the Create Finance Case step received,
+3. the Finance Case record it created, including Assigned to.
+If Assigned to is empty, explain exactly why. Do not fix it yet.

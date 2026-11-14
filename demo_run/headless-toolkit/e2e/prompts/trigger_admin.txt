@@ -1,0 +1,5 @@
+In the Forecast Variance app, change the trigger configuration of the AI agent
+"Forecast Variance QA" so that it runs as the user admin (System Administrator) instead of
+the record's Owner. Keep the trigger on, keep its trigger flow, and keep the agent, its
+tools and every other record as they are. Build and install the app without creating
+test records.

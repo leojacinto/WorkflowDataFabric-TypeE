@@ -1,0 +1,2 @@
+// Scroll the Build Agent chat transcript (scrollable element in the left panel) by arg pixels; returns new scrollTop.
+(arg) => { const out = []; const walk = root => { for (const el of root.querySelectorAll('*')) { const r = el.getBoundingClientRect(); if (r.x < 600 && r.width > 200 && el.scrollHeight > el.clientHeight + 50 && /auto|scroll/.test(getComputedStyle(el).overflowY)) { el.scrollTop += Number(arg); out.push(Math.round(el.scrollTop) + '/' + el.scrollHeight); } if (el.shadowRoot) walk(el.shadowRoot); } }; walk(document); return out.length ? out.join(',') : null; }

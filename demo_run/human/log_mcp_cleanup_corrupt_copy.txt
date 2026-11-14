@@ -1,0 +1,7 @@
+02:39:45   logged in as admin
+02:39:45 agents named Forecast Variance QB (Copy) before: 1
+02:40:10 row checkbox: {"x":32,"y":483}
+02:40:12   screenshot mcpc_01_selected.png
+02:40:15   screenshot mcpc_02_confirm.png
+02:40:28   screenshot mcpc_03_after.png
+02:40:28 agents named Forecast Variance QB (Copy) after: 0 | other Forecast Variance agents kept: ["Forecast Variance LF","Forecast Variance QB","Forecast Variance","Forecast Variance QA"]

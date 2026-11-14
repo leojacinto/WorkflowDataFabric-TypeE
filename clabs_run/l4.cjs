@@ -1,0 +1,10 @@
+const u=require('./u7021.cjs');const O='/Users/leo.francia/WorkflowDataFabric-TypeE/lab-guide/lef-nov-7021/';
+(async()=>{const {b,p}=await u.open();
+await p.goto(u.H+'/x_snc_forecast_v_0_variance_task.do?sys_id=-1',{timeout:90000});await p.waitForTimeout(8000);await u.dismiss(p);
+await p.mouse.click(830,229);await p.keyboard.type('CC_IT_002');
+await p.mouse.click(1431,22);await p.waitForTimeout(3000);
+await p.screenshot({path:O+'ldi_attach_dialog.png'});
+const f=p.locator('input[type=file]');console.log('file inputs',await f.count());
+await f.first().setInputFiles(u.S+'Invoice_IT_Laptop_CC_IT_002.pdf');await p.waitForTimeout(8000);
+await p.screenshot({path:O+'ldi_attach_done.png'});
+await b.close();})();

@@ -1,0 +1,1 @@
+() => { const d = [...document.querySelectorAll('.modal-dialog, [role=dialog], .modal')].find(x => x.offsetParent && /delete the application 'Lab DVN Forecast Variance'/.test(x.textContent)); if (!d) return null; const b = [...d.querySelectorAll('button')].find(x => x.textContent.trim() === 'Delete'); if (!b) return 'nobutton'; b.click(); return 'clicked'; }

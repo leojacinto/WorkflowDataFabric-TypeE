@@ -1,0 +1,23 @@
+{
+ "run": "ihub3_x-1102-2249",
+ "created": [
+  {
+   "table": "sys_hub_flow",
+   "sys_id": "119f89353b1413d8a0db3141a3e45ae1",
+   "name": "Expense Transaction Event - AI Agent: Forecast Variance QA - 9d9f89353b1413d8a0db3141a3e45ade",
+   "auto": true
+  },
+  {
+   "table": "sn_aia_agent",
+   "sys_id": "d03e99f45b1142fba4454cf32f5ec9ed",
+   "name": "Forecast Variance QA",
+   "auto": false
+  },
+  {
+   "table": "sn_aia_trigger_configuration",
+   "sys_id": "60897a90e67946b08f214a15fdd73c76",
+   "name": "Forecast Variance QA - Expense Event Created",
+   "auto": false
+  }
+ ]
+}

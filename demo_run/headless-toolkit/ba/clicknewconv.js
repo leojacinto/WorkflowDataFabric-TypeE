@@ -1,0 +1,1 @@
+() => { const walk = (root) => { for (const el of root.querySelectorAll('*')) { if (el.tagName === 'BUTTON' && /New conversation/.test(el.getAttribute('aria-label') || el.textContent)) { el.click(); return 'clicked'; } if (el.shadowRoot) { const r = walk(el.shadowRoot); if (r) return r; } } return null; }; return walk(document); }

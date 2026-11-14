@@ -1,0 +1,18 @@
+// Elevate ai_security_admin (the role for RBAC on MCP servers) by hand, then look at the new server's access settings. Elevation ends when this browser session ends.
+const H = require('./human.cjs'); const SERVER = process.env.SERVER_ID || '5241298f4710d390037d0fadf26d4332';
+(async () => {
+  const { browser, page } = await H.openBrowser();
+  try {
+    await page.goto(`${H.BASE}/now/nav/ui/home`, { waitUntil: 'load', timeout: 90000 }); await page.waitForTimeout(14000); for (let i = 0; i < 12 && (await page.getByText(/Running transaction/).count()); i++) await page.waitForTimeout(8000);
+    await page.getByRole('button', { name: /User menu|Account|System Administrator|SA/i }).first().click({ timeout: 20000 }).catch(async () => { await page.mouse.click(1536, 25); }); await page.waitForTimeout(4000); await H.clickText(page, 'Elevate role'); await page.waitForTimeout(5000);
+    const cb = page.locator('label:has-text("ai_security_admin") input, input[type=checkbox]').first(); 
+    const box = await page.evaluate(() => { const walk = (r, a) => { for (const e of r.querySelectorAll('*')) { a.push(e); if (e.shadowRoot) walk(e.shadowRoot, a); } return a; }; const t = walk(document, []).find(e => e.offsetParent !== null && (e.textContent || '').trim() === 'ai_security_admin'); if (!t) return null; const r = t.getBoundingClientRect(); return { x: r.x - 18, y: r.y + r.height / 2 }; });
+    H.log('ai_security_admin row: ' + JSON.stringify(box)); if (!box) throw new Error('ai_security_admin not listed'); await page.mouse.click(box.x, box.y); await page.waitForTimeout(1500); await H.shot(page, 'acl2_01_ticked');
+    await page.getByRole('button', { name: 'Update', exact: true }).first().click({ timeout: 15000 }); await page.waitForTimeout(8000); H.log('elevated');
+    await page.goto(`${H.BASE}/now/agent-studio/create-manage`, { waitUntil: 'load', timeout: 90000 }); await page.waitForTimeout(20000); await H.shot(page, 'acl2_04_studio'); await page.getByRole('link', { name: 'Settings', exact: true }).or(page.getByRole('button', { name: 'Settings', exact: true })).first().click({ timeout: 20000 }).catch(async () => { await page.mouse.click(508, 73); }); await page.waitForTimeout(12000); await H.clickText(page, 'Manage MCP servers'); await page.waitForTimeout(15000);
+    await H.shot(page, 'acl2_05_list_elevated'); H.log('list page buttons: ' + JSON.stringify((await page.locator('button:visible, a:visible').evaluateAll(els => els.map(e => (e.getAttribute('aria-label') || e.textContent || '').trim().replace(/\\s+/g, ' ').slice(0, 40)).filter(t => /access|acl|role|rbac|permission|security|new|add/i.test(t)))).slice(0, 15)));
+    const pos = await page.evaluate(() => { const walk = (r, a) => { for (const e of r.querySelectorAll('*')) { a.push(e); if (e.shadowRoot) walk(e.shadowRoot, a); } return a; }; const e = walk(document, []).find(e => e.tagName === 'A' && e.offsetParent !== null && (e.textContent || '').trim() === 'Neon MCP Lab'); if (!e) return null; const r = e.getBoundingClientRect(); return { x: r.x + 10, y: r.y + r.height / 2 }; });
+    H.log('row: ' + JSON.stringify(pos)); if (pos) { await page.mouse.click(pos.x, pos.y); await page.waitForTimeout(70000); await H.shot(page, 'acl2_06_server_elevated'); H.log('server page: ' + JSON.stringify((await page.locator('button:visible, a:visible, [role=tab]:visible').evaluateAll(els => els.map(e => (e.getAttribute('aria-label') || e.textContent || '').trim().replace(/\\s+/g, ' ').slice(0, 40)).filter(t => t && t.length < 40))).slice(0, 40))); }
+  } catch (e) { H.log('ERROR ' + e.message.split('\n')[0]); await H.shot(page, 'acl2_error').catch(() => {}); }
+  await browser.close();
+})();

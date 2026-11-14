@@ -1,0 +1,10 @@
+const u=require('./u7021.cjs');
+(async()=>{const {b,p}=await u.open();
+await p.goto(u.H+'/now/agent-studio/create-manage',{timeout:90000}).catch(()=>{});await p.waitForTimeout(15000);await u.dismiss(p);
+await p.mouse.click(211,211);await p.waitForTimeout(8000);
+await p.mouse.click(105,289);await p.waitForTimeout(3000);
+await p.mouse.click(385,444);await p.waitForTimeout(1500);await p.keyboard.type('Name',{delay:60});await p.waitForTimeout(2000);
+await p.screenshot({path:u.S+'mcp5_a.png'});
+await p.keyboard.press('ArrowDown');await p.keyboard.press('Enter');await p.waitForTimeout(2000);
+await p.screenshot({path:u.S+'mcp5_b.png'});
+await b.close();})();

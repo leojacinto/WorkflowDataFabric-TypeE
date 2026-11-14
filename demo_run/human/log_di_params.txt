@@ -1,0 +1,26 @@
+01:52:59   logged in as admin
+01:52:59 >>> 3-4. System Properties, filter *threshold
+01:53:08   screenshot dip_01_list.png
+01:53:08 <<< 3-4. System Properties, filter *threshold 9s
+01:53:08 >>> 4b. set warning_score_threshold to 0.01
+01:53:08   value before: 0.01
+01:53:37   clicked "To edit this record click here" (switches the current application to Global)
+01:53:54   value after: 0.01
+01:53:54 <<< 4b. set warning_score_threshold to 0.01 46s
+01:53:54 >>> 4b. set autofill_threshold to 0.01
+01:53:54   value before: 0.01
+01:54:01   clicked "To edit this record click here" (switches the current application to Global)
+01:54:18   value after: 0.01
+01:54:18 <<< 4b. set autofill_threshold to 0.01 24s
+01:54:18 >>> 4b. set straight_through_processing_threshold to 0.01
+01:54:18   value before: 0.01
+01:54:24   clicked "To edit this record click here" (switches the current application to Global)
+01:54:41   value after: 0.01
+01:54:41 <<< 4b. set straight_through_processing_threshold to 0.01 23s
+01:54:41   screenshot dip_02_done.png
+01:54:41 ---- TIMES
+01:54:41   3-4. System Properties, filter *threshold                              9s
+01:54:41   4b. set warning_score_threshold to 0.01                                46s
+01:54:41   4b. set autofill_threshold to 0.01                                     24s
+01:54:41   4b. set straight_through_processing_threshold to 0.01                  23s
+01:54:41 ######## DI PARAMETERS BY HAND DONE total 109s

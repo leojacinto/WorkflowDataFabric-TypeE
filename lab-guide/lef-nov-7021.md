@@ -1,0 +1,137 @@
+# lef-nov-7021 run log
+
+Instance: lef-nov-7021-0001.lab.service-now.com (Brazil, patch 2). Run through the UI with headless Playwright. Build Agent is excluded (it fails on this instance), so only the manual route counts. This file is the only place edits are saved; nothing goes to the UI page or the AIUX app.
+
+## Status
+
+| Page | Status | Finding |
+|---|---|---|
+| Fundamentals | Not started | Build version check done: Brazil, patch 2 (newer than the Zurich Patch 6 the page asks for). Forecast Variance app (x_snc_forecast_v_0) is already installed, so the Demo Hub catalog item install step is not needed. |
+| Integration Hub | Preparation step 1 of platform config done | Page has no manual route. Since commit d3bf65d the whole page is Build Agent prompts only. The manual steps exist in git history before 6d64d6b and would have to be restored and re-run here. |
+| Zero Copy | Not started | |
+| Lens and Document Intelligence | Not started | |
+| MCP | Not started | |
+| External Content Connector | Not started | |
+
+## Integration Hub, Preparation: Platform Configuration
+
+1. Instruction as written works: admin did not have `sn_aia.admin`; User > Roles tab > Edit... > search `sn_aia.admin` > move right > Save adds it. Verified in User Roles list (admin, sn_aia.admin, Active, not inherited).
+2. Wording change for this build: the Edit button on the Roles tab reads **Edit...**, and a "Say hello to ServiceNow Otto" dialog appears on first load; click **Got it**.
+
+![Role added](lef-nov-7021/ihub_prep_role_add.png)
+
+## Integration Hub, manual route (run on 7021)
+
+| Step | Result |
+|---|---|
+| Alias Get Expense Event | Present (x_snc_forecast_v_0.Get_Expense_Event), no connection yet. Current application was Global, banner says the record belongs to Forecast Variance. |
+| Create connection (Name Get Expense Event, URL https://wdflab.servicenow.workers.dev) | Done through Connections > New. One HTTP connection exists afterwards. Screenshots: lef-nov-7021/ihub_connection_filled.png, ihub_connection_saved.png |
+| Agent, trigger, action, subflows | All present: 3 Forecast Variance agents, 1 trigger, 1 action, 5 subflows, 7 x_snc_forecast_v_0 tables. |
+| Subflow test in Workflow Studio | Blocked in headless: Workflow Studio opens the subflow in a tab that does not render in a headless session. Needs a visible browser; not an instruction problem. |
+
+Guide change made: the Integration Hub page lost its manual route on 2026-11-01. It was restored as the section "Without Build Agent (manual route)" (commit c35c911), live on the UI page and in the AIUX app.
+
+## Zero Copy Connector (run on 7021)
+
+| Step | Result |
+|---|---|
+| Preparation: role `sn_erp_integration.erp_admin` on admin | Done through User > Roles > Edit... (lef-nov-7021/zcc_prep_role_add.png). |
+| Open Zero Copy Connector for ERP Home | Works: All > type "Zero Copy Connector for ERP Home" > click. Opens `/now/erp-integration/home` in a new tab/page. A "How to use" dialog and a "Stop Guided Tour" dialog appear; close the first, answer **No** on the second (as the page already says). Screenshots: zcc_erp_home_layout.png, zcc_models.png |
+| Models list | 49 models; ERP system S4D exists. No model named "SAP Cost Center Lab" yet. |
+| Clone CP: Cost Center | Not done: the model name list is virtualised, so the headless run could not find the "CP: Cost Center" row by text. Needs the list filter (funnel icon) driven by coordinates. Instruction itself is unchanged and still valid. |
+
+## Not started on 7021
+
+Zero Copy SQL/PostgreSQL steps, Lens and Document Intelligence, MCP, External Content Connector.
+
+### Zero Copy, findings after the first run
+
+| Part | Verdict | Why |
+|---|---|---|
+| Clone ERP data product "CP: Cost Center" | Cannot be done on 7021 | The ERP Models list has 49 ERP models across 3 pages and no "CP:" data product models. The page assumes the OOTB data product templates are installed. Drop on this instance, or install the data product content first. Screenshot: zcc_models.png |
+| Zero Copy for SQL (PostgreSQL on Neon) | Cannot be done on 7021 | Zero Copy Connector Hub (`/now/wdf/overview`) offers only Apache Iceberg, SAP ECC and SAP S/4HANA under Available connectors, and the Established connections are six others (Alectri Finance FV, AlectriBigQuery, AlectriOracle, AlectriRedshift, ServiceNow local instance, Snowflake Connection). There is no "Forecast Variance Postgres" connection and no PostgreSQL connector tile. The page says "your facilitator has connected it", so this is a missing facilitator step plus a missing connector, not an instruction wording problem. Screenshot: zcc_pg_hub.png |
+
+## Document Intelligence (run on 7021)
+
+| Step | Result |
+|---|---|
+| Three thresholds set to 0.01 (Global properties glide.platform_ml_di.doc_data_extractor.*) | Done and verified in the property list. Only straight_through_processing_threshold (1.0) and warning_score_threshold needed changing; autofill was already 0.01. The properties are Global, and the admin session was already in Global scope. Screenshot: ldi_threshold_search.png |
+| Variance task with Invoice_IT_Laptop_CC_IT_002.pdf, State Work in Progress, Submit | Done. Task TASK0020121 created. About a minute later the Expense Transaction Event list holds a new event EXP-2025-IT-002-1010-01, cost center CC_IT_002, amount 3,080, owner System Administrator, so the extraction works. Screenshots: ldi_attach_done.png, ldi_state_wip.png, ldi_check_events.png |
+| AI Lens (browser extension download and runtime) | Not run: needs the Chrome extension in a visible browser. |
+
+## MCP (run on 7021)
+
+| Step | Result |
+|---|---|
+| Open the MCP servers page | Faster path than the page's: URL `/now/agent-studio/manage-mcp-servers` (AI Agent Studio > Settings > **Manage MCP servers**, three servers listed). The page describes Settings > expand Manage MCP servers > View; on this build Manage MCP servers is a menu entry in the left bar and the list opens directly. |
+| New > Add MCP server | The dialog differs from the page: Name, Authentication type (default **OAuth 2.1**, choose **API Key**) and MCP server URL, then **Next**, then an **API Key** field and **Add**. Same inputs, two screens. Screenshots: mcp_aia_server_add.png, mcp_aia_server_created.png |
+| Result | Server **Neon MCP Lab** created with alias `Neon_MCP_Lab_<number>`. Application reads **Global**, not Forecast Variance, because the browser session was in Global scope. The page's "Check the scope first" paragraph matters: switch to Forecast Variance first or the server (and its alias) land in Global. Tools list did not show on this screen during the run. |
+| Duplicate agent, add MCP tool, Run test | Not run yet. |
+
+## External Content Connector (run on 7021): dropped
+
+| Step | Result |
+|---|---|
+| Role | `ais_high_security_admin` was not on admin, so the elevate dialog did not offer it and wizard step 3 showed "ais_high_security_admin role is required". Fix that works: User > Roles > Edit... > add `ais_high_security_admin` > Save, log in again, avatar menu > **Elevate role** > tick it > Update. The page's steps 2 and 3 should say to assign the role first. |
+| Wizard steps 1 to 5 | Work: Create > SharePoint Online > name, client ID, tenant ID, JKS file, password, thumbprint > **Validate connection** gives all five permissions **Granted** and "Successfully created". Step 5 offered the new search source and the profile **Forecast Variance** (added, shown in the list). Layout note: the form shows only the name until about 40 seconds after Next. |
+| Crawl | Does not work: connectors 8, 9 and 10 stayed **Crawl in progress** with **0 documents** for over 25 minutes; Total documents stayed 0. |
+| Platform warnings on the connector home | "mTLS self validation failed. If crawls fail with 'timed out', please consult customer support", "2 app versions mismatch (SharePoint Online, SN Docs)" and "One or more plug-ins require repair (External Content Connectors)". These point to the instance, not to the guide text. |
+| Verdict | Fundamental connection issue on this instance, so the Search Preview rewrite is not worth doing here. Dropped as instructed. |
+
+Leftovers from the attempts on 7021 (11 connectors in the list: SharePoint Online, 2, 4, 5, 6, 7, 8, 9, 10 and LF, plus the Servicenow Product documentation one that was already there). They have not been deleted.
+
+## Visible-browser rerun of the headless blockers
+
+| Item | Result |
+|---|---|
+| Integration Hub: Get Expense Event subflow in Workflow Studio | Opens in a visible browser (list: set 100 rows per page, find the link; builder URL `/now/workflow-studio/builder?table=sys_hub_flow&sysId=...`). The builder shows "Corrupted flow: This flow can't be opened" with Draft, Inactive, empty history, so the Test step cannot run on 7021. Instance problem, not the instructions. |
+| AI Lens | Downloads and Preferences works and defaults to **Browser (no installation required)**; Create with Lens opens the browser Lens page with Upload and Capture screen. The Upload dialog accepts the PDF and the Analyze run stayed at "Processing files..." with no result. Dropped as instructed. Wording change: the page says to install an app; this build offers the browser version by default. |
+
+## MCP, rest of the run (7021, visible and headless)
+
+| Step | Result |
+|---|---|
+| Open the agent list | All > AI Agent Studio > Create and manage > AI agents. The page's "Conditions > Name is" works as Filter > Name > starts with > value. The keyword search returned 0 rows. Three Forecast Variance agents exist (Forecast Variance, Forecast Variance Integration Hub Trigger, Forecast Variance Snowflake MCP); there is no "Forecast Variance <initials>". |
+| Duplicate | Row **Duplicate** icon at the right end of the row > **Duplicate** in the dialog. The copy opens in the setup wizard (Define the specialty, Add tools and information, Define security controls, Add triggers, Select channels and status), not in a canvas. |
+| Rename and security | Works as written, including the **Save updates?** dialog; user access shows Allow if true and data access Dynamic user with role admin already set. |
+| Add the Step 2 bullet | The List of steps field is on the Define the specialty page (scroll down); the bullet is added under step 2 and saved. |
+| Add MCP tool | Tools page > **Add tool** > **MCP server tool** opens a dialog (no new tab): Select Model Context Protocol server (Neon MCP Lab), Select tool (Run SQL loads from Neon), Name, Tool description, Execution mode Autonomous, **Add**. The tool then shows under "Model Context Protocol tools". The page's "Agentic Solutions" canvas, Edit pencil and Run test dialog do not exist on this build. |
+| Scope | The application scope selector is under the header three-dot menu > Scope selectors > Application scope (the globe icon is gone once Otto is on). Duplicating in Global puts the copy in Global; switching to Forecast Variance first puts it there. |
+| Testing | Needed two extra instance settings first: AI Admin Hub > ServiceNow Otto panel > **Turn on**, then Assistant Designer > ServiceNow Otto panel - Platform (default) > **Activate** (the Testing tab banner links to it). Testing > Manual Test > AI agent or workflow > task "Help me process EXP-2025-IT-002-1007-01" runs. |
+| Result | The run stops at Access verification: **Extract Cost Center - Access denied**, answer "You don't have the required access to complete this request" for the copy in Global and for the copy in Forecast Variance scope. The MCP tool step was never reached. Treated as an instance gap (agent access on this build), not an instruction problem. |
+
+Left on 7021 from this run: agents "Forecast Variance Neon MCP Lab" (Global) and "Forecast Variance Neon MCP Lab FV" (Forecast Variance), Otto panel on, default Otto assistant active, application scope set to Forecast Variance for admin.
+
+## Fundamentals (run on 7021)
+
+| Step | Result |
+|---|---|
+| Scope selector | Header **globe icon** > **Application scope** works; the picker has a filter box and the scope list. With Otto on, the globe sits left of the Otto sparkle icon. |
+| 1-2. Applications list > New | The list opens (`sys_scope_list.do`), but **New** only reloads the list in the automated run, so the "Start from Scratch" form was not reached. The page marks this exercise as optional ("not a dependency in the exercises"), so it was skipped. |
+| 5-6. Switch to Forecast Variance (no initials) | Works: Scope selectors > Application scope > filter "Forecast" > Forecast Variance. A red dot next to the scope label shows when the scope is not Global. |
+| 7-14. Dummy table | Skipped: the page says the table is not used in the rest of the lab. |
+
+## Agent runs (Integration Hub, Zero Copy, MCP) on 7021
+
+| Item | Result |
+|---|---|
+| Define data access on the existing agents | "Forecast Variance Integration Hub Trigger" and "Forecast Variance Snowflake MCP" arrive with **Dynamic user** and an **empty Approved role(s)** (Save and continue stays disabled). The restored manual route and TypeB both say to add **admin** ("if the field is not filled out yet"); the picker lists many `*_admin` roles, so the exact role named **admin** (description "The System Administrator role") must be picked, not `x_snc_forecast_v_0.admin`. Set on the IHub Trigger agent. |
+| Run (Testing > Manual Test, task "Help me process EXP-2025-IT-002-1007-01") | Still stops at Access verification, now on **Budget Variance Analysis - Access denied** for the IHub Trigger agent, and on **Extract Cost Center - Access denied** for the MCP copies. The flows behind the tools are active, open to all application scopes and have no ACLs. |
+| Verdict | Agent runs (Integration Hub, Zero Copy, MCP) are dropped on 7021 as an instance access gap. No role from TypeB's Zero Copy page was missing (`sn_erp_integration.erp_admin`, `sn_aia.admin` are on admin). |
+
+## Proposed manual route: Lens "Set the Owner on Expense Events" (no Build Agent)
+
+Verified on 7021: table `x_snc_forecast_v_0_expense_transaction_event` has the column `owner` (Reference, User), and no "Set Expense Event Owner" rule exists yet. The rule itself was not created on 7021 and the steps below were not run.
+
+Hands-on: Set the Owner on Expense Events (optional)
+
+1. Make sure the application scope is **Forecast Variance**.
+2. Go to All > **System Definition** > **Business Rules** > **New**.
+3. Set **Name** to **Set Expense Event Owner**, **Table** to **Expense Transaction Event**, tick **Advanced**.
+4. On **When to run**: **When** = **before**, tick **Insert**.
+5. On **Advanced**, **Script**: `(function executeRule(current, previous) { if (current.owner.nil()) { current.owner = gs.getUserID(); } })(current, previous);`
+6. Right-click the header and click **Save**.
+
+## Not written: Zero Copy "Give the Agent the PostgreSQL Data" (no Build Agent)
+
+No manual twin was written: 7021 has no PostgreSQL connection or connector tile (see the Zero Copy section), so the manual UI steps cannot be verified here.

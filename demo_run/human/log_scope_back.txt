@@ -1,0 +1,7 @@
+01:57:14   logged in as admin
+01:57:38 scope row: {"t":"Application scope: Global","x":1310,"y":78,"w":270}
+01:57:44   screenshot scope_b_list.png
+01:57:44 filter: {"x":1310,"y":114}
+01:58:20   screenshot scope_20_filtered.png
+01:58:20 option: {"t":"Forecast Variance","x":1236,"y":212,"w":123}
+01:58:32 clicked Forecast Variance

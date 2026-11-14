@@ -1,0 +1,12 @@
+Clone the ERP model "CP: Cost Center" (Function Call variant) as "SAP Cost Center Lab"
+in the Forecast Variance app, and set its ERP system to S4D.
+First confirm the system property sn_erp_integration.enableModelModification is true.
+Method: from a script in the x_snc_forecast_v_0 scope, run the operation_script of the
+sys_ws_operation "CloneModel" in scope sn_erp_integration through GlideScopedEvaluator,
+with request = { pathParams: { sysId: <source sys_id>, name: <new name> } } and
+response = {}. Then look up the new model by name and set system. Stop if the name
+already exists.
+Report with gs.info: the new model's scope, origin and system, and its counts of
+operations, entities, table fields, inputs, input mappings and outputs next to the
+source's. If anything only partially inserts, roll back the run instead of leaving
+orphans.

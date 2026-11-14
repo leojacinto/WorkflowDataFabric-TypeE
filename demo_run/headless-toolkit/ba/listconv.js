@@ -1,0 +1,2 @@
+// List Build Agent conversation titles (LI text) through shadow roots.
+() => { const out = []; const walk = root => { for (const el of root.querySelectorAll('*')) { if (el.tagName === 'LI') { const t = (el.textContent || '').trim().replace(/\s+/g, ' '); if (t && t.length < 120) out.push(t); } if (el.shadowRoot) walk(el.shadowRoot); } }; walk(document); return out.length ? out.slice(0, 15) : null; }

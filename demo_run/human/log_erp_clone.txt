@@ -1,0 +1,35 @@
+02:28:04   logged in as admin
+02:28:04 >>> 1. ERP home > Models
+02:28:28   screenshot erp_02_models.png
+02:28:28   visible: ["Home","Models","Remote tables","Extraction tables","Scheduled extractions","Monitor","Systems","Outbound messages","Help","More Options","Refresh List Models (0 updates available)","Models List Actions","Show filter panel (0 condition)","New","Sorted in ascending order by Model name","Filter Model name","Sort by Virtual table name","Filter Virtual table name","Sort by Model type","Filter Model type","Sort by Short description","Filter Short description","Sort by Remote tables","Filter Remote tables","Sort by Extraction tables","Filter Extraction tables","Sort by Version","Filter Version","Sort by Model updated on","Filter Model updated on","(empty)","CP: Storage Location","Change documents","Country","CP: Address","CP: Bank Master Data","CP: Bank Master Data - List","CP: Billing Block - List","CP: Business Area","CP: Business Partner - Address","CP: Business Partner - Bank Data","CP: Business Partner - Bank details","CP: Business Partner - Central Data","CP: Business Partner - General Data","CP: Business Partner - List","CP: Business Partner - Role","CP: Chart of Accounts","CP: Company Code","CP: Controlling Area","CP: Cost Center","CP: Cost Center - List","CP: Country","CP: Credit Memo Request","CP: Credit Memo Request - List","CP: Currency","CP: Customer","CP: Customer Credit Limits","CP: Customer Invoice","CP: Customer Invoice - Header","CP: Customer Invoice - Item"]
+02:28:28 <<< 1. ERP home > Models 24s
+02:28:28 >>> 2-3. open CP: Cost Center, popup, Clone
+02:28:31   screenshot erp_02b_filter_open.png
+02:28:39   screenshot erp_02c_filtered.png
+02:28:47   screenshot erp_03_opened.png
+02:28:47   visible: ["Close Tab CP: Cost Center","Clone","Open activity filters","Open activity search bar","Editable record form only","Editable record form and list of record activities","Open accessibility preferences","Close dialog","Close Notification"]
+02:29:11   screenshot erp_03b_dialog_closed.png
+02:29:18   screenshot erp_04_clone_dialog.png
+02:29:18   clone dialog: ["Clone","More information, Model name","Model name. This field supports 40 or fewer characters.","More information, Application"]
+02:29:18 <<< 2-3. open CP: Cost Center, popup, Clone 49s
+02:29:18 >>> 4. label SAP Cost Center Lab QA, Clone this model
+02:29:20   screenshot erp_05_label.png
+02:29:35   screenshot erp_06_cloned.png
+02:29:35   after clone: ["Clone","Manage model","More information, Model name","Model name. This field supports 40 or fewer characters.","More information, ERP system"]
+02:29:36   model rows: [{"sys_id":"d9f98fca475c5b10037d0fadf26d43c6","name":"SAP Cost Center Lab QA","sys_scope":{"link":"https://demoalectriallwfaa158438.service-now.com/api/now/table/sys_scope/a4fd2da13bf8be5062f31831a3e45ac9","value":"a4fd2da13bf8be5062f31831a3e45ac9"}}]
+02:29:36 <<< 4. label SAP Cost Center Lab QA, Clone this model 18s
+02:29:36 >>> 5. open the cloned model from the Models list
+02:30:17   screenshot erp_07_clone_open.png
+02:30:32   screenshot erp_08_clone_form.png
+02:30:32   form: ["Manage model","Save","More information, Model name","Model name. This field supports 40 or fewer characters.","More information, ERP system"]
+02:30:32 <<< 5. open the cloned model from the Models list 56s
+02:30:32 >>> 5b. ERP system S4D, Save, Manage model
+02:30:36   screenshot erp_09_system_search.png
+02:30:47   screenshot erp_10_saved.png
+02:30:49   model row after Save: {"sys_id":"d9f98fca475c5b10037d0fadf26d43c6","sys_updated_on":"2026-11-03 15:30:40"}
+02:30:59   screenshot erp_11_manage.png
+02:30:59   after Manage model: ["Home","Models","Remote tables","Extraction tables","Scheduled extractions","Monitor","Systems","Outbound messages","Help","CP: Cost Center","Close Tab CP: Cost Center","SAP Cost Center Lab QA","Close Tab SAP Cost Center Lab QA","Manage model","Close Tab Manage model","More Options","Add model operation","Refresh data for operations","Edit Create Create","Delete Create Create","Create","Edit Read Read","Delete Read Read","Read","Edit Update Update"]
+02:30:59 <<< 5b. ERP system S4D, Save, Manage model 27s
+02:32:00   cleanup: delete test model http=500
+02:32:10   test model rows left: 0 | SAP Cost Center Lab kept: 1
+02:32:10 ######## ERP CLONE (stage 1) OK

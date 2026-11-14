@@ -1,0 +1,7 @@
+00:25:23   logged in as admin
+00:25:27 agents named Forecast Variance Neon MCP Lab before: 1
+00:25:52 row checkbox: {"x":32,"y":483}
+00:25:54   screenshot mcpc_01_selected.png
+00:25:58   screenshot mcpc_02_confirm.png
+00:26:10   screenshot mcpc_03_after.png
+00:26:12 agents named Forecast Variance Neon MCP Lab after: 0 | other Forecast Variance agents kept: ["Forecast Variance LF","Forecast Variance QB","Forecast Variance","Forecast Variance QA"]

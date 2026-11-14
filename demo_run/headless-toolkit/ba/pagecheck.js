@@ -1,0 +1,1 @@
+() => { if (!location.pathname.includes('wdf_lab')) return null; const t = document.body.innerText; return { ba: (t.match(/Build Agent option/g) || []).length, err: /Could not load/.test(t), pres: [...document.querySelectorAll('pre')].map(p => p.textContent.length), scripts: [...document.scripts].map(s => s.src).filter(Boolean).slice(0, 4) }; }

@@ -1,0 +1,1 @@
+() => { if (!window.gDeleteAppDialog) return null; const src = String(window.gDeleteAppDialog.reconfirm).slice(0, 300); if (!/47e73fc947589754037d0fadf26d438e/.test(String(window.gDeleteAppDialog.deleteApp))) return 'wrong app'; window.prompt = () => 'delete'; const r = window.gDeleteAppDialog.deleteApp(); return 'called ' + (r ? 'modal' : 'false') + ' | ' + src; }

@@ -1,0 +1,47 @@
+02:15:43   logged in as admin
+02:15:43 >>> setup: the expense event from the Integration Hub step (REST, no trigger fire)
+02:15:43   event row ready 69d64386471c5b10037d0fadf26d43cf
+02:15:43 <<< setup: the expense event from the Integration Hub step (REST, no trigger fire) 1s
+02:15:43 >>> 1. AI Agent Studio > Create and manage
+02:15:57   screenshot zcc_01_agent_studio.png
+02:15:57 <<< 1. AI Agent Studio > Create and manage 14s
+02:15:57 >>> 2. Testing tab, Start manual test
+02:16:13 <<< 2. Testing tab, Start manual test 15s
+02:16:13 >>> 3a. test type: AI agent or workflow
+02:16:17 <<< 3a. test type: AI agent or workflow 5s
+02:16:17 >>> 3b. agent name
+02:16:27   screenshot zcc_02_agent_search.png
+02:16:30 <<< 3b. agent name 12s
+02:16:30 >>> 3c. version 1 - V1 (Active)
+02:16:33 <<< 3c. version 1 - V1 (Active) 4s
+02:16:33 >>> 3d. task text
+02:16:33   screenshot zcc_03_form_filled.png
+02:16:33 <<< 3d. task text 0s
+02:16:33 >>> 3e. Continue to test chat response
+02:16:42   screenshot zcc_04_running.png
+02:16:42 <<< 3e. Continue to test chat response 8s
+02:16:42 >>> 4-5. the agent runs to the end
+02:19:09   plan completed {"sys_created_on":"2026-11-03 15:16:34","state":"completed","sys_updated_on":"2026-11-03 15:19:05"}
+02:19:09 <<< 4-5. the agent runs to the end 147s
+02:19:09   screenshot zcc_05_finished.png
+02:19:09 >>> Verify Finance Case (list, newest first)
+02:19:09   new Finance Cases [{"number":"FINC0010020","short_description":"CC_IT_001 is exceeding budget","assigned_to":{"link":"https://demoalectriallwfaa158438.service-now.com/api/now/table/sys_user/63d5dfbbfbab4690ecb9f46b5eefdc98","value":"63d5dfbbfbab4690ecb9f46b5eefdc98"}}]
+02:19:22   screenshot zcc_06_finance_case_list.png
+02:19:22 <<< Verify Finance Case (list, newest first) 13s
+02:19:22 >>> cleanup (the setup event row)
+02:19:22   delete event http=204
+02:19:22 <<< cleanup (the setup event row) 0s
+02:19:22 ---- TIMES
+02:19:22   setup: the expense event from the Integration Hub step (REST, no trigger fire) 1s
+02:19:22   1. AI Agent Studio > Create and manage                                 14s
+02:19:22   2. Testing tab, Start manual test                                      15s
+02:19:22   3a. test type: AI agent or workflow                                    5s
+02:19:22   3b. agent name                                                         12s
+02:19:22   3c. version 1 - V1 (Active)                                            4s
+02:19:22   3d. task text                                                          0s
+02:19:22   3e. Continue to test chat response                                     8s
+02:19:22   4-5. the agent runs to the end                                         147s
+02:19:22   Verify Finance Case (list, newest first)                               13s
+02:19:22   cleanup (the setup event row)                                          0s
+02:19:22 ######## ZCC AGENT TEST DONE total 227s
+02:19:22 RESULT {"plan":{"sys_created_on":"2026-11-03 15:16:34","state":"completed","sys_updated_on":"2026-11-03 15:19:05"},"cases":[{"number":"FINC0010020","short_description":"CC_IT_001 is exceeding budget","assigned_to":{"link":"https://demoalectriallwfaa158438.service-now.com/api/now/table/sys_user/63d5dfbbfbab4690ecb9f46b5eefdc98","value":"63d5dfbbfbab4690ecb9f46b5eefdc98"}}]}

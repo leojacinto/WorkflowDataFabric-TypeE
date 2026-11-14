@@ -1,0 +1,6 @@
+In the Forecast Variance app, create a table "Expense Transaction Event <initials>" (no
+module) with these columns, all with Display false: Amount USD (decimal, length 15),
+Timestamp (date/time), and these strings of max length 40: Cost Center, Source System,
+Billing Period, Vendor, Invoice ID, GL Account, Business Unit, Sent From, Correlation ID,
+Service Category, Schema Version, Region, Event ID, Priority, Event Type.
+Then build and install the app.

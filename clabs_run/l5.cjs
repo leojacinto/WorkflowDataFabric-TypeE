@@ -1,0 +1,14 @@
+const u=require('./u7021.cjs');const O='/Users/leo.francia/WorkflowDataFabric-TypeE/lab-guide/lef-nov-7021/';
+(async()=>{const {b,p}=await u.open();
+await p.goto(u.H+'/x_snc_forecast_v_0_variance_task.do?sys_id=-1',{timeout:90000});await p.waitForTimeout(8000);await u.dismiss(p);
+await p.mouse.click(830,229);await p.keyboard.type('CC_IT_002');
+await p.mouse.click(1431,22);await p.waitForTimeout(3000);
+await p.locator('input[type=file]').first().setInputFiles(u.S+'Invoice_IT_Laptop_CC_IT_002.pdf');await p.waitForTimeout(8000);
+await p.mouse.click(1073,50);await p.waitForTimeout(2000);
+const sel=p.locator('select[id$="\\.state"]');console.log('state sel',await sel.count());
+await sel.first().selectOption({label:'Work in Progress'});await p.waitForTimeout(1000);
+await p.screenshot({path:O+'ldi_state_wip.png'});
+await p.locator('#sysverb_insert,#sysverb_insert_and_stay').first().click().catch(async()=>{await p.mouse.click(1556,22);});
+await p.waitForTimeout(10000);
+console.log(p.url());await p.screenshot({path:O+'ldi_task_submitted.png'});
+await b.close();})();

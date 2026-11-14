@@ -1,0 +1,11 @@
+{
+ "run": "ihub4_test-1102-2304",
+ "created": [
+  {
+   "table": "x_snc_forecast_v_0_expense_transaction_event",
+   "sys_id": "0a22513d3b5413d8a0db3141a3e45a1d",
+   "name": "EXP-2025-IT-002-1007-01",
+   "auto": true
+  }
+ ]
+}

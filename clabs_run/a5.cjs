@@ -1,0 +1,10 @@
+const u=require('./u7021.cjs');const O='/Users/leo.francia/WorkflowDataFabric-TypeE/lab-guide/lef-nov-7021/';
+(async()=>{const {b,p}=await u.open();
+await p.goto(u.H+'/sys_user.do?sys_id=6816f79cc0a8016401c5a33be04be441',{timeout:90000});
+await p.waitForTimeout(8000);await u.dismiss(p);
+await p.screenshot({path:u.S+'a5_0.png'});console.log(p.url(),p.frames().length);await p.getByText('Roles',{exact:true}).first().click({timeout:8000}).catch(e=>console.log('noclick'));await p.waitForTimeout(2500);
+await p.screenshot({path:u.S+'a5_a.png'});
+const e=p.getByRole('button',{name:'Edit',exact:true});console.log('edit btns',await e.count());
+await e.first().click();await p.waitForTimeout(5000);
+await p.screenshot({path:u.S+'a5_b.png'});
+await b.close();})();
