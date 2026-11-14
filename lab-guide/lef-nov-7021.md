@@ -171,3 +171,7 @@ The subflow runs as "User who initiates session" on 7021 (it assigns a user on t
 - The subflow name on 7021 was "Budget Variance Analysis " (trailing space); demo's has none. I removed the space, published, and reran the agent test with Run As = System User, so the subflow matched demo on name and Run As. The access check still failed the same tool with `failureReason: "acl"`.
 - Also checked and equal to demo: `admin` holds the same agent and flow roles (agent_admin, agent_security_admin, agent_role_config_*, flow_designer, flow_operator, fd_read_flows, flow_write_enabled, sn_aia.admin/viewer/worker_manager, workflow_ai_author); Forecast Variance ACLs are the same pattern; neither instance has an ACL for the tool or the subflow.
 - Not the cause so far: Tool ACL, `public`, Run As, subflow name, admin roles. Scripts: `clabs_run/cmp13.cjs` to `cmp20.cjs`, `fl5.cjs` to `fl8.cjs`.
+
+### Build Agent retry (2026-11-14)
+
+Followed the guide's route: ServiceNow Studio > Forecast Variance > Build Agent > New conversation > paste the "Budget Check Subflows" prompt. Build Agent shows "Build Agent is unable to connect to the server. This instance may not support the required infrastructure. Please contact your ServiceNow administrator." and accepts no prompt (lef-nov-7021/build_agent_unable_to_connect.png). The guide's Build Agent route cannot run on 7021, so the subflows are the ones that shipped with the app and the guide's manual route applies. Script: `clabs_run/ba4.cjs`.
