@@ -238,6 +238,6 @@ Notes:
 - The ACL form's Name field accepts any text, so a wrong name saves without error.
 - Roles on a new ACL cannot be added on the new-record form. Save the ACL first, then add the role in the Requires role list and click Update on the ACL. Role rows added without the final Update were not saved (checked in Access Roles).
 - Not needed: the two Search tools (Search Retriever) and the agent itself passed without any ACL.
-- Wrong ACL left behind: `x_snc_forecast_v_0.extract_cost_center` (no role, matches no subflow). It does nothing and is waiting for Leo's OK to delete.
+- Wrong ACL `x_snc_forecast_v_0.extract_cost_center` (no role, matched no subflow) was deleted with Leo's OK. Only the two ACLs in the table remain.
 - Platform note (Leo, 2026-11-14): needing a hand-made ACL per subflow tool is a packaging gap. The newer platform denies AI agent access to subflows without an `invoke_from_ai` ACL, and the Forecast Variance app does not ship them. Leo owns the app, so the two ACLs belong in the app's Fluent source.
 - Scripts: `clabs_run/acl9.cjs` to `acl31.cjs` (`acl18` create, `acl22` add role, `acl29/30` internal-name filter, `acl31` role rows).
