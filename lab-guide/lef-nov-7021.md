@@ -189,3 +189,13 @@ Followed the guide's route: ServiceNow Studio > Forecast Variance > Build Agent 
 | Execution Task output on demo (QB / MCP Proof) | Same shape, every tool allowed. On 7021 only Budget Variance Analysis is denied, failureReason acl. |
 | Agent tool dialog on 7021 | Edit subflow dialog has subflow, inputs, name and description only, no role setting (lef-nov-7021/agent_tool_dialog_budget_variance.png). |
 | Login note | After the .env reorder, 7021 credentials are lines 18 and 19 (0-based); helper defaults in `clabs_run/u7021.cjs` and `u7021h.cjs` updated. |
+
+### Changes made on 7021 (2026-11-14): necessary or noise
+
+| Change | Verdict | Why |
+|---|---|---|
+| Budget Variance Analysis subflow name: trailing space removed | Noise | Fixed nothing; the Access denied stayed. |
+| Integration Hub Trigger agent: Approved role admin (Define data access) | Necessary | The guide says the agent uses the admin role for data access. |
+| Otto panel turned on (AI Admin Hub) | Necessary | Testing > Manual Test needs it. |
+| Default Otto assistant activated (Assistant Designer) | Necessary | Testing > Manual Test needs it. |
+| Subflow Run As tested as System User, then set back to User who initiates session | Noise | Net zero, the Access denied stayed. |
