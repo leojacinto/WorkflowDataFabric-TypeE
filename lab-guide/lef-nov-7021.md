@@ -307,3 +307,10 @@ The Global agent "Forecast Variance Neon MCP Lab" and the 10 test SharePoint con
 - The subflow it calls (`e18111543bda72900ad1a021a3e45a73`) is not in this source.
 - Snowflake MCP agent: left out on purpose (Leo: not important).
 - Build passes. Nothing deployed, nothing pushed.
+
+### MCP agent test on 7021 after the ACLs (2026-11-14)
+
+- Agent "Forecast Variance Neon MCP Lab FV" (Forecast Variance scope), Testing > Manual Test, task "Help me process EXP-2025-IT-002-1007-01". Access verification passes now. Extract Cost Center, Search for Cost Center History, Search for Expense Transactions History and Budget Variance Analysis all finish with Execution Status Success in Tools Executions (before the ACLs the run stopped at the first tool).
+- **Get Details via Neon MCP stays Processing for more than 5 minutes** (response empty), and an earlier run of the same tool ended Cancelled with an empty response. So the ACLs fix the access error, but the call to the Neon MCP server does not return on 7021.
+- The server "Neon MCP Lab" on 7021 is in Global scope and its page shows no Tools list (on perelandra it lists the Neon tools). In the earlier 7021 run the tool dialog did load the Neon tools, so the connection worked then; the API key or the outbound call to mcp.neon.tech is the open suspect and is not yet checked.
+- Screenshots in the scratchpad only (ih9_9.png, mc1_a.png). Scripts: `clabs_run/ih9.cjs` (5 minute watch), `mc1.cjs` to `mc4.cjs`.
