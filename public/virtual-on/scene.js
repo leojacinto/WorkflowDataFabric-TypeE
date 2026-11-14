@@ -232,7 +232,7 @@
       ctx.globalAlpha = mark.opacity;
       ctx.transform(m11, m12, m21, m22, a.x - m11 * a.u - m21 * a.v, a.y - m12 * a.u - m22 * a.v);
       if (PURE && pureSolidLogo.width) ctx.drawImage(pureSolidLogo, 0, 0, pureSolidLogo.width, pureSolidLogo.height, 0.1, 0.1, 0.8, 0.8);
-      else ctx.drawImage(PURE && pureLineLogo.width ? pureLineLogo : state.mono ? monoChestLogo : chestLogo, 32, 51, 495, 442, 0, 0, 1, 1);
+      else ctx.drawImage(PURE && pureLineLogo.width ? pureLineLogo : state.mono ? monoChestLogo : chestLogo, 32, 51, 495, 442, 0.1, 0.1, 0.8, 0.8);
       ctx.restore();
     };
     for (let x = 0; x < 2; x++) for (let y = 0; y < 2; y++) {
