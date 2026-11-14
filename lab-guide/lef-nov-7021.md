@@ -323,3 +323,9 @@ The Global agent "Forecast Variance Neon MCP Lab" and the 10 test SharePoint con
 - The API Key credential form on 7021 has API Key Header and API Key Prefix (perelandra's older form: API Key and Authentication Key). API Key Header was empty and was set to Authorization. No change in the result.
 - Still open: the MCP tool call stays Processing with no outbound HTTP call. The request is well formed (type mcp, tool run_sql, new server id, sql and project_id). Installed: Model Context Protocol Client 2.4.5, Server 1.9.1, Universal MCP Client 1.1.3 (the lab page lists MCP Client 1.0.7).
 - Scripts: `clabs_run/mc1.cjs` to `mc26.cjs`, `sc1.cjs`, `sc2.cjs`.
+
+### Neon MCP test on perelandra (2026-11-15)
+
+- Manual Test of the agent "Forecast Variance Neon MCP Lab" with task "Help me process EXP-2025-IT-002-1007-01": Access verification Completed, all tools Completed including **Get Details via Neon MCP**, which returned the Neon row (CC_IT_001, actual 400001, baseline 400000, variance -1, variance_pct 0). So the guide's MCP setup works on perelandra today, and the hang is specific to 7021 (Brazil patch 2, Model Context Protocol Client 2.4.5, Universal MCP Client 1.1.3). Script: `clabs_run/pf1.cjs`, screenshot in the scratchpad (pf1_20.png).
+- Reverted on 7021 (guesswork): API Key Header on the old credential cleared; the old tool pointed back at the old server and its link set active; the new "Neon MCP Lab FV" server, its alias, connection, credential, the extra tool and link, and the stray "Neon MCP Lab_1794662072776" connection and credential were deleted. Not touched: the old Global "Neon MCP Lab" server, and the "Test MCP Neon" connection Leo made.
+- mememachine: not tested. No credentials for it in `.env` (only hosts for perelandra, zu144008, three lef labs and icemachine), so a UI login is not possible.
