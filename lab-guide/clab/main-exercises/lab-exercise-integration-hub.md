@@ -143,7 +143,7 @@ These are required preparation steps in platform level. These are cross configur
 4.  Search for <mark style="color:green;">**a.)**</mark> **System Administrator** then hit **Return/Enter ↵** > <mark style="color:green;">**b.)**</mark> click on **admin**.
 
     <figure><img src="../.gitbook/assets/sc_common_search_admin_user.png" alt=""><figcaption></figcaption></figure>
-5.  In the **Roles** tab, click **Edit**.
+5.  In the **Roles** tab, click **Edit...** (on this build the button reads **Edit...**). If a **Say hello to ServiceNow Otto** dialog appears on first load, click **Got it**.
 
     <figure><img src="../.gitbook/assets/sc_common_roles_tab_edit.png" alt=""><figcaption></figcaption></figure>
 6.  Search for <mark style="color:green;">**a.)**</mark> **sn\_aia.admin** > <mark style="color:green;">**b.)**</mark> click on **sn\_aia.admin** > <mark style="color:green;">**c.)**</mark> click on **>** to move the role to the right panel > then <mark style="color:green;">**d.)**</mark> click **Save**. You will notice that there are also roles for integration and viewer purposes which can be assigned for users who will need less privileges.
@@ -156,6 +156,27 @@ These are required preparation steps in platform level. These are cross configur
 
     <figure><img src="../.gitbook/assets/sc_common_logout.png" alt="" width="254"><figcaption></figcaption></figure>
 
+#### Preparation: Allow the AI agent to call the subflows (Invoked from AI ACLs)
+
+<mark style="color:red;">**IMPORTANT for lab.service-now.com instances (Brazil and later).**</mark> These builds deny an AI agent access to any subflow tool unless an **Invoked from AI** access control exists for that subflow. Without it the agent test stops at **Access verification** with **Access denied** on the tool and the answer **You don't have the required access to complete this request**. The Forecast Variance subflows do not ship with these ACLs, so create the two below once per instance. The two Search tools and the agent itself need nothing.
+
+1. As **admin**, open the user menu (your avatar, top right) > **Elevate role** > tick **security\_admin** > **Update**. The ACL form is read-only without this.
+2. Go to **All** > type **Access Controls** (`sys_security_acl_list.do`) > click **New**.
+3. Set **Type** to **flow**. **Operation** fills in as **invoke\_from\_ai**. **Decision Type** stays **Allow If**. **Application** reads **Forecast Variance**.
+4. In **Name**, enter the scope-qualified internal name of the subflow. Use the table below. The internal name is not the display name, and the form accepts any text, so a wrong name saves without an error and the tool stays denied.
+
+   | Agent tool | Subflow | Name to enter |
+   |---|---|---|
+   | Budget Variance Analysis | Budget Variance Analysis | `x_snc_forecast_v_0.budget_variance_analysis` |
+   | Extract Cost Center | Extract Cost Center | `x_snc_forecast_v_0.cost_center_history` |
+
+   To check an internal name: All > **Flows** list, filter on **Internal name**.
+5. Click **Submit**. The role cannot be added on the new-record form, so open the ACL again.
+6. In **Requires role**, double-click **Insert a new row...**, type **admin**, pick **admin** from the list, click the green tick, then click **Update** on the ACL. Check that the role shows in the list.
+7. Repeat steps 2 to 6 for the second subflow.
+
+You will test the result in **Walkthrough: Agent Runtime**: every tool should show **Completed** in the AI agent decision logs.
+
 #### Preparation: Initial Checks
 
 Verify the Now Assist panel is accessible.
@@ -163,6 +184,11 @@ Verify the Now Assist panel is accessible.
 1.  If you have set up the Now Assist Panel correctly, you should see the Otto/sparkle icon on the top right.
 
     <figure><img src="../.gitbook/assets/sc_ihub_now_assist_panel.png" alt=""><figcaption></figcaption></figure>
+
+2. If the Otto/sparkle icon is missing, or the **Testing** tab of AI Agent Studio shows a banner about the assistant, two instance settings are off on lab.service-now.com builds. Turn them on once:
+   - **All** > **AI Admin Hub** > **ServiceNow Otto panel** > **Turn on**.
+   - **All** > **Assistant Designer** > **ServiceNow Otto panel - Platform (default)** > **Activate** (the Testing banner links to it).
+3. To test the agent directly, go to AI Agent Studio > **Testing** > **Manual Test** > **AI agent or workflow**, pick **Forecast Variance Integration Hub Trigger** and send **Help me process EXP-2025-IT-002-1007-01**. The decision log lists **Access verification** and then each tool, all showing **Completed** once the **Invoked from AI** ACLs from the platform preparation exist.
 
 ### Build with Build Agent
 
@@ -323,7 +349,7 @@ For this section: Open AI Agent Studio > Forecast Variance Integration Hub Trigg
 
 <figure><img src="../.gitbook/assets/sc_ihub_add_tools_info.png" alt=""><figcaption></figcaption></figure>
 
-5. Under **Define security controls** > <mark style="color:green;">**a.)**</mark> click **Define data access** > <mark style="color:green;">**b.)**</mark> select **Dynamic user** from the drop down then > <mark style="color:green;">**c.)**</mark> add **admin** user as the **Approved role** if the field is not filled out yet. For this exercise we are using permissive authorisations but this is where you can tighten authorisations for your agents allowing mechanisms such as inheriting the authorisations of logged in user (Dynamic identity type) or a predefined set of access (AI User identity type).
+5. Under **Define security controls** > <mark style="color:green;">**a.)**</mark> click **Define data access** > <mark style="color:green;">**b.)**</mark> select **Dynamic user** from the drop down then > <mark style="color:green;">**c.)**</mark> add the role named exactly **admin** (description *The System Administrator role*) as the **Approved role** if the field is not filled out yet. On the agents that ship with the app this field arrives empty and **Save and continue** stays disabled until it is set. The picker lists many roles ending in `_admin`, so do not pick `x_snc_forecast_v_0.admin`. For this exercise we are using permissive authorisations but this is where you can tighten authorisations for your agents allowing mechanisms such as inheriting the authorisations of logged in user (Dynamic identity type) or a predefined set of access (AI User identity type).
 
 <figure><img src="../.gitbook/assets/sc_ihub_define_security.png" alt=""><figcaption></figcaption></figure>
 #### Manual: Configure AI Agent Trigger

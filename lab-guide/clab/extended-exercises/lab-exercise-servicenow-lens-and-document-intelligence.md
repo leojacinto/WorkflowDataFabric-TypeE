@@ -362,7 +362,7 @@ Download and install the Lens application for your device.
 1.  Navigate to **All** > <mark style="color:green;">**a.)**</mark> type **ServiceNow AI Lens** > <mark style="color:green;">**b.)**</mark> click on **ServiceNow AI Lens > Downloads and Preferences**.
 
     <figure><img src="../.gitbook/assets/sc_ldi_lens_downloads_nav.png" alt=""><figcaption></figcaption></figure>
-2.  Download and install the appropriate Lens installation package for your device. As there are three possible device types, installation steps are not shown in this guide. It is generally safe to follow the default prompts in the installation package. The page also offers a browser version of Lens that needs no installation; set **Default app on launch** to **Browser** if you prefer it.
+2.  Download and install the appropriate Lens installation package for your device. As there are three possible device types, installation steps are not shown in this guide. It is generally safe to follow the default prompts in the installation package. The page also offers a browser version of Lens that needs no installation; set **Default app on launch** to **Browser** if you prefer it. On lab.service-now.com builds **Browser (no installation required)** is already the default: skip the installation, then use **Create with Lens** to open the browser Lens page (**Upload** and **Capture screen**). On the 7021 test run the **Upload** dialog accepted the PDF but the **Analyze** run stayed at **Processing files...** with no result, so the AI Lens check could not be completed there.
 
     <figure><img src="../.gitbook/assets/sc_ldi_lens_download_packages.png" alt=""><figcaption></figcaption></figure>
 

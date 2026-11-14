@@ -107,11 +107,11 @@ graph LR
 
 Navigate to AI Agent Studio Settings. Add a new MCP Server entry for Neon with API Key authentication.
 
-**Check the scope first.** The application scope (globe icon) decides where the MCP server, its alias and the agent copy are created. Click the <mark style="color:green;">**a.)**</mark> **globe icon** and make sure <mark style="color:green;">**b.)**</mark> **Forecast Variance** is selected. If it shows another scope, switch it before you continue.
+**Check the scope first.** The application scope (globe icon) decides where the MCP server, its alias and the agent copy are created. Click the <mark style="color:green;">**a.)**</mark> **globe icon** and make sure <mark style="color:green;">**b.)**</mark> **Forecast Variance** is selected. If it shows another scope, switch it before you continue. If the globe icon is not in the header (it moves once the Otto panel is on), use the header three-dot menu > **Scope selectors** > **Application scope**.
 
 <figure><img src="../.gitbook/assets/sc_fund_exercise_scope.png" alt=""><figcaption></figcaption></figure>
 
-1. Navigate to All > type **AI Agent Studio**. In the left bar click <mark style="color:green;">**a.)**</mark> **Settings** (gear icon). In the **Settings** page, expand <mark style="color:green;">**b.)**</mark> **Manage Model Contextual Protocol (MCP) Servers** and click <mark style="color:green;">**c.)**</mark> **View** next to **MCP servers**.
+1. Navigate to All > type **AI Agent Studio**. On lab.service-now.com builds the left bar has **Manage MCP servers** as a menu entry that opens the list directly (or go to `/now/agent-studio/manage-mcp-servers`); in that case skip to step 2. Otherwise, in the left bar click <mark style="color:green;">**a.)**</mark> **Settings** (gear icon). In the **Settings** page, expand <mark style="color:green;">**b.)**</mark> **Manage Model Contextual Protocol (MCP) Servers** and click <mark style="color:green;">**c.)**</mark> **View** next to **MCP servers**.
 
 <figure><img src="../.gitbook/assets/sc_mcp_aia_settings_mcp.png" alt=""><figcaption></figcaption></figure>
 
@@ -119,7 +119,7 @@ Navigate to AI Agent Studio Settings. Add a new MCP Server entry for Neon with A
 
 <figure><img src="../.gitbook/assets/sc_mcp_aia_servers_list.png" alt=""><figcaption></figcaption></figure>
 
-3. In the **Add MCP Server** dialog enter the details below. The **API Key** field appears after you choose **API Key** as the authentication type.
+3. In the **Add MCP Server** dialog enter the details below. On lab.service-now.com builds the dialog has two screens: **Name**, **Authentication type** (default **OAuth 2.1**, choose **API Key**) and **MCP server URL** first, then click **Next** and enter the **API Key**.
 
 <mark style="color:green;">**a.)**</mark> **Name:** **Neon MCP Lab**
 
@@ -133,7 +133,7 @@ Note: there should be the word **Bearer** as a prefix so your value in the API K
 
 <figure><img src="../.gitbook/assets/sc_mcp_aia_server_add.png" alt=""><figcaption></figcaption></figure>
 
-4. Click **Add**. The new server opens. Check that <mark style="color:green;">**a.)**</mark> **Application** reads **Forecast Variance** and that <mark style="color:green;">**b.)**</mark> **Tools** lists the Neon tools, such as **Add an OAuth provider** and **Compare database schema**.
+4. Click **Add**. The new server opens. If **Application** reads **Global**, the browser session was in Global scope: switch to **Forecast Variance** first and add the server again. Check that <mark style="color:green;">**a.)**</mark> **Application** reads **Forecast Variance** and that <mark style="color:green;">**b.)**</mark> **Tools** lists the Neon tools, such as **Add an OAuth provider** and **Compare database schema**.
 
 <figure><img src="../.gitbook/assets/sc_mcp_aia_server_created.png" alt=""><figcaption></figcaption></figure>
 
@@ -151,19 +151,23 @@ This exercise does not cover the creation of the MCP Service from Neon as that r
 
 2. Go to **AI agents** tab > <mark style="color:green;">**a.)**</mark> click **Conditions** > <mark style="color:green;">**b.)**</mark> select **Field** as **Name** <mark style="color:green;">**c.)**</mark> **Operator** as **is** and for <mark style="color:green;">**d.)**</mark> Value type **Forecast Variance** (your agent is listed with your initials after the name) and hit **Return/Enter ↵**. Click on the <mark style="color:green;">**e.)**</mark> result.
 
+   On lab.service-now.com builds the keyword search returns 0 rows and the agents have no initials. Use **Filter** > **Name** > **starts with** > **Forecast Variance** instead. Three agents are listed: **Forecast Variance**, **Forecast Variance Integration Hub Trigger** and **Forecast Variance Snowflake MCP**. Duplicate the one named exactly **Forecast Variance**.
+
 <figure><img src="../.gitbook/assets/sc_zcc_agent_studio_search.png" alt=""><figcaption></figcaption></figure>
 
-3. Click on **Forecast Variance \<your initials>**.
+3. Click on **Forecast Variance \<your initials>** (on lab.service-now.com builds: **Forecast Variance**).
 
 <figure><img src="../.gitbook/assets/sc_zcc_forecast_variance_agent.png" alt=""><figcaption></figcaption></figure>
 
-4.  Click on <mark style="color:green;">**a.)**</mark> **more (vertical three dots)** > <mark style="color:green;">**b.)**</mark> **Duplicate**
+4.  Click on <mark style="color:green;">**a.)**</mark> **more (vertical three dots)** > <mark style="color:green;">**b.)**</mark> **Duplicate**. On lab.service-now.com builds use the **Duplicate** icon at the right end of the agent's row in the list instead.
 
     <figure><img src="../.gitbook/assets/sc_mcp_duplicate_agent_menu.png" alt=""><figcaption></figcaption></figure>
 5.  You will get a prompt to confirm whether you want to duplicate the agent. Click **Duplicate**.
 
     <figure><img src="../.gitbook/assets/sc_mcp_duplicate_confirm.png" alt=""><figcaption></figcaption></figure>
-6.  In the new Agent screen, go to the **AI agent name** and rename it to **Forecast Variance Neon MCP Lab**.
+6.  In the new Agent screen, go to the **AI agent name** and rename it to **Forecast Variance Neon MCP Lab**. On lab.service-now.com builds the copy opens in the setup wizard (**Define the specialty**, **Add tools and information**, **Define security controls**, **Add triggers**, **Select channels and status**), not on a canvas. A **Save updates?** dialog appears when you leave a step: confirm it. In **Define security controls**, user access shows **Allow if true** and data access **Dynamic user** with the approved role **admin**; if the role field is empty, add the role named exactly **admin**.
+
+    Scope: a duplicate made while the scope is **Global** lands in Global. Switch to **Forecast Variance** (header three-dot menu > **Scope selectors** > **Application scope**) before you duplicate.
 
     <figure><img src="../.gitbook/assets/sc_mcp_rename_agent_neon.png" alt=""><figcaption></figcaption></figure>
 
@@ -193,19 +197,19 @@ Open the copy in the new AI Agent Studio. Add the MCP instructions to the agent.
 
 <figure><img src="../.gitbook/assets/sc_mcp_aia_agentic_solutions_nav.png" alt=""><figcaption></figcaption></figure>
 
-2. In the list, select the **AI agents** tab, type **Forecast Variance Neon MCP Lab** in **Search** and click the agent. The agent opens as a canvas.
+2. In the list, select the **AI agents** tab, type **Forecast Variance Neon MCP Lab** in **Search** and click the agent. The agent opens as a canvas. On lab.service-now.com builds, open the agent from **Create and manage** > **AI agents** instead and continue in the setup wizard; steps 3 to 10 below map to the wizard as follows.
 
-3. Click the **Edit** pencil on the agent in the middle of the canvas. The editor opens with the sections **Definitions, Tools, Access rules, Test scenarios, Triggers, Channels** and **Memories**.
+3. (Canvas builds) Click the **Edit** pencil on the agent in the middle of the canvas. The editor opens with the sections **Definitions, Tools, Access rules, Test scenarios, Triggers, Channels** and **Memories**.
 
 <figure><img src="../.gitbook/assets/sc_mcp_aia_agent_canvas_edit.png" alt=""><figcaption></figcaption></figure>
 
-4. In **Definitions > How-to instructions** go to **Step 2** (the agent you built in Integration Hub) and add one more bullet under it: **Also run the MCP tool "Get Details via Neon MCP" as a secondary check. Only return one entry (limit = 1). Columns should be \["COST\_CENTER", "ACTUAL\_AMOUNT\_USD", "BASELINE\_AMOUNT\_USD", "VARIANCE", "VARIANCE\_PCT"]**.
+4. In **Definitions > How-to instructions** (wizard builds: **Define the specialty**, scroll down to **List of steps**) go to **Step 2** (the agent you built in Integration Hub) and add one more bullet under it: **Also run the MCP tool "Get Details via Neon MCP" as a secondary check. Only return one entry (limit = 1). Columns should be \["COST\_CENTER", "ACTUAL\_AMOUNT\_USD", "BASELINE\_AMOUNT\_USD", "VARIANCE", "VARIANCE\_PCT"]**.
 
-5. Go to the **Tools** section and click <mark style="color:green;">**a.)**</mark> **+ Add tool** > <mark style="color:green;">**b.)**</mark> **Create new tool**.
+5. Go to the **Tools** section (wizard builds: the **Add tools and information** page) and click <mark style="color:green;">**a.)**</mark> **+ Add tool** > <mark style="color:green;">**b.)**</mark> **Create new tool**.
 
 <figure><img src="../.gitbook/assets/sc_mcp_aia_add_tool_menu.png" alt=""><figcaption></figcaption></figure>
 
-6. In the list of tool types, click **MCP server tool**. A new tab **MCP server tool** opens next to the agent tab.
+6. In the list of tool types, click **MCP server tool**. A new tab **MCP server tool** opens next to the agent tab. On lab.service-now.com builds the menu is **Add tool** > **MCP server tool** and a dialog opens instead of a new tab.
 
 <figure><img src="../.gitbook/assets/sc_mcp_aia_tool_type_menu.png" alt=""><figcaption></figcaption></figure>
 
@@ -224,7 +228,7 @@ Open the copy in the new AI Agent Studio. Add the MCP instructions to the agent.
 
 <mark style="color:green;">**c.)**</mark> **Execution mode**: **Autonomous**
 
-9. Click <mark style="color:green;">**d.)**</mark> **Save** (top right of the tool tab).
+9. Click <mark style="color:green;">**d.)**</mark> **Save** (top right of the tool tab). In the wizard dialog click **Add**; the tool then shows under **Model Context Protocol tools**.
 
 <figure><img src="../.gitbook/assets/sc_mcp_aia_tool_settings.png" alt=""><figcaption></figcaption></figure>
 
@@ -248,7 +252,7 @@ Once the event exists, the list shows one row with Event ID **EXP-2025-IT-002-10
 
 <figure><img src="../.gitbook/assets/sc_mcp_event_list_row.png" alt=""><figcaption></figcaption></figure>
 
-1. In the new AI Agent Studio, open the agent canvas (All > AI Agent Studio > **Agentic Solutions** > **Forecast Variance Neon MCP Lab**) and click **Run test**.
+1. In the new AI Agent Studio, open the agent canvas (All > AI Agent Studio > **Agentic Solutions** > **Forecast Variance Neon MCP Lab**) and click **Run test**. On lab.service-now.com builds there is no canvas or **Run test** dialog: go to AI Agent Studio > **Testing** > **Manual Test** > **AI agent or workflow**, pick **Forecast Variance Neon MCP Lab**, and send **Help me process EXP-2025-IT-002-1007-01**. Turn on the Otto panel and activate the default assistant first (see **Preparation: Initial Checks** in the Integration Hub page), and create the two **Invoked from AI** ACLs from that page's platform preparation, or the run stops at **Access verification** with **Access denied**.
 
 2. In the **Run a test** dialog, <mark style="color:green;">**a.)**</mark> keep **Single test** selected, <mark style="color:green;">**b.)**</mark> check that **Test scenario** shows **Help me process EXP-2025-IT-002-1007-01** (type it if it is empty) and <mark style="color:green;">**c.)**</mark> click **Run single test**.
 

@@ -83,11 +83,11 @@ This contains critical steps to prepare your Demo Hub Instance.
 
 Create a dummy scope. This activity is meant to make you familiar with scope creation, the scope you will create here will not be used in the lab. If you are familiar with scope creation, you can skip this exercise as this is not a dependency in the exercises.
 
-1. Go to the top right portion of your navigation and click on the <mark style="color:green;">**a.)**</mark> **globe icon** then **arrow** **>** the <mark style="color:green;">**b.)**</mark> **list icon** to create new scope.
+1. Go to the top right portion of your navigation and click on the <mark style="color:green;">**a.)**</mark> **globe icon** (with the Otto panel on it sits left of the Otto sparkle icon; if it is missing use the header three-dot menu > **Scope selectors** > **Application scope**; to switch scope, filter for **Forecast** and pick **Forecast Variance**) then **arrow** **>** the <mark style="color:green;">**b.)**</mark> **list icon** to create new scope.
 
 <figure><img src="../.gitbook/assets/sc_fund_scope_change.png" alt="" width="375"><figcaption></figcaption></figure>
 
-2.  In the succeeding screen, click **New**.
+2.  In the succeeding screen, click **New**. (On the 7021 test run **New** only reloaded the list in an automated session; this exercise is optional, so skip it if the form does not open.)
 
     <figure><img src="../.gitbook/assets/sc_fund_new_scope.png" alt="" width="360"><figcaption></figcaption></figure>
 3.  Go to section **Start from Scratch** and click **Create**
