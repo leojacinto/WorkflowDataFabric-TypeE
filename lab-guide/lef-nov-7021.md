@@ -160,3 +160,7 @@ Only difference found: the AI Agent Config record has a `public` field on 7021 (
 - `public` on the AI Agent Config is labelled "External discoverable" (default false). It controls outside discovery of the agent, so it is ruled out.
 - The Execution Task record (Execution Task list, newest row, field Output) holds the access check result. For the Integration Hub Trigger agent it reads: agent allowed, tool "Search for Expense Transactions History" allowed, tool **"Budget Variance Analysis" (the subflow tool) not allowed**, `failureReason: "acl"`. Execution Plan state is Terminated and Tools Execution has no rows, so the subflow never starts.
 - Open: which ACL the subflow tool fails. The tool's own Tool ACL list is empty on both instances, so the check sits elsewhere (flow or subflow permission for the running user). Script: `clabs_run/cmp12.cjs`.
+
+### Run As test on the Budget Variance Analysis subflow (2026-11-14)
+
+The subflow runs as "User who initiates session" on 7021 (it assigns a user on the Finance Case) and as System User on the demo instance. I set 7021 to System User, published, reran the Integration Hub Trigger agent test (new Execution Plan), and the access check still failed the same tool with `failureReason: "acl"`. Run As is therefore not the cause, and I set it back to "User who initiates session" and republished. Scripts: `clabs_run/fl1.cjs` to `fl4.cjs`, `ih8.cjs`, `cmp12.cjs`.
