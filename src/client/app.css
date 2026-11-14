@@ -540,7 +540,7 @@ body {
   aspect-ratio: 16 / 9;
   border: var(--lab-border-width) solid var(--lab-border);
   border-radius: var(--lab-radius-selector);
-  background: #080b0e;
+  background: #ededea;
 }
 
 /* fetched markdown ------------------------------------------------------- */

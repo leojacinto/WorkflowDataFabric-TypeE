@@ -30,6 +30,7 @@ export default class HomePage extends AIUXElement {
       aspect-ratio: 16 / 9;
       border: 0;
       border-radius: 0.75rem;
+      background: #ededea;
     }
   `;
 
