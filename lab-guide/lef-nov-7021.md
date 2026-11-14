@@ -214,3 +214,9 @@ The KB (same "You don't have the required access to complete this request" messa
 ### Workaround flag: the AI ACL on 7021 (2026-11-14)
 
 Leo's note: adding an `invoke_from_ai` ACL by hand is a workaround around a platform foundation. The Forecast Variance subflows ship with the app, the same app runs on demoalectriallwfaa158438 with no such ACL, and the lab guide never mentions one. Leo approved creating it on 7021 only to get the agent test running. Treat it as an instance-specific patch on this Brazil patch 2 build, not as a lab step.
+
+### AI ACL created on 7021 (2026-11-14), agent still denied
+
+- Created two ACLs through the UI after security_admin elevation: type flow, operation invoke_from_ai, Allow If, application Forecast Variance, names `x_snc_forecast_v_0.budget_variance_analysis` and `x_snc_forecast_v_0.extract_cost_center`. Neither has a Requires role yet (the role row cannot be added on a new record before saving).
+- Agent test rerun (`clabs_run/ih8.cjs`): decision log still shows Extract Cost Center, Access denied.
+- Open: the real internal name of the Extract Cost Center subflow is unconfirmed (the ACL form echoes any name typed), and the ACLs have no role. Scripts: `clabs_run/acl9.cjs` to `acl20.cjs`.
