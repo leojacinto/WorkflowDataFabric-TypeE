@@ -636,6 +636,7 @@ body {
 .lab-pre code {
   background: transparent;
   color: inherit;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
 }
 
 .lab-table-wrap {
