@@ -337,3 +337,12 @@ The Global agent "Forecast Variance Neon MCP Lab" and the 10 test SharePoint con
 - Perelandra has no `gen_ai_mcp_server` ACL for its working "Neon MCP Lab" (only one for "Neon MCP Lab LF", `global.global.Neon MCP Lab LF`), so this lead is unproven.
 - Creating `global.global.Neon MCP Lab` (type gen_ai_mcp_server, operation execute) on 7021 fails with "Invalid update" and "Match not found, reset to original" on Operation, with the operation picked from the lookup, with the application set to Forecast Variance or Global. Nothing was created.
 - Scripts: `clabs_run/fx1.cjs` to `fx15.cjs`.
+
+### Neon MCP on 7021: Studio answer and ACL created (2026-11-15)
+
+- ServiceNow Studio on demoalectriallwfaa158438 was asked. It read perelandra, not 7021, so its answers are about perelandra. Its claim that no gen_ai_mcp_server + execute pairing exists was wrong for 7021: Object Operations on 7021 has `gen_ai_mcp_server` + execute and also a newer type `mcp_server_ai_acl` + execute (created 2026-09-03).
+- Why the earlier ACL inserts failed: the form needs the ACL type as its sys_id in the URL prefill (`gen_ai_mcp_server` 0f50acdcff12031063caffffffffff03, `mcp_server_ai_acl` e963731e3b030350e24f43a693e45ab5), not the type name. The "Match not found" message belongs to the Type field.
+- Created on 7021: ACL `global.Neon MCP Lab`, type `mcp_server_ai_acl`, operation execute, Allow If, role admin. It is not in Fluent source and was not deployed.
+- Result: the agent test still stays Processing on "Get Details via Neon MCP". The ACL did not fix it.
+- Studio's other causes, all unchecked on 7021: `sn_mcp_client_server_session_mapping` row with empty `mcp_session_id` (the executor then sends an empty Mcp-Session-Id), the tool's Flow Designer subflow blocked or the connection alias credential missing, duplicate `sn_aia_tool` rows with script "undefined".
+- Scripts: `clabs_run/fx16.cjs` to `fx19.cjs`, `st1.cjs` to `st9.cjs`.

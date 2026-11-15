@@ -1,0 +1,10 @@
+const u=require('./u7021.cjs');
+(async()=>{const {b,p}=await u.open();
+await p.goto(u.H+'/now/nav/ui/home',{timeout:90000}).catch(()=>{});await p.waitForTimeout(20000);await u.dismiss(p);
+await p.locator('.user-menu-label').first().click({force:true});await p.waitForTimeout(6000);
+await p.getByText('Elevate role',{exact:true}).first().dispatchEvent('click');await p.waitForTimeout(6000);
+await p.mouse.click(533,486);await p.waitForTimeout(1000);
+await p.mouse.click(1032,597);await p.waitForTimeout(8000);
+await p.goto(u.H+'/sys_security_acl.do?sys_id=-1',{timeout:90000}).catch(()=>{});await p.waitForTimeout(10000);
+console.log(JSON.stringify(await p.evaluate(()=>[...document.querySelectorAll('select')].filter(s=>/type/.test(s.id||s.name)).map(s=>s.id+':'+[...s.options].filter(o=>/mcp|flow/i.test(o.text)).map(o=>o.value+'='+o.text).join(','))))); 
+await b.close();})();
