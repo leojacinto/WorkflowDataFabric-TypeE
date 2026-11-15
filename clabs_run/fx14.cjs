@@ -1,0 +1,13 @@
+const u=require('./u7021.cjs');
+(async()=>{const {b,p}=await u.open();
+await p.goto(u.H+'/now/nav/ui/home',{timeout:90000}).catch(()=>{});await p.waitForTimeout(20000);await u.dismiss(p);
+await p.locator('.user-menu-label').first().click({force:true});await p.waitForTimeout(6000);
+await p.getByText('Elevate role',{exact:true}).first().dispatchEvent('click');await p.waitForTimeout(6000);
+await p.mouse.click(533,486);await p.waitForTimeout(1000);
+await p.mouse.click(1032,597);await p.waitForTimeout(8000);
+await p.goto(u.H+'/sys_security_acl.do?sys_id=-1&sysparm_query='+encodeURIComponent('type=gen_ai_mcp_server^operation=execute^name=global.global.Neon MCP Lab'),{timeout:90000}).catch(()=>{});await p.waitForTimeout(10000);
+console.log(await p.evaluate(()=>['type','operation','name','sys_scope','sys_package'].map(f=>f+'='+g_form.getValue(f)).join(' | ')));
+await p.evaluate(()=>g_form.setValue('sys_scope','global'));await p.waitForTimeout(2000);console.log(await p.evaluate(()=>g_form.getValue('sys_scope')));p.on('response',async r=>{if(/sys_security_acl|xmlhttp|api/.test(r.url())&&r.request().method()==='POST')console.log('POST',r.status(),r.url().slice(0,150));});
+await p.mouse.click(1557,21);await p.waitForTimeout(10000);
+console.log(await p.evaluate(()=>[...document.querySelectorAll('.outputmsg_text,.fieldmsg,.notification')].map(e=>e.innerText.trim()).join(' || ')));
+await b.close();})();

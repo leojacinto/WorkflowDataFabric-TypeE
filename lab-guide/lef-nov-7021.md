@@ -329,3 +329,11 @@ The Global agent "Forecast Variance Neon MCP Lab" and the 10 test SharePoint con
 - Manual Test of the agent "Forecast Variance Neon MCP Lab" with task "Help me process EXP-2025-IT-002-1007-01": Access verification Completed, all tools Completed including **Get Details via Neon MCP**, which returned the Neon row (CC_IT_001, actual 400001, baseline 400000, variance -1, variance_pct 0). So the guide's MCP setup works on perelandra today, and the hang is specific to 7021 (Brazil patch 2, Model Context Protocol Client 2.4.5, Universal MCP Client 1.1.3). Script: `clabs_run/pf1.cjs`, screenshot in the scratchpad (pf1_20.png).
 - Reverted on 7021 (guesswork): API Key Header on the old credential cleared; the old tool pointed back at the old server and its link set active; the new "Neon MCP Lab FV" server, its alias, connection, credential, the extra tool and link, and the stray "Neon MCP Lab_1794662072776" connection and credential were deleted. Not touched: the old Global "Neon MCP Lab" server, and the "Test MCP Neon" connection Leo made.
 - mememachine: not tested. No credentials for it in `.env` (only hosts for perelandra, zu144008, three lef labs and icemachine), so a UI login is not possible.
+
+### Neon MCP on 7021: ACL lead (2026-11-15)
+
+- 7021 was hibernating and was woken; the agent test after the wake still stays Processing on "Get Details via Neon MCP" (Search for Cost Center History and Expense Transactions History complete). So a stuck worker is ruled out.
+- 7021 has an Access Control of type `gen_ai_mcp_server`, operation `execute` for the OOB server "Setup Hub MCP" (name `global.sn_ia_now_assist.Setup Hub MCP`, role `sn_ia_config.ia_user`). "Neon MCP Lab" and "Test MCP Neon" have only the auto-created `ai_gateway_scope` ACLs (`neon_mcp_lab`, `test_mcp_neon`).
+- Perelandra has no `gen_ai_mcp_server` ACL for its working "Neon MCP Lab" (only one for "Neon MCP Lab LF", `global.global.Neon MCP Lab LF`), so this lead is unproven.
+- Creating `global.global.Neon MCP Lab` (type gen_ai_mcp_server, operation execute) on 7021 fails with "Invalid update" and "Match not found, reset to original" on Operation, with the operation picked from the lookup, with the application set to Forecast Variance or Global. Nothing was created.
+- Scripts: `clabs_run/fx1.cjs` to `fx15.cjs`.
