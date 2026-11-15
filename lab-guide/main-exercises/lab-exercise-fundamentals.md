@@ -8,6 +8,29 @@ icon: atom
 
 This contains critical steps to prepare your Demo Hub Instance.
 
+### Minimum versions
+
+The lab was tested on instances with these app versions or newer. Check yours in **All** > type **sys_store_app.list** and search the app name (the **Version** column). On an older Build Agent the Integration Hub prompts stop with an error about the build, so check Build Agent and Studio first.
+
+| App | Minimum version |
+|---|---|
+| Build Agent | 2.6.4 |
+| ServiceNow Studio (sn_glider) | 5.0.2 |
+| AI Agents | 9.0.14 |
+| Generative AI Controller | 15.0.3 |
+| Generative AI platform | 13.0.1 |
+| Skill Builder | 10.0.6 |
+| Now Assist Admin | 10.3.5 |
+| Model Context Protocol Client | 2.4.4 |
+| Model Context Protocol Server | 1.8.0 |
+| Universal MCP Client | 1.0.2 |
+| Zero Copy Connector Hub | 3.2.2 |
+| Zero Copy Connector for ERP | 10.6.0 |
+| Document Intelligence | 8.0.9 |
+| ServiceNow AI Lens | 8.1.1 |
+| Flow Designer | 30.0.7 |
+
+
 1.  Ensure you are at least in Zurich Patch 6. Go to **All** > type **stats.do** and hit Return/Enter ↵. Ensure that it is empty.
 
     <figure><img src="../.gitbook/assets/sc_fund_stats.png" alt=""><figcaption></figcaption></figure>
