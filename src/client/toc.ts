@@ -26,7 +26,7 @@ export interface NavSection {
 export const MAIN_EXERCISES: TocItem[] = [
     {
         path: '/exercises/fundamentals',
-        title: 'Lab Exercise: Fundamentals',
+        title: 'Install Lab Dependencies',
         difficulty: 'Beginner',
         aiAgents: false,
         duration: '30 minutes',

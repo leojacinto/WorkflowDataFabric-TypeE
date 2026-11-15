@@ -2,65 +2,9 @@
 icon: atom
 ---
 
-# Lab Exercise: Fundamentals
+# Install Lab Dependencies
 
 [Take me back to main page](../)
-
-Not a fan of complicated schematics and the [Data and Flow Diagrams](../data-and-flow-diagrams.md) not to your liking? Check out a the simplified architectural view of the solution that you will be building below.
-
-<figure><img src="../.gitbook/assets/sc_slide_e2e_architecture.png" alt=""><figcaption></figcaption></figure>
-
-This lab will walk you through creation of the scoped tables needed to interact with the external system integrations.
-
-<figure><img src="../.gitbook/assets/sc_slide_fundamentals_overview.png" alt=""><figcaption></figcaption></figure>
-
-## Data flow
-
-The data flow below shows how ServiceNow will consume REST API endpoints via Integration Hub Spokes then further processed by a Flow so the entries will be written in the scoped table.
-
-```mermaid
-graph LR
-    subgraph "ServiceNow AI Platform"
-        subgraph "Data Integration Layer"
-            IntHub[Integration Hub<br/>Spoke/Flow]
-        end
-
-        subgraph "ServiceNow Native Tables"
-            ExpenseTable[(Expense Event<br/>Line Items<br/>Scoped Table)]
-        end
-    end
-
-    subgraph "External Systems"
-        ExpenseAPI[Expense Event<br/>API]
-    end
-
-    %% Data Flow Connections
-    ExpenseAPI -->|Real-time Events| IntHub
-    IntHub -->|Write| ExpenseTable
-
-    %% Styling
-    classDef external fill:#2196F3,stroke:#1565C0,stroke-width:2px,color:#fff
-    classDef platform fill:#4CAF50,stroke:#2E7D32,stroke-width:2px,color:#fff
-    classDef wdf fill:#9C27B0,stroke:#6A1B9A,stroke-width:2px,color:#fff
-
-    class IntHub wdf
-    class ExpenseTable platform
-    class ExpenseAPI external
-```
-
-> **Color Legend:** 🟣 Workflow Data Fabric | 🟢 Platform | 🔵 External Systems
->
-> [📊 View High-Resolution Diagram](https://raw.githubusercontent.com/leojacinto/WorkflowDataFabric-TypeB/main/.gitbook/assets/dataflow_fundamentals.png)
-
-## Lab story
-
-While you have the power of CMDB at your fingertips, the process we are solving for here does not concern CI data. You will need to create a scoped table which will store information from an expense event API. This can come from cloud services such as AWS or Azure.
-
-The table you will create here will not be used for the rest of the lab and serves mainly to introduce how target tables for REST API endpoints are created for ServiceNow.
-
-## Steps
-
-### <mark style="color:$warning;">**\[Skip if already done for AI Day 1]**</mark> Install Lab Dependencies
 
 This contains critical steps to prepare your Demo Hub Instance.
 
