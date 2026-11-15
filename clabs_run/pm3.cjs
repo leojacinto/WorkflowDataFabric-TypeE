@@ -1,0 +1,13 @@
+const u=require('./u7021.cjs');
+const NAME=process.env.SRV_NAME, URL_=process.env.SRV_URL;
+(async()=>{const {b,p}=await u.open();
+await p.goto(u.H+'/now/agent-studio/manage-mcp-servers',{timeout:90000}).catch(()=>{});await p.waitForTimeout(15000);await u.dismiss(p);
+await p.getByRole('button',{name:'New'}).first().click();await p.waitForTimeout(4000);
+await p.mouse.click(800,392);await p.keyboard.type(NAME,{delay:30});
+await p.mouse.click(800,458);await p.waitForTimeout(1500);await p.mouse.click(556,522);await p.waitForTimeout(2000);
+await p.mouse.click(800,491);await p.keyboard.insertText(URL_);await p.waitForTimeout(1500);
+await p.mouse.click(790,557);await p.keyboard.type('none',{delay:30});await p.waitForTimeout(1000);
+await p.screenshot({path:u.S+'pm3_pre.png'});
+await p.mouse.click(1052,612);await p.waitForTimeout(12000);
+await p.screenshot({path:u.S+'pm3_post.png'});
+await b.close();})();

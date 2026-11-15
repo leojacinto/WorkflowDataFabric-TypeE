@@ -346,3 +346,11 @@ The Global agent "Forecast Variance Neon MCP Lab" and the 10 test SharePoint con
 - Result: the agent test still stays Processing on "Get Details via Neon MCP". The ACL did not fix it.
 - Studio's other causes, all unchecked on 7021: `sn_mcp_client_server_session_mapping` row with empty `mcp_session_id` (the executor then sends an empty Mcp-Session-Id), the tool's Flow Designer subflow blocked or the connection alias credential missing, duplicate `sn_aia_tool` rows with script "undefined".
 - Scripts: `clabs_run/fx16.cjs` to `fx19.cjs`, `st1.cjs` to `st9.cjs`.
+
+### Neon MCP on 7021: it is every MCP server (2026-11-15)
+
+- Public no-auth server DeepWiki (`https://mcp.deepwiki.com/mcp`) was added in Manage MCP servers (auth type API Key with a dummy key; the dialog has no "none"). Tool list loads (Ask Wiki Question, Read Wiki Contents, Read Wiki Structure), so connect, initialize and tools/list work. Session mapping shows Connected.
+- A tool "Read Wiki Structure DeepWiki" was added to the agent "Forecast Variance Neon MCP Lab FV". Manual Test: the Tools Execution record stays Processing, no response, no error. No outbound call and no "MCP with Streaming - Subflow" flow context are created for the execution (those only appear for tools/list from the UI).
+- Same result with and without an `mcp_server_ai_acl` execute ACL (created `x_snc_forecast_v_0.DeepWiki MCP`, role admin). So the hang is not Neon and not the server ACL. It is the tool execution dispatch for type mcp on this build.
+- Left on 7021: server "DeepWiki MCP" (+ alias/connection), tool "Read Wiki Structure DeepWiki" on the FV agent, ACLs `global.Neon MCP Lab` and `x_snc_forecast_v_0.DeepWiki MCP` (mcp_server_ai_acl).
+- Scripts: `clabs_run/pm1.cjs` to `pm4.cjs`, `dw1.cjs` to `dw11` (dw3).
