@@ -622,15 +622,20 @@ body {
 
 .lab-pre {
   margin: 0;
-  padding: 0.875rem 1rem;
+  padding: 1.25rem 1.5rem;
   overflow-x: auto;
-  border-radius: var(--lab-radius-selector);
-  background: var(--lab-surface);
-  border: var(--lab-border-width) solid var(--lab-border);
+  border-radius: 0.75rem;
+  background: #0b1417;
+  border: 0;
   font-family: ui-monospace, SFMono-Regular, Consolas, monospace;
   font-size: 0.8125rem;
-  line-height: 1.5;
-  color: var(--lab-text);
+  line-height: 1.55;
+  color: #e8eef0;
+}
+
+.lab-pre code {
+  background: transparent;
+  color: inherit;
 }
 
 .lab-table-wrap {
