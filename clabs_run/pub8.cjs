@@ -1,0 +1,12 @@
+const {chromium}=require('/Users/leo.francia/WorkflowDataFabric-TypeE/devin_walkthrough_wdf/headless-toolkit/node_modules/playwright-core');
+const S='/private/tmp/claude-501/-Users-leo-francia-WorkflowDataFabric-TypeE/c4c6e574-4851-4c33-8937-cc762b757b3a/scratchpad/';
+(async()=>{const b=await chromium.launch({headless:true});const ctx=await b.newContext({viewport:{width:1600,height:900}});
+ let p=await ctx.newPage();
+ await p.goto('https://perelandra.service-now.com/x_snc_forecast_v_0_wdf_lab.do?view=%2Fexercises%2Fintegration-hub',{timeout:120000}).catch(()=>{});await p.waitForTimeout(10000);
+ await p.evaluate(()=>document.querySelectorAll('img').forEach(i=>{i.loading='eager'}));
+ for(let i=0;i<50;i++){await p.mouse.wheel(0,900);await p.waitForTimeout(400);}await p.waitForTimeout(8000);
+ const r=await p.evaluate(async()=>{const a=[...document.images];const res=await Promise.all(a.map(i=>i.decode().then(()=>true).catch(()=>false)));return {total:a.length,notDecoded:res.filter(x=>!x).length,dataUri:a.filter(i=>(i.currentSrc||i.src).startsWith('data:')).length,attachment:a.filter(i=>(i.currentSrc||i.src).includes('sys_attachment')).length,other:a.filter(i=>!(i.currentSrc||i.src).startsWith('data:')&&!(i.currentSrc||i.src).includes('sys_attachment')).map(i=>(i.currentSrc||i.src).slice(0,90))}});
+ console.log('INTEGRATION HUB, no login:',JSON.stringify(r));await p.close();
+ p=await ctx.newPage();await p.goto('https://perelandra.service-now.com/x_snc_forecast_v_0_wdf_lab.do',{timeout:120000}).catch(()=>{});await p.waitForTimeout(25000);
+ console.log('HOME dom',JSON.stringify(await p.evaluate(()=>({canvas:document.querySelectorAll('canvas').length,svg:document.querySelectorAll('svg').length,iframe:document.querySelectorAll('iframe').length}))));
+ await p.screenshot({path:S+'pub8_home.png'});await b.close();})();

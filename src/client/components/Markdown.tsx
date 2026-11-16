@@ -1,5 +1,5 @@
 import React from 'react'
-import { localAsset } from '../content/asset-map'
+import { publicAsset } from '../content/public-images'
 import { Block, Inline } from '../lib/markdown'
 
 /*
@@ -146,7 +146,7 @@ function Blocks({ blocks, navigate }: Props) {
                             <figure key={i} className="lab-figure">
                                 <img
                                     className="lab-img"
-                                    src={localAsset(b.src)}
+                                    src={publicAsset(b.src)}
                                     alt={b.alt}
                                     loading="lazy"
                                     onLoad={sizeImage}

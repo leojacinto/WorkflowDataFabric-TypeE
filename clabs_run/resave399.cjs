@@ -1,0 +1,11 @@
+const u=require('./u7021.cjs');
+const URL_='/sn_aia_trigger_configuration.do?sys_id=9932a89048ef41aa821ab392621cfe63';
+(async()=>{const {b,p}=await u.open();
+await p.goto(u.H+URL_,{timeout:90000}).catch(()=>{});await p.waitForTimeout(10000);
+await p.getByText('click here',{exact:true}).first().click().catch(()=>console.log('no switch link'));await p.waitForTimeout(12000);
+console.log('before:',await p.evaluate(()=>'trigger_flow='+g_form.getValue('trigger_flow')));
+await p.evaluate(()=>{g_form.save();});await p.waitForTimeout(12000);
+await p.goto(u.H+URL_,{timeout:90000}).catch(()=>{});await p.waitForTimeout(8000);
+console.log('after:',await p.evaluate(()=>'trigger_flow='+g_form.getValue('trigger_flow')));
+await p.screenshot({path:u.S+'resave399_b.png'});
+await b.close();})();

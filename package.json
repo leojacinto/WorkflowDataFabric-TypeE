@@ -4,7 +4,7 @@
   "private": true,
   "description": "AIUX application: WDF Lab",
   "scripts": {
-    "build": "now-sdk build",
+    "build": "python3 scripts/gen-public-images.py && now-sdk build",
     "doctor": "aiux doctor",
     "dev": "now-sdk run dev",
     "deploy": "now-sdk install",

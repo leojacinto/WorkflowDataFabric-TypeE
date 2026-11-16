@@ -116,6 +116,12 @@ export function loadSceneScript(): Promise<string> {
     if (cached) return cached;
 
     const attempts: (() => Promise<string>)[] = [
+        // Bundled in the page itself, so it also works for a visitor with no login.
+        async () => {
+            const body = (await import('./scene-source')).default
+            if (!looksLikeScene(body)) throw new Error('bundled scene -> not the scene script')
+            return body
+        },
         () => fromAssetUrl(`/uxasset/externals/${SCOPE}/${ASSET_NAME}.js`),
         () => fromAssetUrl(`/uxasset/externals/${SCOPE}/${ASSET_NAME}`),
         () => fromAssetUrl(`/${ASSET_NAME}.js`),

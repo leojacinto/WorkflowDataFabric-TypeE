@@ -1,5 +1,6 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { asset } from "../content";
+import { loadImagesFor } from "../content/public-images";
 import { MAIN_EXERCISES, EXTENDED_EXERCISES, HUNGRY_FOR_MORE } from "../toc";
 import VirtualOn from "../components/VirtualOn";
 import { IS_CLAB } from "../lib/variant";
@@ -107,6 +108,10 @@ export default function Home({
 }: {
   navigate: (p: string) => void;
 }) {
+  const [, setImagesReady] = useState(false);
+  useEffect(() => {
+    loadImagesFor("/home").then(() => setImagesReady(true));
+  }, []);
   return (
     <div className="lab-page">
       <VirtualOn />

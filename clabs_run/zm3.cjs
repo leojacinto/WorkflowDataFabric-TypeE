@@ -1,0 +1,11 @@
+const u=require('./u7021.cjs');
+(async()=>{const {b,p}=await u.open();
+await p.goto(u.H+'/now/agent-studio/manage-mcp-servers',{timeout:90000}).catch(()=>{});await p.waitForTimeout(15000);await u.dismiss(p);
+await p.getByRole('button',{name:'New',exact:true}).click();await p.waitForTimeout(4000);
+await p.mouse.click(800,392);await p.keyboard.type('DeepWiki MCP Test',{delay:40});
+await p.mouse.click(800,458);await p.waitForTimeout(2000);await p.mouse.click(556,522);await p.waitForTimeout(1500);
+await p.mouse.click(800,491);await p.keyboard.type('https://mcp.deepwiki.com/mcp',{delay:20});
+await p.mouse.click(800,557);await p.keyboard.type('dummykey',{delay:20});await p.waitForTimeout(1000);
+await p.screenshot({path:u.S+'zm3b.png'});
+await p.getByRole('button',{name:'Add',exact:true}).click();await p.waitForTimeout(10000);
+await p.screenshot({path:u.S+'zm3c.png'});await b.close();})();

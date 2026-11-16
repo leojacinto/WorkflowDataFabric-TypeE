@@ -3,6 +3,7 @@ import ApproachSwitch from '../components/ApproachSwitch'
 import Markdown from '../components/Markdown'
 import { LAB_MARKDOWN } from '../content/lab-markdown'
 import { LAB_MARKDOWN_CLAB } from '../content/lab-markdown-clab'
+import { loadImagesFor } from '../content/public-images'
 import { IS_CLAB } from '../lib/variant'
 import { Approach, findApproachSections, readApproach, saveApproach } from '../lib/approach'
 import { Block, LabDoc, readMarkdown } from '../lib/markdown'
@@ -48,7 +49,15 @@ export default function LabPage({
             return
         }
 
-        setState({ phase: 'ready', doc: readMarkdown(text) })
+        let cancelled = false
+        setState({ phase: 'loading' })
+        // The page's images are embedded in a chunk of their own; wait for it so no image shows broken.
+        loadImagesFor(route).then(() => {
+            if (!cancelled) setState({ phase: 'ready', doc: readMarkdown(text) })
+        })
+        return () => {
+            cancelled = true
+        }
     }, [route])
 
     return (
